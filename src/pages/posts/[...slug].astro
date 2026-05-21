@@ -1,6 +1,6 @@
 ---
-// 文章详情页
-import { getCollection, type CollectionEntry } from 'astro:content';
+// 文章详情页 — 公众号阅读体验
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -15,32 +15,46 @@ const { post } = Astro.props;
 const { title, description, date, category, tags, podcast, guests, duration } = post.data;
 const { Content } = await post.render();
 const base = import.meta.env.BASE_URL;
+
+function getPodcastEmoji(name: string) {
+  if (name.includes('半拿铁')) return '☕';
+  if (name.includes('42章经')) return '🔢';
+  if (name.includes('硅谷101')) return '💻';
+  if (name.includes('张小珺')) return '🎙️';
+  if (name.includes('罗永浩')) return '🎤';
+  return '🎧';
+}
 ---
 
 <BaseLayout title={title} description={description}>
-  <article>
-    <span class="category-badge">{category}</span>
-    <h1>{title}</h1>
-    <div class="meta">
-      <time datetime={date.toISOString()}>
-        📅 {date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
-      </time>
-      {podcast && <span>🎙️ {podcast}</span>}
-      {guests && <span>👤 {guests}</span>}
-      {duration && <span>⏱️ {duration}</span>}
-    </div>
-    {tags.length > 0 && (
-      <div class="tags" style="margin-bottom: 1.5rem;">
-        {tags.map(tag => (
-          <a href={`${base}?tag=${tag}`} class="tag">{tag}</a>
-        ))}
+  <article class="article-page">
+    <div class="article-header">
+      <h1>{title}</h1>
+      <div class="article-meta">
+        {podcast && <span>{getPodcastEmoji(podcast)} <span class="author">{podcast}</span></span>}
+        {!podcast && <span class="author">{category}</span>}
+        {guests && <span>👤 {guests}</span>}
+        <span>📅 {date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        {duration && <span>⏱️ {duration}</span>}
       </div>
-    )}
-    <Content />
+    </div>
+
+    <div class="article-content">
+      <Content />
+    </div>
+
+    <div class="article-footer">
+      {tags.length > 0 && (
+        <div class="article-tags">
+          {tags.map(tag => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
+    </div>
   </article>
 
-  <hr />
-  <p style="text-align:center;margin-top:1rem;">
-    <a href={base} style="color:var(--text-muted);text-decoration:none;">← 返回笔记列表</a>
-  </p>
+  <div class="article-back">
+    <a href={base}>← 返回笔记列表</a>
+  </div>
 </BaseLayout>

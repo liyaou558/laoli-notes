@@ -1,32 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+const base = import.meta.env.BASE_URL;
 
 const posts = await getCollection('posts');
 const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
-
-// 统计每个标签的文章数
 const tagCounts: Record<string, number> = {};
-posts.forEach(p => {
-  p.data.tags.forEach(t => {
-    tagCounts[t] = (tagCounts[t] || 0) + 1;
-  });
-});
+posts.forEach(p => p.data.tags.forEach(t => tagCounts[t] = (tagCounts[t] || 0) + 1));
 ---
 
 <BaseLayout title="标签">
-  <h1 style="margin-bottom:1.5rem;">🏷️ 标签</h1>
-  <div class="tag-filter">
-    {allTags.map(tag => (
-      <a href={`/?tag=${tag}`} class="tag">
-        {tag} ({tagCounts[tag] || 0})
-      </a>
-    ))}
-  </div>
-  {allTags.length === 0 && (
-    <div class="empty-state">
-      <div class="icon">🏷️</div>
-      <p>还没有标签</p>
+  <div class="about-page">
+    <h1>🏷️ 全部标签</h1>
+    <div class="filter-row">
+      {allTags.map(tag => (
+        <a href={`${base}?tag=${tag}`} class="filter-btn">
+          {tag} ({tagCounts[tag] || 0})
+        </a>
+      ))}
     </div>
-  )}
+    {allTags.length === 0 && <div class="empty">还没有标签</div>}
+  </div>
 </BaseLayout>

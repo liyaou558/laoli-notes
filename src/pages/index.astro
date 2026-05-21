@@ -1,16 +1,13 @@
 ---
-// 首页 — 笔记列表
+// 首页 — 公众号文章列表
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
 const posts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const base = import.meta.env.BASE_URL;
-
-// 获取所有标签
 const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
 
-// 读取 URL 参数用于筛选
 const url = new URL(Astro.request.url);
 const selectedTag = url.searchParams.get('tag') || '';
 const searchQuery = url.searchParams.get('q') || '';
@@ -23,64 +20,88 @@ const filteredPosts = posts.filter(p => {
     const q = searchQuery.toLowerCase();
     const title = p.data.title.toLowerCase();
     const desc = p.data.description.toLowerCase();
-    const content = p.body?.toLowerCase() || '';
-    if (!title.includes(q) && !desc.includes(q) && !content.includes(q)) return false;
+    const body = p.body?.toLowerCase() || '';
+    if (!title.includes(q) && !desc.includes(q) && !body.includes(q)) return false;
   }
   return true;
 });
+
+function getPodcastEmoji(title: string) {
+  if (title.includes('半拿铁')) return '☕';
+  if (title.includes('42章经')) return '🔢';
+  if (title.includes('硅谷101')) return '💻';
+  if (title.includes('张小珺')) return '🎙️';
+  if (title.includes('罗永浩')) return '🎤';
+  return '📻';
+}
+
+function getReadingEmoji(title: string) {
+  return '📖';
+}
+
+function getCategoryEmoji(post: any) {
+  if (post.data.category === '播客笔记') return getPodcastEmoji(post.data.podcast || '');
+  return getReadingEmoji(post.data.title);
+}
 ---
 
-<BaseLayout title={searchQuery ? `搜索: ${searchQuery}` : '笔记'}>
-  <!-- 搜索 -->
-  <div class="search-bar">
+<BaseLayout title={searchQuery ? `"${searchQuery}" 的搜索结果` : '笔记'} description="老李的播客笔记 & 精读笔记">
+  <div class="search-wrap">
     <input
-      type="text"
-      id="search"
-      placeholder="🔍 搜索笔记…"
-      value={searchQuery}
-      autocomplete="off"
+      type="text" id="search" placeholder="搜索笔记..."
+      value={searchQuery} autocomplete="off"
     />
   </div>
 
-  <!-- 分类筛选 -->
-  <div class="tag-filter">
-    <a href={base} class={`tag ${!selectedCategory ? 'active' : ''}`}>全部</a>
-    <a href={`${base}?cat=播客笔记`} class={`tag ${selectedCategory === '播客笔记' ? 'active' : ''}`}>🎧 播客笔记</a>
-    <a href={`${base}?cat=精读笔记`} class={`tag ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读笔记</a>
+  <div class="filter-row">
+    <a href={base} class={`filter-btn ${!selectedCategory ? 'active' : ''}`}>全部</a>
+    <a href={`${base}?cat=播客笔记`} class={`filter-btn ${selectedCategory === '播客笔记' ? 'active' : ''}`}>🎧 播客</a>
+    <a href={`${base}?cat=精读笔记`} class={`filter-btn ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读</a>
   </div>
 
-  <!-- 标签筛选 -->
-  <div class="tag-filter">
+  <div class="filter-row">
     {allTags.map(tag => (
       <a href={`${base}?tag=${tag}${selectedCategory ? `&cat=${selectedCategory}` : ''}`}
-         class={`tag ${selectedTag === tag ? 'active' : ''}`}>
+         class={`filter-btn ${selectedTag === tag ? 'active' : ''}`}>
         {tag}
       </a>
     ))}
   </div>
 
-  <!-- 文章列表 -->
   {
     filteredPosts.length === 0 ? (
-      <div class="empty-state">
-        <div class="icon">{searchQuery ? '🔍' : '📭'}</div>
-        <p>{searchQuery ? `没有找到包含"${searchQuery}"的笔记` : '暂无笔记'}</p>
+      <div class="empty">
+        {searchQuery ? `未找到包含「${searchQuery}」的笔记` : '暂无笔记'}
       </div>
     ) : (
       <ul class="post-list">
         {filteredPosts.map(post => (
           <li>
             <a href={`${base}posts/${post.slug}`} class="post-card">
-              <time datetime={post.data.date.toISOString()}>
-                {post.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </time>
-              <span class="category-badge">{post.data.category}</span>
+              <div class="post-card-header">
+                <div class={`post-card-avatar ${post.data.category === '播客笔记' ? 'podcast' : 'reading'}`}>
+                  {getCategoryEmoji(post)}
+                </div>
+                <div class="post-card-meta">
+                  <div class="post-card-author">
+                    {post.data.podcast || post.data.category}
+                    {post.data.guests ? ` · ${post.data.guests}` : ''}
+                  </div>
+                  <div class="post-card-time">
+                    {post.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    {post.data.duration ? ` · ${post.data.duration}` : ''}
+                  </div>
+                </div>
+              </div>
               <h2>{post.data.title}</h2>
               <p>{post.data.description}</p>
-              <div class="tags">
-                {post.data.tags.map(tag => (
-                  <span class="tag">{tag}</span>
-                ))}
+              <div class="post-card-footer">
+                <div class="post-card-tags">
+                  {post.data.tags.slice(0, 4).map(tag => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <span class="post-card-arrow">→</span>
               </div>
             </a>
           </li>
@@ -91,21 +112,15 @@ const filteredPosts = posts.filter(p => {
 </BaseLayout>
 
 <script>
-  // 客户端搜索 — 回车跳转
   const input = document.getElementById('search') as HTMLInputElement;
   if (input) {
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         const q = input.value.trim();
-        if (q) {
-          const params = new URLSearchParams(window.location.search);
-          params.set('q', q);
-          window.location.search = params.toString();
-        } else {
-          const params = new URLSearchParams(window.location.search);
-          params.delete('q');
-          window.location.search = params.toString();
-        }
+        const params = new URLSearchParams(window.location.search);
+        if (q) params.set('q', q);
+        else params.delete('q');
+        window.location.search = params.toString();
       }
     });
   }

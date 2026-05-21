@@ -8,8 +8,6 @@ author: "若飞（架构师）"
 source: "https://mp.weixin.qq.com/s/oQOWWk_d-EAF2m7ViOEskQ"
 ---
 
-# 📄 精读：如何把 Codex 用到更深一层
-
 **oneliner**：如果你在用 Coding Agent 但总觉得它只能在仓库里改 diff，这篇文章讲的是怎么把 Agent 当"数字同事"来设计——不只是让它写代码，而是让它能看页面、等事件、保存现场、定时回来继续，形成一个跨代码、页面、消息、时间和人的持续工作流。
 
 > 原文：若飞 / 架构师公众号，2026-05-21

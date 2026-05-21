@@ -1,0 +1,45 @@
+---
+// 文章详情页
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, description, date, category, tags, podcast, guests, duration } = post.data;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <span class="category-badge">{category}</span>
+    <h1>{title}</h1>
+    <div class="meta">
+      <time datetime={date.toISOString()}>
+        📅 {date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+      {podcast && <span>🎙️ {podcast}</span>}
+      {guests && <span>👤 {guests}</span>}
+      {duration && <span>⏱️ {duration}</span>}
+    </div>
+    {tags.length > 0 && (
+      <div class="tags" style="margin-bottom: 1.5rem;">
+        {tags.map(tag => (
+          <a href={`/?tag=${tag}`} class="tag">{tag}</a>
+        ))}
+      </div>
+    )}
+    <Content />
+  </article>
+
+  <hr />
+  <p style="text-align:center;margin-top:1rem;">
+    <a href="/" style="color:var(--text-muted);text-decoration:none;">← 返回笔记列表</a>
+  </p>
+</BaseLayout>

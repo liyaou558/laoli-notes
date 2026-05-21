@@ -7,6 +7,8 @@ interface Props {
 
 const { title, description } = Astro.props;
 
+const base = import.meta.env.BASE_URL;
+
 // 计算当前页面的相对路径用于导航高亮
 const currentPath = Astro.url.pathname;
 ---
@@ -18,7 +20,7 @@ const currentPath = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title} — 老李的数字花园</title>
   <meta name="description" content={description || '老李的播客笔记 & 精读笔记'} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
   
   <!-- 字体 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -308,11 +310,11 @@ const currentPath = Astro.url.pathname;
 <body>
   <header>
     <nav>
-      <a href="/" class="brand">🌿 老李的<span>数字花园</span></a>
+      <a href={base} class="brand">🌿 老李的<span>数字花园</span></a>
       <div class="links">
-        <a href="/" class={currentPath === '/' ? 'active' : ''}>笔记</a>
-        <a href="/tags" class={currentPath.startsWith('/tags') ? 'active' : ''}>标签</a>
-        <a href="/about" class={currentPath === '/about' ? 'active' : ''}>关于</a>
+        <a href={base} class={currentPath === base || currentPath === '/' ? 'active' : ''}>笔记</a>
+        <a href={`${base}tags`} class={currentPath.startsWith(`${base}tags`) ? 'active' : ''}>标签</a>
+        <a href={`${base}about`} class={currentPath === `${base}about` ? 'active' : ''}>关于</a>
       </div>
     </nav>
   </header>

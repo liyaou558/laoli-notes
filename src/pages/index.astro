@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
 const posts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const base = import.meta.env.BASE_URL;
 
 // 获取所有标签
 const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
@@ -43,15 +44,15 @@ const filteredPosts = posts.filter(p => {
 
   <!-- 分类筛选 -->
   <div class="tag-filter">
-    <a href="/" class={`tag ${!selectedCategory ? 'active' : ''}`}>全部</a>
-    <a href="?cat=播客笔记" class={`tag ${selectedCategory === '播客笔记' ? 'active' : ''}`}>🎧 播客笔记</a>
-    <a href="?cat=精读笔记" class={`tag ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读笔记</a>
+    <a href={base} class={`tag ${!selectedCategory ? 'active' : ''}`}>全部</a>
+    <a href={`${base}?cat=播客笔记`} class={`tag ${selectedCategory === '播客笔记' ? 'active' : ''}`}>🎧 播客笔记</a>
+    <a href={`${base}?cat=精读笔记`} class={`tag ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读笔记</a>
   </div>
 
   <!-- 标签筛选 -->
   <div class="tag-filter">
     {allTags.map(tag => (
-      <a href={`?tag=${tag}${selectedCategory ? `&cat=${selectedCategory}` : ''}`}
+      <a href={`${base}?tag=${tag}${selectedCategory ? `&cat=${selectedCategory}` : ''}`}
          class={`tag ${selectedTag === tag ? 'active' : ''}`}>
         {tag}
       </a>

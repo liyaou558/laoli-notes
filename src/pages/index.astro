@@ -59,10 +59,10 @@ function getCategoryEmoji(post: any) {
     <a href={`${base}?cat=精读笔记`} class={`filter-btn ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读</a>
   </div>
 
-  <div class="filter-row">
+  <div class="tag-row">
     {allTags.map(tag => (
       <a href={`${base}?tag=${tag}${selectedCategory ? `&cat=${selectedCategory}` : ''}`}
-         class={`filter-btn ${selectedTag === tag ? 'active' : ''}`}>
+         class={`tag-btn ${selectedTag === tag ? 'active' : ''}`}>
         {tag}
       </a>
     ))}

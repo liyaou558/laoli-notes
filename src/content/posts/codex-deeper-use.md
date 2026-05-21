@@ -1,12 +1,12 @@
-     1|---
-     2|title: "精读：如何把 Codex 用到更深一层"
-     3|date: 2026-05-21
-     4|author: "若飞（架构师）"
-     5|source: "https://mp.weixin.qq.com/s/oQOWWk_d-EAF2m7ViOEskQ"
-     6|type: "精读"
-     7|categories: ["精读", "AI Agent"]
-     8|tags: ["Codex", "Agent", "工作流", "AI 工程化", "Harness", "Memory"]
-     9|---
+---
+title: "如何把 Codex 用到更深一层"
+description: "Codex 正在从「帮我写代码」挪到「帮我把一段工作持续做下去」。若飞把 durable threads、side panel、browser、automations、goals、memory、skills 放到工程现场里，拆解出一个轻量工作流运行时的架构。"
+date: 2026-05-21
+category: "精读笔记"
+tags: ["Codex", "Agent", "工作流", "AI 工程化", "Harness", "Memory"]
+author: "若飞（架构师）"
+source: "https://mp.weixin.qq.com/s/oQOWWk_d-EAF2m7ViOEskQ"
+---
     10|
     11|# 📄 精读：如何把 Codex 用到更深一层
     12|

@@ -417,7 +417,25 @@ const currentPath = Astro.url.pathname;
       font-size: inherit;
     }
 
-    /* 文章底部 */
+    /* 图片 — 公众号风格：全宽、居中 */
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 4px;
+    }
+
+    .article-content figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .article-content figcaption {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
     .article-footer {
       padding: 16px 24px 24px;
       border-top: 1px solid var(--divider);

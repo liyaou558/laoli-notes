@@ -70,7 +70,7 @@ const filteredPosts = posts.filter(p => {
       <ul class="post-list">
         {filteredPosts.map(post => (
           <li>
-            <a href={`/posts/${post.slug}`} class="post-card">
+            <a href={`${base}posts/${post.slug}`} class="post-card">
               <time datetime={post.data.date.toISOString()}>
                 {post.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>

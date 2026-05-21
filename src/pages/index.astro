@@ -1,5 +1,5 @@
 ---
-// 首页 — 公众号文章列表
+// 首页 — 公众号文章列表（客户端筛选）
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -8,120 +8,175 @@ const posts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTim
 const base = import.meta.env.BASE_URL;
 const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
 
-const url = new URL(Astro.request.url);
-const selectedTag = url.searchParams.get('tag') || '';
-const searchQuery = url.searchParams.get('q') || '';
-const selectedCategory = url.searchParams.get('cat') || '';
-
-const filteredPosts = posts.filter(p => {
-  if (selectedTag && !p.data.tags.includes(selectedTag)) return false;
-  if (selectedCategory && p.data.category !== selectedCategory) return false;
-  if (searchQuery) {
-    const q = searchQuery.toLowerCase();
-    const title = p.data.title.toLowerCase();
-    const desc = p.data.description.toLowerCase();
-    const body = p.body?.toLowerCase() || '';
-    if (!title.includes(q) && !desc.includes(q) && !body.includes(q)) return false;
-  }
-  return true;
-});
-
-function getPodcastEmoji(title: string) {
-  if (title.includes('半拿铁')) return '☕';
-  if (title.includes('42章经')) return '🔢';
-  if (title.includes('硅谷101')) return '💻';
-  if (title.includes('张小珺')) return '🎙️';
-  if (title.includes('罗永浩')) return '🎤';
-  return '📻';
-}
-
-function getReadingEmoji(title: string) {
-  return '📖';
-}
-
-function getCategoryEmoji(post: any) {
-  if (post.data.category === '播客笔记') return getPodcastEmoji(post.data.podcast || '');
-  return getReadingEmoji(post.data.title);
+function getEmoji(post: any) {
+  const p = post.data.podcast || '';
+  if (p.includes('半拿铁')) return '☕';
+  if (p.includes('42章经')) return '🔢';
+  if (p.includes('硅谷101')) return '💻';
+  if (p.includes('张小珺')) return '🎙️';
+  if (p.includes('罗永浩')) return '🎤';
+  return post.data.category === '播客笔记' ? '🎧' : '📖';
 }
 ---
 
-<BaseLayout title={searchQuery ? `"${searchQuery}" 的搜索结果` : '笔记'} description="老李的播客笔记 & 精读笔记">
+<BaseLayout title="笔记" description="老李的播客笔记 & 精读笔记">
   <div class="search-wrap">
-    <input
-      type="text" id="search" placeholder="搜索笔记..."
-      value={searchQuery} autocomplete="off"
-    />
+    <input type="text" id="search" placeholder="搜索笔记..." autocomplete="off" />
   </div>
 
-  <div class="filter-row">
-    <a href={base} class={`filter-btn ${!selectedCategory ? 'active' : ''}`}>全部</a>
-    <a href={`${base}?cat=播客笔记`} class={`filter-btn ${selectedCategory === '播客笔记' ? 'active' : ''}`}>🎧 播客</a>
-    <a href={`${base}?cat=精读笔记`} class={`filter-btn ${selectedCategory === '精读笔记' ? 'active' : ''}`}>📖 精读</a>
+  <div class="filter-row" id="cat-filters">
+    <button class="filter-btn active" data-cat="">全部</button>
+    <button class="filter-btn" data-cat="播客笔记">🎧 播客</button>
+    <button class="filter-btn" data-cat="精读笔记">📖 精读</button>
   </div>
 
-  <div class="tag-row">
+  <div class="tag-row" id="tag-filters">
     {allTags.map(tag => (
-      <a href={`${base}?tag=${tag}${selectedCategory ? `&cat=${selectedCategory}` : ''}`}
-         class={`tag-btn ${selectedTag === tag ? 'active' : ''}`}>
-        {tag}
-      </a>
+      <button class="tag-btn" data-tag={tag}>{tag}</button>
     ))}
   </div>
 
-  {
-    filteredPosts.length === 0 ? (
-      <div class="empty">
-        {searchQuery ? `未找到包含「${searchQuery}」的笔记` : '暂无笔记'}
-      </div>
-    ) : (
-      <ul class="post-list">
-        {filteredPosts.map(post => (
-          <li>
-            <a href={`${base}posts/${post.slug}`} class="post-card">
-              <div class="post-card-header">
-                <div class={`post-card-avatar ${post.data.category === '播客笔记' ? 'podcast' : 'reading'}`}>
-                  {getCategoryEmoji(post)}
-                </div>
-                <div class="post-card-meta">
-                  <div class="post-card-author">
-                    {post.data.podcast || post.data.category}
-                    {post.data.guests ? ` · ${post.data.guests}` : ''}
-                  </div>
-                  <div class="post-card-time">
-                    {post.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
-                    {post.data.duration ? ` · ${post.data.duration}` : ''}
-                  </div>
-                </div>
+  <ul class="post-list" id="post-list">
+    {posts.map(post => (
+      <li data-category={post.data.category} data-tags={post.data.tags.join(',')} data-search={`${post.data.title} ${post.data.description} ${post.data.podcast || ''} ${post.data.guests || ''}`.toLowerCase()}>
+        <a href={`${base}posts/${post.slug}`} class="post-card">
+          <div class="post-card-header">
+            <div class={`post-card-avatar ${post.data.category === '播客笔记' ? 'podcast' : 'reading'}`}>
+              {getEmoji(post)}
+            </div>
+            <div class="post-card-meta">
+              <div class="post-card-author">
+                {post.data.podcast || post.data.category}
+                {post.data.guests ? ` · ${post.data.guests}` : ''}
               </div>
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <div class="post-card-footer">
-                <div class="post-card-tags">
-                  {post.data.tags.slice(0, 4).map(tag => (
-                    <span class="tag">{tag}</span>
-                  ))}
-                </div>
-                <span class="post-card-arrow">→</span>
+              <div class="post-card-time">
+                {post.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {post.data.duration ? ` · ${post.data.duration}` : ''}
               </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    )
-  }
+            </div>
+          </div>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+          <div class="post-card-footer">
+            <div class="post-card-tags">
+              {post.data.tags.slice(0, 4).map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+            <span class="post-card-arrow">→</span>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <div class="empty" id="empty-state" style="display:none">
+    <p id="empty-text">暂无笔记</p>
+  </div>
 </BaseLayout>
 
 <script>
-  const input = document.getElementById('search') as HTMLInputElement;
-  if (input) {
-    input.addEventListener('keydown', (e) => {
+  // 客户端筛选（静态站点必须这样）
+  const params = new URLSearchParams(window.location.search);
+  let activeCat = params.get('cat') || '';
+  let activeTag = params.get('tag') || '';
+  let searchQ = params.get('q') || '';
+
+  const searchInput = document.getElementById('search') as HTMLInputElement;
+  const catFilters = document.getElementById('cat-filters')!;
+  const tagFilters = document.getElementById('tag-filters')!;
+  const postList = document.getElementById('post-list')!;
+  const emptyState = document.getElementById('empty-state')!;
+  const emptyText = document.getElementById('empty-text')!;
+
+  function applyFilters() {
+    const items = postList.querySelectorAll('li[data-category]');
+    let visible = 0;
+
+    items.forEach((item: Element) => {
+      const el = item as HTMLElement;
+      const cat = el.dataset.category || '';
+      const tags = (el.dataset.tags || '').split(',');
+      const searchText = el.dataset.search || '';
+
+      let show = true;
+      if (activeCat && cat !== activeCat) show = false;
+      if (activeTag && !tags.includes(activeTag)) show = false;
+      if (searchQ && !searchText.includes(searchQ.toLowerCase())) show = false;
+
+      el.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    emptyState.style.display = visible === 0 ? '' : 'none';
+    if (visible === 0) {
+      emptyText.textContent = searchQ
+        ? `未找到包含「${searchQ}」的笔记`
+        : activeTag
+          ? `没有标签为「${activeTag}」的笔记`
+          : activeCat === '播客笔记'
+            ? '暂无播客笔记'
+            : activeCat === '精读笔记'
+              ? '暂无精读笔记'
+              : '暂无笔记';
+    }
+
+    // 更新分类按钮高亮
+    catFilters.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.toggle('active', (btn as HTMLElement).dataset.cat === activeCat);
+    });
+
+    // 更新标签按钮高亮
+    tagFilters.querySelectorAll('.tag-btn').forEach(btn => {
+      btn.classList.toggle('active', (btn as HTMLElement).dataset.tag === activeTag);
+    });
+  }
+
+  // 分类按钮
+  catFilters.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('.filter-btn') as HTMLElement;
+    if (!btn) return;
+    activeCat = btn.dataset.cat || '';
+    updateURL();
+    applyFilters();
+  });
+
+  // 标签按钮
+  tagFilters.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('.tag-btn') as HTMLElement;
+    if (!btn) return;
+    // toggle: click again to deselect
+    if (activeTag === btn.dataset.tag) {
+      activeTag = '';
+    } else {
+      activeTag = btn.dataset.tag || '';
+    }
+    updateURL();
+    applyFilters();
+  });
+
+  // 搜索
+  if (searchInput) {
+    searchInput.value = searchQ;
+    searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
-        const q = input.value.trim();
-        const params = new URLSearchParams(window.location.search);
-        if (q) params.set('q', q);
-        else params.delete('q');
-        window.location.search = params.toString();
+        searchQ = searchInput.value.trim();
+        updateURL();
+        applyFilters();
       }
     });
   }
+
+  function updateURL() {
+    const p = new URLSearchParams();
+    if (activeCat) p.set('cat', activeCat);
+    if (activeTag) p.set('tag', activeTag);
+    if (searchQ) p.set('q', searchQ);
+    const qs = p.toString();
+    const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    history.replaceState(null, '', newUrl);
+  }
+
+  // 初始应用
+  applyFilters();
 </script>

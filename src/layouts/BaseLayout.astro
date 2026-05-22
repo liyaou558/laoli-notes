@@ -63,7 +63,7 @@ const currentPath = Astro.url.pathname;
       word-break: break-word;
     }
 
-    /* Header — 公众号风格 */
+    /* Header — 公众号风格，滚动收缩 */
     .site-header {
       background: var(--card-bg);
       border-bottom: 1px solid var(--divider);
@@ -73,6 +73,11 @@ const currentPath = Astro.url.pathname;
       z-index: 100;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      transition: box-shadow 0.3s;
+    }
+
+    .site-header.shrunk {
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
     }
 
     .header-inner {
@@ -82,6 +87,11 @@ const currentPath = Astro.url.pathname;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: padding 0.3s;
+    }
+
+    .site-header.shrunk .header-inner {
+      padding: 6px 16px;
     }
 
     .header-brand {
@@ -102,12 +112,24 @@ const currentPath = Astro.url.pathname;
       justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
+      transition: width 0.3s, height 0.3s, font-size 0.3s;
+    }
+
+    .site-header.shrunk .header-avatar {
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
     }
 
     .header-name {
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.5px;
+      transition: opacity 0.3s, font-size 0.3s;
+    }
+
+    .site-header.shrunk .header-name {
+      font-size: 14px;
     }
 
     .header-nav {
@@ -674,5 +696,20 @@ const currentPath = Astro.url.pathname;
     <div class="divider"></div>
     <p>老李的数字花园 · 播客笔记 & 精读笔记</p>
   </footer>
+
+  <script>
+    // 滚动收缩 header
+    const header = document.querySelector('.site-header');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 40) {
+        header.classList.add('shrunk');
+      } else {
+        header.classList.remove('shrunk');
+      }
+      lastScroll = y;
+    }, { passive: true });
+  </script>
 </body>
 </html>

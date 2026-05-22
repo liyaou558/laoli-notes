@@ -31,9 +31,12 @@ function getEmoji(post: any) {
   </div>
 
   <div class="tag-row" id="tag-filters">
-    {allTags.map(tag => (
-      <button class="tag-btn" data-tag={tag}>{tag}</button>
-    ))}
+    <div class="tag-list" id="tag-list">
+      {allTags.map(tag => (
+        <button class="tag-btn" data-tag={tag}>{tag}</button>
+      ))}
+    </div>
+    <button class="tag-toggle" id="tag-toggle" style="display:none">展开 ▾</button>
   </div>
 
   <ul class="post-list" id="post-list">
@@ -179,4 +182,25 @@ function getEmoji(post: any) {
 
   // 初始应用
   applyFilters();
+
+  // 标签折叠
+  const tagList = document.getElementById('tag-list')!;
+  const tagToggle = document.getElementById('tag-toggle')! as HTMLButtonElement;
+  const FOLD_COUNT = 5; // 折叠时显示多少个
+
+  function initTagFold() {
+    const btns = tagList.querySelectorAll('.tag-btn');
+    if (btns.length <= FOLD_COUNT) return; // 标签少，不需要折叠
+    tagToggle.style.display = '';
+    // 初始折叠态
+    tagList.classList.add('folded');
+    tagToggle.textContent = '展开 ▾';
+  }
+
+  tagToggle.addEventListener('click', () => {
+    const folded = tagList.classList.toggle('folded');
+    tagToggle.textContent = folded ? '展开 ▾' : '收起 ▴';
+  });
+
+  initTagFold();
 </script>

@@ -1,12 +1,14 @@
 ---
-title: "如何把 Codex 用到更深一层"
-description: "Codex 正在从「帮我写代码」挪到「帮我把一段工作持续做下去」。若飞把 durable threads、side panel、browser、automations、goals、memory、skills 放到工程现场里，拆解出一个轻量工作流运行时的架构。"
+title: "精读：如何把 Codex 用到更深一层"
 date: 2026-05-21
-category: "精读笔记"
-tags: ["Codex", "Agent", "工作流", "AI 工程化", "Harness", "Memory"]
 author: "若飞（架构师）"
 source: "https://mp.weixin.qq.com/s/oQOWWk_d-EAF2m7ViOEskQ"
+type: "精读"
+categories: ["精读", "AI Agent"]
+tags: ["Codex", "Agent", "工作流", "AI 工程化", "Harness", "Memory"]
 ---
+
+# 📄 精读：如何把 Codex 用到更深一层
 
 **oneliner**：如果你在用 Coding Agent 但总觉得它只能在仓库里改 diff，这篇文章讲的是怎么把 Agent 当"数字同事"来设计——不只是让它写代码，而是让它能看页面、等事件、保存现场、定时回来继续，形成一个跨代码、页面、消息、时间和人的持续工作流。
 
@@ -43,8 +45,6 @@ Codex 提供了三层触达：
 
 这三层的设计不是功能堆砌，而是对"工作现场"范围的重新定义。Agent 能碰的东西越多，系统需要约束的东西也越多——而约束本身就是 Harness 的核心职责。
 
-![Codex 工作边界从 repo 到工作现场](/laoli-notes/images/codex-boundary.png)
-
 ### 时间边界：从同步到跨越时间
 
 Automations 解决了"什么时候回来"的问题，不只是定时触发，还包括事件驱动——PR 有新评论、CI 变红、issue 状态变化时自动唤醒 Agent。这意味着 Codex 的工作模式从"你叫它、它干活"变成了"它自己知道什么时候该回来看看"。
@@ -56,8 +56,6 @@ Automations 解决了"什么时候回来"的问题，不只是定时触发，还
 Side Panel 和 Artifacts 的设计意图不只是"让用户看到结果"，更关键的是**给人一个审查面**。当 Agent 持续做事时，不同角色需要在不同时间点介入：reviewer 要看改动摘要和截图，PM 要看进度，接手的人要能快速理解当前状态。
 
 这不只是 UI 问题，是工作流的分工问题。
-
-![Codex 工作现场闭环：thread/automations/goals/memory/skills 的协作关系](/laoli-notes/images/codex-workflow-loop.png)
 
 ---
 

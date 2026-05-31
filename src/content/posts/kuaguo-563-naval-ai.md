@@ -6,7 +6,7 @@ tags: ['播客', 'AI', '组织管理', '硬件', '未来']
 podcast: '跨国串门儿计划'
 guests: 'Naval Ravikant'
 duration: '22分钟'
-date: '2026-06-01'
+date: 2026-06-01
 ---
 
 > 播客：跨国串门儿计划 #563

@@ -6,7 +6,7 @@ tags: ['播客', 'AI', 'DeepMind', 'Demis Hassabis', 'AGI']
 podcast: '跨国串门儿计划'
 guests: 'Sebastian Mallaby'
 duration: '50分钟'
-date: 2026-06-05
+date: 2026-06-04
 ---
 
 > 播客：跨国串门儿计划 #571

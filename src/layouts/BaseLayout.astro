@@ -667,6 +667,7 @@ const currentPath = Astro.url.pathname;
       </a>
       <nav class="header-nav">
         <a href={base} class={currentPath === base || currentPath === '/' ? 'active' : ''}>笔记</a>
+        <a href={`${base}maoxuan`} class={currentPath.startsWith(`${base}maoxuan`) ? 'active' : ''}>毛选</a>
         <a href={`${base}tags`} class={currentPath.startsWith(`${base}tags`) ? 'active' : ''}>标签</a>
         <a href={`${base}about`} class={currentPath === `${base}about` ? 'active' : ''}>关于</a>
       </nav>

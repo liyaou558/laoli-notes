@@ -1,0 +1,209 @@
+---
+// 毛选精读 — 板块页
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+// 第一卷目录（人民出版社 1991 年版）
+// done=true 表示已产出精读笔记，file 为 public/maoxuan/ 下的文件名
+const vol1 = [
+  { no: '01', title: '中国社会各阶级的分析', date: '1925.12', done: true, file: '01_中国社会各阶级的分析.html' },
+  { no: '02', title: '湖南农民运动考察报告', date: '1927.03', done: false },
+  { no: '03', title: '中国的红色政权为什么能够存在？', date: '1928.10', done: false },
+  { no: '04', title: '井冈山的斗争', date: '1928.11', done: false },
+  { no: '05', title: '关于纠正党内的错误思想', date: '1929.12', done: false },
+  { no: '06', title: '星星之火，可以燎原', date: '1930.01', done: false },
+  { no: '07', title: '反对本本主义', date: '1930.05', done: false },
+  { no: '08', title: '必须注意经济工作', date: '1933.08', done: false },
+  { no: '09', title: '怎样分析农村阶级', date: '1933.10', done: false },
+  { no: '10', title: '我们的经济政策', date: '1934.01', done: false },
+  { no: '11', title: '关心群众生活，注意工作方法', date: '1934.01', done: false },
+  { no: '12', title: '论反对日本帝国主义的策略', date: '1935.12', done: false },
+  { no: '13', title: '中国革命战争的战略问题', date: '1936.12', done: false },
+  { no: '14', title: '关于蒋介石声明的声明', date: '1936.12', done: false },
+  { no: '15', title: '中国共产党在抗日时期的任务', date: '1937.05', done: false },
+  { no: '16', title: '为争取千百万群众进入抗日民族统一战线而斗争', date: '1937.05', done: false },
+  { no: '17', title: '实践论', date: '1937.07', done: false },
+  { no: '18', title: '矛盾论', date: '1937.08', done: false },
+];
+
+const doneCount = vol1.filter(a => a.done).length;
+---
+
+<BaseLayout title="毛选精读" description="《毛泽东选集》逐篇精读笔记">
+  <style>
+    .mx-hero {
+      background: linear-gradient(135deg, #a63a2e 0%, #7c2a22 100%);
+      border-radius: 8px;
+      padding: 28px 24px;
+      color: #f6f1e6;
+      margin-bottom: 20px;
+    }
+    .mx-hero h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .mx-hero p {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+    .mx-hero .progress {
+      margin-top: 16px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mx-hero .bar {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .mx-hero .bar > span {
+      display: block;
+      height: 100%;
+      background: #e8c77a;
+      border-radius: 3px;
+    }
+    .vol-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 8px 0 12px;
+      padding-left: 4px;
+    }
+    .vol-head .vol-tag {
+      background: #a63a2e;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      letter-spacing: 1px;
+    }
+    .mx-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mx-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.mx-item {
+      transition: transform 0.15s ease;
+    }
+    a.mx-item:active {
+      transform: scale(0.99);
+      background: #f0f0f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      a.mx-item:active {
+        background: #2a2a2a;
+      }
+    }
+    .mx-item .no {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #a63a2e;
+      width: 34px;
+      flex-shrink: 0;
+    }
+    .mx-item.done .no {
+      color: #a63a2e;
+    }
+    .mx-item.todo .no {
+      color: var(--text-muted);
+    }
+    .mx-item .body {
+      flex: 1;
+      min-width: 0;
+    }
+    .mx-item .body .t {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .mx-item.todo .body .t {
+      color: var(--text-secondary);
+    }
+    .mx-item .body .d {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .mx-item .status {
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .mx-item.done .status {
+      color: #3d7a4f;
+    }
+    .mx-item.todo .status {
+      color: var(--text-muted);
+    }
+    .mx-item .arrow {
+      color: var(--text-muted);
+      opacity: 0.5;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <div class="mx-hero">
+    <h1>毛选精读</h1>
+    <p>《毛泽东选集》人民出版社 1991 年版 · 逐篇精读。每篇一篇独立精读笔记：篇章档案、写作背景、核心论点、分析框架、精读感悟与金句摘录。</p>
+    <div class="progress">
+      <span>第一卷进度</span>
+      <div class="bar"><span style={`width:${(doneCount / vol1.length) * 100}%`}></span></div>
+      <span>{doneCount} / {vol1.length}</span>
+    </div>
+  </div>
+
+  <div class="vol-head">
+    <span class="vol-tag">第一卷</span>
+    <span>第一次国内革命战争时期 & 第二次国内革命战争时期</span>
+  </div>
+
+  <ul class="mx-list">
+    {vol1.map(a => a.done ? (
+      <li>
+        <a href={`${base}maoxuan/${a.file}`} class="mx-item done">
+          <span class="no">{a.no}</span>
+          <span class="body">
+            <div class="t">{a.title}</div>
+            <div class="d">{a.date}</div>
+          </span>
+          <span class="status">已完成</span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+    ) : (
+      <li>
+        <div class="mx-item todo">
+          <span class="no">{a.no}</span>
+          <span class="body">
+            <div class="t">{a.title}</div>
+            <div class="d">{a.date}</div>
+          </span>
+          <span class="status">待更新</span>
+        </div>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

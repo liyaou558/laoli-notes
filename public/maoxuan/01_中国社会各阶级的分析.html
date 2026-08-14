@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>01 · 中国社会各阶级的分析 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:2px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:2.2fr 2fr 3.4fr 2.4fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.enemy{background:var(--red-deep);}
+.spec-seg.waver{background:var(--gold);}
+.spec-seg.friend{background:var(--green);}
+.spec-seg.leader{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">壹</div>
+    <h1>中国社会各阶级的分析</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 开卷第一篇 · <b>一九二五年十二月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>中国社会各阶级的分析</td></tr>
+      <tr><th>写作时间</th><td>1925 年秋冬（时在广东，任国民党中央宣传部代理部长）</td></tr>
+      <tr><th>最初发表</th><td>《革命》半月刊第 4 期（国民革命军第二军司令部主办，1925 年 12 月 1 日出版）</td></tr>
+      <tr><th>后续刊载</th><td>《中国农民》第 2 期（1926 年 2 月 1 日）、《中国青年》第 116、117 期（1926 年 3 月）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）开卷第一篇；编入时经作者较大修改与补充</td></tr>
+      <tr><th>篇　幅</th><td>正文约四千字（1991 年版，不含注释）</td></tr>
+      <tr><th>历史坐标</th><td>第一次国内革命战争（大革命）时期：五卅运动之后、北伐战争前夕、国共第一次合作之中</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这篇文章不是书斋里的推演，而是<b>一场党内路线之争的答卷</b>。1925 年，国共合作刚满一年，五卅运动把反帝浪潮推到顶点，也把一道难题推到中共面前：<b>力量从哪里来？</b></p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1924 年 1 月 · 广州</div>
+        <div class="tl-body">国民党一大召开，确立"联俄、联共、扶助农工"三大政策，第一次国共合作形成。<span class="note">——但毛泽东后来追认，大会宣言对"敌友分辨"的宣告"极其简单"，本文正是要补上这一课。</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1925 年 5 月 30 日 · 上海</div>
+        <div class="tl-body">五卅惨案爆发，全国规模的反帝爱国运动席卷而来，罢工、罢课、罢市遍及各地。<span class="note">——各阶级在运动中的真实态度，为"谁靠得住、谁靠不住"提供了最直接的现场样本。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1925 年 秋 · 湖南</div>
+        <div class="tl-body">毛泽东在韶山一带组织农民运动、做农村调查，积累了第一手的阶级观察。<span class="note">——"荒时暴月……债务丛集，如牛负重"这样的笔触，来自田间而非书斋。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1925 年 10 月 · 广州</div>
+        <div class="tl-body">毛泽东到广州，代理国民党中央宣传部部长，主编《政治周报》。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1925 年 12 月 1 日</div>
+        <div class="tl-body">文章刊于《革命》半月刊第 4 期，此后三刊流转，并收入《毛泽东选集》。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1927 年 · 四一二 / 七一五</div>
+        <div class="tl-body">国民党右派叛变，民族资产阶级右翼倒向帝国主义。<span class="note">——本文"动摇阶级将分化、右翼将跑到帝国主义一边"的预见，得到应验。</span></div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">文章的直接论敌，是党内<b>两种同时"忘记农民"的倾向</b>：以<b>陈独秀</b>为代表的右倾，只注意同国民党合作；以<b>张国焘</b>为代表的"左"倾，只注意工人运动。<b>两者共同的病，是"感觉自己力量不足，而不知道到何处去寻找力量"。</b>毛泽东的答案是：到农民中去——无产阶级"最广大和最忠实的同盟军"是农民。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<span class="q">分清敌友是革命的首要问题</span>，而分清敌友的唯一科学方法，是考察各阶级的<b>经济地位</b>及其<b>对革命的态度</b>。</div>
+    <div class="cards">
+      <div class="card">
+        <h4>① 首要问题：分清敌友</h4>
+        <p>过去一切革命"成效甚少"，根本原因不是目的错，而是"不能团结真正的朋友，以攻击真正的敌人"。方向对之前，先要把人认准。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 方法：阶级分析</h4>
+        <p>经济地位决定阶级性，阶级性决定对革命的态度。把模糊的"人民"拆解成可考察的群体，敌友不再是口号，而是可判定的结论。</p>
+      </div>
+      <div class="card blue">
+        <h4>③ 结论：一张敌友清单</h4>
+        <p>敌人是地主买办；领导力量是工业无产阶级；最接近的朋友是半无产阶级与小资产阶级；民族资产阶级是"必须提防"的动摇派。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文的方法论可以压成一条链条：<b>不是先有立场再找证据，而是先看"经济地位"这个客观事实，再推出态度与策略。</b></p>
+    <div class="chain">
+      <div class="node"><div class="n-label">经济地位</div><div class="n-sub">占有生产资料与财富的多少</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">阶级性</div><div class="n-sub">由此形成的利益与立场</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">对革命的态度</div><div class="n-sub">需要革命 / 怀疑革命 / 反对革命</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">敌友归类</div><div class="n-sub">敌人 · 朋友 · 动摇者</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">策略行动</div><div class="n-sub">团结朋友 · 攻击敌人 · 提防动摇者</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">这是一篇标准的<b>"总—分—总"</b>：开篇设问立靶，中段六个阶级逐一解剖，结尾收成一张清晰的敌友清单。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">总起</div>
+        <div class="sk-body"><b>设问立靶</b>：谁是我们的敌人？谁是我们的朋友？<span class="list">——把"革命的首要问题"从口号变成一道必须回答的分析题。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">分述</div>
+        <div class="sk-body"><b>六阶级逐一解剖</b>：<span class="list">① 地主阶级和买办阶级（敌人）→ ② 中产阶级·民族资产阶级（动摇者）→ ③ 小资产阶级（分右翼/中派/左翼）→ ④ 半无产阶级（半自耕农、贫农、小手工业者、店员、小贩）→ ⑤ 无产阶级（工业无产阶级、都市苦力、雇农）→ ⑥ 游民无产者（可转化的力量）。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">总收</div>
+        <div class="sk-body"><b>敌友清单</b>：敌人 · 领导力量 · 最接近的朋友 · 需提防者<span class="list">——以"要时常提防他们，不要让他们扰乱了我们的阵线"作结。</span></div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">全文阵营光谱</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从左到右，由"敌对"到"领导"；色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg enemy">敌人</div>
+        <div class="spec-seg waver">动摇者</div>
+        <div class="spec-seg friend">最接近的朋友</div>
+        <div class="spec-seg leader">领导力量</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>地主·买办·附庸知识界</b>勾结帝国主义的军阀、官僚、大地主阶级</div>
+        <div class="spec-label"><b>民族资产阶级</b>右翼可能是敌人，左翼可能是朋友</div>
+        <div class="spec-label"><b>小资产阶级·半无产阶级</b>自耕农、贫农、店员、小贩等最广大群体</div>
+        <div class="spec-label"><b>工业无产阶级</b>新的生产力的代表，最进步的阶级</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card"><h4>敌人</h4><p>完全是国际资产阶级的附庸，代表最落后最反动的生产关系，"始终站在帝国主义一边，是极端的反革命派"。</p></div>
+      <div class="card gold"><h4>动摇者</h4><p>"受外资打击、军阀压迫感觉痛苦时，需要革命"；一旦革命威胁其"大资产阶级地位"，又怀疑革命——"仅仅是一个幻想"。</p></div>
+      <div class="card green"><h4>最接近的朋友</h4><p>小资产阶级与半无产阶级人数最多，生活愈苦者革命性愈强；"所谓农民问题，主要就是他们的问题"。</p></div>
+      <div class="card blue"><h4>领导力量</h4><p>人数虽少，却是"新的生产力的代表者"；因集中、因经济地位低下，"所以他们特别能战斗"。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>把"谁是多数"变成可计算的战略，而不是道德论证</h4>
+          <p>1925 年原版给每个阶级都数了人头：敌人约一百万，中间派约四百万，朋友三亿九千五百万，并高呼"三万万九千五百万人团结起来"。这种"数人头"的冲动在 1991 年修订版里被删掉了——这不是弱点被抹去，而是毛后来意识到：<b>革命动员要的是"多数"，理论文本要的是"结构"</b>。把政治判断翻译成可量化的人口账，是本文方法论里最容易被低估的一手。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>真正的难点从来不是敌人，而是"骑墙派"</h4>
+          <p>全文最锋利的一笔，不在骂买办，而在刻画民族资产阶级的矛盾姿态——"举起你的左手打倒帝国主义，举起你的右手打倒共产党"。毛泽东没有给它贴一张"坏人"的标签了事，而是拆成右翼（可能是敌人）与左翼（可能是朋友），并给出一个动作词：<b>提防</b>。迁移到今天：任何联盟、平台、组织，命门往往不在明确的敌友，而在"可敌可友、时进时退"的中间力量如何管理。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>分析的终点是行动清单，不是描述</h4>
+          <p>六个阶级各写一段，每一段都严格落回同一个问题：<b>"它对革命持什么态度，我们该怎么办。"</b>没有一段是纯客观的社会学白描。这是一种"分析即决策"的写法——分类不是为了理解世界，而是为了改变世界。读毛选，最该学的不是结论，而是这种"每一个观察都要通向一个动作"的纪律。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">谁是我们的敌人？谁是我们的朋友？这个问题是革命的首要问题。中国过去一切革命斗争成效甚少，其基本原因就是因为不能团结真正的朋友，以攻击真正的敌人。</div>
+        <div class="ctx">开篇第一句，全文的题眼。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">举起你的左手打倒帝国主义，举起你的右手打倒共产党。</div>
+        <div class="ctx">引一位自称戴季陶"真实信徒"者在北京《晨报》上的话；毛泽东点评："这两句话，画出了这个阶级的矛盾惶遽状态。"</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">荒时暴月，向亲友乞哀告怜，借得几斗几升，敷衍三日五日，债务丛集，如牛负重。</div>
+        <div class="ctx">写贫农中最苦的一部分，白描极工，来自湖南农村调查的第一手观察。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">他们失了生产手段，剩下两手，绝了发财的望，又受着帝国主义、军阀、资产阶级的极残酷的待遇，所以他们特别能战斗。</div>
+        <div class="ctx">论工业无产阶级"特别能战斗"的第二个原因；前一原因是"集中"。此为 1991 年版修订文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">那动摇不定的中产阶级，其右翼可能是我们的敌人，其左翼可能是我们的朋友——但我们要时常提防他们，不要让他们扰乱了我们的阵线。</div>
+        <div class="ctx">全文总结论，敌·领导·朋友·提防四格的收束。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">02 · 湖南农民运动考察报告（1927 年 3 月）</div>
+        <p>本文说"农民是最广大最忠实的同盟军"，还只是一句论断；下一篇毛泽东用三十二天、五个县的实地考察，把这句话坐实。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">孙中山《中国国民党第一次全国代表大会宣言》（1924）</div>
+        <p>本文原版第一段明言：国民党一大宣言"极其简单"。读两篇对照，能看清"笼统的联俄联共"与"精确的阶级分析"之间的差距。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把"分清敌友"搬到当下</h4>
+      <p class="q">挑一个你正在做的事（创业、做内容、带团队、乃至组织一次家庭决策），用本文的框架问自己：① 谁是必须团结的"真正的朋友"，我有没有在错误的方向上用力？② 谁是"骑墙派"——那些可支持、可观望、也可能倒戈的中间力量，我的"提防"机制是什么？③ 我有没有像毛数人头一样，把"谁站在我这边、谁规模最大"算成一笔清楚的账？</p>
+      <p class="hint">提示：不必套用"阶级"这个历史概念，只需要借它的动作——把模糊的"大家"拆成可判断、可计数、可分别对待的群体，再决定团结谁、提防谁。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

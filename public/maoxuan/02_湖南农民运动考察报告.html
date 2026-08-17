@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02 · 湖南农民运动考察报告 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:2px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1.05fr 1.5fr 1.35fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.enemy{background:var(--red-deep);}
+.spec-seg.waver{background:var(--gold);}
+.spec-seg.friend{background:var(--green);}
+.spec-seg.leader{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">贰</div>
+    <h1>湖南农民运动考察报告</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第二篇 · <b>一九二七年三月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>湖南农民运动考察报告</td></tr>
+      <tr><th>写作时间</th><td>1927 年 2 月（实地考察于 1 月 4 日—2 月 5 日进行；《毛选》题注标"一九二七年三月"，系依据首次发表时间）</td></tr>
+      <tr><th>最初发表</th><td>中共湖南区委机关刊物《战士》周报第 35、36、38、39 期（1927 年 3 月 5 日起连载）</td></tr>
+      <tr><th>后续刊载</th><td>《向导》周报第 191 期（3 月 12 日，仅刊前两部分）、《湖南民报》、汉口《民国日报》副刊《中央副刊》第 7 号（3 月 28 日）；4 月汉口长江书店出版单行本《湖南农民革命（一）》（瞿秋白作序）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）；篇首有编者题注，说明写作缘起与党内斗争背景</td></tr>
+      <tr><th>篇　幅</th><td>全文近两万字，是毛泽东早期篇幅最长的政论之一（各刊本字数略有出入）</td></tr>
+      <tr><th>历史坐标</th><td>大革命高潮与危机并存：北伐胜利推进、农民运动空前高涨（湖南农会会员由三四十万激增至二百万），而国共合作内部右派反共、党内右倾动摇，四一二反革命政变前夜</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">1927 年初，一场席卷湖南的农民运动把一道尖锐的问题摆到所有人面前：<b>几千万农民起来了，这到底是"好得很"还是"糟得很"？</b>党内外一片责难之声。毛泽东没有在武昌的办公室与人争论，而是<b>回乡走了 32 天、700 公里</b>，用一手材料写下了这篇答卷。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1926 年 7 月 · 北伐誓师</div>
+        <div class="tl-body">国民革命军自广州北伐，工农运动随军事胜利迅速高涨，湖南尤为猛烈。<span class="note">——农会会员一年内由三四十万激增到二百万，直接领导的群众约一千万，湖南农民几乎组织了一半。</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1926 年 11 月 · 武汉</div>
+        <div class="tl-body">毛泽东任中共中央农民运动委员会书记，赴武汉主持农民运动工作。<span class="note">——党内对农运的路线分歧，正由此前推后的责任而加剧。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1926 年 12 月 · 长沙</div>
+        <div class="tl-body">参加湖南全省第一次农民代表大会，为考察做足了准备。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1927 年 1 月 4 日 — 2 月 5 日 · 湖南五县</div>
+        <div class="tl-body">身着蓝布长衫、脚穿草鞋，只许戴述人一人陪同、拒绝车马接送，考察湘潭、湘乡、衡山、醴陵、长沙五县，步行 700 余公里，开调查会 30 余场。<span class="note">——衡山座谈时听得入神，"忘记了手中的'喇叭筒'燃上手指"；2 月 1 日农历除夕，还冒雪徒步十余公里到醴陵东富寺。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1927 年 2 月 12 日 — 月底 · 武昌</div>
+        <div class="tl-body">回到武昌。2 月 16 日先向中央交 1700 字简报《视察湖南农民运动给中共中央的报告》，称"所见所闻与在汉口长沙所见所闻几乎全不同"；约一周后完成两万字《报告》。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1927 年 3 月 5 日起 · 《战士》周报</div>
+        <div class="tl-body">《报告》在湖南区委机关刊物《战士》第 35、36、38、39 期连载，首次公开发表，鼓舞了全省农运干部。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1927 年 3 月 12 日 · 《向导》仅登部分</div>
+        <div class="tl-body">主管宣传的瞿秋白安排中共中央机关报《向导》转载，但<b>陈独秀、彭述之不准全文发表</b>，只刊出部分章节。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1927 年 4 月 11 日深夜 · 瞿秋白作序</div>
+        <div class="tl-body">瞿秋白愤而赶写序言，交武汉长江书局以《湖南农民革命（一）》出版单行本，序中称毛泽东、彭湃为<b>"农民运动的王"</b>。<span class="note">——序言写成的次日，四一二反革命政变爆发。</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1927 年 5—6 月 · 走向世界</div>
+        <div class="tl-body">共产国际机关刊物《共产国际》先后以俄文、英文发表；布哈林在执委会第八次扩大全会上赞其"文字精练，耐人寻味"。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1927 年 8 月 · 八七会议</div>
+        <div class="tl-body">毛泽东在会议上自评：这份报告<b>"在湖南产生了影响，对中央则毫无影响"</b>——一语道破当时中央右倾领导对农运的漠视。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">文章的直接论敌有三层：<b>国民党右派</b>与土豪劣绅骂农运是"痞子运动""惰农运动"，是"糟得很"；<b>中派</b>责备农会举动"过分""矫枉过正"；<b>党内以陈独秀为首的右倾机会主义者</b>——被国民党的反动潮流吓倒，为迁就国民党，宁肯抛弃农民这个最主要的同盟军。毛泽东逐层驳斥，并下了那个著名的判断：<b>对待农民运动，站在前头领导、还是站在后头批评、还是站在对面反对，是革命成败的分水岭。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：农民运动<span class="q">"好得很"，不是"糟得很"</span>；贫农是"革命先锋"；<b>对待这场运动的立场——站在前头领导它，还是后头批评它、对面反对它——决定革命的成败。</b></div>
+    <div class="cards">
+      <div class="card">
+        <h4>① 农民问题的严重性</h4>
+        <p>几万万农民将如"暴风骤雨"般起来，"无论什么大的力量都将压抑不住"。这是革命成败的最大变量，任何忽视、压制它的议论与处置都必须"迅速矫正""迅速变更"。</p>
+      </div>
+      <div class="card green">
+        <h4>② "好得很"而非"糟得很"</h4>
+        <p>农运完成了"孙中山先生致力国民革命凡四十年"没做到的事，是"四十年乃至几千年未曾成就过的奇勋"；骂它"糟得很"的，"明明是站在地主利益方面……反革命的理论"。</p>
+      </div>
+      <div class="card blue">
+        <h4>③ 贫农是革命先锋</h4>
+        <p>贫农占乡村人口七成，是农会的"中坚""元勋"；"没有贫农，便没有革命。若否认他们，便是否认革命。若打击他们，便是打击革命。"对"过分"举动的定性，要看是站在谁的立场。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文的方法论可以压成一条链条：<b>不是先有立场再找证据，而是先下田调查、把两套对立的叙事摆到一起对照，再定立场、做分析、出结论。</b></p>
+    <div class="chain">
+      <div class="node"><div class="n-label">实地调查</div><div class="n-sub">32 天 · 5 县 · 700 公里 · 30 余场调查会</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">两套叙事对照</div><div class="n-sub">乡下农民的说法 vs 绅士阶级的说法，结果"完全相反"</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">立场选择</div><div class="n-sub">前头领导？后头批评？对面反对？</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">阶级分析</div><div class="n-sub">富农 · 中农 · 贫农——谁才是先锋</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">结论与政策</div><div class="n-sub">"好得很"；矫正议论、变更处置</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">结构是典型的<b>"立论—事实—驳论—分析—举证—收束"</b>：先摆出问题的严重性，再用事实、驳论与阶级分析层层推进，最后以"十四件大事"的实证清单坐实判断。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">总起</div>
+        <div class="sk-body"><b>农民问题的严重性</b>：设问立靶，提出"前头领导 / 后头批评 / 对面反对"三项选择。<span class="list">——"其势如暴风骤雨"，把农运摆到革命全局的中心位置。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">事实</div>
+        <div class="sk-body"><b>组织起来 + 一切权力归农会</b>：两个时期（组织期/革命期）、会员激增、农会取代绅权成为唯一权力机关。<span class="list">——"连两公婆扯皮的小事都要到农民协会去解决"。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">驳论</div>
+        <div class="sk-body"><b>三个"所谓"逐一驳斥</b>：<span class="list">① "糟得很"→ 实为"好得很"（奇勋）；② "过分"→ "革命不是请客吃饭"，"矫枉必须过正"；③ "痞子运动"→ 是"革命先锋"。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">分析</div>
+        <div class="sk-body"><b>革命先锋（阶级分析）</b>：富农（消极讥讽）→ 中农（游移）→ 贫农（中坚与元勋）。<span class="list">——长沙数据：贫农占乡村人口 70%（赤贫 20% + 次贫 50%），中农 20%，地主富农 10%。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">主体</div>
+        <div class="sk-body"><b>十四件大事</b>：把农运的成绩与权力转移逐项开列成一份可检验的清单。<span class="list">——详见下方四组分类。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">总收</div>
+        <div class="sk-body"><b>叶公好龙</b>：讥讽口称"唤起民众"、民众起来又害怕的右派。<span class="list">——"嘴里天天说'唤起民众'，民众起来了又害怕得要死，这和叶公好龙有什么两样！"</span></div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">十四件大事 · 四组分类</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:14px;">毛泽东把农运一年来的全部作为，归纳成十四件可核实的大事，是其"用事实说话"方法的高峰。</p>
+    <div class="cards" style="margin-top:0;">
+      <div class="card">
+        <h4>组织与夺权</h4>
+        <p>① 组织农民入农会　② 政治上打击地主（清算·罚款·捐款·小质问·大示威·戴高帽游乡·关县监狱·驱逐·枪毙）　④ 打倒都团封建统治　⑥ 推翻县官衙门政权</p>
+      </div>
+      <div class="card gold">
+        <h4>经济斗争</h4>
+        <p>③ 经济上打击地主（禁囤积·减租减押·减息）　⑪ 废苛捐　⑬ 合作社运动</p>
+      </div>
+      <div class="card green">
+        <h4>武装与治安</h4>
+        <p>⑤ 推翻地主武装·建立农民武装（梭镖队）　⑩ 清匪（"土匪全然绝了迹"）</p>
+      </div>
+      <div class="card blue">
+        <h4>社会与文化变革</h4>
+        <p>⑦ 推翻族权·神权·夫权　⑧ 普及政治宣传　⑨ 农民诸禁（牌·赌·鸦片）　⑫ 文化运动（办夜学）　⑭ 修道路·修塘坝</p>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">三种立场光谱</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从左到右，由"对面反对"到"前头领导"；色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg enemy">对面反对</div>
+        <div class="spec-seg waver">后头批评</div>
+        <div class="spec-seg leader">前头领导</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>国民党右派·土豪劣绅</b>"糟得很""痞子运动""惰农运动"</div>
+        <div class="spec-label"><b>中派·右倾机会主义</b>"过分""矫枉过正"——表面缓和，实质与右派同一立场</div>
+        <div class="spec-label"><b>革命者·贫农先锋</b>"好得很"——站在前头，领导农民</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card"><h4>对面反对</h4><p>凡骂农运"糟得很"的，"明明是站在地主利益方面打击农民起来的理论，明明是地主阶级企图保存封建旧秩序……明明是反革命的理论"。</p></div>
+      <div class="card gold"><h4>后头批评</h4><p>"这一派人的议论，表面比前一派缓和，但实质与前一派同站在一个观点上"——毛泽东对"中派"的判断，刀口向内，直指党内动摇。</p></div>
+      <div class="card green"><h4>前头领导</h4><p>"孙中山先生致力国民革命凡四十年，所要做而没有做到的事，农民在几个月内做到了。这是四十年乃至几千年未曾成就过的奇勋。"</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>调查的本质不是"收集数据"，而是"对照两套叙事"</h4>
+          <p>毛泽东此行最硬核的动作，不是跑了多少地方，而是把<b>"乡下农民的说法"与"汉口、长沙绅士阶级的说法"并排摆在一起</b>，得出"完全相反"四字。很多争论表面是"事实之争"，实则是"信息源之争"——站在哪一方听，就得到哪一方的"事实"。迁移到今天：面对任何一边倒的主流叙事，先问自己——我的一手信息在哪？我有没有刻意走到"对方阵营"去听那套"完全相反"的道理？没有对照的调查，只是为既有结论补素材。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>为"反常"辩护的底气，在于敢于重定义评价标准</h4>
+          <p>毛泽东不否认农会打轿子、戴高帽、游乡、罚跪这些"过分"举动，他把整个评价坐标系换掉——"革命不是请客吃饭"。当既得利益者用"秩序""体面""程序"来审判变革，变革者若不重提标准，就永远"理亏"。同样一句话，站在农民立场叫"革命需要"，站在地主立场叫"痞子胡闹"。<b>判断"过分"还是"正当"，从来不是纯技术问题，而是立场问题。</b>这提示：任何打破现状的行动，都要先想清楚自己用哪把尺子衡量，而不是被动接受旧秩序的尺子。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>抓"基干"：四条绳索里，先打政权</h4>
+          <p>毛泽东把束缚农民的"四条极大的绳索"——政权、族权、神权、夫权——摆开，却不平均用力，而是点破<b>"地主政权，是一切权力的基干"</b>：打翻了政权，其余三条"便一概跟着动摇"。所以农运的突破口是"打倒土豪劣绅、一切权力归农会"，而非先去破除迷信、解放妇女。这是一种典型的杠杆思维：<b>系统性问题不平均用力，要找那个"基干"支点</b>，打翻它，其余连带松动。今天做组织变革、推动议题，同样值得先问：这件事的"政权"（真正的权力基干）在哪里？</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">很短的时间内，将有几万万农民从中国中部、南部和北部各省起来，其势如暴风骤雨，迅猛异常，无论什么大的力量都将压抑不住。他们将冲决一切束缚他们的罗网，朝着解放的路上迅跑。</div>
+        <div class="ctx">开篇"农民问题的严重性"，把农运提到革命全局的中心。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">孙中山先生致力国民革命凡四十年，所要做而没有做到的事，农民在几个月内做到了。这是四十年乃至几千年未曾成就过的奇勋。这是好得很。</div>
+        <div class="ctx">驳"糟得很"论，"好得很"三字是全文最著名的定性。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">革命不是请客吃饭，不是做文章，不是绘画绣花，不能那样雅致，那样从容不迫，文质彬彬，那样温良恭俭让。革命是暴动，是一个阶级推翻一个阶级的暴烈的行动。</div>
+        <div class="ctx">驳中派"过分"论的核心引文，一段排比把"革命"与"改良"彻底划清。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">没有贫农，便没有革命。若否认他们，便是否认革命。若打击他们，便是打击革命。</div>
+        <div class="ctx">论贫农是"革命先锋"，三句递进，是对一切指责贫农"痞子"者的正面回击。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">嘴里天天说"唤起民众"，民众起来了又害怕得要死，这和叶公好龙有什么两样！</div>
+        <div class="ctx">全文结语，讥讽国民党右派乃至一切口称革命、惧怕民众者。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">03 · 中国的红色政权为什么能够存在？（1928 年 10 月）</div>
+        <p>本篇说"农民几个月内做到了孙中山四十年没做到的事"；可一年后大革命失败，革命退守乡村。下一篇回答：在四围白色政权的包围中，小块红色政权为什么能长期存在、怎样存在。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">彭湃《海丰农民运动》（1926）</div>
+        <p>瞿秋白在序言中把两本并提，称毛泽东、彭湃为"农民运动的王"。彭湃以地主家庭出身投身农运，是"自我革命"式的进入；毛泽东则以 32 天调查"分析"式的进入。对照读，能看清通往农民的两条不同路径。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把"前头 / 后头 / 对面"三问搬到当下</h4>
+      <p class="q">挑一件你正在经历的变革（行业转向、组织调整、技术浪潮、乃至一个社会议题），用本文的三问审视自己：① 我现在站在哪个位置——是站在它前头领导、后头指手画脚地批评，还是对面反对？② 我的判断基于一手调查，还是二手"绅士阶级的道理"（媒体转述、朋友圈、二手报告、会议纪要）？③ 我有没有像毛泽东走 32 天一样，故意走到"对方阵营"去听那套"完全相反"的说法，再下结论？④ 面对"太过分""破坏秩序"的指责，我能否分清：哪些是真越界，哪些是既得利益者用旧尺子审判新事物？</p>
+      <p class="hint">提示：不必套用"阶级"这个历史概念，只需借它的三个动作——走到现场、对照两套说法、明确自己的立场。尤其第三问：今天获取信息的成本极低，但"故意去听对立面"的成本反而更高、也更有价值。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

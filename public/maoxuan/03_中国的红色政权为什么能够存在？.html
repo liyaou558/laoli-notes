@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 · 中国的红色政权为什么能够存在？ · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1.05fr 0.9fr 1.05fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.obj{background:var(--blue);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">叁</div>
+    <h1>中国的红色政权为什么能够存在？</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第三篇 · <b>一九二八年十月五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>中国的红色政权为什么能够存在？</td></tr>
+      <tr><th>写作时间</th><td>1928 年 10 月（《毛选》题注标"一九二八年十月五日"，即湘赣边界党的第二次代表大会通过决议之日）</td></tr>
+      <tr><th>最初发表</th><td>非报刊文章：系毛泽东为中共湘赣边界第二次代表大会起草的决议案《政治问题和边界党的任务》的第一部分（1928 年 10 月 4—6 日，宁冈茅坪步云山白云寺，出席代表百余人）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）；篇首编者题注："这是毛泽东为中共湘赣边界第二次代表大会写的决议的一部分，原题为《政治问题和边界党的任务》。"</td></tr>
+      <tr><th>篇　幅</th><td>全文约四千字，分六个小节（国内的政治状况 / 红色政权发生和存在的原因 / 湘赣边界的割据和八月的失败 / 湘赣边界割据在湘鄂赣三省的地位 / 经济问题 / 军事根据地问题）</td></tr>
+      <tr><th>历史坐标</th><td>大革命失败后的革命低潮期：南昌起义、秋收起义、广州起义相继受挫，红军退守井冈山，根据地遭"三月失败""八月失败"，党内军内弥漫着"红旗到底打得多久"的疑问</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">1928 年的井冈山，最尖锐的问题不是怎么打仗，而是<b>"红旗到底打得多久"</b>。南昌起义失败了，秋收起义失败了，广州起义也失败了；四围是白色政权，根据地不断被"会剿"，经济被严密封锁。据记载，毛泽东在<b>八角楼一根灯芯的清油灯下</b>通宵执笔，写下这篇为红色政权"为什么能存在"寻找答案的文章。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1927 年 4—7 月 · 大革命失败</div>
+        <div class="tl-body">四一二、七一五接连发生，国共合作破裂，大革命失败，中国革命跌入低潮。<span class="note">——"从广东出发的资产阶级民主革命，到半路被买办豪绅阶级篡夺了领导权，立即转向反革命路上"。</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1927 年 8—12 月 · 三大起义相继受挫</div>
+        <div class="tl-body">8 月 1 日南昌起义打响第一枪；9 月 9 日毛泽东发动秋收起义；12 月 11 日广州起义建立三天城市政权。三次起义或失败或受挫，革命力量被迫转入乡村。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1927 年 10 月 · 上井冈山</div>
+        <div class="tl-body">毛泽东率秋收起义余部进军井冈山，创建以宁冈为中心的农村革命根据地。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1928 年 4 月 · 朱毛会师</div>
+        <div class="tl-body">朱德、陈毅率南昌起义余部与湘南农军在宁冈砻市与毛泽东会师，合编为工农革命军第四军（后改称红军第四军），朱德任军长、毛泽东任党代表。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1928 年 5 月 20 日 · 第一次代表大会</div>
+        <div class="tl-body">湘赣边界党的第一次代表大会在宁冈茅坪召开，初步回答"红旗到底打得多久"；6 月 23 日龙源口大捷后，根据地进入全盛。<span class="note">——"红旗到底打得多久"的疑问，早在 1927 年冬就有人提出，此后每逢危急便再起。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1928 年 7—8 月 · 八月失败</div>
+        <div class="tl-body">湖南省委命令红四军向湘南发展；湖南省委代表杜修经"导扬二十九团官兵的回乡情绪"，把部队拉往湘南，主力受挫，边界各县城及平原地区尽陷敌手。<span class="note">——根据地内"被杀之人，被焚之屋，不计其数"。</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1928 年 8 月 30 日 · 黄洋界保卫战</div>
+        <div class="tl-body">留守红军不足一营，凭险击退敌军四个团的进攻，保住井冈山。毛泽东闻讯写下《西江月·井冈山》："黄洋界上炮声隆，报道敌军宵遁。"</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1928 年 9 月 · 回师收复</div>
+        <div class="tl-body">毛泽东、朱德率部回师井冈山，连续取胜，收复边界大部失地，巩固以宁冈为中心的根据地。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1928 年 10 月 4—6 日 · 第二次代表大会</div>
+        <div class="tl-body">湘赣边界党的第二次代表大会在宁冈茅坪步云山白云寺召开，通过毛泽东起草的决议案《政治问题和边界党的任务》，其第一部分即《中国的红色政权为什么能够存在？》。<span class="note">——此时湘赣两省"进剿"军队随时有八九个团以上、多到十八个团，红军不足四个团。</span></div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">文章的论敌不是某一个具体的人，而是一种弥漫的<b>悲观情绪</b>：四围白色政权、革命连连失败，这块小小的红色割据凭什么能撑下去？毛泽东没有空喊"坚持到底"，而是退一步，<b>把"红色政权为什么能够存在"当作一个可以科学论证的命题</b>，从中国的国家性质讲起，一层层推导出五个条件，最后落到两条主观条件上——正式红军与"政策的不错误"。这是第一次把"工农武装割据"从经验上升为理论。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：红色政权能在四围白色政权包围中长期存在，根本原因在于中国是帝国主义间接统治、政治经济发展不平衡的半殖民地——<b>白色政权之间长期的分裂战争留下了生存缝隙</b>；加上"工农武装割据"的<span class="q">五个条件</span>齐备，红色政权就能存在并发展。</div>
+    <div class="cards">
+      <div class="card blue">
+        <h4>① 客观土壤：半殖民地的分裂</h4>
+        <p>中国是帝国主义间接统治的经济落后的半殖民地，地方农业经济（不是统一的资本主义经济）+ 帝国主义划分势力范围的分裂剥削政策，造成白色政权间持续不断的战争，红色区域得以在夹缝中生存。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 历史基础：大革命影响区</h4>
+        <p>红色政权首先发生在 1926—1927 大革命中工农兵士曾"大大地起来过"的湘、粤、鄂、赣等省，而非未经革命影响的川、黔、滇及北方各省——那里才有组织起来的群众与可分化的红军成分。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 关键主观条件：红军 + 党</h4>
+        <p>"相当力量的正式红军"是必要条件，"共产党组织的有力量和它的政策的不错误"是要紧条件——由此首次提出"工农武装割据"思想：武装 + 土地革命 + 政权三位一体。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文的推导逻辑是一条链条：<b>先从中国的国家性质推出"敌人必然分裂"，再论证"敌人分裂给红色区域留下缝隙"，最后叠加五个条件推出结论。</b>每一步都有明确的因果指向。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">半殖民地中国</div><div class="n-sub">地方农业经济 + 帝国主义划分势力范围</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">白色政权长期战争</div><div class="n-sub">"所有妥协都是暂时的"</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">红色区域生存缝隙</div><div class="n-sub">在四围白色政权包围中发生并坚持</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">五个条件齐备</div><div class="n-sub">三客观（土壤·基础·形势）+ 两主观（红军·党）</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">长期存在并发展</div><div class="n-sub">"日渐接近于全国政权的取得"</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">六节层层递进：<b>先讲国内政治（敌情）→ 再讲存在的五个原因（立论核心）→ 用井冈山的成功与八月失败一正一反作检验 → 再讲地位、经济、根据地三项落地事务。</b>"务虚"的论证与"务实"的边界工作并存，是这篇决议的独特气质。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 敌情</div>
+        <div class="sk-body"><b>国内的政治状况</b>：新军阀统治本质（城市买办 + 乡村豪绅，对外投降帝国主义）；军阀内斗的必然性。<span class="list">——"今天的暂时的妥协，即酝酿着明天的更大的战争。"</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 立论</div>
+        <div class="sk-body"><b>中国红色政权发生和存在的原因</b>：全文核心，五个条件逐条论证。<span class="list">——详见下方"五条件光谱"。</span></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 检验</div>
+        <div class="sk-body"><b>湘赣边界的割据和八月的失败</b>：一正一反——四月以后以不足四个团抗八九个团乃至十八个团而坚持四个月（政策正确）；八月失败（形势判断错误 + 分兵冒进，点名杜修经"形式地执行命令"）。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 定位</div>
+        <div class="sk-body"><b>湘赣边界割据在湘鄂赣三省的地位</b>：割据意义"决不限于边界数县"，而是将来三省总暴动的支撑点；扩大影响、壮大红军、增强地方武装、培养人才四项任务。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五 · 经济</div>
+        <div class="sk-body"><b>经济问题</b>：封锁下食盐、布匹、药材缺乏，红军"每天除粮食外的五分钱伙食费都感到缺乏"；警告"边界党如不能对经济问题有一个适当的办法……割据将要遇到很大的困难"。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">六 · 根据</div>
+        <div class="sk-body"><b>军事根据地问题</b>：大小五井、九陇两个根据地；巩固的三项任务——修筑完备工事、储备充足粮食、建设较好的红军医院。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">五条件光谱 · 客观给定 → 主观能动</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从左到右，由"客观既成、不可选择"过渡到"主观可为、必须自造"；色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg obj">客观条件 ①②</div>
+        <div class="spec-seg form">形势条件 ③</div>
+        <div class="spec-seg subj">主观条件 ④⑤</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>土壤 · 基础</b>① 半殖民地分裂：地方农业经济 + 帝国主义划分势力范围 → 白色政权长期战争；② 革命影响区：湘、粤、鄂、赣等大革命"大大起来过"的地方</div>
+        <div class="spec-label"><b>全国形势</b>③ 全国革命形势向前发展——小块红色区域"必然地要作为取得全国政权的许多力量中间的一个力量"</div>
+        <div class="spec-label"><b>武装 · 党</b>④ 相当力量的正式红军（必要条件）；⑤ 共产党组织有力量、政策不错误（要紧条件）——"工农武装割据"由此提出</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card blue"><h4>客观土壤</h4><p>"这种现象产生的原因有两种，即地方的农业经济（不是统一的资本主义经济）和帝国主义划分势力范围的分裂剥削政策。"——敌人的分裂不是偶然，是国家性质决定的。</p></div>
+      <div class="card gold"><h4>形势中介</h4><p>"全国革命形势若不是继续地向前发展，而有一个比较长期的停顿，则小块红色区域的长期存在是不可能的。"——小块割据的命运被纳入全国大势。</p></div>
+      <div class="card green"><h4>主观能动</h4><p>"红色政权的长期的存在并且发展，除了上述条件之外，还须有一个要紧的条件，就是共产党组织的有力量和它的政策的不错误。"——把"自己不犯错"写进存在条件。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>弱势者的生存空间，来自对手体系的裂缝，而不是自己的力量</h4>
+          <p>全文最反直觉的论断：红色政权的存在"是世界各国从来没有的事"，而它之所以可能，第一位的解释不是"我们很强大"，而是<b>"白色政权之间的战争"</b>。毛泽东没有把希望寄托在红军自身壮大上，而是先论证敌人体系的必然分裂——地方农业经济使中国无法形成统一的资本主义市场，帝国主义划分势力范围使各派军阀背后各有主子，于是"所有妥协都是暂时的"。<b>弱势者真正的窗口期，往往不在自己变强的速度，而在领先者体系内部的结构性矛盾何时爆发。</b>迁移到今天：与其焦虑"我还不够强"，不如研究"对手为什么必然不能长期团结"——这正是被很多人跳过的一步。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>战略必须随"形势相位"切换——八月失败是错把稳定期当破裂期</h4>
+          <p>毛泽东把八月失败归结为一句话："<b>不明了当时正是统治阶级暂时稳定的时候，反而采取统治阶级政治破裂时候的战略，分兵冒进</b>"。同一套打法（集中还是分兵），敌人分裂时是对的，敌人稳定时就是错的。他还点破更深的病灶：杜修经"只知形式地执行湖南省委的命令"——对上级命令作形式化执行，而不对形势负责。<b>复盘失败时要问的不是"这招对不对"，而是"我有没有判断清当前处于哪个相位、这招和相位是否匹配"。</b>迁移：扩张期和收缩期需要完全不同的动作，而"照章执行""别人都这么做"恰恰是相位误判的温床。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>把"自身不犯错"写进存在条件——一种自我加压的方法论</h4>
+          <p>五个条件里，前三个是客观给定的（国家性质、历史基础、全国形势），后两个是主观可为的（正式红军、党的政策不错误）。把<b>"政策的不错误"</b>列为红色政权能否存在的条件之一，意味着：不能把所有成败都推给客观环境，自己的决策质量本身就是一个独立的存在变量。<b>这种"把自身正确性纳入存在条件"的写法，本质上是一种自我加压</b>——如果政策错了，哪怕五个条件里的四个都具备，红色政权也守不住。迁移：复盘成功或失败，都值得把"我们自己的判断质量"作为一个可拆解、可改进的变量单独列出，而不是混在"形势好/形势差"里一笔带过。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">一国之内，在四围白色政权的包围中，有一小块或若干小块红色政权的区域长期地存在，这是世界各国从来没有的事。这种奇事的发生，有其独特的原因。而其存在和发展，亦必有相当的条件。</div>
+        <div class="ctx">第二节开篇，全文的问题意识所在：把"奇事"当作可分析的对象。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国内部各派军阀的矛盾和斗争，反映着帝国主义各国的矛盾和斗争。故只要各国帝国主义分裂中国的状况存在，各派军阀就无论如何不能妥协，所有妥协都是暂时的。今天的暂时的妥协，即酝酿着明天的更大的战争。</div>
+        <div class="ctx">第一节，论证军阀内斗必然性的核心引文，"妥协都是暂时的"是全文的方法论基石。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们只须知道中国白色政权的分裂和战争是继续不断的，则红色政权的发生、存在并且日益发展，便是无疑的了。</div>
+        <div class="ctx">第二节第一条件末尾，直接回应"红旗到底打得多久"的悲观情绪。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">虽有很好的工农群众，若没有相当力量的正式武装，便决然不能造成割据局面，更不能造成长期的和日益发展的割据局面。所以"工农武装割据"的思想，是共产党和割据地方的工农群众必须充分具备的一个重要的思想。</div>
+        <div class="ctx">第二节第四条件，"工农武装割据"这一概念的首次提出处。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">红军一面要打仗，一面又要筹饷。每天除粮食外的五分钱伙食费都感到缺乏，营养不足，病的甚多，医院伤兵，其苦更甚。</div>
+        <div class="ctx">第五节，经济困境的白描——理论文章里最扎心的现实细节。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">04 · 井冈山的斗争（1928 年 11 月）</div>
+        <p>本文是党代会决议，讲"为什么能存在"；下一篇是同年 11 月 25 日写给中共中央的报告，讲边界斗争的来龙去脉、政权、土地、军队的实况。两篇合看，"理论论证 + 实地报告"才完整。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">星星之火，可以燎原（1930.01）</div>
+        <p>本文提出"工农武装割据"与存在条件，但重心仍在"如何守住边界割据"；到 1930 年给林彪的信，才把重心转向"以农村为中心、夺取全国政权"。两篇对照，可见"农村包围城市"这条道路理论如何一步步成熟。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把"生存缝隙 + 形势相位"两把尺子搬到当下</h4>
+      <p class="q">① 你所在的领域（行业、职场、创业、投资），"白色政权之间的战争"对应什么？领先者之间有哪些结构性矛盾，会在哪里留下"夹缝"给你立足？② 你当前的策略，是基于对"形势处于哪个相位"（扩张期 / 收缩期 / 稳定期 / 破裂期）的判断吗？还是别人怎么做我就怎么做、上级怎么说我就怎么做？③ 复盘最近一次失败：你是在"负责任地判断形势"，还是在"形式地执行命令"？④ 你的"五个条件"里，哪些是客观给定的、哪些是主观可为的？你有没有把"政策不错误"（决策质量）当作一个可以单独复盘、单独改进的变量？</p>
+      <p class="hint">提示：不必套用"半殖民地""军阀"这些历史概念，只借两把尺子——① 找对手体系的裂缝而非只盯着自身变强；② 先判形势相位再选策略，警惕"照章执行"式的相位误判。尤其第二把尺子：绝大多数失败复盘都停在"运气不好"或"执行力差"，而漏掉了"当时处在哪个相位"这个最该先问的问题。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

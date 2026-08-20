@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>05 · 关于纠正党内的错误思想 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1.05fr 0.9fr 1.05fr;}
+.spec-4 .spec-band,.spec-4 .spec-labels{grid-template-columns:repeat(4,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.obj{background:var(--blue);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">伍</div>
+    <h1>关于纠正党内的错误思想</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第五篇 · <b>一九二九年十二月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>关于纠正党内的错误思想</td></tr>
+      <tr><th>写作时间</th><td>1929 年 12 月。系毛泽东为中国共产党红军第四军第九次代表大会（古田会议）写的决议的第一部分；会议于 12 月 28 日至 29 日在福建上杭古田召开</td></tr>
+      <tr><th>最初发表</th><td>非报刊公开文章：系古田会议决议《中国共产党红军第四军第九次代表大会决议案》的第一部分（党内文件）。原题《纠正党内非无产阶级意识的不正确倾向问题》；1951 年 10 月收入《毛泽东选集》第一卷时，经毛泽东校阅并改题《关于纠正党内的错误思想》</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。篇首编者题注说明此为古田会议决议第一部分，并称"这个决议使红军肃清旧式军队的影响，完全建立在马克思列宁主义的基础上"</td></tr>
+      <tr><th>篇　幅</th><td>全文约六千多字，分八节，逐一剖析八种非无产阶级思想（单纯军事观点、极端民主化、非组织观点、绝对平均主义、主观主义、个人主义、流寇思想、盲动主义残余），每节均按"表现—来源—纠正方法"三段展开</td></tr>
+      <tr><th>历史坐标</th><td>红军自 1927 年 8 月 1 日南昌起义创始两年多之后；古田会议决议的一部分，确立"思想建党、政治建军"原则，是中国共产党及其领导的人民军队建设的纲领性文献；其中"使党员的思想和党内的生活都政治化，科学化"为党的文献第一次提出</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这篇与前面四篇最大的不同：它不是"对敌作战"的分析，而是<b>第一次掉转枪口向内</b>——系统整治一支军队内部的<b>思想病</b>。触发它的，是一年里红四军党内一场几乎让毛泽东"下台"的激烈争论：红军到底是"单纯打仗"还是"执行政治任务"？党能不能领导军队？争论在红四军七大上白热化，<b>毛泽东这个中央指定的前委书记落选，一度离开红四军主要领导岗位</b>。直到中央"九月来信"力挺他回任，才有了古田会议，才有了这篇决议。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1929 年 1 月 · 下山出击</div>
+        <div class="tl-body">毛泽东、朱德率红四军主力离开井冈山，向赣南、闽西进军，开创赣南闽西根据地（后来的中央苏区基础）。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年春—夏 · 分歧发酵</div>
+        <div class="tl-body">队伍扩大、成分复杂（大量农民、小资产阶级出身者与俘虏兵加入），环境险恶、战斗频繁，<b>单纯军事观点、流寇思想、军阀主义残余</b>滋长，极端民主化、组织纪律涣散蔓延。在"建什么军队、谁领导军队"上，领导层出现分歧。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1929 年 6 月 22 日 · 红四军七大（龙岩）</div>
+        <div class="tl-body">毛泽东想借总结斗争经验解决建军根本问题，但<b>正确主张未被多数接受</b>；大会改选前委，中央指定的前委书记毛泽东未继续当选，改由陈毅任前委书记。会后毛泽东离开红四军主要领导岗位，到闽西协助指导地方工作。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1929 年夏—秋 · 失去毛泽东之后的红四军</div>
+        <div class="tl-body">"政策上发现许多错误，党及红军组织皆松懈"。<span class="note">——事实证明，不是"有没有毛泽东都行"。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1929 年 8 月 21 日 · 中央"八月来信"</div>
+        <div class="tl-body">周恩来代中央起草指示信，初步支持毛泽东的建党建军主张，批评极端民主化（事事"要拿到支部去讨论去解决"）。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年 8 月下旬 · 陈毅赴沪</div>
+        <div class="tl-body">陈毅到上海如实汇报红四军情况；中央政治局决定由<b>周恩来、李立三、陈毅</b>三人组成专门委员会研究红四军问题。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1929 年 9 月 28 日 · "九月来信"</div>
+        <div class="tl-body">《中共中央给红军第四军前委的指示信》（陈毅起草、周恩来审定）发出：肯定毛泽东"工农武装割据"与红军建设基本原则，要求维护朱德、毛泽东的领导，明确毛泽东<b>"应仍为前委书记"</b>。这封近万字来信成为古田会议决议的直接依据。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1929 年 11 月 26 日 · 毛泽东回前委</div>
+        <div class="tl-body">毛泽东抵长汀与朱德、陈毅会合，表示遵照中央指示回前委工作；28 日前委扩大会议决定 12 月召开红四军九大、整训、纠正各种错误倾向。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年 12 月 28—29 日 · 古田会议</div>
+        <div class="tl-body">红四军党的第九次代表大会在福建上杭古田（廖氏宗祠／曙光小学）召开，<b>窗外一场罕见的漫天大雪，会场生炭火取暖</b>，红四军党代表、士兵代表、地方干部与妇女代表共 120 多人参会。毛泽东作政治报告、朱德作军事报告、陈毅传达"九月来信"。大会一致通过毛泽东起草的约 3 万字的 8 个决议案（总称《中国共产党红军第四军第九次代表大会决议案》），毛泽东重新当选前委书记。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">决议的核心，其实是回答一个此前悬而未决的根本问题：<b>中国共产党人要建立一支怎样的军队，党又如何领导这支军队？</b>毛泽东的答案是先把定性立起来——<b>"中国的红军是一个执行革命的政治任务的武装集团"</b>，军事只是"完成政治任务的工具之一"；再用一套严整的方法，把军内党内的八种错误思想逐一"表现—来源—纠正方法"地拆解、肃清。值得注意的是，毛选只收了决议的第一部分；原题《纠正党内非无产阶级意识的不正确倾向问题》，1951 年编集时才改为现在的题目。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：红军（党）内的种种错误思想，根源在于<b>"党的组织基础的最大部分是由农民和其他小资产阶级出身的成分所构成的"</b>，加上<b>领导机关"缺乏一致的坚决的斗争，缺乏对党员作正确路线的教育"</b>；纠正之道，是先把<span class="q">"中国的红军是一个执行革命的政治任务的武装集团"</span>这一根本定性立起来，再用"表现—来源—纠正方法"的三段式对八种非无产阶级思想逐一彻底肃清，最终使<span class="q">党员的思想和党内的生活都"政治化，科学化"</span>。</div>
+    <div class="cards">
+      <div class="card blue">
+        <h4>① 定性：红军是什么</h4>
+        <p>"军事只是完成政治任务的工具之一"，红军"决不是单纯地打仗的"，还要宣传、组织、武装群众并帮助建立革命政权。反对单纯军事观点（"司令部对外"）与流寇思想（"招兵买马""招降纳叛"）。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 组织：党怎么领导</h4>
+        <p>反对极端民主化与非组织观点，厉行"集中指导下的民主生活"：领导机关"遇事要拿出办法"，"一成决议，就须坚决执行"，"少数服从多数"；批评在党的会议上提出，不攻击个人。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 方法：怎么认识与批评</h4>
+        <p>反对主观主义与绝对平均主义：用马克思列宁主义的方法作形势分析，注重社会经济调查——"离开了实际情况的调查，就要堕入空想和盲动的深坑"；"说话要有证据，批评要注意政治"。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一条从<b>组织基础</b>出发、经由<b>错误思想</b>、落到<b>整治方法</b>的因果链：错误思想的"根"是成分与领导，其"害"是妨害执行党的正确路线，其"药"是"表现—来源—纠正方法"三段式逐一肃清，其"标"是党员思想与党内生活"政治化、科学化"。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">组织基础</div><div class="n-sub">党的组织基础最大部分由农民和其他小资产阶级出身的成分构成</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">领导弱化</div><div class="n-sub">领导机关缺乏一致坚决斗争、缺乏正确路线教育</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">八种错误思想</div><div class="n-sub">单纯军事观点 · 极端民主化 · 非组织观点 · 绝对平均主义 · 主观主义 · 个人主义 · 流寇思想 · 盲动主义残余</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">妨害执行正确路线</div><div class="n-sub">若不彻底纠正，"任务是必然担负不起来的"</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">三段式逐一肃清</div><div class="n-sub">表现 → 来源 → 纠正方法（思想教育 + 制度建设双轨）</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">政治化 · 科学化</div><div class="n-sub">"教育党员使党员的思想和党内的生活都政治化，科学化"</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">开篇一段总纲（定来源、定依据），之后八节平行展开——<b>每一节都严格按"表现 → 来源 → 纠正方法"三段走</b>，结构高度工整，可视为一篇"组织诊断报告"的范本：先给症状，再找病因，再开处方。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">总</div>
+        <div class="sk-body"><b>开篇总纲</b>：错误思想的<b>两个来源</b>——组织基础最大部分由农民和小资产阶级出身成分构成 + 领导机关缺乏一致坚决斗争与正确路线教育；并点明"大会根据中央九月来信的精神"，号召彻底肃清。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">一</div>
+        <div class="sk-body"><b>单纯军事观点</b>：表现（八条）如"军事好，政治自然会好，军事不好，政治也不会好"、以为红军只是单纯打仗、提出"司令部对外"口号、胜骄败馁、本位主义、保存实力、革命急性病；来源（四条）政治水平低、雇佣军队思想、过分相信军事力量、党对军事工作缺乏注意；纠正（五条）提高政治教育、加紧政治训练、发动地方与群众批评、党积极注意军事工作、<b>编制红军法规</b>。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二</div>
+        <div class="sk-body"><b>极端民主化</b>：表现如"由下而上的民主集权制""先交下级讨论，再由上级决议"、对决议执行表示勉强；危险在"损伤以至完全破坏党的组织，削弱以至完全毁灭党的战斗力"；来源是小资产阶级的自由散漫性；纠正——理论上铲除根苗 + 组织上<b>厉行集中指导下的民主生活</b>（五条路线）。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三</div>
+        <div class="sk-body"><b>非组织观点</b>：甲、少数不服从多数——"少数人在自己的意见被否决之后，必须拥护多数人所通过的决议"；乙、非组织的批评——批评变成攻击个人，"不但毁坏了个人，也毁坏了党的组织"，或在党外批评；纠正——开会尽量发表意见、不调和敷衍，批评应在党的会议上提出、目的是"增加党的战斗力"。<div class="list"></div></div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四</div>
+        <div class="sk-body"><b>绝对平均主义</b>：表现六例——伤兵用费不分轻重、官长骑马被认为不平等、分物品要求极端平均、背米不分体强体弱、住房要一样平、<b>"宁愿大家抬不成，不愿把一个人抬了去"</b>；来源与极端民主化同源（手工业和小农经济产物）；纠正——"大体上的平均"（如官兵薪饷平等）应当坚持，但"必须反对不问一切理由的绝对平均主义"。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五</div>
+        <div class="sk-body"><b>主观主义</b>：对政治形势的主观分析、对工作的主观指导，"其必然的结果，不是机会主义，就是盲动主义"；只注意小缺点的批评会使人"变成谨小慎微的君子"，"忘记党的政治任务"。纠正——<b>使党员的思想和党内的生活都政治化，科学化</b>：用马克思列宁主义方法分析形势、注重社会经济调查、"说话要有证据，批评要注意政治"。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">六</div>
+        <div class="sk-body"><b>个人主义</b>：六种表现——报复主义（"削弱组织、削弱战斗力的销蚀剂"）、小团体主义、雇佣思想（"革命的重担便始终放在少数人的肩上"）、享乐主义、消极怠工、离队思想；来源是小资产阶级和资产阶级思想在党内的反映；纠正——加强教育为主 + 处理问题、分配工作、执行纪律得当 + 改善物质生活、适时休息整理。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">七</div>
+        <div class="sk-body"><b>流寇思想</b>：来源是游民成分占很大数量；表现——不愿做艰苦工作建立根据地、只图流动游击；扩大红军走"招兵买马""招降纳叛"路线；不耐烦和群众一块艰苦斗争。纠正——加紧教育、反流氓意识教育、争取工农积极分子加入红军改变成分、"从斗争的工农群众中创造出新的红军部队"；并警示<b>"历史上黄巢、李闯式的流寇主义，已为今日的环境所不许可"</b>。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">八</div>
+        <div class="sk-body"><b>盲动主义残余</b>：表现——不顾主客观条件盲干、城市政策执行不充分不坚决、军纪松懈（尤其打败仗时）、某些部队烧屋、<b>枪毙逃兵的制度和肉刑制度</b>；来源是流氓无产者思想与小资产阶级思想的综合；纠正——从思想上肃清盲动主义 + 从制度上、政策上纠正盲动行为。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">八种错误思想的"病灶层"光谱 · 军队性质 → 组织纪律 → 思想方法 → 党员修养</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">八种错误并非并列杂陈，可归入四个由"根本"到"个体"的层次；色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum spec-4">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg obj">军队性质</div>
+        <div class="spec-seg form">组织纪律</div>
+        <div class="spec-seg subj">思想方法</div>
+        <div class="spec-seg red">党员修养</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>单纯军事观点 · 流寇思想</b>定"红军是什么"：执行革命政治任务的武装集团，反对"司令部对外"与流动游击</div>
+        <div class="spec-label"><b>极端民主化 · 非组织观点</b>定"党怎么组织"：集中指导下的民主生活，少数服从多数</div>
+        <div class="spec-label"><b>主观主义 · 绝对平均主义</b>定"怎么认识与分配"：调查研究、按劳取酬，反对空想盲动</div>
+        <div class="spec-label"><b>个人主义 · 盲动主义残余</b>定"个人与行动"：肃清雇佣、享乐思想，纠正盲干烧屋肉刑</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card blue"><h4>军队性质</h4><p>最根本的一层：先回答"红军是不是军队、是什么军队"。若定性错了，其余七条都是无根之木——这是全文的"纲"。</p></div>
+      <div class="card gold"><h4>组织纪律</h4><p>"民主"与"集中"的边界：既反家长制，也反极端民主化；落脚点是"集中指导下的民主生活"。</p></div>
+      <div class="card green"><h4>思想方法</h4><p>认识论层：主观主义对应"怎么分析形势"，绝对平均主义对应"怎么分配"——都归于"政治化、科学化"。</p></div>
+      <div class="card" style="border-top-color:var(--red);"><h4 style="color:var(--red);">党员修养</h4><p>个体层：个人主义六种表现是"病灶"的最后落点，盲动主义残余是行动失控——靠教育+制度+改善生活三条纠正。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>"表现—来源—纠正方法"三段式：一套可迁移的"组织诊断"模板</h4>
+          <p>八个错误思想，每个都被强制走完"症状 → 病因 → 处方"三段，且<b>处方必分双轨：思想教育 + 制度建设</b>。单纯军事观点要"从教育上提高政治水平"，也要"编制红军法规，明白地规定……"；盲动主义残余要"从思想上肃清"，也要"从制度上和政策上纠正"。更关键的是"来源"这一层：毛泽东不满足于骂一句"错误思想"，而是追问<b>它从哪来的</b>——俘虏兵大量加入带来雇佣军队思想，游民成分大带来流寇思想，农民小资产阶级成分带来极端民主化和绝对平均主义。迁移到今天的组织管理：大多数"文化整治"只停留在"表现"层（批评、处罚、喊口号），而毛泽东示范的是<b>把症状追溯到"结构来源"（什么人、什么机制带来了它），再设计"教育+制度"的双轨处方</b>。不追问来源的批评，等于只擦镜子上的雾气，擦完还会再结。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>批评的两条红线：不攻击个人，也不专盯小缺点——"批评的主要任务，是指出政治上的错误和组织上的错误"</h4>
+          <p>毛泽东对"批评"划出两个反方向：一头是<b>把批评变成攻击个人</b>（"不但毁坏了个人，也毁坏了党的组织"）；另一头是<b>只注意小的方面、专挑个人缺点</b>，结果"党内精神完全集注到小的缺点方面，人人变成了谨小慎微的君子，就会忘记党的政治任务，这是很大的危险"。两条红线的交汇点是同一把尺：<b>批评的价值由"是否指向政治与组织的错误"来衡量</b>，而不是"是否说得痛快"或"是否够细"。迁移：当下的绩效反馈、代码评审、复盘会里，最常犯的正是这两个错——要么人身攻击，要么抠无关紧要的小瑕疵而放过方向性、结构性的错误。"说话要有证据，批评要注意政治"，"注意政治"翻译成今天的话就是：<b>盯着对目标真正要紧的事，别把"吹毛求疵"当成"认真负责"。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>"绝对平均"与"大体平均"的精确切割：公平不等于平均，分水岭是"斗争的需要"</h4>
+          <p>这篇最容易被误读的一节，恰恰是"绝对平均主义"。毛泽东在同一个段落里同时做了两件看似相反的事：既为"官兵薪饷平等"辩护（"这是现时斗争环境所需要的"），又痛批"不问一切理由的绝对平均主义"（"这不是斗争的需要，适得其反，是于斗争有妨碍的"）。他给出的判据不是抽象的"公平"，而是<b>"斗争的需要"</b>——伤兵用费该分轻重，因为救治需要；官长该骑马，因为指挥需要；但官兵薪饷该平等，因为凝聚军心需要。也就是说，<b>分配的唯一依据是"什么能让任务完成得更好"，而不是"什么看起来一样多"</b>。他甚至预见了社会主义阶段："物质的分配也要按照'各尽所能按劳取酬'的原则……决无所谓绝对的平均"。迁移：很多团队在"平均主义"与"特权"两极之间摇摆，恰恰缺了这把"任务需要"的尺子——该倾斜时不敢倾斜（怕被骂不公平），该守底线的平等时又滑向特权。问一句"这分配到底服务于什么目标"，比争论"公不公平"有用得多。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">中国的红军是一个执行革命的政治任务的武装集团。</div>
+        <div class="ctx">单纯军事观点一节，全文的定性之句——"军事只是完成政治任务的工具之一"。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">红军的打仗，不是单纯地为了打仗而打仗，而是为了宣传群众、组织群众、武装群众，并帮助群众建设革命政权才去打仗的，离了对群众的宣传、组织、武装和建设革命政权等项目标，就是失去了打仗的意义，也就是失去了红军存在的意义。</div>
+        <div class="ctx">单纯军事观点一节，把"军队为什么存在"回答到底——打仗是手段，群众是目的。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">党内批评是坚强党的组织、增加党的战斗力的武器。但是红军党内的批评有些不是这样，变成了攻击个人。其结果，不但毁坏了个人，也毁坏了党的组织。</div>
+        <div class="ctx">非组织观点一节，"批评"的正用与滥用——攻击个人的批评是自毁组织。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">教育党员使党员的思想和党内的生活都政治化，科学化。</div>
+        <div class="ctx">主观主义一节的纠正方法总纲，党的文献中第一次提出"党内生活政治化、科学化"。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">绝对平均主义不但在资本主义没有消灭的时期，只是农民小资产者的一种幻想；就是在社会主义时期，物质的分配也要按照"各尽所能按劳取酬"的原则和工作的需要，决无所谓绝对的平均。</div>
+        <div class="ctx">绝对平均主义一节，对"平均"划出的历史边界——连社会主义都不讲绝对平均。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">06 · 星星之火，可以燎原（1930.01）</div>
+        <p>古田会议后不到一个月，毛泽东写给林彪的一封党内通信，正面回答"红旗到底打得多久"的悲观疑问。若本篇是"把军队内部整顿好"，下一篇就是"把革命前途讲清楚"——一个是向内治病，一个是向外壮胆。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">井冈山的斗争（1928.11）</div>
+        <p>04 篇已点出隐患："边界各县的党几乎完全是农民成分的党，若不给以无产阶级的思想领导，其趋向是会要错误的"，并提到九月的"洗党"。本篇正是把"给以无产阶级的思想领导"系统化——从一年前的"现象预警"落到"系统处方"，两篇前后照应，可见同一问题的酝酿与解决。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把"表现—来源—纠正方法"三段式，搬到你的组织里</h4>
+      <p class="q">① 你所在团队最顽固的一个"错误思想"（坏习惯、坏文化）是什么？先用三段式拆一遍：它的<b>表现</b>有哪些可观察的具体行为？它的<b>来源</b>是结构性的（什么人、什么制度、什么激励机制带来的），还是"领导机关缺乏一致的坚决斗争"式的放任？你的<b>纠正方法</b>有没有"思想教育 + 制度建设"双轨，还是只停在开会强调？② 你上一次给出批评或反馈时，指向的是"政治上的错误和组织上的错误"（对目标真正要紧的事），还是"个人缺点"或干脆是攻击个人？有没有做到"说话要有证据"？③ 你的团队里，"绝对平均主义"和"特权"哪一个更严重？你分配资源（奖金、机会、注意力）的依据是"任务的需要"，还是"看起来一样多/谁更近谁更有分量"？</p>
+      <p class="hint">提示：不必套用"红军""无产阶级"这些历史概念，只借三个工具——① "表现—来源—纠正方法"三段式（尤其别跳过"来源"这一层）；② 批评的两条红线（不攻击个人、不专盯小缺点，衡量标准是"是否指向要紧的、结构性的错误"）；③ "任务需要"这把分配之尺（它同时反对特权与平均主义）。尤其第一个工具：绝大多数"组织整改"失败，不是没看到"表现"，而是没挖到"来源"、没配齐"教育+制度"双轨。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

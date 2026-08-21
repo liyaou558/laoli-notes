@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>06 · 星星之火，可以燎原 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1.05fr 0.9fr 1.05fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.obj{background:var(--blue);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">陆</div>
+    <h1>星星之火，可以燎原</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第六篇 · <b>一九三〇年一月五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>星星之火，可以燎原（原题《时局估量和红军行动问题》）</td></tr>
+      <tr><th>写作时间</th><td>1930 年 1 月 5 日。系毛泽东写给红四军第一纵队纵队长林彪的一封复信（公开信），在福建上杭古田镇赖家坊「协成店」小屋写就，长约七千字</td></tr>
+      <tr><th>最初发表</th><td>非报刊公开文章：原题《时局估量和红军行动问题》，由红四军政治部油印下发各大队党支部；1944 年中共中央北方局编《抗战以前选集》收录未删减版；1951 年 10 月收入《毛泽东选集》第一卷时，经毛泽东校阅改题为《星星之火，可以燎原》，并删去指名批评林彪之处</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。篇首题注如实说明「这是毛泽东给林彪的一封信……」，为 1991 年第二版所加；指名批评林彪的地方已作删改，公开发表版通篇不再出现林彪姓名</td></tr>
+      <tr><th>篇　幅</th><td>连续成文、不分小标题。从「认清半殖民地性质」立论，一路写到革命高潮「快要」到来，以航船、朝日、婴儿三个比喻收束；文中引录了 1929 年 4 月 5 日前委给中央的信、并详述红军「分兵与集中」的行动策略</td></tr>
+      <tr><th>历史坐标</th><td>古田会议（1929 年 12 月底）之后约一周；与《中国的红色政权为什么能够存在？》《井冈山的斗争》共同构成「工农武装割据」思想，本篇是其顶点——把「红色政权能存在」的生存论证，升级为「以乡村为中心促进全国革命高潮」的道路论证，是「农村包围城市、武装夺取政权」理论的标志性著作</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇是<b>掉转枪口向内</b>（整军），这一篇是<b>掉转枪口向前</b>（壮胆）。古田会议刚开完，红四军党内的悲观情绪并没有散——<b>「红旗到底打得多久」的疑问，从井冈山时期起就一直盘旋不去</b>。而把这股悲观情绪推上桌面的，是一封特殊的「新年贺信」：写信人是红四军第一纵队纵队长、<b>年仅 21 岁的林彪</b>。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1929 年 2 月 7 日 · 中央「二月来信」</div>
+        <div class="tl-body">中共中央给红四军前委的指示信，对形势估量悲观：<b>过高估计敌人、过低估计红军</b>，要求把队伍分得很小、散向农村，甚至要朱德、毛泽东离开队伍、隐匿目标。这封信给了红四军党内一部分同志以不良影响，成为后来悲观情绪的「理论靠山」。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年 4 月 5 日 · 前委复信</div>
+        <div class="tl-body">毛泽东以红四军前委名义复信中央，直指「<b>中央此信（去年二月七日）对客观形势和主观力量的估量，都太悲观了</b>」，并首次提出「争取江西」的计划。这封信的原文，后来被毛泽东大段引录进本篇。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1928 年底—1929 年初 · 第三次「会剿」井冈山</div>
+        <div class="tl-body">湘赣两省六个旅兵力会剿井冈山，红军被迫转战赣南、闽西。环境险恶、连打败仗时，<b>「红旗到底打得多久」的疑问再次泛起</b>，队伍里弥漫对前途的悲观。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1929 年 12 月 28—29 日 · 古田会议</div>
+        <div class="tl-body">红四军九大确立「思想建党、政治建军」，但毛泽东注意到：<b>党内的悲观情绪仍未完全解决</b>，需要一个契机把「革命前途」这道题正面讲透。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年 12 月底 · 林彪的「贺年信」</div>
+        <div class="tl-body">新年伊始，毛泽东收到一封奇特的「贺年信」：大敌当前之际，主张红四军<b>分散打游击、各自找出路</b>，字里行间过高估计敌人力量、透出悲观。写信人正是时任红四军第一纵队纵队长、21 岁的林彪。此前在 1929 年 5 月 18 日瑞金的一次会议上，林彪的这种悲观观点已表露得最明显。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1930 年 1 月 5 日 · 复信林彪</div>
+        <div class="tl-body">毛泽东在古田镇赖家坊「协成店」小屋，<b>油灯彻夜通亮，花一整天时间一气呵成</b>写下这封约七千字的长信（公开信），加上《时局估量和红军行动问题》的标题，并责成红四军政治部<b>油印下发各大队党支部</b>，供更多指战员阅读。这已超越私人通信，成为一篇党内公开的形势宣言。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1948—1951 年 · 改名与删改</div>
+        <div class="tl-body">1948 年 2 月，林彪致信中央宣传部，请求再版此文时不要公开他的姓名，「以免对中央内情不了解的人发生种种无谓的猜测」；毛泽东同意。1951 年收入《毛泽东选集》第一卷时改题为《星星之火，可以燎原》，指名批评林彪处悉数删改，原信开头的私信语气与结尾两段申明一并删去。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这一篇放回它的来处，才能看懂它的分量：它不是一篇冷静的学术论文，而是<b>一封写给一个 21 岁年轻人的、充满论战气的长信</b>——对方在「大敌当前」时建议「分散各自找出路」，毛泽东的回应则是把「悲观」这个情绪问题，翻译成一个「怎么看中国、怎么干革命」的理论问题，一锤定音：<b>革命高潮不是「有到来之可能」的空话，而是「快要」到来的必然</b>。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：悲观论调的根源，是<span class="q">「没有把中国是一个许多帝国主义国家互相争夺的半殖民地这件事认清楚」</span>；一旦认清，就能明白<span class="q">「红军、游击队和红色区域的建立和发展……无疑义地是促进全国革命高潮的最重要因素」</span>——革命高潮不是「可望而不可即」的空想，而是<span class="q">「快要」到来的必然</span>；正确的行动不是消极的流动游击，而是建立<span class="q">「红色政权的深刻观念」</span>、波浪式地扩大根据地。</div>
+    <div class="cards">
+      <div class="card blue">
+        <h4>① 破：悲观从何而来</h4>
+        <p>「先争取群众后建立政权」的理论「于中国革命的实情不适合」，来源是没认清半殖民地性质。林彪不赞成「争取江西」，只赞成闽粤赣三边流动游击——不是不革命，是「不相信革命高潮有迅速到来的可能」。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 立：怎么看（方法论）</h4>
+        <p>「看事情必须要看它的实质，而把它的现象只看作入门的向导」。力量小是现象，半殖民地下的矛盾激化才是实质——「星星之火，可以燎原」，发展不是可能性而是必然性。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 行：怎么干（行动结论）</h4>
+        <p>建立红色政权、深入土地革命、扩大人民武装，经由乡赤卫队直到正规红军「这样一套办法」，政权「波浪式地向前扩大」——这才是促进全国革命高潮的最重要因素。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一条从<b>认清性质</b>出发、经过<b>看实质的方法</b>与<b>矛盾分析</b>、落到<b>行动结论</b>的推理链：性质决定「六点结论」，方法决定「怎么看力量」，矛盾决定「高潮必快」，三者共同导出「建立红色政权、波浪式扩大」的行动。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">认清性质</div><div class="n-sub">中国是许多帝国主义国家互相争夺的半殖民地</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">六点结论</div><div class="n-sub">红色政权是「最高形式」「最重要因素」</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">看实质</div><div class="n-sub">现象是入门的向导，星星之火可以燎原</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">矛盾分析</div><div class="n-sub">全国布满了干柴，高潮不可避免</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">「快要」到来</div><div class="n-sub">不算命，但不是可望不可即的空想</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">行动结论</div><div class="n-sub">建立红色政权、波浪式扩大，促进高潮</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">一封长信，内在是一套严整的「破—立—行」三段推进：先<b>破</b>「先争取群众后建立政权」的错误认识，再<b>立</b>「看实质」的分析方法与中国矛盾分析，最后<b>行</b>——落到红军的「分兵与集中」策略与「争取江西」的计划，收于对「快要」二字的解释。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">破</div>
+        <div class="sk-body"><b>指认悲观认识</b>：党内一部分同志「不相信革命高潮有迅速到来的可能」，只赞成三个边界区域流动游击、缺乏建立红色政权的深刻观念；「先争取群众后建立政权」的理论「于中国革命的实情不适合」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">立一</div>
+        <div class="sk-body"><b>认清半殖民地性质 → 六点结论</b>：统治阶级长期混战、农民问题严重、工农民主政权正确、红色区域「中国以外无此怪事」、红色政权是「最高形式」与「最重要因素」、朱德毛泽东式/方志敏式路线正确。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">立二</div>
+        <div class="sk-body"><b>看实质的方法</b>：「把现象只看作入门的向导，一进了门就要抓住它的实质」——「星星之火，可以燎原」，发展不仅是可能性，「简直是必然性」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">立三</div>
+        <div class="sk-body"><b>矛盾分析</b>：帝国主义、军阀、地主、资本家、士兵、学生……多重矛盾交织激化，「中国是全国都布满了干柴，很快就会燃成烈火」——高潮「不可避免，而且是很快会要到来」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">驳</div>
+        <div class="sk-body"><b>引前委信批「二月来信」</b>：1929 年 4 月 5 日前委复信已指出「太悲观」；「抛弃城市斗争是错误的，畏惧农民势力发展也是错误的」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">行一</div>
+        <div class="sk-body"><b>行动策略：分兵与集中</b>：愈是恶劣环境，队伍愈须集中；集中才能消灭大一点的敌人、占领城镇、发动大范围群众。给出游击战术十六字诀——「敌进我退，敌驻我扰，敌疲我打，敌退我追」「分兵以发动群众，集中以应付敌人」，如「打网」般随时打开、随时收拢。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">行二</div>
+        <div class="sk-body"><b>争取江西的计划</b>：江西三个客观条件（封建经济、无本省军队、远离帝国主义影响）决定了农村暴动最普遍；并自我批评——「不对的是规定一年为期」，把机械的时日预判收回。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">结</div>
+        <div class="sk-body"><b>解释「快要」+ 三个比喻</b>：「马克思主义者不是算命先生……不应该也不可能机械地规定时日」，但高潮不是空想——它是「已经看得见桅杆尖头了的一只航船」、是「光芒四射喷薄欲出的一轮朝日」、是「躁动于母腹中的快要成熟了的一个婴儿」。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">对时局估量的三种立场 · 右倾悲观 → 看实质 → 左倾盲动</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">同一种「敌强我弱」的形势，三种立场得出三种行动；毛泽东的立场不是折中，而是换了分析方法。色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg obj">右倾悲观</div>
+        <div class="spec-seg subj">看实质（正确）</div>
+        <div class="spec-seg red">左倾盲动</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>右倾悲观</b>林彪「贺年信」、中央「二月来信」：过高估计敌人、过低估计主观力量，主张分散游击、隐匿目标、「红旗到底打得多久」</div>
+        <div class="spec-label"><b>看实质</b>把现象当入门的向导：星星之火可以燎原，建立红色政权、波浪式扩大，促进革命高潮</div>
+        <div class="spec-label"><b>左倾盲动</b>1928 年湖南省委把敌人看得「十分动摇」「恐慌万状」→ 过高估计形势，导致盲动主义</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card blue"><h4>右倾悲观</h4><p>把「力量小」的瞬间现象当成实质，于是主张分散、隐匿、各自找出路。林彪不是不想革命，是被「敌强」的现象吓住了。</p></div>
+      <div class="card green"><h4>看实质（正确）</h4><p>承认「力量确实小」，但追问结构：半殖民地 → 军阀混战 → 矛盾激化 → 干柴遍布。力量小是现象，发展快是实质。</p></div>
+      <div class="card" style="border-top-color:var(--red);"><h4 style="color:var(--red);">左倾盲动</h4><p>把敌人一时的困难（鲁涤平「恐慌万状」）夸大为「十分动摇」，于是盲目进攻。与悲观相反、同样错在「只看现象不看实质」。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「看实质不看现象」：一套可迁移的判断纪律，分歧不在事实，在「事实意味着什么」</h4>
+          <p>毛泽东给的钥匙只有一句话：「把现象只看作入门的向导，一进了门就要抓住它的实质」。这句话的力量在于点破一个常被忽略的事实：<b>悲观者和乐观者面对的往往是同一组「现象」</b>——力量小、敌强、环境险恶，这些没人否认；分歧全在「实质」这一层怎么读。林彪不是不知道「革命高潮不可避免地要到来」，他卡在「不迅速」上——他的悲观，恰恰是对同一组事实的另一种解释。毛泽东的示范动作是：先<b>承认</b>现象（「剩下的一点小小的力量」确实小），再<b>逼问结构</b>（半殖民地 → 军阀混战 → 矛盾激化 → 全国布满干柴），最后才下判断。没有「实质」这一跳，「看数据」就会变成「被数据吓住」。迁移到今天：市场判断、项目评估、团队士气，最无谓的争吵往往不是「数据对不对」，而是「数据意味着什么」——因为双方都没做「从现象往实质追问」这一步。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「快要」二字的边界：把「方向」与「时点」分开，是领导者最重要的分寸感</h4>
+          <p>全文最精微的一句，是「不应该也不可能机械地规定时日」，紧接着又坚决拒绝「可望而不可即的空东西」。毛泽东在同一段里同时做了两件看似相反的事：<b>方向上极度坚定</b>（高潮必快），<b>时点上极度谦逊</b>（不算命）。更妙的是他自批「争取江西」的计划——「不对的是规定一年为期」，错的不在方向（争取江西），错在给方向硬加了一个精确日期，结果把「快要」二字也拖进了「机械性急躁性」。这是领导力的一个核心区分：<b>「我们相信什么」和「我们预测何时」是两回事</b>。迁移：管理者常犯的正是把两者搅在一起——要么因为一次时点预测落空，就全盘动摇方向；要么因为方向正确，就敢对具体日期拍胸脯。毛泽东的分寸是：方向用「必然性」论证，时点用「不能机械规定」回避，中间靠「快要」这个词承担全部张力。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>这封信的「删改史」本身就是史料——警惕「金句」的成品状态</h4>
+          <p>今天人人会背「星星之火，可以燎原」，但它的原貌是：写给一个 21 岁纵队长的七千字论战长信，原题《时局估量和红军行动问题》，开头是「新年已经到来几天了，你的信我还没有回答……」，结尾有「我的不对的地方，请你指正」，通篇指名道姓批评「你对于时局的估量是比较的悲观」。1948 年林彪请求不署名、1951 年改题删改后，一个具体的党内论战被「提炼」成了一句普世格言。这提醒我们读经典时两件事：其一，<b>任何「金句」原本都有一个具体的对手和语境</b>——「星星之火，可以燎原」最初是对一个具体人的悲观情绪说的，脱离语境引用会误读它的锋芒；其二，<b>文本会被后来的历史重新剪裁</b>，所以「读原文」之外还要「读版本」：问一句「这句话当初是对谁说的、为什么现在长这样」。一封信如何从「写给林彪的信」变成「星星之火，可以燎原」，本身就是政治文本被经典化的一个标本。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">这里用得着中国的一句老话："星星之火，可以燎原。"这就是说，现在虽只有一点小小的力量，但是它的发展会是很快的。</div>
+        <div class="ctx">「看实质」段。以中国老话立论：力量虽小，发展必快——「发展会是很快的」。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们看事情必须要看它的实质，而把它的现象只看作入门的向导，一进了门就要抓住它的实质，这才是可靠的科学的分析方法。</div>
+        <div class="ctx">同段。全文的方法论之眼——现象只是「入门的向导」，进来就要抓实质。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">红军、游击队和红色区域的建立和发展，是半殖民地中国在无产阶级领导之下的农民斗争的最高形式，和半殖民地农民斗争发展的必然结果；并且无疑义地是促进全国革命高潮的最重要因素。</div>
+        <div class="ctx">「六点结论」之第五点，「农村包围城市」道路理论的核心表述。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国是全国都布满了干柴，很快就会燃成烈火。"星火燎原"的话，正是时局发展的适当的描写。</div>
+        <div class="ctx">矛盾分析段的收束句，把全文的比喻与判断合流。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">马克思主义者不是算命先生，未来的发展和变化，只应该也只能说出个大的方向，不应该也不可能机械地规定时日。……它是站在海岸遥望海中已经看得见桅杆尖头了的一只航船，它是立于高山之巅远看东方已见光芒四射喷薄欲出的一轮朝日，它是躁动于母腹中的快要成熟了的一个婴儿。</div>
+        <div class="ctx">结尾段。解释「快要」二字的边界，并以航船、朝日、婴儿三个比喻收束全文——「不算命，但也不是空想」。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">07 · 反对本本主义（1930.05）</div>
+        <p>本篇回答「红旗到底打得多久」，下一篇则回答「结论从哪来」——毛泽东在那篇里喊出「没有调查，没有发言权」。若本篇是「把前途看透」，下一篇就是「把方法立起来」：一个讲怎么看形势，一个讲怎么得结论。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">03 · 中国的红色政权为什么能够存在？（1928.10）</div>
+        <p>03 篇回答了「红色政权为什么能存在」（五个条件），本篇则把答案推进一步：不仅「能存在」，而且「无疑义地是促进全国革命高潮的最重要因素」——从「生存论证」升级为「道路论证」。两篇同引「工农武装割据」的逻辑，一篇谈「怎么活下来」，一篇谈「怎么燎原」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「看实质」和「方向／时点」的分寸，搬到你正在判断的事上</h4>
+      <p class="q">① 你眼下最纠结的一个判断（事业、投资、职业选择），它的<b>「现象」</b>是什么、<b>「实质」</b>是什么？你有没有把现象只当「入门的向导」、再往里追问结构性的原因，还是停在现象层就下了悲观或乐观的结论？② 你或你的团队，有没有把<b>「方向」</b>和<b>「时点」</b>搅在一起？有没有因为一次「时点」落空就动摇「方向」，或反过来因为方向正确就给目标硬定一个机械的日期？你会怎么把「快要」这个词的张力（坚定方向、不算命）用到你的计划里？③ <b>「根据地」思维</b>：你的领域里，什么是「流动游击」（到处蹭热点、不沉淀），什么是「建立红色政权」（在一个点上深耕、波浪式扩大）？你现在更多在做哪一种？</p>
+      <p class="hint">提示：不必套用「半殖民地」「革命高潮」这些历史概念，只借三件工具——① 「看实质不看现象」：把现象当入门的向导，追问结构性的「为什么」；② 「方向／时点」分离：对方向要坚定（用必然性论证），对具体时点要谦逊（不机械规定时日）；③ 「根据地」思维：判断自己是在「分散游击」还是在「波浪式扩大根据地」。尤其第一个工具：绝大多数判断分歧，不是「事实」不同，而是双方都没做「从现象到实质」的追问。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

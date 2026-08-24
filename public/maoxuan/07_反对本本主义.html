@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 · 反对本本主义 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain-title{font-size:14px;font-weight:700;letter-spacing:1px;margin:6px 0 8px;}
+.chain-title.bad{color:var(--red);}
+.chain-title.good{color:var(--green);}
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1.05fr 0.9fr 1.05fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-seg.obj{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:11px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">柒</div>
+    <h1>反对本本主义</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第七篇 · <b>一九三〇年五月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>反对本本主义（原题《调查工作》；1961 年重印时曾改名《关于调查工作》）</td></tr>
+      <tr><th>写作时间</th><td>1930 年 5 月，江西寻乌。作于寻乌调查期间（约二十天）：先写有一篇短文《反对本本主义》，毛泽东自述「觉得此文太短，不足以说服同志，又改写了这篇长文，内容基本一样，不过有所发挥」，长文即《调查工作》，约三千余字；两文当时都有油印本，短文至今未寻获</td></tr>
+      <tr><th>最初发表</th><td>非报刊文章。1930 年 8 月由中共闽西特委石印翻印；因战争散失，作者本人亦未留存，1951 年《毛泽东选集》第一版未能收入。1957 年 2 月福建上杭农民赖茂基献出珍藏的石印本；1961 年 1 月毛泽东重见此文；1961 年 3 月改名《关于调查工作》印发广州中央工作会议；1964 年收入《毛泽东著作选读》甲种本、乙种本，改名《反对本本主义》，首次公开发表</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。本篇系 1991 年第二版《毛选》增补——是第二版唯一增补进选集的文章。篇首题注：「毛泽东的这篇文章是为了反对当时红军中的教条主义思想而写的。那时没有用『教条主义』这个名称，而叫它做『本本主义』。」</td></tr>
+      <tr><th>篇　幅</th><td>分七节，约三千余字：一、没有调查，没有发言权；二、调查就是解决问题；三、反对本本主义；四、离开实际调查就要产生唯心的阶级估量和唯心的工作指导，那末，它的结果，不是机会主义，便是盲动主义；五、社会经济调查，是为了得到正确的阶级估量，接着定出正确的斗争策略；六、中国革命斗争的胜利要靠中国同志了解中国情况；七、调查的技术。附编者注 8 条</td></tr>
+      <tr><th>历史坐标</th><td>古田会议（1929 年 12 月）之后约半年、寻乌调查期间。与八万余字的《寻乌调查》互为姊妹篇——一个提供方法，一个提供范本。首次提出「没有调查，没有发言权」，被公认为毛泽东思想活的灵魂三个基本方面——实事求是、群众路线、独立自主——的雏形之作</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇是<b>给悲观者壮胆</b>，这一篇是<b>给执行者立规</b>。古田会议刚把红四军的思想统一到「政治建军」，但毛泽东看得更深：党内种种错误思想的总根源还没有被点名——那就是<b>「本本主义」</b>。三十一年后他回忆这篇的来历时说：「<b>这篇文章是经过一番大斗争以后写出来的</b>，是在红四军党的第九次代表大会以后一九三〇年写的。」而这篇的传奇，一半在写作，一半在<b>「失而复得」</b>——一篇丢了三十年的文章，被一个农民用生命保存下来，最终在 1961 年那个「调查研究年」回到作者手中。</p>
+    <div class="timeline">
+      <div class="tl-item gold">
+        <div class="tl-date">1929 年 12 月 28—29 日 · 古田会议</div>
+        <div class="tl-body">红四军九大通过了毛泽东起草的决议，批判党内八种错误思想，确立「思想建党、政治建军」。但决议没有系统清算各种错误思想的总根源——「本本主义」。毛泽东后来直言：这篇是「经过一番大斗争以后写出来的」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1930 年春 · 「拿本本来」成风</div>
+        <div class="tl-body">红军中一些同志开口闭口「拿本本来」，以为「上了书的就是对的」；对上级指示「不根据实际情况进行讨论和审察，一味盲目执行」——「党的策略路线总是不能深入群众，就是这种形式主义在那里作怪」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1930 年 5 月 · 红四军攻克寻乌</div>
+        <div class="tl-body">正值蒋冯阎中原大战、赣南相对安定，红四军在寻乌停留约一个月。毛泽东「下决心要了解城市问题」，而寻乌「介在闽粤赣三省的交界，明了了这个县的情况，三省交界各县的情况大概相差不远」；挚友古柏（寻乌人）鼎力协助。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">二十多天 · 寻乌调查</div>
+        <div class="tl-body">开十多天调查会，从县衙钱粮师爷到穷秀才、商会会长、杂货店主，各色人等皆在座；「下马观花」到连运往县城的鸡、牛、猪从哪里来、经过哪些路段、多少斤、每斤多少钱都一一记下。调查会笔录整理成五章三十九节、八万余字的《寻乌调查》。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1930 年 5 月 · 先短文、后长文</div>
+        <div class="tl-body">调查进行中，毛泽东先写了一篇短文《反对本本主义》，「觉得此文太短，不足以说服同志，又改写了这篇长文，内容基本一样，不过有所发挥」；两文都有油印本。长文即《调查工作》，1930 年 8 月由中共闽西特委石印翻印。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">散失三十年 · 赖茂基献书</div>
+        <div class="tl-body">战争环境下文章散失，连作者自己也没能保存。1957 年 2 月，福建上杭县农民赖茂基把珍藏多年的《调查工作》石印本献了出来，辗转入藏中央革命博物馆；1961 年 1 月，毛泽东的秘书田家英从馆中借出，送呈毛泽东。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1961 年 3 月 · 失而复得</div>
+        <div class="tl-body">毛泽东百感交集：「别的文章丢了，我不伤心，也不记得了，这两篇文章我总是记得的。忽然找出一篇来了，我是高兴的。」又说：「我对自己的文章有些也并不喜欢，这一篇我是喜欢的。」他改题《关于调查工作》印发广州中央工作会议，并号召「一九六一年成为一个调查年」；自我检讨：「建国以来，特别是最近几年，我们对实际情况不大摸底了，大概是官做大了。」</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1964—1991 年 · 定名与入集</div>
+        <div class="tl-body">1964 年收入《毛泽东著作选读》甲种本、乙种本，改名《反对本本主义》，写作时间定为 1930 年 5 月；1991 年收入《毛泽东选集》第二版第一卷——第二版唯一增补的一篇。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它不是书斋里的认识论小品，而是<b>一支军队在转战途中、用二十天调查换来的「作战方法论」</b>。它回答的问题极其具体——上级指示和马克思主义「本本」到底该怎么用？答案同样具体：<b>先调查，再发言；结论只能产生于调查的末尾</b>。三十年后再看，毛泽东把它翻出来纠「大跃进」脱离实际之偏——一篇小文章的命运，恰是「本本主义」会周期性复发的注脚。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<span class="q">「没有调查，没有发言权」</span>——一切结论产生于调查情况的末尾，而不是在它的先头；马克思主义的「本本」是要学习的，<span class="q">「但是必须同我国的实际情况相结合」</span>；中国革命斗争的胜利，<span class="q">「要靠中国同志了解中国情况」</span>。</div>
+    <div class="cards">
+      <div class="card blue">
+        <h4>① 破：发言权靠调查挣来</h4>
+        <p>「你对于某个问题没有调查，就停止你对于某个问题的发言权。」这看似野蛮，实则公道：不调查就发言，必是「瞎说一顿」——「许多的同志都成天地闭着眼睛在那里瞎说，这是共产党员的耻辱」。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 立：调查就是解决问题</h4>
+        <p>「一切结论产生于调查情况的末尾，而不是在它的先头。」只有蠢人才「冥思苦索地『想办法』」；迈开两脚去调查，「你未出门时脑子是空的，归来时脑子已经不是空的了」——「调查就像『十月怀胎』，解决问题就像『一朝分娩』」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 行：本本必须结合实际</h4>
+        <p>「马克思主义的『本本』是要学习的，但是必须同我国的实际情况相结合。我们需要『本本』，但是一定要纠正脱离实际情况的本本主义。」怎样纠正？「只有向实际情况作调查。」</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一张「因果对照图」：同一件事，走错一条路是<b>机会主义或盲动主义</b>，走对一条路是<b>正确的斗争策略</b>——分岔点只在一个动作：<b>离不离开实际调查</b>。</p>
+    <div class="chain-title bad">错误路线 · 本本主义：不调查，凭「本本」和「上级」办事</div>
+    <div class="chain">
+      <div class="node"><div class="n-label">本本主义</div><div class="n-sub">以为上了书的就是对的，「拿本本来」</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">离开实际调查</div><div class="n-sub">盲目执行上级指示，坐在机关里打瞌睡</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">唯心的阶级估量</div><div class="n-sub">对形势的估量是空洞的、唯心的</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">机会主义或盲动主义</div><div class="n-sub">不是「右」的保守，便是「左」的乱撞</div></div>
+    </div>
+    <div class="chain-title good" style="margin-top:24px;">正确路线 · 调查研究：先调查，再估量，后定策</div>
+    <div class="chain">
+      <div class="node"><div class="n-label">向实际情况作调查</div><div class="n-sub">开调查会、迈开两脚、「每事问」</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">洗刷唯心精神</div><div class="n-sub">结论产生于调查情况的末尾</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">正确的阶级估量</div><div class="n-sub">解剖各阶级，明了相互关系</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">正确的斗争策略</div><div class="n-sub">确定主力、同盟者与打倒对象</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">革命胜利</div><div class="n-sub">靠中国同志了解中国情况</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">七节层层收紧：先立<b>总纲</b>（一），再立<b>方法论</b>（二），继而<b>破</b>本本主义（三）及其<b>后果</b>（四），然后<b>立</b>调查的对象与目的（五）与独立自主的立场（六），最后落到一本可操作的<b>「调查技术手册」</b>（七）——从口号到哲学，从哲学到操作规程。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 总纲</div>
+        <div class="sk-body"><b>没有调查，没有发言权</b>：不调查就发言必是「瞎说一顿」，停止你的发言权「有什么不公道呢」；收于八字口号——「注重调查！反对瞎说！」</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 立论</div>
+        <div class="sk-body"><b>调查就是解决问题</b>：「一切结论产生于调查情况的末尾，而不是在它的先头」；斥「冥思苦索」的蠢人、斥「一到就宣布政见」的巡视员、斥以「才力小」为借口的懦夫；「调查就像『十月怀胎』，解决问题就像『一朝分娩』」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 批判</div>
+        <div class="sk-body"><b>反对本本主义</b>：上级指示正确「决不单是因为它出于『上级领导机关』，而是因为它的内容是适合于斗争中客观和主观情势的」；「盲目地表面上完全无异议地执行上级的指示……这是反对上级指示或者对上级指示怠工的最妙方法」；马克思主义是对的「决不是因为马克思这个人是什么『先哲』，而是因为他的理论，在我们的实践中，在我们的斗争中，证明了是对的」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 警示</div>
+        <div class="sk-body"><b>离开实际调查的后果</b>：唯心的阶级估量和工作指导，「不是机会主义，便是盲动主义」；李逵式官长「懵懵懂懂地乱处置一顿」的教训；「必须努力作实际调查，才能洗刷唯心精神」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五 · 对象</div>
+        <div class="sk-body"><b>社会经济调查</b>：对象是「社会的各阶级，而不是各种片断的社会现象」；斥「狗肉账」「新奇故事」「高山顶上观察人民城郭」式的调查；列出工业无产阶级到工业资产阶级十三个阶级（阶层）；「我们的身子早已下山了，但是我们的思想依然还在山上」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">六 · 独立</div>
+        <div class="sk-body"><b>中国同志了解中国情况</b>：正确的策略「决不是少数人坐在房子里能够产生的，它是要在群众的斗争过程中才能产生的」；六大的「本本」不能「保障了永久的胜利」；「速速改变保守思想！……到群众中作实际调查去！」</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">七 · 操作</div>
+        <div class="sk-body"><b>调查的技术</b>：七条操作规程——①要开调查会作讨论式的调查；②调查会到些什么人（老年人懂因果、有斗争经验的青年有锐利的观察，工人农民商人知识分子兵士流氓都要）；③人多好还是人少好（看指挥能力，「至少需要三人」）；④要定调查纲目（大纲下分细目，如「商业」下分布匹粮食杂货药材）；⑤要亲身出马（「从乡政府主席到全国中央政府主席……一定都要亲身从事社会经济 的实际调查」）；⑥要深入（「深切地了解一处地方或者一个问题了，往后调查别处地方、别个问题，便容易找到门路了」）；⑦要自己做记录（「假手于人是不行的」）。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">对「本本」与上级指示的三种态度</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">同是面对「本本」与上级指示，三种态度通向三种结局；毛泽东要的既不是盲从也不是空谈，而是「向实际情况作调查」。色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg red">本本主义</div>
+        <div class="spec-seg form">空谈保守</div>
+        <div class="spec-seg subj">实际调查</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>本本主义</b>以为上了书的就是对的，开口闭口「拿本本来」；盲目执行上级指示——「这是反对上级指示或者对上级指示怠工的最妙方法」</div>
+        <div class="spec-label"><b>空谈保守</b>安于现状、空洞乐观，提倡「无产阶级就是这样」；「饱食终日，坐在机关里面打瞌睡」，对人讲话「一向是那几句老生常谈」</div>
+        <div class="spec-label"><b>实际调查</b>迈开两脚到群众中去，开调查会、定纲目、亲身出马、自己做记录；「只有向实际情况作调查」，才能洗刷唯心精神</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card" style="border-top-color:var(--red);"><h4 style="color:var(--red);">本本主义</h4><p>把「本本」当真理本身，把上级指示当免检品。执行得越「完全无异议」，离实际越远——形式主义地执行，就是变相怠工。</p></div>
+      <div class="card gold"><h4>空谈保守</h4><p>不盲从，但也不行动：「坐在机关里面打瞌睡」，靠老生常谈混日子。与盲从殊途同归——同样不接触实际，同样产生不了正确策略。</p></div>
+      <div class="card green"><h4>实际调查（正确）</h4><p>既不把「本本」供起来，也不把它扔开：「本本」要学习，但必须同实际情况相结合；结论只能从调查的末尾产生，不能从「本本」的开头搬来。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「没有调查，没有发言权」：把发言权从身份问题改写成证据问题</h4>
+          <p>这句话今天常被读成一句工作口号，但它真正的锋芒在于一次<b>权利分配规则的改写</b>。在大多数组织里，「发言权」默认按职位、资历、关系分配——越往上越有权说话；毛泽东的规则是：<b>发言权按「证据」分配</b>——「你对于某个问题没有调查，就停止你对于某个问题的发言权」。妙处在于它不靠压制，而靠一个近乎自明的公道逻辑：「不知底里」的发言「一定是瞎说一顿」，「瞎说一顿之不能解决问题是大家明了的」——既然解决不了问题，停止发言「有什么不公道呢」。这不是言论管制，是给发言<b>定价</b>：要么先付调查的成本，要么放弃发言的资格。迁移到今天：会议上的「高谈阔论」与「拍脑袋表态」，大部分经不起这一问——<b>「你对这个问题做过调查吗？调查了多久？数据在哪？」</b>一句「没有调查，没有发言权」就能让会议室安静一半。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>这篇的「失而复得史」本身就是方法论：本本主义是会周期性复发的认知病</h4>
+          <p>一篇丢了三十年的三千字短文，为什么 1961 年被毛泽东当作「救命文章」翻出来印发全党？因为他自己承认：「建国以来，特别是最近几年，我们对实际情况不大摸底了，大概是官做大了。」——<b>当年反对本本主义的人，三十年后再一次犯了本本主义的病</b>。这提示一个被忽略的规律：本本主义不是一次性清除的历史污点，而是组织规模变大后的<b>结构性复发倾向</b>——决策者离现场越远，越容易拿文件、指标、汇报当「本本」；越是高层，越难被「实际调查」纠偏，因为身边全是层层过滤后的二手信息。毛泽东开出的药方不是呼吁「思想重视」，而是把调查变成制度（本篇第七节）和运动（「一九六一年成为一个调查年」）。迁移：任何团队变大后，都值得自问——<b>我们的「调查制度」还在吗？还是只剩下了「汇报制度」？</b>「官做大了就不摸底」不是个人道德问题，是信息结构问题。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>第七节是被低估的宝藏：方法论只有落到操作细节，才不是空话</h4>
+          <p>多数人读本篇停在「没有调查，没有发言权」这句口号，但毛泽东真正的功力在第七节「调查的技术」——<b>七条可以照做的操作规程</b>：要开「讨论式」的调查会而不是「随便问一下子」；要选「老年人最好」因为「不但懂得现状，而且明白因果」；人数「至少需要三人，不然会囿于见闻」；要定纲目，「大纲下还要有细目」；要亲身出马，「不能单靠书面报告，因为二者是两回事」；要深入一处，「深切地了解一处地方或者一个问题了，往后调查别处……便容易找到门路了」；<b>要自己做记录，「假手于人是不行的」</b>。注意最后一条的狠劲——记录是思考的第一道工序，交出去就等于把判断权也交出去了。这正是「方法论」与「口号」的分界线：<b>口号告诉你「要调查」，操作手册告诉你「怎么调查才不算白查」</b>。迁移：把「我们要多调研」翻译成七条可勾选的清单，效力立刻不同——「你的调查会是讨论式的吗？你定纲目了吗？你亲自做记录了吗？」</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">你对于某个问题没有调查，就停止你对于某个问题的发言权。这不太野蛮了吗？一点也不野蛮。</div>
+        <div class="ctx">第一节「没有调查，没有发言权」。先自设一问，再以「公道」作答——全文的总纲。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">一切结论产生于调查情况的末尾，而不是在它的先头。</div>
+        <div class="ctx">第二节「调查就是解决问题」。把「调查—结论」的次序钉死，是对「先有结论再找证据」的颠倒。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">调查就像"十月怀胎"，解决问题就像"一朝分娩"。调查就是解决问题。</div>
+        <div class="ctx">第二节末尾。以怀胎分娩作比：调查本身就是解决问题的过程，不是解决之前的多余步骤。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">盲目地表面上完全无异议地执行上级的指示，这不是真正在执行上级的指示，这是反对上级指示或者对上级指示怠工的最妙方法。</div>
+        <div class="ctx">第三节「反对本本主义」。直指「形式主义式执行」的实质——最隐蔽的对抗。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国革命斗争的胜利要靠中国同志了解中国情况。</div>
+        <div class="ctx">第六节标题。独立自主思想的最早表述之一——既不靠「本本」，也不靠外来的现成答案。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">08 · 必须注意经济工作（1933.08）</div>
+        <p>本篇立起「调查—结论」的认识论，下一篇则把这条方法论搬到经济战线上：革命战争年代为什么要做经济工作、怎么做——「革命战争的激烈发展，要求我们动员群众，立即开展经济战线上的运动」。从「怎么认识」到「怎么建设」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《寻乌调查》（1930.05）· 姊妹篇</div>
+        <p>本篇第七节「调查的技术」，正是八万余字《寻乌调查》的「使用说明」：一个给出操作规程，一个给出成品范本——连鸡牛猪的来路、盐的品种颜色都细细道来。另可对照 17 篇《实践论》（1937.07）：「没有调查，没有发言权」到「认识从实践来」，是同一思想从工作方法升华为哲学体系的完成形态。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「没有调查，没有发言权」搬到你本周的决策上</h4>
+      <p class="q">① 回想你最近一次<b>「没有调查就发言」</b>：是在哪个场合、对哪个问题？如果按「没有调查，没有发言权」的规则，你的哪些发言会被「停止」？哪些人的「瞎说一顿」正在浪费你的团队？② 你的组织里有没有<b>「盲目地表面上完全无异议地执行」</b>？这种「怠工式执行」和真正的执行怎么区分？你上一次「不根据实际情况进行讨论和审察」就照单执行，是什么时候？③ 用第七节七条技术给一个<b>你正在做的决策</b>做自检：开讨论式调查会了吗？选对人了吗（懂因果的「老年人」、有锐利观察的「青年」）？定调查纲目了吗？亲身出马了吗？自己做记录了吗——还是「假手于人」？</p>
+      <p class="hint">提示：不必套用「阶级估量」「斗争策略」这些历史概念，只借三件工具——①「发言权按证据分配」：发言之前先问自己「我调查了吗、调查了多久」；②「形式主义式执行是最妙的反抗」：警惕用「完全照办」的姿态掩盖「不动脑子」；③「操作手册思维」：把「要调研」翻译成七条可勾选清单，尤其最后一条——记录要自己做，「假手于人是不行的」。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

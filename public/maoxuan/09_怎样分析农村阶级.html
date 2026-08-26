@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>09 · 怎样分析农村阶级 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain-title{font-size:14px;font-weight:700;letter-spacing:1px;margin:6px 0 8px;}
+.chain-title.bad{color:var(--red);}
+.chain-title.good{color:var(--green);}
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* 窄屏逐档缩小字号（Chrome CJK 断行估算偏差兜底，留出渲染余量） */
+@media(max-width:560px){
+  .tl-body{font-size:14px;}
+  .tl-body .note{font-size:12px;}
+}
+
+/* ===== 光谱图（本篇为五段） ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr;}
+.spectrum5 .spec-band,.spectrum5 .spec-labels{grid-template-columns:repeat(5,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-seg.obj{background:var(--blue);}
+.spec-seg.dz{background:var(--red);}
+.spec-seg.fn{background:var(--gold);}
+.spec-seg.zn{background:var(--green);}
+.spec-seg.pn{background:var(--blue);}
+.spec-seg.gr{background:#265c8f;}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 分界点卡（本篇定制） ===== */
+.bounds{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.bound{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:16px 18px;min-width:0;overflow:hidden;}
+.bound.blue{border-left-color:var(--blue);}
+.bound.green{border-left-color:var(--green);}
+.bound h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:.5px;}
+.bound.blue h4{color:var(--blue);}
+.bound.green h4{color:var(--green);}
+.bound p{font-size:13.5px;color:var(--ink-2);line-height:1.75;}
+.bound .rule{display:block;margin-top:9px;padding-top:8px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--red-deep);font-weight:600;line-height:1.7;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底（防 Chrome 对「」『』（）等字符断行估算偏差导致的 1-3px 溢出） ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.stat,.stat .k,.golden-item .text,.quote,.next-card p,.obs-body p,.bound p{overflow-wrap:anywhere;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">玖</div>
+    <h1>怎样分析农村阶级</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第九篇 · <b>一九三三年十月</b>（成文于同年六月 · 十月十日批准公布）</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>怎样分析农村阶级——土地斗争中划分阶级成分的标准文件。原名《怎样分析阶级》，收入《毛泽东选集》时改题</td></tr>
+      <tr><th>写作时间</th><td>《毛泽东选集》标注「一九三三年十月」——实为中华苏维埃共和国临时中央政府批准公布之日；文件成文于 1933 年 6 月中下旬（以王观澜叶坪乡查田试点总结为基础），同年 6 月 29 日已刊发于《红色中华》。据湘潭大学毛泽东思想研究中心李佑新、霍杰考证，毛选所标写作时间不确，系把批准通过时间当作写作时间</td></tr>
+      <tr><th>最初发表</th><td>1933 年 6 月 29 日《红色中华》第 89 期第 8 版，题为《怎样分析阶级》；同年 10 月 10 日经临时中央政府批准，与《关于土地斗争中一些问题的决定》一并作为划分农村阶级成分的标准</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。篇末题注：「这个文件，是毛泽东一九三三年十月为纠正在土地改革工作中发生的偏向、正确地解决土地问题而写的，曾由当时中央工农民主政府通过，作为划分农村阶级成分的标准。」1951 年初版即收录；1948 年 5 月 25 日中共中央曾以《关于一九三三年两个文件的决定》重新公布</td></tr>
+      <tr><th>篇　幅</th><td>正文八百余字，分地主、富农、中农、贫农、工人五节，附注释 1 条——全卷篇幅最短的篇目之一；1933 年《红色中华》版含对待各阶级政策的内容，全篇约一千二百字（据李佑新、霍杰）</td></tr>
+      <tr><th>历史坐标</th><td>宁都会议（1932.10）毛泽东被解除军权、专任中央政府主席之后；临时中央迁入瑞金推行「地主不分田、富农分坏田」（1933.01—02）、查田运动全面铺开又严重「左」偏（1933.06—09）之时；第五次反「围剿」已打响（1933.09）、苏区中央局 9 月 8 日二次决议承认查田错误之后——本篇是给查田运动立的「度量衡」</td></tr>
+    </table>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">版本沿革：一份文件的六个节点</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">写作—发表—批准—重新公布—收入毛选，五个日期串起一部土地政策的纠偏史。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1933.06 · 成文</div>
+        <div class="tl-body">毛泽东以王观澜起草的叶坪乡查田经验总结为基础，加工定稿《怎样分析阶级》，确立「以经济剥削占有比重划分阶级」的基本标准。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.06.25—07.01 · 八县贫农团代表大会讨论通过</div>
+        <div class="tl-body">临时中央政府召开瑞金、会昌、博生、于都、胜利、石城、宁化、长汀八县贫农团代表大会，讨论通过该文件，作为查田运动划分阶级的依据下发基层。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933.06.29 · 《红色中华》首发</div>
+        <div class="tl-body">《红色中华》第 89 期第 8 版全文刊发《怎样分析阶级》——最早的公开发表版本，全篇约一千二百字，含对待各阶级的政策内容。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.10.10 · 中央政府批准公布</div>
+        <div class="tl-body">临时中央政府批准《怎样分析阶级》，并通过毛泽东主持制定的《关于土地斗争中一些问题的决定》（20 条规定），两文件并行为划分农村阶级成分的标准；同时命令各级政府复查，「凡在一九三三年十月十日以前各地处置之阶级成分有不合本决定者，应即依据本决定予以变更」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1948.05.25 · 中共中央重新公布</div>
+        <div class="tl-body">中共中央发出《关于一九三三年两个文件的决定》，将《怎样分析阶级》与《关于土地斗争中一些问题的决定》重新公布，用于纠正解放区土改中的「左」倾偏向；经毛泽东修改，删去已不符合形势的对待各阶级政策内容。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1951.10 · 收入《毛泽东选集》第一卷</div>
+        <div class="tl-body">改题《怎样分析农村阶级》，题注以「一九三三年十月」为写作时间（即批准公布时间）；1991 年第二版重新校订，文字与 1951 年版一致。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇是<b>算经济账</b>，这一篇是<b>定阶级标准</b>。1933 年的毛泽东正处于政治低谷：宁都会议被解除军权，临时中央迁入瑞金后，连他「抽多补少、抽肥补瘦」的土地政策都被批成「富农路线」。偏偏是这位「靠边站」的人，被责成通过政府系统领导查田运动——他启用了同样被开除党籍的王观澜，从叶坪乡一个村试点做起，最终写出一份给整个苏区农村「定成分」的标准文件。<b>戏剧性在于：这份为纠正「左」倾偏差而写的文件，恰恰诞生于「左」倾路线统治最严厉的时刻；它要纠正的乱象——把中农当富农打、把富农当地主打——正是「左」的政策亲手造成的。</b></p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1931.03—11 · 「地主不分田，富农分坏田」入法</div>
+        <div class="tl-body">中共中央政治局与共产国际远东局共同起草的《土地法草案》规定「地主不分田」「富农分坏田」，经共产国际批准；同年 11 月一苏大通过的《中华苏维埃共和国土地法》以法律形式固定。毛泽东「抽多补少、抽肥补瘦、按人口平均分配土地」的做法被斥为「富农路线」「非阶级路线」——<span class="note">这顶帽子，与宁都会议扣给他的「右倾」，是同一套话术。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.01—02 · 临时中央迁入瑞金，查田令下</div>
+        <div class="tl-body">博古负总责的临时中央迁入中央苏区。2 月 1 日，土地人民委员部第二号训令要求重新查田、分田。此时毛泽东已被解除党和红军领导职务、专任中央政府主席，临时中央责成他「在苏维埃系统中，以政权的力量贯彻查田运动」——作为「改正错误的考验」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933.02—04 · 叶坪试点：两个「靠边站」的人</div>
+        <div class="tl-body">因「托派嫌疑」被开除党籍、始终拒签处理决定的王观澜，被毛泽东调到中央政府土地部当秘书。他带着《春耕运动指示》到瑞金叶坪乡，连去四次，乡政府大门紧锁。王观澜把铺盖搬进村子，串门拉家常，组织起 30 多人的贫农团；毛泽东亲自到会场外听贫农团讨论，肯定「把群众组织、发动起来解决问题」的办法。试点后叶坪乡从落后乡变为先进乡，贫农团扩大到七八十人。<span class="note">被「左」倾路线开除党籍的人，和被「左」倾路线扣帽子的人，联手做出了查田运动的第一个样板。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.06.01—02 · 训令与决议：运动全面铺开</div>
+        <div class="tl-body">中央政府发布《关于查田运动的训令》（主席毛泽东签发），决定召集瑞金、会昌、博生、于都、胜利、石城、宁化、长汀八县负责人会议与八县贫农团代表大会；训令重申「以农村中工人阶级为领导，依靠贫农，坚决联合中农」，也写入了「富农则分与较坏的劳动份田」的「左」的规定。次日，苏区中央局作出《关于查田运动的决议》。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1933.06 · 八县大会与《怎样分析阶级》问世</div>
+        <div class="tl-body">6 月中旬，八县查田运动大会在瑞金叶坪召开，四百余人参加，毛泽东作《查田运动是广大区域中的中心重大任务》《查田运动的第一步——组织上的动员》等报告并作大会总结，明确「查田运动是查阶级，不是按亩查田」，确立「依靠贫农，联合中农，限制富农，消灭地主」的阶级政策。6 月中下旬，毛泽东以王观澜起草的划分意见为基础加工定稿《怎样分析阶级》；6 月 25 日—7 月 1 日八县贫农团代表大会讨论通过，6 月 29 日《红色中华》第 89 期第 8 版全文刊发。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1933.07—09 · 运动失控：「中农危险得很」</div>
+        <div class="tl-body">查田运动在闽赣、江西、福建 38 个县、约 300 万人口的地区铺开，标准混乱使「左」偏差愈演愈烈：瑞金城区「按亩去查」，查得中农恐慌，竟有中农跑来请求改成分——「中农危险得很，推上就是富农，改为贫农咧，隔富农就远一点」；兴国有的地方按剥削种类定成分——「请了长工，收了租，又放了债，则不管他家里有几个人劳动，总之他家里就是地主了」；有的算陈账，把革命前五六年甚至十几年前请过长工的人也定为富农；武阳区一家富农兼商人，因家中一人两年前参加 AB 团被处决，两年后仍被要求全家没收。8 月，毛泽东作《查田运动的初步总结》，批评侵犯中农是「最严重的危险」；9 月 8 日，苏区中央局作出第二次决议，承认查田运动犯了错误，责成临时中央政府纠正。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.10.10 · 批准公布：度量衡上岗</div>
+        <div class="tl-body">临时中央政府批准《怎样分析阶级》，并通过毛泽东主持制定的《关于土地斗争中一些问题的决定》，对 20 个问题作具体规定：「有无主要劳动」是区别富农与地主的主要标准；富裕中农一年剥削收入不超过全家年收入 15%、富农超过 15%；从事非剥削工作的知识分子是「脑力劳动者，应受到苏维埃法律的保护」。命令各级政府据此复查成分，凡 10 月 10 日前处置不合本决定的，应即依据本决定予以变更。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1934.03.15 · 纠偏被反纠偏</div>
+        <div class="tl-body">纠偏初见成效之际，二苏大后新选出的中央人民委员会（毛泽东已不再兼任主席）发出训令，认为纠正过「左」是「阻碍开展查田运动并给地主、富农以反攻的机会」：「在暴动后查田运动前已经决定的地主与富农，不论有任何证据不得翻案，已翻案者作为无效」——「左」倾错误再度发展。直到 1948 年 5 月 25 日中共中央重新公布两个 1933 年文件，本篇才以《怎样分析农村阶级》之名迎来第二生命。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它是一份只有八百多字的「法典」，没有一句空论，每一句都是可执行的判定规则。它诞生于一场失控的运动之中，作者是被这场运动背后的路线整肃过的人；它纠正的不是敌人，而是自己阵营里「宁可错杀、不可放过」的冲动。三十年后再看，这份文件成了新中国土地改革划分阶级成分的底本——<b>而它留给所有「搞运动」的人最深的一课是：先定标准，再动手。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>以经济事实定阶级，以阶级定政策</b>——用「生产资料占有、是否参加劳动、剥削方式与程度」三条可核查的客观标准，把农村人口精确划分为地主、富农、中农、贫农、工人五级，为土地斗争划定<span class="q">「消灭谁、削弱谁、联合谁、依靠谁」</span>的边界。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 标准是经济事实，不是政治态度</h4>
+        <p>「查阶级」查的是三样东西：占有什么（土地、工具）、劳动不劳动、剥削多少。不凭政治态度、思想表现、历史旧账定成分——态度可以伪装，账目经得起逐项核对。此前把中农当富农打的乱象，根源正是标准模糊、凭印象划线。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 两个关键分界：劳动与剥削程度</h4>
+        <p>地主与富农的分水岭是「有无主要劳动」：自己不劳动或只附带劳动的是地主，自己参加劳动的是富农。富农与富裕中农的分水岭是「剥削是否经常和主要」——《决定》量化为一条线：剥削收入不超过全家年收入 15% 为富裕中农，超过 15% 为富农。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 划分服务于政策：打击面最小、同盟者最多</h4>
+        <p>消灭地主，削弱（限制）富农，联合中农，依靠贫农，团结工人（雇农在内）。精确划分不是为划而划——「联合中农是土地革命的中心策略」「侵犯中农利益是绝对不许可的」，把界限画准，才能把打击面缩到最小、把同盟者扩到最多。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一台「<b>阶级判定机</b>」：不设抽象定义，只给可操作的判定步骤。五个阶级不是五个孤立的标签，而是一条按「占有 → 劳动 → 剥削方式 → 剥削程度」逐级筛选的决策链；链的尽头，阶级定位直接导出政策对待。判定的次序很关键——<b>先看劳动</b>（分地主与富农），<b>再看剥削程度</b>（分富农与富裕中农），<b>最后看出卖劳动力</b>（分中农、贫农、工人）：三个界限，一把尺子量到底。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 查占有</div><div class="n-sub">土地、工具等生产资料：全有 / 部分 / 全无（占有多少不是首要标准）</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 查劳动</div><div class="n-sub">是否参加主要劳动：不劳动或只附带劳动？自己劳动？——分地主与富农</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">③ 查剥削方式</div><div class="n-sub">地租（地主式）／雇工（富农式）／债利——何种为主、是否主要生活来源</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">④ 查剥削程度</div><div class="n-sub">是否经常和主要？剥削收入占比是否超过 15%？——分富农与富裕中农</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑤ 定阶级 → 定政策</div><div class="n-sub">地主消灭 · 富农削弱 · 中农联合 · 贫农依靠 · 工人团结</div></div>
+    </div>
+    <div class="quote" style="margin-top:22px;">中农一般不要出卖劳动力，贫农一般要出卖小部分的劳动力，这是区别中农和贫农的主要标准。<span class="src">——第五节 · 工人之外，最后一把尺子：出卖劳动力的程度，把自耕农与半无产者、无产者逐级分开。</span></div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文五节，一节一个阶级，按「<b>剥削递减、劳动递增</b>」排列——从完全靠剥削为生的地主，到完全靠出卖劳动力为生的工人，本身就是一条光谱。每一节都是一个完整定义：占有情况 + 劳动情况 + 剥削情况（方式、程度、是否主要生活来源）。色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum spectrum5">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg dz">地主</div>
+        <div class="spec-seg fn">富农</div>
+        <div class="spec-seg zn">中农</div>
+        <div class="spec-seg pn">贫农</div>
+        <div class="spec-seg gr">工人</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label">不劳动或只附带劳动，靠地租等剥削为生；破产不改成分。政策：消灭</div>
+        <div class="spec-label">自己参加劳动，但经常靠雇工等剥削，为生活来源一部或大部。政策：削弱</div>
+        <div class="spec-label">全靠或主要靠自己劳动，一般不剥削、不出卖劳动力；富裕中农有轻微非经常剥削。政策：联合</div>
+        <div class="spec-label">占部分土地或不完全工具，须租地耕种，受地租债利剥削，出卖小部分劳动力。政策：依靠</div>
+        <div class="spec-label">一般全无土地和工具（雇农在内），完全或主要出卖劳动力。政策：团结</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card" style="border-top-color:var(--red);"><h4 style="color:var(--red);">地主</h4><p>占有土地，自己不劳动或只附带劳动，靠剥削农民为生；地租是主要剥削方式，管公堂、收学租同属地租剥削。延伸判定：破产后仍不劳动而生活超过普通中农者仍算地主；军阀、官僚、土豪、劣绅是地主阶级的政治代表；帮地主收租管家者、以高利贷为生者，与地主一例看待。</p></div>
+      <div class="card gold"><h4>富农</h4><p>一般占有土地（也可能部分租入或全租入），占有较优裕的生产工具和活动资本；自己参加劳动，但经常依靠剥削为生活来源一部或大部；剥削方式主要是雇工（请长工），或兼出租土地、放债、营工商业。关键在「经常」：许多富农的剥削收入在其全部收入中并且是主要的。</p></div>
+      <div class="card green"><h4>中农</h4><p>许多占有土地，或部分租入、或全租入，有相当的工具；生活来源全靠或主要靠自己劳动；一般不剥削别人，许多还受小部分地租债利剥削；一般不出卖劳动力。富裕中农有轻微剥削，但「非经常的和主要的」——这是与富农的分界线，也是全篇最精细的一刀。</p></div>
+      <div class="card blue"><h4>贫农</h4><p>占有一部分土地和不完全的工具，或全无土地；一般须租入土地来耕，受地租、债利和小部分雇佣劳动的剥削。与中农的界限一句话：「中农一般不要出卖劳动力，贫农一般要出卖小部分的劳动力」——出卖劳动力的有无与多少，是区分自耕与半无产状态的主要标准。</p></div>
+      <div class="card" style="border-top-color:#265c8f;"><h4 style="color:#265c8f;">工人（雇农在内）</h4><p>一般全无土地和工具，有些只有极小部分；完全地或主要地以出卖劳动力为生。农村中的无产阶级——查田运动中「工人阶级为领导」所指的阶级，土地斗争中的先锋队。</p></div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">三个分界点：全篇最精细的三刀</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">划分的难点不在定义两头，而在边界上的疑似成分。本篇（及同日批准的《决定》）给出三条可操作的界限。</p>
+    <div class="bounds">
+      <div class="bound">
+        <h4>界限一 · 地主 × 富农</h4>
+        <p>分水岭是「有无主要劳动」：自己不劳动、或只有附带的劳动，靠剥削为生 = 地主；自己参加劳动、同时剥削 = 富农。注意：富农也可能全无土地（全部租入），土地占有多少不是首要标准。</p>
+        <span class="rule">《决定》：「有无主要劳动，是区别富农与地主的主要标准。」</span>
+      </div>
+      <div class="bound blue">
+        <h4>界限二 · 富农 × 富裕中农</h4>
+        <p>分水岭是「剥削是否经常和主要」。富裕中农有轻微剥削（请短工、放小债），但「非经常的和主要的」；富农的剥削「是经常的」，且往往占收入的主要部分。量化线：剥削收入不超过全家年收入 15% 为富裕中农，超过 15% 为富农。</p>
+        <span class="rule">《决定》：15% 的量化边界——本卷土地文件中罕见的「数字条款」。</span>
+      </div>
+      <div class="bound green">
+        <h4>界限三 · 中农 × 贫农 × 工人</h4>
+        <p>分水岭是「出卖劳动力的程度」：中农一般不出卖劳动力；贫农一般出卖小部分劳动力；工人完全或主要出卖劳动力。「这是区别中农和贫农的主要标准」——一条线分出三个阶级。</p>
+        <span class="rule">本篇原文：中农一般不要出卖劳动力，贫农一般要出卖小部分的劳动力。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>给「阶级」装上度量衡：从政治态度划线，到经济事实划线</h4>
+          <p>查田运动最初的乱象，不是查得不狠，而是标准太模糊。瑞金城区「按亩去查」，中农吓得请求改成贫农成分——「中农危险得很，推上就是富农，改为贫农咧，隔富农就远一点」；兴国有的地方按剥削种类定成分，请了长工、收了租、又放了债，「不管他家里有几个人劳动，总之他家里就是地主了」；还有人算陈账，把革命前十几年前请过长工的人也揪出来。本篇的贡献，是把「阶级」从一面可辩论的旗帜，变成一把可计算的尺子：<b>不管你怎么想、说过什么、祖上如何，只看三件事——占有什么、劳动不劳动、剥削多少。</b>政治态度可以伪装，经济事实经得起逐项核查。迁移到今天：团队里「贴标签」的成本极低（「这人态度有问题」「他就是混日子的」），而建立可核查的客观标准成本较高——但标准一旦客观，争论就从「你是谁」变成「事实是什么」，后者才有解。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>最精确的刀法，是为了少伤人：15% 的边界意识</h4>
+          <p>本篇最见功力的不是定义地主——那很容易；而是给「富农 × 富裕中农」画一条 15% 的线。富农自己劳动、也雇工剥削，富裕中农自己劳动、也偶尔请短工放小债——两者在现实中犬牙交错，划错一个，就是把同盟者推到敌人那边。毛泽东在八县大会上立的原则是「联合中农是土地革命的中心策略」「侵犯中农利益是绝对不许可的」，所以宁可把疑似富农者按中农对待，也不让中农寒心。<b>这不是心软，是政治算术：任何变革都有「要动的」和「要稳的」，高手的标志是精确区分两者，并把误差控制在「宁可宽、不可严」的一侧。</b>迁移：裁员、改制、追责，动手之前先问——我有没有一条 15% 式的量化边界？误伤一个盟友的代价，往往大于放过一个敌人的代价。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>一份文件的两个生日：版本史即纠偏史</h4>
+          <p>1991 年版毛选题注说本篇写于「一九三三年十月」——那其实是中央政府批准公布的日子；学者李佑新、霍杰考证，文件成文于 1933 年 6 月，6 月 29 日就刊发于《红色中华》。把「批准日」写进「写作时间」，透出编者以「文件生效」为生命节点的习惯。更耐人寻味的是它的命运曲线：<b>1934 年 3 月，纠偏刚见成效，新训令就规定「已翻案者作为无效」，把纠偏本身翻掉；15 年后，1948 年 5 月 25 日，中共中央重新公布这两个 1933 年文件，用来纠正土改中再次出现的「左」倾——标准没变，变的是执行它的人。</b>迁移：一份好标准的价值，往往要等环境转一圈才能被重新发现；而「纠偏被反纠偏」的反复提醒我们，规则之争的背后常是权力之争——标准能否执行，取决于谁在掌舵。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">占有土地，自己不劳动，或只有附带的劳动，而靠剥削农民为生的，叫做地主。</div>
+        <div class="ctx">第一节 · 地主。全篇的基准定义：劳动与否，是划分的起点。1991 年版文字，与求是网刊载文本逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">富农一般都占有比较优裕的生产工具和活动资本，自己参加劳动，但经常地依靠剥削为其生活来源的一部或大部。</div>
+        <div class="ctx">第二节 · 富农。前半句把它与地主分开（自己参加劳动），后半句把它与中农分开（经常依靠剥削）——一句话里藏着两个分界。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中农一般不要出卖劳动力，贫农一般要出卖小部分的劳动力，这是区别中农和贫农的主要标准。</div>
+        <div class="ctx">第四节 · 贫农。用「出卖劳动力」这把尺子，把自耕农与半无产者分开——全篇最常被引用的一句。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">工人（雇农在内）一般全无土地和工具，有些工人有极小部分的土地和工具。工人完全地或主要地以出卖劳动力为生。</div>
+        <div class="ctx">第五节 · 工人。光谱的尽头：一无所有，唯余劳动力。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">有些地主虽然已破产了，但破产之后仍不劳动，依靠欺骗、掠夺或亲友接济等方法为生，而其生活状况超过普通中农者，仍然算是地主。</div>
+        <div class="ctx">第一节 · 地主。破产不改成分：看现实生活来源，不看过往风光——既防「算陈账」式翻旧账，也防「看成分不看现状」式错划。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">10 · 我们的经济政策（1934.01）</div>
+        <p>本篇给苏区农村立了「阶级度量衡」，下一篇回答「苏区经济怎么组织」：国营事业、合作社事业、私人事业三者关系，「从发展国民经济来增加我们财政的收入」。查田运动划清了「谁是谁」，经济政策回答了「怎么办」——1933 年 8 月《必须注意经济工作》的动员，到这里落地成政策条文。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《中国社会各阶级的分析》（1925.12）· 首尾呼应</div>
+        <p>本卷第一篇用经济地位分析全国各阶级，回答「谁是我们的敌人？谁是我们的朋友？」；本篇把同一方法做成可执行的农村「度量衡」文件。相隔八年，同一个方法，从「分析」走向「操作」。另可对照姊妹文件《关于土地斗争中一些问题的决定》（1933.10.10，王观澜、谢觉哉起草、毛泽东主持制定）：20 条规定把本篇原则细化为可操作条款（15% 线、知识分子政策等），是理解本篇如何落地的必读件。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「阶级分析」的方法论搬到你手头的场景</h4>
+      <p class="q">① 把你所在组织的人、事、客户，按<b>「可核查的客观指标」</b>重新分一次类（按贡献数据而非印象）。结果和你脑中的「标签」有多大出入？有没有人长期被标签误伤？<br>② 你最近一次「动手」（裁员、整改、追责、站队）之前，画过<b>「15% 线」</b>吗？如果误伤一个你最需要团结的「中农」，代价是什么？<br>③ 本篇 1933 → 1948 → 1951 三次被启用，中间还经历「纠偏被反纠偏」。你手头有没有一份「写早了」的标准或文档，值得在环境变化后再拿出来用一次？它的执行者换人了吗？</p>
+      <p class="hint">提示：三件工具——① 客观标准优于主观标签：把「他是谁」的争论翻译成「事实是什么」的核查；② 打击面最小化：动手前先量化「要动的」与「要稳的」的边界，误差宁可宽不可严；③ 标准的生命力在于可复用，但要警惕规则之争背后的权力之争——标准能否执行，取决于谁在掌舵。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与求是网刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

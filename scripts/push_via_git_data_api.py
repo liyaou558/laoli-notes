@@ -15,9 +15,9 @@ import sys
 CONFIG = {
     "repo": "liyaou558/laoli-notes",
     "branch": "main",
-    "msg": "毛选精读: 03 中国的红色政权为什么能够存在？",
+    "msg": "毛选精读: 09 怎样分析农村阶级",
     "files": [
-        "public/maoxuan/03_中国的红色政权为什么能够存在？.html",
+        "public/maoxuan/09_怎样分析农村阶级.html",
         "src/pages/maoxuan/index.astro",
     ],
 }

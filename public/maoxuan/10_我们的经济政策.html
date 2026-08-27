@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 · 我们的经济政策 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* 窄屏逐档缩小字号 */
+@media(max-width:560px){
+  .tl-body{font-size:14px;}
+  .tl-body .note{font-size:12px;}
+}
+
+/* ===== 光谱图（本篇为三段：三种经济成分） ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p{overflow-wrap:anywhere;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾</div>
+    <h1>我们的经济政策</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十篇 · <b>一九三四年一月</b>（第二次全国苏维埃代表大会报告之一部分 · 一月二十四至二十五日作）</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>我们的经济政策——毛泽东在第二次全国苏维埃代表大会（二苏大）所作长篇报告的一部分，收入《毛泽东选集》时独立成篇</td></tr>
+      <tr><th>写作时间</th><td>《毛泽东选集》标注「一九三四年一月」。报告《中央执行委员会与人民委员会对第二次全国苏维埃代表大会的报告》于 1934 年 1 月 24 日下午至 25 日上午在二苏大会上宣讲，本篇即报告中专论经济建设的部分</td></tr>
+      <tr><th>最初发表</th><td>无独立首发记录。作为报告的一部分，报告全文 1934 年 3 月由临时中央政府人民委员会在瑞金印行单行本，同年莫斯科出版的《只有苏维埃能够救中国》亦收录（据该报告英译本编者说明）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版），1951 年初版即收录。题注：「这是毛泽东在一九三四年一月二十二日至二月一日在江西瑞金召开的第二次全国工农兵代表大会上的报告的一部分。这个报告是一月二十四日至二十五日作的。」篇末注释 2 条</td></tr>
+      <tr><th>篇　幅</th><td>正文约二千八百字（含标点，据求是网刊载文本统计）；报告全文约 4.6 万字，本篇为其一小部分——从 4.6 万字长报告中摘出独立成篇</td></tr>
+      <tr><th>历史坐标</th><td>六届五中全会（1934.01.15—18，第三次「左」倾路线发展的顶点，通过《给二次全苏大会党团的指令》）闭幕四天之后；第五次反「围剿」进行到第四个月（1933.09.28 黎川失守）；中央红军长征（1934.10）前九个月；二苏大闭幕次日（2 月 3 日）毛泽东留任中央执行委员会主席、张闻天接任人民委员会主席——本篇是毛泽东以行政首脑身份所作最后一份全面施政报告的经济篇章</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇给苏区农村立了「<b>阶级度量衡</b>」，这一篇回答「<b>苏区经济怎么组织</b>」。1933 年的中央苏区被两把钳子夹着：军事「围剿」与严密经济封锁。蒋介石两手并用——军事「围剿」是「杀死政策」，经济封锁是「饿死政策」，企图使苏区「不能存一粒米、一撮盐、一勺水的补给」。盐成了苏区最硬的通货：才溪乡暴动前每人每月吃盐一斤（一块钱买十斤），到 1933 年 11 月每人每月只吃三两二钱（一块钱仅买得十四两）；民间流传「有人拿走一粒盐，店主赶过三家店」。黄克诚后来回忆，连红一军团前线部队每人每天也只有不足一钱的盐。<b>戏剧性在于：恰恰在「盐比金贵」的绝境里，苏区在瑞金沙洲坝盖起了一座可容两千余人的大礼堂——为召开二苏大，1933 年 8 月 1 日破土动工，梁柏台任工程处主任、钱壮飞设计、黄亚光题字，江西福建选调四百余工人，四个月建成；48 根木柱特意保留树顶枝叶以防敌机侦察，后侧还挖了可容两千余人的防空洞；空中俯瞰，八角形的礼堂如一顶红军的八角帽，后人称它是「北京人民大会堂的前身」。一边是饿死政策下的盐荒，一边是战争环境里的大兴土木——这就是二苏大的舞台。</b>而毛泽东的报告，就是在这座礼堂里、在「左」倾路线最盛的时刻，讲了一堂最务实的「经济课」。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1931.11—1933.04 · 封锁步步收紧</div>
+        <div class="tl-body">1931 年 11 月中华苏维埃共和国成立后，国民党在军事「围剿」之外加紧经济封锁，1932 年起更甚——「企图建立纵深二百六十里的封锁网，在苏区周围设立食盐公卖局，限制每人每天只买盐三四钱，每月不得超过一斤」。闽西长汀近八成店铺因无货可卖停业；苏区农产品卖不出去、工业品进不来，「剪刀差」越拉越大。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.04—06 · 迁沙洲坝与二苏大决议</div>
+        <div class="tl-body">叶坪频频遭敌机轰炸，临时中央政府迁往沙洲坝。6 月 8 日中央执行委员会决议召开二苏大——原定 1933 年 12 月 11 日（广州暴动纪念日）开幕，因湘赣、湘鄂赣代表选举未完成、蒋介石 9 月又发动第五次「围剿」，推迟到 1934 年 1 月。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933.02—04 · 反封锁的机构与通道</div>
+        <div class="tl-body">2 月 26 日毛泽东主持人民委员会常会，决定设立各级国民经济部（邓子恢兼任部长）；4 月国民经济人民委员部成立，下设对外贸易处等。此前的 1932 年 4 月，赣县江口贸易分局已成立——它后来被誉为「苏区第一海关」：高峰时一天购进四千多斤食盐、出售一万多斤稻谷，苏区急需物资七成以上经赣州方向采购；分局与赣州大商户「广益昌」互派代表秘密贸易（据《炎黄春秋》考证，后台为粤军陈济棠部驻赣州第一师师长李振球）——<span class="note">前线敌军将领默许甚至参与对苏区贸易，是封锁网上撕不开的口子。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1932.02.12 · 中华钨矿公司成立</div>
+        <div class="tl-body">在公营铁山垅钨矿（1931 年初开办，苏区第一家公营钨矿）基础上组建，首任总经理胡功克；1932 年秋末冬初，国家银行行长毛泽民兼任总经理。钨砂产量从 1932 年的 648 吨升到 1933 年的 1800 吨；到长征前共产钨砂 4193 吨，为中央政府提供四百余万元财政收入。封锁最紧时「一斤钨砂竟换不到一两盐、一尺白土布」，而 100 斤钨砂经江口、新泉分局出口（主要卖给粤军陈济棠部、十九路军）可卖 52 块银元——钨砂是苏区打破封锁最硬的「硬通货」。<span class="note">产量与金额各来源略有出入，据《中国有色报》《光明日报》文摘及赣州市档案馆资料。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.07.22 · 三百万元经济建设公债</div>
+        <div class="tl-body">中央执行委员会通过《发行经济建设公债条例》。本篇原文所说「发行了三百万元经济建设公债」即指此事；国家银行从中拨出 100 万元作外贸资金。靠群众认购解决建设资金——「目前唯一的和可能的方法」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1934.01.15—18 · 六届五中全会：「左」倾顶点</div>
+        <div class="tl-body">全会在瑞金沙洲坝召开，全面肯定四中全会以来的「左」倾路线，通过《给二次全苏大会党团的指令》——直接给四天后的二苏大党团下指令。《关于若干历史问题的决议》定评：「六届五中全会，是第三次『左』倾路线发展的顶点。」毛泽东仍被选为中央政治局委员，但处境微妙。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1934.01.22 · 二苏大开幕</div>
+        <div class="tl-body">下午 2 时，毛泽东在沙洲坝大礼堂宣布大会开幕并致开幕词。正式代表 693 名、候补代表 83 名、旁听代表 1500 余名，还有朝鲜、越南、印尼来宾。1 月 24 日下午至 25 日上午，毛泽东作《中央执行委员会与人民委员会对第二次全国苏维埃代表大会的报告》——全文约 4.6 万字，分五部分；本篇即其中专论经济建设的部分。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1934.01.27 · 作结论 · 2 月 1 日闭幕</div>
+        <div class="tl-body">毛泽东根据代表讨论情况作报告结论——四天后结论中的一部分，就是下一篇《关心群众生活，注意工作方法》。2 月 1 日大会闭幕，通过《中华苏维埃共和国宪法大纲》和国徽、国旗、军旗决定，选举 175 名中央执行委员。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1934.02.03 · 权力更迭：告别施政报告</div>
+        <div class="tl-body">二届中央执行委员会第一次会议：毛泽东留任中央执行委员会主席（项英、张国焘为副主席），张闻天出任人民委员会主席——毛泽东不再兼任行政首脑。也就是说，本篇所在的这份报告，是毛泽东以行政首脑身份向全国苏维埃大会作的最后一份全面施政报告；经济篇章讲完，行政权即告交接。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1934.10 · 尾声：原则的迁徙</div>
+        <div class="tl-body">中央红军长征，中央苏区易手，本篇设计的「三种经济同时并进」随根据地终结而中断；但它的原则——发展经济、保障供给、公私兼顾、节省每一个铜板——在延安时期复活（《抗日时期的经济问题和财政问题》提出「发展经济，保障供给」）。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它写于「左」倾路线顶点与第五次反「围剿」危局之间，却通篇没有一个「左」字，只有「可能的」「必须的」「节省」「改良生活」这些务实的词。它讲的不是主义，是盐、布、粮、钨砂、耕牛、水利。<b>它证明：即使在最「左」的时刻，一个负责任的执政者手里那本账，依然写着柴米油盐。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>在战争与封锁的极限约束下，做「一切可能的和必须的」经济建设</b>——以农业为第一位，国营、合作社、私人三种经济同时并进，财政上开源节流，用发展经济来<span class="q">供给战争、改良生活</span>。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 原则：一切可能的和必须的</h4>
+        <p>集中经济力量供给战争，同时极力改良民众的生活——两条腿走路。既反对「革命战争环境不需要经济建设」的论调，也反对脱离战争另搞一套：「在目前的条件之下，农业生产是我们经济建设工作的第一位」。一切围绕战争，但绝不停下经济。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 构成：三种经济同时并进</h4>
+        <p>国营事业只限于「可能的和必要的一部分」，但「前途是不可限量的」，要争取对私人经济的领导；合作社「在极迅速的发展中」，将与国营经济配合，「将对私人经济逐渐占优势并取得领导的地位」；私人事业「现时是占着绝对的优势」，只要不越出政府法律范围，「不但不加阻止，而且加以提倡和奖励」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 财政：开源 + 节流</h4>
+        <p>「从发展国民经济来增加我们财政的收入，是我们财政政策的基本方针」；「财政的支出，应该根据节省的方针」；「贪污和浪费是极大的犯罪」；国家银行发行纸币「基本上应该根据国民经济发展的需要，单纯财政的需要只能放在次要的地位」——发展优先于印钞。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一台在约束条件下求解的「<b>战时经济机器</b>」：先立约束（战争 + 封锁），再定原则（一切可能的和必须的），然后按「农业 → 工业 → 外贸 → 所有制构成 → 财政」逐层展开，最后回到两个目的——供给战争、改良生活。链条的关键在第二环：原则不是「发展经济」四个字，而是「<b>一切可能的和必须的</b>」——「可能」是资源约束，「必须」是底线需求，两者的交集才是政策边界。这八个字是全篇的枢纽，也是它与空喊口号的经济纲领的分水岭。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 约束</div><div class="n-sub">战争需要 × 经济封锁（「杀死政策」+「饿死政策」）</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 原则</div><div class="n-sub">一切可能的和必须的经济建设：供给战争 + 改良生活</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">③ 中心：农业第一</div><div class="n-sub">粮食、原料、水利、劳动力、耕牛</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">④ 工业自给</div><div class="n-sub">烟纸钨砂樟脑、织布制药制糖、硝盐；自给为先、出口其次</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑤ 对外贸易</div><div class="n-sub">国家经营必要流通：盐布输入、粮钨输出、粮食调剂</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">⑥ 构成</div><div class="n-sub">国营 + 合作社 + 私人 同时并进（300 万元公债筹资）</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">⑦ 财政</div><div class="n-sub">开源（发展经济增加收入）+ 节流（节省、反贪污浪费）</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">目的</div><div class="n-sub">冲破封锁 → 供给战争 → 改良民众生活</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文顺着「原则 → 中心 → 构成 → 财政」四层展开，没有空论，每段都是可执行的方针。最醒目的结构是「<b>三种经济成分</b>」的定位——按公有化程度排开，恰是一条光谱。色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg red">国营事业</div>
+        <div class="spec-seg gold">合作社事业</div>
+        <div class="spec-seg green">私人事业</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>公 · 引领</b>只限「可能的和必要的一部分」，工业商业已经开始发展，「前途是不可限量的」；政策：争取对私人经济的领导</div>
+        <div class="spec-label"><b>半公 · 组织</b>「在极迅速的发展中」：1933 年 9 月江西福建十七县统计，合作社一千四百二十三个、股金三十余万元；政策：大规模发展，逐渐占优势并取得领导地位</div>
+        <div class="spec-label"><b>私 · 活力</b>「现时是占着绝对的优势，并且在相当长的期间内也必然还是优势」，取小规模经营形式；政策：不越出法律范围，提倡和奖励</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">全文八段骨架</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从驳斥谣言开局，到「有计划的建设才能救中国」收束，八段层层递进。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">① 开局</div>
+        <div class="sk-body">驳斥「红色区域破坏不堪」的谣言：军事「围剿」之外还有经济封锁，而冲破封锁「着着胜利了」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">② 原则总纲</div>
+        <div class="sk-body">一切可能的和必须的经济建设；中心是发展农业生产、工业生产、对外贸易和合作社。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">③ 农业第一</div>
+        <div class="sk-body">1933 年赣南闽西农产比 1932 年增加 15%、闽浙赣边区增加 20%；确定地权后生产恢复甚至超过革命前；劳动互助社、耕田队、犁牛合作社、妇女参加生产；「水利是农业的命脉」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">④ 工业自给</div>
+        <div class="sk-body">敌人封锁使烟、纸等手工业衰落；「首先为着自给，其次也为着出口」；烟、纸、钨砂、樟脑、农具、肥料，自己织布、制药、制糖；闽浙赣边区造硝盐解盐荒；国营与合作社工业需「相当精密的生产计划」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑤ 对外贸易</div>
+        <div class="sk-body">国家直接经营必要流通：食盐和布匹的输入，食粮和钨砂的输出，粮食在内部的调剂；中央区始于 1933 年春，对外贸易局「已经得到初步的成绩」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑥ 三种成分</div>
+        <div class="sk-body">国营 + 合作社 + 私人同时并进；发行三百万元经济建设公债，「依靠群众的力量来解决经济建设的资金问题」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑦ 财政方针</div>
+        <div class="sk-body">开源：「从发展国民经济来增加我们财政的收入」；货币纪律：纸币发行以国民经济发展需要为准；节流：「节省的方针」，「贪污和浪费是极大的犯罪」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑧ 结语</div>
+        <div class="sk-body">人民政府在困难中认真进行经济建设；「只有我们实行了有计划的有组织的经济建设工作，才能挽救全国人民出于空前的浩劫」。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">财政两条腿</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">本篇财政思想的两翼：开源靠发展，节流靠纪律。</p>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--green);">
+        <h4 style="color:var(--green);">开源：从发展里长收入</h4>
+        <p>「从发展国民经济来增加我们财政的收入，是我们财政政策的基本方针」——先做大蛋糕再分蛋糕。「国家银行发行纸币，基本上应该根据国民经济发展的需要，单纯财政的需要只能放在次要的地位」——不能靠印钞填窟窿。</p>
+      </div>
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">节流：节省与反浪费</h4>
+        <p>「财政的支出，应该根据节省的方针」；「贪污和浪费是极大的犯罪」；「节省每一个铜板为着战争和革命事业，为着我们的经济建设，是我们的会计制度的原则」；「我们对于国家收入的使用方法，应该和国民党的方法有严格的区别」。</p>
+      </div>
+    </div>
+    <div class="quote">节省每一个铜板为着战争和革命事业，为着我们的经济建设，是我们的会计制度的原则。<span class="src">——财政节流一节。匮乏时代，一粒盐、一个铜板都连着前线的命；浪费不是道德瑕疵，是系统性风险。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「一切可能的和必须的」：匮乏时代的任务边界学</h4>
+          <p>全篇最值得玩味的是原则句里的定语——不是「进行经济建设」，而是「进行一切<b>可能的和必须的</b>经济方面的建设」。「可能的」是资源约束：封锁之下人力、资金、物资都有限，所以国营经济「只限于可能的和必要的一部分」，「在散漫的手工业基础上」精密计划不可能，只能「关于某些主要的事业」做计划；「必须的」是底线需求：粮食、盐、布、药、军需，一样都不能断。两个词的乘积，才是政策的边界。对照当时的两种极端——「革命战争环境不需要经济工作」的战争中心论，和脱离战争另搞一套的倾向——毛泽东在 1933 年 8 月南部十七县大会上把两种都批了：经济建设必须环绕革命战争这个中心，但绝不能没有。迁移到今天：资源被砍掉七成时，最危险的反应是两种——「什么都不做了」和「什么都想做」。先分别列出「可能的」（资源允许）与「必须的」（底线需求），取交集，就是该做的事。<b>边界不是妥协，边界是清醒。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>三种经济同时并进：给每个主体定位，而不是消灭谁</h4>
+          <p>1934 年的苏区，国营经济弱小（只限「可能的和必要的一部分」）、私人经济占绝对优势（「在相当长的期间内也必然还是优势」）、合作社方兴未艾（1423 个、股金三十余万元）。毛泽东没有按「公有化程度越高越好」的教条去消灭私营、拔苗助长，而是给三种成分各自定位：<b>国营做引领（争取领导）、合作社做组织与过渡（逐渐占优势）、私人做活力与规模（提倡和奖励）</b>。「同时并进」四个字，是策略性的定位管理，不是制度性的终极承诺——这与后来「左」的政策（消灭私营）恰成对照，也与 1953 年过渡时期总路线「一化三改」的遥远回声不同调。迁移：任何生态里都有「必须自己掌控的核心」「可以共建共享的平台」「交给市场的活力」三类主体；高明的管理者给三者定位、让三者并进，糟糕的管理者总想一锅端——要么什么都自己做，要么什么都不该管。问自己：我的「国营、合作社、私人」各是什么？我有没有按教条而非按事实给他们排过座次？</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>财政纪律：开源节流并举，且「单纯财政的需要只能放在次要的地位」</h4>
+          <p>本篇的财政思想放在今天依然锋利：开源——「从发展国民经济来增加我们财政的收入」，先做大蛋糕；节流——「节省每一个铜板」，「贪污和浪费是极大的犯罪」；更关键的是货币纪律——「国家银行发行纸币，基本上应该根据国民经济发展的需要，单纯财政的需要只能放在次要的地位」。这句话翻译过来就是：<b>不能靠印钞解决财政问题</b>。1934 年的苏区在极端环境下守住了这条原则；而此后苏区财政日益困难、纸币超发引发通货膨胀，市场上甚至回到以物易物（据中央党史和文献研究院网站研究文章）——原则被破坏的后果，恰恰反证了原则的分量。「贪污和浪费是极大的犯罪」尤其值得掂量：在物资极度匮乏时，浪费不是道德瑕疵，而是系统性风险。迁移：看一个组织的财政健康，先看三件事——收入是不是从「发展」里长出来的（而不是靠融资、补贴、印钞）；支出有没有「节省」的硬约束；有没有把「单纯的需要」（短期 KPI、面子工程）放在「发展的需要」之上。<b>三条都守住的组织，穷而不乱；守不住的组织，富也会崩。</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">我们的经济政策的原则，是进行一切可能的和必须的经济方面的建设，集中经济力量供给战争，同时极力改良民众的生活，巩固工农在经济方面的联合，保证无产阶级对于农民的领导，争取国营经济对私人经济的领导，造成将来发展到社会主义的前提。</div>
+        <div class="ctx">开篇总纲。「一切可能的和必须的」是全篇枢纽：可能者量力，必须者保底。1991 年版文字，与求是网刊载文本逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">现在我们的国民经济，是由国营事业、合作社事业和私人事业这三方面组成的。</div>
+        <div class="ctx">三种成分论——一句话框定苏区经济的所有制格局。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">水利是农业的命脉，我们也应予以极大的注意。</div>
+        <div class="ctx">农业第一位的注脚；后来成为新中国农田水利建设最常引用的论断。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">从发展国民经济来增加我们财政的收入，是我们财政政策的基本方针……这里必须充分注意：国家银行发行纸币，基本上应该根据国民经济发展的需要，单纯财政的需要只能放在次要的地位。</div>
+        <div class="ctx">财政开源与货币纪律：先做大蛋糕，且不靠印钞填窟窿——1934 年的「央行原则」。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">财政的支出，应该根据节省的方针。应该使一切政府工作人员明白，贪污和浪费是极大的犯罪。……节省每一个铜板为着战争和革命事业，为着我们的经济建设，是我们的会计制度的原则。</div>
+        <div class="ctx">节流与反浪费：匮乏时代，浪费即犯罪。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">11 · 关心群众生活，注意工作方法（1934.01）</div>
+        <p>同一场大会的产物：本篇出自 1 月 24—25 日的报告，下篇出自 1 月 27 日的结论。本篇讲「经济怎么组织」（政策），下篇讲「群众怎么发动」（方法）；本篇说「极力改良民众的生活」，下篇回答「怎样改良」——长冈乡、才溪乡的模范例子，正是本篇数据背后的那两个乡。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《必须注意经济工作》（1933.08）· 动员版与政策版</div>
+        <p>五个月前南部十七县经济建设大会上的动员讲话，与本篇相隔五个月、同一套经济思想：「动员版」与「政策版」的关系，对照读能看出毛泽东怎样把一次动员讲话落成一份施政纲领。另可对照《长冈乡调查》《才溪乡调查》（1933.11，载《毛泽东农村调查文集》）——本篇注释〔2〕点名，二苏大前两个月所作；盐价、合作社、劳动互助社的一手数据都出自这两份调查——先调查，后写报告，顺序本身就是方法。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「战时经济」的方法论搬到你手头的场景</h4>
+      <p class="q">① <b>边界题</b>：把你手头「该做的事」分别列成两栏——「可能的」（资源、时间、能力允许的）与「必须的」（不做就出事的）。取交集，再看你现在实际在做的事：有多少落在交集之外？你最近一次「什么都想抓」或「什么都不想做」，是哪一种？<br>② <b>定位题</b>：你的组织、项目或业务里，「国营」（必须自己掌控的核心能力）、「合作社」（共建共享的协作平台）、「私人」（交给市场与个体的活力部分）各是什么？你有没有过「一锅端」的冲动——或者什么都自己做，或者什么都不该管？<br>③ <b>财政纪律题</b>：你的个人/家庭/团队「财政政策」是什么？收入是从「发展」里长出来的，还是靠透支、借贷、补贴撑着的？「节省每一个铜板」与「贪污和浪费是极大的犯罪」，在你的场景里分别对应什么？<br>④ <b>货币题</b>：当你面临「短期 KPI（单纯财政的需要）」与「长期发展需要」的冲突时，你会怎么选？1934 年苏区这条「纸币发行以发展需要为准」的原则，放在今天的公司预算、个人消费里，还成立吗？</p>
+      <p class="hint">提示：三件工具——① 边界 = 可能的 × 必须的：匮乏时先划边界，边界不是妥协而是清醒；② 多元主体定位管理：给「核心/平台/活力」三者各定其位，警惕一锅端；③ 财政三条线：收入看来源（发展还是透支）、支出看约束（节省）、优先级看长远（发展需要压倒单纯需要）。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与求是网刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

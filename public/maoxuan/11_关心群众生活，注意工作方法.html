@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11 · 关心群众生活，注意工作方法 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p{overflow-wrap:anywhere;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾壹</div>
+    <h1>关心群众生活，注意工作方法</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十一篇 · <b>一九三四年一月二十七日</b>（第二次全国苏维埃代表大会结论之一部分）</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>关心群众生活，注意工作方法——毛泽东在第二次全国工农兵代表大会（二苏大）上所作《关于中央执行委员会报告的结论》的一部分，拟此题编入《毛泽东选集》时独立成篇</td></tr>
+      <tr><th>写作时间</th><td>《毛泽东选集》标注「一九三四年一月二十七日」。此日是毛泽东在二苏大上作报告结论的日子（1934 年 1 月 27 日）</td></tr>
+      <tr><th>最初发表</th><td>1934 年 1 月 27 日在瑞金沙洲坝大礼堂面对全体代表宣讲；结论全文随即刊于《红色中华》「第二次全苏大会特刊」第 5 期（1934 年 1 月 31 日）。据瑞金中央革命根据地纪念馆考证，特刊报道的结论文本多处夹注「全场轰笑」「大鼓掌」等现场气氛字样——这是《红色中华》以往会议报道中极少见的</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版），1951 年初版即收录。题注：「这是毛泽东在一九三四年一月二十二日至二月一日在江西瑞金召开的第二次全国工农兵代表大会上所作的结论的一部分。」篇末注释数条（长冈乡、才溪乡、公略县、堡垒政策、查田工作等）</td></tr>
+      <tr><th>篇　幅</th><td>正文约二千字（含标点，据求是网/毛选原文统计）；是 1 月 27 日整篇结论中关于「群众生活」与「工作方法」两个问题的部分</td></tr>
+      <tr><th>历史坐标</th><td>六届五中全会（1934.01.15—18，第三次「左」倾路线发展的顶点）闭幕九天之后；第五次反「围剿」进行到第五个月（1933.09 黎川失守，广昌战役前四个月）；中央红军长征（1934.10）前九个月；二苏大（01.22—02.01）期间。此前的宁都会议（1932.10）后毛泽东被迫离开红军军事领导岗位、专任中华苏维埃共和国临时中央政府主席——本篇是他以行政首脑身份发动群众、向「左」倾军事路线下的官僚命令作风开炮的一篇战斗性文献</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇给苏区定了「<b>经济政策</b>」，这一篇回答「<b>经济之外的群众怎么发动</b>」。写它之前两个月（1933 年 11 月），毛泽东刚刚做完两件关键的事：<b>长冈乡调查</b>（江西兴国）与<b>才溪乡调查</b>（福建上杭）——带着这些一手材料走进二苏大。而写它的此刻，是第五次反「围剿」最危急的当口：蒋介石改变以往长驱直入的战法，改用<b>堡垒主义</b>，在苏区四周大修碉堡，「大筑其乌龟壳」，步步为营、碉堡推进，企图把红军困死、耗死。面对「铜墙铁壁」般的乌龟壳，靠什么打？<b>毛泽东的答案不在军事上，而在群众里。</b></p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性在于：这篇讲「关心群众生活」的文献，恰恰诞生于一场「官僚主义」的现场交锋中。</b>他直接在大会上点名前一天的两种典型——一种是不理群众生活的汀州市政府：只管扩大红军、动员运输队，群众「没有柴烧、资本家把盐藏起来没有盐买、没有房子住、缺米米价贵」一概不管，结果一百多个代表几次开会「只讨论扩大红军完全不理群众生活」，后来「不高兴到会了，会议也召集不成了」，扩大红军也因此极少成绩；另一种是模范的长冈乡、才溪乡：贫农房子被烧，乡政府发动群众捐钱；三个人没饭吃，乡政府和互济会马上捐米救济；去年夏荒，乡政府从二百多里外的公略县办米来救——结果长冈乡百个青年壮年男子里八十个当红军，才溪乡八十八个。一正一反，都是他自己调查出来的。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1932.10 · 宁都会议：离开军事领导</div>
+        <div class="tl-body">宁都会议后，毛泽东被免去红一方面军总政治委员等军事职务，专职担任中华苏维埃共和国临时中央政府主席。此后他把大量精力转向政府工作与农村调查——「离开了军事，反而给了他观察群众、组织群众的空间」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933.08.12 · 南部十七县经济建设大会</div>
+        <div class="tl-body">讲话《必须注意经济工作》，强调「革命战争的激烈发展，要求我们动员群众，立即开展经济战线上的运动」；算账揭露私商垄断：「一担谷子运出苏区，私商赚七倍价钱；盐一块钱七斤买进、一块钱十二两卖出」——盐荒、物价波动的根源。这是本篇「解决群众生活问题」的先声。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933.11 · 长冈乡、才溪乡调查</div>
+        <div class="tl-body">本月，毛泽东深入兴国长冈乡、上杭才溪乡作系统调查，写成《长冈乡调查》《才溪乡调查》。他发现：「很多人不了解乡苏、市苏的工作……上级苏维埃工作人员发得出很多的命令与决议，却不知道任何一个乡苏、市苏工作的实际内容」；同时记下长冈、才溪「扩大红军多得很呀」「公债销得很多」的模范实例与盐价、合作社、劳动互助社的一手数据——本篇对比的正反两例，全部出自这两份调查。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1933.09 — · 第五次反「围剿」与堡垒主义</div>
+        <div class="tl-body">蒋介石以五十万兵力发动第五次「围剿」，放弃过去速战打法，采纳德国军事顾问的建议，在苏区周围大筑碉堡、层层封锁、步步推进（「堡垒政策」）。本篇所说的「大筑其乌龟壳」即指此。时任红军军事领导的李德、博古采取「御敌于国门之外」的阵地战，红军陷入被动。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1934.01.15—18 · 六届五中全会：「左」倾顶点</div>
+        <div class="tl-body">全会在瑞金沙洲坝召开，全面肯定四中全会以来路线，通过《给二次全苏大会党团的指令》。《关于若干历史问题的决议》定评：「六届五中全会，是第三次『左』倾路线发展的顶点。」毛泽东处境微妙，但行政职务仍在。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1934.01.22 · 二苏大开幕</div>
+        <div class="tl-body">下午 2 时，毛泽东在沙洲坝新建大礼堂宣布大会开幕。正式代表 693 名、候补 83 名、旁听 1500 余名，还有朝鲜、越南、印尼来宾。1 月 24 日下午至 25 日上午，毛泽东作《中央执行委员会与人民委员会对第二次全国苏维埃代表大会的报告》（全文约 4.6 万字，其中的经济部分即上一篇《我们的经济政策》）。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1934.01.27 · 本篇诞生：报告结论</div>
+        <div class="tl-body">毛泽东根据代表连日讨论的情况作《中央执行委员会报告的结论》——本篇即其中「群众生活」与「工作方法」两个问题的部分。《红色中华》特刊记载结论文本多处夹注「全场轰笑」「大鼓掌」；讲到过河要解决桥、扩红不能像和尚念阿弥陀佛光说不做时，代表们「发出会心的笑声」。同日蒋介石正分三路进攻，主席团决定缩短会期。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1934.02.01 · 闭幕 · 10 月长征</div>
+        <div class="tl-body">2 月 1 日大会闭幕；2 月 3 日毛泽东留任中央执行委员会主席、张闻天接任人民委员会主席。同年 10 月中央红军被迫长征。本篇所讲的「群众是真正的铜墙铁壁」，此后的苏区失败与陕北立足，从正反两面都给了它注脚。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它写于第五次反「围剿」最吃紧、军事失败已露端倪的时刻，却通篇不谈军事、不谈「左」右，只谈<b>柴米油盐、桥和船、说服与命令</b>。毛泽东把它称作「庄严地向大会提出」——因为在他眼里，打不破乌龟壳的力量不在碉堡对面，而在每个愿意跟党走的普通人心里。<b>越是军情危急，越要回到群众；越是束手无策，越要讲究方法。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>革命战争是群众的战争，只有动员和依靠群众才能进行</b>——要动员群众，就得分两步：先<span class="q">关心群众生活</span>（解决盐米房衣、柴米油盐的切身问题），再<span class="q">注意工作方法</span>（反对官僚主义、命令主义，采取实际具体、耐心说服的方法）。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 立场：群众是真正的铜墙铁壁</h4>
+        <p>「真正的铜墙铁壁是什么？是群众，是千百万真心实意地拥护革命的群众。」几千年来封建皇帝的城池宫殿再坚固，「群众一起来，一个个都倒了」；俄皇再凶恶，革命一起来也没有了。要打不破乌龟壳，唯一靠得住的，是把群众团结在革命政府周围。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 条件：关心群众生活</h4>
+        <p>要群众「拿出他们的全力放到战线上去」，就得「和群众在一起，就得去发动群众的积极性，就得关心群众的痛痒，就得真心实意地为群众谋利益」——从土地劳动到柴米油盐、犁耙、小学、木桥、疮病，一切实际生活问题都要「提到议事日程上，应该讨论，应该决定，应该实行，应该检查」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 方法：过河要有桥或船</h4>
+        <p>「我们不但要提出任务，而且要解决完成任务的方法问题。」任务是过河，没有桥或船就不能过——「不解决方法问题，任务也只是瞎说一顿」。要反对官僚主义、命令主义的工作方法，采取实际具体的、耐心说服的工作方法；先进带落后，造成几千个长冈乡、几十个兴国县作巩固阵地。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一台严密的「<b>动员因果机</b>」：以中心任务（动员群众打革命战争）立纲，用「反例（汀州）—正例（长冈、才溪）」的对勘把「关心群众生活」讲透，再以「铜墙铁壁」收束立场；第二半篇专攻「工作方法」，用「过河—桥或船」的比喻立方法论，最后落到「先进带落后、造阵地」的实践纲领。链条的关键在第三环与第五环——<b>为什么关心生活？因为群众是真铜墙铁壁；凭什么能动员？因为关心生活才换得来真心</b>。立场在前、方法在后，两头扣紧「群众」这一个枢纽。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 中心任务</div><div class="n-sub">动员广大群众参加革命战争，打倒帝国主义和国民党，把革命发展到全国去</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 前提认知</div><div class="n-sub">革命战争是群众的战争，只有动员群众、依靠群众才能进行</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">③ 立场：铜墙铁壁</div><div class="n-sub">群众是千百万真心实意拥护革命的人，是真正的、什么力量也打不破的铜墙铁壁</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">④ 条件：关心生活</div><div class="n-sub">解决盐米房衣、柴米油盐、犁耙小学木桥疮病——一切实际生活问题，进议事日程</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑤ 方法：桥或船</div><div class="n-sub">反对官僚主义、命令主义；采取实际具体、耐心说服的方法，先进带落后</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">目的</div><div class="n-sub">冲破「围剿」→ 粉碎乌龟壳 → 夺取全中国</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文分「<b>两个问题</b>」：前半「群众生活」，后半「工作方法」。最具张力的是前半部里那条<b>正反对勘的光谱</b>——汀州式的官僚主义在左端，长冈才溪式的模范在右端，中间隔着「关心还是不关心」。色带与标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg red">汀州式 · 官僚主义</div>
+        <div class="spec-seg green">长冈才溪式 · 模范</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>只管扩红，不理生活</b>只讲扩大红军、动员运输队，群众「没有柴烧、没盐买、没房子住、缺米米贵」一概不管；结果代表不高兴到会、会议召集不成、扩红极少成绩</div>
+        <div class="spec-label"><b>先安民，再动员</b>帮被烧房贫农捐钱、捐米救三个没饭吃的、从二百多里外办米救夏荒；结果长冈百个壮年八十个当红军、才溪八十八个，公债销得很多</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">全文八段骨架</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从点出「两个问题」开局，到「造成几千个长冈乡、几十个兴国县」收束，前半立立场、后半给方法。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">① 立纲</div>
+        <div class="sk-body">提出讨论中没着重注意的「两个问题」：一是群众生活，二是工作方法。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">② 中心任务</div>
+        <div class="sk-body">动员广大群众参加革命战争；看轻这个中心任务就不是好革命工作人员；「革命战争是群众的战争，只有动员群众才能进行战争，只有依靠群众才能进行战争」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">③ 反例：汀州</div>
+        <div class="sk-body">只讲扩红、动员运输队、收土地税、推销公债，「一切都不管」；汀州没柴烧、没盐买、没房住、缺米米贵；结果代表不愿到会、会议召集不成、扩红极少成绩。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">④ 正例：长冈才溪</div>
+        <div class="sk-body">帮被烧房贫农捐钱、捐米救断炊、远道办米救夏荒；长冈八十/百、才溪八十八/百当红军，公债销得很多——「真正模范的乡政府」，「要学习长冈乡、才溪乡，反对汀州市那样的官僚主义的领导者」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑤ 方法论：议事日程</div>
+        <div class="sk-body">从土地劳动到柴米油盐、犁耙、小学、木桥、疮病，「都应该把它提到自己的议事日程上，应该讨论，应该决定，应该实行，应该检查」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑥ 立场：铜墙铁壁</div>
+        <div class="sk-body">封建皇帝城池、俄皇皆因群众起来而倒；「真正的铜墙铁壁是群众」，反革命打不破我们，我们却要打破反革命。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑦ 方法：桥或船</div>
+        <div class="sk-body">两大任务——组织革命战争、改良群众生活；「我们的任务是过河，但没有桥或没有船就不能过」；反对官僚主义、命令主义，采取实际具体、耐心说服的方法。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">⑧ 纲领</div>
+        <div class="sk-body">兴国第一等工作是模范；先进带落后，「要造成几千个长冈乡，几十个兴国县」作巩固阵地，从这些阵地去粉碎「围剿」、打倒帝国主义和国民党。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">过河：任务与方法的辩证</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">「过河」与「桥或船」，是本篇方法论的核心比喻——任务与方法，缺一不可。</p>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">任务（过河）</h4>
+        <p>「我们不但要提出任务，而且要解决完成任务的方法问题。」只提任务不谈方法，是「瞎说一顿」；「不注意扩大红军的领导，不讲究扩大红军的方法，尽管把扩大红军念一千遍，结果还是不能成功」——像和尚一天到晚念阿弥陀佛，光说不做。</p>
+      </div>
+      <div class="card" style="border-top-color:var(--green);">
+        <h4 style="color:var(--green);">方法（桥或船）</h4>
+        <p>「我们的任务是过河，但是没有桥或没有船就不能过。不解决桥或船的问题，过河就是一句空话。」具体方法两对：反对官僚主义的工作方法、采取实际具体的；抛弃命令主义的工作方法、采取耐心说服的——命令主义发展合作社、推销公债，「结果是失去信用」。</p>
+      </div>
+    </div>
+    <div class="quote">同志们，真正的铜墙铁壁是什么？是群众，是千百万真心实意地拥护革命的群众。这是真正的铜墙铁壁，什么力量也打不破的，完全打不破的。<span class="src">——立场一节。把「群众」从动员对象提升为胜负之本：乌龟壳之外，民心才是真正的防御工事。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「一切实际生活问题」：宏大叙事与柴米油盐不是两件事</h4>
+          <p>全篇最反直觉的地方，是它把「动员群众参加革命战争」这件天大的事，和「对面的木桥太小会跌倒行人」「妇女要学犁耙找谁教」「小孩子要读书小学办起来没有」这些芝麻小事，直接焊在一起。毛泽东的处理不是「先谈大事再谈小事」，而是断定：<b>解决小问题就是推进大任务本身</b>——「要使广大群众认识我们是代表他们的利益的，是和他们呼吸相通的。要使他们从这些事情出发，了解我们提出来的更高的任务」。这是「宏大叙事必须落到具体的人的痛痒上」的最早、最干脆的表述。迁移到今天：一个团队要让人「拿出全力投入战线」，靠的不是讲愿景、喊口号，而是先解决成员具体的盐米房衣——晋升、薪酬、家庭、健康、被尊重。凡是「只讲扩红不谈柴米」的管理者，无论口号多响，结果都逃不过汀州式的宿命：<b>代表不来开会了，扩红也成了空话。</b>问自己：我最近一次「动员」别人时，说的是宏大目标，还是先解决了对方的桥和船？</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>反例先行：把「错误的典型」讲到台面上</h4>
+          <p>本篇的论证结构很老练——在讲模范之前，先花一段篇幅讲汀州市政府的「官僚主义」，而且是当着一百多个代表的面点名批评。这不是情绪，是方法论：<b>先把「不该怎样」讲清楚，「该怎样」才有坐标</b>。汀州的失败（代表不愿到会、扩红无成绩）恰好用因果链条证明了「关心生活→群众拥护→动员成功」，比正面讲道理更有说服力。毛泽东把批评建立在确凿调查上——他亲自去过长冈、才溪，也掌握汀州的实情，批评才有分量。迁移：做方案、写文章、带团队，常常只讲「应该怎么」，不讲「不然会怎样」。一个有力的对照是：先亮出一个真实的反例（不解决会招致什么后果），再给正例（解决了会收获什么），读者/团队才有「怕」与「盼」两种动力。但前提是反例必须真实、有据——毛泽东能批汀州，是因为他手里有调查；<b>没有调查的批评是空炮，有了调查的批评是武器。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「桥或船」：方法不是手段，是任务的一部分</h4>
+          <p>「不解决方法问题，任务也只是瞎说一顿」——这句话把「方法」从「怎么做」的附庸地位，抬升到了「任务能否成立」的本体地位。过河是目的，但没有桥或船，过河「就是一句空话」；所以方法不是达成目的的「工具」，而是目的得以实现的「载体」。本篇进而给出方法的两个维度：一是「实际具体」对「官僚主义」——不是空洞指示，而是对着盐、米、房、衣的具体解决方案；二是「耐心说服」对「命令主义」——命令主义地发展合作社、推销公债，「暂时在形式上发展了，也是不能巩固的，结果是失去信用」。毛泽东在这里埋了一条极重要的组织学原理：<b>靠强制压出来的「完成」，会以「失去信用」的方式偿还。</b>迁移：现代管理者常把「任务未完成」归因于执行力不足，却很少反思「我给了桥或船没有」——给了目标（过河），有没有给方法、给资源、给工具（桥船）？而「耐心说服」四个字在今天的对应物是：不是布置就完，而是让对方「了解」「愿意」——不把「了解」省掉的任务，才能「巩固」，而不是「暂时在形式上完成」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">因为革命战争是群众的战争，只有动员群众才能进行战争，只有依靠群众才能进行战争。</div>
+        <div class="ctx">中心任务一节。「群众战争论」最凝练的一句——战争的性质决定了动员与依靠群众的必然性。1991 年版文字，与求是网/毛选原文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">一切这些群众生活上的问题，都应该把它提到自己的议事日程上。应该讨论，应该决定，应该实行，应该检查。</div>
+        <div class="ctx">方法论一节。「讨论—决定—实行—检查」四步闭环——把柴米油盐当成正式议程来管理，而非顺带关怀。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">要得到群众的拥护吗？要群众拿出他们的全力放到战线上去吗？那末，就得和群众在一起，就得去发动群众的积极性，就得关心群众的痛痒，就得真心实意地为群众谋利益，解决群众的生产和生活的问题，盐的问题，米的问题，房子的问题，衣的问题，生小孩子的问题，解决群众的一切问题。</div>
+        <div class="ctx">方法论一节核心。「群众—全力—关心—谋利益」的因果链一气呵成；盐米房衣、生小孩——把「群众路线」落成一份生活清单。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">同志们，真正的铜墙铁壁是什么？是群众，是千百万真心实意地拥护革命的群众。这是真正的铜墙铁壁，什么力量也打不破的，完全打不破的。</div>
+        <div class="ctx">立场一节。针对蒋介石的「堡垒政策/乌龟壳」而发——民心是比碉堡更硬的防御工事。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们不但要提出任务，而且要解决完成任务的方法问题。我们的任务是过河，但是没有桥或没有船就不能过。不解决桥或船的问题，过河就是一句空话。不解决方法问题，任务也只是瞎说一顿。</div>
+        <div class="ctx">工作方法一节。任务与方法辩证的经典比喻——后来被反复引用为「方法论高于口号」的座右铭。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">12 · 论反对日本帝国主义的策略（1935.12）</div>
+        <p>本篇还在第五次反「围剿」的败局里强调「关心群众生活、团结群众」；下一篇则是长征到陕北、瓦窑堡会议后，面对民族矛盾上升的新局面，把「团结」推向更广——抗日民族统一战线。从「革命战争要依靠群众」到「民族战争要联合一切可以联合的力量」，统一战线的思想正是从这里的大视野自然生长出来。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《长冈乡调查》《才溪乡调查》（1933.11，载《毛泽东农村调查文集》）</div>
+        <p>本篇对比的正反两例（长冈、才溪、汀州），全部出自二苏大前两个月这两份调查。先调查、后写作——读调查原文，能看见「铜墙铁壁」和「桥或船」背后的一手数据：盐价、合作社数、劳动互助社、当红军比例。方法论之外，还能照见毛泽东「没有调查就没有发言权」的实证功夫。亦可对照《反对本本主义》（07 篇）——那篇批「唯书唯上」，本篇批「官僚命令」，同为反对脱离实际的孪生篇。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「群众工作」的方法论搬到你手头的场景</h4>
+      <p class="q">① <b>对照题</b>：回想你最近一次动员别人（团队、客户、家人）「拿出全力」，你更接近汀州（只谈目标、不解决对方的柴米油盐），还是长冈才溪（先安顿对方的实际困难）？对方「不来开会」或「扩红无成绩」，根子在哪？<br>② <b>清单题</b>：如果你要「真心实意为群众谋利益」，你会把哪些「实际生活问题」写上议事日程（讨论—决定—实行—检查）？列一份属于你的「盐米房衣」清单——团队里、关系里、用户身上各是什么？<br>③ <b>方法题</b>：你最近有没有只提「过河」没给「桥或船」的任务？你的「任务—方法」配齐了吗？有没有靠「命令主义」压出来的、将来要「失去信用」的「暂时完成」？<br>④ <b>立场题</b>：当你的「防线」遇到压力时（竞争、失败、瓶颈），你第一反应是修「碉堡」（防御、封锁、孤立），还是回到「群众」（真心解决核心相关者的问题）？哪个才是你真正的「铜墙铁壁」？</p>
+      <p class="hint">提示：三件工具——① 反例先行：先讲清「不这样会怎样」，正例才有坐标，但批评必须有调查做底；② 小问题即大任务：宏大叙事必须落到具体的人的痛痒上，「讨论—决定—实行—检查」四步闭环管理柴米油盐；③ 任务必须配方法：只给目标不给桥船是「瞎说一顿」，耐心说服优于命令强制，因为后者会「失去信用」。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与求是网刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

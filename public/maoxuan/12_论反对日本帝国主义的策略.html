@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 · 论反对日本帝国主义的策略 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p{overflow-wrap:anywhere;word-break:break-all;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾贰</div>
+    <h1>论反对日本帝国主义的策略</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十二篇 · <b>一九三五年十二月二十七日</b>（在陕北瓦窑堡党的活动分子会议上的报告）</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>论反对日本帝国主义的策略——毛泽东在陕北瓦窑堡党的活动分子会议上所作的报告。报告在中共中央政治局瓦窑堡会议（1935.12）之后作出，据此报告分四部分展开：目前政治形势的特点、民族统一战线、人民共和国、国际援助</td></tr>
+      <tr><th>写作时间</th><td>《毛泽东选集》标注「一九三五年十二月二十七日」。此日是毛泽东在瓦窑堡党的活动分子会议上作报告的日子，在瓦窑堡政治局会议闭幕（12.25 通过决议）之后两天</td></tr>
+      <tr><th>最初发表</th><td>作为党内报告在陕北瓦窑堡党的活动分子会议上宣讲；后收入党的文件与《毛泽东选集》。《毛泽东选集》第一卷题注：「这是毛泽东在陕北瓦窑堡党的活动分子会议上所作的报告。」1951 年《毛选》第一卷初版即收录</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。题注明确指出：瓦窑堡政治局会议「批评了党内那种认为中国民族资产阶级不可能和中国工人农民联合抗日的错误观点，决定了建立抗日民族统一战线的策略，是一次极关重要的会议」；篇末注释数十条（二十一条、冀东事变、宁都起义、抗日救国六大纲领、托陈取消派等）</td></tr>
+      <tr><th>篇　幅</th><td>正文约九千字（含标点，据求是网/毛选原文统计），分「目前政治形势的特点 / 民族统一战线 / 人民共和国 / 国际援助」四部分</td></tr>
+      <tr><th>历史坐标</th><td>中央红军长征胜利到达陕北（1935.10）之后两个月；遵义会议确立以毛泽东为代表的新中央（1935.01）之后近一年；直罗镇战役（1935.11）刚刚粉碎蒋介石对陕甘根据地的第三次「围剿」；华北事变、冀东事变（1935.11）引发民族危机加深之时。此时党的策略正从「反蒋抗日」的国内革命战争转向「抗日民族统一战线」——这是毛选中第一篇章系统提出抗日民族统一战线的策略文献</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇（11·关心群众生活）还在第五次反「围剿」的败局里讲<b>发动群众</b>；这一篇，红军已经被迫离开江西、走完二万五千里长征，落脚陕北。毛选题注点破了它的位置：<b>遵义会议解决了军事与组织问题，但那是长征途中仓促作出的；只有到了陕北，中央才有余裕「有系统地说明政治策略上的诸问题」</b>——本篇就是这第一次系统说明。而触发它的，是时局的变化：日本帝国主义已从侵略东北四省转向「向中国本部前进」，要独占全中国。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性在于：这是一篇「胜利后」谈「大转变」的文献。</b>就在作报告前一个多月，中央红军同西北红军在直罗镇「兄弟般的团结」，粉碎了蒋介石向陕甘边区的「围剿」——毛泽东称之为给「把全国革命大本营放在西北」的任务举行的「奠基礼」。可也就在同一时刻，有人（如张国焘）说「中央红军失败了」。毛泽东用一句谚语顶回去：<b>「一个虾蟆坐在井里说：天有一个井大。」</b>——马克思主义者看问题「不但要看到部分，而且要看到全体」。正是在这个「胜利与失败并存、孤立与转机并存」的关口，他提出了整个土地革命时期最重要的一次策略转向：<b>抛弃关门主义，建立抗日民族统一战线</b>。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1931.09.18 · 九一八事变</div>
+        <div class="tl-body">「开始了变中国为日本殖民地的阶段」。但侵略范围暂时限于东北四省，「就使人们觉得似乎日本帝国主义者不一定再前进了的样子」——本篇用这个「错觉」来反衬今天（1935 年）的严峻：日本「已经显示他们要向中国本部前进了，他们要占领全中国」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1935.01 · 遵义会议</div>
+        <div class="tl-body">长征途中在贵州遵义召开政治局扩大会议，建立了以毛泽东为代表的新的中央领导，改变了「左」倾机会主义的领导。但题注点明：「那次会议是在红军长征途中召集的，所以只能够对于当时最迫切的军事问题和中央领导机构问题做了决议」——策略问题留到陕北再系统解决。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1935.10 · 长征胜利到达陕北</div>
+        <div class="tl-body">中央红军「长驱二万余里，纵横十一个省」，历时十二个月，最终到达陕西北部革命根据地。毛泽东评价：长征是历史纪录上的第一次，「长征是宣言书，长征是宣传队，长征是播种机」。这是本篇谈论「全国大革命前夜」的现实底本。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1935.11 · 直罗镇战役</div>
+        <div class="tl-body">红一方面军主力到达陕北后，在直罗镇歼灭国民党军第一〇九师，又歼第一〇六师一个团，彻底粉碎了蒋介石对陕甘根据地的第三次「围剿」。毛泽东称此役「给党中央把全国革命大本营放在西北的任务，举行了一个奠基礼」——这也是本篇「根据地/红军力量」自信的来源。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1935.11 前后 · 华北事变、冀东事变</div>
+        <div class="tl-body">日本策动「华北五省自治」、制造冀东事变，民族危机空前加深。毛泽东指出「最近的冀东事变和外交谈判，显示了这个方向，威胁到了全国人民的生存」——给「中国一切阶级和一切政治派别提出了『怎么办』的问题：反抗呢？还是投降呢？」</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1935.12 上旬 · 瓦窑堡政治局会议</div>
+        <div class="tl-body">中共中央政治局在陕北瓦窑堡举行会议，批评「党内那种认为中国民族资产阶级不可能和中国工人农民联合抗日的错误观点」，通过决议，决定建立抗日民族统一战线的策略。这是本篇的直接政策前提。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1935.12.27 · 本篇报告</div>
+        <div class="tl-body">毛泽东根据中央决议，在瓦窑堡党的活动分子会议上作本篇报告，系统阐明抗日民族统一战线策略、人民共和国的性质与共产党红军在统一战线中的领导作用，批判关门主义与「急性病」。这是党的抗日民族统一战线策略正式形成、并奠定其理论基础的标志性文献。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它诞生于长征刚结束、国共正在重新洗牌的十字路口。站在它的对面作论战对象的，不是敌人，而是党内的<b>关门主义</b>——那种「革命的力量是要纯粹又纯粹，革命的道路是要笔直又笔直」「民族资产阶级是全部永世反革命了」的激进教条。毛泽东要做的，是让党从「孤家寡人」走向「千千万万」：<b>目标只有一个（日本帝国主义），手段却要放开到最大限度（联合一切可以联合的人）。</b>这是一篇关于「在转折点如何把握敌人与朋友」的教科书。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>目前形势的基本特点，就是日本帝国主义要变中国为它的殖民地</b>；因此党的基本策略任务是<span class="q">建立广泛的抗日民族统一战线</span>——组织千千万万的民众、调动浩浩荡荡的革命军，把工农共和国改为人民共和国，并由共产党和红军充当统一战线的「台柱子」；为此必须坚决反对<span class="q">关门主义</span>，同时警惕 1927 年陈独秀右倾机会主义导致革命失败的教训。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 形势判断：民族危机是总纲</h4>
+        <p>「日本帝国主义要把整个中国从几个帝国主义国家都有份的半殖民地状态改变为日本独占的殖民地状态」——民族矛盾上升为主要矛盾，阶级关系因此大变：工农与小资产阶级坚决反抗，民族资产阶级「有参加抗日的可能」，甚至国民党营垒也可能分裂。这是所有策略的出发点。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 策略选择：统一战线 vs 关门主义</h4>
+        <p>「组织千千万万的民众，调动浩浩荡荡的革命军」才能打垮日本帝国主义与汉奸卖国贼；关门主义是「孤家寡人的策略」，「为渊驱鱼，为丛驱雀」，把本来可以争取的人赶到敌人一边，「只博得敌人的喝采」。要联合一切可以联合的力量，把敌人营垒中的一切争斗、缺口、矛盾收集起来反对主要敌人。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 领导权：共产党和红军是「台柱子」</h4>
+        <p>统一战线要能巩固，必须有自己的核心力量。「共产党和红军不但在现在充当着抗日民族统一战线的发起人，而且在将来的抗日政府和抗日军队中必然要成为坚强的台柱子」。既要反「左」（关门主义），又要防右（1927 年依仗国民党而丢掉了自己的军队与群众的教训）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是一条从「<b>形势</b>」到「<b>出路</b>」到「<b>政权</b>」到「<b>领导权</b>」的完整逻辑链：先判断时局（日本要独占中国）→ 由时局推出阶级关系之变（敌人营垒不是铁板、盟友可以争取）→ 由阶级关系之变推出策略（建立统一战线）→ 落到具体（人民共和国取代工农共和国）→ 最后点出关键中的关键（共产党红军为台柱子，两手防「左」防右）。链条的枢纽在第三环——<b>「阵线可变」</b>：敌人能分裂、中间力量能动摇，统一战线才既必要又可能。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 形势</div><div class="n-sub">日本要变中国为它的殖民地，民族危机空前</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 阶级关系之变</div><div class="n-sub">工农坚决反抗、小资产阶级要反抗、民族资产阶级可动摇、敌营可能分裂</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">③ 策略任务</div><div class="n-sub">建立广泛的抗日民族统一战线，组织千千万万、调动浩浩荡荡</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">④ 政权改造</div><div class="n-sub">工农共和国改为人民共和国，代表工农、更代表民族</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">⑤ 领导权</div><div class="n-sub">共产党红军为「台柱子」；反关门主义防右、吸取 1927 教训防左</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">目的</div><div class="n-sub">变中国为独立、自由、领土完整的国家</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇四大部分，层层递进。最具张力的是第一部分里那张<b>「各阶级对日本侵略的态度光谱」</b>——从最坚决的工农，到动摇的民族资产阶级，到铁定卖国的大买办大地主。色带与标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg green">坚决抗日</div>
+        <div class="spec-seg gold">动摇 · 可争取</div>
+        <div class="spec-seg red">卖国贼营垒</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>工农 · 小资产阶级</b>工人农民是「中国革命的最坚决的力量」；青年学生与城市小资产阶级已发动广大的反日运动——「除了反抗，再没有出路」</div>
+        <div class="spec-label"><b>民族资产阶级</b>一面不喜欢帝国主义、一面怕革命的彻底性，「在这二者之间动摇着」；左翼可参加斗争，另一部分「由动摇而采取中立态度」</div>
+        <div class="spec-label"><b>大买办 · 大地主（总头子蒋介石）</b>「革命总比帝国主义坏」，组成了卖国贼营垒，「他们的利益同帝国主义的利益是不可分离的」——是中国人民的死敌</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">四部分骨架</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从判断时局开局，到「国际援助」收尾，中间两大核心：统一战线与人民共和国。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 形势</div>
+        <div class="sk-body"><b>目前政治形势的特点</b>：日本要变中国为殖民地 → 各阶级「怎么办」？逐层分析工农/小资/民族资产阶级/卖国贼营垒的态度；列举蔡廷锴、冯玉祥、宁都起义、马占山证明「敌人的营垒是会发生破裂的」；以长征之胜利定调「全国大革命的前夜」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 策略</div>
+        <div class="sk-body"><b>民族统一战线</b>：党的基本策略任务是建立广泛的民族革命统一战线。正面论证统一战线的必要与可能；反面批关门主义——「为渊驱鱼，为丛驱雀」，是「孤家寡人的策略」，一套「幼稚病」；提出「组织千千万万的民众，调动浩浩荡荡的革命军」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 政权</div>
+        <div class="sk-body"><b>人民共和国</b>：为何把工农共和国改为人民国？因为日本侵略变动了阶级关系，「不但小资产阶级，而且民族资产阶级，有了参加抗日斗争的可能性」。人民共和国首先代表工农，也代表民族；批判蒋介石的「中华民国国民政府」「仅仅代表最大的富翁」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 援助</div>
+        <div class="sk-body"><b>国际援助</b>：革命不是孤立的，「国际援助对于现代一切国家一切民族的革命斗争都是必要的」。以「义战」论——「春秋无义战，于今帝国主义则更加无义战，只有被压迫民族和被压迫阶级有义战」；抗日需要国际援助，首先是苏联人民的援助。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">一把尺子：在转折点分清敌人与朋友</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">本篇的方法论核心，是「目标集中、阵线放开」——这是对关门主义最彻底的反驳。</p>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">关门主义：孤家寡人</h4>
+        <p>「革命的力量是要纯粹又纯粹，革命的道路是要笔直又笔直」「民族资产阶级是全部永世反革命了」「哪有猫儿不吃油，哪有军阀不是反革命」「如果同蔡廷锴握手的话，那必须在握手的瞬间骂他一句反革命」。结果是「把千千万万和浩浩荡荡都赶到敌人那一边去」——<b>纯粹变成孤立，笔直变成死路。</b></p>
+      </div>
+      <div class="card" style="border-top-color:var(--green);">
+        <h4 style="color:var(--green);">统一战线：千千万万</h4>
+        <p>「组织千千万万的民众，调动浩浩荡荡的革命军，是今天的革命向反革命进攻的需要。」把敌人营垒中「被裹胁的人们，过去是敌人而今日可能做友军的人们」都拉过来；利用敌人内部的矛盾（大狗小狗、饱狗饿狗）「统统收集起来，作为反对当前主要敌人之用」——<b>目标越集中，手段越开放。</b></p>
+      </div>
+    </div>
+    <div class="quote">组织千千万万的民众，调动浩浩荡荡的革命军，是今天的革命向反革命进攻的需要。只有这样的力量，才能把日本帝国主义和汉奸卖国贼打垮，这是有目共见的真理。因此，只有统一战线的策略才是马克思列宁主义的策略。关门主义的策略则是孤家寡人的策略。<span class="src">——「民族统一战线」一节。把「统一战线」从策略升格为真理，把「关门主义」钉上「孤家寡人」的标签——这是本篇最响亮的定调。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>敌我阵线不是铁板一块：把「敌人」切成可争取的部分</h4>
+          <p>本篇最颠覆直觉的地方，是它敢于说<b>敌人的营垒也会破裂</b>。毛泽东用一大堆活例证明这一点：蔡廷锴的十九路军在江西向红军进攻、到上海抵抗日本、到福建向蒋介石开火；进攻江西红军的二十六路军在宁都起义「变成了红军」；马占山在东三省的抗日行为是「统治者营垒中的一个分裂」。他甚至用「大狗小狗、饱狗饿狗」的粗话，去描绘国民党内部的争斗——胡汉民在两广派军阀支持下与蒋介石对立。这不是修辞，是方法论：<b>当共同的、更大的威胁（日本）降临，原有的敌我边界会被重新切割；谁没看到这条裂缝，谁就把本该争取的人白白推给敌人。</b>迁移到今天：竞争、谈判、组织关系里，「对手」往往不是一个整体。判断一个对手可否分化、可否合作，取决于有没有一个更优先的共同目标出现，而不是看他过去站哪一边。毛泽东的教训是：<b>过早地把「暂时不是敌人」当成「永远是敌人」，等于替真正的敌人清空了战场。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「纯粹又纯粹、笔直又笔直」是一种成年人的幼稚病</h4>
+          <p>毛泽东把关门主义比作「三岁小孩子」：「人中间有三岁小孩子，三岁小孩子有许多道理都是对的，但是不能使他们管天下国家的大事。」——小孩子看世界要「全对或全错」，所以「民族资产阶级是全部永世反革命了」；而成人明白「革命的道路，同世界上一切事物活动的道路一样，总是曲折的，不是笔直的」。这句批评的分量，在于它点破了一个普遍的心态陷阱：<b>追求绝对的纯粹、完美、正确，往往不是因为强大，而是因为害怕复杂、不愿妥协。</b>「纯粹又纯粹」的结果，不是保持圣洁，而是「把千千万万和浩浩荡荡都赶到敌人那一边去」——<b>最干净的结果，往往最危险。</b>迁移到今天：团队要不要「宁缺毋滥」、合作要不要「非黑即白」、方案要不要「绝对正确」？毛泽东的答案是一贯的——要看代价。若「纯粹」的代价是把潜在的盟友、资源、机会都赶到对立方，那这种「纯粹」就是给敌人做的「为渊驱鱼」。真正的成熟，是接受不完美同盟里的「又痒又痛的矛盾」，并把它变成自己的养分。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>看问题要看全体与部分：井里的虾蟆与长征的辩证法</h4>
+          <p>全篇最精彩的一段论辩，是关于红军「是失败了还是胜利了」。张国焘说「中央红军失败了」，毛泽东答：「一个虾蟆坐在井里说：天有一个井大。」——天上、井大都不对，只有「天的某一部分有一个井大」才对。于是「红军在一个方面（保持原有阵地）说来是失败了，在另一个方面（完成长征计划）说来是胜利了」；敌人也同理，「在一个方面胜利，在另一个方面失败」。这里藏着毛泽东认识论的核心：<b>评价一件事，先问「你在哪个坐标系里看它」；只取一个角度下结论，就是井底的虾蟆。</b>这个「部分与全体」的框架，与他一年后写《矛盾论》、后来写《论持久战》用的是同一把尺子——既是军事判断，也是看任何问题的态度。迁移到今天：面对一次失败的转型、一轮亏损、一次挫折，别急着判「全盘失败」。换个坐标系问：这轮我们「保持了原有阵地」没有？我们「完成了长征计划」没有？凡是能同时看见「部分失败」与「部分胜利」的人，才有资格谈「持久战」；只看见井口那片天的人，要么盲目绝望，要么盲目乐观——两者都是井里的虾蟆。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">长征是历史纪录上的第一次，长征是宣言书，长征是宣传队，长征是播种机。</div>
+        <div class="ctx">「目前政治形势的特点」一节，论红军的长征。「宣言书—宣传队—播种机」三连排，把一场战略撤退重新定义为一支改变十一个省人心的种子部队。1991 年版文字，与毛选/求是网原文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">组织千千万万的民众，调动浩浩荡荡的革命军，是今天的革命向反革命进攻的需要。只有这样的力量，才能把日本帝国主义和汉奸卖国贼打垮，这是有目共见的真理。</div>
+        <div class="ctx">「民族统一战线」一节的核心号召。「千千万万/浩浩荡荡」与「孤家寡人」形成全篇最强烈的对照。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">关门主义的策略则是孤家寡人的策略。关门主义「为渊驱鱼，为丛驱雀」，把「千千万万」和「浩浩荡荡」都赶到敌人那一边去，只博得敌人的喝采。</div>
+        <div class="ctx">「民族统一战线」一节对关门主义的总评。「为渊驱鱼，为丛驱雀」语出《孟子·离娄上》；毛泽东借此指出：狭隘政策把可争取的力量推向敌人。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">一个虾蟆坐在井里说：「天有一个井大。」这是不对的，因为天不止一个井大。如果它说：「天的某一部分有一个井大。」这是对的，因为合乎事实。</div>
+        <div class="ctx">「目前政治形势的特点」一节，回应「中央红军失败了」的说法。以井底之蛙设喻，阐明「马克思主义者看问题，不但要看到部分，而且要看到全体」。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们中华民族有同自己的敌人血战到底的气概，有在自力更生的基础上光复旧物的决心，有自立于世界民族之林的能力。但是这不是说我们可以不需要国际援助；不，国际援助对于现代一切国家一切民族的革命斗争都是必要的。</div>
+        <div class="ctx">「国际援助」一节开篇。先立「自力更生」，再谈「国际援助」——独立自主与国际联合的辩证统一。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">13 · 中国革命战争的战略问题（1936.12）</div>
+        <p>本篇用「统一战线」回答「联合谁打日本」；下一篇则用一部大著作回答「红军靠什么打赢战争」——那是毛泽东到陕北后系统总结十年内战军事经验、为即将到来的抗日持久战争做的战略储备。从「策略」到「战略」，从「联合谁」到「怎么打」，是同一个转折点的两副面孔。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">瓦窑堡会议《关于目前政治形势与党的任务决议》（1935.12）</div>
+        <p>本篇是毛泽东「根据中央决议」在党的活动分子会议上的报告。对照决议原文，能看清党的集体决策与个人论述之间如何互相成就：决议定了「建立抗日民族统一战线」的策略，本篇则把它讲成了完整的论证（形势→阵线→政权→领导权）。亦可回溯本篇批评的「关门主义」——它在第一卷前期的《反对本本主义》（07 篇）里已露端倪，到本篇才被系统清算，可见「左」倾路线之顽固与清算之艰难。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「统一战线」的方法论搬到你手头的场景</h4>
+      <p class="q">① <b>阵线题</b>：你现在所处的「阵营」（团队、行业、关系）里，有没有一个「更大的共同目标」正冒出来，足以重新切割原有的敌我边界？你有没有因为「过去他站在对面」而白白错过一个本可争取的「友军」？<br>② <b>纯粹题</b>：你最近有没有为了「纯粹又纯粹、笔直又笔直」而把潜在盟友、资源、机会推给对手？「宁缺毋滥」在你这个场景里，代价是什么？<br>③ <b>坐标题</b>：拿一件你正纠结的事，用「部分与全体」拆一遍——它「在哪个方面失败了、在哪个方面胜利了」？你现在的判断是「井里的虾蟆」还是看清了整片天？<br>④ <b>核心题</b>：如果要在你的「统一战线」里站住脚跟，你的「台柱子」（不依附别人也能存在的核心能力/团队/底线）是什么？丢了它，你的「合作」会不会变成 1927 年式的「依仗同盟者而孤立无援」？</p>
+      <p class="hint">提示：三件工具——① 敌我可变：共同的更大威胁会重划敌我边界，别把「暂时不是朋友」当成「永远是敌人」；② 纯粹是陷阱：「纯粹又纯粹」的代价往往是把盟友赶向敌人，「为渊驱鱼，为丛驱雀」；③ 部分与全体：下结论前先问坐标系，看得到「部分失败+部分胜利」的人才能谈持久战，只看井口那片天就是井底之蛙。另：任何合作都要有自己独立的「台柱子」，否则就会重蹈 1927 年依仗同盟者而失败的覆辙。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与马克思主义文库刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

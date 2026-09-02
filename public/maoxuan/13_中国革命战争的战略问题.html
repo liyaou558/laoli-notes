@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>13 · 中国革命战争的战略问题 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p{overflow-wrap:anywhere;word-break:break-all;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾叁</div>
+    <h1>中国革命战争的战略问题</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十三篇 · <b>一九三六年十二月</b>（1936 年 10 月 27 日起在陕北红军大学作讲演）</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>中国革命战争的战略问题——毛泽东在陕北红军大学（后改称抗日军政大学）所作的讲演，据讲稿整理成文</td></tr>
+      <tr><th>写作时间</th><td>《毛泽东选集》标注「一九三六年十二月」。据《毛泽东年谱》，1936 年 10 月 27 日毛泽东开始在红军大学一科（上干队）讲「中国革命战争的战略问题」。毛选题注：「毛泽东的这部著作，是为着总结第二次国内革命战争的经验而写的，当时曾在建立在陕北的红军大学作过讲演」</td></tr>
+      <tr><th>最初发表</th><td>1937 年 5 月首次以油印本印行（红军大学教材，供党内、军内使用）；1941 年 2 月由八路军军政杂志社铅印出版，毛泽东写「著者识」说明「四年来只有油印本」。收入《毛泽东选集》第一卷，1951 年初版即收录</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。题注明确指出：「这部著作只完成五章，尚有战略进攻、政治工作及其他问题，因为西安事变发生，没有工夫再写，就搁笔了」；「这是第二次国内革命战争时期党内在军事问题上的一场大争论的结果」</td></tr>
+      <tr><th>篇　幅</th><td>正文约两万字（据求是网/毛选原文统计），分五章：一 如何研究战争；二 中国共产党和中国革命战争；三 中国革命战争的特点；四 「围剿」和反「围剿」——中国内战的主要形式；五 战略防御</td></tr>
+      <tr><th>历史坐标</th><td>红军长征胜利到达陕北（1935.10）之后一年；遵义会议确立以毛泽东为代表的新中央（1935.01）；红一、二、四方面军三大主力会宁会师（1936.10）；西安事变（1936.12.12）爆发前夕。党的策略正从国内革命战争转向抗日民族战争——这篇是毛泽东为即将到来的对日战争储备的第一部系统军事理论</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇还在谈「<b>联合谁</b>」的政治策略（抗日民族统一战线）；这一篇转到「<b>怎么打</b>」的军事战略。毛泽东到陕北后，先在 1935 年 12 月作了《论反对日本帝国主义的策略》，系统解决了政治路线问题；接着就着手从军事上系统总结经验，这就是本篇。题注点明了它承上启下的位置：政治路线解决了，还要一条「<b>马克思主义的正确的军事路线</b>」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：这是被「逼出来」的一部书。</b>1964 年毛泽东回忆：「一九三六年，红军大学要我去讲革命战略问题。好，我就看参考书，考虑怎样总结国内革命战争的经验，写讲义。……红军大学的同志帮了我的忙，他们不叫我教书，我就不会去写。当教员也有好处，可以整理思想。」为了写这本书，他逼着自己系统研读军事著作——看国民党的军事材料，看日本、俄国和西欧的军事著作，包括克劳塞维茨、苏联军事资料和中国古代的《孙子兵法》等，「主要是总结中国十年内战的经验」。他甚至两次致电刘鼎嘱买书，明确「买来的军事书多不合用，多是战术技术的，我们要的是战役指挥与战略的」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：它是一部没写完的「未竟之作」。</b>全篇只完成了五章，计划中还有战略进攻、政治工作、党的工作等章节，但因为<b>西安事变（1936.12.12）突然发生</b>，毛泽东不得不搁笔去处理这个改变历史进程的重大事件。他在题注里说得很实在：「因为西安事变发生，没有工夫再写，就搁笔了。」这部书就停在了「战略防御」这一章——也正因如此，它把毕生最成熟的防御辩证法完整留给了后人。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1931.09.18 · 九一八事变</div>
+        <div class="tl-body">日本侵占东北，民族危机开端。但在本篇论述的十年内战框架里，主要矛盾仍是国民党对红军的「围剿」——这是本篇「十年内战经验总结」的时代背景。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1935.01 · 遵义会议</div>
+        <div class="tl-body">长征途中在贵州遵义举行的政治局扩大会议，确立了以毛泽东为代表的新的中央的正确领导，结束了王明「左」倾冒险主义在党中央的统治。这是本篇在军事路线上「肯定正确、否定错误」的结论来源。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1935.10 · 长征胜利到达陕北</div>
+        <div class="tl-body">中央红军长驱二万余里到达陕西北部革命根据地。红军以一场「战略防御的继续」保住了火种，为系统总结经验创造了条件。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1935.12 · 瓦窑堡会议与《论反对日本帝国主义策略》</div>
+        <div class="tl-body">解决政治路线问题。毛泽东在瓦窑堡党的活动分子会议上作报告，系统阐明抗日民族统一战线策略。「政治路线解决了，接着解决军事路线」——本篇就是这第二步。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1936 年夏 · 红军大学迁驻保安县</div>
+        <div class="tl-body">红军大学一、二科迁往保安县（今志丹县）。据学员莫文骅日记，学员住天然石壁凿出的石洞，「以石壁做黑板，用石头砌成桌子和凳子」，讲义「是用过的废纸背面印的」。就是在这样的「石器时代」教室里，毛泽东讲授这部战争哲学。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1936.10.27 · 在红军大学开讲</div>
+        <div class="tl-body">毛泽东开始为红军大学一科（上干队，约 40 名军师职高级干部）讲「中国革命战争的战略问题」。他系统阅读了孙子兵法、克劳塞维茨、日本《战斗纲要》等，「主要是总结中国十年内战的经验」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1936.10 · 会宁会师</div>
+        <div class="tl-body">红一、二、四方面军三大主力在甘肃会宁会师，长征胜利结束。本篇写作期间，红军由各支分散部队走向统一指挥——这为其「集中兵力」「统一指挥」的战略思想提供了现实基础。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1936.12.12 · 西安事变 · 写作中断</div>
+        <div class="tl-body">张学良、杨虎城发动西安事变，扣留蒋介石。时局骤变，毛泽东搁笔去处理这一重大事件——计划中的战略进攻、政治工作等章节就此搁置。这部「只完成五章」的书，恰恰停在最关键的「战略防御」一章。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1937.05 起 · 油印本 → 1941 铅印本</div>
+        <div class="tl-body">1937 年 5 月讲稿整理成书稿，首次以油印本印行；1941 年 2 月由八路军军政杂志社铅印出版，毛泽东写「著者识」：「四年来只有油印本……对于目前的抗日战争还是有用的。」</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这部书放回它的来处：它不是书斋里的理论，而是<b>十年内战血战史的总结</b>，是「党内在军事问题上的一场大争论的结果」。争论的对象，正是 1931—1934 年王明「左」倾军事路线——那个让红军「由三十万人降到几万人」、让根据地「丧失了除了陕甘边区以外的一切」的错误路线。毛泽东要用这本书，把「怎么以弱胜强」的正确答案交给即将面对强大日本军队的红军指战员。<b>这是一部写在战争边缘、为下一场更大战争做准备的书。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：战争的规律、革命战争的规律、特别是<span class="q">中国革命战争的规律</span>是发展的、特殊的，不能用一般战争的条条框框来套；中国革命战争有四个特点（政治经济发展不平衡的大国且经过大革命 / 敌人的强大 / 红军的弱小 / 共产党的领导和土地革命），这四个特点规定了中国革命战争是<span class="q">持久的</span>，规定了必须采用<span class="q">战略防御中的积极防御</span>——集中优势兵力，以「诱敌深入」的战略退却、运动战、速决战、歼灭战，从战略防御中扭转敌我强弱，最终战胜强敌。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 特点决定战略</h4>
+        <p>「不认识中国革命战争的特点就不能指导它」。四个特点「规定了中国红军的可能发展和可能战胜其敌人」，也「规定了中国红军的不可能很快发展和不可能很快战胜其敌人，即是规定了战争的持久」。所有战略战术都由特点派生。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 战略持久 + 战役速决</h4>
+        <p>战略上承认持久战、反对速决战；战役和战斗上则要速决战、歼灭战。「伤其十指不如断其一指」——不是击溃敌人，而是歼灭其有生力量，才能打破「围剿」、发展根据地。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 积极防御是核心</h4>
+        <p>战略防御是红军作战中最复杂最重要的问题。反对消极防御（专守防御），坚持积极防御（攻势防御）——靠战略退却保存军力、待机破敌，最终转入战略反攻。「只有积极防御才是真防御」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是一条从「<b>如何研究</b>」到「<b>根本规律</b>」到「<b>战略形式</b>」到「<b>具体打法</b>」的完整逻辑链：先讲研究方法（规律是发展的、特殊的，要具体问题具体分析）→ 由研究引出四个特点 → 由特点推出「持久战」的根本规律 → 由根本规律推出战略形式（战略防御中的积极防御）→ 由战略形式落到具体打法（退却、集中、运动战、速决战、歼灭战）。枢纽在第二环——<b>「特点」</b>：一切战略战术都由特点派生。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 研究方法</div><div class="n-sub">规律是发展的、特殊的；一般→革命→中国革命，层层具体；具体问题具体分析</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 四个特点</div><div class="n-sub">大国不平衡+大革命 / 敌强 / 我弱 / 党的领导和土地革命</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">③ 根本规律</div><div class="n-sub">持久战——不能速胜，但能发展、能胜</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">④ 战略形式</div><div class="n-sub">战略防御中的积极防御（反对消极防御）</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">⑤ 具体打法</div><div class="n-sub">诱敌深入 / 集中兵力 / 运动战 / 速决战 / 歼灭战</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">目的</div><div class="n-sub">以弱胜强、扭转敌我强弱对比</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">五章层层递进。最精妙的是第三章那张「<b>四特点光谱</b>」——从决定「能胜」的条件，到决定「不能速胜、持久战」的条件，两极对照；以及第五章那套「<b>以弱胜强打法</b>」的完整链条。色带与标签按同一列比例对齐。</p>
+
+    <h4 style="margin:8px 0 2px;font-size:15px;color:var(--red-deep);">四个特点：能胜与持久的辩证</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">「这就是中国革命战争的两方面」「这是中国革命战争的根本规律」——胜与持久同时存在。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg green">规定「能胜」</div>
+        <div class="spec-seg green">规定「能胜」</div>
+        <div class="spec-seg red">规定「持久」</div>
+        <div class="spec-seg gold">规定「持久」</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>① 大国 + 大革命</b>政治经济发展不平衡的半殖民地大国，又经过 1924—27 大革命。「东方不亮西方亮」，回旋余地大，红军种子已备好</div>
+        <div class="spec-label"><b>④ 党的领导和土地革命</b>有共产党的领导和农民的援助，根据地「虽小却有很大的政治上的威力」——为着自己的利益而战斗</div>
+        <div class="spec-label"><b>③ 红军的弱小</b>数量少、武器差、物质供给非常困难，根据地分散孤立——规定不能很快发展、不能速胜</div>
+        <div class="spec-label"><b>② 敌人的强大</b>国民党夺取并相对稳定了政权，军队数量超过中国任何历史时代，武器供给雄厚——规定战争的持久</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">五章骨架</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从「如何研究」到「战略防御」，理论一步步落到实战。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 研究</div>
+        <div class="sk-body"><b>如何研究战争</b>：战争规律是发展的、特殊的；战争的目的在于消灭战争（用正义战争反对非正义战争）；战略是研究战争全局的规律；重要的问题在善于学习——「从战争学习战争」，关键在使主观指导与客观实际相符合。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 性质</div>
+        <div class="sk-body"><b>中国共产党和中国革命战争</b>：领导责任历史地落到共产党肩上；共产党犯过陈独秀右倾、李立三「左」倾、1931—34 王明「左」倾、1935—36 张国焘右倾等错误，但都「从错误的克服中锻炼得更加坚强」；需要政治路线与军事路线两条路线。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 特点</div>
+        <div class="sk-body"><b>中国革命战争的特点</b>：四个特点（见上）；由此产生一整套战略战术原则——进攻时反对冒险主义、防御时反对保守主义、转移时反对逃跑主义；承认游击性又反对游击主义；承认战略持久与战役速决；承认运动战、歼灭战。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 形式</div>
+        <div class="sk-body"><b>「围剿」和反「围剿」</b>：中国内战的主要形式是敌人「围剿」、红军反「围剿」的长期反复；红军的战略退却（长征）是战略防御的继续，敌人的追击是战略进攻的继续；「十年的红军战争史，就是一部反『围剿』史」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五 · 防御</div>
+        <div class="sk-body"><b>战略防御</b>（篇幅最重，几乎占全书一半）：积极防御与消极防御；反「围剿」的准备；战略退却；战略反攻；反攻开始问题（初战）；集中兵力问题；运动战；速决战；歼灭战。这是全书的理论归宿——以弱胜强的整套打法。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">一把尺子：以弱胜强的战略退却链条</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">第五章内部，是一条从「退却」到「反攻」到「集中」到「歼灭」的完整战术逻辑。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">战略退却</div><div class="n-sub">诱敌深入，保存军力、待机破敌；洪教头式的退让</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">战略反攻</div><div class="n-sub">防御战最精彩最活跃的阶段；慎重初战</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">集中兵力</div><div class="n-sub">战术「以十当一」，局部变强者</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">运动战</div><div class="n-sub">「打得赢就打，打不赢就走」，无固定作战线</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">歼灭战</div><div class="n-sub">伤其十指不如断其一指，打破「围剿」</div></div>
+    </div>
+    <div class="quote">在军事上说来，我们的战争是防御和进攻的交替的应用。对于我们，说进攻是在防御之后，或说进攻是在防御之前都是可以的，因为关键在于打破「围剿」。……这两个阶段中，防御的阶段比进攻的阶段更为复杂，更为重要。基本的原则是承认积极防御，反对消极防御。<span class="src">——第五章第一节「积极防御和消极防御」。把「防御」从弱者无奈的被动，升格为以弱胜强主动策略的核心环节——这是全篇的方法论支点。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>一切知识都是「从战争学习战争」：理论是工具，不是供背诵的教条</h4>
+          <p>毛泽东开篇就说「读书是学习，使用也是学习，而且是更重要的学习」「从战争学习战争——这是我们的主要方法」。他批判了三种「抄书」的错误：照抄反动军事学校的条令（「削足适履」）、照抄苏联内战的经验（也是削足适履）、照抄北伐战争的经验（还是不能刻板抄用）。他给出的判断标准是「<b>战争情况的不同，决定着不同的战争指导规律，有时间、地域和性质的差别</b>」。方法论迁移：任何领域的经验都有时间、地域、性质的差别，不能呆板移用。「一技之长和一孔之见」只有一地一时的作用，真正有用的是能随历史发展而发展的指导规律。面对今天纷繁的「经验帖」「方法论」「成功学」，这句提醒依然锋利——别人的成功案例是「过去战争经验的总结」，要「从自己经验中考证这些结论，吸收用得着的东西，拒绝用不着的东西」。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>以弱胜强的核心是「集中」：战略上以一当十，战术上以十当一</h4>
+          <p>全篇最凝练的智慧，是把「弱」扭转成「强」的方法。红军在战略上处处是弱者，但在每一次具体的战役战斗里，可以通过「诱敌深入」把敌人分割开，然后<b>集中优势兵力打敌一部</b>，使自己在一个局部变成绝对强者。所以「集中兵力看来容易，实行颇难」——难在指导者「为复杂的环境所迷惑，失掉自主能力，采取应付主义」。他还点破一个反直觉的真相：击溃战不算胜仗，因为「没有缴获或缴获不超过消耗，在我们看来是很少意义的」；真正的胜利是歼灭战——「伤其十指不如断其一指」。所以「我们的战略是『以一当十』，我们的战术是『以十当一』」。方法论迁移：资源有限时，「全面出击」等于「军事平均主义」；真正的高手是把有限资源聚焦到一个有决定意义的点上，形成局部压倒优势。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>退却不是失败，而是一种「为了前进的后退」</h4>
+          <p>毛泽东为「战略退却」正名，把它从「机会主义的单纯防御路线」的污名下解放出来：弱军对强军，「若不退让一步，则必危及军力的保存」。他用《水浒传》洪教头与林冲比武——「蠢人其势汹汹，辟头就使出全副本领，结果却往往被退让者打倒」——和曹刿论战的「一鼓作气，再而衰，三而竭」来论证「敌疲我打」；还列了一长串中国古代以弱胜强的战例：成皋、昆阳、官渡、赤壁、彝陵、淝水，「都是双方强弱不同，弱者先让一步，后发制人，因而战胜的」。他甚至把长征重新定义为「红军的战略防御的继续」——一次一万多公里、保存了火种的伟大退却。方法论迁移：把「撤退/止损/收缩」污名化，往往导致「御敌于国门之外」式的孤注一掷。真正成熟的策略，是分清「退却是为了保存军力、待机破敌」，而不是消极的放弃——退却与反攻是一件事的两阶段，退是为了更好地进。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">「东方不亮西方亮，黑了南方有北方」，不愁没有回旋的余地。</div>
+        <div class="ctx">第三章第二节，论「中国是一个大国」这一特点。用最通俗的民谚讲清大国回旋余地之于持久战的意义。1991 年版文字，与毛选/求是网原文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">对于人，伤其十指不如断其一指；对于敌，击溃其十个师不如歼灭其一个师。</div>
+        <div class="ctx">第五章第九节「歼灭战」。全篇最锋利的军事格言，也是「集中兵力、各个击破」的最凝练表达。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">读书是学习，使用也是学习，而且是更重要的学习。从战争学习战争——这是我们的主要方法。</div>
+        <div class="ctx">第一章第四节「重要的问题在善于学习」。实践优先的认识论，也是《实践论》的先声。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">战略的持久战，战役和战斗的速决战，这是一件事的两方面。</div>
+        <div class="ctx">第五章第八节「速决战」。以「持久」与「速决」的统一，破解了弱军对强军的时间难题，是《论持久战》的直接雏形。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">集中兵力看来容易，实行颇难。人人皆知以多胜少是最好的办法，然而很多人不能做，相反地每每分散兵力，原因就在于指导者缺乏战略头脑，为复杂的环境所迷惑。</div>
+        <div class="ctx">第五章第六节「集中兵力问题」。把「集中」从常识升格为需要战略头脑的难题。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">敌进我退，敌驻我扰，敌疲我打，敌退我追。</div>
+        <div class="ctx">第五章第三节「战略退却」。十六字诀，红军十年游击战争经验的结晶，毛泽东称它「包举了反『围剿』的基本原则」，「后来的东西只是它的发展罢了」。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">14 · 关于蒋介石声明的声明（1936.12）</div>
+        <p>本篇还停在「怎么打赢国内战争」的军事哲学；下一篇则是一个历史性的转折瞬间——西安事变和平解决后，毛泽东就蒋介石的声明发表谈话，第一次把共产党与国民党从「对立」推向「合作抗日」。从「十年内战的经验总结」到「民族战争即将开始的时局判断」，同一个 1936 年 12 月，两副截然不同的面孔。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《论持久战》（1938，第二卷）</div>
+        <p>《战略问题》是《论持久战》的姊妹篇——有论者指出，毛泽东在《战略问题》里重点论述的「持久战」思想，到《论持久战》中得到系统展开，「这两部伟大的军事著作是姊妹篇，二者互为补充，构成完整的『中国革命战争』的持久战理论体系」。亦可回溯 06 篇《星星之火，可以燎原》（对「红旗到底打得多久」的答复，与本章呼应）和 08 篇《必须注意经济工作》（反「围剿」的准备与根据地建设）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「战略问题」的方法论搬到你手头的场景</h4>
+      <p class="q">① <b>特点题</b>：你所处的「战场」（行业、项目、人生阶段）里，最关键的「特点」是什么？你的策略是从这个特点推出来的，还是照抄了别人（别的行业/别的时间/别的处境）的「作战条令」？<br>② <b>集中题</b>：你手上的资源是不是被「全线出击」式地摊开了？有没有一个值得你「以一当十、以十当一」聚焦起来的决定性目标——与其击溃十个师，不如歼灭一个师？<br>③ <b>退却题</b>：你最近有没有把「退却/止损/收缩」当成失败而硬扛到底？试着重估它——那是不是一次「保存军力、待机破敌」的战略退却，而不是消极的放弃？<br>④ <b>持久题</b>：对一件注定旷日持久的事，你做到「战略持久、战役速决」了吗？有没有在战略上犯「性急」的错，或者在每一场具体战斗里拖泥带水？</p>
+      <p class="hint">提示：四件工具——① 特点：策略要由自己的「特点」派生，别照抄别人的作战条令；② 集中：以弱胜强靠「以一当十（战略）、以十当一（战术）」的局部聚焦；③ 退却：为了前进的后退是战略，不是失败，「敌进我退」十六字诀是根本；④ 持久+速决：战略上耐得住持久，战役里抓得住速决，「伤其十指不如断其一指」。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与马克思主义文库刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

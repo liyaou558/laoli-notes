@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 · 关于蒋介石声明的声明 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:28px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-seg.brown{background:var(--red-deep);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p{overflow-wrap:anywhere;word-break:break-all;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾肆</div>
+    <h1>关于蒋介石声明的声明</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十四篇 · <b>一九三六年十二月二十八日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>关于蒋介石声明的声明——就蒋介石 1936 年 12 月 26 日《对张杨的训词》所作的批驳性声明。篇名刻意不出现「西安事变」四字，避免刺痛刚获释的蒋介石，为促成第二次国共合作留余地</td></tr>
+      <tr><th>写作时间</th><td>一九三六年十二月二十八日（《毛泽东选集》题注标注）。距西安事变（12.12）十六天，距蒋介石《对张杨的训词》（12.26）仅两天</td></tr>
+      <tr><th>最初发表</th><td>作为毛泽东的书面声明，在西安事变和平解决后公开发表，驳斥蒋之《对张杨的训词》，后收入《毛泽东选集》第一卷（人民出版社 1991 年版收录）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版），第二次国内革命战争时期部分，紧接《中国革命战争的战略问题》之后</td></tr>
+      <tr><th>篇　幅</th><td>正文不足两千字，是毛选第一卷中最短的政治声明之一（前一篇《中国革命战争的战略问题》约两万字，恰成鲜明对照）。不分章节，一气呵成</td></tr>
+      <tr><th>历史坐标</th><td>西安事变（1936.12.12）和平解决后；张学良亲送蒋介石返南京（12.25）；蒋在洛阳发表《对张杨的训词》（12.26）；汪精卫、何应钦等亲日「讨伐派」借机觊觎最高权力。中共策略正从「逼蒋抗日」转向「联蒋抗日」，为建立抗日民族统一战线做最后冲刺</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇《中国革命战争的战略问题》还停在陕北石洞里讲「<b>怎么打赢国内战争</b>」的军事哲学，因为西安事变突发而搁笔；这一篇则直接把笔锋对准了<b>事变和平解决之后、国共关系那个最微妙的瞬间</b>。1936 年 12 月 12 日张学良、杨虎城扣蒋逼其联共抗日，共产党从「审蒋」转向「保蒋安全」、主张和平解决；12 月 24 日蒋介石被迫<b>口头</b>接受联共抗日等条件（未签字）；12 月 25 日蒋获释、张学良亲送其飞洛阳返南京；12 月 26 日蒋发表《对张杨的训词》，声称事变发生是因「反动派」煽惑、自己防范不周，其解决是张杨在自己「感召」下「勇于改过」。两天后，毛泽东发表本声明予以驳斥。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：一篇篇名「不提西安事变」的反击。</b>全文最见匠心处，恰恰在于它绝口不提「西安事变」四个字——题名只是「关于蒋介石声明的声明」。论者指出：这是促成第二次国共合作的微妙时期，主动替蒋维护体面，读起来像是「你说了，我才跟一句看法」，避免让蒋难堪、也避免国民党认定事变是共产党「裹胁」张杨预谋的结果。真正的反击藏在这份客气里：借评蒋的训词，把蒋在西安<b>口头答应却未签字</b>的六项条件公之于众——一公开，「没有签字也和签字一样有效」，全国全世界都成了见证人。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：十六天的时差，藏着一次惊险的策略转弯。</b>事变之初，中共中央一度估计乐观，计划「审蒋」、成立抗日联军与国防政府。但全国舆论多谴责张杨、南京积极组织「讨逆军」讨伐西安。据党史复原：因电台译电故障，共产国际 12 月 16 日发出的「主张和平解决」电报，中共直到 12 月 20 日才译出；这期间中共中央靠自己对时局的判断，在 12 月 19 日政治局会议上已确立和平解决方针，12 月 21 日致电周恩来「争取蒋介石」、提出六条谈判条件，明确指出「在上述条件有相当保证时，恢复蒋介石之自由」。从「审蒋」到「释蒋」，十六天内完成——本声明正是这一转弯之后，用公开文字为成果「上保险」的一步。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：蒋前脚把事变归罪「反动派」，毛后脚便逐条拆穿。</b>蒋介石在《训词》里讳莫如深，把扣押归咎于自己「防范不周」、事变受「反动派」煽惑。毛泽东抓住这个破绽反问：蒋所谓「反动派」究系何人、字典作何解释？他随即把「推动事变的六种势力」一一列出——张杨部队及西北人民的抗日怒潮、全国人民的抗日怒潮、国民党左派势力、各省实力派、共产党的抗日民族统一战线主张、世界和平阵线——最后一句收得锋利：「人们叫作革命派，蒋氏则叫作『反动派』罢了。」这既为西安事变与共产党正名，也把蒋企图污名化、进而打压抗日势力的「雷」提前拆掉了。</p>
+    <div class="timeline">
+      <div class="tl-item gold">
+        <div class="tl-date">1936.12.12 · 西安事变</div>
+        <div class="tl-body">张学良、杨虎城发动西安事变，扣押蒋介石并致电中共。中共中央一度估计乐观、计划「审蒋」，随后转向「保蒋安全」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1936.12.14 · 张杨通电</div>
+        <div class="tl-body">张学良公开讲话称「一切办法，决诸公论」。但全国舆论多谴责张杨，南京国民政府积极组织「讨逆军」。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1936.12.17 · 周恩来抵西安</div>
+        <div class="tl-body">周恩来与张学良会谈，为缓和蒋系进兵、分化南京内部，提出「保蒋安全」的策略。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1936.12.19 · 中共确立和平解决方针</div>
+        <div class="tl-body">中共中央政治局会议明确：威胁蒋介石生命安全只会造成严重内战前途，确立和平解决西安事变的方针。毛泽东指出「国际指示还未到」——决策主要靠自己对时局的判断。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1936.12.21 · 提出六条谈判条件</div>
+        <div class="tl-body">中共中央致电周恩来，提出改组南京政府、停止讨伐、保障民主权利、停止剿共并与红军联合抗日、与同情抗日国家合作等条件，「在上述条件有相当保证时，恢复蒋介石之自由」。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1936.12.23—24 · 谈判 · 蒋口头接受</div>
+        <div class="tl-body">12 月 23 日正式谈判开始；24 日蒋介石被迫<b>口头</b>接受联共抗日等条件（未签字），并会晤周恩来当面确认谈判成果。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1936.12.25 · 释放蒋介石</div>
+        <div class="tl-body">当天下午，张学良释放并亲送蒋介石一行飞洛阳返南京。周恩来事后叹道：「张汉卿亲自送蒋走是个遗憾。」中共中央当晚认可「放蒋是有利的」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1936.12.26 · 蒋发《对张杨的训词》</div>
+        <div class="tl-body">蒋介石由洛阳抵达南京后发表声明，称事变是因「反动派」煽惑、自己防范不周，其解决是张杨在自己「感召」下「勇于改过」。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1936.12.28 · 毛泽东发表本声明</div>
+        <div class="tl-body">毛泽东发表《关于蒋介石声明的声明》，肯定蒋转变的开始、公开其口头答应的六项条件，驳斥「反动派」之说，阐明共产党调停之功，警示「人而无信，不知其可」。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇短文放回它的来处：它不是书斋里的理论，而是<b>国共从十年内战转向合作抗日的关键关口上，一次精准的政治摊牌</b>。共产党刚在西安事变中「实际地取得了领导地位」，这一篇既是给蒋介石的「信用考试题」，也是向全国、全世界公布事变真相与成果的「公开账本」——为下一阶段的国共合作铺路，也堵住亲日「讨伐派」借机掀内战的路。<b>这是一篇用时机、分寸和定义权写的短文。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：肯定蒋介石撤兵陕甘、接受停止内战与联共抗日，是他<span class="q">转变十年错误政策的开始</span>；但对他《对张杨的训词》的含糊推诿绝不放过——既以「<span class="q">言必信，行必果</span>」为绳，把蒋在西安口头答应而未签字的<span class="q">六项条件</span>公之于众、使其变成全国监督下的公开承诺；又驳斥其把事变归罪「反动派」之说，指出推动事变的实是共产党与全国人民的抗日救亡力量；最后留出出路——蒋若彻底改弦更张走上联合抗日战线，共产党「自当给他以赞助」。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 公开即承诺，公开即捆绑</h4>
+        <p>蒋没签字不等于不作数——毛泽东把六项条件逐条白纸黑字刊布，让口头承诺变成经得起全民检验、全民监督的公开承诺，「比签字还牢」。核心机制是用「公开」把对方的退路堵死。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 争夺定义权即争夺主动</h4>
+        <p>蒋想把事变定性为「反动派煽惑」，毛泽东则举证六种推动力量并反问到底谁是「反动派」，把「发动事变是正义的救亡运动」这一定性抢回来——「人们叫作革命派，蒋氏则叫作『反动派』罢了」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 批判与留路并用</h4>
+        <p>一边严词驳斥、警告「人而无信，不知其可」，一边明确表态：你彻底改变对外退让、对内用兵、对民压迫的错误，走上联合抗日战线，「则共产党自当给他以赞助」——把批评收束在促成合作的大目标之下。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是一条从「<b>肯定</b>」到「<b>公开承诺</b>」到「<b>争夺定性</b>」到「<b>警示+留路</b>」的完整摊牌逻辑：先肯定蒋的转变（给面子）→ 以「言必信，行必果」立标准 → 把未签字的六项条件公开化为全民监督的承诺（核心）→ 驳「反动派」之说、为事变与共产党正名 → 讲清共产党的调停作用 → 软硬兼施收尾（警告「人而无信」＋开出「走上联合抗日即赞助」的出路）。枢纽在第三环——<b>「公开六项条件」</b>：全文的战略意图都压在这一手，用公开把蒋的退路封死。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 肯定转变</div><div class="n-sub">撤兵陕甘、接受停战联共 = 十年错误政策的开始</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 立标准</div><div class="n-sub">赞扬「言必信，行必果」，以信用为绳</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">③ 公开六项条件</div><div class="n-sub">口头承诺 → 全民监督的公开承诺（核心）</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">④ 争夺定性</div><div class="n-sub">驳「反动派」之说，为事变与共产党正名</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">⑤ 讲清作用</div><div class="n-sub">共产党的调停「实与有力」，出于民族生存</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑥ 警示+留路</div><div class="n-sub">「人而无信」示警；走上抗日战线则「赞助」</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">理解全篇的关键词是「<b>信用</b>」。毛泽东反复用蒋自己说的「言必信，行必果」反过来拴住蒋，又用共产党「十五年来」的言行与信用作对照，把「信义」抬升为衡量一党政治生命与民族前途的尺度——这是全文撬动蒋行动的那根杠杆。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">本篇是毛选第一卷中罕见的「<b>短剑型</b>」政治声明——不足两千字，一气呵成，不以篇幅取胜，而以<b>时机、分寸与用词的精准</b>取胜。通篇对蒋介石的处理走了一条「<b>表扬 → 立标 → 驳斥 → 警示 → 留路</b>」的五段式曲线。色带与标签按同一列比例对齐。</p>
+
+    <h4 style="margin:8px 0 2px;font-size:15px;color:var(--red-deep);">对蒋的五段式态度曲线</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">先给足面子肯定转变，再逐步收紧，最后以「警示＋留路」收束——软硬分寸随文推进。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg green">肯定</div>
+        <div class="spec-seg gold">立标</div>
+        <div class="spec-seg blue">驳斥</div>
+        <div class="spec-seg red">警示</div>
+        <div class="spec-seg brown">留路</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>肯定转变</b>撤兵、接受停战与联共，是「转变其十年错误政策的开始」，先给足面子</div>
+        <div class="spec-label"><b>立标准</b>点破《训词》「含含糊糊，曲曲折折」，以「言必信行必果」为绳立起标尺</div>
+        <div class="spec-label"><b>驳斥定性</b>反问「反动派」究系何人，为事变与共产党正名</div>
+        <div class="spec-label"><b>警示</b>「人而无信，不知其可」，不容蒋再游移打折扣</div>
+        <div class="spec-label"><b>留出路</b>彻底改变错误、走上联合抗日战线，「则共产党自当给他以赞助」</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">五步行文骨架</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">从「肯定」到「警示＋留路」，态度逐步收紧、分量逐层加重。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 肯定</div>
+        <div class="sk-body"><b>肯定转变（起点）</b>：开篇即肯定蒋撤兵、接受要求是「转变其十年错误政策的开始」，「可以看作国民党愿意结束其十年错误政策的一种表示」——给足面子，为后续批评铺平台阶。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 立标</div>
+        <div class="sk-body"><b>批评含糊（立标准）</b>：点破《训词》「内容含含糊糊，曲曲折折，实为中国政治文献中一篇有趣的文章」，明言「不能满足中国人民大众的要求」，并借蒋自称的「言必信，行必果」立起标尺。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 公开</div>
+        <div class="sk-body"><b>公开六条件（核心）</b>：赞扬蒋「言必信，行必果」，随即把六项条件逐条列出——改组政府驱逐亲日派 / 释放政治犯保自由 / 停止剿共联合红军抗日 / 召集救国会议 / 与同情抗日国家合作 / 其他救国办法——「我们将于蒋氏今后的行动表现中考察之」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 驳斥</div>
+        <div class="sk-body"><b>驳斥定性（争夺主动）</b>：质问「反动派」究系何人，列出六种推动力量，揭穿「人们叫作革命派，蒋氏则叫作『反动派』罢了」，「劝蒋氏将其政治字典修改一下」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五 · 收束</div>
+        <div class="sk-body"><b>分功与警示（收束）</b>：点明「共产党的调停，实与有力」、出于民族生存；以「人而无信，不知其可」示警，又开出「走上联合抗日战线则共产党赞助」的出路，把批判收束在促成合作的大目标下。</div>
+      </div>
+    </div>
+
+    <div class="quote">蒋氏如欲在抗日问题上徘徊，推迟其诺言的实践，则全国人民的革命浪潮势将席卷蒋氏以去。语曰：「人而无信，不知其可。」蒋氏及其一派必须深切注意。蒋氏倘能一洗国民党十年反动政策的污垢，彻底地改变他的对外退让、对内用兵、对民压迫的基本错误，而立即走上联合各党各派一致抗日的战线，军事上政治上俱能实际采取救国步骤，则共产党自当给他以赞助。<span class="src">——全文收束段。把「信用」与「人民的革命浪潮」并列为悬在蒋头上的两把剑，再把「赞助」作为改弦更张后的出路——批判与留路在此收于一处。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>把「口头承诺」变成「公开承诺」，是谈判中最锋利的一招</h4>
+          <p>蒋介石在西安只口头答应、拒不签字，原想留足回旋。毛泽东的破解之道不在逼他补签——签了也能撕——而是<b>直接把六项条件全文公之于众</b>，让全国全世界都成了见证人。声明是写给大家看的：蒋若抵赖，就是公开失信，政治生命与信义扫地；而他自己训词里的「言必信，行必果」，反成了套在自己脖子上的绳子。方法论迁移：谈判桌上对方不愿留字据时，不必只盯着一纸签名——把它放到一个公开、可监督、可溯源的「场」里说清楚，让承诺的兑现变成对方无法逃避的社会成本。真正有约束力的承诺，常不是那张纸，而是那个愿意让所有人见证的姿态。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>争夺「定义权」，就是争夺胜负</h4>
+          <p>蒋把事变讲成「反动派」煽惑、自己「防范不周」，本质是想夺回对「谁是正义、谁是乱党」的定义。毛泽东没有去争辩事变本身的是非，而是反问一句最要命的：你说的「反动派」到底是哪些人？然后给出答案——是张杨部队、全国人民、国民党左派、各省实力派、共产党的统一战线主张和世界和平阵线。这一问一答，把「发动事变者」从「反动派」改判为「革命派」。方法论迁移：许多冲突的胜负不在事实层面，而在叙事层面——谁先把「事件性质」讲成让大多数人接受的版本，谁就占了先手。别急着辩细节，先问对方：你说的那个「问题」究竟指什么、指谁？定义往往比论据更有杀伤力。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>批判是为了「留路」，不是为了一时痛快</h4>
+          <p>通篇措辞极重——「含含糊糊，曲曲折折」「人而无信，不知其可」「一洗……污垢」——但所有批判都收在同一个大目标下：逼蒋走上联合抗日战线。文章最后一步不是骂到底，而是清清楚楚开出价码：「彻底地改变……基本错误，而立即走上联合各党各派一致抗日的战线……则共产党自当给他以赞助。」先驳斥、后给台阶，让对方知道改弦更张仍有路可走。方法论迁移：真正有力的批判不是把对手逼到墙角，而是把批评停在「对方还能接受的新选项」之前——留一条让对方面子与出路都能保全的台阶，批评才可能转化为改变。堵死退路而不开前门，往往只会逼对方玉石俱焚。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">内容含含糊糊，曲曲折折，实为中国政治文献中一篇有趣的文章。</div>
+        <div class="ctx">评蒋介石《对张杨的训词》。以近乎戏谑的克制笔法，点破一篇言不由衷的政治文本。1991 年版文字，已与毛选/求是网原文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们劝蒋氏将其政治字典修改一下，将「反动派」三字改为革命派三字，改得名副其实，较为妥当。</div>
+        <div class="ctx">驳蒋归罪「反动派」之说。用「修改字典」的巧喻完成对事变性质的定义权争夺。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">蒋氏应当记忆，他之所以能够安然离开西安，除西安事变的领导者张杨二将军之外，共产党的调停，实与有力。</div>
+        <div class="ctx">点明共产党在西安事变和平解决中的关键作用，为共产党正名。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">全国人民将不容许蒋氏再有任何游移和打折扣的余地。……语曰：「人而无信，不知其可。」蒋氏及其一派必须深切注意。</div>
+        <div class="ctx">借《论语·为政》之语，把「信用」上升为蒋的政治生命线。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">全国人民信任共产党的言行，实高出于信任国内任何党派的言行。</div>
+        <div class="ctx">结尾将共产党「十五年来」的言行信用，与蒋的游移作一总对照。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">15 · 中国共产党在抗日时期的任务（1937.05）</div>
+        <p>这一篇是西安事变后、全民族抗战爆发前夕，毛泽东在延安召开的中国共产党全国代表会议上的报告——从「逼蒋」走向「联蒋」、从「国内战争」走向「民族战争」的策略总纲正式成型。如果说本声明是国共从对立转向合作的那个「转折瞬间」，下一篇则是这个转折如何被确定为一整套系统方针的「理论定格」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">12 · 论反对日本帝国主义的策略（1935.12）</div>
+        <p>抗日民族统一战线策略的系统提出，本声明正是这一策略在西安事变后的具体运用与推进；二者连读可看清「策略」如何从瓦窑堡大会的讲话落地为处理重大事变的政治实操。另可参读党史界关于「审蒋到释蒋」决策转变的研究（光明日报 2011.11《从审蒋到释蒋：中共处理西安事变的决策转变》），了解本声明之前十六天里共产党决策的惊险转弯。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「摊牌声明」的方法论搬到你手头的场景</h4>
+      <p class="q">① <b>公开题</b>：你在谈判或协作中，有没有遇到过对方「口头答应、不愿留字据」的情形？与其执着于一份签名，你能不能把关键承诺放进一个「公开、可监督、可回溯」的场合说清楚，让失信变成对方难以承受的代价？<br>② <b>定义题</b>：最近一次让你陷于被动的冲突里，对方是不是正在用某个词（如「不规范」「不专业」「搞事情」）抢先定义事件性质？你试过反问一句「你说的到底指谁、指什么」，把定义权夺回来吗？<br>③ <b>留路题</b>：当你要批评一个合作对象时，你的批评是「骂到底、堵死退路」，还是「批评之后留一条对方能接受的台阶」？能不能像本文一样，先立标准、再给改变的方向？<br>④ <b>信用题</b>：在重要关系中，你会不会用「一个人自己说过的话」来反绑他的承诺——像毛泽东用蒋的「言必信，行必果」拴住蒋那样？你信用的积累，靠的是言行一致还是空头应承？</p>
+      <p class="hint">提示：四件工具——① 公开：把口头承诺放进「可监督、可回溯」的公开场合，让失信变成社会成本；② 定义：冲突胜负常在叙事层，先反问「你说的『问题』到底指谁」，夺回定义权；③ 留路：有力的批判要停在「对方还能接受的新选项」之前，先立标准、再给方向；④ 信用：用对方自己的话反绑其承诺，言行一致才是有分量的信用。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与马克思主义文库刊载原文逐字核对</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

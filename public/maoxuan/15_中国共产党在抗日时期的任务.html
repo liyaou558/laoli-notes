@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 · 中国共产党在抗日时期的任务 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:27px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-seg.brown{background:var(--red-deep);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+.spec-band.c3,.spec-labels.c3{grid-template-columns:1fr 1fr 1fr;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 三段式结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 96px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li{overflow-wrap:anywhere;word-break:break-all;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾伍</div>
+    <h1>中国共产党在抗日时期的任务</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十五篇 · <b>一九三七年五月三日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>中国共产党在抗日时期的任务——毛泽东在一九三七年五月二日至十四日于延安召开的中国共产党全国代表会议上的<b>报告</b>。题名点明「任务」：在从国内战争转向民族战争的关口，向全党讲清当前阶段该干什么、为什么、靠谁领导</td></tr>
+      <tr><th>写作时间</th><td>一九三七年五月三日（《毛泽东选集》题注，与多版 1991 年本一致）。系本次会议（5.2—5.14）开幕后所作报告。<b>勘误提示</b>：个别网络刊载（如求是网该篇索引页）误标「五月八日」——五月八日是本次会议的<b>结论</b>时间，即下一篇《为争取千百万群众进入抗日民族统一战线而斗争》的时间；本文报告日应为五月三日</td></tr>
+      <tr><th>最初发表</th><td>本次全国代表会议上的报告。该文后收入《毛泽东选集》第一卷（人民出版社 1991 年版，第二次国内革命战争时期部分）刊布，为正式通行文本</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版），排在《论反对日本帝国主义的策略》《中国革命战争的战略问题》《关于蒋介石声明的声明》之后，与下一篇《为争取千百万群众进入抗日民族统一战线而斗争》（同会结论）构成一组姊妹篇</td></tr>
+      <tr><th>篇　幅</th><td>正文较长，以（一）至（二○）二十段标目展开，通篇分成三大段标题：<b>民族矛盾和国内矛盾的目前发展阶段</b>（形势与阶段判断）／<b>为民主和自由而斗争</b>（行动纲领）／<b>我们的领导责任</b>（领导权问题）</td></tr>
+      <tr><th>历史坐标</th><td>西安事变和平解决（1936.12）之后、国民党五届三中全会（1937.2）开始由「内战、独裁、不抵抗」转向「和平、民主、抗日」；距全面抗战爆发（卢沟桥事变 1937.7.7）仅约两个月。国共第二次合作谈判进行中，红军尚未正式改编为八路军，两党尚处由敌对走向合作的过渡阶段</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇《关于蒋介石声明的声明》还是在西安事变和平解决的<b>瞬间</b>里做一次精准的政治摊牌；这一篇则是两个月后，把那个转折<b>系统化为一整套方针</b>的纲领性报告。1937 年 5 月，毛泽东在延安召开的中国共产党全国代表会议上作报告——此时距日本全面侵华只剩约六十天，国共十年内战刚停、两党合作尚未落定，红军还没换成国民革命军番号。<b>这是一份站在民族存亡悬崖边上、替一个刚准备放下武器与对手合作的党，回答「接下来到底怎么走」的路线图。</b></p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：共产党主动放弃了打了十年的「四大项」。</b>报告最惊人的部分，是亮出致国民党三中全会的四项保证：把红军改编为国民革命军、受南京中央政府及军委会指导；把苏区政府改为中华民国特区政府；停止武力推翻国民党的方针；停止没收地主土地。十年前（1927）蒋介石「清党」屠杀、把共产党逼上井冈山武装割据，如今共产党却主动提出停止暴动、放弃没收土地、交出军队番号——党内震动、党外哗然，立刻有人斥为「投降」。毛泽东正面回怼：<b>「如果说这是共产党的投降，那只是阿Q主义和恶意的污蔑。」</b>他论证这是「有原则有条件的让步」——让步是为了换全民族的和平、民主与抗战，是「两党的让步」（国民党弃内战独裁不抵抗，共产党弃两政权敌对），而且有限度：<b>特区与红军中共产党的领导、两党关系上共产党的独立性与批评自由，绝不让</b>。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：一场把「大革命的血泪教训」摆上台面的领导权之争。</b>报告抛出全篇最锋利的一问：「使无产阶级跟随资产阶级呢，还是使资产阶级跟随无产阶级呢？」——他拉出 1927 年国共合作破裂的旧账：当年资产阶级追随无产阶级政治领导时革命大踏步前进；及至共产党在政治上「变成资产阶级的尾巴」（陈独秀右倾、尾巴主义），革命便遭失败。结论斩钉截铁：民族民主革命的历史「已判定不能经过资产阶级的领导，而必须经过无产阶级的领导」；抗日救国的「总参谋部」职务，共产党「责无旁贷和义不容辞」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：既反「关门主义」又反「尾巴主义」，两头同时开火。</b>十年内战养成党的「关门主义、高慢的宗派主义和冒险主义」传统，不愿再把资产阶级放进统一战线——这是「左」的一头；陈独秀式「尾巴主义」则是右的一头。毛泽东在同一段里把两把刀都举起来：肃清关门主义以团结多数，警惕尾巴主义以免模糊面目、牺牲工农利益去迁就资产阶级改良主义。并给出一味总药方——<b>提高全党的马克思列宁主义理论水平，「因为只有这种理论，才是引导中国革命走向胜利的指南针」</b>。这与他两个月后在《实践论》《矛盾论》（第 17、18 篇）里的工作一脉相承。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1935.12 · 瓦窑堡会议</div>
+        <div class="tl-body">《论反对日本帝国主义的策略》系统提出抗日民族统一战线，确定「人民共和国」口号（后因需团结蒋，改提「民主共和国」）。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1936.05 — 1936.09 · 从「反蒋」到「逼蒋」</div>
+        <div class="tl-body">红军东征回师通电（5.5）开始放弃「反蒋」口号；8 月致国民党书改提「民主共和国」；9 月决议对民主共和国口号作具体说明。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1936.12 · 西安事变和平解决</div>
+        <div class="tl-body">共产党主张和平解决、保蒋安全；蒋介石被迫接受联共抗日。国共由武装对峙转向谈判合作。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1937.02.10 · 致国民党三中全会电</div>
+        <div class="tl-body">提出五项国策要求（停止内战、保障自由、召集代表会议、准备对日作战、改善人民生活），并作四项保证——即报告所称「有原则有条件的让步」的由来。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.02.15—22 · 国民党五届三中全会</div>
+        <div class="tl-body">迫于人民要求，实际接受国共合作抗日方针，确定和平统一、扩大民主、释放政治犯等原则，开始转变十年错误政策。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.05.02—14 · 中共全国代表会议（延安）</div>
+        <div class="tl-body">毛泽东于 5 月 3 日作本报告，系统阐明抗日时期党的任务；5 月 8 日就讨论作结论（即下一篇《为争取千百万群众进入抗日民族统一战线而斗争》）。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1937.07.07 · 卢沟桥事变（后事）</div>
+        <div class="tl-body">全面抗战爆发，红军改编为八路军、开赴抗日前线——本报告预判的「全国性对日武装抗战」随即来临。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇报告放回它的来处，最触目的一层是<b>时机</b>：它不是事后的总结，而是大战前夜的选择。毛泽东在报告里已把话说得很急——中国「正迫近着判定自己存亡的关头」，「救亡抗战必须用跑步的速度去准备」。这篇是共产党从「十年武装割据、推翻蒋介石」到「放下恩怨、与敌联合抗日」这场<b>自我革命式的策略大转弯</b>的理论定格。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>中日民族矛盾已上升为主要矛盾、国内阶级矛盾退居次要服从地位</b>，据此党要把任务从「国内战争」转向「民族战争」——在抗日民族统一战线从建立走向巩固的过渡阶段，<span class="q">「争取民主是目前发展阶段中革命任务的中心一环」</span>，而<span class="q">「中国革命的领导责任问题，乃是革命成败的关键」</span>；为此共产党主动作出有原则有条件的四项让步（红军改编国民革命军、苏区改特区政府等），同时既反关门主义又反尾巴主义，力争引导革命走向彻底的民族解放与社会解放。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 主要矛盾决定主要任务</h4>
+        <p>中日矛盾成为主要矛盾、国内矛盾降为次要，所以统一战线「以抗日为目的，不是同时反对一切帝国主义」——甚至可以联合现时愿保和平的英美等帝国主义国家。识别主要矛盾，就不把可团结力量推到敌人那边去。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 争取民主是「中心一环」</h4>
+        <p>前一阶段主要争取和平、已基本实现；本阶段主要争取民主。没有民主自由，便不能巩固和平团结、动员人民进入抗战（对照阿比西尼亚因封建统治失却团结与动员而亡的覆辙）。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 政治领导权=成败关键</h4>
+        <p>民族民主革命必须经无产阶级领导才能完成；领导权不是自封，而是靠「提出口号＋成为模范＋善处同盟＋自身巩固」四条件挣来；既反关门主义、又反尾巴主义，防止再次重演 1927 年的失败。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是一架从「<b>识势</b>」到「<b>定务</b>」到「<b>抓中心</b>」到「<b>争领导</b>」到「<b>落政策</b>」的完整推演机：毛泽东把「矛盾分析」当作一切决策的地基——先判定主次矛盾的位移（识势），由此推导当前总任务已从国内战争转为民族战争（定务），再从统一战线的过渡性质抓出「争取民主」这一中心一环（抓中心），随即点明民主统一战线的成败系于无产阶级领导权（争领导），最后给出让步与双反倾向等具体政策把领导权落到实处（落政策）。枢纽在第四环——<b>「政治领导权」</b>：让步是手段，争取领导权才是让统一战线不「变味」的保险栓。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 识势</div><div class="n-sub">中日矛盾成主要矛盾，国内矛盾降为次要</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">② 定务</div><div class="n-sub">任务由国内战争转向民族战争，建全民族统一战线</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">③ 抓中心</div><div class="n-sub">过渡阶段「争取民主是中心一环」</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">④ 争领导</div><div class="n-sub">政治领导责任乃革命成败关键（核心）</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">⑤ 落政策</div><div class="n-sub">让步（四项保证）＋口号／模范／同盟／党建＋双反倾向</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">理解全篇的关键词是「<b>领导权</b>」。让步放得再大，最后底线是「共产党的领导、独立性与批评自由」不能丢；动员群众再多，最终目标是「争取千百万群众在我们领导之下」。毛泽东把让步与领导权这一对张力，处理成相互支撑的两个轮子——<b>以让步换大局，以领导权保方向</b>。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">本篇是毛选第一卷里一篇少见的大跨度<b>纲领型报告</b>：二十段标目、三大段标题，从矛盾分析一路走到领导权。它自身标出的任务推进序列，正是毛泽东那句「停止内战→争取民主→实现抗战」的口号线——这也是全篇给全民族画的<b>时间轴</b>。色带与标签按同一列比例对齐。</p>
+
+    <h4 style="margin:8px 0 2px;font-size:15px;color:var(--red-deep);">任务的时间轴：从「停止内战」到「实现抗战」</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">三个阶段是同一个「走上全国性对日武装抗战」的过渡，一环扣一环，越往后越急。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band c3">
+        <div class="spec-seg green">停止内战 · 和平</div>
+        <div class="spec-seg gold">争取民主 · 民主</div>
+        <div class="spec-seg red">实现抗战 · 民族战争</div>
+      </div>
+      <div class="spec-labels c3">
+        <div class="spec-label"><b>已基本实现</b>前一阶段（1935.12—1937.2）围绕争取国内和平，口号「停止内战，一致抗日」基本上实现，统一战线组成的第一个必要条件已具备</div>
+        <div class="spec-label"><b>现时中心一环</b>本阶段主要争取民主；无民主则不能巩固和平、团结与动员，抗日民族统一战线难以真正坚实</div>
+        <div class="spec-label"><b>即将来临的总目标</b>全面抗战将临；须「用跑步的速度去准备」，反「长期准备论」，并预判此战须靠动员人民方能取胜</div>
+      </div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">三段式总纲</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">全文由三大段标题承载，先识势定方向、再给行动纲领、最后抓成败的牛鼻子。</p>
+
+    <div class="part">
+      <div class="part-head red">
+        <span class="part-no">一</span>
+        <span class="part-title">民族矛盾和国内矛盾的目前发展阶段</span>
+        <span class="part-scope">（一）—（六）</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>矛盾位移</b>：中日矛盾成主要矛盾，国内矛盾与「其他帝国主义—中国」矛盾降为次要、服从的地位。</li>
+          <li><b>新阶段的判定</b>：由中日矛盾为主而生国际国内关系变化，形成「目前形势的新的发展阶段」。</li>
+          <li><b>阶段划分</b>：1935.12.9 开始的新时期，第一阶段至 1937 年国民党三中全会告一段落——围绕「争取国内和平」；目前进入第二阶段，任务转向「争取民主」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold">
+        <span class="part-no">二</span>
+        <span class="part-title">为民主和自由而斗争</span>
+        <span class="part-scope">（七）—（十五）</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>紧迫性</b>：中国「迫近判定自己存亡的关头」，救亡抗战须用跑步速度准备，反「长期准备论」。</li>
+          <li><b>中心一环</b>：争取民主自由是保证抗战胜利的中心一环；改革分两方面——政治制度改民主政体、保障人民言论集会结社自由。</li>
+          <li><b>让步与限度</b>：致国民党三中全会四项保证是有原则有条件的让步，换全民族和平民主抗战；限度是共产党领导、独立性、批评自由不可让。</li>
+          <li><b>立场澄清</b>：共产党不拒绝且愿坚决实行孙中山革命的三民主义（民主革命阶段），但最高纲领仍是社会主义、共产主义。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue">
+        <span class="part-no">三</span>
+        <span class="part-title">我们的领导责任</span>
+        <span class="part-scope">（一六）—（二○）</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>成败关键</b>：领导责任「乃是革命成败的关键」；引 1927 年「变成资产阶级尾巴」致败的血泪教训，断言须无产阶级领导方能完成民族民主革命。</li>
+          <li><b>领导四条件</b>：提正确口号／党员成为模范（最有远见、最富牺牲、最坚定、虚心体会情况依靠多数）／善处同盟关系／党的思想统一与纪律严明。</li>
+          <li><b>方式转变</b>：合作后斗争方式从武装转和平、非法转合法，「需要重新学习」，重新训练干部是主要一环。</li>
+          <li><b>双反倾向</b>：肃清关门主义、宗派主义、冒险主义，同时防陈独秀式尾巴主义复活；总药方是提高全党马列主义理论水平。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">中国正迫近着判定自己存亡的关头，中国的救亡抗战，必须用跑步的速度去准备。我们并不反对准备，但反对长期准备论，反对文恬武嬉饱食终日的亡国现象，这些都是实际上帮助敌人的，必须迅速地清除干净。<span class="src">——（七）。全文「紧迫性」的总纲段：把「用跑步的速度去准备」与反对「长期准备论」并列，既是给全党的警钟，也是给那些借口「准备不足」而拖延抗战者的点名。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>让步不是投降：关键在「说清换什么、底线在哪」</h4>
+          <p>共产党让掉军队番号、苏区名号、武装推翻方针、没收土地四样硬家伙，震动全党，立刻被扣「投降」帽子。毛泽东的化解不靠辩解，而靠把账算清楚：<b>这是「两党的让步」——国民党弃内战、独裁、不抵抗，共产党弃两政权敌对，「我们以后者换得前者」</b>；且是「有原则有条件的」，限度白纸黑字——共产党的领导、独立性、批评自由绝不让。于是同一件事，从「被动的丧失」改写成了「主动的交换」。方法论迁移：当你要为更大目标主动让渡一些权益时，真正的风险不是让，而是让得<b>含糊、没说明换回什么、也说不清底线在哪</b>——那样的「让步」才是真投降。有对象、有标价、有底线的让，是策略；什么都没有的让，才是失守。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>分清「谁才是当前最主要的威胁」，才不会到处树敌</h4>
+          <p>毛泽东判定中日矛盾已成主要矛盾后，立刻得出一个在十年内战里近乎「大逆不道」的结论：统一战线「以抗日为目的，不是同时反对一切帝国主义」，甚至可以联合现时愿保和平的英美。为什么？因为敌人也要分主次——若仍把英美、把民族资产阶级一概当敌人，等于替日本把可联合的力量全推过去。方法论迁移：一个人、一个团队精力永远稀缺，最怕的不是有对手，而是把<b>本可中立甚至成为同盟的对象当成主要敌人</b>。做事前先问一句：此刻真正压垮我的那个「主要矛盾」是什么？能不能停掉一些次要战线上的无谓对抗，把火力集中到那一个真正的威胁上，甚至把过去的「次要对手」变成今天的援军？分清主次敌人，常常比打赢一场仗更重要。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「领导权」不是争来的名分，是挣来的信用</h4>
+          <p>毛泽东谈政治领导最清醒处，是他不靠「我是革命党所以该我领导」来压人，而是列出一套可操作的标准：提出能号召多数人的正确口号、党员自己先做最有远见最肯牺牲最坚定的模范、与同盟者建立「不失掉确定政治目标」的适当关系、内部思想统一纪律严明。他还敏锐指出：合作后打法要从武装转和平、非法转合法，<b>「这种转变是不容易的，需要重新学习」</b>。方法论迁移：在任何一个协作或联盟里，想当「牵头者」，靠头衔和资历撑不了多久；真正让别人愿意跟你走的，是你能否给出共同目标、自己先做到、善待并肩者、内部又拧成一股绳。而且时代一变、规则一变（比如从丛林法则换到合规赛道），过去的优势可能变劣势——肯不肯放下旧本事、重新学习新规则，往往决定了你还能不能继续「领导」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">中国正迫近着判定自己存亡的关头，中国的救亡抗战，必须用跑步的速度去准备。</div>
+        <div class="ctx">（七），紧接「反对长期准备论」。把存亡紧迫感化作一句命令式警句，是全文对时局最急的定调。1991 年版文字，已与毛选/求是网全文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">争取民主，是目前发展阶段中革命任务的中心一环。看不清民主任务的重要性，降低对于争取民主的努力，我们将不能达到真正的坚实的抗日民族统一战线的建立。</div>
+        <div class="ctx">（六）。「中心一环」是全文的方法论枢纽：在和平与抗战之间，毛泽东把「民主」定为承上启下的那一步。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">使无产阶级跟随资产阶级呢，还是使资产阶级跟随无产阶级呢？这个中国革命领导责任的问题，乃是革命成败的关键。</div>
+        <div class="ctx">（一六）。以二选一的诘问点出全篇最硬的命题，直指 1927 年「变成资产阶级尾巴」致败的教训。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">让步是两党的让步：国民党抛弃内战、独裁和对外不抵抗政策，共产党抛弃两个政权敌对的政策。我们以后者换得前者，重新与国民党合作，为救亡而奋斗。如果说这是共产党的投降，那只是阿Q主义和恶意的污蔑。</div>
+        <div class="ctx">（一一）。正面回应党内党外「投降论」，把让步定义成双向的交换而非单方失守。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">共产党员应该作到最有远见，最富于牺牲精神，最坚定，而又最能虚心体会情况，依靠群众的多数，得到群众的拥护。</div>
+        <div class="ctx">（一七）。领导权「四条件」之「成为模范」的具体标准，是全文对先锋队气质最凝练的刻画。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">16 · 为争取千百万群众进入抗日民族统一战线而斗争（1937.05.08）</div>
+        <p>同一会议（5.2—5.14 延安全国代表会议）上，毛泽东就讨论所作的<b>结论</b>——回应与会者对报告提出的「个别不同意见」（含某同志领导上的退却路线），把「争取千百万群众进入统一战线」确立为目标，收束全文。如果说本篇是「定方向」，下一篇则是「划清分歧、凝心聚力」；结论中还点出「只有经过共产党的团结，才能达到全阶级和全民族的团结」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">12 · 论反对日本帝国主义的策略（1935.12）</div>
+        <p>抗日民族统一战线策略在瓦窑堡会议上的系统首倡；本篇正是这一策略从「口号」走向「两党合作落地」的关键推进。两篇连读，可看清统一战线这条线如何从 1935 年的理论动员，一步步演进到 1937 年拿出四项让步、准备放下武器一致对敌。另可与紧随其后的《实践论》《矛盾论》（第 17、18 篇）对照——本篇「提高全党理论水平」的呼吁，正是那两篇哲学著作直接的思想前奏。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「主次矛盾 + 有底线的让步 + 挣来的领导权」搬到今天</h4>
+      <p class="q">① <b>主次题</b>：你现在同时面对的好几个难题/压力源里，有没有把「本可中立甚至成为同盟的对象」误当成主要敌人、陷在次要战线里到处树敌？如果先问一句「此刻压垮我的主要矛盾到底是什么」，你会停掉哪几场无谓的对抗、把火力重新对准哪一个真正的威胁？<br>② <b>让步题</b>：为了一个更大的目标，你愿意主动让渡哪些权益？让之前，你能不能说清三件事——我让了什么、我要换回什么、底线（绝不能让的那条）在哪？面对「你这不是投降吗」的质疑，你能像毛泽东那样把它改写成「双向交换」而不是吞吞吐吐吗？<br>③ <b>领导题</b>：在你参与的团队或协作里，「牵头者」是靠身份/头衔自封，还是靠「提出共同目标＋自己先做出样子＋善待同盟者＋内部团结」挣来的？如果规则忽然变了（如同从「武装斗争」换到「合法公开」），你肯不肯放下旧优势、重新学习，保住继续带头的资格？<br>④ <b>双倾向题</b>：对照你自己或所在组织：有没有「关门主义」式的——清高、排他、不肯把昔日对手放进局里？或「尾巴主义」式的——无原则迎合、跟风、为了合群丢掉立场？两面都能同时戒掉吗？</p>
+      <p class="hint">提示：四件工具——① 主次：先把对象按「谁才是当前主要威胁」排序，别把次要分歧当主战场、别把中间力量推向对立面；② 让步：让是策略不是失守——说清「让什么、换什么、底线在哪」三件事，有对象有标价有底线的让才不是投降；③ 领导：牵头资格靠「目标＋模范＋善处同盟＋内部团结」挣来，规则变了就要放下旧本事重新学习；④ 双线：一手防清高排他的「关门主义」，一手防无原则跟风的「尾巴主义」，两头都不能倒。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与求是理论网／毛选刊载全文逐字核对</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

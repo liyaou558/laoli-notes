@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16 · 为争取千百万群众进入抗日民族统一战线而斗争 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:27px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-seg.brown{background:var(--red-deep);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+.spec-band.c3,.spec-labels.c3{grid-template-columns:1fr 1fr 1fr;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 三段式结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 96px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li,.n-sub{overflow-wrap:anywhere;word-break:break-all;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾陆</div>
+    <h1>为争取千百万群众进入抗日民族统一战线而斗争</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十六篇 · <b>一九三七年五月八日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>为争取千百万群众进入抗日民族统一战线而斗争——毛泽东在一九三七年五月二日至十四日于延安召开的中国共产党全国代表会议上，就《中国共产党在抗日时期的任务》这一<b>报告</b>（同日五月三日所作）所作的<b>结论</b>。篇名即全篇乃至全党在过渡阶段的那一个<b>唯一总目的</b>：把党的方针变成群众的方针，让千百万群众进入统一战线</td></tr>
+      <tr><th>写作时间</th><td>一九三七年五月八日（《毛泽东选集》1991 年版题注）。系延安全国代表会议（5.2—5.14）闭幕阶段，毛泽东就大会讨论所作结论；同会开幕阶段所作报告即上一篇《中国共产党在抗日时期的任务》（5.3）——两篇为「报告＋结论」姊妹篇。早期刊本（解放杂志等）或标「苏区党代表大会」并另注日期，本文以 1991 年版毛选为准</td></tr>
+      <tr><th>最初发表</th><td>在全国代表会议闭幕时口头作出结论，后收入《毛泽东选集》第一卷（人民出版社 1991 年版，第二次国内革命战争时期部分）正式刊布，为通行文本</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷，紧接上一篇《中国共产党在抗日时期的任务》之后；标题与其下内容自成起讫，实为该会议报告之收束篇</td></tr>
+      <tr><th>篇　幅</th><td>中篇。行文先立起要旨（「首先就来讨论这些意见，然后再说到一些其他的问题」），再分七个问题依次展开：<b>和平问题 → 民主问题 → 革命前途问题 → 干部问题 → 党内民主问题 → 大会的团结和全党的团结 → （终章）为争取千百万群众进入抗日民族统一战线而斗争</b></td></tr>
+      <tr><th>历史坐标</th><td>西安事变和平解决（1936.12）、国民党五届三中全会初转合作（1937.2）之后，国共合作谈判进行中、红军尚未改编为八路军；一个多月前（1937.3 延安政治局扩大会议）刚系统批判张国焘退却路线；距全面抗战爆发（卢沟桥事变 1937.7.7）仅约两个月</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇是同一会议开幕时定方向的<b>报告</b>；这一篇是同一会议闭幕时<b>收拢人心的结论</b>。五月二日开幕、五月十四日闭幕的延安全国代表会议，是西安事变和平解决后共产党第一次坐下来把「跟打了十年的敌人合作抗日」这条新路摊开来让全党审议。毛泽东在开幕后作报告，谈了几天讨论里冒出<b>「个别同志」</b>的不同意见——他点破这些意见「颇带重要性」，于是在五月八日作结论，「首先就来讨论这些意见，然后再说到一些其他的问题」。<b>换言之，这篇是一份「答辩状＋定心丸」：把会上的怀疑一个个接住、拆掉，最后把全党领到同一个目标上。</b></p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：会上真有反对派，且不是小摩擦。</b>有人说「日本后退了，南京更动摇了，民族矛盾下降，国内矛盾上升」——据此党该退回旧阶段，不必提什么新任务；有人说「强调民主是错的，仅仅应该强调抗日，多数人只要抗日不要民主」。毛泽东不回避，一条条反驳：和平「取得了」不等于「巩固了」，任务不是倒退回「停止内战」的旧口号，而是前进一步提出「争取民主」；民主是抗日阶段「最本质的东西」，「为民主即是为抗日」。他还顺手点了西安事变中叫嚷杀蒋、主张「打出潼关去」的所谓「左」倾者——他们的逻辑「平日痛骂国民党，及至和平刚刚实现又发现苏州审判等事，就用惊诧的口气发问：为什么蒋介石又这样干？」毛泽东冷笑：<b>共产党员和蒋介石都不是神仙</b>，党能推动革命逐步前进，却「没有本领把全国的坏事在一个早晨去掉干净」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：会场上悬着张国焘这桩旧案。</b>全文末尾「大会的团结和全党的团结」一节，轻描淡写一句「过去中央路线和个别同志领导的<b>退却路线</b>之间的分歧，也已经解决了」。这「个别同志」不是别人，正是长征途中另立中央、率红四方面军南下受挫的张国焘——一个多月前（1937.3）延安政治局扩大会议刚把他的路线错误系统清算。毛泽东在结论里既未点名、也不纠缠，只用「已经很坚固」的团结一笔带过，把全党注意引向前方。历史吊诡处：两个月后张国焘将逃出延安、公开投靠国民党——此刻的「团结声明」与那场叛逃之间，只隔一次全面抗战。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：回答最烫手的问题——「跟资产阶级合作，是不是投降？」</b>有人担心联合资产阶级会丢掉社会主义前途。毛泽东答得极漂亮，抛出一个后来被反复引用的比方：「两篇文章，上篇与下篇，只有上篇做好，下篇才能做好」——坚决领导民主革命是社会主义胜利的条件，「现在的努力是朝着将来的大目标的」；同时「今天的联合资产阶级抗日派，正是走向社会主义的<b>必经的桥梁</b>」。他申明自己是「革命转变论者」，既不是托洛茨基主义的「不断革命」论者，也不做「尾巴主义」，还反对「冒险主义和急性病」——一句话，<b>联合不是为了放弃方向，而是为了抄近路抵达方向</b>。</p>
+    <div class="timeline">
+      <div class="tl-item blue">
+        <div class="tl-date">1936.10 — 1937.03 · 张国焘退却路线清算</div>
+        <div class="tl-body">红四方面军与红一方面军在甘肃会宁会师后，中央对张国焘另立中央、南下失败的退却路线展开批判；1937.3 延安政治局扩大会议系统总结，标志分歧解决——本篇「大会的团结」一节即指此。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1937.02.10—22 · 国民党五届三中全会</div>
+        <div class="tl-body">共产党致电提出五项要求与四项保证，国民党实际接受国共合作抗日方针，由内战独裁转向和平民主抗日。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.05.02 — 05.03 · 中共全国代表会议开幕＋报告</div>
+        <div class="tl-body">延安召开中国共产党全国代表会议（5.2 开幕）；毛泽东 5.3 作报告《中国共产党在抗日时期的任务》（上一篇），系统提出抗日时期的方针与领导责任。</div>
+      </div>
+      <div class="tl-item red" style="position:relative;">
+        <div class="tl-date">1937.05.08 · 本篇：结论</div>
+        <div class="tl-body">毛泽东就数日讨论作结论，逐条答复「个别同志」的怀疑，收束到唯一目的——争取千百万群众进入抗日民族统一战线。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1937.07.07 · 卢沟桥事变（后事）</div>
+        <div class="tl-body">全面抗战爆发，红军改编为八路军开赴前线——本篇所争的「民主、抗战、千百万群众」，两个月后即迎来最严峻的实战检验。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把结论放回它的来处，最可咀嚼的是<b>文体</b>：这是一篇「以问答收拢分歧」的收尾稿。它不贪多讲道理，而专挑别人不信的地方下手——<b>一个真正要把方案推行到底的人，最该补的不是再讲一遍自己多正确，而是把会场里那些「很带重要性」的反对声，一个个先摆上台面、再答到人心服。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：在从国内战争转向民族战争的关口，<b>任务不是倒退、而是前进</b>——和平已取得而未巩固，故要由「停止内战」前进一步去「争取民主」；<b>联合资产阶级不是投降、而是走向社会主义的必经桥梁</b>（革命转变论的「上篇／下篇」）；为此须靠<b>好干部与党内民主</b>把全党团结成铁板，最终归到唯一总目的——<span class="q">「把党的方针变为群众的方针」，争取千百万群众进入抗日民族统一战线、置于我们领导之下</span>。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 前进一步，别退回旧口号</h4>
+        <p>反驳「日本后退、南京动摇、民族矛盾下降」之论：和平「取得」不等于「巩固」，历史走回头路与波折皆可能，故结论不是退回「停止内战」，而是前进到「巩固和平、争取民主、实现抗战」三位一体口号，「为的是情况已经允许我们进一步了」。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 联合资产阶级＝必经桥梁</h4>
+        <p>用「上篇／下篇」讲民主革命与社会主义：坚决领导民主革命是争取社会主义胜利的条件；「今天的联合资产阶级抗日派，正是走向社会主义的必经的桥梁」。申明是「革命转变论者」，非托洛茨基主义不断革命论，既反尾巴主义、又反冒险主义与急性病。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 一切归于「争取千百万群众」</h4>
+        <p>正确方针与坚固团结唯一指向把群众卷入统一战线；「把党的方针变为群众的方针」须长期、百折不挠、艰苦卓绝的努力。为此要「干部决定一切」地造就成万干部，并用民主集中制（集中密切联系民主）发动全党积极性、团结全党像钢铁。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是按「<b>听意见 → 驳怀疑 → 定方向 → 固组织 → 聚目的</b>」收拢的一场结论：先承认并复述会上的「个别不同意见」（听意见），再在和平、民主两题里驳倒「该后退、只抗日不要民主」的怀疑（驳怀疑），进而在革命前途问题上把方向讲死——民主革命与社会主义的「上篇／下篇」（定方向），随后落到靠什么执行——最好的干部与党内民主（固组织），最终五条线收进同一根针眼：<b>千百万群众在我们领导之下</b>（聚目的）。枢纽在最末一环——<b>「把党的方针变为群众的方针」的群众路线</b>：前面所有辩论，都是为了这一个执行的尽头。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 听意见</div><div class="n-sub">先复述会上「个别同志」的不同意见</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">② 驳怀疑</div><div class="n-sub">驳「后退」与「只要抗日」两说</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">③ 定方向</div><div class="n-sub">民主革命是社会主义的「上篇」</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">④ 固组织</div><div class="n-sub">干部决定一切＋党内民主</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">⑤ 聚目的</div><div class="n-sub">党的方针变为群众的方针（核心）</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">读这篇的钥匙是<b>「群众」与「转化」</b>两个词。方向上它不动摇（社会主义前途不变、党的领导不变）；方法上它极灵活（可联合昨天的敌人、可暂缓直接提民主革命之外的诉求）。<b>方向一步不让、手段能屈能伸</b>——这正是结论敢于放下身段答复每一个质疑、又始终把话筒对着「千百万群众」的底气所在。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">这是一篇短小却层层收口的<b>结论式文章</b>：七个问题从「对外的口号之争」一路走到「对内的组织动员」，最后用一个与篇名同名的段落把矛头收回。<b>它展示的是一种「漏斗式」结构——外圈的分歧越辩越少，到末端只剩一个目标。</b>按内容可归并为三层：辨敌我、看方向、抓落实。</p>
+
+    <div class="part">
+      <div class="part-head red">
+        <span class="part-no">一</span>
+        <span class="part-title">辨敌我 · 和平问题＋民主问题</span>
+        <span class="part-scope">驳「后退论」与「只要抗日不要民主」</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>和平问题</b>：和平「取得」≠「巩固」；驳「日本后退、民族矛盾下降、应回旧阶段」之论——任务不是退回「停止内战」，而是前进一步「争取民主」；点破观察要从「根本之点」而非「局部一时现象」出发。</li>
+          <li><b>民主问题</b>：驳「仅仅应该强调抗日」；民主是抗日阶段最本质的东西，「为民主即是为抗日」，抗日与民主互为条件；强调国民大会——「从反动独裁到民主的桥梁」，中心是国民大会与人民自由。</li>
+          <li><b>点将</b>：西安事变主张杀蒋、「打出潼关去」的「左」倾者；共产党员与蒋介石皆非神仙，坏事不能在一个早晨去掉干净。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold">
+        <span class="part-no">二</span>
+        <span class="part-title">看方向 · 革命前途问题</span>
+        <span class="part-scope">答「联合资产阶级是否投降」</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>上篇下篇</b>：坚决领导民主革命是争取社会主义胜利的条件；「现在的努力是朝着将来的大目标的」，失掉大目标就不是共产党员，放松今日努力也不是共产党员。</li>
+          <li><b>革命转变论</b>：主张民主革命转变到社会主义方向；不是托洛茨基主义「不断革命」论，也非半托洛茨基主义的「立三」急性病。</li>
+          <li><b>同盟与领导权</b>：无产阶级坚固同盟者是农民、其次是城市小资产阶级；同我们争领导权的是资产阶级——克服其动摇须靠群众力量与正确政策。</li>
+          <li><b>桥梁论</b>：今天的联合资产阶级抗日派，正是走向社会主义的必经桥梁；指此为「投降」是托洛茨基主义的说法，不能同意。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green">
+        <span class="part-no">三</span>
+        <span class="part-title">抓落实 · 干部＋党内民主＋团结＋总目的</span>
+        <span class="part-scope">凭什么把千百万群众争取过来</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>干部问题</b>：「指导伟大的革命，要有伟大的党，要有许多最好的干部」；干部要「大公无私的民族的阶级的英雄」，正像斯大林所说「干部决定一切」——要在全党和全国发现许多新的干部和领袖。</li>
+          <li><b>党内民主问题</b>：要党有力量靠民主集中制发动全党积极性；内战时期集中制表现多，新时期「集中制应该密切联系于民主制」，发挥全党积极性、锻炼干部、肃清宗派、团结全党像钢铁。</li>
+          <li><b>大会的团结和全党的团结</b>：会上政治分歧已归于一致，中央路线与张国焘退却路线的分歧已解决；「只有经过共产党的团结，才能达到全阶级和全民族的团结」。</li>
+          <li><b>终章（与篇名同名）</b>：把党的方针变为群众的方针，须长期百折不挠的努力；「没有这样一种努力是一切都不成功的」——千百万群众在我们领导之下，全部革命任务即迅速完成。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">我们的正确的政治方针和坚固的团结，是为着争取千百万群众进入抗日民族统一战线这个目的。……把党的方针变为群众的方针，还须要我们长期坚持的、百折不挠的、艰苦卓绝的、耐心而不怕麻烦的努力。没有这样一种努力是一切都不成功的。<span class="src">——终章（与篇名同名段），全篇的收口句。全篇七个问题最后都落在这一个「目的」上：不是说服党中央就完了，而是要让最多数的人真心进到统一战线里来。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>看问题要从「根本之点」出发，别被「一时现象」牵着走</h4>
+          <p>那些主张「该退回旧阶段」的同志，毛泽东诊断他们的病根：「观察时局不从根本之点出发，而从许多局部和一时的现象（佐藤外交，苏州审判，压制罢工，东北军东调，杨虎城出洋等等）出发，于是形成一幅暗淡的画图。」坏消息一个接一个冒出来，确实容易让人以为大势在退；但毛泽东坚持「一时的后退现象，不能代替总的历史规律」——佐藤外交恰恰「是大战的准备」，不是日本真想后退。方法论迁移：判断一件事朝哪个方向走，最难的是在<b>「一连串坏消息」里分清哪些是阶段性噪音、哪些才是方向性信号</b>。今天做投资、做职业、做产品决策，都容易因为最近三天的坏消息就推翻三个月前看准的大方向。先问一句：这些反对声音里，有哪些是「一时现象」，有哪些真的动摇了「根本之点」？</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>跟「昨天的对手」合作，关键是把「为什么」和「到哪一步」讲透</h4>
+          <p>联合打了十年的蒋介石、拉资产阶级进统一战线，全党最怕的就是「这是不是投降」。毛泽东没用口号硬压，而是给了两件硬通货：<b>一个「为什么」</b>——联合抗日派是走向社会主义的必经桥梁、抄近路而非绕路；<b>一个「到哪一步」</b>——民主革命只到民主共和国这一站，方向仍是社会主义，故既不做尾巴、也不搞冒险。于是最危险的一步，被安放在一条清晰的路线图里，恐惧便消了大半。方法论迁移：凡是「要跟以前的对头、或立场不同的伙伴合作」的决定，最忌只喊「为了大局」这种空话。别人（包括你自己）真正需要的，是你能不能说清<b>「我们为什么要在这件事上携手、携手到什么边界为止、我自己的长期方向变了没有」</b>。合作最深的恐惧从来不是「要不要」，而是「会不会丢掉我是谁」——把这两点讲清，合作才不是吞并。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>一切宏伟目标，尽头都是「让最多人真心认同并行动」</h4>
+          <p>这篇文章最反直觉的地方在于：题目挂在「统一战线」，可真正的主角既不是国民党也不是口号，而是<b>「千百万群众」</b>。毛泽东点破执行的真相——方针再对、党中央再团结，若不「把党的方针变为群众的方针」，就「一切都不成功」。而要完成这场转化，靠的是两头：<b>造一批「干部决定一切」的能独当一面的人</b>，加上<b>党内民主（集中密切联系民主）给执行者话语权、发动全党积极性</b>。方法论迁移：任何一个组织、一个团队，方案真正落地的那一刻，比拼的往往不是方案本身多高明，而是<b>有没有一批能扛事的人、以及做具体事的人是不是真的被调动起来</b>。光有「高层共识」不够——它要一路穿透到最末梢、让做每件小事的人都觉得这是「我要做」而非「他叫我做」，事情才真正开始。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">两篇文章，上篇与下篇，只有上篇做好，下篇才能做好。坚决地领导民主革命，是争取社会主义胜利的条件。……现在的努力是朝着将来的大目标的，失掉这个大目标，就不是共产党员了。然而放松今日的努力，也就不是共产党员。</div>
+        <div class="ctx">「革命前途问题」。以「上篇／下篇」化解「联合资产阶级是否丢方向」之疑，是全文的思想枢纽。1991 年版文字，已与毛选刊载全文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">指导伟大的革命，要有伟大的党，要有许多最好的干部。……他们是大公无私的民族的阶级的英雄，这就是共产党员、党的干部、党的领袖应该有的性格和作风。……我们的革命依靠干部，正像斯大林所说的话：「干部决定一切。」</div>
+        <div class="ctx">「干部问题」。全篇对组织动员最凝练的一段——把「伟大的革命」系于「好的干部」身上。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">只有经过共产党的团结，才能达到全阶级和全民族的团结，只有经过全阶级全民族的团结，才能战胜敌人，完成民族和民主革命的任务。</div>
+        <div class="ctx">「大会的团结和全党的团结」。以「党的团结」为圆心、逐圈外推的动员逻辑，一句话点出团结为何是胜利的前提。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">今天的联合资产阶级抗日派，正是走向社会主义的必经的桥梁。……我们反对尾巴主义，但又反对冒险主义和急性病。</div>
+        <div class="ctx">「革命前途问题」。给「联合即投降」的担忧以最锐利的答复——联合是桥梁而非终点，故既不做尾巴也不冒进。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">把党的方针变为群众的方针，还须要我们长期坚持的、百折不挠的、艰苦卓绝的、耐心而不怕麻烦的努力。没有这样一种努力是一切都不成功的。</div>
+        <div class="ctx">终章。全篇落到「党的方针→群众方针」的执行尽头，与篇名「争取千百万群众」遥相呼应。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">17 · 实践论（1937.07）</div>
+        <p>延安五月会议刚把统一战线的路线之争收拢到「提高全党理论水平」上，两个月后毛泽东在抗日军政大学讲哲学，写出《实践论》。如果说本篇驳的是「具体策略上的后退/激进」，那《实践论》要解决的则是更深的病根——党内一次次路线错误（本本主义、经验主义），本质都是「主观与客观、理论与实践能否统一」的问题。从「统一战线收人心」到「认识论正学风」，毛选第一卷正走向最哲学的两篇。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">15 · 中国共产党在抗日时期的任务（1937.05.03）</div>
+        <p>同一次延安全国代表会议上的「报告」，与本篇「结论」天然成对：报告负责<b>定方向</b>（矛盾分析、领导责任、四项让步），结论负责<b>答争议、收人心</b>（和平/民主/前途/干部/团结）。两篇合读，才能完整看到共产党在国共合作前夜如何既推出路线、又把党内不同声音一个个摆平。此外可与《实践论》《矛盾论》（第 17、18 篇）连读——本篇收口的「提高全党理论水平」，正是那两篇认识论/辩证法著作的直接引子。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「辨敌我 → 讲透合作 → 让群众动起来」搬到今天</h4>
+      <p class="q">① <b>根本之点题</b>：你正在推进的一件大事，最近有没有被一连串「坏消息」搞到想推翻原本看准的方向？能不能用毛泽东的办法，先把这些噪音分成两类——哪些是「一时现象」（佐藤外交式的烟雾），哪些真的动摇了「根本之点」？分清之后，你还想倒退吗？<br>② <b>合作题</b>：若要和一位昔日的「对头」或立场明显不同的伙伴为某个共同目标携手，你能不能像毛泽东那样给三样东西：一句讲得清的「为什么」（不是空喊大局）、一条「到哪一步为止」的边界、一句「我自己的长期方向没变」？你最怕的合作风险是不是也正是「怕丢掉我是谁」？<br>③ <b>群众题</b>：你或你所在团队的一个好方案，是不是常卡在「高层都同意、底下不动」？对照本篇，你缺的是不是两头——有没有一批「干部决定一切」式能独当一面的人，以及有没有用「民主集中」让做具体事的人真正有话语权、把「他叫我做」变成「我要做」？<br>④ <b>争议题</b>：当团队开会「表面都通过、其实有人带着颇带重要性的个别意见」时，你会像毛泽东那样先把这些意见摆上台面逐条答辩再收拢，还是当没听见、让它变成日后暗中使绊的钉子？</p>
+      <p class="hint">提示：四件工具——① 根本之点：别用「最近三天」的坏消息推翻「看准三个月」的大方向，先给每条反面对手贴上「一时现象／根本之点」的标签；② 合作：讲清「为什么、到哪一步、方向变没变」三件事，合作才不是吞并、你也才不是投降；③ 落地：再好的方案尽头都是「让做具体事的人真心认同」——靠一批能扛事的干部＋给一线话语权的民主集中；④ 收口：对「带重要性的不同意见」，先摆上桌讲清再宣布一致，胜过粉饰的假团结。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与毛选刊载全文逐字核对</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

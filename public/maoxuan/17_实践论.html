@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>17 · 实践论 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:27px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 三段式结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 96px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.sk-body,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li,.n-sub{overflow-wrap:anywhere;word-break:break-all;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾柒</div>
+    <h1>实践论</h1>
+    <div class="sub2">论认识和实践的关系——知和行的关系</div>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十七篇 · <b>一九三七年七月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>《实践论》——副题「论认识和实践的关系——知和行的关系」。《毛泽东选集》1991 年版题注：本文是毛泽东在延安的抗日军事政治大学（抗大）作哲学讲演时所用讲稿《辩证法唯物论（讲授提纲）》中的一部分（第二章第十一节），新中国成立后经作者亲自较大修改、独自成篇，标题加副题「论认识和实践的关系——知和行的关系」</td></tr>
+      <tr><th>写作时间</th><td>一九三七年七月（《毛泽东选集》1991 年版题注）。1937 年 4 月起毛泽东应抗日军政大学之邀讲授马克思主义哲学，编写《辩证法唯物论（讲授提纲）》，至「七七事变」前后因忙于战事中断——<b>《实践论》是其中 7 月所讲、整理完稿的一节</b>；其姊妹篇《矛盾论》（提纲第三章第一节）为 8 月讲稿</td></tr>
+      <tr><th>最初发表</th><td>1937 年 9 月《辩证法唯物论（讲授提纲）》在延安油印流传，作哲学教员参考材料。定稿版先以俄文于 1950 年 12 月载于苏共《布尔什维克》杂志第 23 期；<b>1950 年 12 月 29 日《人民日报》发表中文全文</b>，后收入《毛泽东选集》第一卷（1951 年版／1991 年第二版）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷，紧接上一篇《为争取千百万群众进入抗日民族统一战线而斗争》之后，是毛选第一卷哲学篇章的开篇；下一篇《矛盾论》（1937.08）紧承其后，二文合称「两论」，为毛泽东哲学思想的代表作</td></tr>
+      <tr><th>篇　幅</th><td>中篇。逻辑推进：<b>实践是认识的基础与真理标准（总起）→ 认识的辩证运动：由感性到理性、再由理性回到实践（两次飞跃）→ 一个认识过程的「完成」与整个认识运动的「永不完结」→ 反对「思想落后于实际」的右倾与「思想超过阶段」的「左」倾 → 归结为「知行统一观」</b>。行文大量用延安考察团、战争指挥、「知识里手」「吃梨子」等身边例子，深入浅出</td></tr>
+      <tr><th>历史坐标</th><td>遵义会议（1935.1）确立毛泽东领导地位约两年半后；全面抗战爆发（卢沟桥事变 1937.7.7）前后；此前毛选 15、16 篇（1937.5 延安全国代表会议报告与结论）刚收拢统一战线的策略路线之争，这篇与《矛盾论》正是毛泽东从<b>哲学思想根基</b>上清算「路线错误」的续篇——上一篇定策略，这一篇正学风</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">一篇讲给二十岁出头的抗大学员听的「认识论」课，竟成了后来被全党乃至世界研读的哲学名篇。1937 年 4 月起，毛泽东每周二、四上午到延安抗日军政大学讲课，为此亲手编写《辩证法唯物论（讲授提纲）》。<b>一个正指挥着红军、日理万机的领袖，为什么要亲自去给学员讲哲学？他自己说得最直白——1960 年回忆：「写《实践论》《矛盾论》，是为了给抗大讲课……去讲课，可以总结革命的经验。」</b>讲稿是他每晚写、白天睡，连熬几个星期赶出来的；讲课时他「不准他们看书，也不准他们做笔记」，只把大意讲给学员听。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：这场「哲学课」背后，是一笔算不清的血账。</b>1931 至 1934 年，王明「左」倾教条主义者们捧着马列「本本」指挥中国革命：第五次反「围剿」失败、被迫长征，根据地损失百分之九十、红军从三十万锐减到数万。遵义会议虽然纠正了军事上的错误路线、实际上确立了毛泽东的领导，但毛泽东看得很清楚——<b>如果只换人、不换脑子，同样的错误还会换个名字再犯</b>。他要从认识论根子上清算教条主义：那些「生吞活剥马克思主义书籍中的只言片语，去吓唬人们」的「本本」崇拜者，错的不是不努力，而是「主观与客观相分裂、理论与实践相脱离」。写《实践论》，就是「用马克思主义的认识论观点去揭露党内的教条主义和经验主义——特别是教条主义这些主观主义的错误」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：他在最危险的当口，把政治写成了「认识论」。</b>1937 年 7 月 7 日卢沟桥事变、全面抗战爆发，讲课不得不中断，辩证法还没讲完。可正是在这个民族存亡、全党又要准备打一场新战争、绝大多数干部文化不高、只懂打仗的关口，毛泽东选择先给干部补「认识论」——<b>在教人打仗、教人搞统一战线之前，先教人怎么正确地认识世界</b>。这与上一篇 5 月的报告遥相呼应：那边说要「提高全党理论水平」，这边就拿自己的身板示范，把马列哲学「中国化」成干部听得懂、用得上、离了延安也能带走的方法论。他自己也承认这本讲义「是不好的，因为我自己还在开始研究辩证法」，谦逊里透着从零啃哲学的狠劲。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：一篇窑洞讲稿，走了十三年才「正式发表」。</b>这节讲稿 1937 年 9 月先在延安用钢板刻写油印，靠手抄油印在根据地流传多年，成了整风学习材料；新中国成立后毛泽东又亲自大改一遍才「独自成篇」——他在给李达的信里还专门计较过一处表述：「将太平天国放在排外主义一起说不妥」。1950 年 12 月先由苏联《布尔什维克》以俄文刊出，29 日《人民日报》发表中文全文，随即李达《〈实践论〉解说》在全国连载，掀起学习热潮。<b>从油印到铅印，一篇讲稿的漫长发表史，本身就是「实践—认识—再实践」的活教材：真理不是一次写成，而是在反复检验、反复修订中才定型的。</b></p>
+    <div class="timeline">
+      <div class="tl-item blue">
+        <div class="tl-date">1931 — 1934 · 教条主义「左」倾路线的惨重代价</div>
+        <div class="tl-body">王明等「左」倾教条主义者机械照搬马列词句与苏联经验指挥革命，第五次反「围剿」失败、根据地与红军损失惨重——这是《实践论》所要清算的「历史病根」。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1935.01 · 遵义会议</div>
+        <div class="tl-body">纠正军事上的错误路线，实际上确立毛泽东在红军和党中央的领导地位；但思想路线上的清算留待「两论」从哲学高度完成。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.04 — 1937.07 · 抗大讲哲学，《实践论》完稿</div>
+        <div class="tl-body">毛泽东应抗日军政大学之邀每周二、四讲授哲学，编写《辩证法唯物论（讲授提纲）》；实践论为其中一章，1937 年 7 月完稿。每晚写、白天睡，讲课两小时、不让看书做笔记。</div>
+      </div>
+      <div class="tl-item red" style="position:relative;">
+        <div class="tl-date">1937.07.07 · 卢沟桥事变<br>（讲课中断）</div>
+        <div class="tl-body">全面抗战爆发，毛泽东忙于战事，辩证法课未讲完即中断；同月完稿的《实践论》与下月《矛盾论》构成毛选第一卷的哲学双璧。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1950.12.29 · 《人民日报》正式发表（后事）</div>
+        <div class="tl-body">定稿先以俄文刊于苏共《布尔什维克》第 23 期，再于《人民日报》发表中文全文并收入《毛泽东选集》；从窑洞油印到全国学习，历时十三年。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">读懂这篇的钥匙在<b>它的写作场合</b>：这不是书斋里的抽象玄学，而是一份「临床诊断书」——为的是治好党内两种病，教条主义（空谈理论、看轻实践）与经验主义（拘守经验、看轻理论）。<b>毛泽东把一场最现实的路线之争，提到「人到底是怎么认识世界」的哲学高度来根治，这正是它在今天仍不过时的原因：所有方法论的错误，根子上往往都是认识论的问题。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>实践是认识的来源、动力、检验真理的标准与认识的最终目的</b>；认识从实践发生，先由「感性认识」能动地上升到「理性认识」，再由理性认识回到实践去检验并指导改造世界，如此<span class="q">「实践、认识、再实践、再认识」循环往复、螺旋上升</span>——既反对空谈理论、割裂实践的教条主义，也反对拘守局部经验、轻视理论的<span class="q">经验主义</span>，最终达到主观与客观、理论与实践、知与行的<b>具体的历史的统一</b>（知行统一观）。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 实践是真理的唯一标准与「第一的观点」</h4>
+        <p>「判定认识或理论之是否真理，不是依主观上觉得如何而定，而是依客观上社会实践的结果如何而定。」辩证唯物论有两个特点：阶级性（为无产阶级服务）与<b>实践性</b>；故「实践的观点」是认识论第一的和基本的观点，一切认识一点也离不开实践。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 认识要完成「两次飞跃」</h4>
+        <p>第一次：由感性认识（感觉、印象）飞跃到理性认识（概念、判断、推理），须把感觉材料「去粗取精、去伪存真、由此及彼、由表及里」地改造制作。第二次更关键：理性认识要回到实践去检验真理、指导改造世界——「感觉到了的东西，我们不能立刻理解它，只有理解了的东西才更深刻地感觉它」，正是这层意思。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 反对两种主观主义 → 知行统一观</h4>
+        <p>教条主义（唯理论、空谈本本、看轻实践）与经验主义（经验论、拘守片断经验、看轻理论）都割裂主客观与知行；同时反对「思想落后于实际」的右倾与「思想超过阶段」的「左」倾。正确结论是「主观和客观、理论和实践、知和行的具体的历史的统一」——即循环往复、不断提高的<b>知行统一观</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇按一个<b>「循环上升」的认识螺旋</b>展开：人类最基本的实践（生产、阶级斗争、科学实验）是认识的起点；人们在实践中先得<b>感性认识</b>，再经思考的「改造制作工夫」飞跃到<b>理性认识</b>（抓住本质与规律）；但认识并未到此结束，还必须<b>再回到实践</b>——用以指导改造世界、并接受实践的检验与修正；如此一个循环完成，随即进入更高一级的循环。<b>枢纽是把「改造世界」看得比「解释世界」更重要</b>——理论再对，束之高阁、空谈一阵就毫无意义，必须落到「能动地改造世界」的实践里去。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 实践</div><div class="n-sub">生产·阶级斗争·科学实验</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">② 感性认识</div><div class="n-sub">感觉、印象，事物的现象与片面</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">③ 理性认识</div><div class="n-sub">概念判断推理·抓住本质规律</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">④ 回到实践</div><div class="n-sub">检验真理·指导改造世界</div></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:var(--red);"><div class="n-label" style="color:var(--red);">⑤ 循环上升</div><div class="n-sub">再实践·再认识·更高一级（核心）</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">拆开看这篇是认识论，合起来它其实是一部<b>「怎么做对事的底层算法」</b>。毛泽东反复用「吃梨子」「打仗」「没有把握」来举例，讲的是同一件事：<b>你真想懂一件事，就得下场去碰它；碰了还不行，得把碰出来的感觉提炼成规律（想透）；想透了还不够，得拿回真实世界里再验证、再修正。</b>感性给原料、理性给规律、实践给裁判——三者缺一环，人就会滑向「本本主义」或「经验主义」两种病。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">《实践论》的骨架是一条<b>「总起—分述—收束」</b>的论证链：先立起「实践第一」的总纲，再沿「认识怎样发生、怎样深化、怎样回到实践」逐层推进，中间插入正反两种病的对照，最后收束到一个哲学结论。它用的是一种<b>「螺旋」而非「直线」</b>的叙事——每个阶段都自带上一阶段的成果、又指向下一阶段，结构本身就在演示「认识循环上升」的道理。按内容可分为三大块，并附一张「主观主义谱系」图示意两种病。</p>
+
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">教条主义</div>
+          <div class="spec-seg green">知行统一（正确）</div>
+          <div class="spec-seg red">经验主义</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>空谈理论·看轻实践</b>只认「本本」、生吞马列词句吓唬人；理性认识无来源，沦为「无源之水」；本本主义、「左」倾路线</div>
+          <div class="spec-label"><b>主客观具体历史的统一</b>实践—感性—理性—再回到实践，循环往复、螺旋上升；既懂规律、又重实做、反复验证修正</div>
+          <div class="spec-label"><b>拘守经验·看轻理论</b>只信片断经验、看不见全局；不总结规律、无明确方针，辛苦却盲目；「庸俗的事务主义家」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red">
+        <span class="part-no">一</span>
+        <span class="part-title">总起 · 实践是认识的基础与真理标准</span>
+        <span class="part-scope">破「离开实践谈认识」</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>认识来自社会实践</b>：生产活动是最基本的实践；人的认识在物质生产之外，还从政治、文化生活中来，在阶级社会里「各种思想无不打上阶级的烙印」。</li>
+          <li><b>认识随实践发展而发展</b>：由低级到高级、由片面到更多方面；近代大工业带来近代无产阶级，才把社会认识变成科学——即马克思主义。</li>
+          <li><b>实践是真理标准</b>：「只有人们的社会实践，才是人们对于外界认识的真理性的标准」；思想合于客观规律则胜、不合则败，失败使人「吃一堑长一智」。</li>
+          <li><b>两个特点</b>：辩证唯物论公然申明阶级性（为无产阶级服务）与<b>实践性</b>；「实践的观点是辩证唯物论的认识论之第一的和基本的观点」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue">
+        <span class="part-no">二</span>
+        <span class="part-title">分述 · 认识的辩证运动：感性 → 理性 → 回到实践</span>
+        <span class="part-scope">认识怎样发生、怎样深化</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>感性认识</b>：实践中开始只看到现象、片面与外部联系（例：考察团头一两天对延安的印象）；这是认识的第一个阶段、感觉和印象阶段。</li>
+          <li><b>飞跃到理性认识</b>：感觉材料反复多次，脑子里产生「突变（飞跃）」形成概念；用判断推理把握「本质、全体、内部联系」。给感觉材料「去粗取精、去伪存真、由此及彼、由表及里」的改造制作。</li>
+          <li><b>两个要点</b>：理性认识依赖于感性认识（认识论的唯物论，破「唯理论」）；感性认识有待于发展到理性认识（认识论的辩证法，破「经验论」）。</li>
+          <li><b>还须回到实践</b>：认识的能动作用更表现在「从理性认识到革命实践」这第二个飞跃；理论要能指导行动、并被实践检验纠正，空谈束之高阁则毫无意义。</li>
+          <li><b>实例</b>：无产阶级由「自在的阶级」到「自为的阶级」；中国人民由笼统排外到认清帝国主义本质（五四运动后）；指挥官由吃败仗到懂得战略战术。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold">
+        <span class="part-no">三</span>
+        <span class="part-title">收束 · 一个过程的「完成」与整个认识的「永不完结」→ 知行统一观</span>
+        <span class="part-scope">认识的完成与归宿</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>完成了，又没有完成</b>：对某一具体过程（一项工程、一场战争）的认识，经实践检验实现预想目的即算完成；但原定方案几乎总要部分或全部被实践修正、须反复失败多次才能符合客观规律。</li>
+          <li><b>随过程推移而前进</b>：客观过程不断向前，认识须跟着「推移转变」，革命形势急速变化时尤其如此——这正是反对右倾机会主义（思想落后于实际、开倒车）与「左」翼空谈主义（思想超过阶段、冒险主义）的认识论根据。</li>
+          <li><b>无穷发展的真理观</b>：「无数相对的真理之总和，就是绝对的真理」；马列主义「并没有结束真理，而是在实践中不断地开辟认识真理的道路」。</li>
+          <li><b>结论（知行统一观）</b>：通过实践发现、证实并发展真理，改造主观世界和客观世界；「实践、认识、再实践、再认识」循环往复以至无穷、每循环进到更高一级。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">通过实践而发现真理，又通过实践而证实真理和发展真理。从感性认识而能动地发展到理性认识，又从理性认识而能动地指导革命实践，改造主观世界和客观世界。实践、认识、再实践、再认识，这种形式，循环往复以至无穷，而实践和认识之每一循环的内容，都比较地进到了高一级的程度。这就是辩证唯物论的全部认识论，这就是辩证唯物论的知行统一观。<span class="src">——篇末收束段，全篇的哲学结论。它把「实践」同时立为认识的来源、动力、检验标准与目的——认识不是一次成型的「拷贝」，而是永不停止的螺旋。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「要知道梨子的滋味，就得亲口尝」——认知的源头是亲自变革，不是围观</h4>
+          <p>毛泽东说透了认识的第一课：「你要知道梨子的滋味，你就得变革梨子，亲口吃一吃。」对任何一件事，光靠看资料、听转述、刷二手解读，得到的都只是「间接经验」，而「一切真知都是从直接经验发源的」。他特别嘲笑那种「知识里手」——「有了道听途说的一知半解，便自封为『天下第一』」。方法论迁移：今天的信息时代，最大的幻觉恰恰是「我搜过很多资料 = 我懂了」。想真正理解一个行业、一门技术、一种模式，最可靠的动作永远是<b>自己下场做一个项目、跑一遍流程、亲手碰一遍对象</b>——围观一百篇教程，不如亲手做坏一个版本。「知识里手」的笑话没有过时，反而被互联网放大成了「懂王」。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「两次飞跃」缺一不可：只攒数据不成规律，只背理论不落地，都是病</h4>
+          <p>《实践论》最有操作价值的是「两次飞跃」：第一次，把零散的感觉材料「去粗取精、去伪存真、由此及彼、由表及里」地提炼成概念、规律（从看到的现象里「想透」本质）；第二次，把想透的理论拿回实践去检验、去指导改造，行不通就改。毛泽东点出两种病恰恰断在两端——<b>经验主义</b>断在第一次：只攒了一堆「感觉」、沾沾自喜于「一得之功和一孔之见」，永远到不了规律；<b>教条主义</b>断在第二次：满脑子「本本」道理却「束之高阁、并不实行」，再好的理论也「没有意义」。方法论迁移：做任何复盘、任何学习，都要主动完成这两个动作——<b>既要把散乱经历沉淀成可复用的判断（不能只当记录员），又要立刻把结论扔回真实场景去检验、去迭代（不能只当理论家）</b>。只收集不提炼是「经验主义」，只背诵不落地是「教条主义」，两条都通向碰壁。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>认识没有「一次到位」，原定方案几乎总要落空——进步是螺旋，不是台阶</h4>
+          <p>毛泽东给了一个极易被忽略、却极清醒的判断：一个方案「毫无改变地实现出来的事，是很少的」，总会「部分地或全部地不合于实际」，要「反复失败过多次」才能接近客观规律。于是他不对抗失败，反而把失败写进方法——<b>一次循环完成了，还有下一轮更高一级的循环；「并没有结束真理，而是在实践中不断地开辟认识真理的道路」</b>。方法论迁移：今天做产品、写代码、带团队，最容易内耗的正是「以为一次就能做对」的完美主义，和「碰壁就全盘否定自己」的沮丧。毛泽东式的底气是：<b>碰壁不是失败，而是这一轮循环里宝贵的「修正信号」；只要动作是「实践—总结—再实践」，每一次落空都把你推进到更高一级。</b>「没有把握」也别怕——它往往只是你还没「接触够」，下场干一段、摸清规律，把握自然就长出来了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">判定认识或理论之是否真理，不是依主观上觉得如何而定，而是依客观上社会实践的结果如何而定。真理的标准只能是社会的实践。</div>
+        <div class="ctx">篇首论「实践是真理标准」——把检验认识的标准从「我觉得对」搬到「实践的结果」上。1991 年版文字，已与毛选刊载全文逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">你要知道梨子的滋味，你就得变革梨子，亲口吃一吃。你要知道原子的组织同性质，你就得实行物理学和化学的实验，变革原子的情况。</div>
+        <div class="ctx">论「一切真知都是从直接经验发源的」——用吃梨、做实验两个生活化例子讲透「要真知，须亲历」。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">感觉到了的东西，我们不能立刻理解它，只有理解了的东西才更深刻地感觉它。感觉只解决现象问题，理论才解决本质问题。</div>
+        <div class="ctx">论感性认识与理性认识在实践基础上的统一——现象要理论去穿透，理论须回到感觉去落实。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">马克思主义看重理论，正是，也仅仅是，因为它能够指导行动。如果有了正确的理论，只是把它空谈一阵，束之高阁，并不实行，那末，这种理论再好也是没有意义的。</div>
+        <div class="ctx">论认识的第二飞跃（回到实践）——一句话点破「理论的价值在于能指导行动」，专治空谈。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">马克思列宁主义并没有结束真理，而是在实践中不断地开辟认识真理的道路。……实践、认识、再实践、再认识，这种形式，循环往复以至无穷，而实践和认识之每一循环的内容，都比较地进到了高一级的程度。这就是辩证唯物论的全部认识论，这就是辩证唯物论的知行统一观。</div>
+        <div class="ctx">篇末收束——认识是永不完结的螺旋、每循环更高一级，「知行统一观」即全篇结论。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">18 · 矛盾论（1937.08）</div>
+        <p>「两论」的下半篇。如果说《实践论》解决的是「认识怎么来、怎么对」——立起实践标准与知行统一观；那《矛盾论》要回答的则是「世界为什么在变、怎么变」——用对立统一法则讲透矛盾的普遍性与特殊性、主要矛盾与次要矛盾、矛盾的同一性与斗争性。同是抗大哲学讲稿、同为清算教条主义而作，两篇合起来构成毛选第一卷认识论与辩证法的一对支柱，也是马克思主义哲学中国化的里程碑。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">07 · 反对本本主义（1930.05）＋ 16 · 统一战线结论（1937.05）</div>
+        <p>《反对本本主义》是《实践论》的「前传」：早在 1930 年毛泽东就喊出「没有调查，没有发言权」「本本主义的社会科学研究法也同样是最危险的」，那是他认识论思想的早期形态；《实践论》则是把它提升到哲学体系的成熟形态。而上一篇 16（1937.5 抗日前夕）刚提出要「提高全党理论水平」，本篇正是这要求落到哲学上的示范。三篇连读，能清楚看到毛泽东怎么把一条「实事求是」的思想路线，从工作口号一步步锻造成完整的认识论。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「实践—认识—再实践」的螺旋搬到你的当下</h4>
+      <p class="q">① <b>亲历题</b>：你最近「以为很懂」、其实只在围观/刷资料的一件事是什么？按《实践论》，你缺的「变革对象、亲口吃梨」的动作具体是什么——是下场做个小项目、跑一遍真实流程，还是去访谈真正在做的人？<br>② <b>两次飞跃题</b>：挑你手头正在做的一件工作复盘：你「攒到的感觉/数据」有没有被提炼成可复用的规律（第一次飞跃）？提炼出的规律有没有立刻拿回真实场景检验修正（第二次飞跃）？你是卡在「只记流水账不总结」，还是卡在「只想清楚了却不落地」？<br>③ <b>螺旋题</b>：回顾你人生或职业里某次「碰壁」，能不能换个视角——它不是全盘失败，而是这一轮循环里宝贵的「修正信号」，把你推进到了更高一级？当时「原定方案落空」后，你重新实践、修正的那一步，是不是让你后来更接近了「把握」？<br>④ <b>诊断题</b>：对照身边的两种病——有没有「生吞本本、只谈理论不落地」的教条主义式同事，和「只凭老经验、拒绝看全局」的经验主义式前辈？如果你是团队负责人，会怎么用《实践论》的办法帮两边各补上断掉的那一次「飞跃」？</p>
+      <p class="hint">提示：一件趁手的工具——把「想懂一件事」拆成四问：① 我亲自碰过它了吗（亲历）？② 我把碰出来的感觉提炼成规律了吗（想透）？③ 我把规律拿回真实世界验证/指导了吗（落地）？④ 碰壁后我修正并重来了吗（螺旋）？四问都走通，才算「真懂」——也才避开了「围观当懂、攒数据当规律、背理论当落地」三种内耗。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与《实践论》全文逐字核对（求是理论网/《人民日报》文本）</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

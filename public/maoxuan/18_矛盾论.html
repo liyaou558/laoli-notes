@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>18 · 矛盾论 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:27px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 三段式结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li,.n-sub{overflow-wrap:anywhere;word-break:break-all;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾捌</div>
+    <h1>矛盾论</h1>
+    <div class="sub2">关于事物矛盾法则的辩证法专论 · 对立统一的法则</div>
+    <div class="sub">毛泽东选集 · 第一卷 · 第十八篇 · <b>一九三七年八月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>《矛盾论》。《毛泽东选集》1991 年版题注：本篇是毛泽东继《实践论》之后，「为了同一的目的，即为了克服存在于中国共产党内的严重的教条主义思想而写的，曾在延安的抗日军事政治大学作过讲演」；「在收入本书第一版的时候，作者作了部分的补充、删节和修改」。</td></tr>
+      <tr><th>写作时间</th><td>一九三七年八月（《毛泽东选集》1991 年版题注）。它是毛泽东在抗大讲授哲学时所用讲稿《辩证法唯物论（讲授提纲）》第三章第一节「矛盾统一法则」。据党史学者考订：毛泽东 1937 年 4 月起每星期二、四上午到延安抗日军政大学讲哲学，为时三个多月；「七七事变」后忙于战事而中断，唯物辩证法部分只讲到「矛盾统一法则」（即本篇）这一节，故实际讲演在前、整理完稿在后（初稿末尾标「1937·8·7」）。</td></tr>
+      <tr><th>最初发表</th><td>本篇本为《辩证法唯物论（讲授提纲）》之一节。提纲 1937 年 9 月在延安手工钢板刻写油印、封面不署名，流传为哲学教员参考材料；1938 年 4 至 6 月广州中共广东省委刊物《抗战大学》（半月刊）「新哲学讲座」栏公开署名连载，但只刊至提纲第二章第 6 节即中止，未及本篇。定稿的《矛盾论》单独成篇公开，则是在收入《毛泽东选集》第一卷之时。</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1951/1952 年版初版、本册 1991 年第二版），是毛选第一卷的末篇、紧接《实践论》之后的收尾之章。姊妹篇《实践论》讲认识论、本篇讲辩证法，二文合称「两论」，为毛泽东哲学思想成熟的标志。</td></tr>
+      <tr><th>篇　幅</th><td>中长篇，较《实践论》更厚重的辩证法专论。逻辑骨架：<b>提出对立统一是唯物辩证法最根本的法则（总起）→ 两种宇宙观 → 矛盾的普遍性 → 矛盾的特殊性（着墨最重）→ 主要的矛盾和主要的矛盾方面 → 矛盾诸方面的同一性和斗争性 → 对抗在矛盾中的地位 → 结论</b>。行文大量征引恩格斯、列宁，也举中国古籍（《周易》、老子、孙子、董仲舒）与《水浒传》三打祝家庄、《西游记》等例子。</td></tr>
+      <tr><th>历史坐标</th><td>卢沟桥事变（1937.7.7）全面抗战爆发后不久、国共第二次合作将成之际；遵义会议（1935.1）确立毛泽东领导地位约两年半。上一篇《实践论》刚在认识论上立起「实践标准」，本篇接着在世界观上确立「矛盾法则」，两篇从哲学根基上清算十年内战时期「左」倾教条主义路线——<b>定策略（15、16 篇）、正学风（17 篇）之后，到这里完成辩证法的总清算，第一卷就此收官</b>。</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">1937 年 8 月，抗战的炮火已在华北响起，延安窑洞里的一堂哲学课却讲到了唯物辩证法最抽象的规律。身为红军的统帅，毛泽东为什么偏偏在这个节骨眼上，亲自给一群二十来岁的抗大学员讲「对立统一」？他自己说得很明白：这是为清算党内那条害死过无数同志的<b>教条主义</b>路线。上一篇《实践论》治「认识从哪来」，这一篇治「世界为什么变、该怎么看」——<b>一篇立起「实践标准」，一篇立起「矛盾法则」，双剑合璧，把路线错误从哲学的根子上剖开</b>。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：一笔要算到底的「方法论血账」。</b>1931 至 1934 年，王明等「左」倾教条主义者捧着马列「本本」与共产国际的教条指挥中国革命：不会打仗的照搬苏联城市暴动模式，第五次反「围剿」失败、被迫长征，根据地损失约百分之九十、红军由约三十万锐减到数万。遵义会议虽纠正了军事错误、事实上确立了毛泽东的领导，但毛泽东清楚——<b>不换「脑子」只换「人」，同样的错误会换个名字再犯</b>。而教条主义的哲学病根，正在于不承认「矛盾的特殊性」：把适用于某一国、某一时、某一事的普遍公式，硬套到千差万别的中国实际头上。这篇《矛盾论》，就是把「一刀切」「照抄照搬」骂到方法论的最深处。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：一篇开头就「借苏联的剑」的文章。</b>文章一开头，毛泽东先大谈苏联哲学界「在最近数年中批判了德波林学派的唯心论」，并直言「这件事引起了我们的极大的兴趣」——因为德波林学派那种「矛盾不是一开始就存在、要到一定阶段才出现」的见解，「在中国共产党内发生了极坏的影响」，正是教条主义的理论靠山。他借苏联 1930 年代初这场哲学论战做引子，把矛头悄悄对准国内：<b>表面在评外国一个学派，实际在解剖自己党内的病</b>。这一段看似「掉书袋」，实是全篇的靶心预告。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：讲稿讲了十三年，改了十三年才「定稿」。</b>这篇哲学课 1937 年 9 月先随《辩证法唯物论（讲授提纲）》在延安钢板刻写油印，靠手抄流传，后来成了延安整风的理论学习材料。毛泽东对这篇格外看重——整理讲稿时把「两论」单独抽出油印，送艾思奇、吴亮平等哲学界友人「请阅正」；延安 1939 年的六人哲学小组每周讨论，就是围绕「两论」初稿进行的，毛泽东把大家讨论的意见吸收进了定稿。收入《毛泽东选集》时他又作「部分的补充、删节和修改」。<b>一篇窑洞讲稿从油印到铅印的漫长历程，本身就是「在实践中反复检验修正真理」的活演示——哲学主张螺旋，这篇自己的成稿史也在螺旋</b>。</p>
+    <div class="timeline">
+      <div class="tl-item blue">
+        <div class="tl-date">1931 — 1934 · 教条主义「左」倾路线的惨重代价</div>
+        <div class="tl-body">王明等机械照搬马列词句与苏联经验指挥革命，第五次反「围剿」失败、根据地与红军损失惨重——这是《矛盾论》所要清算的「方法论病根」：不承认矛盾的特殊性，把公式硬套到中国头上。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1935.01 · 遵义会议</div>
+        <div class="tl-body">纠正军事上的错误路线，事实上确立毛泽东的领导地位；但思想方法上的清算，留待「两论」从认识论与辩证法两翼完成。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.04 — 1937.08 · 抗大讲哲学，《矛盾论》完稿</div>
+        <div class="tl-body">毛泽东应抗日军政大学之邀每星期二、四上午讲哲学，编写《辩证法唯物论（讲授提纲）》。本篇为其中第三章第一节「矛盾统一法则」；1937 年 8 月讲授并整理完稿（初稿末标「1937·8·7」）。白天睡、夜里写，讲课时学员「不准看书、不准做笔记」。</div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">1937.07.07 · 卢沟桥事变<br>（辩证法课讲至本篇即中断）</div>
+        <div class="tl-body">全面抗战爆发，毛泽东忙于战事，唯物辩证法原拟讲的「质量互变」「否定之否定」等法则与范畴未能讲出，只讲了「矛盾统一法则」一节——即本篇《矛盾论》。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1937.09 起 · 油印流传 → 延安整风学习材料</div>
+        <div class="tl-body">提纲 1937 年 9 月延安油印；1942 年后「两论」成为一些地方整风学习材料。定稿经作者修订后收入《毛泽东选集》第一卷，成为毛选第一卷的收尾之篇。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">读懂这篇的钥匙，同样在<b>它的写作场合与对象</b>：这不是象牙塔里的玄学，而是写给一群要上前线打仗、做群众工作、搞根据地建设的年轻干部的「怎样正确地想问题」课。毛泽东把抽象的「对立统一规律」讲成能上手的思维方法——<b>看到矛盾要分清主次、分清特殊与一般、分清对抗与非对抗，才能对症下药</b>。这正是它历久弥新的原因：一切"一刀切""照本宣科"的毛病，根子上都是忘记了矛盾的特殊性。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>「事物的矛盾法则，即对立统一的法则」是唯物辩证法最根本的法则</b>；矛盾普遍存在（无处不有、无时不有）又各具特殊性，研究它须依次弄清——两种宇宙观、矛盾的普遍性、矛盾的特殊性、主要矛盾与矛盾的主要方面、矛盾的同一性和斗争性、对抗在矛盾中的地位，从而学会「<span class="q">具体地分析具体的情况</span>」，从根子上清除「只知道照搬一般公式」的教条主义。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 内因是根据，外因是条件</h4>
+        <p>「唯物辩证法认为外因是变化的条件，内因是变化的根据，外因通过内因而起作用。」鸡蛋遇适当温度能变鸡子、石头却不能——二者「根据」不同。要引导革命到胜利，须靠自己政治路线的正确与组织的巩固，不能把成败一味归给外部环境。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 共性个性、绝对相对，是矛盾问题的精髓</h4>
+        <p>普遍性寓于特殊性之中，「共性个性、绝对相对的道理，是关于事物矛盾的问题的精髓，不懂得它，就等于抛弃了辩证法」。所以认识须由特殊到一般、再由一般回到特殊循环往复——教条主义恰恰断在只认「一般」、拒绝研究「特殊」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 不同质的矛盾，用不同质的方法解决</h4>
+        <p>要具体地分析具体矛盾（列宁：马克思主义「活的灵魂」）。研究问题「忌带主观性、片面性和表面性」；还要分清主要矛盾与非主要矛盾、矛盾的主要方面与次要方面，抓重点而不失全面，并对「对抗性」与「非对抗性」矛盾区别对待——斗争方法绝不是一个模子。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全篇是一架<b>「层层下钻、再汇合收口」的辩证法分析机</b>：先立总纲——对立统一是辩证法最根本的法则；随即分清两种看世界的宇宙观（辩证法 vs 形而上学），点出二者分野在内因与外因；然后先讲矛盾的<b>普遍性</b>（无处不在、无时不有），再以最重的篇幅讲矛盾的<b>特殊性</b>（不同质的矛盾要用不同质的方法解决）——这是全篇的枢纽与真意；接着钻进「如何抓住主要矛盾、矛盾的主要方面」，再看矛盾两方面如何既同一又斗争、可否转化；最后提醒对抗只是矛盾斗争的一种形式、绝非一切形式；末了汇合成方法论结论。<b>主线是「普遍—特殊—重点—转化—方式」：从承认矛盾，到区分矛盾，到抓住要害，到处理转化。</b></p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 总纲</div><div class="n-sub">对立统一是辩证法最根本法则</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">② 两种宇宙观</div><div class="n-sub">辩证法内因论 vs 形而上学外因论</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">③ 矛盾普遍性</div><div class="n-sub">无处不有·无时不有·差异即矛盾</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">④ 矛盾特殊性</div><div class="n-sub">具体分析·不同质用不同法（枢纽）</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">⑤ 主要矛盾·主方</div><div class="n-sub">抓重点 + 两点论</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑥ 同一性与斗争性</div><div class="n-sub">对立面依条件转化</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">⑦ 对抗只是斗争之一</div><div class="n-sub">区别对抗/非对抗处理</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">拆开看是七节辩证法讲义，合起来它其实是一套<b>「面对一个复杂问题时，头脑该按什么顺序转」的操作规程</b>：先问这问题里有没有矛盾、矛盾普遍不普遍（不稀奇、别慌）；再问这矛盾特殊在哪、和我见过的别的问题差在哪（别照搬旧经验）；再问哪一个矛盾是当下最主要的、哪一方是主要方面（别眉毛胡子一把抓）；再问双方能不能转化、要用对抗还是非对抗的手段去处理（别一上来就鱼死网破）。<b>毛泽东把哲学讲成了「想问题的工序」——这正是它一百年后仍可用的原因。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">《矛盾论》的骨架是一条<b>「总起—横剖—竖切—收束」</b>的论证链：篇首先把七个要研究的问题一并摆出（相当于地图），再逐一展开。第 1 节是<b>总起</b>，确立两种宇宙观之争；第 2—3 节讲矛盾的两面属性——普遍与特殊（横剖矛盾的「宽」与「深」），其中特殊性是重心；第 4—6 节讲面对矛盾的具体办法（竖切矛盾的结构与处理）：抓主次、看转化、辨对抗；第 7 节<b>结论</b>收口到方法论。先附一张「两种宇宙观」光谱图示意开篇的总分野。</p>
+
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">形而上学宇宙观</div>
+          <div class="spec-seg gold">辩证唯物论的宇宙观</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>孤立·静止·片面 · 外因论</b>把事物看成彼此孤立、永远不变，变化只是数量增减或外力的推动；「天不变，道亦不变」式的思想曾为封建统治者所拥护</div>
+          <div class="spec-label" style="border-left:none;"><b>联系·发展·全面 · 内因论</b>从内部矛盾看发展，外因是条件、内因是根据；教导人观察分析各种事物的矛盾运动，据以指出解决矛盾的方法</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red">
+        <span class="part-no">一</span>
+        <span class="part-title">两种宇宙观 —— 全篇总起</span>
+        <span class="part-scope">分内外因，立辩证法的旗</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>两军对垒</b>：人类认识史上一向有「形而上学的见解」与「辩证法的见解」两种互相对立的宇宙观；列宁讲的发展观两分即此。</li>
+          <li><b>形而上学的病</b>：用「孤立的、静止的和片面的观点去看世界」，把变化看成数量增减或场所变更，原因要到事物外部（地理、气候、外力）去找。</li>
+          <li><b>辩证法的立场</b>：发展是「事物内部的必然的自己的运动」，根子在「事物内部的矛盾性」；内部矛盾性是第一位的原因，与他物的互相联系影响是第二位的原因。</li>
+          <li><b>标志性结论</b>：「外因是变化的条件，内因是变化的根据，外因通过内因而起作用」；举鸡蛋/石头的温度之喻，并落到「两军相争……皆决于内因」与一九二七年、一九三五年党的两次自救上。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue">
+        <span class="part-no">二 · 三</span>
+        <span class="part-title">矛盾的普遍性与特殊性 —— 一横一纵的骨架</span>
+        <span class="part-scope">全篇枢纽：特殊性着墨最重</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>普遍性（横向）</b>：矛盾存在于一切事物发展过程中，又贯串每一过程的始终。恩格斯「运动本身就是矛盾」、列宁在数学力学物理化学社会科学里列矛盾诸例；「没有什么事物是不包含矛盾的，没有矛盾就没有世界」；批判德波林学派「差异不是矛盾」论——「差异就是矛盾」。</li>
+          <li><b>特殊性（纵向·最重）</b>：要从几个层次去研究——各种物质运动形式、每个过程、过程中的每一阶段、每一阶段矛盾的各方面都各有特殊矛盾与特殊本质；「不同质的矛盾，只有用不同质的方法才能解决」。</li>
+          <li><b>主攻教条主义</b>：教条主义「是懒汉，拒绝对于具体事物做任何艰苦的研究工作」，把「一般真理」变成「纯粹的抽象公式」「到处硬套」；与之相对是列宁的话——「马克思主义的活的灵魂，就在于具体地分析具体的情况」。</li>
+          <li><b>方法三忌 + 循环</b>：研究问题「忌带主观性、片面性和表面性」；认识由特殊到一般、再由一般到特殊循环往复而不断深化。举《水浒传》宋江三打祝家庄——前两次败在情况不明、方法不对，第三次「从调查情形入手」、拆散联盟、用「木马计」式内应方胜，被称「最好的」唯物辩证法事例。</li>
+          <li><b>精髓句</b>：普遍性即共性、寓于特殊性之中，「共性个性、绝对相对的道理，是关于事物矛盾的问题的精髓」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold">
+        <span class="part-no">四 — 六</span>
+        <span class="part-title">主要矛盾 · 同一性斗争性 · 对抗 —— 面对矛盾的具体办法</span>
+        <span class="part-scope">抓重点、看转化、辨方式</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>主要的矛盾和矛盾的主要方面</b>：事物含诸多矛盾，地位与力量不平衡，「没有绝对地平衡发展的东西，必须反对平衡论」；要抓主要的矛盾与矛盾的主要方面（抓重点），又不失对非主要一方的照应（两点论）——这成为政党决定战略战术「重要方法之一」。</li>
+          <li><b>矛盾诸方面的同一性和斗争性</b>：对立面「各以和它对立着的方面为自己存在的前提」，又在一定条件下各自「向相反的方面转化」——如无产阶级与资产阶级、战争与和平、坏事与好事；同一性是相对的、有条件的，斗争性是绝对的、无条件的。</li>
+          <li><b>对抗在矛盾中的地位</b>：对抗（如火山爆发、阶级斗争的对抗形式）只是「矛盾斗争的一种形式」，绝不是「矛盾斗争的一切形式」；多数社会矛盾须用非对抗的方法解决，随条件可相互转化。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green">
+        <span class="part-no">七</span>
+        <span class="part-title">结论 —— 收口到方法论</span>
+        <span class="part-scope">击破教条主义，整理经验成原则</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>总归结</b>：矛盾法则「是自然和社会的根本法则，因而也是思维的根本法则」，它「对于人类的认识史是一个大革命」。</li>
+          <li><b>研究要点之重述</b>：普遍性绝对性、特殊性相对性、同一性相对性、斗争性绝对性——研究普遍与斗争时要区分斗争形式，研究特殊与同一时要区分主次。</li>
+          <li><b>双向疗效</b>：真正懂得上述要点，既能「击破」教条主义思想，也能使有经验的同志「整理自己的经验，使之带上原则性，而避免重复经验主义的错误」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">事物的矛盾法则，即对立统一的法则，是自然和社会的根本法则，因而也是思维的根本法则。它是和形而上学的宇宙观相反的。它对于人类的认识史是一个大革命。……当着我们研究矛盾的特殊性和相对性的时候，要注意矛盾和矛盾方面的主要的和非主要的区别；当着我们研究矛盾的普遍性和斗争性的时候，要注意矛盾的各种不同的斗争形式的区别。否则就要犯错误。……这些，就是我们研究矛盾法则的一些简单的结论。<span class="src">——第七节「结论」，全篇的收束段。它把七节的分析收拢成一句话的方法论：承认矛盾要「全面」，分析矛盾要「抓主」，处理矛盾要「分形式」。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「外因是条件、内因是根据」——别把锅都甩给环境，也别否认环境</h4>
+          <p>鸡蛋和石头同受一个温度，一个成了鸡子、一个仍是石头。毛泽东用这个例子立住一个极易被粗暴化、却极中肯的判断：<b>同样的外部条件，能不能起变化、变成什么样，最终取决于事物内部自己的机制</b>。「两军相争，一胜一败……皆决于内因」，组织成败、个人进退，根子上都在自己的路线是否正确、组织是否巩固。但它不是「唯意志论」——他同样承认「外因是变化的条件」，外部温度不是可有可无的。方法论迁移：做不成一件事，别急着全归咎于「市场不好、上司不行、运气差」这类外因，先问自己这套机制/策略/能力的「内因」哪里没到位；但也别反过来无视「温度」这个必要的外部条件——<b>真正的成熟，是同时盯住「自己的根据」和「外部是否给了必要条件」两件事</b>。单看一头，就是毛泽东要骂的形而上学的片面。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「共性个性、绝对相对是精髓」——警惕一切"模板"，包括这篇本身</h4>
+          <p>毛泽东最狠的一刀，是骂教条主义「是懒汉，拒绝对于具体事物做任何艰苦的研究工作，把一般真理看成凭空出现的东西」、变成「到处硬套」的公式。这恰好构成一个精妙的自我指涉：<b>连《矛盾论》自己讲的那些「法则」，若被当成放之四海皆准、拿来生搬硬套，就重蹈了它最反对的覆辙</b>——因为它自己就说「共性个性……的道理是精髓」，共性永远寓于个性之中，一般永远要回到特殊里去落地。方法论迁移：今天的人并不比 1937 年的教条主义者更免疫——各类「最佳实践」「爆款模板」「通用框架」「标准作业流程」满天飞，越是被验证有效的东西，越容易被人拿去「到处硬套」而翻车。<b>对待任何成功方法论（包括这篇精读笔记），正确的姿势都是把它当「待检验的共性」，先问我的具体场景特殊在哪、要往哪一步做裁剪</b>，而不是当「真理公式」直接誊抄。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>先抓「主要矛盾」，再定「矛盾的性质」，别上来就对抗——一套处理冲突的通用工序</h4>
+          <p>第 4 至 6 节几乎是给任何复杂局势开的「处理工序」：先看清楚问题里到底有哪几组矛盾、此刻哪组是主要的、主要方面在哪一方（分清主次轻重）；再看对立双方能否在当下共同存在、会不会在一定条件下互相转化（别把关系看成死的）；最后判断这是要「对抗」硬碰硬的矛盾，还是可以用非对抗、讲和、协商、改造去解决的矛盾——<b>「对抗是矛盾斗争的一种形式，而不是矛盾斗争的一切形式」，多数矛盾根本不至于到你死我活</b>。方法论迁移：带团队遇到分歧、与人合作起摩擦、公司里新旧方案顶牛，最常犯的错正是次序颠倒——情绪一上来就把对方当成「敌我矛盾」要一决高下，或对一堆矛盾眉毛胡子一把抓。按《矛盾论》的工序来：先分清哪些是本质分歧、哪些是利益摩擦（性质不同、解法不同）；再抓住此刻最拖后腿的那个主要矛盾，优先解决；能转化、能调和的对立面，就别轻易推到对抗上。这一套「先定性、后抓主、慎对抗」，放诸现代的组织与关系，依然锋利。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">事物的矛盾法则，即对立统一的法则，是唯物辩证法的最根本的法则。……因此，我们在研究这个法则时，不得不涉及广泛的方面，不得不涉及许多的哲学问题。</div>
+        <div class="ctx">篇首第一句——立起全篇总纲：对立统一是辩证法最根本的法则，随之列出本篇要研究的七个问题。1991 年版文字，已逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">唯物辩证法认为外因是变化的条件，内因是变化的根据，外因通过内因而起作用。鸡蛋因得适当的温度而变化为鸡子，但温度不能使石头变为鸡子，因为二者的根据是不同的。</div>
+        <div class="ctx">第一节「两种宇宙观」论内外因——用鸡蛋/石头的温度之喻，讲透「内因是根据、外因是条件」。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">没有什么事物是不包含矛盾的，没有矛盾就没有世界。……他们不知道世界上的每一差异中就已经包含着矛盾，差异就是矛盾。</div>
+        <div class="ctx">第二节「矛盾的普遍性」——矛盾无处不在、无时不有，连「差异」本身也是矛盾，批德波林学派「差异不是矛盾」论。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">研究问题，忌带主观性、片面性和表面性。所谓主观性，就是不知道客观地看问题……所谓片面性，就是不知道全面地看问题。……列宁说：马克思主义的最本质的东西，马克思主义的活的灵魂，就在于具体地分析具体的情况。</div>
+        <div class="ctx">第三节「矛盾的特殊性」——点出研究问题三忌，并引列宁「具体地分析具体的情况」为方法论纲领。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这一共性个性、绝对相对的道理，是关于事物矛盾的问题的精髓，不懂得它，就等于抛弃了辩证法。</div>
+        <div class="ctx">第三节结尾——全篇画龙点睛处：普遍性寓于特殊性之中，「共性个性、绝对相对」是矛盾问题的精髓。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">对抗是矛盾斗争的一种形式，而不是矛盾斗争的一切形式。……炸弹在未爆炸的时候，是矛盾物因一定条件共居于一个统一体中的时候。待至新的条件（发火）出现，才发生了爆炸。</div>
+        <div class="ctx">第六节「对抗在矛盾中的地位」——开篇设问自答，点明对抗只是矛盾斗争的一种形式、绝非一切形式，并以炸弹「未爆—发火—爆炸」为喻。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">第二卷 · 抗日战争时期（上）开篇《反对日本进攻的方针、办法和前途》（1937.07.23）</div>
+        <p>随着本篇收官，毛选第一卷 18 篇全部完成，下一程进入<b>第二卷「抗日战争时期（上）」</b>，首篇写于卢沟桥事变后半个月（1937.7.23），是抗战爆发后毛泽东就「如何抗战」立的第一份系统性方针宣言。从一个总纲式的判断开始：「平津危机！华北危机！中华民族危机！」——紧接两论的方法论，看它如何在民族存亡关头把矛盾分析法用到国策层面。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">17 · 实践论（1937.07）＋ 13 · 中国革命战争的战略问题（1936.12）</div>
+        <p>先与上一篇《实践论》对照：「两论」本是一体两面——<b>《实践论》立认识论（认识从哪来、靠什么检验），《矛盾论》立辩证法（世界怎么变、怎样分析矛盾）</b>，一论「知」、一论「法」，合看才是毛泽东完整的思想方法论。再回看第 13 篇《中国革命战争的战略问题》——那是把矛盾分析法最早用在军事上的范例，主张从中国战争的特殊性出发、抓主要矛盾（敌强我弱下的战略持久），本篇正是把那套军事辩证法提炼为一般哲学原理。三篇连读，能清楚看到毛怎样把十年内战的战略经验，升华为放之四海皆准又绝不脱离具体的方法论。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「矛盾分析法」搬到你的当下</h4>
+      <p class="q">① <b>内外因题</b>：挑一件你最近想做却一直没做成（或做成失败）的事，按「内因是根据、外因是条件」拆一遍：你自己的策略/能力/机制哪里不到位（内因）？客观的时机、资源、环境缺了什么（外因）？你之前把失败主要归给了哪一边？现在调整一下归因，下一步动作会变吗？<br>② <b>反教条题</b>：举一个你「照着某个热门方法论/通用最佳实践去做、却碰了壁」的具体例子。用「矛盾的特殊性」反思：你当时把它当成了「普遍公式」还是「待检验的共性」？那个场景特殊在哪、让你硬套失败的特殊矛盾是什么？如果重做，你会怎么裁剪或改写出适配这套做法的「你自己的版本」？<br>③ <b>抓主次题</b>：你手上现在同时有好几件纠缠的事（几组矛盾）。用「主要矛盾与矛盾的主要方面」理一遍：此刻哪一件是拖累全局的最主要矛盾？在那一件里，最主要、最该先解决的点又是哪个？先集中火力解决这一个，其它会不会随之松动？<br>④ <b>定性题</b>：某段关系或某次团队冲突里，你习惯把它当成「非对抗不可」的硬碰硬，还是先试着判断它属可调和、可转化的矛盾？按第 6 节「对抗只是斗争的一种形式」，你会不会把某些原本可以「求同存异、创造条件让对立面转化」的冲突，误推成了对抗？</p>
+      <p class="hint">提示：一张趁手的「矛盾分析卡」——遇事先自问四句：① 这问题里有哪几组矛盾，彼此什么关系？（别只见局部/只见一个）② 此刻哪一组是主要矛盾、主要方面在哪一方？（抓重点）③ 这矛盾的双方能不能先共存、会不会在什么条件下互相转化？（别把关系看死）④ 它该用对抗还是非对抗的方式解决？（先定性，再动手）。四问走一遍，「一刀切」「一上来就干仗」的毛病会小很多。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记 · 第一卷 · 完</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与《矛盾论》全文逐字核对（求是理论网/马克思主义文库文本）</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

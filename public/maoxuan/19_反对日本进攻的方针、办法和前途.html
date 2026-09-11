@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>19 · 反对日本进攻的方针、办法和前途 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">拾玖</div>
+    <h1>反对日本进攻的方针、办法和前途</h1>
+    <div class="sub2">全面抗战头半个月的一份「方针—办法—前途」推演 · 八大纲领</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第一篇 · <b>一九三七年七月二十三日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>《反对日本进攻的方针、办法和前途》。最初在《解放》周刊上发表时题作<b>《论反对日本帝国主义进攻的方针办法与前途》</b>，收入《毛泽东选集》时改用今题（据延安时期《解放》周刊著录及党史研究文献；本篇在 1991 年版《毛泽东选集》中未附初刊题注）。</td></tr>
+      <tr><th>写作时间</th><td>一九三七年七月二十三日（《毛泽东选集》一九九一年版正文标题下所标）。卢沟桥事变后第十六天，蒋介石庐山谈话（七月十七日）发表后第六天。</td></tr>
+      <tr><th>最初发表</th><td>一九三七年七月二十六日出版的《解放》周刊第一卷第十二期（中共中央机关刊物，延安）。据《中国抗日战争史》引注，该期出版于七月二十六日；同期前后，《解放》周刊连续刊发中共领导人论七七事变性质与前途的文章。</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年初版，本册依据 1991 年第二版），是第二卷「抗日战争时期（上）」的<b>开卷第一篇</b>。第一卷以哲学「两论」收官，第二卷以抗战国策开篇——从「怎么想」转入「怎么办」。</td></tr>
+      <tr><th>篇　幅</th><td>短篇政论，分四节：<b>一 两种方针／二 两套办法／三 两个前途／四 结论</b>。文字极口语化（「打小算盘，弄小智术，官僚主义，阿Q主义」），结构却严整如链条：方针决定办法，办法决定前途。</td></tr>
+      <tr><th>版本注</th><td>据党的文献研究机构整理，一九九一年第二版对本篇<b>题解</b>作了两处修订：①把「蒋介石迟迟至事变后十日才在庐山发表谈话，宣布对日抗战」中的「宣布对日抗战」改为「<b>确定了准备对日抗战的方针</b>」（国民党政府迟至八月十四日上海抗战爆发后才发表《自卫抗战声明书》）；②在「采取消极抗日积极反共反人民的反动政策」前加「<b>从一九三八年十月武汉失守以后，更</b>」十五字，据毛泽东《论联合政府》中「从一九三七年七月七日卢沟桥事变到一九三八年十月武汉失守这一个时期内，国民党政府的对日作战是比较努力的」一语校正。</td></tr>
+      <tr><th>历史坐标</th><td>卢沟桥事变（1937.7.7）后、平津沦陷（7.28—30）前夕、国共第二次合作尚未正式成立之际（红军改编为八路军在八月二十五日）。这是七七事变后中共<b>第一次系统拿出「抗战怎么打」的完整方案</b>：一个月后，本文的「八大纲领」在洛川会议上扩充为正式的《中国共产党抗日救国十大纲领》——一篇时评，长成了一部政纲。</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">一九三七年七月，北平西南的卢沟桥响起枪声，中国被推到亡国与生存的分岔口。半个月里，各方都在讲话——通电、谈话、社论——但毛泽东要回答的是另一个更硬的问题：<b>方针喊出来之后，办法在哪里？办法用下去之后，前途是什么？</b>他把当时中国面对的两条路，写成了一份可以逐条对照、逐项检验的推演。这也是《毛泽东选集》第二卷的开卷之篇：第一卷「两论」教人怎么正确地想问题，第二卷第一篇立刻教人怎么在国难当头把问题办成。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性一：先接住对方的宣言，再递上一张考卷。</b>七月十七日蒋介石在庐山发表谈话，说「如果战端一开，那就地无分南北，人无分老幼，无论何人皆有守土抗战之责任」。对蒋介石，中共此前骂了十年；毛泽东在这篇文章里却把它称为「国民党多年以来在对外问题上的第一次正确的宣言」，并公开表示欢迎、拥护，还专门对着「蒋介石先生和全体爱国的国民党员们」喊话：希望你们坚持自己的方针，实践自己的诺言。握手之后，他紧接着补了一句真正锋利的话——<b>「试验坚决抗战有诚意与否，看他肯采取并实行这一套办法与否。」</b>不问你真心不真心，只看你肯不肯做这八件事。这句话把表态从「修辞学」拉回到「清单学」。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性二：文章写完后几天，警告就被现实按周验证。</b>七月二十三日，毛泽东在延安写下此文，文中断言妥协退让的方针「如不迅速改变，将使平津和华北尽丧于敌人之手」。七月二十八日，日军猛攻南苑，第二十九军副军长佟麟阁、师长赵登禹在战斗中殉国；二十九日北平失守，三十日天津失守——文章发表不到一周，平津真的丢了。这种「预言就在下一期报纸抵达前线时成真」的时间感，是这篇文献少见的戏剧张力：它不是在事后总结，而是在最烫的现场写的一份路线选择题。</p>
+    <p class="lead" style="margin-top:12px;"><b>戏剧性三：一篇周刊时评，一个月后长成了党的纲领。</b>文章提出的「八大纲领」（军队总动员、人民总动员、改革政治机构、抗日外交、改良人民生活、国防教育、抗日财政经济政策、民族统一战线），在八月二十二日至二十五日的洛川会议上被吸收、扩充为《中国共产党抗日救国十大纲领》，成为全面抗战路线的正式表述。同期军事上则定下红军「独立自主的山地游击战」的方针——<b>一篇报纸文章里的政策清单，成了随后八年抗战中共一以贯之的政治纲领骨架</b>。</p>
+    <div class="timeline">
+      <div class="tl-item red">
+        <div class="tl-date">1937.07.07 · 卢沟桥事变</div>
+        <div class="tl-body">日军在卢沟桥向中国驻军进攻，第二十九军奋起抵抗，全民族抗战由此开始。据本篇引述：卢沟桥距北平城十余公里，是北平西南门户。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1937.07.08 · 中共中央通电全国</div>
+        <div class="tl-body">《中国共产党为日军进攻卢沟桥通电》：「平津危急！华北危急！中华民族危急！」七月十二日刊于《解放》周刊第一卷第十期。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.07.17 · 蒋介石庐山谈话</div>
+        <div class="tl-body">提出解决卢沟桥事件的四项条件，结语称「地无分南北，人无分老幼……皆有守土抗战之责任」。毛泽东评之为国民党「多年以来在对外问题上的第一次正确的宣言」。<span class="note">（1991 年版题解已将「宣布对日抗战」校正为「确定了准备对日抗战的方针」）</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1937.07.19 — 07.21 · 舆论战打响</div>
+        <div class="tl-body">庐山谈话公开发表；七月十九日《新中华报》社论称「任何犹豫幻想，希望中日仍然能够『和平』，实在就是等于自杀」。二十一日中共中央提出全国海陆空军总动员、全国人民总动员等五项主张。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1937.07.23 · 本文写成（同日中共向南京提八项办法）</div>
+        <div class="tl-body">毛泽东在延安写成本篇，把方针、办法、前途一并摆开，逐条对照。同日中共中央向南京政府提出「立即实行全面的对日抵抗」「立刻改革政治机构」「立刻实现国共两党的亲密合作」等八项具体办法。</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1937.07.26 · 《解放》周刊第一卷第十二期发表</div>
+        <div class="tl-body">以《论反对日本帝国主义进攻的方针办法与前途》为题刊出，面向国统区与沦陷区翻印发行。</div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">1937.07.28 — 07.30 · 平津沦陷（文中警告成真）</div>
+        <div class="tl-body">日军猛攻南苑，第二十九军副军长佟麟阁、师长赵登禹殉国；二十九日北平失守，三十日天津失守。文中「将使平津和华北尽丧于敌人之手」的判断，在文章发表后数日即兑现。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1937.08.13 — 08.14 · 淞沪会战 · 国民政府自卫声明</div>
+        <div class="tl-body">日军大举进攻上海；十四日国民政府发表《自卫抗战声明书》。至此全国性抗战全面铺开——这也正是题解要改口的地方：此前蒋介石只是「确定准备抗战的方针」。</div>
+      </div>
+      <div class="tl-item green">
+        <div class="tl-date">1937.08.22 — 08.25 · 洛川会议 · 八大纲领扩充为十大纲领</div>
+        <div class="tl-body">中共中央在陕北洛川冯家村召开政治局扩大会议，通过《中共中央关于目前形势与党的任务的决定》与《中国共产党抗日救国十大纲领》，确定全面抗战路线与红军「独立自主的山地游击战」方针。本篇的八大纲领自此升格为党的正式纲领。</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">读懂这篇的钥匙，在于它的<b>文体</b>：它不是宣言，也不是檄文，而是一次冷静的「政策推演」。毛泽东把最容易被情绪带偏的国难话题，硬拆成三个可检验的环节——<b>方针（选哪条路）→ 办法（配哪套动作）→ 前途（走到哪个终点）</b>，并宣布：看一个人、一个党、一个政府是不是真要抗战，不必争辩其内心，只要看他肯不肯采取并实行第一套办法。这种「把决心变成清单、把清单变成可核对的动作」的写法，使它在同类政论中格外耐读。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：<b>日本进攻面前，中国只有两种方针——坚决抗战与妥协退让；方针决定办法（坚决抗战必配「八大纲领」，妥协退让必配样样相反的一套），办法决定前途（自由解放，或亡国为奴）。</b>因此，检验抗战诚意的标准不是宣言而是清单——<span class="q">「看他肯采取并实行这一套办法与否」</span>；结论是：一定要实行第一种方针，采取第一套办法，争取第一个前途。</div>
+    <div class="cards">
+      <div class="card" style="border-top-color:var(--red);">
+        <h4>① 方针只有两种，没有第三条路</h4>
+        <p>中共中央七月八日通电与蒋介石七月十七日庐山谈话，是本篇认定的两份「具有历史意义的政治宣言」，<b>共同点是主张坚决抗战、反对妥协退让</b>。但还有第二种方针的可能：平津之间的汉奸与亲日派积极活动，企图包围平津当局、动摇坚决抗战的方针。「这种妥协退让的方针，和坚决抗战的方针是根本矛盾的。」二者之间不存在温吞的中间态。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 办法是跟着方针来的</h4>
+        <p>方针不能停留在纸面：坚决抗战必须配一整套办法，毛泽东把它叫做<b>八大纲领</b>（军队总动员、人民总动员、改革政治机构、抗日外交、改良人民生活、国防教育、抗日财政经济政策、民族统一战线）；妥协退让则必然配一套样样相反的做法。他给出的规律是「方针是不抵抗主义的时候，一切办法都反映不抵抗主义，这个我们已经有了六年的教训」——<b>办法是方针的显影液</b>。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 前途由方针与办法兑现，且当场可检验</h4>
+        <p>实行第一套 → 驱逐日本帝国主义、实现中国自由解放；实行第二套 → 日本帝国主义占领中国、中国人民都做牛马奴隶。既然前途如此分明，判断诚意的办法就只能落在办法上：<b>「试验坚决抗战有诚意与否，看他肯采取并实行这一套办法与否。」</b>本文最终把重心从「是否拥护抗战」推进到「是否肯付出推行清单的代价」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">本篇是一台<b>「三段推演、一环扣一环」的政策分析机</b>：先摆出事实层——七七事变后国共两党各自发表的政治宣言；由此确认存在两种根本矛盾的方针；再由方针推出各自必配的那套办法（其中第一套办法被逐条命名为八大纲领）；再由办法推出两个截然相反的前途；最后收口成行动结论与口号。<b>整条链的枢纽是中间那一环：「办法是跟着方针来的」——它把「你站哪边」的价值之争，翻译成「你做哪几件事」的事实之争，从而使表态可以被验证。</b>这也是本篇比一般抗战檄文更「可用」的地方：它提供的不是情绪，而是审查路径。</p>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 两个宣言</div><div class="n-sub">中共 7.8 通电 ＋ 蒋 7.17 庐山谈话</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">② 两种方针</div><div class="n-sub">坚决抗战与妥协退让 根本对立</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">③ 两套办法</div><div class="n-sub">八大纲领 对 样样相反的那一套</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">④ 两个前途</div><div class="n-sub">自由解放 对 做牛马奴隶</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">⑤ 结论</div><div class="n-sub">选第一方针与第一办法</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">拆开看，四节不过是「两种／两套／两个」的排比；合起来，它其实是一套<b>「遇到原则之争时怎样把它变成可操作问题」的通用工序</b>：先确认有哪些可能的路线（方针）；再为每条路线写出它必然要求的动作清单（办法）；再把每条路线推到终点看结局（前途）；最后用「愿不愿意承担这套动作的代价」来判定对方的真实立场。<b>毛泽东把一个只能表忠心的题目，改造成一道可以打分的题目。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">四节的结构极其对称：<b>第一节定方针（两种）→ 第二节铺办法（两套）→ 第三节收前途（两个）→ 第四节下结论</b>。前两节是「现状解剖」，第三节是「后果推演」，第四节是「行动指令」。其中第二节是全篇重心：八大纲领逐条列出，又用八个「不是……而是……」把反面那一套照出来，形成一面镜子。以下按四节拆解，并附上「八大纲领 vs 另一套办法」的逐条对照，以及两个前途的光谱。</p>
+
+    <div class="part">
+      <div class="part-head red">
+        <span class="part-no">一</span>
+        <span class="part-title">两种方针 —— 先认账，再设防</span>
+        <span class="part-scope">接住两个宣言，警惕第二种可能</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>接住宣言</b>：全文从中共中央七月八日通电讲起，大段引述「平津危急！华北危急！中华民族危急！」；再引蒋介石庐山谈话的四项条件与结语，判定二者是「国共两党对卢沟桥事变的两个具有历史意义的政治宣言」。</li>
+          <li><b>定性与肯定</b>：两宣言共同点是主张坚决抗战、反对妥协退让，这是「对付日本进攻的第一种方针，正确的方针」；并称庐山谈话为国民党「多年以来在对外问题上的第一次正确的宣言」，表示欢迎。</li>
+          <li><b>设防</b>：立刻指出第二种方针的可能——平津之间的汉奸与亲日派「企图包围平津当局」，动摇坚决抗战的方针，「这是非常危险的现象」，若不迅速改变「将使平津和华北尽丧于敌人之手」。</li>
+          <li><b>五组呼号</b>：连续以短句呼号——第二十九军将士、平津和华北同胞、全国同胞、蒋介石先生与爱国国民党员、全国军队包括红军在内，一律「团结起来，反对妥协退让，实行坚决抗战」。</li>
+          <li><b>立场声明</b>：共产党人「一心一德，忠实执行自己的宣言」，同时拥护蒋介石的宣言，「愿同国民党人和全国同胞一道为保卫国土流最后一滴血」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold">
+        <span class="part-no">二</span>
+        <span class="part-title">两套办法 —— 全篇重心：「八大纲领」与其反面</span>
+        <span class="part-scope">办法是跟着方针来的</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>总纲句</b>：「在坚决抗战的方针之下，必须有一整套的办法，才能达到目的。」随后逐条列出八项，结束后自命名：「这一套为着实现坚决抗战的办法，可以名为八大纲领。」</li>
+          <li><b>最贵的三条</b>：军队总动员（含「确定游击战争担负战略任务的一个方面」——日后敌后战场的伏笔）、人民总动员（开放爱国运动、释放政治犯、取消《危害民国紧急治罪法》与《新闻检查条例》，即「给人民以爱国的自由」）、改革政治机构（容纳各党各派「共同管理国事」，政府「要实行民主集中制」）。</li>
+          <li><b>民生一条的辩驳</b>：改良人民生活（取消苛捐杂税、减租、限高利贷、改善劳工与下级军官待遇）不会拖垮财政，反将「使人民的购买力提高，市场繁荣，金融活泼」——他预先驳掉了「抗战再谈民生」的说法。</li>
+          <li><b>反面的一套</b>：用八个「不是……而是……」逐条反照——不是军队总动员而是军队不动员或向后撤，不是给人民自由而是给人民压迫，不是民主集中制的国防政府而是官僚买办豪绅地主的专制政府，不是抗日外交而是媚日外交……</li>
+          <li><b>归结点与检验法</b>：「办法是跟着方针来的」；「对坚决抗战方针有诚意的人，一定要实行这一套办法。试验坚决抗战有诚意与否，看他肯采取并实行这一套办法与否。」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue">
+        <span class="part-no">三</span>
+        <span class="part-title">两个前途 —— 把结论推到终点</span>
+        <span class="part-scope">一句反问，两处结局</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>同一套句式</b>：两段结构完全相同，只换结果——「实行第一种方针，采取第一套办法，就一定得一个驱逐日本帝国主义、实现中国自由解放的前途……这一点还有疑义吗？我以为没有疑义了。」「实行第二种方针……就一定得一个日本帝国主义占领中国、中国人民都做牛马奴隶的前途。……这一点还有疑义吗？我以为也没有疑义了。」</li>
+          <li><b>修辞用意</b>：两处自问自答把「前途」从预言变成算术——只要方针与办法确定，结局就是必然的，无需争辩，只需选择。</li>
+          <li><b>悬在背后的先例</b>：第二节论人民总动员时说「阿比西尼亚的覆辙，前车可鉴」——一九三六年已被意大利吞并的埃塞俄比亚，正是「不依靠人民大众而亡国」的近期样本，让第二个前途不至于是空话。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green">
+        <span class="part-no">四</span>
+        <span class="part-title">结论 —— 四句行动指令</span>
+        <span class="part-scope">号召 + 口号收束</span>
+      </div>
+      <div class="part-body">
+        <ul>
+          <li><b>两组对仗的「一定要」</b>：「一定要实行第一种方针，采取第一套办法，争取第一个前途。一定要反对第二种方针，反对第二套办法，避免第二个前途。」</li>
+          <li><b>两次号召</b>：先向「一切爱国的国民党员和共产党员」呼吁团结，再向「全国的爱国同胞，爱国军队，爱国党派」呼吁一致团结。</li>
+          <li><b>口号收束</b>：「民族革命战争万岁！中华民族解放万岁！」——以两行标语结束全文，把方针落到可以喊出声、传得开的位置。</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lead" style="margin:20px 0 4px;">下面把第二节里互为镜像的两套办法逐条对照——左栏是「坚决抗战的方针之下」必须做满的八条，右栏是毛泽东亲自给出的反面清单：</p>
+    <div class="cards">
+      <div class="card green">
+        <h4>第一套办法 · 八大纲领<span class="card-tag">坚决抗战</span></h4>
+        <ul>
+          <li><b>（一）</b>全国军队的总动员</li>
+          <li><b>（二）</b>全国人民的总动员——给人民以爱国的自由</li>
+          <li><b>（三）</b>改革政治机构——容纳各党各派共同管理国事</li>
+          <li><b>（四）</b>抗日的外交——联苏，争取英美法同情与援助</li>
+          <li><b>（五）</b>宣布改良人民生活的纲领，并立即开始实行</li>
+          <li><b>（六）</b>国防教育——改革教育方针与制度</li>
+          <li><b>（七）</b>抗日的财政经济政策——有钱出钱、抵制日货</li>
+          <li><b>（八）</b>全中国人民、政府和军队团结起来，筑成民族统一战线的坚固长城</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top-color:var(--red-deep);">
+        <h4 style="color:var(--red-deep);">另一套办法 · 样样相反<span class="card-tag">妥协退让</span></h4>
+        <ul>
+          <li><b>不是</b>军队总动员，<b>而是</b>军队不动员，或向后撤</li>
+          <li><b>不是</b>给人民以自由，<b>而是</b>给人民以压迫</li>
+          <li><b>不是</b>民主集中制的国防性的政府，<b>而是</b>一个官僚买办豪绅地主的专制政府</li>
+          <li><b>不是</b>抗日的外交，<b>而是</b>媚日的外交</li>
+          <li><b>不是</b>改良人民生活，<b>而是</b>照旧压榨人民，使人民呻吟痛苦，无力抗日</li>
+          <li><b>不是</b>国防的教育，<b>而是</b>亡国奴的教育</li>
+          <li><b>不是</b>抗日的财政经济政策，<b>而是</b>照旧不变甚至变本加厉的无益于国有益于敌的财政经济政策</li>
+          <li><b>不是</b>筑成抗日民族统一战线的长城，<b>而是</b>拆毁这个长城，或是阳奉阴违、要做不做地讲一顿「团结」</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lead" style="margin:22px 0 0;">第三节把两条路的终点并排摆开，形成一明一暗两段光谱——这也正是全文的落点所在：</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">第一个前途</div>
+          <div class="spec-seg red">第二个前途</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>驱逐日本帝国主义 · 实现中国自由解放</b>实行坚决抗战的方针、采取第一套办法（八大纲领）的必然结局：依靠人民大众，民力与军力相结合</div>
+          <div class="spec-label" style="border-left:none;"><b>日本帝国主义占领中国 · 人民做牛马奴隶</b>实行妥协退让的方针、采取样样相反那一套的必然结局：不依靠人民，前车之鉴是「阿比西尼亚的覆辙」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote">一定要实行第一种方针，采取第一套办法，争取第一个前途。<br>一定要反对第二种方针，反对第二套办法，避免第二个前途。<br>……全国的爱国同胞，爱国军队，爱国党派，一致团结起来，坚决地实行第一种方针，采取第一套办法，争取第一个前途；坚决地反对第二种方针，反对第二套办法，避免第二个前途。<span class="src">——第四节「结论」。全篇最短、最硬的一节：四组「一定要」与前文两两对应，把「方针—办法—前途」的三段推演收成两句行动指令，末以「民族革命战争万岁！中华民族解放万岁！」作结。1991 年版文字。</span></div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「办法是跟着方针来的」——判断表态，看清单不看嗓门</h4>
+          <p>本文写于蒋介石庐山谈话发表后第六天。毛泽东先公开肯定、拥护这份宣言，紧接着却立了一条很苛刻的检验标准：「试验坚决抗战有诚意与否，看他肯采取并实行这一套办法与否。」他刻意<b>不追问动机</b>（文中只是说「如果坚决抗战出于真心」），只审查动作——因为动机无法核实，动作可以。更值得注意的是，八大纲领里代价最大的几条恰恰是掌权者最不情愿的：军队总动员要求把中央军、地方军、红军一并开到国防线上去，人民总动员要求释放政治犯、取消《危害民国紧急治罪法》并「给人民以爱国的自由」，改革政治机构要求「容纳各党各派和人民领袖共同管理国事」。<b>他实际上是把「肯不肯付这些代价」定义为「有没有诚意」本身。</b>方法论迁移：判断一个人、一个团队、一个合作方是不是真想做成某件事，与其听他表决心、看他的情绪浓度，不如请他当场写一张「只有真想做才肯做」的动作清单——每条都要带成本、带责任、可核查；做到了几条，诚意就有几分。<b>凡是拒绝把口号拆成清单的表态，默认按零分处理。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「一切小道理都归大道理管着」——大局是被小算盘一条条拆掉的</h4>
+          <p>第八条讲统一战线，毛泽东没有停在号召上，而是点出了一串具体的「小」：打小算盘、弄小智术、官僚主义、阿Q主义（精神胜利法），并下了一个很刻薄的判断——「这些东西，用以对付敌人都不行，用以对付同胞，简直未免可笑」。他还有一句几乎不像是政治文献的话：「办事要大方一点，手笔要伸畅一点。」这些话背后的逻辑并不道德化，而是<b>工程化的</b>：联合阵线是一种要靠多方共同出资的结构，任何一方在内部套利，损耗的都不是对方的份额，而是整条长城本身；所以「小道理」不是不体面，而是<b>必然失败的技术方案</b>。他同时给出了识别的信号：「精诚团结，共赴国难」这个口号「不应该只是讲得好听，还应该做得好看」；最坏的情形不是公开反对，而是「阳奉阴违、要做不做地讲一顿『团结』」。方法论迁移：任何需要多方协作的局面（公司跨部门项目、家庭共同决策、开源社区），最危险的从来不是外部的对手，而是成员各自的「小算盘」。可以用本文当尺子盘点：我方阵营里，哪一件事是「讲得好听但做得不好看」的？哪一项承诺是「要做不做」的？<b>把那个最大的小算盘找出来，并想办法让它的成本显性化——通常问题就此解开一半。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「两个前途」的推导法——把选择题推到终点再看</h4>
+          <p>本文最值得学的地方其实是它的<i>结构选择</i>：毛泽东没有去争论「该不该抗战」（那是一场注定谁也说服不了谁的立场之争），而是把两条路线各自推演到终点，给每个终点取好名字——「自由解放」与「牛马奴隶」——然后再拿终点倒过来评价方针与办法。为了让这个终点不是空话，他安放了两个具体的锚：「六年的教训」（不抵抗主义下的全部办法都反映不抵抗主义）与「阿比西尼亚的覆辙」（一九三六年被意大利吞并的埃塞俄比亚，即近代史上最近的亡国样本）。<b>抽象的「危险」一旦有一个已发生的先例作陪，就从形容词变成了参照物。</b>方法论迁移：面对重大选择时，先别在方案层比较优劣，而要问三个问题——如果按这条走到尽头，三年后的具体一天会是什么样子？那个结局我能不能接受？历史或行业里有没有已经走到那一步的先例？把每条路都推到终点、各写一段「结局场景」，选择往往立刻清晰；反之，只在起点比较方案参数，人很容易因为短期舒适而走上自己根本不接受的那条路。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">全国同胞们！平津危急！华北危急！中华民族危急！只有全民族实行抗战，才是我们的出路。</div>
+        <div class="ctx">第一节「两种方针」开篇，毛泽东引述中共中央一九三七年七月八日《为日军进攻卢沟桥通电》原文，作为全篇事实起点与情绪起点。1991 年版文字，已逐字核对。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">办法是跟着方针来的。方针是不抵抗主义的时候，一切办法都反映不抵抗主义，这个我们已经有了六年的教训。方针如果是坚决抗战，那就非实行合乎这个方针的一套办法不可，非实行这八大纲领不可。</div>
+        <div class="ctx">第二节「两套办法」的归结点，全篇逻辑枢纽：办法是方针的显影，二者不可能分离。「六年的教训」指九一八事变以来六年不抵抗政策下的全部后果。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">对坚决抗战方针有诚意的人，一定要实行这一套办法。试验坚决抗战有诚意与否，看他肯采取并实行这一套办法与否。</div>
+        <div class="ctx">同样出自第二节——本篇最锋利的一句：把「诚意」从内心状态改写为可核查的行为标准。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">事情有大道理，有小道理，一切小道理都归大道理管着。国人应从大道理上好生想一想，才好把自己的想法和做法安顿在恰当的位置。</div>
+        <div class="ctx">第二节第八条「筑成民族统一战线的坚固的长城」——批「打小算盘，弄小智术，官僚主义，阿Q主义」之后的正论：民族存亡是大道理，派系得失是小道理。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">实行第一种方针，采取第一套办法，就一定得一个驱逐日本帝国主义、实现中国自由解放的前途。这一点还有疑义吗？我以为没有疑义了。……实行第二种方针，采取第二套办法，就一定得一个日本帝国主义占领中国、中国人民都做牛马奴隶的前途。这一点还有疑义吗？我以为也没有疑义了。</div>
+        <div class="ctx">第三节「两个前途」——全篇的落点：以两组结构完全相同、结果截然相反的句段收束，把「前途」讲成方针与办法的必然算术。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《为动员一切力量争取抗战胜利而斗争》（1937.08.25）</div>
+        <p>第二卷第二篇，写于洛川会议闭幕当日，是毛泽东为中共中央宣传部起草的宣传鼓动提纲。本篇的<b>八大纲领</b>，正是在这次会议上扩充为正式的《中国共产党抗日救国十大纲领》。两篇连读可以看出一个完整链条：七月二十三日在延安窑洞里写下的政策清单，一个月后成了全党全军公开举起的政治纲领——「一篇时评成了一份政纲」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">15 · 中国共产党在抗日时期的任务（1937.05）</div>
+        <p>同一条统一战线的两条边：五月那篇解决的是「要不要合作、合作中争不争领导权」（侧重政治路线与统一战线策略），七月这篇解决的是「合作之后怎么把抗战真的打下去」（侧重可执行的政策清单与诚意检验）。合看能读出毛泽东「既联合又独立」的完整算法——<b>对外握手时，手里同时攥着一张必须兑现的清单</b>。若想再往后看这条算法如何经受检验，可接读第二卷《上海太原失陷以后抗日战争的形势和任务》（1937.11.12）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「方针—办法—前途」这套推演搬到你的当下</h4>
+      <p class="q">① <b>方针—办法题</b>：挑一件你「表态支持、但一直没落地」的事（个人习惯、团队目标、家庭计划都行）。按本文链条自问：我的方针（不可退让的原则）一句话是什么？支撑它的「办法清单」能不能写出五条以上、且每条都指明谁做、怎么算做到了？如果一条都写不满——是不是说明方针其实还没真正定下来？<br>② <b>诚意检验题</b>：你最近判断过某个人／团队／合作方「到底有没有诚意」吗？把「看他肯采取并实行这一套办法与否」用一遍：先列出三件「只有真有诚意才肯做」的事（要带成本、可核查），再去核对他实际做到了几件。你原来的直觉判断，和这份清单对得上吗？<br>③ <b>大道理小道理题</b>：你所在的组织、家庭或团队里，有没有「嘴上团结、底下打小算盘」的情形？用「一切小道理都归大道理管着」当尺子，指出那个最大的小算盘是什么，并设计一个把它的成本显性化的办法（例如把隐性消耗摊到台面上量化）。<br>④ <b>两个前途题</b>：把手上最重要的一个选择的两条路各推到三年之后，分别写一段「三年后某个普通的一天」（越具体越好，不是目标口号，而是当天的场景、对话、心情）。哪一段你能接受、哪一段不能？再倒推：沿着可接受那条路，非做不可的三件事是什么？</p>
+      <p class="hint">提示：一张「方针→办法→前途」三问卡——遇到需要表态或需要判断别人表态的场合，连问三句：① 我的方针是什么（哪条原则不退让）？② 与之配套的办法清单有哪几条、谁执行、怎么检验？③ 坚决按这条走到尽头，会走到一个什么样的结局？三问都答得出来再启动；三问答不上来就说明还没想清楚，先别急着表态。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记 · 第二卷「抗日战争时期（上）」· 开篇</div>
+    <div>依据人民出版社 1991 年版第二卷 · 引文已与《反对日本进攻的方针、办法和前途》全文逐字核对（求是理论网《毛泽东选集》第二卷文本）</div>
+    <div class="wm">v1 · 2026.09</div>
+  </footer>
+
+</div>
+</body>
+</html>

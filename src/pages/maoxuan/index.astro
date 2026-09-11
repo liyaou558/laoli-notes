@@ -28,6 +28,19 @@ const vol1 = [
 ];
 
 const doneCount = vol1.filter(a => a.done).length;
+
+// 第二卷「抗日战争时期（上）」——已开篇，后续篇目随产出陆续补入
+// done=true 表示已产出精读笔记，file 为 public/maoxuan/ 下的文件名
+const vol2 = [
+  { no: '19', title: '反对日本进攻的方针、办法和前途', date: '1937.07.23', done: true, file: '19_反对日本进攻的方针、办法和前途.html' },
+  { no: '20', title: '为动员一切力量争取抗战胜利而斗争', date: '1937.08.25', done: false },
+  { no: '21', title: '反对自由主义', date: '1937.09.07', done: false },
+  { no: '22', title: '国共合作成立后的迫切任务', date: '1937.09.29', done: false },
+  { no: '23', title: '和英国记者贝特兰的谈话', date: '1937.10.25', done: false },
+  { no: '24', title: '上海太原失陷以后抗日战争的形势和任务', date: '1937.11.12', done: false },
+];
+
+const doneCount2 = vol2.filter(a => a.done).length;
 ---
 
 <BaseLayout title="毛选精读" description="《毛泽东选集》逐篇精读笔记">
@@ -70,6 +83,18 @@ const doneCount = vol1.filter(a => a.done).length;
       background: #e8c77a;
       border-radius: 3px;
     }
+    .mx-hero .progress + .progress {
+      margin-top: 8px;
+    }
+    .mx-hero .bar > span.v2 {
+      background: #a8d5b5;
+    }
+    .mx-hero .vol-note {
+      margin-top: 12px;
+      font-size: 12.5px;
+      opacity: 0.85;
+      line-height: 1.7;
+    }
     .vol-head {
       display: flex;
       align-items: center;
@@ -86,6 +111,17 @@ const doneCount = vol1.filter(a => a.done).length;
       padding: 2px 8px;
       border-radius: 3px;
       letter-spacing: 1px;
+    }
+    .vol-head .vol-tag.green {
+      background: #3d7a4f;
+    }
+    .vol-head.mt {
+      margin-top: 28px;
+    }
+    .vol-head .vol-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
     }
     .mx-list {
       list-style: none;
@@ -173,6 +209,12 @@ const doneCount = vol1.filter(a => a.done).length;
       <div class="bar"><span style={`width:${(doneCount / vol1.length) * 100}%`}></span></div>
       <span>{doneCount} / {vol1.length}</span>
     </div>
+    <div class="progress">
+      <span>第二卷进度</span>
+      <div class="bar"><span class="v2" style={`width:${(doneCount2 / vol2.length) * 100}%`}></span></div>
+      <span>{doneCount2} / {vol2.length}</span>
+    </div>
+    <div class="vol-note">第一卷 18 篇已全部完成 ✅ · 第二卷「抗日战争时期（上）」已开篇，以下为已列出的前几篇，其余篇目随产出陆续补入。</div>
   </div>
 
   <div class="vol-head">
@@ -182,6 +224,38 @@ const doneCount = vol1.filter(a => a.done).length;
 
   <ul class="mx-list">
     {vol1.map(a => a.done ? (
+      <li>
+        <a href={`${base}maoxuan/${a.file}`} class="mx-item done">
+          <span class="no">{a.no}</span>
+          <span class="body">
+            <div class="t">{a.title}</div>
+            <div class="d">{a.date}</div>
+          </span>
+          <span class="status">已完成</span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+    ) : (
+      <li>
+        <div class="mx-item todo">
+          <span class="no">{a.no}</span>
+          <span class="body">
+            <div class="t">{a.title}</div>
+            <div class="d">{a.date}</div>
+          </span>
+          <span class="status">待更新</span>
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  <div class="vol-head mt">
+    <span class="vol-tag green">第二卷</span>
+    <span>抗日战争时期（上）</span>
+  </div>
+
+  <ul class="mx-list">
+    {vol2.map(a => a.done ? (
       <li>
         <a href={`${base}maoxuan/${a.file}`} class="mx-item done">
           <span class="no">{a.no}</span>

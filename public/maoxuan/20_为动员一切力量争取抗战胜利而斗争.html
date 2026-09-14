@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 · 为动员一切力量争取抗战胜利而斗争 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 十大纲领 ===== */
+.program{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px;min-width:0;}
+.prog{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 16px 14px;min-width:0;overflow:hidden;}
+.prog-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.prog-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:16px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.prog-title{font-size:16px;font-weight:700;color:var(--ink);min-width:0;}
+.prog-body{font-size:13.5px;color:var(--ink-2);line-height:1.85;margin-top:6px;min-width:0;}
+.prog-body span{display:block;}
+.prog.gold{border-left-color:var(--gold);}
+.prog.gold .prog-no{color:var(--gold);}
+.prog.blue{border-left-color:var(--blue);}
+.prog.blue .prog-no{color:var(--blue);}
+.prog.green{border-left-color:var(--green);}
+.prog.green .prog-no{color:var(--green);}
+@media(max-width:420px){.prog{padding:11px 12px 12px;}.prog-no{font-size:14px;}.prog-title{font-size:15px;}.prog-body{font-size:12.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.prog-title,.prog-body{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">贰拾</div>
+    <h1>为动员一切力量争取抗战胜利而斗争</h1>
+    <div class="sub2">洛川会议的宣传鼓动提纲 · 抗日救国十大纲领 · 一份交给全国各方的对账单</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二篇 · <b>一九三七年八月二十五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《为动员一切力量争取抗战胜利而斗争》。1991 年版题解：这是毛泽东为中共中央宣传部起草的关于形势与任务的宣传鼓动提纲。这个提纲为一九三七年八月二十二日至二十五日在陕北洛川召开的中共中央政治局扩大会议所通过</td></tr>
+      <tr><th>写作时间</th><td>一九三七年八月二十五日（1991 年版正文标题下所标）。即洛川会议最后一日——不是会后追写的总结，而是会中定稿、当日通过的会议文件</td></tr>
+      <tr><th>最初发表</th><td>《解放》周刊第 1 卷第 15 期全文刊登洛川会议三个文件：《中共中央关于目前形势与党的任务的决定》《为动员一切力量争取抗战胜利而斗争》《中国共产党抗日救国十大纲领》（据中央党史部门关于《解放》周刊的记述；1991 年版题解未附初刊注）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年初版，本册依据 1991 年第二版），第二卷第二篇，第 324—329 页</td></tr>
+      <tr><th>篇幅</th><td>约 2800 字。四段：甲 全国抗战的成绩／乙 存在的问题与关键／丙 十大救国纲领／丁 抛弃单纯政府抗战，实现全面民族抗战</td></tr>
+      <tr><th>版本注</th><td>本篇是《毛泽东选集》中版本差异最显眼的一篇之一——因为它同时是会上通过的党的文件，收入《选集》时按选集体例重订过文字。可确指者：①第七条 1937 年公布文本作「改良工人农民职员教员及抗日军人的待遇」，1991 年版作「改良工人、职员、教员和抗日军人的待遇」，「农民」二字不在名单中；②第五条 1937 年公布文本作「联合朝鲜台湾及日本国内的工农人民」，1991 年版作「联合朝鲜和日本国内的工农人民」；③第八条 1991 年版删去公布本末两句「实施普及的义务的免费的教育方案，提高人民民族觉悟的程度。实行全国学生的武装训练」；④第二条「援助东北人民革命军东北义勇军」改为「援助东北抗日联军」（以 1968 年编印本《中国共产党抗日救国十大纲领》及维基文库所存 1937 年文本对校）</td></tr>
+      <tr><th>历史坐标</th><td>洛川会议（8.22—25，陕西洛川冯家村）最后一日通过。同一日，中革军委发布命令，红军改编为国民革命军第八路军（朱德总指挥、彭德怀副总指挥，下辖三个师，全军约 4.6 万人）。一份纲领与一纸改编令同日发出——党的全面抗战路线在此正式成形</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 在国民党统治区边上开政治局扩大会议。</b>会议地点不在延安，也不在洛川县城。毛泽东交代萧劲光去打前站，特意叮嘱「不在洛川县城，那里不安全，要选个安全的地方」；萧劲光与杨立三开着大卡车转了大半天，才在界子河附近的冯家村找到一处保密地点——一间私塾。会前又电令陈光、罗荣桓率主力进入白水、黄龙一带，防国民党中央军从渭南突入。二十三个人的政治局扩大会议，开在一处随时可能被掐断的地方。</li>
+        <li><b>戏剧性二 · 会开到第三夜，争论没散。</b>会议讨论时间最长、争执最多的是八路军出征后的打法。会上实际出现四种意见：毛泽东的「独立自主的山地游击战」、林彪主张的「大兵团运动战」（「日本人有什么了不起？可以考虑以运动战为主」）、周恩来与任弼时的「运动游击战」、还有人提「游击运动战」。8 月 24 日争执不下，毛泽东把自己关在窑洞里一整夜。最后形成的表述是折中后的说法：基本的是独立自主的山地游击战，但不放松有利条件下的运动战。彭德怀多年后检讨说，他当时对「运动战」和「游击战」这两个概念的主次是模糊的。</li>
+        <li><b>戏剧性三 · 公开文件里看不见那道裂缝。</b>本篇提纲通篇讲形势、讲纲领、讲政治，写进了「武装人民，发展抗日的游击战争，配合主力军作战」，却<b>没有</b>写「以游击战为主还是以运动战为主」这个会上争得最凶的问题。一份对外发布的纲领，其措辞的边界恰好圈住了内部的未决事项。</li>
+        <li><b>戏剧性四 · 一篇提纲，两副面孔。</b>对被国民党压制的人民，它是动员令；对国民党当局，它是一份验收单——先记功（「值得赞许」「欢迎这种进步」），再一笔一笔点出四个「依然」（对人民抗日运动依然不肯开放、对政府机构依然不愿作原则的改变、对人民生活依然没有改良的方针、对共产党关系也没有进到真诚合作的程度），最后把责任钉死：「因循坐误，责有攸归」。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变。本篇开篇定为「日本帝国主义大举进攻中国本部的开始」「中国全国性抗战的开始」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.17</div><div class="tl-body">蒋介石庐山谈话。本篇称其「值得赞许」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.23</div><div class="tl-body">毛泽东写《反对日本进攻的方针、办法和前途》，提出「八大纲领」<span class="note">（第二卷第 19 篇）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.28—30</div><div class="tl-body">平津沦陷（南苑血战，佟麟阁、赵登禹殉国）。本篇乙段「日寇……在夺取平津之后……实行第二步、第三步的预定的作战计划」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08.09</div><div class="tl-body">延安先行召开中央及各部门负责人会议，毛泽东断言「抗战已经开始，准备抗战的阶段已经结束」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08.13—14</div><div class="tl-body">淞沪会战；国民政府《自卫抗战声明书》。本篇乙段「察哈尔、上海等地的烽火已经燃烧起来了」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议（冯家村私塾），张闻天主持，23 人出席。通过《中央关于目前形势与党的任务的决定》《中国共产党抗日救国十大纲领》和本篇宣传鼓动提纲</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.25</div><div class="tl-body">中革军委发布改编命令：红军改编为国民革命军第八路军。本篇署此日为定稿通过日</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.08 下旬</div><div class="tl-body">《解放》周刊第 1 卷第 15 期全文刊登洛川会议三个文件</div></div>
+      <div class="tl-item green"><div class="tl-date">1937.09.25</div><div class="tl-body">平型关伏击战，八路军出征首捷（亦付出伤亡四百余人的代价）——会上那道未决的裂缝，此后由战场来回答</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全国抗战已经发动，但这只是<span class="q">「单纯政府抗战」</span>；要彻底战胜日寇，必须<span class="q">「全面的民族抗战」</span>——而实现全面抗战的关键，是国民党政策全部的和彻底的转变。于是中共把这一转变写成一份可逐条核对的《抗日救国十大纲领》，交给国民党、全国人民、各党各派各界各军，并申明自己「站在抗日的最前线」。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 抗战已经开动，但决心不稳、范围不广</h4>
+        <p>甲段记功：前线军队「进行了英勇的抗战」，国民党政策「在卢沟桥事变后开始转变到实行抗战的政策」，蒋介石庐山谈话与国防措施「值得赞许」，中共向全体爱国军队爱国同胞致「民族革命的敬礼」。乙段记账：平津已失，日寇将「实行第二步、第三步的预定的作战计划」，而国民党在发动民众、改革政治、改良生活、对共产党关系四件事上「依然」未变。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 「待抗战胜利后再改革」把因果弄反了</h4>
+        <p>有人主张胜利后再谈政治改革，以为单纯的政府抗战就能胜日。本篇的回答是条件句：只有全面的民族抗战才能彻底战胜日寇；而要实现全面抗战，必须先有国民党政策的全部的和彻底的转变，必须有全国上下共同实行的「一个彻底抗日的纲领」。<span class="card-tag">全篇枢纽</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 纲领不是宣言，而是十条可执行的清单</h4>
+        <p>从打倒日本帝国主义、军事与人民的总动员、改革政治机构，到外交、财政经济、改良生活、教育、肃清汉奸、民族团结——十条覆盖「打谁、谁去打、怎么组织、怎么支撑」，其中过半不是军事条款，而是权利与民生条款。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">甲 · 成绩</div><div class="n-sub">抗战已经发动<br>全国性抗战开始</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">乙 · 问题</div><div class="n-sub">决定性障碍：国民党政策的<br>全部的和彻底的转变</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">丙 · 方案</div><div class="n-sub">十大救国纲领<br>逐条可执行、可核对</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">丁 · 路线</div><div class="n-sub">抛弃「单纯政府抗战」<br>实行「全面民族抗战」</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">框架的骨架是一个<b>条件句</b>：要战胜日寇 → 必须全面民族抗战 → 必须全国上下共同实行一个彻底抗日的纲领 → 故提出十大纲领。而这套条件句的靶心，是会上「单纯政府抗战」与「全面民族抗战」两条路线之争：把「给不给人民权利」从道义问题改写成能力问题。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">先记功，把抗战的账认下来</span><span class="part-scope">成绩</span></div>
+      <div class="part-body">
+        <ul>
+          <li>定性两句：「七月七日卢沟桥事变，是日本帝国主义大举进攻中国本部的开始」；「卢沟桥中国军队的抗战，是中国全国性抗战的开始」</li>
+          <li>归因链条：日寇无底止进攻 ＋ 全国人民坚决斗争 ＋ 民族资产阶级倾向抗日 ＋ 中共统一战线政策的提倡、实行与全国赞助 → 不抵抗政策「开始转变到实行抗战的政策」</li>
+          <li>点三个里程碑：西安事变、国民党三中全会、蒋介石 7.17 庐山谈话与国防措施，「是值得赞许的」</li>
+          <li>敬礼：向所有爱国军队爱国同胞「致民族革命的敬礼」——对二十九军、对地方部队、对空军，都不分党派</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">再记账，把关键点指出来</span><span class="part-scope">问题与关键</span></div>
+      <div class="part-body">
+        <ul>
+          <li>首句即转折：「但在另一方面」</li>
+          <li>两个「压制」：压制了爱国军队的积极性，压制了爱国人民的救国运动</li>
+          <li>国际情势判断：日寇「依靠其野蛮的武力，借助德意帝国主义的声援，利用英帝国主义的动摇，利用中国国民党对于广大劳动民众的隔离」——把对手的支点逐个写清</li>
+          <li>四个国际参照：东北平津丧失的教训、阿比西尼亚亡国的覆辙、苏联过去战胜外敌的历史、西班牙胜利地保卫马德里的经验<span class="muted">（1936—1939 马德里保卫战，本篇写作时仍在进行中）</span></li>
+          <li><span class="k">关键句（全篇枢纽）</span>：「今后的任务是『动员一切力量争取抗战胜利』，这里的关键是国民党政策的全部的和彻底的转变」</li>
+          <li>四个「依然」与一个反驳：「待抗战胜利后再实行政治改革吧」——「单纯的政府抗战只能取得某些个别的胜利，要彻底地战胜日寇是不可能的。只有全面的民族抗战才能彻底地战胜日寇」</li>
+          <li>纲领的法源：「根据第一次国共合作时孙中山先生所手订的革命的三民主义和三大政策的精神而提出的救国纲领」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丙</span><span class="part-title">交清单：十大救国纲领</span><span class="part-scope">1991 年版文字</span></div>
+      <div class="part-body">
+        <p>前置句：「中国共产党坚决相信，只有完全地、诚意地和坚决地执行这个纲领，才能达到保卫祖国战胜日寇之目的。否则，因循坐误，责有攸归；全国丧亡，嗟悔无及。」</p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">一</span><span class="prog-title">打倒日本帝国主义</span></div>
+        <div class="prog-body"><span>对日绝交，驱逐日本官吏，逮捕日本侦探，没收日本在华财产，否认对日债务，废除与日本签订的条约，收回一切日本租界。</span><span>为保卫华北和沿海各地而血战到底。</span><span>为收复平津和东北而血战到底。</span><span>驱逐日本帝国主义出中国。</span><span>反对任何的动摇妥协。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">二</span><span class="prog-title">全国军事的总动员</span></div>
+        <div class="prog-body"><span>动员全国陆海空军，实行全国抗战。</span><span>反对单纯防御的消极的作战方针，采取独立自主的积极的作战方针。</span><span>设立经常的国防会议，讨论和决定国防计划和作战方针。</span><span>武装人民，发展抗日的游击战争，配合主力军作战。</span><span>改革军队的政治工作，使指挥员和战斗员团结一致。</span><span>军队和人民团结一致，发扬军队的积极性。</span><span>援助东北抗日联军，破坏敌人的后方。</span><span>实现一切抗战军队的平等待遇。</span><span>建立全国各地军区，动员全民族参战，以便逐步从雇佣兵役制转变为义务兵役制。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">三</span><span class="prog-title">全国人民的总动员</span></div>
+        <div class="prog-body"><span>全国人民除汉奸外，都有抗日救国的言论、出版、集会、结社和武装抗敌的自由。</span><span>废除一切束缚人民爱国运动的旧法令，颁布革命的新法令。</span><span>释放一切爱国的革命的政治犯，开放党禁。</span><span>全中国人民动员起来，武装起来，参加抗战，实行有力出力，有钱出钱，有枪出枪，有知识出知识。</span><span>动员蒙民、回民及其它少数民族，在民族自决和自治的原则下，共同抗日。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">四</span><span class="prog-title">改革政治机构</span></div>
+        <div class="prog-body"><span>召集真正人民代表的国民大会，通过真正的民主宪法，决定抗日救国方针，选举国防政府。</span><span>国防政府必须吸收各党各派和人民团体中的革命分子，驱逐亲日分子。</span><span>国防政府采取民主集中制，它是民主的，又是集中的。</span><span>国防政府执行抗日救国的革命政策。</span><span>实行地方自治，铲除贪官污吏，建立廉洁政府。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">五</span><span class="prog-title">抗日的外交政策</span></div>
+        <div class="prog-body"><span>在不丧失领土主权的范围内，和一切反对日本侵略主义的国家订立反侵略的同盟及抗日的军事互助协定。</span><span>拥护国际和平阵线，反对德日意侵略阵线。</span><span>联合朝鲜和日本国内的工农人民反对日本帝国主义。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">六</span><span class="prog-title">战时的财政经济政策</span></div>
+        <div class="prog-body"><span>财政政策以有钱出钱和没收汉奸财产作抗日经费为原则。经济政策是：整顿和扩大国防生产，发展农村经济，保证战时生产品的自给。提倡国货，改良土产。禁绝日货，取缔奸商，反对投机操纵。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">七</span><span class="prog-title">改良人民生活</span></div>
+        <div class="prog-body"><span>改良工人、职员、教员和抗日军人的待遇。</span><span>优待抗日军人的家属。</span><span>废除苛捐杂税。</span><span>减租减息。</span><span>救济失业。</span><span>调节粮食。</span><span>赈济灾荒。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">八</span><span class="prog-title">抗日的教育政策</span></div>
+        <div class="prog-body"><span>改变教育的旧制度、旧课程，实行以抗日救国为目标的新制度、新课程。</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">九</span><span class="prog-title">肃清汉奸卖国贼亲日派，巩固后方</span></div>
+        <div class="prog-body"><span>（1991 年版只列条题，无细目。）</span></div>
+      </div>
+      <div class="prog">
+        <div class="prog-head"><span class="prog-no">十</span><span class="prog-title">抗日的民族团结</span></div>
+        <div class="prog-body"><span>在国共两党合作的基础上，建立全国各党各派各界各军的抗日民族统一战线，领导抗日战争，精诚团结，共赴国难。</span></div>
+      </div>
+    </div>
+
+    <div class="part" style="margin-top:14px;">
+      <div class="part-head blue"><span class="part-no">丁</span><span class="part-title">从清单回到路线，收回自己</span><span class="part-scope">结论</span></div>
+      <div class="part-body">
+        <ul>
+          <li>纲领要求：「必须抛弃单纯政府抗战的方针，实现全面的民族抗战的方针。政府必须和人民团结起来，恢复孙中山先生的全部革命精神」</li>
+          <li>立场申明：「中国共产党及其所领导的民众和武装力量，决本上述纲领，站在抗日的最前线，为保卫祖国流最后一滴血」</li>
+          <li>两线作战：「坚决反对那种投降妥协的汉奸理论，同时也应该坚决反对那种以为无法战胜日寇的民族失败主义」</li>
+          <li>口号收束：「只要四亿五千万同胞一齐努力，最后的胜利是属于中华民族的！」「打倒日本帝国主义！」「民族革命战争万岁！」「独立自由幸福的新中国万岁！」</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">十条纲领按「动员链条」重排｜本篇的隐藏骨架</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">层</th><th>纲领条目</th><th>解决什么问题</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">目标</td><td><b>一</b> 打倒日本帝国主义</td><td>打谁、打到什么程度：血战到底／收复平津东北／反对动摇妥协</td></tr>
+        <tr><td class="c1">动员</td><td><b>二</b> 全国军事的总动员；<b>三</b> 全国人民的总动员</td><td>谁去打：军队与人民必须同时动员——武装人民、游击战争配合主力军</td></tr>
+        <tr><td class="c1">组织</td><td><b>四</b> 改革政治机构；<b>九</b> 肃清汉奸卖国贼亲日派，巩固后方；<b>十</b> 抗日的民族团结</td><td>靠什么组织起来：国防政府 ＋ 统一战线 ＋ 后方清洁</td></tr>
+        <tr><td class="c1">支撑</td><td><b>五</b> 抗日的外交政策；<b>六</b> 战时的财政经济政策；<b>七</b> 改良人民生活；<b>八</b> 抗日的教育政策</td><td>靠什么长期撑住：外交空间、战时经济、民生底数、代际动员</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">同一份提纲里的四种语气</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">敬礼</div>
+          <div class="spec-seg gold">赞许 · 欢迎</div>
+          <div class="spec-seg blue">四个「依然」</div>
+          <div class="spec-seg red">通牒</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>对前线者</b>「致民族革命的敬礼」——对前线军队与爱国同胞</div>
+          <div class="spec-label"><b>对进步处</b>「值得赞许」「我们欢迎这种进步」——对国民党政策已变的部分</div>
+          <div class="spec-label"><b>对未变处</b>发动民众、改革政治、改良生活、对共产党关系，四项「依然」</div>
+          <div class="spec-label"><b>对因循者</b>「因循坐误，责有攸归；全国丧亡，嗟悔无及」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">一篇对外发布的文件里，语气是分层排布的：先把已经做对的认下来，再把没做的列出来，最后把不做的后果写明——记功、记账、定责，三步完成，不夹一句情绪话。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>「因循坐误，责有攸归」——把责任预先放在纸面上</h4>
+          <p>这篇提纲最克制也最狠的地方，是它对国民党的写法：不是骂，而是按「已变／未变」两栏记账。已经做的，公开记功（庐山谈话「值得赞许」）；没做的，用四个「依然」并列成事实句；然后写一句「否则」——如果不改，责任归属已定，全国丧亡，后悔莫及。它没有指控任何人，只是把一张对账单提前交到对方手上：将来出问题，谁签过字就写得清楚。</p>
+          <span class="mv">迁移：与强势对手或拖延的合作方共事时，最有用的不是当场争取，而是把「现状」写成双方都看到的文字——你已经做到的（给对方台阶）、你还没做到的（陈列事实）、不改的后果（不加形容词）。日后要么真改了，要么这份文件替你说话。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「把权利翻译成能力」——最难拒绝的要求，是被论证成打赢的前提</h4>
+          <p>十大纲领里真正有分量的一半，不是军事条款，而是权利与民生条款：言论出版集会结社自由、释放政治犯、开放党禁、召集真正人民代表的国民大会、改良生活。它们本可以是道义诉求，本篇却把它们放进一条能力链里：想彻底战胜日寇（目的）→ 就要全面的民族抗战（手段）→ 就要动员人民（前提）→ 人民没有权利就不会被动员（条件）。这么一改写，给不给权利就不再是执政者的宽大与否，而成了「你还想不想赢」的验算题。这是本篇最值得学的一手「翻译术」。</p>
+          <span class="mv">迁移：提一个各方都不愿付代价的要求时，别停在「这应该」，而把它接进对方的成功条件里——你若要达成自己的目标 X，就必须先有 Y；没有 Y，X 会在哪个环节断掉，把断点指出来。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>公开文件的措辞边界，标出内部未决的地带</h4>
+          <p>洛川会议吵得最凶的是八路军怎么打：游击战为主还是运动战为主，会上四种意见，最后一夜也没彻底统一，只能折中措辞。而本篇对外发布的提纲里，只写了「武装人民，发展抗日的游击战争，配合主力军作战」，把主次之争留在会场内。这不是隐瞒，而是组织行为的常态：对外要一份能共同署名的文本，对内仍允许分歧继续跑。只读这份纲领的人，会以为分歧不存在。</p>
+          <span class="mv">迁移：读任何公开文本（战略、章程、会议纪要）时先问三件事——哪些措辞异常含糊或异常笼统？哪些会上争论过的问题在文本里消失了？文本落地的关键动作谁执行、怎么算做到？含糊处通常就是未决处，而真正的风险与机会往往在那里。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">七月七日卢沟桥事变，是日本帝国主义大举进攻中国本部的开始。卢沟桥中国军队的抗战，是中国全国性抗战的开始。</div>
+        <div class="ctx">甲段开篇｜全篇的两个时间定位</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">今后的任务是「动员一切力量争取抗战胜利」，这里的关键是国民党政策的全部的和彻底的转变。</div>
+        <div class="ctx">乙段枢纽句｜篇名即由此句而来</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">单纯的政府抗战只能取得某些个别的胜利，要彻底地战胜日寇是不可能的。只有全面的民族抗战才能彻底地战胜日寇。</div>
+        <div class="ctx">乙段｜全篇最核心的判断，也是洛川会议「全面抗战路线」的公开表述</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国共产党坚决相信，只有完全地、诚意地和坚决地执行这个纲领，才能达到保卫祖国战胜日寇之目的。否则，因循坐误，责有攸归；全国丧亡，嗟悔无及。</div>
+        <div class="ctx">丙段纲领前的话｜本篇最锋利一句</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">只要四亿五千万同胞一齐努力，最后的胜利是属于中华民族的！</div>
+        <div class="ctx">丁段收束口号</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《反对自由主义》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.09.07 ｜ 第二卷第三篇</span></div>
+        <p>写于洛川会议后两周。同一个月里，毛泽东一面在党外发纲领（党要别人做什么），一面在党内立规矩（党员不该做什么）。两篇合看，可见「对外清单」与「对内纪律」是同一套组织的两只手。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《反对日本进攻的方针、办法和前途》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.07.23 ｜ 第二卷第一篇</span></div>
+        <p>7 月那篇提出「八大纲领」，是给出方案；8 月这篇把方案升级为洛川会议通过的《抗日救国十大纲领》，是给方案署名。一个月之间，从「一篇时评里的建议」变成「会议通过、刊物全文刊登的党的纲领」——同一套内容，两次落笔，行政分量完全不同。若看这套纲领日后如何被检验，可接读《上海太原失陷以后抗日战争的形势和任务》（1937.11.12）与《论持久战》（1938.05）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>验收单题</b>：挑一个你正在与外部合作方／上级／平台打交道的事。把现状写成三栏：对方已经做到的（如实记功）、对方尚未做到的（只写事实句，不加形容词）、若不改的后果与责任归属（一句话，不夹情绪）。写完再问：这份文件你打算怎么交出去——当面给、书面发，还是先留档？为什么？</div>
+      <div class="q">二 · <b>权利→能力题</b>：你一直想要但对方不肯给的资源（预算、权限、人手、信息），能不能接进对方自己的成功条件里？写成一条链：他要达成 X → 就必须有 Y → 而 Y 需要 Z（你要的东西）。指出没有 Z 时，X 会在哪个环节断掉——具体到哪个节点、什么现象。</div>
+      <div class="q">三 · <b>文本边界题</b>：取一份你手边的公开文本（公司战略、组织章程、项目纪要、平台规则），列出三处「异常含糊」或「本该写到却消失」的内容。每处问两个问题：当初内部争的是什么？含糊是为了留余地，还是因为还没谈成？</div>
+      <div class="q">四 · <b>记功与记账题</b>：回想你最近一次「表态支持但没落地」的沟通。你有没有先认真把对方已经做到的认下来？如果只有账没有功，对方为什么还要照单执行？反过来，如果只有功没有账，一个月后你凭什么追问？</div>
+      <div class="hint"><b>三问卡</b>：① 我要别人做的那件事，能不能写成一张十条以内的清单（每条可执行、可核对、有人负责）？② 这张清单里最贵、对方最不情愿的那几条是什么——我敢不敢写进去？③ 我是不是先把对方已经做到的记了下来，再把没做到的、以及不改的后果放在同一页纸上？三问都答得出来，这张清单才递得出去。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第二篇</div>
+    <div>依据人民出版社 1991 年版第二卷 ｜ 2026.09.14</div>
+  </div>
+
+</div>
+</body>
+</html>

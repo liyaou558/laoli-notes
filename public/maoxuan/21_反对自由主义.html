@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>21 · 反对自由主义 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 症状卡（十一种表现） ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿壹</div>
+    <h1>反对自由主义</h1>
+    <div class="sub2">一篇一千三百字的党内短文 · 十一种病症 · 一份用来「对号入座」的自查清单</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第三篇 · <b>一九三七年九月七日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《反对自由主义》。1991 年版《毛泽东选集》第二卷第三篇，紧接《为动员一切力量争取抗战胜利而斗争》之后。全篇无小标题、无分节，是一篇一气呵成的短文</td></tr>
+      <tr><th>写作时间</th><td>一九三七年九月七日（正文标题下所标）。两个时间坐标值得注意：距七七事变整整两个月（同为七日）；距洛川会议闭幕（八月二十五日）十三天</td></tr>
+      <tr><th>最初发表</th><td>中国人民抗日军政大学内部校刊《思想战线》（一九三七年九月）。据曲青山《学习毛泽东同志〈反对自由主义〉》（人民网·党史频道，2019）与陈文胜《胡耀邦在「抗大」的岁月》所述，刊于九月七日出版的第二期《思想战线》；另据李志民回忆《革命熔炉》，则记为一九三七年十月、为该刊第一期所写——两说在月份与期号上不一致，今取前者，并记此分歧。一九四二年四月十日延安《解放日报》公开发表</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年初版，本册依据 1991 年第二版），第 359—361 页（据《人民日报》2018 年 4 月 12 日《力戒自由主义》等文所引：开篇句在第 359 页，第十一种表现在第 360 页）</td></tr>
+      <tr><th>篇幅</th><td>一千三百余字（曲青山文中的统计）。八层结构：立论（两段）→ 十一种表现 → 危害 → 来源 → 思想方法 → 性质 → 正面标准 → 号召。其中「十一种表现」占了全文近一半篇幅</td></tr>
+      <tr><th>写作缘起</th><td>应抗大工作的胡耀邦之请而写，刊于抗大校刊。文章针对的是抗大部分学员组织纪律散漫的现象，但所述问题在全党有普遍性，因而发表后迅速在党内传开（曲青山）</td></tr>
+      <tr><th>历史坐标</th><td>落笔之日的前一天（九月六日），八路军总部在陕西泾阳云阳镇大操场举行出师抗日誓师大会，邓小平主持、朱德领读《八路军出师抗日誓词》，会后冒雨开拔；同日，第一二九师在泾阳桥底镇三里村召开改编誓师大会。本篇文章写在一支军队刚刚对外宣完誓的第二天——外面在结盟、出师，里面在立规矩</td></tr>
+      <tr><th>日后轨迹</th><td>一九四二年四月三日，《中共中央宣传部关于在延安研究讨论中央决定与毛泽东整顿三风报告的决定》定出党员、干部必学的十八个文件，《反对自由主义》列第十个，成为延安整风的必读文献之一；此后长期是党内教育与党性修养的常用篇目（曲青山）</td></tr>
+      <tr><th>版本说明</th><td>本篇从抗大校刊文本到 1991 年版，未见有实质性文字改动的记载——它的论域是党内作风与组织纪律，不涉及需要在不同政治路线之间重写的内容。这一条为编者按语，非版本考证结论，供读者留意</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 一篇经典是从一个二十二岁青年的汇报里长出来的。</b>一九三七年八月，毛泽东要给抗大学员作报告，事先把各队党支部书记找来开座谈会。会上他让胡耀邦发言，胡耀邦简明扼要地讲了学员中的自由散漫现象，毛泽东听得津津有味，随即提醒他：要把党支部工作做好，必须把校刊办起来。胡耀邦回去自己组稿、排版、刻蜡板、校对、油印，一周后油印出第一期《思想战线》。毛泽东看了不太满意，说没有写出自己的东西——胡耀邦顺势向他约稿，毛泽东痛快答应，很快交了稿。<b>九月七日，第二期《思想战线》刊出这篇文章，而文中所列的种种自由主义表现，「不少正是座谈会上汇报的内容」</b>（陈文胜《胡耀邦在「抗大」的岁月》）。同年十月，毛泽东点名让还不满二十二岁的胡耀邦出任抗大政治部副主任。</li>
+        <li><b>戏剧性二 · 落笔的前一天，一支部队刚对全国宣过誓。</b>九月六日，八路军总部在泾阳云阳镇大操场誓师东进，朱德一句一顿领读《八路军出师抗日誓词》：「为了民族，为了国家，为了同胞，为了子孙，我们只有抗战到底！」会后总部冒雨开拔，其后行程被完整记在一张行军路线图上（九月六日富平瓦窑头、七日怀阳城、八日美原镇……）。<b>同一时刻，毛泽东在延安写一篇要求党员「当面不说，背后乱说」不许再有的短文。</b>一支部队在同一天里既对外宣誓、也对内立规，这不是巧合，而是同一件事的两面：要打一场全国性的仗，先得有一支能统一行动的组织。</li>
+        <li><b>戏剧性三 · 一个词被特意圈定了含义。</b>「自由主义」在中文语境里通常指西方政治思潮。本篇用的是另一个意思：专指党内违反组织纪律的错误言行（曲青山特别提醒这一点）。同一个词、两套指涉，日后常被混读——这是本篇阅读时最需要先钉住的一颗钉子。</li>
+        <li><b>戏剧性四 · 一千三百字，管了八十多年。</b>文章写于一九三七年九月，公开发表却在一九四二年四月——不是作者压着不发，而是它先在校刊、在党内传抄流布，直到整风需要一份正式文本时才上了《解放日报》，并被列为整风必读十八篇之一。此后「事不关己，高高挂起」「做一天和尚撞一天钟」「当面不说，背后乱说」这些句子，被收进《毛主席语录》、进了日常中文，成了不署名也无人不晓的话。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.01</div><div class="tl-body">中国人民抗日红军大学改称中国人民抗日军政大学（抗大）。抗战期间培养大量党政干部，成为抗战时期革命干部学校的典范</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变。党史上土地革命战争与全民族抗战的分界点——两个月后的同一天，本篇落笔</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，通过《抗日救国十大纲领》与本篇之上一篇《为动员一切力量争取抗战胜利而斗争》</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.25</div><div class="tl-body">中革军委发布命令：红军改编为国民革命军第八路军，全军约 4.6 万人</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08 某日</div><div class="tl-body">毛泽东召集抗大各队党支部书记座谈，胡耀邦汇报学员自由散漫现象；毛提示「必须把校刊办起来」<span class="note">（月份据陈文胜文，作「大约是 8 月的一天」）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08 下旬</div><div class="tl-body">胡耀邦自办油印《思想战线》第一期；毛泽东读后指出「没有写出自己的东西」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.06</div><div class="tl-body">八路军总部在泾阳云阳镇誓师东进（邓小平主持，朱德领读《八路军出师抗日誓词》）；同日第一二九师在泾阳桥底镇三里村誓师。会后总部冒雨开拔</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.09.07</div><div class="tl-body">本篇写定，刊于抗大校刊《思想战线》第二期。同日八路军总部东进行至富平怀阳城</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.11</div><div class="tl-body">东进途中接国民政府军事委员会电令，八路军改称国民革命军第十八集团军</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.22—23</div><div class="tl-body">中共《为公布国共合作宣言》与蒋介石承认中共合法地位的谈话经国民党中央通讯社先后发表，国共合作宣告成立</div></div>
+      <div class="tl-item green"><div class="tl-date">1937.09.25</div><div class="tl-body">平型关伏击战，八路军出征首捷——「纪律」与「打法」两件事，此后由战场来检验</div></div>
+      <div class="tl-item"><div class="tl-date">1937.10</div><div class="tl-body">毛泽东点名，胡耀邦任抗大政治部副主任，时年不满二十二岁</div></div>
+      <div class="tl-item"><div class="tl-date">1942.04.03</div><div class="tl-body">中宣部定出整风必学的十八个文件，《反对自由主义》列第十篇</div></div>
+      <div class="tl-item green"><div class="tl-date">1942.04.10</div><div class="tl-body">延安《解放日报》公开发表本篇</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      一个要打仗的组织必须拿<span class="q">「思想斗争」</span>当武器；取消思想斗争、主张无原则的和平，就叫自由主义。它不是脾气问题，而是<span class="q">「一种腐蚀剂」</span>——使团结涣散、关系松懈、工作消极、意见分歧，客观上援助敌人。它的根源在于小资产阶级的自私自利性，性质上是机会主义的一种表现，所以在革命队伍中不该有它的位置。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先立武器，再谈病</h4>
+        <p>开篇两段是全篇的立法依据：想团结、想战斗，就必须允许并鼓励积极的思想斗争；反过来，取消思想斗争、以「无原则的和平」求安宁，后果是腐朽庸俗的作风发生、组织的某些部分在政治上腐化。反自由主义不是反对自由，而是保卫团结的手段。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 不点名、不举例，只列症状</h4>
+        <p>全文最长的部分是一张十一种表现的自查清单——每一条都能让读者立刻对上人、对上自己。这种写法的传播力来自它的「可对号入座」：不需要案例，每个人心里都有案例；不需要处分，读到的人自己会脸红。<span class="card-tag">全篇枢纽</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 把作风问题追到利益位置</h4>
+        <p>危害之后马上追根：来源「在于小资产阶级的自私自利性，以个人利益放在第一位，革命利益放在第二位」。它不把问题停在道德败坏的层面，而是问「这个人站在哪个位置上说话」。最后一句「对人是马克思主义，对己是自由主义」之所以锋利，是因为它承认那是理性选择，而非糊涂。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">立论</div><div class="n-sub">思想斗争是武器<br>取消它＝无原则的和平</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">症状</div><div class="n-sub">十一种表现<br>一张可自查的清单</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">危害</div><div class="n-sub">腐蚀剂：团结涣散<br>政策不能贯彻到底</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">根源与性质</div><div class="n-sub">小资产阶级的自私自利性<br>机会主义的一种表现</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">处方</div><div class="n-sub">襟怀坦白、忠实、积极<br>关心他人比关心自己为重</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的骨架是一套<b>完整的诊断学</b>：先说明为什么必须有这场斗争（立法），再列症状（症候学），再给出病变机理（病因学），最后给健康标准（处方）。全篇没有一处点名、没有一桩案例、没有一句处分意见——<b>把所有力气都放在「让人自己对得上」上</b>。这是它比一场批评会传播得更久的原因。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">立论：先把武器递到每个人手上</span><span class="part-scope">开篇两段</span></div>
+      <div class="part-body">
+        <ul>
+          <li>正题：「我们主张积极的思想斗争，因为它是达到党内和革命团体内的团结使之利于战斗的武器。每个共产党员和革命分子，应该拿起这个武器。」</li>
+          <li>反题：「但是自由主义取消思想斗争，主张无原则的和平，结果是腐朽庸俗的作风发生，使党和革命团体的某些组织和某些个人在政治上腐化起来。」</li>
+          <li><span class="k">结构要点</span>：这两段把「思想斗争」与「团结」绑成因果关系——斗争是为了团结，取消斗争才破坏团结。此后的全部论证都从这里出发</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">症状：十一种表现（按原文顺序）</span><span class="part-scope">全篇近一半篇幅</span></div>
+      <div class="part-body">
+        <p>十一种表现全部用<b>大白话与现成俗语</b>写成，几乎每条都能缩成一句民谚。下列为 1991 年版原文，逐字核对；右侧标签为按对象所做的重排（非原文分段）。</p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第一种</span><span class="sym-tag">对熟人</span></div>
+        <div class="sym-text">因为是熟人、同乡、同学、知心朋友、亲爱者、老同事、老部下，明知不对，也不同他们作原则上的争论，任其下去，求得和平和亲热。或者轻描淡写地说一顿，不作彻底解决，保持一团和气。结果是有害于团体，也有害于个人。</div>
+        <div class="sym-note">七种关系一字排开，把「人情」的每一种来源都点到</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第二种</span><span class="sym-tag">对组织</span></div>
+        <div class="sym-text">不负责任的背后批评，不是积极地向组织建议。当面不说，背后乱说；开会不说，会后乱说。心目中没有集体生活的原则，只有自由放任。</div>
+        <div class="sym-note">四个「说不说」的对照，是全文最上口的一句</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第三种</span><span class="sym-tag">对自己</span></div>
+        <div class="sym-text">事不关己，高高挂起；明知不对，少说为佳；明哲保身，但求无过。</div>
+        <div class="sym-note">四句俗语连缀，构成「自保」的完整逻辑</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第四种</span><span class="sym-tag">对纪律</span></div>
+        <div class="sym-text">命令不服从，个人意见第一。只要组织照顾，不要组织纪律。</div>
+        <div class="sym-note">「只要……不要」的句式，指向的是权责不对称</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第五种</span><span class="sym-tag">对同志</span></div>
+        <div class="sym-text">不是为了团结，为了进步，为了把事情弄好，向不正确的意见斗争和争论，而是个人攻击，闹意气，泄私愤，图报复。</div>
+        <div class="sym-note">把「斗争」与「整人」明确切开——斗争要有目的</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第六种</span><span class="sym-tag">对政治</span></div>
+        <div class="sym-text">听了不正确的议论也不争辩，甚至听了反革命分子的话也不报告，泰然处之，行若无事。</div>
+        <div class="sym-note">这一条最重——从作风问题落到政治责任</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第七种</span><span class="sym-tag">对群众</span></div>
+        <div class="sym-text">见群众不宣传，不鼓动，不演说，不调查，不询问，不关心其痛痒，漠然置之，忘记了自己是一个共产党员，把一个共产党员混同于一个普通的老百姓。</div>
+        <div class="sym-note">六个「不」连排，节奏本身是批判</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第八种</span><span class="sym-tag">对群众</span></div>
+        <div class="sym-text">见损害群众利益的行为不愤恨，不劝告，不制止，不解释，听之任之。</div>
+        <div class="sym-note">四个「不」＋「听之任之」，是旁观者的标准画像</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第九种</span><span class="sym-tag">对工作</span></div>
+        <div class="sym-text">办事不认真，无一定计划，无一定方向，敷衍了事，得过且过，做一天和尚撞一天钟。</div>
+        <div class="sym-note">用一个和尚的形象收尾，比任何形容词都具体</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第十种</span><span class="sym-tag">对资历</span></div>
+        <div class="sym-text">自以为对革命有功，摆老资格，大事做不来，小事又不做，工作随便，学习松懈。</div>
+        <div class="sym-note">「大事做不来，小事又不做」——对资历型懈怠最省字的一句</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">第十一种</span><span class="sym-tag">对自己</span></div>
+        <div class="sym-text">自己错了，也已经懂得，又不想改正，自己对自己采取自由主义。</div>
+        <div class="sym-note">十一种里唯一「向内」的一条，也是最难自查的一条</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">收束句只有两句：「还可以举出一些。主要的有这十一种。」——<b>留出余量，不追求穷举</b>。清单的作用是让人自认，不是让人过关。</p>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丙</span><span class="part-title">定性：危害、来源、思想方法、性质</span><span class="part-scope">四层递进</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>危害</b>：「它是一种腐蚀剂，使团结涣散，关系松懈，工作消极，意见分歧。它使革命队伍失掉严密的组织和纪律，政策不能贯彻到底，党的组织和党所领导的群众发生隔离。」——四个「涣散／松懈／消极／分歧」＋四个后果，全用可观察的现象词，不用情绪词</li>
+          <li><b>来源</b>：「在于小资产阶级的自私自利性，以个人利益放在第一位，革命利益放在第二位，因此产生思想上、政治上、组织上的自由主义」</li>
+          <li><b>思想方法</b>：「他们赞成马克思主义，但是不准备实行之，或不准备完全实行之……说的是马克思主义，行的是自由主义；对人是马克思主义，对己是自由主义。两样货色齐备，各有各的用处。」</li>
+          <li><b>性质</b>：「自由主义是机会主义的一种表现，是和马克思主义根本冲突的。它是消极的东西，客观上起着援助敌人的作用，因此敌人是欢迎我们内部保存自由主义的。」——最后落到一个不可辩驳的理由：敌人希望你留着它</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丁</span><span class="part-title">处方与号召：从「不要怎样」到「要怎样」</span><span class="part-scope">结尾两段</span></div>
+      <div class="part-body">
+        <ul>
+          <li>正面标准（1991 年版原文）：「一个共产党员，应该是襟怀坦白，忠实，积极，以革命利益为第一生命，以个人利益服从革命利益；无论何时何地，坚持正确的原则，同一切不正确的思想和行为作不疲倦的斗争，用以巩固党的集体生活，巩固党和群众的联系；关心党和群众比关心个人为重，关心他人比关心自己为重。这样才算得一个共产党员。」</li>
+          <li>号召：「一切忠诚、坦白、积极、正直的共产党员团结起来，反对一部分人的自由主义的倾向，使他们改变到正确的方面来。这是思想战线的任务之一。」</li>
+          <li><span class="k">注意落点</span>：结尾不是「清除」而是「<b>使他们改变到正确的方面来</b>」；不是运动式清算，而是教育式纠正。这一句决定了这篇短文后来能被用作整风学习文件，而不是处分依据</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">十一种表现的四种指向（按对象重排）</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">对熟人</div>
+          <div class="spec-seg gold">对组织</div>
+          <div class="spec-seg blue">对群众</div>
+          <div class="spec-seg red">对自己</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>第 1 种 · 对熟人</b>「明知不对，也不同他们作原则上的争论」「保持一团和气」</div>
+          <div class="spec-label"><b>第 2 · 4 · 5 · 6 种 · 对组织与纪律</b>「当面不说，背后乱说」「只要组织照顾，不要组织纪律」</div>
+          <div class="spec-label"><b>第 7 · 8 种 · 对群众</b>「不宣传，不鼓动，不演说」「见损害群众利益的行为……听之任之」</div>
+          <div class="spec-label"><b>第 3 · 9 · 10 · 11 种 · 对自己与工作</b>「明哲保身，但求无过」「做一天和尚撞一天钟」「自己对自己采取自由主义」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">把十一种表现按「对象」重排，可以看出这份清单的覆盖范围：<b>一个人在工作关系里能够退让、能够旁观、能够敷衍的每一个方向，都被点到了一遍。</b>熟人、组织、群众、自己——没有留下可以躲藏的角落。这也是它作为自查清单能长期使用的原因。</p>
+
+    <div class="quote">
+      革命的集体组织中的自由主义是十分有害的。它是一种腐蚀剂，使团结涣散，关系松懈，工作消极，意见分歧。它使革命队伍失掉严密的组织和纪律，政策不能贯彻到底，党的组织和党所领导的群众发生隔离。这是一种严重的恶劣倾向。
+      <span class="src">本篇第七段（1991 年版第 360 页，据《人民日报》2018.04.12 所引）｜全篇定性最重的一段，四字短语四连排</span>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">反面清单与正面标准的逐项对照</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">面向</th><th>不许怎样（十一种表现）</th><th>要怎样（结尾一段的标准）</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">对人的态度</td><td>对熟人「保持一团和气」；对同志「个人攻击，闹意气，泄私愤，图报复」</td><td><b>襟怀坦白</b>；坚持正确的原则，同错误的思想和行为作<b>不疲倦的斗争</b></td></tr>
+        <tr><td class="c1">对组织的态度</td><td>「当面不说，背后乱说」「只要组织照顾，不要组织纪律」</td><td>巩固党的集体生活，巩固党和群众的联系</td></tr>
+        <tr><td class="c1">对群众的态度</td><td>「不宣传，不鼓动，不演说」「见损害群众利益的行为……听之任之」</td><td><b>关心党和群众比关心个人为重</b></td></tr>
+        <tr><td class="c1">对利益的态度</td><td>以个人利益放在第一位，革命利益放在第二位</td><td><b>以革命利益为第一生命，以个人利益服从革命利益</b></td></tr>
+        <tr><td class="c1">对自己的态度</td><td>「自己错了，也已经懂得，又不想改正」</td><td><b>忠实</b>，<b>积极</b>——「这样才算得一个共产党员」</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:12px;">这张对照表说明本篇的写法：<b>每一条禁令都配了一条正面标准，方向一一对应。</b>它不是只让人知道「不能做什么」，而是让每一条「不能」都直接指向一个「可以怎样做」——这是党内教育文本与纪律条文的区别所在。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>不点名、不举例、不定处分——靠「可对号入座」治理</h4>
+          <p>一场批评会只能处理到场的人；一份症状清单能处理所有读到它的人。本篇把全部力气用在「让人自己对得上」上：不给案例，因为每个人心里都有案例；不点名，因为点名会让未被点到的人松一口气；不写处分，因为写处分就把教育文本降级成了惩罚工具。结果是这篇短文成了通用的——它从抗大的一间教室里走出去，一路用到全党。八十多年后，它贡献给日常中文的那些句子还在被使用，靠的正是这种「不需要署名的适用性」。</p>
+          <span class="mv">迁移：想纠正一种普遍行为时，把「批评具体的人」换成「把症状列全、列准、列到人人都认得」。指名道姓能解决一个人，一份精准的症状清单能覆盖一个群体——前提是你敢把最难听的那一两条也写进去。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>把作风问题追到利益位置，而不是停在道德评价</h4>
+          <p>最容易写坏的段落是「为什么会有这种人」。本篇没有停在骂人：来源写的是「小资产阶级的自私自利性，以个人利益放在第一位，革命利益放在第二位」——不谈人品，谈位置。更狠的是后面那句「两样货色齐备，各有各的用处」：它承认双重标准不是糊涂，而是<b>经过权衡的选择</b>，因为说一套、做一套在当时的处境里确实有好处。一旦把病因定位在利益位置上，处方就顺理成章了——不是要求人变好，而是改变「说一套做一套有好处」的条件。</p>
+          <span class="mv">迁移：面对群体性的敷衍或推诿，先别问「这些人怎么这么没责任感」，改问「这样做的人得了什么好处、失了谁的约束」。得到答案之后，你要动的是条件，不是道德口号。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「可以说得狠，但要留出口」——收尾那句话决定了文本的性质</h4>
+          <p>全篇语气最重的段落是「腐蚀剂」和「客观上起着援助敌人的作用」，但倒数第二句的落点是「使他们改变到正确的方面来」。措辞的猛烈程度与处理方式之间有一道明确的分界：诊断可以狠，结论必须留路。这一句不是修辞上的客气，它决定了这篇东西后来是「学习文件」而不是「处分依据」，也决定了读它的人会不会主动承认自己中了其中一条。凡是要求别人自我检查的文本，留不留出口，直接决定它有没有人真的去读。</p>
+          <span class="mv">迁移：写复盘、发批评、改进团队规范时，把最锋利的话说在诊断部分，把最后的落点留给「怎么改回来」。留出口不是软弱——只有留出口，被批评的人才可能真的对号入座并改。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">我们主张积极的思想斗争，因为它是达到党内和革命团体内的团结使之利于战斗的武器。每个共产党员和革命分子，应该拿起这个武器。</div>
+        <div class="ctx">开篇第一句｜全篇的立法依据；《人民日报》2018.04.12 引作 1991 年版第 359 页</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">事不关己，高高挂起；明知不对，少说为佳；明哲保身，但求无过。</div>
+        <div class="ctx">第三种表现｜四句俗语连缀，后世引用最广的一处</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">它是一种腐蚀剂，使团结涣散，关系松懈，工作消极，意见分歧。</div>
+        <div class="ctx">危害一节｜「腐蚀剂」这个比喻由此成为党内作风论述的常用词</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">说的是马克思主义，行的是自由主义；对人是马克思主义，对己是自由主义。两样货色齐备，各有各的用处。</div>
+        <div class="ctx">思想方法一节｜全篇最锋利的一句，把双重标准说成一种精算</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">关心党和群众比关心个人为重，关心他人比关心自己为重。这样才算得一个共产党员。</div>
+        <div class="ctx">结尾正面标准｜全篇的落点，与前面十一种表现逐条对应</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《国共合作成立后的迫切任务》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.09.29 ｜ 第二卷第四篇</span></div>
+        <p>写于本篇二十二天后——九月二十二、二十三日，中共《为公布国共合作宣言》与蒋介石承认中共合法地位的谈话先后发表，国共合作宣告成立。毛泽东随即据此提出：这样成立的统一战线「还不是一个充实的坚固的统一战线」，还要「唤起民众」。同一月里，党内立规矩、党外要空间，「对内的清单」与「对外的清单」合成一副手腕。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《关于纠正党内的错误思想》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1929.12 ｜ 第一卷第五篇</span></div>
+        <p>八年前的同一主题：那篇是古田会议的决议，逐条纠正单纯军事观点、极端民主化、非组织观点、个人主义等；本篇把其中最贴近日常的一条裂缝单独抽出来，写成一篇可以人人自查的短文。两篇合看，可比较「决议式」与「清单式」两种写法在一个组织内部的实际效果——决议规定怎么做，清单让人先自己想。<span class="muted">（《人民日报》2018.04.12 亦指出：毛泽东早在《关于纠正党内的错误思想》中就对党内的自由主义倾向进行过严厉批评。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>自查清单题</b>：把本篇十一种表现逐条读一遍，标出你在最近三个月里做过的事。通常会有三到五条。然后只问一个问题：这一条帮我避开了什么麻烦？（本篇给出的答案是「个人利益」，你的答案可能更具体：一次难堪的对话、一个得罪人的决定、一件多出来的活。）</div>
+      <div class="q">二 · <b>条件题</b>：你所在团队里最普遍的那种敷衍——会议上没人反对、会后没人执行，或者人人都说「按流程走」而流程空转——先不评价谁的责任，改问：这样做的人得到了什么？失了什么？如果得的多、失的少，要动的是哪一条条件？（一个具体的动作，而不是一次强调。）</div>
+      <div class="q">三 · <b>出口题</b>：翻出你最近写过的、批评性质最强的一份文字（复盘、评审意见、给同事的反馈）。检查结尾：有没有一句明确的「可以怎样改回来」？如果没有，把它补上——不是加一段客气话，而是给出一条可执行的路。</div>
+      <div class="q">四 · <b>语境题</b>：「自由主义」在本篇里指的是党内违反组织纪律的言行，与西方政治思潮的「自由主义」不是同一概念。找一个你经常使用、但含义在圈子里被默认收缩或扩张的词（如「对齐」「赋能」「owner」），写下它在你的语境里到底指什么——这一步做完，很多争论会突然消失，因为它们本来在谈两件事。</div>
+      <div class="hint"><b>三问卡</b>：① 我要纠正的那种行为，能不能写成一份十到十五条、条条可自查的症状清单（不点名、不举例）？② 我敢不敢把清单里最难听的几条也写进去？③ 我给了出口吗——被点到的人读完，知道怎么改回来，而不是只知道被指责了？三问都答得出来，这份清单才递得出去。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第三篇</div>
+    <div>依据人民出版社 1991 年版第二卷 ｜ 2026.09.15</div>
+  </div>
+
+</div>
+</body>
+</html>

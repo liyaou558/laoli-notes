@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 · 国共合作成立后的迫切任务 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿贰</div>
+    <h1>国共合作成立后的迫切任务</h1>
+    <div class="sub2">一份公开的「体检报告」 · 四个证据 · 一张「变了的／没变的」对照单 · 两件待办的工具</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第四篇 · <b>一九三七年九月二十九日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《国共合作成立后的迫切任务》。1991 年版《毛泽东选集》第二卷第四篇，紧接《反对自由主义》之后。原题《国共两党统一战线成立后中国革命的迫切任务》，编入《毛泽东选集》时改题（《毛泽东传（1893—1949）》第二十一章）</td></tr>
+      <tr><th>写作时间</th><td>一九三七年九月二十九日（正文标题下所标）。三个坐标：距九月二十二日国民党中央通讯社发表《中共中央为公布国共合作宣言》、二十三日蒋介石发表承认中共合法地位的谈话六天；距平型关战斗（九月二十五日）四天；距卢沟桥事变八十四天</td></tr>
+      <tr><th>最初发表</th><td>中共中央机关刊物《解放》周刊（延安，1937 年 4 月 24 日创刊）。《毛泽东传》记「《宣言》发表一周后，毛泽东为《解放》周刊撰写」；据抗日战争纪念网《中流砥柱的号角：抗战时期中国共产党新闻传播事业的发展壮大》所述，一九三七年十月二日出版的《解放》周刊在刊出《中共中央为公布国共合作宣言》的同期，刊登了此文。<b>具体期号未见权威著录，此处不写期数</b></td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）第 362—372 页：正文起于 362 页，注释止于 372 页（据求是理论网所载电子版页码著录核对）。研究著作与延安党史网引用此篇，多标注 363、364 页</td></tr>
+      <tr><th>篇幅</th><td>约六千三百字，十一个自然段，文末注释十一条。无小标题、不分节，一篇一气贯通的公开政治论文</td></tr>
+      <tr><th>对谁说话</th><td>通篇两套听众。前七段面向党内与全国人民，把六年间两党谈判的来路一条条交代清楚；末三段转向「当权的国民党的抗日同志们」，改用第二人称直接进言——所以它更像一封公开信，而不是一份内部指示</td></tr>
+      <tr><th>写作缘起</th><td>合作宣告成立之后，最急的问题从「能不能合作」变成了「这个合作怎么用」。文章要回答的正是这个：现在成立的只是两个党的统一战线，还不是全民族的统一战线；它「还不是一个充实的坚固的统一战线」</td></tr>
+      <tr><th>历史坐标</th><td>落笔之日，华北前线正在溃退，山西告急。同一天（九月二十九日），毛泽东另致电周恩来、朱德、彭德怀、任弼时，谈八路军在山西作战的战略意见，电文里说「根本方针是争取群众，组织群众游击队」（《毛泽东年谱（1893—1949）》中卷）。<b>同一天，一篇文章对国民党讲「唤起民众」，一封电报对八路军讲「争取群众」</b></td></tr>
+      <tr><th>版本说明</th><td>本篇自一九五二年《毛泽东选集》第二卷第一版起收录，题名即为今题；两版之间未见实质性文字改动的记载。此条为编者按语，非版本考证结论，供读者留意</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 最急的一周里，文章先算旧账。</b>写它的那一周，前线在崩：平津失守已一个多月，上海自八月十三日开战，九月二十五日平型关首捷之后战局仍在恶化。可是文章开头没有一句战况，而是从一九三三年的一份宣言讲起，用六个段落把四年多来的宣言、通电、书信、决议、谈判一条条清点：一九三五年八月号召组织抗日联军和国防政府、同年十二月确定统一战线决议、一九三六年五月通电、八月致国民党中央的信、九月建立民主共和国的决议、年底西安事变……<b>一篇在最紧急时刻写下的文章，把近一半篇幅用在「我们这些年做过什么」上。</b>这不是绕路：要说服对方承认「合作不是临时凑合」，只有账本回答得了——把每一步的日期和内容摆出来，对方才无从说「你们不过是换个说法」。</li>
+        <li><b>戏剧性二 · 标题被改过，重心从「既成事实」挪到「待办事项」。</b>原题《国共两党统一战线成立后中国革命的迫切任务》——重点在「成立后」；收入《毛泽东选集》时改成《国共合作成立后的迫切任务》——重点落在「迫切任务」。同一篇文章、同一段历史，两个标题的重心完全不同：前者的主语是一件已经发生的事，后者的主语是一件还没做的事。读完正文会发现，改后的题目更贴：全文的落点确实是「还要做什么」。</li>
+        <li><b>戏剧性三 · 文章里唯一被点名的人，后来做了汉奸。</b>文中点了上海《新学识》杂志上的诸青来：他撰文反对中共的抗日民族统一战线政策、反对国共合作，质疑「共产主义和三民主义不能并存」，毛泽东答以「这是一种形式主义的观察」。这个人此后的去向，被记在本文注释〔11〕里：一九三四年参加中国国家社会党，曾任上海大夏大学、光华大学等校教授，抗战后公开投降日本帝国主义，成了汪精卫汉奸政府中的一员。<b>一篇文章把对手的名字留在正文里，八十年后注释还在交代他去了哪里</b>——这是那一代政治文体的一个特征：点名，并且负责到底。</li>
+        <li><b>戏剧性四 · 他把对手的话抄了下来，然后拿来用。</b>文章第五、六段整段引用了蒋介石九月二十三日谈话的原话（「余以为吾人革命所争者，不在个人之意气与私见，而为三民主义之实现……」），随即评一句「这是很对的」，紧接着便要求「彻底地与民更始」「真正而不二心地、切实而不敷衍地、迅速而不推延地实行起来」。<b>引用对方的公开承诺，等于把承诺变成了后面的检验标尺</b>——下一次再谈「三民主义要不要实行」，争的就不是毛的看法，而是蒋自己的话。全文语气最硬的一句也是从此处推出的：「现在的问题，不是共产党信仰不信仰实行不实行革命的三民主义的问题，反而是国民党信仰不信仰实行不实行革命的三民主义的问题。」</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1933</div><div class="tl-body">中国共产党发表宣言：在停止进攻红军、给民众以自由、武装民众三个条件下，准备同任何国民党部队订立抗日协定。<span class="note">本篇开篇的记账起点</span></div></div>
+      <div class="tl-item"><div class="tl-date">1935.08</div><div class="tl-body">中国共产党和中国红军号召各党各派和全国同胞组织抗日联军和国防政府</div></div>
+      <div class="tl-item"><div class="tl-date">1935.12</div><div class="tl-body">中共中央通过同民族资产阶级组织抗日民族统一战线的决议（瓦窑堡会议）</div></div>
+      <div class="tl-item"><div class="tl-date">1936.05</div><div class="tl-body">红军发表要求南京政府停止内战、一致抗日的通电</div></div>
+      <div class="tl-item"><div class="tl-date">1936.08</div><div class="tl-body">中共中央致信国民党中央委员会，要求停战、组织两党统一战线</div></div>
+      <div class="tl-item"><div class="tl-date">1936.09</div><div class="tl-body">中共中央作出在中国建立统一的民主共和国的决议</div></div>
+      <div class="tl-item"><div class="tl-date">1936.12</div><div class="tl-body">西安事变发生，随即和平解决，两党停战。本篇称之为「建立两党重新合作的一个必要的前提」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.02.10</div><div class="tl-body">国民党三中全会前夜，中共中央以五项要求、四项保证电告该会——本篇记作「一个重要的政治步骤」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变，全国性抗日战争开始</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.15</div><div class="tl-body">中共中央把《为公布国共合作宣言》交付国民党，此后被搁置两个多月</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.21</div><div class="tl-body">《中苏互不侵犯条约》签订——本篇「第四个证据」里唯一的一项国际事实</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，通过《抗日救国十大纲领》与《为动员一切力量争取抗战胜利而斗争》</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.25</div><div class="tl-body">红军改编为国民革命军第八路军的命令颁布（本篇记「已在平津失守约一个月之后颁布了」）</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.09.22</div><div class="tl-body">国民党中央通讯社发表《中共中央为公布国共合作宣言》</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.09.23</div><div class="tl-body">蒋介石发表谈话，承认中国共产党的合法地位。国共合作与抗日民族统一战线正式形成</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.25</div><div class="tl-body">平型关战斗，八路军出征首捷</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.09.29</div><div class="tl-body">本篇写定。同日另致电周恩来、朱德、彭德怀、任弼时，谈山西作战方针：「根本方针是争取群众，组织群众游击队」</div></div>
+      <div class="tl-item green"><div class="tl-date">1937.10.02</div><div class="tl-body">《解放》周刊刊出《中共中央为公布国共合作宣言》与本篇（原题《国共两党统一战线成立后中国革命的迫切任务》）</div></div>
+      <div class="tl-item"><div class="tl-date">1937.10.13 / 10.19</div><div class="tl-body">张闻天、毛泽东等接连致电各地：对国民党的错误政策「采取攻势的批评与斗争」，主要方向是改组国民党，然后及于改组政府与改造军队——与本篇末段的进言同一条线</div></div>
+      <div class="tl-item"><div class="tl-date">1937.10.25</div><div class="tl-body">下一篇《和英国记者贝特兰的谈话》（1991 年版第 373 页起）</div></div>
+      <div class="tl-item"><div class="tl-date">1937.11.12</div><div class="tl-body">上海失陷当天，毛泽东在延安党的活动分子会议上作《上海太原失陷以后抗日战争的形势和任务》</div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">时间线依据本篇正文所述史实、《毛泽东年谱（1893—1949）》中卷、中共中央党史资料（人民网·中国共产党大事记·1937 年）与《毛泽东传（1893—1949）》核对。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      国共合作成立是件大事，但它只是<span class="q">「必要的基础」</span>，不是完成品：现在成立的是<span class="q">两个党</span>的统一战线，还不是<span class="q">全民族</span>的统一战线。要让它既「充实」（把工农兵学商都动员进去）又「坚固」（有共同纲领、有约束力），还缺两件东西——一个共同纲领（孙中山的三民主义＋八月二十五日的抗日救国十大纲领），和能够执行纲领的工具（<span class="q">改造政府、改造军队</span>）。缺了这两件，前线的危机只会增大，不会缩小。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先把成绩记清楚，再谈缺口</h4>
+        <p>文章用四个「证据」论证合作的成立确有分量：全国人民的赞同（「人心的向背，于此可见」）、西安事变和平解决后各党各派各界各军前所未有的团结、全国性抗日战争的发动、国际影响（尤其中苏互不侵犯条约的签订）。四个证据各自成段、逐条摆事实，一句空评价都不落。<span class="card-tag">判断</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 危机不是「没变」<br>是「错配」</h4>
+        <p>「起了变化的东西是有的，并且是很大的，这就是停止内战，一致抗日」；可是从政府机构、军队制度、民众政策到财政经济教育，大体上还是十年来的一套。「这叫做没有变化的东西和变化了的东西不相适应。」——问题被定义成一个<b>配套问题</b>：新起的战事配着旧制度的机器在跑。<span class="card-tag">全篇枢纽</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 纲领要「像一条绳索」</h4>
+        <p>共同纲领既是行动方针，也同时是约束。文章把这个功能说得毫不含糊：反对旧的那一套约束，欢迎一套新的约束代替旧的。落到工具上，就是改造政府（一党专政的政府→民族民主的统一战线的政府）与改造军队（基本违反官兵一致、军民一致的旧制度→恢复北伐时代国民革命军的精神），并且「一面打仗一面就可以改变制度」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">清账</div><div class="n-sub">1933 年以来<br>宣言·通电·书信·决议·谈判</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">判断</div><div class="n-sub">合作成立<br>开辟新纪元·四个证据</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">体检</div><div class="n-sub">只到两党范围<br>民众未被唤起</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">诊断</div><div class="n-sub">变了的与没变的<br>不相适应</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">药方</div><div class="n-sub">共同纲领<br>三民主义＋十大纲领</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">工具</div><div class="n-sub">改造政府<br>改造军队</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">呼吁</div><div class="n-sub">两党团结<br>全国同胞团结</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链最值得留意的是中间两步的次序：<b>先成立，再体检，最后才开药方。</b>本篇没有停在「合作了真好」，也没有跳到「你们必须马上改」；它先在四个证据上把成绩认定下来，再用「变了的／没变的」把缺口量出来，然后缺口自己指向了两件工具。<b>没有诊断，药方就是要求；有了诊断，药方就成建议</b>——这也是末段能一路用「我们建议」「时代的要求」这种措辞而不失分量的原因。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">清账：六年筹备，一条条数</span><span class="part-scope">第 1—2 段 · 362—364 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li>从一九三三年那份三条件宣言起，把每一份文件按时间排开：<b>宣言、通电、书信、决议</b>，再加上「派遣了自己的代表，多次和国民党方面进行谈判」——六类动作、六年时间，结果只有一句：「然而还是没有结果。」</li>
+          <li>转折点落在西安事变：「这是中国历史上的一件大事，从此建立了两党重新合作的一个必要的前提。」</li>
+          <li>今年二月十日那份五项要求、四项保证的电报被单独记下来，理由写得很清楚：「如果没有这一步骤，则两党合作的建立势将推迟，而这对于迅速准备抗日是完全不利的。」</li>
+          <li><span class="k">结构要点</span>：这一段的写法是<b>用账本换信任</b>。合作刚成立，双方互信最薄，说理最弱；把每份文件的日期与内容摊开，等于把「我们不是临时改主意」变成可核对的事实</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">判断：四个证据</span><span class="part-scope">第 3—4 段</span></div>
+      <div class="part-body">
+        <p>承认宣言与谈话的发表「建立了必要的基础」，也直说对蒋氏谈话「还没有抛弃国民党的自大精神，还没有必要的自我批评，这是我们所不能满意的」——<b>满意与不满意分开写</b>，然后才给结论：统一战线宣告成立，「这在中国革命史上开辟了一个新纪元」。接着用四个证据把这个结论坐实（下为各证据要旨，非原文分段）：</p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym green">
+        <div class="sym-head"><span class="sym-no">证据一</span><span class="sym-tag">人心</span></div>
+        <div class="sym-text">「还在中国共产党开始提出统一战线政策的时候，就立即得到了全国人民的赞同。人心的向背，于此可见。」</div>
+        <div class="sym-note">唯一的「无形」证据，用赞同的时机来说服</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">证据二</span><span class="sym-tag">国内团结</span></div>
+        <div class="sym-text">西安事变和平解决、两党停战以后，「立即引起了国内各党各派各界各军进入了前所未有的团结状况」。</div>
+        <div class="sym-note">紧接着自我扣分：「政府和人民之间的团结问题至今在基本上还没有解决」</div>
+      </div>
+      <div class="sym blue">
+        <div class="sym-head"><span class="sym-no">证据三</span><span class="sym-tag">抗战发动</span></div>
+        <div class="sym-text">「确已发动了百年以来未曾有过的全国范围的对外抗战，没有国内和平和两党合作这是做不到的。」紧接着那句对照：统一战线破裂时「日寇可以不费一弹而得东北四省」。</div>
+        <div class="sym-note">标注为「最为显著的」一条：用结果反证合作的效力</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">证据四</span><span class="sym-tag">国际</span></div>
+        <div class="sym-text">「全世界工农民众和共产党，都拥护中国共产党提出的抗日统一战线的主张」；中苏已签订互不侵犯条约，「今后两国关系有更进一步的希望」。</div>
+        <div class="sym-note">唯一引用国际事实的一条，落在「更积极地援助中国」上</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      然而这样伟大的任务，不是停止在现在状况的统一战线所能完成的。两党的统一战线还需要发展。因为现在成立的统一战线，还不是一个充实的坚固的统一战线。
+      <span class="src">第四段（1991 年版第 365 页前后）｜全篇的转折句：先把成绩认定，再把缺口点明，「充实」与「坚固」两个词随后各领一路论证</span>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丙</span><span class="part-title">体检：谁还没被动员进来</span><span class="part-scope">第 5—7 段</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先纠正一个范围问题：「抗日民族统一战线是否只限于国共两个党的呢？不是的，它是全民族的统一战线，两个党仅是这个统一战线中的一部分。」</li>
+          <li>再点出实情：「现在的统一战线事实上还停止在两个党的范围之内」，工农兵学商一切爱国同胞「还没有被唤起，还没有被发动，还没有组织起来和武装起来」。四个「还没有」连排，最后一句是判断：「这是目前的最严重的情形。」</li>
+          <li>危机的链条写得很短：严重性→「影响到前线不能打胜仗」→「政府和人民隔离，军队和人民隔离，军队中指挥员和战斗员隔离」→「前线危机就无可避免地只会增大，不会缩小」。</li>
+          <li><span class="k">找到的出路是一条遗嘱</span>：「挽救危机的唯一道路，就是实行孙中山先生的遗嘱，即『唤起民众』四个字。」接着是两句反问——「究竟根据什么理由一定不肯实行这个遗嘱？」并点出对立面：「统制、镇压，是和『唤起民众』的原则相违背的。」<b>用对手尊奉的人，去要求对手改变</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丁</span><span class="part-title">诊断：变了的与没变的</span><span class="part-scope">第 8 段</span></div>
+      <div class="part-body">
+        <p>全篇最像一份诊断书的一段。它不评价谁落后，只把两张单子并列：一张写着已经变了什么，一张写着还没变什么，然后指出两张单子之间的矛盾——</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c1">分类</th><th>1991 年版原文所述</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">已经变了<br>（并且很大）</td><td>「这就是停止内战，一致抗日。两党的内战停止了，全国的抗日战争起来了，这是从西安事变以来中国政局的极大的变化。」</td></tr>
+        <tr><td class="c1">至今没变</td><td>「现在国民党对待民众的一套，还是十年来的一套，从政府机构，军队制度，民众政策，到财政、经济、教育等项政策，大体上都还是十年来的一套，没有起变化。」</td></tr>
+        <tr><td class="c1">矛盾</td><td><b>「这叫做没有变化的东西和变化了的东西不相适应。」</b>——那套旧办法「仅适用于对外妥协和对内镇压革命」，如今拿来对付日本帝国主义的进攻，于是「处处不适合，各种弱点都暴露出来」</td></tr>
+        <tr><td class="c1">推论</td><td>「不干抗日战争则已，既然要干了，并且已经干起来了，又已经暴露出严重的危机了，还不肯改换一套新的干法，前途的危险是不堪设想的。」</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:12px;">诊断之后是两个定义句，分别对应「充实」与「坚固」：<b>充实＝把全国人民都动员起来加入统一战线；坚固＝有一个共同纲领。</b>而共同纲领的功能被比作一条绳索——「把各党各派各界各军一切加入统一战线的团体和个人都紧紧地约束起来。这才能说得上坚固的团结。」</p>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">戊</span><span class="part-title">药方与工具：纲领，以及执行纲领的东西</span><span class="part-scope">第 9—10 段</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>共同纲领是什么</b>：「这就是孙中山先生的三民主义和共产党在八月二十五日提出的抗日救国十大纲领。」</li>
+          <li><b>为什么要解释「共产党实行三民主义」</b>：因为上海的诸青来在上海的刊物上提出疑问，以为共产主义与三民主义不能并存。文章评判这种看法「是一种形式主义的观察」，并给出区分：共产主义在将来阶段实行，现在阶段实行的是「历史规定的民族革命主义和民主革命主义」。</li>
+          <li><b>把「谁在敷衍」的问题翻过来</b>：十年来共产党方面实行的政策，「根本上仍然是符合于孙中山先生的三民主义和三大政策的革命精神的」；于是「现在的问题，不是共产党信仰不信仰实行不实行革命的三民主义的问题，反而是国民党信仰不信仰实行不实行革命的三民主义的问题」。</li>
+          <li><b>药方之后是工具</b>：「要实行三民主义和十大纲领，需要实行的工具，这就提出了改造政府和改造军队的问题。」</li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c1">改造对象</th><th>旧制度的症结</th><th>改造原则与前例</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">政府</td><td>「现在的政府还是国民党一党专政的政府，不是民族民主的统一战线的政府」</td><td>三民主义与十大纲领的实行，「没有一个民族民主的统一战线的政府是不可能的」；「一个新政府的出现是完全必要的」</td></tr>
+        <tr><td class="c1">军队</td><td>「现在国民党军队的制度是基本上违反这两个原则的」——广大的将士「虽有忠勇之心，但束缚于旧制度，无法发挥其积极性」</td><td>原则是<b>官兵一致、军民一致</b>；中心任务是改变军队的政治精神和政治工作；模范前例是北伐战争时代的国民革命军；另举西班牙共和国军队「从极困难的境遇中创造出来」为教训；红军的经验「可以供全国友军的借鉴」</td></tr>
+        <tr><td class="c1">节奏</td><td>—</td><td><b>「不是说把仗停下来改造了制度再打，一面打仗一面就可以改变制度。」</b>——本文对「先改造还是先打仗」的回答</td></tr>
+      </tbody>
+    </table>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">己</span><span class="part-title">呼吁：改称「你们」，把建议交出去</span><span class="part-scope">末三段 · 371—372 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li>叙述人称在此处切换：「当权的国民党的抗日同志们，我们和你们在今天一道负着救亡图存的责任。」先认两件好事——建立统一战线「这是很好的」，实行对日抗战「这也是很好的」；再提一处不同意：「但是我们不同意你们继续其他的老政策。」</li>
+          <li>建议一共四条祈使句：把统一战线发展充实起来、把民众加进去；把它巩固起来、实行一个共同纲领；决心改变政治的制度和军队的制度；准备一个新政府的出现。</li>
+          <li>收尾把历史责任移交给对方：孙中山当年「曾经下决心改造政治制度和军事制度，因而奠定了一九二四年到一九二七年的革命的基础」，「实行同样改造的责任，今天是落在你们的肩上了」。</li>
+          <li><span class="k">落点</span>：结尾不写条件、不写代价，只写两句团结的呼吁与一句「只要我们努力，我们的前途是光明的」——一篇有大量批评内容的文章，最后落在「团结」与「前途」上</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">
+      我们民族已处在存亡绝续的关头，国共两党亲密地团结起来啊！全国一切不愿当亡国奴的同胞在国共两党团结的基础之上亲密地团结起来啊！实行一切必要的改革来战胜一切困难，这是今日中国革命的迫切任务。完成了这个任务，就一定能够打倒日本帝国主义。只要我们努力，我们的前途是光明的。
+      <span class="src">末段（1991 年版第 372 页）｜三个「啊」字的呼告句收束全篇；此段常被单独引用为该文的主旨句</span>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">统一战线的四层对象（按原文的推进次序重排）</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">两党之间</div>
+          <div class="spec-seg gold">各党各派</div>
+          <div class="spec-seg blue">工农兵学商</div>
+          <div class="spec-seg red">组织与武装</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>第一层 · 已成立</b>《宣言》与蒋氏谈话发表，「两党的统一战线是宣告成立了」</div>
+          <div class="spec-label"><b>第二层 · 已进入</b>西安事变和平解决后，「国内各党各派各界各军进入了前所未有的团结状况」</div>
+          <div class="spec-label"><b>第三层 · 未被唤起</b>「广大的工人、农民、兵士、城市小资产阶级」及其他爱国同胞「还没有被唤起，还没有被发动」</div>
+          <div class="spec-label"><b>第四层 · 未组织未武装</b>同句后半：「还没有组织起来和武装起来」——最严重的情形在此</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这四层从左到右，是文章衡量统一战线「充实」程度的标尺：<b>越往右，人数越多，距离「动员起来」越远。</b>而全篇的论证恰好是从最左边（已经成立的、最容易确认的成绩）往最右边（还没有被唤起的大多数）推进——先承认左边，再指出右边，最后回到左边的人身上要求开放：这就是全文的杠杆。<span class="muted">（四层划分系按其行文次序所做重排，非原文分段。）</span></p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>把对手的原话抄下来，当标尺用</h4>
+          <p>文章第五段整段引用了蒋介石九月二十三日谈话的原话，紧接着评一句「这是很对的」——然后就把这句话当了绳索用：「现在的急务在谋三民主义的实现，放弃个人和小集团的私见，改变过去的老一套，立即实行符合于三民主义的革命纲领，彻底地与民更始。」引用对手的公开承诺，好处在于转移了举证责任：此后争的不再是「你有没有讲三民主义」，而是「你自己说的话办了没有」。同一篇里还有同类手法——用孙中山的遗嘱「唤起民众」要求国民党开放民众运动，用孙中山「改造政治制度和军事制度」的先例去要求今天的改造。三次都是<b>把对方阵营里最不容否认的名字和句子，搬到自己的论证位置上</b>。</p>
+          <span class="mv">迁移：合作或谈判中，把对方的公开表态逐字记下来，标明时间与出处，下次对表时用的不是你的记忆，而是他自己签过字的话。这不是抓把柄，而是把口头承诺换成可检验的句子——省掉大量「我不是这个意思」的扯皮。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「没有变化的东西和变化了的东西不相适应」——一种比「落后」更好用的诊断句式</h4>
+          <p>指出问题最容易的方式是骂人思想落后、态度敷衍。本篇换了一个句式：先承认变化很大（停止内战、一致抗日），再把没变的那一套列出来（政府机构、军队制度、民众政策、财政经济教育），然后只做一件事——说它们<b>不相适应</b>。这个句式的好处有三层：其一，它不要求对方先认错才能听下去，因为「变化很大」这句是给了对方的；其二，它把问题定位在<b>两套速度不同的系统同时运行</b>上，而不是某个人的品格上；其三，因为定位在配套，下一步自然就是「换配套」，而不是「换人」——药方由此变得可执行，甚至可以在打仗的同时动手（「一面打仗一面就可以改变制度」）。</p>
+          <span class="mv">迁移：面对组织里的失灵，先列两张单子——已经变了什么（新目标、新业务、新工具），哪些配套没跟上（流程、考核、审批、人的能力）。两张单子摆在一起，出事的点自己会浮出来。改动配套，比为态度开大会有效得多。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>被忽略的一句硬话：反对的不是「约束」，而是「旧约束」</h4>
+          <p>本篇最容易被读漏的一句是：「我们反对旧的那一套约束，因为它不适应于民族革命战争。我们欢迎建立一套新的约束代替旧的，这就是颁布共同纲领，建立革命秩序。」——它干脆承认共同纲领<b>就是一种约束</b>，一条把加入者都捆住的绳子，并且认为没有这条绳子就谈不上坚固的团结。日常语境里，「约束」通常是负面词，谈合作总喜欢强调信任与感情；这篇文章的判断相反：<b>靠人情维持的团结是脆弱的，靠写明的纲领维持的团结才是坚固的</b>。要紧的是分清两件事——反对的到底是「有约束」这件事，还是「某一套不合理的旧约束」。分不清这两者，改革就会退化成两类人之间的误会：想换规则的人以为对方反对规则，想要维护旧好处的人则躲在「何必那么死板」的口号后面。</p>
+          <span class="mv">迁移：任何长期协作，把「说好的事」落成可引用的文本（谁、在什么条件下、做什么、什么时候复看），是把关系从靠面子转到靠约定的关键一步。当有人说「别搞那么复杂」时，先问一句：你反对的是约束本身，还是旧的这一套？</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">两党的统一战线是宣告成立了。这在中国革命史上开辟了一个新纪元。这将给予中国革命以广大的深刻的影响，将对于打倒日本帝国主义发生决定的作用。</div>
+        <div class="ctx">第三段末｜本篇最常被引用的一句；延安党史网《抗日民族统一战线的正式形成》引作《毛泽东选集》第 2 卷（1991 年版）第 364 页</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">挽救危机的唯一道路，就是实行孙中山先生的遗嘱，即“唤起民众”四个字。</div>
+        <div class="ctx">第六段｜「唤起民众」四字成为此后论述开放民众运动的固定说法；再往后数段即据此追问「究竟根据什么理由一定不肯实行这个遗嘱？」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这叫做没有变化的东西和变化了的东西不相适应。</div>
+        <div class="ctx">第八段｜全篇诊断的落点句，前后两句分别是「变了什么」与「没变什么」的清单</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">共同纲领是这个统一战线的行动方针，同时也就是这个统一战线的一种约束，它像一条绳索，把各党各派各界各军一切加入统一战线的团体和个人都紧紧地约束起来。这才能说得上坚固的团结。</div>
+        <div class="ctx">第八段｜「绳索」之喻是全篇对「坚固」一词的定义；本段另有一句与之配套：「我们反对旧的那一套约束，因为它不适应于民族革命战争。我们欢迎建立一套新的约束代替旧的。」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们民族已处在存亡绝续的关头，国共两党亲密地团结起来啊！全国一切不愿当亡国奴的同胞在国共两党团结的基础之上亲密地团结起来啊！</div>
+        <div class="ctx">末段｜全篇的三句呼告之首；此前一句是「实行一切必要的改革来战胜一切困难，这是今日中国革命的迫切任务」——标题里的「迫切任务」正落在这里</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对（引号按原书的双引号形式保留）。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《和英国记者贝特兰的谈话》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.10.25 ｜ 第二卷第五篇（1991 年版第 373 页起）</span></div>
+        <p>写在本篇二十六天后，此时上海已告急。同一个判断换了一个场合：不再是写给国民党看的公开信，而是答一位外国记者的问题——中国共产党和抗日战争、抗日战争的情况和教训、八路军的作战方针、民主制度和抗日战争。对外解释的场合，语言会比写给对手时更系统、也更具体。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《反对自由主义》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.09.07 ｜ 第二卷第三篇（上一篇）</span></div>
+        <p>同一个月内的一对：《反对自由主义》是对党内的——立规矩，要党员拿思想斗争当武器；本篇是对党外的——争空间，要国民党把民众放进来。一篇向内收紧组织，一篇向外要求开放；前者强调约束，后者也强调约束（共同纲领这条绳子），但要求换一套新的。两篇合看，可见同一份政治判断在「对内」与「对外」两个方向上的不同写法。<span class="muted">（本篇末段对「当权的国民党的抗日同志们」说话的语气，可与上一篇的十一种自查清单对读：一个是请对方改政策，一个是请自己人改毛病。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>账本题</b>：找一个你正在推进、但对方还心存疑虑的合作（跨部门、外部供应商、新伙伴）。列三到五件你方过去做过的事，带上时间与结果——不用评价，只列事实。然后自问：这三五条摆出来，能不能替掉一半的口头解释？本篇用六个段落做这件事，花掉的篇幅约占全文一半。</div>
+      <div class="q">二 · <b>错配题</b>：给自己所在的组织画两张单子。左栏写「最近一年真正变了的东西」（新目标、新业务、新工具、新客户）；右栏写「大体上还是老样子的东西」（审批、考核、报表、会议、岗位职责）。从两栏里各挑一条配成对，问：这一对会不会已经在出问题？本篇的结论是，问题不来自「有人落后」，而来自两套速度不同的东西在同一时间运行。</div>
+      <div class="q">三 · <b>约束题</b>：你手上最要紧的一段长期协作，有没有一份双方都认、可以随时引用的文件（谁、在什么条件下、做什么、什么时候复看）？如果没有，想一想：过去半年里因为「说不清」而起的摩擦有几件。如果有，检查它是否仍然适用——本篇里那句「我们反对旧的那一套约束，我们欢迎建立一套新的约束代替旧的」，问的正是「现有的约束还配不配得上现在的事」。</div>
+      <div class="q">四 · <b>句式题</b>：「没有变化的东西和变化了的东西不相适应」这个句式，可以原样搬到今天。挑一件让你不满意的现状，写两句：一句「变了什么」（并且真诚地承认变化不小），一句「没变什么」，第三句自己写「这叫______」。写完再看：你的解决方案是改人，还是改配套？</div>
+      <div class="hint"><b>三问卡</b>：① 我认定对方「不够配合」之前，有没有先把对方已经做到的事列出来并认下来？② 我说出的缺口，是「态度问题」还是「配套问题」——后者才能开出可执行的动作，甚至可以在不停下当前工作的前提下动手？③ 我要建立的新规则，能不能写成一份可引用、可复看的文本，而不是又一次口头强调？三问都在「先承认、再量缺口、最后换配套」这条线里，也是本篇从清账到呼吁的整条路径。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第四篇</div>
+    <div>依据人民出版社 1991 年版第二卷 ｜ 2026.09.16</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>23 · 和英国记者贝特兰的谈话 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿叁</div>
+    <h1>和英国记者贝特兰的谈话</h1>
+    <div class="sub2">五个小标题 · 二十一组问答 · 一次对外把话说尽的尝试</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第五篇 · <b>一九三七年十月二十五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《和英国记者贝特兰的谈话》。1991 年版《毛泽东选集》第二卷第五篇，紧接《国共合作成立后的迫切任务》之后。谈话者贝特兰（James Munro Bertram），中文文献亦作「詹姆斯·贝特兰」</td></tr>
+      <tr><th>写作时间</th><td>题下标注一九三七年十月二十五日。<b>这不是一次会面的起止时间，而是合成稿的定稿日期</b>：据《人民日报（海外版）》2021 年《毛泽东与贝特兰交谈记录稿》，贝特兰 1937 年 10 月初抵延安，此后多次到毛泽东住处采访（翻译吴亮平在场），当时的整理打字稿尚存</td></tr>
+      <tr><th>最初发表</th><td>延安《解放》周刊，题名《毛泽东与英国记者贝特兰之谈话》（《人民日报（海外版）》2021.08.04）。<b>出版日期两说并存</b>：外交部网站《中国抗战的希望在西北》记「刊登于 1937 年 10 月 25 日出版的《解放》周刊」；一份《解放》期刊目录（时光图书馆）则把第 1 卷第 23 期系于 1937 年 11 月 13 日。<b>两说未能定于一，此处只记题名与期号，不写定出版日期。</b>贝特兰自记的谈话摘要英文版，发表于上海英文《大美晚报》</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）第 373—386 页。正文起于 373 页（标题与日期），四条注释止于 386 页（据中国理论网所载《毛泽东选集》第二卷电子版逐页核对）</td></tr>
+      <tr><th>篇幅</th><td>五个小标题、二十一组问答，正文与注释合计约占十四页。答问体，无作者自述的分析段落——全部判断都藏在「答」里</td></tr>
+      <tr><th>场合</th><td>对外解释。提问者是一位不熟悉中共党内语汇、也不受国民党新闻检查约束的外国记者；回答因此必须把「统一战线」「民主」「民主集中制」这些词从头讲一遍。<b>这是本篇与相邻几篇最大的不同：不是写给对手的公开信，也不是党内的指示，而是对着一个「需要被说服的陌生人」说话</b></td></tr>
+      <tr><th>历史坐标</th><td>十月的战局是「上海苦战、山西告急」：淞沪会战自 8 月 13 日开打，本篇中「日寇已在短期内取得了河北、察哈尔、绥远三省，山西亦在危急中」是实时战报。半个月后（11 月 12 日）上海失陷，毛泽东即作下一篇《上海太原失陷以后抗日战争的形势和任务》</td></tr>
+      <tr><th>版本说明</th><td>本篇自一九五二年《毛泽东选集》第二卷第一版起收录，题名即为今题；两版之间未见实质性文字改动的记载。此条为编者按语，非版本考证结论，供读者留意</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 篇名里的「英国」，是一个通行证式的标签。</b>贝特兰（1910—1993）其实是<b>新西兰人</b>，生于奥克兰，靠牛津的罗兹奖学金来华，一九三六年一月起在燕京大学学中文，同时兼英国《每日先驱报》《泰晤士报》等报社的驻华特约记者（人民周刊网《贝特兰：第一位访问延安的英国记者》；新西兰传记辞典 Te Ara）。一九三七年八月日军占领北平后，他与斯诺一起护送包括邓颖超在内的三名中共党员撤离；随后在西安接到延安发来的电报邀请——英语文献记作毛泽东邀他成为<b>第一位官方身份的「英国」访客</b>。他自己也很得意这句话：「我是第一位访问延安的英国人。」中方文献同样称他为「第一位访问延安的英国记者」。<b>篇名里的「英国」由此而来，并且一直沿用到 1991 年版。</b></li>
+        <li><b>戏剧性二 · 第一次见到毛泽东，不在采访席上，在会场上。</b>一九三七年十月初他到延安，第二天正赶上红军大学（抗大）举行毕业礼暨新生开学礼，他应邀参加集会，才第一次见到毛泽东；「毛泽东深入浅出的演讲风格给他留下了深刻印象」，此后才被邀到住处多次采访（《人民日报（海外版）》2021.08.04）。而该文披露的整理打字稿显示，那些谈话的场景具体得近乎素描：<b>一九三七年十月的一个夜晚，延安窑洞昏暗的烛光下，三个人——毛泽东、翻译吴亮平、贝特兰——在认真交谈。</b>一篇收进《毛泽东选集》的「文章」，原始形态是这样的几个夜晚。</li>
+        <li><b>戏剧性三 · 提问者后来用四年战俘营，证明他问的问题不是随口问的。</b>贝特兰一九三七年依据一手材料出版《中国的危机：西安兵变真相》，是唯一一本外国人报道西安事变的专著；一九三八年受周恩来委托把八路军伤员医疗需求的报告带给宋庆龄，参与筹建「保卫中国同盟」；一九三九年六月亲自带三十辆卡车、一万五千加仑汽油和六百多箱医药赴延安；太平洋战争爆发后以志愿者身份在香港参战，香港沦陷后被日军囚禁于战俘营达<b>四年</b>，期间写成《在战争的阴影下》；一九五六年作为新西兰文化代表团成员重返中国（人民周刊网）。<b>一篇一九三七年的答问，提问者的后半生把它读成了一份承诺书。</b></li>
+        <li><b>戏剧性四 · 他在十月下旬就写出了日军「和平烟幕弹」的用法清单。</b>本篇倒数第二节专谈投降主义，起因是日本在上海放出和谈空气。毛泽东的回答不含情绪，只有一张功能清单：日本再放烟幕弹，为的是三个目的——「（一）巩固已得的阵地，以便作为第二步进攻的战略出发地；（二）分裂中国的抗日阵线；（三）拆散世界各国援助中国的阵线」。随后他再往前推一步：<b>危险不在日本放烟幕，而在「中国居然有些动摇分子正在准备去上敌人的钓钩」。</b>半个月后上海失陷、一个月后南京失陷，这句话被战局验证。</li>
+        <li><b>戏剧性五 · 他把「教训」算进了「成绩」里。</b>全篇最漂亮的结构安排出现在第二节：先列五条成绩，第五条写的是——「从战争取得了教训。这是用土地和血肉换来的。」紧接着才逐条讲教训。<b>把教训放在成绩栏里，等于先给代价定性：这不是失败的证据，而是已经到手的资产，只是用土地和血肉结的账。</b>后面再讲「许多土地的丧失，许多军队的失利」，就不必再与「是不是唱衰」纠缠。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1936.01</div><div class="tl-body">贝特兰来华，在燕京大学学习中文，兼多家英国报社驻华特约记者<span class="note">（人民周刊网）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1936.12.12</div><div class="tl-body">西安事变爆发。贝特兰在斯诺帮助下赴西安采访四十四天，与史沫特莱一道主持西安电台对外广播，用英、法、德、俄语播报<span class="note">（人民周刊网；外交部网站资料）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937</div><div class="tl-body">出版《中国的危机：西安兵变真相》——唯一外国人报道西安事变的专著</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变。贝特兰在事变第四天从日本回到中国采访<span class="note">（外交部网站资料）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.13</div><div class="tl-body">淞沪会战开打，上海苦战至十一月十二日失陷</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08</div><div class="tl-body">日军占领北平；贝特兰与斯诺护送包括邓颖超在内的三名中共党员撤离</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，通过《抗日救国十大纲领》<span class="note">本篇第一节「不久我们又发表了《抗日救国十大纲领》」即指此</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.09</div><div class="tl-body">毛泽东发出邀请电报<span class="note">（人民周刊网记「九月，毛泽东向贝特兰发出了访问延安的邀请」）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.09.22 / 09.23</div><div class="tl-body">国民党中央通讯社发表《中共中央为公布国共合作宣言》；蒋介石发表谈话，承认中共合法地位</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.25</div><div class="tl-body">平型关战斗<span class="note">本篇第三节列举八路军战果时第一条即「平型关的战斗」</span></div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.10 初</div><div class="tl-body">贝特兰抵延安，参加红军大学（抗大）毕业礼暨新生开学礼；此后多次到毛泽东住处采访，翻译吴亮平在场</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.10.25</div><div class="tl-body">本篇题下日期</div></div>
+      <div class="tl-item"><div class="tl-date">1937.10 下旬</div><div class="tl-body">日本在上海放出和谈空气；本篇「抗日战争中的投降主义」一节即就此答问</div></div>
+      <div class="tl-item"><div class="tl-date">1937.11 前后</div><div class="tl-body">延安《解放》周刊以《毛泽东与英国记者贝特兰之谈话》为题刊出<span class="note">具体出版日期两说并存，未定于一</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1937.11.12</div><div class="tl-body">上海失陷；毛泽东在延安党的活动分子会议上作《上海太原失陷以后抗日战争的形势和任务》<span class="note">1991 年版第 387 页起，下一篇</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938—1939</div><div class="tl-body">出版《华北前线》，内含对朱德、彭德怀、周恩来等的采访</div></div>
+      <div class="tl-item"><div class="tl-date">1941.12</div><div class="tl-body">香港沦陷，贝特兰被日军囚禁于战俘营四年，期间写成《在战争的阴影下》</div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">时间线依据本篇正文、《人民日报（海外版）》2021.08.04《毛泽东与贝特兰交谈记录稿》、人民周刊网《贝特兰：第一位访问延安的英国记者》、外交部网站《中国抗战的希望在西北》、新西兰传记辞典 Te Ara 及维基百科 James Bertram 条、中国理论网《毛泽东选集》第二卷电子版。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      抗战打了几个月，成绩是有的，而且是伟大的——但最大的教训是：<span class="q">这场战争还不是群众性的战争</span>。「反对日本帝国主义侵略的战争而不带群众性，是决然不能胜利的。」由此推出的不是一句口号，而是一张改革清单：政治上六条（改造政府、给人民以自由、改良人民生活、外交政策积极化、文化教育改革、严厉镇压汉奸），军事上六项「改变」。这些都在《抗日救国十大纲领》里；而把纲领变成事实的关键，<span class="q">是国共两党的合作</span>，合作要有共同纲领，新政治制度的核心是民主集中制——眼下已有一个具体提案：召集临时国民大会。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 成绩要认，而且认五条</h4>
+        <p>全国性的革命战争；由分崩离析变成比较团结（国共合作是基础）；唤起国际舆论同情；给日寇以很大消耗（「听说日寇资财的消耗是每天二千万日元」）；从战争取得了教训。<b>第五条把「教训」直接写进成绩栏</b>——先给代价定性，再讲缺口。<span class="card-tag">次序</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 最大的教训：不是「全面」<br>而是「片面」</h4>
+        <p>「这次参战的地域虽然是全国性的，参战的成分却不是全国性的。」有人辩称「现在的战争已经是全面性的战争」，他答：<b>「这只说明了参战地域的普遍。从参战的成分说来则是片面的，因为抗战还只是政府和军队的抗战，不是人民的抗战。」</b>范围广不等于参与广——全部改革要求都从这一个校正里出来。<span class="card-tag">全篇枢纽</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 制度上的答案是民主集中制<br>而且它有一个可检验的描述</h4>
+        <p>民主＝政府必须真正代表民意、人民能自由支持政府并有机会影响政策；集中＝政策经民意机关通过后交付政府执行，执行不违背既定方针。判断标准被压成一句可操作的话：<b>「如果战争的目的是直接代表着人民利益的时候，政府越民主，战争就越好进行。……战争的性质决定政府和人民的关系，这是一个历史的原则。」</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">场合</div><div class="n-sub">答外国记者问<br>议程由提问者定</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">成绩</div><div class="n-sub">五条<br>把教训也算作成绩</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">教训</div><div class="n-sub">政治：非群众性<br>军事：单纯防御</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">条件</div><div class="n-sub">政治六条<br>军事六项改变</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">依托</div><div class="n-sub">十大纲领<br>合于三民主义三大政策</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">制度</div><div class="n-sub">民主集中制<br>提案：临时国民大会</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">关键</div><div class="n-sub">国共合作<br>与共同纲领</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的特别之处在<b>第一步</b>：全篇不是从「我们的主张」开始，而是从「你要问什么」开始。提问者的五个关切（中共有何表示／战局与教训／八路军怎么样／和谈空气怎么看／民主与战时政府是否冲突）就是全篇的目录，他只是在每个答案里把自己的立场放进去。<b>对外的场合，议程不由自己定；能做的只是把既定议程答到对方无法回避下一步。</b></p>
+    <p class="lead" style="margin-top:10px;">而全篇的理论支点落在最后：<b>「战争的性质决定政府和人民的关系」</b>。这句把制度选择从道德偏好里挪了出来——不是「民主比较好」，而是：如果这场仗是为了人民的利益打的，政府就不必怕人民；需要怕人民的政府，恰恰暴露了它打的不是人民要打的仗。<b>判断一个国家在打什么仗，看它怕不怕人民，就够了。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">中国共产党和抗日战争</span><span class="part-scope">第一节 · 1 组问答</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先自证一贯：卢沟桥事变第二天发宣言 → 《抗日救国十大纲领》 → 国共合作成立时的宣言，都指向同一条方针。</li>
+          <li>落点是一句口号：「在这个时期中，我们的基本口号就是『全面的全民族的抗战』。」</li>
+          <li><span class="k">结构要点</span>：这一节很短，功能是<b>交付全篇的关键词</b>——「全面的全民族的抗战」。后面四节本质上是这句话的展开与辩护</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">抗日战争的情况和教训</span><span class="part-scope">第二节 · 5 组问答 · 全篇最重</span></div>
+      <div class="part-body">
+        <p>先答「战争产生了什么结果」：一方面是日寇的攻城、略地、奸淫、抢劫、焚烧和屠杀，「把亡国危险最后地加在中国人身上」；另一方面是「中国大多数人从此得到了深刻的认识」，并开始提醒世界各和平国家。</p>
+        <p>再答日军目的与实现程度：第一步占华北和上海，第二步占其他区域；<b>「由于中国的抗战至今还限于单纯的政府和军队的抗战，日寇已在短期内取得了河北、察哈尔、绥远三省，山西亦在危急中。」</b>——把失地的原因直接归到抗战的方式上。</p>
+        <p>然后是五条成绩（下为各条要旨）：</p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym green">
+        <div class="sym-head"><span class="sym-no">成绩一</span><span class="sym-tag">性质</span></div>
+        <div class="sym-text">「现在的抗日战争，是自有帝国主义侵略中国以来所没有的。它在地域上是真正全国的战争。这个战争的性质是革命的。」</div>
+        <div class="sym-note">全篇判断的总前提：性质是革命的，但后面要说「革命性不完全」</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">成绩二</span><span class="sym-tag">团结</span></div>
+        <div class="sym-text">「战争使全国分崩离析的局面变成了比较团结的局面。国共合作是这个团结的基础。」</div>
+        <div class="sym-note">接的是上一篇的主题，此处只作一句认证</div>
+      </div>
+      <div class="sym blue">
+        <div class="sym-head"><span class="sym-no">成绩三</span><span class="sym-tag">国际</span></div>
+        <div class="sym-text">「唤起了国际舆论的同情。国际间过去鄙视中国不抵抗的，现在转变为尊敬中国的抵抗了。」</div>
+        <div class="sym-note">对着外国记者说这一条，本身就有分量</div>
+      </div>
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">成绩四</span><span class="sym-tag">消耗</span></div>
+        <div class="sym-text">「给了日寇以很大的消耗。听说日寇资财的消耗是每天二千万日元」；过去「差不多不费一点气力唾手而得东四省」，现在「非经过血战不能占领中国的土地」。</div>
+        <div class="sym-note">唯一带数字的一条，并顺势推出「将使日本帝国主义本身走上崩溃的道路」</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">成绩五</span><span class="sym-tag">次序</span></div>
+        <div class="sym-text">「从战争取得了教训。这是用土地和血肉换来的。」</div>
+        <div class="sym-note">全篇最精巧的一句：把教训计入收获，并当场标出价格——下一段才讲失地与失利</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      说到教训，那也是很大的。几个月的抗战，暴露了中国的许多弱点。这首先表现在政治方面。这次参战的地域虽然是全国性的，参战的成分却不是全国性的。广大的人民群众依然如过去一样被政府限制着不许起来参战，因此现在的战争还不是群众性的战争。反对日本帝国主义侵略的战争而不带群众性，是决然不能胜利的。
+      <span class="src">第二节（1991 年版第 375 页前后）｜全篇最硬的一句结论就在这段末尾；紧接着是对「已经是全面性的战争」这一说法的校正，以及政治犯、党禁、军民关系的三层缺口</span>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">两份清单：政治上六条，军事上六项「改变」</span><span class="part-scope">第二节末 · 376—377 页</span></div>
+      <div class="part-body">
+        <p><b>政治上说来</b>：第一、须将现政府改造成为一个有人民代表参加的统一战线的政府，「这个政府是民主的，又是集中的」；第二、允许人民以言论、出版、集会、结社和武装抗敌的自由；第三、人民生活的改良（废除苛捐杂税、减租减息、改良工人和下级官兵的待遇、优待抗日军人家属、救济灾民难民），财政放在「合理负担即有钱出钱的原则上」；第四、外交政策的积极化；第五、文化教育政策的改革；第六、严厉地镇压汉奸——并补一句：<b>「但是要真正镇压汉奸，只有人民起来和政府合作，才有可能。」</b></p>
+        <p><b>军事上说来</b>，是一组六项对仗的「改变」：</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c1">改变前</th><th>改变后</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">战略战术上单纯防御的方针</td><td>积极攻击敌人的方针</td></tr>
+        <tr><td class="c1">旧制度的军队</td><td>新制度的军队</td></tr>
+        <tr><td class="c1">强迫动员的方法</td><td>鼓动人民上前线的方法</td></tr>
+        <tr><td class="c1">不统一的指挥</td><td>统一的指挥</td></tr>
+        <tr><td class="c1">脱离人民的无纪律状态</td><td>建设在自觉原则上的秋毫无犯的纪律</td></tr>
+        <tr><td class="c1">单单正规军作战的局面</td><td>发展广泛的人民游击战争配合正规军作战的局面</td></tr>
+      </tbody>
+    </table>
+
+    <p class="lead" style="margin-top:12px;">两份清单收在同一句上：<b>「所有上述这些政治军事条件，都在我们发布的十大纲领中提出来了。这些政策，都符合于孙中山先生的三民主义、三大政策及其遗嘱的精神。只有实行这些，战争才能胜利。」</b>本节最后一组问答把「怎么办」交回自身，并顺手把上一篇的两个词再定义一次——<b>扩大＝动员下层民众加进统一战线；巩固＝实行一个共同纲领，用这个纲领来约束各党各派的行动。</b></p>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丁</span><span class="part-title">在抗日战争中的八路军</span><span class="part-scope">第三节 · 3 组问答</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>先说战斗情况</b>：以山西为中心；平型关、井坪、平鲁、宁武、涞源、广灵、紫荆关，三条日军主要运输道路的截断，直到「近日的曲阳、唐县的克复」。结论是「进入山西的日本军队，现在在战略上是在八路军和其他中国军队的四面包围之中」。</li>
+          <li><b>再讲战略战术</b>：主力用于侧面、包围迂回、独立自主地攻击；兵力用于敌后「威力特别强大，因为捣乱了敌人的运输线和根据地」；正面也不可用单纯防御，主要应采取「反突击」。命名：「独立自主的游击战和运动战」。「军事上的第一要义是保存自己消灭敌人」——<b>这句是后来《论持久战》一整套论述的种子</b>。</li>
+          <li><b>再讲政治工作三条原则</b>：官兵一致（肃清封建主义、废除打骂制度、建立自觉纪律、同甘共苦）；军民一致（秋毫无犯的民众纪律，宣传、组织和武装民众）；瓦解敌军和宽待俘虏。并补一条：「八路军的补充不采取强迫人民的方式，而采取鼓动人民上前线的方式。」</li>
+          <li><b>末两组问答把经验外推</b>：这些长处「完全能够适用」其他中国军队，因为国民党军队本来有过同样的精神，那就是一九二四年到一九二七年的时代——新制度的军队、党代表和政治部，红军与八路军「是继承了这种制度而加以发展的」。宽待俘虏一问答得最硬：<b>「他们越杀得多，就越引起日军士兵同情于华军。这种事瞒不了士兵群众的眼睛。」</b>并明说即使日军施放毒气，政策仍然不变。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">戊</span><span class="part-title">抗日战争中的投降主义</span><span class="part-scope">第四节 · 4 组问答</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>日本为何一面打一面在上海放和平空气</b>：三个目的——巩固已得的阵地以便作为第二步进攻的战略出发地；分裂中国的抗日阵线；拆散世界各国援助中国的阵线。</li>
+          <li><b>前途两种</b>：「一是中国人民把投降主义克服下去；一是投降主义得势，中国陷于纷乱，抗日阵线趋于分裂。」哪种可能多？「我相信投降主义者是得不到群众的；群众将克服投降主义，使战争坚持下去。」</li>
+          <li><b>如何克服</b>：言论上指出投降主义的危险，行动上组织人民群众制止投降运动。随后是根源诊断——「投降主义根源于民族失败主义，即民族悲观主义」，并给出全篇最完整的一段心理分析：</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">
+      不知失败正是成功之母，从失败经验中取得了教训，即是将来胜利的基础。悲观主义只看见抗战中的失败，不看见抗战中的成绩，尤其不看见失败中已经包含了胜利的因素，而敌人则在胜利中包含了失败的因素。我们应当向人民群众指出战争的胜利前途，使他们明白失败和困难的暂时性，只要百折不回地奋斗下去，最后的胜利必属于我们。
+      <span class="src">第四节末（1991 年版第 384 页前后）｜同节开头那张「和平烟幕弹」三目的清单，与本段是同一个判断的两个方向：一个拆对方的招，一个稳自己的心</span>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">己</span><span class="part-title">民主制度和抗日战争</span><span class="part-scope">第五节 · 8 组问答 · 全篇篇幅最长</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>「民主」的三个含义</b>：不是一个阶级的国家和政府，而是排除汉奸卖国贼在外的一切抗日阶级互相联盟的国家和政府；组织形式是民主集中制，「将民主和集中两个似乎相冲突的东西，在一定形式上统一起来」；政府给予人民全部必需的政治自由，特别是组织、训练和武装自卫的自由。</li>
+          <li><b>民主与集中为什么不是矛盾</b>：应当「不但看名词，而且看实际」——民主＝真正代表民意、人民能自由支持政府并有机会影响政策；集中＝政策经民意机关通过并交付自己选举的政府即由政府执行，「只要执行时不违背曾经民意通过的方针，其执行必能顺利无阻」。落点：<b>「只有采取民主集中制，政府的力量才特别强大。」</b></li>
+          <li><b>和战时内阁制度的关系</b>：某些战时内阁不符合，但也有符合的——取决于战争的性质。</li>
+          <li><b>实现新制度的步骤</b>：关键在于国共两党的合作。十五年来国共关系是决定因素：一九二四至一九二七年是第一阶段，一九二七年分裂造成十年不幸，现在进入第三个阶段。</li>
+          <li><b>具体提案</b>：改造政府机构和军队制度；为应付紧急状态，提议召集<b>临时国民大会</b>——代表大体上采用孙中山一九二四年的主张，由各抗日党派、抗日军队、抗日民众团体和实业团体按一定比例推选，职权是国家的最高权力机关，决定救国方针、通过宪法大纲、选举政府。</li>
+          <li><b>对「国民政府已宣布停止国民大会召集」的回应</b>：「那个停止是对的。」停止的是国民党过去准备召集的、按规定「一点权力也没有」的那个大会；现在提议的临时国民大会「和已经停止的根本不同」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">战争的性质，决定政府与人民的关系（第五节所述，按性质重排）</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">非正义的战争</div>
+          <div class="spec-seg green">法国革命战争</div>
+          <div class="spec-seg gold">俄国革命战争</div>
+          <div class="spec-seg blue">西班牙革命战争</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>绝对集中主义</b>二十几年前的欧洲大战；以英国路易乔治政府为例——不许人民说话，「国会」也只是奉令通过战争预算的机关</div>
+          <div class="spec-label"><b>民主集中制</b>人民极愿意进行这种战争，政府的基础「建设在人民的自愿支持之上」</div>
+          <div class="spec-label"><b>民主集中制</b>同上；「政府不必畏惧人民反对战争」</div>
+          <div class="spec-label"><b>民主集中制</b>「政府不但不惧怕人民，而且必须唤起人民，引导人民发表意见」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这条色带的分界线不设在「东方与西方」，也不设在「民主与专制」，而设在<b>战争的性质</b>上：非正义的战争里，政府与人民利益不一致，于是只能要集中、不能要民主；正义的战争里，政府与人民利益一致，于是民主反而成了取胜的条件。中国的民族解放战争与一九二六至一九二七年的北伐战争，按同一标准归在右侧。结论句被写成了历史原则，而不是道德主张：<b>「战争的性质决定政府和人民的关系，这是一个历史的原则。」</b><span class="muted">（四段划分系按其行文次序所做重排，非原文分段。）</span></p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>对外解释，是最好的一次自我检验</h4>
+          <p>提问者是一位外国记者：他不熟悉中共的党内语汇，也不受国民党那套话语的约束。于是每个词都得从头讲一遍——「统一战线」要讲成扩大与巩固两件事，「民主」要讲成三条规定，「民主集中制」要讲成两段流程。结果是：<b>本篇留下了毛泽东对「民主集中制」最通俗的一次表述</b>——「当人民要求的政策一经通过民意机关而交付与自己选举的政府的时候，即由政府去执行，只要执行时不违背曾经民意通过的方针，其执行必能顺利无阻。」要紧的不只是这个定义好不好，而是<b>它为什么在这一篇里讲得比别处清楚</b>：因为听众变了。对党内可以说「民主集中制」，对敌人可以说「民主」，但对着一个会追问「名词上不是矛盾吗」的外国人，含糊的词就过不了关。</p>
+          <span class="mv">迁移：把手上最核心的方案，按「外国记者会问什么」重写一遍——为什么是你、为什么现在、会不会自相矛盾、代价是什么、分几步走。凡是答不上的地方，就是内部还没想清楚的地方。能对陌生人讲清的方案，才是真的想清楚了。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>复盘时，把「教训」写进「成绩」栏</h4>
+          <p>本篇处理坏消息的方式值得单独抄下来。它先列四条实打实的成绩，第五条是：「从战争取得了教训。这是用土地和血肉换来的。」——<b>把教训归入收获，同时标明它的价格</b>。然后才说「说到教训，那也是很大的」，这才开始讲失地、讲「打的大半都是被动的仗」、讲政治犯没释放、党禁没全开放。这个次序有三重好处：其一，讲坏话之前先把好话讲完，听众不必在「要不要先防守」上分神；其二，教训不再与失败绑定，而是与「已付代价换来的资产」绑定，讨论就从事后追责转向资产盘点；其三，「用土地和血肉换来的」这句<b>把代价标在明处</b>——既不掩饰，也不让它变成击垮士气的重量。全篇后面对悲观主义的批评（「不看见失败中已经包含了胜利的因素」）之所以站得住，正是因为前面已经把账算清了。</p>
+          <span class="mv">迁移：复盘材料的第一栏永远写「拿到了什么」（具体、可数），其中留一行写「这次学到的东西，是用什么换来的」；第二栏才写缺口。次序一反，同一份材料的效果会完全不同。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「地域的普遍」不等于「成分的普遍」——一个词的两层意思，一句由此推出来的硬结论</h4>
+          <p>全篇最锋利的一处语义校正：「有些人说：『现在的战争已经是全面性的战争。』这只说明了参战地域的普遍。从参战的成分说来则是片面的，因为抗战还只是政府和军队的抗战，不是人民的抗战。」范围（地域）与参与（成分）是两个维度，用一个「全面」把二者黏在一起，是最常见的论证捷径。拆开之后，结论就换了方向：不是「仗已经打得很全面了，剩下只等胜利」，而是「仗打得很广，但参与的人很窄，所以土地还在丢」——<b>失地不是运气问题，是参与结构问题</b>。紧接着那句硬话由此推出：「反对日本帝国主义侵略的战争而不带群众性，是决然不能胜利的。」注意它不是道德要求（应当关心群众），而是胜负条件（不带群众性就打不赢）——<b>把「应该」改写成了「否则会输」，说服力不在同一量级。</b></p>
+          <span class="mv">迁移：听到「我们已经全面铺开了」「团队都动员起来了」这类话，先问一句——你说的是覆盖范围，还是参与成分？两张尺子量出来的结论，经常指向完全不同的下一步。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">反对日本帝国主义侵略的战争而不带群众性，是决然不能胜利的。</div>
+        <div class="ctx">第二节「抗日战争的情况和教训」｜全篇的硬结论句，前一句正是对「全面性的战争」这一说法的校正</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">军事上的第一要义是保存自己消灭敌人，而要达到此目的，必须采用独立自主的游击战和运动战，避免一切被动的呆板的战法。如果大量军队采用运动战，而八路军则用游击战以辅助之，则胜利之券，必操我手。</div>
+        <div class="ctx">第三节「在抗日战争中的八路军」｜此后《抗日游击战争的战略问题》《论持久战》一整套论述的种子句</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们的胜利不但是依靠我军的作战，而且依靠敌军的瓦解。</div>
+        <div class="ctx">第三节｜「政治工作三条原则」之第三条的落点；同段另有一句：即使日军施放毒气，「我们宽待俘虏的政策仍然不变」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">悲观主义只看见抗战中的失败，不看见抗战中的成绩，尤其不看见失败中已经包含了胜利的因素，而敌人则在胜利中包含了失败的因素。</div>
+        <div class="ctx">第四节「抗日战争中的投降主义」｜答「如何克服投降主义」时对民族失败主义的诊断</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">如果战争的目的是直接代表着人民利益的时候，政府越民主，战争就越好进行。这样的政府就不应畏惧人民反对战争，相反，这个政府所顾虑的，应是人民的不起来和对于战争的冷淡。战争的性质决定政府和人民的关系，这是一个历史的原则。</div>
+        <div class="ctx">第五节「民主制度和抗日战争」｜全篇的理论支点，也是被后世引用最多的一段</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已与求是理论网所载《毛泽东选集》第二卷电子版逐字核对（引号按原书形式保留）。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《上海太原失陷以后抗日战争的形势和任务》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.11.12 ｜ 第二卷第六篇（1991 年版第 387 页起）</span></div>
+        <p>写作场景换了：上海失陷当天，毛泽东在延安党的活动分子会议上作报告提纲，第一节标题即「目前形势是处在片面抗战到全面抗战的过渡期中」——本篇反复校正的「片面／全面」，下一篇成了标题本身；场合也从答外国记者问变成了党内报告。同一份判断，两副语言、两个听众。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《国共合作成立后的迫切任务》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.09.29 ｜ 第二卷第四篇（上一篇）</span></div>
+        <p>相隔二十六天的一对：一篇是写给「当权的国民党的抗日同志们」的公开信，要求「唤起民众」；一篇是答外国记者问，把为什么要「唤起民众」讲成一套制度安排（民主集中制、临时国民大会、共同纲领）。顺带可以留意，本篇的「扩大／巩固」正是上一篇「充实／坚固」的对外版本——同一副骨架，换了语言。<span class="muted">（两篇合看，可见「对内说服」与「对外解释」在措辞和举证方式上的分别：一封要对方改政策，一篇要把自己的政策讲到外人也能复述。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>全面性题</b>：拿你手上正在推进的事（项目、渠道、组织动员），用本篇的两把尺子各量一次——覆盖范围有多大？参与成分有多宽？两张答案如果差距很大，下一步该扩张的就不是范围了。</div>
+      <div class="q">二 · <b>复盘次序题</b>：按本篇的次序写一份复盘——第一栏「拿到了什么」，列出四条具体收获，第五条写「这次学到的东西，是用什么换来的」；第二栏才写缺口与失误。写完比一比，与常规写法的效果差在哪里。</div>
+      <div class="q">三 · <b>对外解释题</b>：把最核心的一个方案，用「外国记者式提问」写出五问并逐一作答——为什么是你？为什么是现在？你说的两个词会不会自相矛盾？代价是什么？经过哪几个步骤？答不上的那一问，就是还没想清楚的部分。</div>
+      <div class="q">四 · <b>民主集中题</b>：如果要在你的组织里同时要「听得到真实意见」与「决定能执行」，流程是什么？本篇的答案是两段式：民意机关通过 → 政府执行，且执行不得违背已通过的方针。照这个骨架写一版你自己的两段式流程，再检查：第二段真的被约束住了吗？</div>
+      <div class="hint"><b>三问卡</b>：① 我说「已经全面」的时候，指的是覆盖面，还是参与面？② 我复盘时先算什么——先算缺口，还是先算拿到的？③ 我解释方案时，能不能不靠内部术语、对一个完全陌生的人讲清？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第五篇</div>
+    <div>依据人民出版社 1991 年版第二卷 ｜ 2026.09.17</div>
+  </div>
+
+</div>
+</body>
+</html>

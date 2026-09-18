@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24 · 上海太原失陷以后抗日战争的形势和任务 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-frame.t3 .spec-band,.spec-frame.t3 .spec-labels{grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:104px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:70px;white-space:normal;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿肆</div>
+    <h1>上海太原失陷以后抗日战争的形势和任务</h1>
+    <div class="sub2">两个大标题 · 二十九条编号段落 · 十七条注释 · 一份「从这时起就被反对」的提纲</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第六篇 · <b>一九三七年十一月十二日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《上海太原失陷以后抗日战争的形势和任务》。1991 年版《毛泽东选集》第二卷第六篇，前接《和英国记者贝特兰的谈话》，后接《陕甘宁边区政府、第八路军后方留守处布告》</td></tr>
+      <tr><th>写作时间</th><td>一九三七年十一月十二日——<b>就是上海失陷的那一天</b>。此题下日期不是整理或定稿日，而是报告当日的实时记录；太原则在此前四天（十一月八日）失守</td></tr>
+      <tr><th>场合</th><td>题解原文：「这是毛泽东一九三七年十一月在延安中国共产党的活动分子会议上的报告提纲。」<b>场合是党内会议，文体是提纲</b>——没有通篇的论述文字，只有编号分条的判断与任务；全文二十九条，条条可以念、可以记、可以拿去对照执行</td></tr>
+      <tr><th>最初发表</th><td>作为党内报告提纲，未见当时报刊刊载的记载；<b>第一次公开面世是一九五二年四月十日《毛泽东选集》第二卷第一版</b>（人民出版社）。今日所读为 1991 年第二版修订文字</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）<b>第 387—400 页</b>：正文起于 387 页，第十七条注释止于 400 页（据中国理论网《毛泽东选集》第二卷电子书逐页核对；1952 年第一版本篇排在第 357—369 页）</td></tr>
+      <tr><th>篇幅</th><td>两个大标题：一「目前形势是处在片面抗战到全面抗战的过渡期中」（十五），二「在党内在全国均须反对投降主义」（十四，内分三个子题）；注释十七条，其中多条是整篇党内文件的全文摘录</td></tr>
+      <tr><th>历史坐标</th><td>十天内两座大城相继失守：十一月八日太原、十一月十二日上海，淞沪会战与太原会战同时落幕，日军正向南京和长江流域推进。<b>报告作完十七天后（十一月二十九日），王明从苏联回到延安；一个月后的十二月政治局会议上，王明点名批评了这个提纲</b></td></tr>
+      <tr><th>版本说明</th><td>本篇题解带有一句在《毛泽东选集》中极少见的注脚：「从这时起，党内右倾机会主义分子就反对这个提纲；直到一九三八年九月至十一月召开的中共六届六中全会才基本上克服了这种右的偏向。」<b>一篇报告提纲，被装进书里时附上了它后来被反对的历史。</b>此条为编者按语，非版本考证结论</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 篇名就是当天的战报。</b>「上海太原失陷以后」六个字不是修辞。太原十一月八日失守，华北大部沦于敌手；上海十一月十二日失守，日军继续向南京进逼——<b>报告作于上海失陷当日。</b>一个半月前刚有平型关的胜仗，此时却在两座大城的废墟上开会：全篇因此从第一句起就不谈乐观，只谈「怎么办」。<span class="muted">（太原日期另有记法：维基百科「太原会战」条记十一月七日至八日攻城、八日晚城破、九日日军占太原；大陆党史文献通记「十一月八日太原失守」，此处从后者。）</span></li>
+        <li><b>戏剧性二 · 这份提纲，十七天后就被点名批评。</b>一九三七年十一月二十九日，王明、康生、陈云从苏联经迪化返回延安。王明的身份是中共驻共产国际代表、共产国际执委会委员及主席团委员，行前曾受斯大林、季米特洛夫接见。十二月九日至十四日的中央政治局会议（史称「十二月会议」）上，王明作《如何继续全国抗战和争取抗战胜利呢？》的报告，<b>批评洛川会议过分强调「独立自主原则」，并批评毛泽东《上海太原失陷以后抗日战争的形势和任务》对形势的分析有错误</b>，主张「一切经过统一战线」「一切服从统一战线」，认为不应再划分抗日营垒中的左、中、右三个集团。由于王明的特殊身份，他的意见在会上影响了一些同志。<span class="muted">（中共中央党史研究室《中央政治局会议（1937 年 12 月 9—14 日）》；金冲及《从十二月会议到六届六中全会》）</span></li>
+        <li><b>戏剧性三 · 「我是孤立的。」</b>毛泽东在十二月会议上第二个发言（排在林伯渠后）作回答，语气和缓而态度鲜明：「我们所谓独立自主是对日本作战的独立自主，战役战术是独立自主的山地战，游击战是我们的特长。」「如果没有共产党的独立性，便会使共产党降低到国民党方面去。」<b>一九四三年十一月十三日在延安整风期间的政治局会议上，他回忆这次会议只说了一句话：「我是孤立的。当时，我别的都承认，只是持久战、游击战、统战原则下的独立自主等原则问题，我是坚持到底的。」</b>而本篇，正是他「坚持到底」的第一份书面文本。</li>
+        <li><b>戏剧性四 · 他把「迁就」的账单开到了具体的人和部队。</b>批评右倾最容易写成空话，本篇却处处给名字、给数字：闽粤边红军游击队「近千人被国民党军队包围缴械」（何鸣危险，注释〔14〕）；西安自动解散西北各界救国联合会，群众救亡运动「因此受到严重影响」（注释〔11〕）；陇东自动解散进步团体，「使当地的群众运动和群众组织遭受到很大损失」（注释〔12〕）；连上海一位有名望的救国会领袖也点了名——章乃器主张「少号召，多建议」，报告直接判为「错误的」（注释〔8〕）。<b>「投降主义」在这篇报告里不是形容词，而是一串可核对的损失清单。</b></li>
+        <li><b>戏剧性五 · 最狠的一句，说的不是敌人，是自己人。</b>全篇火力最集中的一段，讲的是「把共产党降低到国民党」「把共产主义者降低到无原则的地位」；而排比最漂亮的一段，列举的却是党内的病灶：理论水平的不平衡、缺乏两党合作的经验、不愿继续艰苦斗争的情绪、迁就国民党的无原则倾向、八路军中的新军阀主义、以受国民党委任为荣耀（「以做官为荣耀」）。<b>在战局最坏的时刻先给自己人定性，是这篇提纲最大的胆量所在。</b></li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.04</div><div class="tl-body">延安党的活动分子会议。毛泽东着重指出「争取民主，是目前发展阶段中革命任务的中心一环」<span class="note">（本篇注释〔1〕全文引录）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.05.02—14</div><div class="tl-body">党的全国代表会议，毛泽东作《中国共产党在抗日时期的任务》（第一卷末篇）<span class="note">（注释〔2〕）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变。本篇第十八条以此划界：事变以前党内主要危险是「左」倾关门主义，事变以后「转变到右倾机会主义，即投降主义方面了」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.07</div><div class="tl-body">国民党庐山训练班（暑期训练团）提出「在抗日战争中削弱共产党力量五分之二」的阴谋计划<span class="note">（第二十条列举党外原因时点名）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.07</div><div class="tl-body">闽粤边红军游击队近千人进驻漳浦，被国民党军包围缴械——「何鸣危险」<span class="note">（注释〔14〕）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.13</div><div class="tl-body">淞沪会战开打，苦战至十一月十二日上海失陷</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，通过《抗日救国十大纲领》与《关于目前形势与党的任务的决定》。本篇第六条「必须执行共产党提出的抗日救国十大纲领」即指此；其决议全文被引为注释〔3〕</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08</div><div class="tl-body">西安：国民党陕西省党部无理取缔西北各界救国联合会等进步团体，陕西党组织一些同志作无原则让步、自动解散该会<span class="note">（注释〔11〕，后由中共中央纠正）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.09.22 / 09.23</div><div class="tl-body">国民党中央通讯社发表《中共中央为公布国共合作宣言》；蒋介石发表谈话，承认中共合法地位</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09.25</div><div class="tl-body">平型关战斗；同日中共中央发出《关于共产党参加政府问题的决定草案》<span class="note">（注释〔9〕全文引录）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.10</div><div class="tl-body">国民党通过德国驻华大使陶德曼与日本秘密接触，试探媾和条件</div></div>
+      <div class="tl-item"><div class="tl-date">1937.11.08</div><div class="tl-body">太原失守，华北大部沦于敌手<span class="note">（第二段情形第一条即「在华北，以国民党为主体的正规战争已经结束」）</span></div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.11.12</div><div class="tl-body"><b>上海失陷当天</b>，毛泽东在延安党的活动分子会议上作本篇报告<span class="note">1991 年版第 387 页起</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.11.29</div><div class="tl-body">王明、康生、陈云自苏联经迪化抵延安</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.12.09—14</div><div class="tl-body">十二月政治局会议。王明批评洛川会议与本篇提纲；毛泽东被「孤立」，但坚持独立自主等原则<span class="note">（金冲及文；中央党史研究室资料）</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1938.09—11</div><div class="tl-body">中共六届六中全会，共产国际指示与季米特洛夫意见传达，基本上克服以王明为代表的右倾错误。毛泽东后来称「六中全会是决定中国之命运的」</div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">时间线依据本篇正文与注释、中共中央党史研究室《中央政治局会议（1937 年 12 月 9—14 日）》、金冲及《从十二月会议到六届六中全会》（《党的文献》）、中国理论网《毛泽东选集》第二卷电子版、维基百科「太原会战」条。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      上海、太原一失，抗战进入一个<span class="q">「青黄不接的危机严重的过渡期」</span>——片面抗战已经无力持久，全面抗战还没有来到。此时最危险的不是敌人，而是自己人：<span class="q">在党内，要反对阶级对阶级的投降主义；在全国，要反对民族对民族的投降主义。</span>把两者隔开的只有一条原则：<span class="q">「统一战线中的独立自主」</span>——它的说明、实践和坚持，是把抗日战争引向胜利之途的「中心一环」。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 给时代起名字：过渡期</h4>
+        <p>不是「失败了」，也不是「在好转」，而是一个<b>有起点、有终点、有方向</b>的中间状态：从片面抗战过渡到全面抗战。命名之后才能谈任务——「争取这个前途，是一切中国共产党员、一切中国国民党的进步分子和一切中国人民的共同的迫切的任务。」<span class="card-tag">定性</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 危险的坐标搬回了内部</h4>
+        <p>第十八条一句断语改写了党内政治地图：「在卢沟桥事变以后，党内的主要危险倾向，已经不是『左』倾关门主义，而转变到右倾机会主义，即投降主义方面了。」<b>敌人换成了自己人的倾向，判断的依据是国民党的态度变了——它已经抗日了。</b><span class="card-tag">转向</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 一个问题把全篇钉住</h4>
+        <p>「在统一战线中，是无产阶级领导资产阶级呢，还是资产阶级领导无产阶级？是国民党吸引共产党呢，还是共产党吸引国民党？」<b>答案被压成一句话：把国民党提高到十大纲领和全面抗战，而不是把共产党降低到一党专政和片面抗战。</b>第十九、二十条的全部论据都为这一句服务。<span class="card-tag">枢纽</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">战局</div><div class="n-sub">太原(11.8)与上海(11.12)<br>相继失守</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">定性</div><div class="n-sub">青黄不接的<br>严重过渡期</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">归因</div><div class="n-sub">片面抗战<br>革命性很不完全</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">定位危险</div><div class="n-sub">党内：右倾投降主义<br>全国：右翼集团</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">原则</div><div class="n-sub">统一战线中<br>的独立自主</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">做法</div><div class="n-sub">八个战场<br>逐项纠偏</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">目标</div><div class="n-sub">动员千百万群众<br>进入统一战线</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链与上一篇（答外国记者问）最根本的差别在<b>起点</b>：那篇从「你要问什么」开始，这篇从「仗打成什么样」开始。<b>对外解释时议程由别人定，对内报告时议程由自己定</b>——所以这一篇有资格在战局最坏的时刻，把话题从敌人身上移开。</p>
+    <p class="lead" style="margin-top:10px;">而全篇的支点落在倒数第六条：<b>「我们和国民党及其他任何派别的统一战线，是在实行一定纲领这个基础上面的统一战线。离开了这个基础，就没有任何的统一战线，这样的合作就变成无原则的行动，就是投降主义的表现了。」</b>——它为「团结」划出了一条不再是态度的标准：<b>有纲领才有合作，没有纲领的让步不叫合作，叫投降。</b>再接上第二十四条那句最冷的自省：党的组织力量在全国「一般地说来还是微弱的」，工农基本群众「还没有组织起来」，这是「我党在现时抗日民族革命战争中的最基本的弱点」。<b>要独立自主，先得有力量；没有力量而谈独立自主，就只剩姿态。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">目前形势是处在片面抗战到全面抗战的过渡期中</span><span class="part-scope">第一部分 · 第一至十五条</span></div>
+      <div class="part-body">
+        <p>开篇先划原则分歧，而且<b>次序讲究</b>：先说「我们赞助一切反对日本帝国主义进攻的抗战，即使是片面的抗战」——理由是三点，比不抵抗进一步、带着革命性、也是在为着保卫祖国而战；<b>先认下对方行动中的正当性，再指出它的上限</b>：「不要人民群众参加的单纯政府的片面抗战，是一定要失败的。因为它不是完全的民族革命战争，因为它不是群众战争。」</p>
+        <p>接着给「上海太原失陷后的形势」列一张对表——一面四条，一面六条：</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c2">方向</th><th>报告所列条目（第七条，文字为原文要旨）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="c2">不利的一面<br>（四条）</td>
+          <td>
+            <b>1</b>·在华北，以国民党为主体的正规战争已经结束，以共产党为主体的游击战争进入主要地位；在江浙，国民党的战线已被击破，日寇正向南京和长江流域进攻，片面抗战已表现不能持久<br>
+            <b>2</b>·英、美、法等国表示援助中国，还限于口头上的同情，而没有什么实力的援助<br>
+            <b>3</b>·德意法西斯竭力援助日本帝国主义<br>
+            <b>4</b>·国民党对于它的一党专政及其对民众的统制政策，还不愿意作原则上的改变
+          </td>
+        </tr>
+        <tr>
+          <td class="c2">有利的一面<br>（六条）</td>
+          <td>
+            <b>1</b>·共产党和八路军的政治影响极大地极快地扩大，「民族救星」的声浪在全国传布着；决心坚持华北游击战争，用以捍卫全国，钳制日寇向中原和西北的进攻<br>
+            <b>2</b>·民众运动开展了一步　<b>3</b>·民族资产阶级的左倾　<b>4</b>·国民党中主张改革现状的势力正在增长<br>
+            <b>5</b>·世界人民反对日本和援助中国的运动正在发展　<b>6</b>·苏联正在准备用实力援助中国
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">过渡期里，可能向三个方向发展</span><span class="part-scope">第九至十一条</span></div>
+      <div class="part-body">
+        <p>「青黄不接」不是修辞，它是<b>一个必须逐项排查的岔路口</b>：</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c2">方向</th><th>谁在推动 / 谁在阻挡</th></tr></thead>
+      <tbody>
+        <tr><td class="c2">其一<br>全面抗战</td><td>「结束片面抗战，代以全面抗战。这是国内大多数人的要求，<b>但是国民党还没有下决心</b>。」</td></tr>
+        <tr><td class="c2">其二<br>投降</td><td>「结束抗战，代以投降。这是日寇、汉奸和亲日派的要求，<b>但是遭到了中国大多数人的反对</b>。」</td></tr>
+        <tr><td class="c2">其三<br>抗战与投降<br>并存</td><td>「这将是日寇、汉奸和亲日派无法达到第二个方向的目的，因而实行其破裂中国抗日阵线的阴谋诡计的结果。<b>他们正在策动这一着。这个危险严重地存在着。</b>」</td></tr>
+      </tbody>
+    </table>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">三个「改造」：国民党、政府、军队</span><span class="part-scope">第十三至十五条</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>改造国民党</b>：「国民党有在其政治上组织上加以改造的必要，也有这种可能」——依据是日本的压迫、共产党的统一战线政策、中国人民的要求、国民党内部新生力量的增长。而分寸感写在同一句里：<span class="k">「这一改造无疑须得到国民党中央的同意，我们是站在建议的地位。」</span></li>
+          <li><b>改造政府</b>：方针是召集临时国民大会——「这也是必要的和可能的」。</li>
+          <li><b>改造军队</b>：建立新军与改造旧军。<span class="k">「如能在半年到一年内建立二十五万到三十万具有新的政治精神的军队，则抗日战场上必能开始看到转机。」</span>这是全篇唯一的量化目标，也是「转入战略反攻的军事基础」。</li>
+          <li><span class="k">结构要点</span>：这三条把「全面抗战」从口号变成了三个可验收的项目，每个项目都附一句「须得到国民党同意」——<b>既提要求，又把要求放在对方无法公开拒绝的位置上</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">丁</span><span class="part-title">在党内在全国均须反对投降主义</span><span class="part-scope">第二部分 · 第十六至二十九条 · 含三个子题</span></div>
+      <div class="part-body">
+        <p>这一部分是全篇的重心，结构是<b>两重投降主义＋一层关系</b>：<span class="k">在党内，反对阶级对阶级的投降主义</span>（十六—二十四条）；<span class="k">在全国，反对民族对民族的投降主义</span>（二十五—二十八条）；<span class="k">阶级投降主义和民族投降主义的关系</span>（二十九条）。</p>
+        <p>「阶级的投降主义」先从一九二七年的旧账讲起：「一九二七年陈独秀的投降主义，引导了那时的革命归于失败。每个共产党员都不应忘记这个历史上的血的教训。」随后是那句改变党内政治地图的判断——事变以前主要危险是「左」倾关门主义，事变以后「转变到右倾机会主义，即投降主义方面了」，因为「国民党已经抗日了」。</p>
+        <p>第二十条是全文最像<b>审计报告</b>的一段：为什么要这么尖锐地提出问题？因为「一方面」有九项党外情况，「另一方面」有七项党内情况：</p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">一方面</span><span class="sym-tag">党外九项</span></div>
+        <div class="sym-text">中国资产阶级的妥协性；国民党实力上的优势；国民党三中全会宣言和决议对共产党的污蔑侮辱与「停止阶级斗争」的叫嚣；国民党关于「共产党投降」的衷心愿望和广泛宣传；蒋介石关于统制共产党的企图；国民党对红军的限制和削弱政策；对抗日民主根据地的限制和削弱政策；庐山训练班「在抗日战争中削弱共产党力量五分之二」的阴谋计划；对共产党干部「升官发财酒色逸乐的引诱」——以及某些小资产阶级急进分子政治上的投降举动（以章乃器为代表）。</div>
+        <div class="sym-note">把「诱惑」与「污蔑」并列算作同一种压力，是这段最见功力的地方</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">另一方面</span><span class="sym-tag">党内七项</span></div>
+        <div class="sym-text">党内理论水平的不平衡；许多党员缺乏北伐战争时期两党合作的经验；党内小资产阶级成分的大量存在；一部分党员对过去艰苦斗争的生活不愿意继续的情绪；统一战线中迁就国民党的无原则倾向的存在；八路军中新军阀主义倾向的发生；共产党参加国民党政权问题、抗日民主根据地中迁就倾向的发生。</div>
+        <div class="sym-note">结论只有一句：「由于上述两方面的严重的情况，<b>必须尖锐地提出谁领导谁的问题，必须坚决地反对投降主义。</b>」</div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">戊</span><span class="part-title">第二十一条：一张已经执行的纠偏清单</span><span class="part-scope">全篇最具操作性的一段</span></div>
+      <div class="part-body">
+        <p>「几个月以来，主要是抗战以来，共产党中央及其各级组织，对这种已经发生的和可能发生的投降主义倾向作了明确而坚决的斗争和必要的预防，并且收到了成效。」随后是<b>按战场分条的清单</b>——这份清单让整篇报告的批评不再是空论：</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c2">战场</th><th>所做的纠正（原文要旨）</th></tr></thead>
+      <tbody>
+        <tr><td class="c2">参加政权</td><td>中央发出《关于共产党参加政府问题的决定草案》，规定只有国民党政府接受十大纲领、以实际行动表示诚意并容许共产党合法存在时，中共才能去参加（注释〔9〕全文引录）</td></tr>
+        <tr><td class="c2">八路军</td><td>向新军阀主义倾向作斗争——「不愿意严格地接受共产党的领导、发展个人英雄主义、以受国民党委任为荣耀（以做官为荣耀）」；<b>因受国民党干涉而取消的政治委员制度、改为政训处的政治部名称，现在已经恢复了</b>；提出并坚持「独立自主的山地游击战」；拒绝国民党派人来当八路军干部</td></tr>
+        <tr><td class="c2">各抗日根据地</td><td>同样提出「统一战线中的独立自主」；纠正「议会主义」倾向（主张把根据地人民代表会议的政权改为资产阶级议会制度）</td></tr>
+        <tr><td class="c2">西安</td><td>纠正两党关系上的无原则倾向（迁就倾向），重新开展群众斗争（注释〔11〕）</td></tr>
+        <tr><td class="c2">陇东</td><td>情况与西安大体相同（注释〔12〕）</td></tr>
+        <tr><td class="c2">上海</td><td>对「少号召，多建议」的章乃器主义给了批评，开始纠正救亡工作中的迁就倾向</td></tr>
+        <tr><td class="c2">南方各游击区</td><td>注意力集中在三件事：无条件集中的防止、国民党派人的拒绝、<b>「何鸣危险」的警戒</b>——这片区域被形容为「和国民党十年血战的结果的一部分」</td></tr>
+        <tr><td class="c2">《解放》周刊</td><td>坚持了严正的批评态度</td></tr>
+      </tbody>
+    </table>
+
+    <div class="quote">
+      为了坚持抗战和争取最后胜利，为了变片面抗战为全面抗战，必须坚持抗日民族统一战线的路线，必须扩大和巩固统一战线。任何破裂国共两党的统一战线的主张是不许可的。「左」倾关门主义仍然要防止。但是在同时，在一切统一战线工作中必须密切地联系到独立自主的原则。我们和国民党及其他任何派别的统一战线，是在实行一定纲领这个基础上面的统一战线。离开了这个基础，就没有任何的统一战线，这样的合作就变成无原则的行动，就是投降主义的表现了。因此，「统一战线中的独立自主」这个原则的说明、实践和坚持，是把抗日民族革命战争引向胜利之途的中心一环。
+      <span class="src">第二十二条（1991 年版第 394 页前后）｜全篇的双向禁令：既不许破裂统一战线，也不许无原则迁就——一半防右，一半防「左」</span>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">己</span><span class="part-title">第二十三、二十四条：目的与自省</span><span class="part-scope">从「为什么」到「凭什么」</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>目的有两层，主次分明</b>：一方面「保持自己已经取得的阵地」——「这是我们的战略出发地，丧失了这个阵地就一切无从说起了」；<b>但主要的目的还在另一方面</b>：发展阵地，实现「动员千百万群众进入抗日民族统一战线，打倒日本帝国主义」这个积极的目的。「保持阵地和发展阵地是不可分离的。」</li>
+          <li><b>紧接着是一段冷到极处的自省</b>：党的组织力量在全国「一般地说来还是微弱的」，全国的群众力量「也还是很薄弱」，工农基本群众「还没有组织起来」。原因两分：国民党控制和压迫的政策，以及「我们自己的没有工作或工作不足」。<span class="k">「这是我党在现时抗日民族革命战争中的最基本的弱点。」</span></li>
+          <li><span class="k">结构要点</span>：这一条放在「谁领导谁」的尖锐提问之后，等于给整篇报告加了一个前提——<b>领导权不是喊出来的，是组织出来的；所以全篇最后落回「扩大和巩固」四个字，而不是落回姿态</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">抗日民族统一战线的三个集团（第二十六至二十八条，按立场重排）</h3>
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg green">左翼集团</div>
+          <div class="spec-seg gold">中间集团</div>
+          <div class="spec-seg red">右翼集团</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>任务：扩大和巩固</b>共产党率领的群众，包括无产阶级、农民和城市小资产阶级群众。这一任务的完成，是改造国民党、改造政府、改造军队的基本条件，是变片面抗战为全面抗战的基本条件</div>
+          <div class="spec-label"><b>任务：争取进步和转变</b>民族资产阶级和上层小资产阶级。上海各大报所代表的成分是左倾了；复兴社中有一部分人开始动摇，CC 团中也有一部分人在动摇中；抗战的军队得到了严重的教训</div>
+          <div class="spec-label"><b>任务：坚决反对</b>大地主和大资产阶级——<b>「这是民族投降主义的大本营」</b>。一方面怕战争破坏他们的财产，另一方面怕民众起来，「他们的投降倾向是必然的」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这条色带给出的不是一幅静态阵营图，而是一组<b>动态预期</b>：左翼要做的是「扩大和巩固」，中间要做的是「争取进步和转变」，右翼要做的是「坚决反对」——并且附带一句极硬的预告：「一般地说来，他们之从抗日民族统一战线中分裂出去是为期不远的。」另一段更像预言：「他们是谣言的制造厂，『共产党暴动』、『八路军退却』一类的谣言，今后将要与日俱增。」<span class="muted">（三列划分系按原文第二十六至二十八条次序所作重排，非原文图表。）</span></p>
+
+    <div class="quote">
+      在抗日民族革命战争中，阶级投降主义实际上是民族投降主义的后备军，是援助右翼营垒而使战争失败的最恶劣的倾向。为了争取中华民族和劳动群众的解放，为了使反对民族投降主义的斗争坚决有力，必须反对共产党内部和无产阶级内部的阶级的投降倾向，要使这一斗争开展于各方面的工作中。
+      <span class="src">第二十九条（全篇末条）｜把「党内问题」与「民族问题」接成一条因果链：对内不坚定，就挡不住对外的投降</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>给一段时期起名字，比描述这段时期更有用</h4>
+          <p>面对两座大城失守，本篇既没有说「我们胜利在望」，也没有说「形势危急」——它给这一段时期起了个名字：<b>「青黄不接的危机严重的过渡期」</b>。这个命名做了三件事。其一，<b>它承认了危机</b>（「危机严重」写在名字里，不必再另找句子安抚）；其二，<b>它指明了方向</b>——「从片面抗战到全面抗战」，过渡是有终点的，终点也被命名了；其三，<b>它把任务变成可推导的</b>：既然是从甲过渡到乙，任务就只有两种写法——排除妨碍过渡的因素，增加推动过渡的因素。全篇后面那张「不利于我四条／有利于我六条」的对表、三个发展方向、三个改造，全部是从这个名字里长出来的。<b>反过来看，最耗人的处境往往不是坏消息本身，而是「现在到底算哪个阶段」说不清；这个说不清，会让所有行动都变成临时应付。</b></p>
+          <span class="mv">迁移：给手上最难的一件事先起个阶段名——从什么过渡到什么，危机在哪，终点长什么样。名字一旦立住，任务清单会自己浮出来；只有情绪没有名字，就会永远停在「再看看」。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>先认下对方行动里的正当性，再说出它的上限</h4>
+          <p>本篇对国民党的批评有一个极难学的次序。它<b>不是</b>从「国民党在妥协」开始，而是从「我们赞助一切反对日本帝国主义进攻的抗战，即使是片面的抗战」开始，并且给足三条理由：比不抵抗主义进一步、带着革命性、也是在为着保卫祖国而战。然后才补上那句限制：「不要人民群众参加的单纯政府的片面抗战，是一定要失败的。」<b>承认正当性在前，指出上限在后——这个次序不是为了客气，而是为了不让「批评」被误读成「反对」。</b>紧接着第二十二条更明确地把两边都堵上：破裂统一战线的主张「是不许可的」，「左」倾关门主义「仍然要防止」。<b>一篇火力如此集中的报告，仍然给自己留了双向禁令，这是它说服力真正来源的地方。</b>（附带一个现代注脚：报告点了章乃器「少号召，多建议」的名，注释里同时记下了他后来「已逐步地认识了这个错误」——批语与后来的事实并置，是 1991 年版注释的一种态度。）</p>
+          <span class="mv">迁移：指出一个方案的问题前，先把它的合理内核写清楚（它比什么进一步、它对在哪里），再写它的天花板。次序一换，同样的话从「拆台」变成「校准」；而校准是能被接受的，拆台不能。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>把「立场问题」拆成一张可核对的损失清单</h4>
+          <p>「反对投降主义」是一句极容易被听成态度的话。本篇处理它的办法，是把它翻译成可以点数的东西：闽粤边近千人被缴械，西安救亡团体被自动解散、群众运动受影响，陇东进步团体被解散、群众组织受损失，八路军政治委员制度曾被取消（现已恢复）——<b>四个具体后果，四个人名或地名，外加一条已被纠正的制度变更。</b>第二十条那张「党外九项／党内七项」的清单更彻底：把「升官发财酒色逸乐的引诱」与「庐山训练班削弱共产党五分之二」的计划并列，其实是在说明——<b>压力从来不是单一的，它是「打击」与「收买」同时进行；只谈打，会漏掉真正让队伍松掉的那一半。</b>这种写法的好处是双重的：对内不必靠情绪动员，因为账摊在桌上；对外无法被反驳为「你只是不喜欢我」，因为每一条都可以去核对。</p>
+          <span class="mv">迁移：当你要在团队里指出一个「倾向」时，把它拆成可核对的三样东西——具体的损失（数字或事件）、具体的来源（外部压力／内部松动各有哪些）、以及已经做过的纠正。拆不出来，说明倾向还没被看清；只讲倾向不讲损失，批评最后一定会滑回人际纠纷。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">因此，目前是处在从片面抗战到全面抗战的过渡期中。片面抗战已经无力持久，全面抗战还没有来到。这是一个青黄不接的危机严重的过渡期。</div>
+        <div class="ctx">第一部分第八条｜全篇的定名句，「青黄不接」四字由此成为对这一时期的标准概括</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在卢沟桥事变以后，党内的主要危险倾向，已经不是「左」倾关门主义，而转变到右倾机会主义，即投降主义方面了。这主要是因为国民党已经抗日了的缘故。</div>
+        <div class="ctx">第二十条（十八）｜判断党内主要危险的依据不在自己，而在对手的举动变了——这是本篇最容易被忽略、也最锋利的一个论证方式</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在统一战线中，是无产阶级领导资产阶级呢，还是资产阶级领导无产阶级？是国民党吸引共产党呢，还是共产党吸引国民党？在当前的具体的政治任务中，这个问题即是说：把国民党提高到共产党所主张的抗日救国十大纲领和全面抗战呢，还是把共产党降低到国民党的地主资产阶级专政和片面抗战？</div>
+        <div class="ctx">第二十一条（十九）｜全篇的枢纽三问，把抽象的领导权问题落成一句二选一：提高对方，还是降低自己</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们和国民党及其他任何派别的统一战线，是在实行一定纲领这个基础上面的统一战线。离开了这个基础，就没有任何的统一战线，这样的合作就变成无原则的行动，就是投降主义的表现了。因此，「统一战线中的独立自主」这个原则的说明、实践和坚持，是把抗日民族革命战争引向胜利之途的中心一环。</div>
+        <div class="ctx">第二十四条（二十二）｜被党史著作引用最多的一段：合作为什么要有纲领，没纲领的让步为什么叫投降</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">抗日民族统一战线的右翼集团是大地主和大资产阶级，这是民族投降主义的大本营。一方面害怕战争对于他们的财产的破坏，另一方面害怕民众的起来，他们的投降倾向是必然的。</div>
+        <div class="ctx">第二十九条（二十八）｜给「投降」找了一个非道德的解释：怕损失财产、怕民众起来——两个「怕」字，把政治判断变成了利益结构的推论</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已与求是理论网 / 中国理论网所载《毛泽东选集》第二卷电子版及 marxists.org 中文版逐字核对（引号按原书形式保留；原文序号在正文中为「（一）」至「（二十九）」，本文段末标注括号内为原书序号）。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《陕甘宁边区政府、第八路军后方留守处布告》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.05.15 ｜ 第二卷第七篇（1991 年版第 401 页起）</span></div>
+        <p>文体骤变：从党内的报告提纲，跳到一份面向社会的政府布告。中间隔了半年——这半年里发生了十二月会议与持续数月的争论。若把本篇与本篇题解里那句「从这时起，党内右倾机会主义分子就反对这个提纲」接着读，再看下一篇布告如何在边区公开行文，就看得见「独立自主」从原则落到行政语言的样子。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《和英国记者贝特兰的谈话》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1937.10.25 ｜ 第二卷第五篇（上一篇）</span></div>
+        <p>相隔十八天、同一个战局、两副语言。上一篇对着外国记者说：「战争的性质决定政府和人民的关系，这是一个历史的原则。」本篇对着自己的干部说：「必须尖锐地提出谁领导谁的问题，必须坚决地反对投降主义。」<b>前一篇把民主说成取胜的条件，这一篇把独立自主说成胜利的中心一环——同一副判断骨架，对外讲成制度，对内讲成原则。</b><span class="muted">（两篇合看，可留意一个细节：对外那一篇里「八路军政治工作三条原则」讲得很从容，而本篇第二十一条直接写明政治委员制度「现在已经恢复了」——外交场合的从容，背后是刚刚结束的一场制度拉锯。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>阶段命名题</b>：给你当前最棘手的一件事起一个「过渡期」式的名字——从什么过渡到什么？危机具体在哪一点上？终点长什么样？命名之后，再写两张清单：妨碍过渡的因素、推动过渡的因素，各不少于三条。</div>
+      <div class="q">二 · <b>双向禁令题</b>：你需要纠正团队里的一种倾向（过度妥协、或过度对抗）。照本篇第二十二条的结构，把禁令写成双向的——哪一件事「是不许可的」（防过冲），哪一件事「仍然要防止」（防回摆）。写完检查：两边各有多少人会觉得被针对？</div>
+      <div class="q">三 · <b>力量自省题</b>：本篇在你以为要收尾的地方忽然转冷，问了一句「党的组织力量在全国还是微弱的」。照此给自己做一次同样的自省：你要的「独立自主」，凭的是什么？是能力、资源、渠道，还是只有态度？若答案是「只有态度」，下一步该补什么？</div>
+      <div class="q">四 · <b>损失清单题</b>：把你担心的一个「倾向」翻译成可核对的三项——具体的损失（数字、事件、时间）、具体的来源（外部压力几项／内部松动几项，分开写）、已经做过的纠正。若第三项写不出来，说明这个倾向目前只是感觉。</div>
+      <div class="hint"><b>三问卡</b>：① 我现在所处的阶段，有名字吗——从哪过渡到哪？② 我指出别人问题时，是先说它的合理内核，还是先亮结论？③ 我要求的「独立自主」，背后垫着什么？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第六篇</div>
+    <div>依据人民出版社 1991 年版第二卷第 387—400 页 ｜ 2026.09.18</div>
+  </div>
+
+</div>
+</body>
+</html>

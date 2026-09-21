@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 · 陕甘宁边区政府、第八路军后方留守处布告 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-frame.t3 .spec-band,.spec-frame.t3 .spec-labels{grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:104px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:70px;white-space:normal;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿伍</div>
+    <h1>陕甘宁边区政府、<br>第八路军后方留守处布告</h1>
+    <div class="sub2">全文一千五百字 · 一段长序 + 四条禁令 + 一句收束 · 三条注释</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第七篇 · <b>一九三八年五月十五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《陕甘宁边区政府、第八路军后方留守处布告》。1991 年版《毛泽东选集》第二卷第七篇，前接《上海太原失陷以后抗日战争的形势和任务》，后接《抗日游击战争的战略问题》</td></tr>
+      <tr><th>写作时间</th><td>一九三八年五月十五日。题下日期即布告落款日。<b>发布后第四天（五月十九日），徐州失陷</b>；十一日后，毛泽东开始在延安抗日战争研究会上作《论持久战》的讲演</td></tr>
+      <tr><th>性质</th><td>题解原文：「这个布告是毛泽东为陕甘宁边区政府和八路军后方留守处起草的，目的是对付蒋介石集团的破坏活动。」<b>不是文章，是一份政府公文</b>——署名机关是两个，用的是「为布告事」「右列四条」「言出法随」「切切。此布」的公文体式</td></tr>
+      <tr><th>最初发表</th><td>以布告形式在陕甘宁边区各县公开颁布、张贴（政府公告，非报刊文章；未见当时报刊刊载的直接记载）。<b>第一次作为文献收入文集，是一九五二年四月《毛泽东选集》第二卷第一版</b>（人民出版社，第 370—372 页）。今日所读为 1991 年第二版修订文字</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）<b>第 401—403 页</b>：正文起于 401 页，三条注释止于 403 页（据中国理论网《毛泽东选集》第二卷电子书第 73—75 页逐页核对；1952 年第一版本篇排在第 370—372 页）</td></tr>
+      <tr><th>篇幅</th><td>约一千五百字。结构为：一段长序（正面宣示 + 列数破坏行为 + 定性）＋ 四条编号禁令 ＋ 一句收束；注释三条，分别讲陕甘宁边区的由来、土地政策的三次调整、《抗战建国纲领》的性质</td></tr>
+      <tr><th>历史坐标</th><td>抗战由战略防御向战略相持过渡的前夜：日军自 1938 年 3 月起反复进犯边区黄河河防，国民党方面同时在边区境内保留另一套政权机构，形成「一县两县长」的双重政权。<b>本篇是中共方面对这场内部摩擦的第一次公开、正式的表态</b></td></tr>
+      <tr><th>版本差异</th><td>本篇有一处极小的异文值得记下：求是理论网转录作「巩固抗日后方、<b>保持</b>人民利益起见」，而 1991 年版原书与中国理论网电子书均作「<b>保护</b>人民利益起见」。本文一切引文从原书。此类一字之差多见于网络转录，不足以支持任何版本判断，记此以备核对</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 签发机关的首脑，一个月前刚刚叛逃。</b>这份布告署名的机关之一是「陕甘宁边区政府」。而边区政府的主席林伯渠自一九三七年秋起受中央委托常驻西安做统战工作，主席职务由<b>副主席张国焘代理</b>。一九三八年四月四日，张国焘以边区政府代主席身份赴中部县陪祭黄帝陵，祭毕即随蒋鼎文的小汽车去了西安，四月十七日发表脱党声明，四月十八日被中共中央开除党籍。<b>一个多月后，布告仍以「本府本处」的名义发布，语气是「凡所实施，光明正大」——机关还在，人已经走了。</b></li>
+        <li><b>戏剧性二 · 布告没有毛泽东的签名，却是毛泽东起草的。</b>题解写得很直白：「这个布告是毛泽东为陕甘宁边区政府和八路军后方留守处起草的。」萧劲光在回忆反摩擦斗争时说得更完整：那些发给上至蒋介石、程潜、胡宗南，下至国民党师长、专员、处长的电文，「以及有关反摩擦斗争的声明、文章、<b>布告</b>等，基本上都是经过毛泽东亲自审阅、亲笔修改的，其中不少还是他亲自起草的」。<b>抗战前期，毛泽东有大量文字是以机关或他人名义发出的。署名与执笔分离，本身就是一种权力运作方式——真正的主张要落在别人的名义上，才走得进对方的语言系统。</b></li>
+        <li><b>戏剧性三 · 布告签发时，黄河河防刚打完一场硬仗。</b>「当此抗战紧张期间」不是套话。日军自一九三八年二月起沿汾（阳）离（石）公路西犯，三月十三日在神府河防对岸以飞机十余架掩护强渡，被警备第六团击于半渡、迂回袭其侧背，毙伤敌一百四十余人，我方仅伤亡六人。四月底日军再以一个旅团进犯，五月十日夜间，警备第八团主力东渡黄河，在离石城西北的王老婆山伏击西进日军一个营，<b>歼敌二百余人，缴获步枪四十支、轻机枪两挺，我方伤亡八十余人</b>。<b>布告发布之日，距这场夜战仅五天。</b>前面是隔河对射的强敌，背后却有人在强迫农民交还已经分掉的田地——这是全篇火气的来源。</li>
+        <li><b>戏剧性四 · 边区内一直存在另一套政府。</b>边区政府一九三七年呈文国民政府，要求明定以陕北延安等二十三县为管辖范围，国民政府迟迟未答，于是边区境内长期并存两套政权机构：边区抗日民主政权与国民党省政府委派的县长、保安队。<b>绥德地区的专员何绍南是其中最出名的一个</b>——一九三七年十月到任，兼保安司令、兼绥德县长，到任后即以「确保地方治安」为名调来保安队四百余人，收买兵痞匪徒编成五个保安队分驻各县。一九三八年上半年，摩擦已经成串：六月清涧县长迫令该县抗敌后援会取消青年救亡工作；七月米脂县长刘学海指使工作人员伪造八路军信件、挑拨两党关系；八月吴堡县保安大队无故逮捕八路军伤残人员不予释放。<b>到布告发布时，这些事还只是头一年。</b></li>
+        <li><b>戏剧性五 · 「日必数起」：布告里藏着一个治理压力指标。</b>「数月以来，各县人民纷纷报告，请求制止，<b>日必数起，应接不暇</b>。」这十二个字，是一份没有图表的统计：投诉不是零星的，而是按天计数、按天堆积的。<b>一份公文里出现这种句子，说明问题已经不在「个别分子行为」的量级，而在「基层秩序被持续消耗」的量级。</b>后面那句「不得不实行取缔」，因此不是态度强硬，而是被数量推着走。</li>
+        <li><b>戏剧性六 · 题解里那句罕见的评价，指向的是自己人。</b>本篇题解在说明目的是对付蒋介石集团之后，加了一句：「这个布告打击了当时共产党内一部分同志在抗日统一战线中对于蒋介石集团的阴谋活动所采取的机会主义立场。」<b>一篇公文被装进选集时，编者特意注明它还打了党内的一种立场。</b>这与上一篇（《上海太原失陷以后抗日战争的形势和任务》）题解中那句「从这时起，党内右倾机会主义分子就反对这个提纲」是同一条线索：一九三七年十二月会议上的争论没有结束，一九三八年上半年，边区把「独立自主」从党内原则变成了公开颁布的行政规定。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，通过《抗日救国十大纲领》与《关于目前形势与党的任务的决定》</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.08.25</div><div class="tl-body">红军主力改编为国民革命军第八路军，主力东渡黄河开赴前线，<b>九千余人留守陕甘宁边区</b>；萧劲光被任命为八路军后方总留守处主任，三日后收到蒋介石发来的委任状</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09</div><div class="tl-body">陕甘宁边区政府正式成立，林伯渠任主席；边区辖县与八路军驻防的绥德、米脂、葭县、吴堡、清涧五县警备区，被国民政府划为八路军募补区</div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.10</div><div class="tl-body">何绍南任国民党陕西省第二行政区专员兼保安司令，兼绥德县长<span class="note">（边区「双重政权」中最出名的一位「摩擦专员」）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.11 / 1938.01</div><div class="tl-body">边区政府一度改称陕甘宁特区政府，一九三八年一月复称陕甘宁边区政府<span class="note">（布告署名「陕甘宁边区政府」的由来）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.12</div><div class="tl-body">在延安的八路军后方留守处改编为留守兵团；千里黄河河防划为三段，分设神府、两延河防司令部与绥德五县警备司令部，萧劲光兼河防总指挥</div></div>
+      <div class="tl-item"><div class="tl-date">1938.02</div><div class="tl-body">日军沿汾离公路西犯，进占黄河东岸要口军渡、碛口，猛烈炮击西岸吴堡、宋家川河防阵地</div></div>
+      <div class="tl-item green"><div class="tl-date">1938.03.13</div><div class="tl-body">神府河防战斗。日军二千余人携炮二十余门、在十余架飞机掩护下强渡黄河，被击于半渡、迂回袭其侧背，<b>毙伤敌一百四十余人，我方仅伤亡六人</b></div></div>
+      <div class="tl-item"><div class="tl-date">1938.03.29—04.01</div><div class="tl-body">中国国民党临时全国代表大会在武汉召开，制定《抗战建国纲领》<span class="note">（本篇第三条禁令即援引此纲领的原则）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.04.04</div><div class="tl-body">张国焘以陕甘宁边区政府代主席身份赴中部县陪祭黄帝陵，祭毕随蒋鼎文去西安，四日后抵武汉</div></div>
+      <div class="tl-item"><div class="tl-date">1938.04.17 / 04.18</div><div class="tl-body">张国焘发表公开书面声明脱党；次日中共中央决定开除其党籍</div></div>
+      <div class="tl-item green"><div class="tl-date">1938.05.10 夜</div><div class="tl-body">留守兵团警备第八团主力东渡黄河，在离石城西北王老婆山伏击西进日军一个营，<b>歼敌二百余人</b>，迫其未达河岸即行撤退</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.05.15</div><div class="tl-body"><b>本篇布告发布</b>：四条禁令，保护既得利益、管制外来活动、准许人民告发、就地逮捕<span class="note">1991 年版第 401 页起</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.05.19</div><div class="tl-body">徐州失陷</div></div>
+      <div class="tl-item"><div class="tl-date">1938.05.26—06.03</div><div class="tl-body">毛泽东在延安抗日战争研究会上作《论持久战》的讲演</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.05.05</div><div class="tl-body">毛泽东在留守兵团军事会议上提出巩固陕甘宁边区的一个方针、两条原则：方针是<b>「一步不让」</b>，原则是<b>「人不犯我，我不犯人」</b>和<b>「人若犯我，我必犯人」</b><span class="note">（此后反摩擦斗争的口径，可视为本篇四条禁令的进一步提炼）</span></div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">时间线依据本篇正文与注释、中共中央党史和文献研究院《陕甘宁边区的反摩擦斗争》（萧劲光）、中共中央党史和文献研究院《抗日战争时期陕甘宁边区的反摩擦斗争》、贵州省地方志办公室《保卫黄河》及维基百科「陕甘宁留守兵团」条。张国焘出逃诸细节（祭陵日期、随蒋鼎文赴西安、四月十七日声明脱党、四月十八日开除党籍）见人民网文史频道、《文摘报》及《张国焘传》相关叙述，各家在「四月十七日/十八日」的记法上略有出入，此处采「十七日声明、十八日开除」。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      在统一战线的名义之下，边区用一份政府布告为自己划出一道界：<span class="q">已经分过的土地房屋和已经废除的债务，不准擅自变更；已经建立的军事、政治、经济、文化和民众团体组织，制止一切破坏；未经同意而从外面进来活动的人，一律禁止；从事破坏捣乱的人，准许人民告发、就地逮捕。</span>抗日是大局，但大局不是放弃阵地的理由——「本府本处言出法随，勿谓言之不预」。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 保护既得利益：把「让」与「失」分开</h4>
+        <p>第一条把界线画得极准：凡是「在国内和平开始时」已经分配过的土地房屋、已经废除过的债务，「当保护人民既得利益，<b>不准擅自变更</b>」。<b>策略可以让，果实不能让。</b>注释〔2〕把这条的来路写明了——一九三六年停止没收开明绅士土地，一九三七年以减租减息代替没收地主土地，同时宣布坚决保障农民已经从土地改革中获得的果实。<span class="card-tag">底线</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 准入要经过同意：用一纸证明分开「里面」和「外面」</h4>
+        <p>第三条先开门——凡有利抗日救国的事业「无不乐于推行」，善意协助的各界人士「一律表示欢迎」；紧接着关门：凡未经本府或本处同意、并取得证明文件而从外面进入边区停留活动之人，「不论其活动的事务属于何项，<b>一律禁止</b>」，理由是「以防假冒，而杜奸宄」。<b>把敌我区分交给一纸文书，比交给态度更可操作。</b><span class="card-tag">准入</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 把执行力交给人民：告发、逮捕、严惩</h4>
+        <p>第四条是四条里唯一带强制程序的：「凡在边区境内从事阴谋破坏，或肆意捣乱，或勾引煽惑，或暗探军情的分子，<b>准许人民告发</b>。证据确实者，<b>准许就地逮捕</b>。一经讯实，一律严惩不贷。」<b>取证的门槛（证据确实）与执行的方式（就地）写在同一段里</b>——授权给了基层，限制也写在授权旁边。<span class="card-tag">执行</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node blue"><div class="n-label">外部压</div><div class="n-sub">日军反复进犯<br>黄河河防</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">内部蚀</div><div class="n-sub">强迫交还土地债务<br>破坏组织</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">后果</div><div class="n-sub">制造内部纠纷<br>增加抗日动员困难</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">定性</div><div class="n-sub">公开布告<br>违反团结抗日原则</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">设界</div><div class="n-sub">保护既得利益<br>管制外来活动</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">执行</div><div class="n-sub">人民告发<br>就地逮捕</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">目标</div><div class="n-sub">增强抗日力量<br>巩固抗日后方</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的起点不在纪要，在<b>两笔同时发生的账</b>：外面是日军隔河炮击，里面是有人在把已经分下去的田地往回收。全篇没有把两者写成两件事，而是写成<b>一条</b>——「上述种种行为，显系违反团结抗日的基本原则……<b>增加抗日动员的困难</b>」。这一句把内部捣乱直接接到抗战的成败上，是整份布告能立得住的逻辑支点：<b>你要谈团结抗日，就不能把抗日根据地的后方秩序当成别人的事。</b></p>
+    <p class="lead" style="margin-top:10px;">而全篇最见分寸的一处，是「察其原因」之后的分层：先是「不外有少数顽固分子，不顾民族国家利益，恣意妄为」，再是「<b>甚有</b>为日寇所利用，假借名义，作为掩护其阴谋活动的工具」。<b>「不外」与「甚有」两词之差，就是「内部问题」与「敌我问题」的分界线。</b>前一类人是顽固，后一类人已经是工具；布告没有把两类合成一类，也就没有把打击面一次性放大到不可收拾。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">缘起：十四个字的自我陈述</span><span class="part-scope">开篇至「一事不利救亡」</span></div>
+      <div class="part-body">
+        <p>布告的第一段不是诉苦，也不先指责，而是<b>先把自己的合法性摆出来</b>：从卢沟桥事变讲起，前线将士牺牲流血、各党各派精诚团结、各界人民协力救亡，「这是中华民族的光明大道，抗日胜利的坚强保障。凡属国人，必须循此前进」——<b>先把「抗日」定成共同标准，后面所有指控才有裁判的依据。</b></p>
+        <p>接着是一段极高调的自我陈述：「我陕甘宁边区军民，服从政府领导，努力救亡事业。凡所实施，光明正大。艰苦奋斗，不敢告劳。全国人民，交口称誉。」收在一句十字警语上：<span class="k">「不许一人不尽其职，一事不利救亡。」</span></p>
+        <p><span class="k">结构要点</span>：这一段实际上是为「取缔」预先交底——<b>一个自认光明正大的机关，才有资格对破坏者动手；反过来，一切指控都必须挂在「抗日」这个双方都不得否认的标准上。</b></p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">五种强迫</span><span class="sym-tag">冲着既得利益来</span></div>
+        <div class="sym-text">或强迫农民交还已经分得的土地房屋；或强迫欠户交还已经废除的债务；或强迫人民改变已经建立的民主制度；或破坏已经建立的军事、经济、文化和民众团体的组织。</div>
+        <div class="sym-note">前两条动的是<b>钱与地</b>，后两条动的是<b>制度与组织</b>——布告把它们并列，等于宣布「既得利益」不止包括财物，也包括已经建起来的那套东西</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">六种暗手</span><span class="sym-tag">冲着秩序与情报来</span></div>
+        <div class="sym-text">甚至充当暗探，联络土匪，煽动部队哗变，实行测绘地图，秘密调查情况，公开进行反对边区政府的宣传。</div>
+        <div class="sym-note">从最隐蔽的（暗探、秘密调查）排到最公开的（公开宣传），<b>「甚至」两字点明这是前五种之上的升级形态</b>——动田动地还算是利益之争，测绘地图、煽动哗变已经是军事准备</div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">定性：四重破坏与两类人</span><span class="part-scope">「上述种种行为」至「不得不实行取缔」</span></div>
+      <div class="part-body">
+        <p>定性段是四句「破坏」的排比：违反团结抗日的基本原则、违反边区人民的公意，企图<b>制造内部纠纷</b>、<b>破坏统一战线</b>、<b>破坏人民利益</b>、<b>破坏边区政府的威信</b>——最后落到最实在的一句：<b>「增加抗日动员的困难」。</b></p>
+        <p>然后分级：先是「不外有少数顽固分子，不顾民族国家利益，恣意妄为」，再是「<b>甚有</b>为日寇所利用，假借名义，作为掩护其阴谋活动的工具」。两类人分开写，处置的梯度才立得起来。</p>
+        <p>收束前的最后一句是全文最动人的一处现实主义：「数月以来，各县人民纷纷报告，请求制止，<b>日必数起，应接不暇</b>。」<span class="k">布告不是先说「我们决定」，而是先说「人民在要求」——取缔的正当性来自下面,而不是来自机关自己的意志。</span></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">四条禁令：一纸文书划出的四道界</span><span class="part-scope">「合亟明白布告如次」至收束</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>第一条 · 保护既得利益</b>：以「国内和平开始时」为时间基准，凡已分配的土地房屋、已废除的债务，「当保护人民既得利益，不准擅自变更」——<b>用一个时间点锁住一批权利</b>，此后一切争执都回到这个基准线上判定。</li>
+          <li><b>第二条 · 保护组织</b>：凡在和平开始时已建立、及其后按统一战线原则改进发展的军事、政治、经济、文化等组织及民众团体，「当保护其活动，促进其发展，制止一切阴谋破坏之行为」——把「已建立的组织」也列为不可侵犯的既成事实。</li>
+          <li><b>第三条 · 管制外部进入</b>：援引《抗战建国纲领》，声明乐于推行有利抗日救国的事业、欢迎善意协助的各界人士；同时规定未经同意并取得证明文件者「一律禁止」其入境内活动。<b>一句之内先开后关，是全篇最讲究的一条。</b></li>
+          <li><b>第四条 · 交付执行</b>：准许人民告发，「证据确实者，准许就地逮捕。一经讯实，一律严惩不贷」——<b>把发现权、抓捕权交到基层手里，也把门槛（证据确实）明确写在旁边。</b></li>
+          <li><span class="k">结构要点</span>：四条的关系是<b>「权利—组织—边界—执行」</b>：先定什么不许动（一、二），再定谁可以进来（三），最后定谁来执法（四）。一份布告要能落地，这四件事缺一不可；只喊立场而不写程序，就只是一纸声明。</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">布告里的四类人（按原文分层重排）</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">边区军民</div>
+          <div class="spec-seg blue">善意协助人士</div>
+          <div class="spec-seg gold">少数顽固分子</div>
+          <div class="spec-seg red">为日寇利用者</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>自我定位：光明正大</b>「服从政府领导，努力救亡事业」「艰苦奋斗，不敢告劳」——布告把边区军民放在被保护、也应尽责的位置上，标准是那句「不许一人不尽其职，一事不利救亡」</div>
+          <div class="spec-label"><b>明确开门：一律欢迎</b>「凡属有利抗日救国的事业……无不乐于推行。对于善意协助的各界人士，一律表示欢迎」——但须经同意、取得证明文件，边界与欢迎同时给出</div>
+          <div class="spec-label"><b>定性为内部问题：取缔</b>「不外有少数顽固分子，不顾民族国家利益，恣意妄为」——「不外」二字把它们圈在内部矛盾的范围内，处置是取缔、告发、法办</div>
+          <div class="spec-label"><b>升级为敌我：明写其工具性</b>「甚有为日寇所利用，假借名义，作为掩护其阴谋活动的工具」——用「甚有」从上一类里划出来，分量最重，也最不讲情面</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这条色带给出的不是一张敌我名单，而是一套<b>分层的处置逻辑</b>：最左是「自己人该做什么」，第二类是「可以进来但要登记」，第三类是「内部要取缔的」，第四类才是「已经被敌人拿来当工具的」。<b>越往右，定性越重；而三、四两类之间那道线，恰恰由「是否被日寇所利用」来划。</b>把打击面分层，是为了不让取缔滑成全面对抗——这一点在布告里只用了「不外」和「甚有」两个词，语气几乎察觉不到，分量却全在这里。<span class="muted">（四列划分系按原文叙述次序所作重排，非原文图表。）</span></p>
+
+    <div class="quote">
+      右列四条，全边区军民人等一律遵照，不得违背。倘有不法之徒，胆敢阴谋捣乱，本府本处言出法随，勿谓言之不预。切切。此布。
+      <span class="src">全篇收束句（1991 年版第 403 页）｜旧公文体式的收尾：「言出法随」宣示执行力，「勿谓言之不预」预告后果，最后四字「切切。此布」把语气压低——强硬到极致之后，回落到公文该有的平正上</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>「为布告事」：文体就是战线</h4>
+          <p>这份文献最不该被跳过的地方，是它的<b>格式</b>。它用的是当时通行的政府布告体式——「为布告事」起、「右列四条」转、「言出法随」「勿谓言之不预」「切切。此布」收，全是国民政府文书里现成的套语。而它以「本府本处」的名义，规定土地债务、管制人员进出、准许人民告发就地逮捕——<b>这是一份在自己辖区内行使完整治权的文件。</b>上一篇（1937 年 11 月）讲的是原则：「统一战线中的独立自主」，是把「谁领导谁」的问题先问清楚；半年之后的这一篇，把同一条原则翻译成了可张贴、可执行、带时间基准和证明文件的行政语言。<b>原则之争往往看不出胜负，公文之争才看得出——因为公文落地之后，「谁在治理这块地方」就有了默认答案。</b>在合作框架里，最难争的从来不是名分，而是那些日常琐事：地契怎么算、外来的工作组要不要登记、谁来抓人。谁定了这些细则，谁就定义了「合法」。<span class="muted">（顺带一个方法论提示：读这篇时容易觉得「只是一份公文、作者也没署名」，但它恰恰是那种「形式即内容」的文本——不署名的执笔、机关的口吻、对方的文牍格式，三样合起来才是它的策略。）</span></p>
+          <span class="mv">迁移：当你要在多方合作中守住自己的阵地时，别只在会议上表态，去把细则写掉——哪些边界不许动、外部来人如何登记、争议依什么基准判定。场面话双方都能说，细则只能由一方写。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「既得利益」四个字，是让步与丧失之间的分界线</h4>
+          <p>为了建立抗日民族统一战线，中共在土地政策上连退了两步：一九三六年停止没收开明绅士的土地，一九三七年又以减租减息代替没收地主土地——退让幅度不可谓不大。但本篇第一条把界线钉得很死：<b>凡是已经分过的、已经废掉的，就是「既得利益」，不准擅自变更。</b>注意它把判定基准定成一个时间点——「国内和平开始时」。有了这个时间点，一切争执都不必争论「公平不公平」，只需核对「这件事发生在这个点之前还是之后」。<b>策略可以退，成果不能退：未得的可以谈，已得的不能动。</b>这是合作与谈判里最实用的一条划分——它把「我还要再让什么」这个容易失控的问题，变成「哪些是已经确定的存量」这个可以清点的问题。凡是合作，都有人会不断试探「上一轮已经给你的，能不能再收回去」；而能否挡回这一次试探，取决于你此前有没有把存量明确写成不可变更的条款。</p>
+          <span class="mv">迁移：做任何合作或承诺时，先把「已确定的存量」单独列成清单（条款、额度、权限、已交付的成果），并明确写「不准擅自变更」。谈判空间留给增量，存量一律上锁——上锁越早，往后倒退的拉扯越少。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「日必数起」与「证据确实」：先看清量级，再分级处置</h4>
+          <p>这份布告里有两处极容易被读过去、却最有现代管理意味的细节。<b>第一处是「日必数起，应接不暇」。</b>它把民间投诉按天计数报出来——这就是在没有统计报表的年代，一份政权公告里的「问题量级披露」。它同时说明两件事：问题已经不是个别行为，而是持续消耗基层秩序；而取缔的决定不是机关自己拍的，是被数量推着走的。<b>第二处是「证据确实者，准许就地逮捕」。</b>授权与限制写在同一句里：把抓捕权授予基层，同时把门槛立在「证据确实」上。<b>而全篇最见分寸的，是定性在处置之前，并且分了级：</b>强迫交还田地的是「少数顽固分子」，定性在内部，处置是取缔、告发、法办；而「甚有为日寇所利用」的则是另一类，才算是敌我问题。<b>分类先于处置——这一步做对了，处置才有梯度；做错了，所有问题都会被一次性推到最重的那一档，然后就没有退路。</b></p>
+          <span class="mv">迁移：面对一堆反复出现的麻烦，先做两件事——把它的规模量化（每天几起、涉及多少人），再把它分层（内部偏差 / 需登记的外部介入 / 已被对手利用）。量级决定要不要动，分层决定动到哪一层。量不清、层不分，就只有「一刀切」和「一直忍」两个选项。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">为布告事：自卢沟桥事变以来，我全国爱国同胞，坚决抗战。前线将士，牺牲流血。各党各派，精诚团结。各界人民，协力救亡。这是中华民族的光明大道，抗日胜利的坚强保障。凡属国人，必须循此前进。</div>
+        <div class="ctx">开篇第一段｜四句四顿的排比，把「抗日」立成所有指控的共同裁判标准——凡属国人必须循此前进，后面的话才有资格说</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我陕甘宁边区军民，服从政府领导，努力救亡事业。凡所实施，光明正大。艰苦奋斗，不敢告劳。全国人民，交口称誉。本府本处，亦惟有激励全区民众，继续努力，以求贯彻。不许一人不尽其职，一事不利救亡。</div>
+        <div class="ctx">第一段收束｜「不许一人不尽其职，一事不利救亡」十四字，是全篇的责任总纲，也是布告敢下取缔令的自我交底</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">乃近查边区境内，竟有不顾大局之徒，利用各种方式，或强迫农民交还已经分得的土地房屋，或强迫欠户交还已经废除的债务，或强迫人民改变已经建立的民主制度，或破坏已经建立的军事、经济、文化和民众团体的组织。</div>
+        <div class="ctx">揭发段开头｜四个「强迫/破坏」把「不顾大局之徒」的行为定成两类：动既得利益，动已经建起来的制度。这是全篇四条禁令的事实前提</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">数月以来，各县人民纷纷报告，请求制止，日必数起，应接不暇。</div>
+        <div class="ctx">定性段后段｜十六字里有十四个字是量：按天计数、按天堆积。布告先报出人民的请求，再宣布取缔——正当性来自下面，不是机关的自作主张</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">（一）凡在国内和平开始时，属于边区管辖地域内，一切已经分配过的土地房屋和已经废除过的债务，本府本处当保护人民既得利益，不准擅自变更。……（四）当此抗战紧张期间，凡在边区境内从事阴谋破坏，或肆意捣乱，或勾引煽惑，或暗探军情的分子，准许人民告发。证据确实者，准许就地逮捕。一经讯实，一律严惩不贷。</div>
+        <div class="ctx">四条禁令之第一、第四｜前一条把判定基准锁在一个时间点上（国内和平开始时），后一条把授权与门槛写在同一句里（准许就地逮捕 / 证据确实者）——一份公文最实用的两处技术示范</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">右列四条，全边区军民人等一律遵照，不得违背。倘有不法之徒，胆敢阴谋捣乱，本府本处言出法随，勿谓言之不预。切切。此布。</div>
+        <div class="ctx">全篇收束｜「言出法随」是宣示，「勿谓言之不预」是预告，最后「切切。此布」把语气压回公文该有的平正——这是布告体最讲究的收尾</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字（人民出版社第二版），已与中国理论网《毛泽东选集》第二卷电子书第 401—403 页、marxists.org 中文版逐字核对，并参照求是理论网所载全文。已核出的一处网络异文：求是网转录作「保持人民利益起见」，1991 年版原书及中国理论网电子书均作「<b>保护</b>人民利益起见」——本文从原书。原文四条序号为「（一）」至「（四）」，引文中保留原样（末条引文为节引，以「……」略去第二、三条）。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《抗日游击战争的战略问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.05 ｜ 第二卷第八篇（紧接本篇之后，本篇止于 1991 年版第 403 页）</span></div>
+        <p>布告是「守」的文书，下一篇是「打」的纲领。两者同月：五月十五日发布四条禁令，五月间写出游击战争的战略问题，五月二十六日起讲《论持久战》。<b>一个五月里，边区同时做完了三件事——划界、定战法、说清前途。</b>把布告与这两篇接起来读，能看清「独立自主」在军事上到底是什么样子：不是拒绝合作，而是自己决定在哪儿打、怎么打。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">萧劲光《陕甘宁边区的反摩擦斗争》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">回忆文章 ｜ 中共中央党史和文献研究院网站刊载</span></div>
+        <p>本篇的题解只有四句话，萧劲光的回忆补上了它背后的场面。他以「名正言顺的国民政府任命的八路军后方留守处主任」身份直接与国民党方面交涉，并记下：那些电文与「<b>有关反摩擦斗争的声明、文章、布告等</b>，基本上都是经过毛泽东亲自审阅、亲笔修改的，其中不少还是他亲自起草的」。<b>他还记下这批文电手稿的归宿：共一百四十多份，装订成两册，从延安带到东北，从东北带到湖南，从湖南带到北京，珍藏三十多年，直到一九七六年四月才上送毛泽东。</b>他附信里的一句话是：「这两本文稿，是党和人民的宝贵财富，是重要的历史文献。」<span class="muted">（提醒一处读法：同一位作者的相关叙述在别处把牺牲者名字记为「尹才生」，另有资料记作「尹万生」，引用细节时宜注明出处。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>存量上锁题</b>：你手上有没有一件「上一轮已经谈定、现在又被试探往回要」的事？照本篇第一条，把它写成一个带时间基准的条款：基准日是哪一天，基准日之前已确定的存量有哪些，明确写「不准擅自变更」。写完再问：我把谈判空间留给增量了吗，还是把存量也敞着口？</div>
+      <div class="q">二 · <b>准入规则题</b>：你负责的事里，有没有「外来的人/团队/工具可以进来做什么」长期含糊的地方？照本篇第三条，写一句话：先写欢迎什么（何种协助、何种目的），再写须经谁同意、凭什么凭证。检查一下——先开后关，还是只剩关门？</div>
+      <div class="q">三 · <b>量级与分层题</b>：挑一件最近反复烦扰你的事。第一，把它量化：每天几起、涉多少人、占多少时间。第二，把它分三层：内部偏差、需登记的外部介入、已被对手利用的。第三，为每层各写一句处置——哪一层只纠正，哪一层要设门槛，哪一层必须硬处理。</div>
+      <div class="q">四 · <b>署名与执笔题</b>：本篇由毛泽东起草、以两个机关的名义发布，未署个人名。想一件你最近想推动、但直接以自己名义提会遇阻的事：能不能换一个更合适的名义或形式去说（一份流程、一条规则、一次会议纪要），让主张进入对方的语言系统？换形式之后，主张本身有没有变形？</div>
+      <div class="hint"><b>三问卡</b>：① 我要守住的「存量」写清楚了吗，还是每次都在重谈？② 我处理一件反复出现的麻烦，是先量了级、分了层，还是凭印象一次定死？③ 我的主张，用了能落地的形式说出来吗——还是只停在表态？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第七篇</div>
+    <div>依据人民出版社 1991 年版第二卷第 401—403 页 ｜ 2026.09.21</div>
+  </div>
+
+</div>
+</body>
+</html>

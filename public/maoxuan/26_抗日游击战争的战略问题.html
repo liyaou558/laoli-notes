@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>26 · 抗日游击战争的战略问题 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-frame.t3 .spec-band,.spec-frame.t3 .spec-labels{grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;min-width:0;overflow-wrap:anywhere;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;min-width:0;}
+@media(max-width:620px){
+  .part-scope{white-space:normal;margin-left:0;width:100%;line-height:1.6;}
+  .part-title{font-size:16.5px;}
+}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:104px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:70px;white-space:normal;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿六</div>
+    <h1>抗日游击战争的战略问题</h1>
+    <div class="sub2">全文九章 · 约一万七千六百字 · 六项战略方针 · 注释九条</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第八篇 · <b>一九三八年五月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《抗日游击战争的战略问题》。1991 年版《毛泽东选集》第二卷第八篇，前接《陕甘宁边区政府、第八路军后方留守处布告》，后接《论持久战》。<b>全篇编号九章</b>，其中第六章「建立根据地」下分五节——是第二卷中章节体例最完整的一篇</td></tr>
+      <tr><th>写作时间</th><td>一九三八年五月。题下只署「一九三八年五月」，无具体日期。<b>写作与发表之间隔着两件大事：五月十九日徐州失陷；本月二十六日起，毛泽东在延安抗日战争研究会上开始作《论持久战》的长篇讲演</b></td></tr>
+      <tr><th>最初发表</th><td>《解放》第四十期，一九三八年五月三十日出版（延安）。同期前后的《解放》还在连载时局评论；一个月后（七月一日），《论持久战》在《解放》第四十三、四十四期合刊上发表——<b>两篇姊妹文本，先后相隔三十余天</b></td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）<b>第 404—438 页</b>；下一篇《论持久战》起于同卷第 439 页（页序据 1991 年版第二卷目录核对）。一九五二年四月收入《毛泽东选集》第二卷第一版，第二版重排后页码如上述</td></tr>
+      <tr><th>篇幅</th><td>正文九章<b>约一万七千六百字</b>（据求是理论网所载 1991 年版全文电子文本统计汉字，不含注释）。注释九条：六条为六处根据地的沿革（长白山、五台山、太行山、泰山、燕山、茅山），一条为「平原能够建立长期根据地」的后来补充，一条讲围棋「做眼」，一条讲「围魏救赵」</td></tr>
+      <tr><th>历史坐标</th><td>抗战十个月：正面战场从淞沪、南京退到徐州，武汉告急；敌后战场却已铺开——五台山（晋察冀）、太行山（晋东南）、泰山、茅山各自的根据地或游击区正在成形。党内的争论则集中在两句口号上：<b>是「独立自主的山地游击战」，还是「以运动战为主、配合以阵地战、辅之以游击战」</b>。本篇是这场争论中最长、最系统的一次正面作答</td></tr>
+      <tr><th>版本差异</th><td>本篇有一处可查的文字异文：1938 年原刊本一系（见日·竹内实编《毛泽东集》第六卷所收文本）作「英占北美与<b>东印度</b>」「共同围剿日本帝国主义而一举<b>推翻</b>之」，1991 年版选集作「英占北美和<b>印度</b>」「一举<b>消灭</b>之」。<b>本文一切引文从 1991 年版</b>；此处两处异文只作记录，不足以据此推断修改的时间与理由</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 争的不是「重要不重要」，是「它算哪一类」。</b>一九三七年八月二十二日至二十五日的洛川会议上，毛泽东为红军定下的作战方针是「<b>独立自主的山地游击战争</b>，包括在有利条件下集中兵力消灭敌人兵团，以及向平原发展游击战争」。三个月后王明从苏联回到延安，在十二月政治局会议上作报告，讲的是另一套：<b>「没有统一的国防军与统一的正规军是不能战胜日帝的，游击战争不能战胜日本。」</b>会上许多人做了「自我批评」，毛泽东的处境是孤立的。他后来在延安整风时说得很清楚：「我是孤立的。当时，我别的都承认，只有持久战、游击战、统战原则下的独立自主等原则问题，我是坚持到底的。」<b>所以这篇一九三八年五月的长文，写的是一个已经被争论了九个月、却没有被写透的问题：游击战争到底只是正规战的「配合手段」，还是本身就有独立的战略地位。</b></li>
+        <li><b>戏剧性二 · 对方的稿子是先在公开刊物上发的。</b>一九三八年二月底至三月初的政治局会议之后，王明回武汉，随即用个人名义写成《三月政治局会议的总结》，在《群众》周刊上公开发表，要求「<b>确定和普遍地实行以运动战为主、配合以阵地战、辅之以游击战的战略方针</b>」——「普遍地」三个字，等于把洛川会议的方针整体推翻，因为八路军、新四军都要以运动战为主。<b>争论由此从会场搬到了刊物上。</b>毛泽东的反驳也走同一条路：先在延安的讲台上讲（五月二十六日起的《论持久战》讲演），再在《解放》上发（本篇五月三十日、《论持久战》七月一日）。<b>两个人都把话说给全党看，胜负不由会议记录判定，由读者判定。</b></li>
+        <li><b>戏剧性三 · 「速胜论」的泡沫刚破，徐州就丢了。</b>一九三八年三月底至四月上旬，台儿庄会战取胜；四月二十五、二十六日，《大公报》接连发社评，把即将到来的徐州战役说成「准决战」，称「这一战，就是敌人的最后挣扎」——毛泽东在《论持久战》里记下了这批言论，称之为「政治上军事上的近视眼」。<b>五月十九日，徐州失陷。</b>十一天后，本篇在《解放》第四十期发表。<b>发布时点正落在「乐观情绪最盛、军事形势最坏」这两件事的交点上</b>：一边是许多人又开始怀疑持久战，一边是敌后广大地区正在被留成空虚地带——本篇要讲的，正是后面这件事意味着什么。</li>
+        <li><b>戏剧性四 · 文章的对手不只是「轻视游击战」的人，也包括只会打游击的人。</b>全篇最容易被读过去的部分，是它对自己人的批评：讲根据地时批<b>流寇主义</b>（「历史上存在过许多流寇主义的农民战争，都没有成功」），讲巩固与发展时批<b>保守主义</b>，讲部队集中时既批<b>地方主义</b>、又批<b>单纯军事主义</b>，讲指挥关系时既不许可「失职」「专擅」，也不许可「包办」「无自动性」。<b>一篇为游击战争争地位的文章，同时用大量篇幅给游击战争定规矩——争地位是要别人承认，定规矩是要自己站得住。</b>只争不定的那一半，才是真正的危险。</li>
+        <li><b>戏剧性五 · 题解是一份结果报告。</b>本篇题解只四句，却预告了七年的结果：「抗日战争初期，中国共产党内和党外都有许多人轻视游击战争的重大战略作用，而只把自己的希望寄托于正规战争，特别是国民党军队的作战。毛泽东批驳了这种观点，同时写了这篇文章，指出抗日游击战争发展的正确道路。其结果，在抗日时期内，在一九三七年只有四万余人的八路军和新四军，到一九四五年日本投降时就发展成为一百多万人的大军，并创建了许多革命根据地……<b>使蒋介石在抗日时期既不敢投降日本，又不敢发动全国规模的内战。</b>」<b>「其结果」三字后面跟着的，是这篇文章自身的量级——它谈的不是一场战役的打法，而是七年间一支军队从四万人到一百多万人的生长方式。</b></li>
+        <li><b>戏剧性六 · 同月的姊妹篇：一个讲「怎么打」，一个讲「为什么不会输」。</b>五月三十日发表的这一篇，是《论持久战》的<b>分论</b>：战争既然长期而残酷，敌后就必须有能长期支持的根据地，游击战就必须从战术升格为战略。《论持久战》则是<b>总论</b>：中日双方的基本特点决定了战争的持久与最后胜利的归属。后者一九三八年七月一日在《解放》第四十三、四十四期合刊发表，长达四十一页；白崇禧读后极为叹服，把它概括为「<b>积小胜为大胜，以空间换时间</b>」，并在蒋介石支持下以国民党军事委员会名义通令全国。<b>两篇的分工值得记住：一篇解决「我们凭什么能赢」，一篇解决「赢的过程中我们靠什么活下去」。</b></li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议。毛泽东在分析敌强我弱的形势后提出，红军必须从正规战争转向抗日游击战，作战方针是「<b>独立自主的山地游击战争</b>」<span class="note">（会议通过《抗日救国十大纲领》与《关于目前形势与党的任务的决定》）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.25</div><div class="tl-body">红军主力改编为八路军，东渡黄河开赴前线，开进敌后山地</div></div>
+      <div class="tl-item"><div class="tl-date">1937.09—11</div><div class="tl-body">平型关后，八路军分兵展开：<b>十月以五台山为依托建立晋察冀抗日根据地，十一月一二九师挺进太行山区、创立以太行山为依托的晋东南根据地</b><span class="note">（即本篇第六章所举「山地根据地」的实例）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1937.11</div><div class="tl-body">王明从苏联回到延安，带来共产国际关于国共合作的新精神</div></div>
+      <div class="tl-item"><div class="tl-date">1937.12.09—13</div><div class="tl-body">十二月政治局会议。王明作《如何继续全国抗战与争取抗战胜利呢？》报告，提出「一切经过统一战线」「一切服从统一战线」，并称「游击战争不能战胜日本」。毛泽东两次发言回辩：「我们所谓独立自主是对日本作战的独立自主，战役战术是独立自主的山地战，<b>游击战是我们的特长</b>」「<b>洛川会议战略方针是对的</b>」<span class="note">（王明的主张因毛泽东等人抵制，未在会上形成决议）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.01</div><div class="tl-body">晋察冀边区临时行政委员会成立，敌后第一个统一战线性质的抗日民主政权</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.02.27—03.01</div><div class="tl-body">三月政治局会议。王明附和国民党「只要一个军队」的主张，提出「统一指挥、统一编制、统一武装、统一纪律、统一待遇、统一作战计划、统一作战行动」；毛泽东发言集中讲军事问题，指出「中国抗战最后是必然胜利的，但如何取得最后胜利是没有解答的」<span class="note">（中共中央党史和文献研究院《从十二月会议到六届六中全会》：这次发言「实际上就是不久后发表的《论持久战》的初步论述」）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.03.11</div><div class="tl-body">王明在武汉以个人署名发表《三月政治局会议的总结》，要求「普遍地实行以运动战为主、配合以阵地战、辅之以游击战的战略方针」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.03下旬—04上旬</div><div class="tl-body">台儿庄会战取胜。四月二十五、二十六日《大公报》社评鼓吹徐州应为「准决战」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.04</div><div class="tl-body">太行山方面成立晋冀豫军区；新四军先遣支队向苏南敌后出动，实行战略侦察<span class="note">（一九四〇年注释〔6〕所记茅山根据地的起点）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.05.19</div><div class="tl-body">徐州失陷，武汉告急</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.05.30</div><div class="tl-body"><b>本篇发表于《解放》第四十期</b>：九章，六项战略方针<span class="note">1991 年版第 404 页起</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1938.05.26—06.03</div><div class="tl-body">毛泽东在延安抗日战争研究会上作《论持久战》的长篇讲演</div></div>
+      <div class="tl-item green"><div class="tl-date">1938.07.01</div><div class="tl-body">《论持久战》在《解放》第四十三、四十四期合刊发表（长四十一页）。当月延安解放社出单行本，封面为毛泽东亲笔题名；七月二十五日汉口新华日报馆出单行本，向国统区发行</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.09.29—11.06</div><div class="tl-body">中共六届六中全会。会议批判王明的右倾错误，撤销其负责的长江局。<b>毛泽东在会上作《战争和战略问题》的结论，把本篇的命题带进党的决议语境：「游击战争是在全战争中占着一个重要的战略地位的。」</b>他后来在中共七大上说：「<b>六中全会是决定中国之命运的。</b>」</div></div>
+      <div class="tl-item"><div class="tl-date">1945.08</div><div class="tl-body">日本投降。八路军、新四军由一九三七年改编时的四万余人发展为一百多万人的大军<span class="note">（本篇题解所述「其结果」）</span></div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">时间线与相关引语依据：本篇正文及 1991 年版注释、中共中央党史和文献研究院《从十二月会议到六届六中全会》（《党的文献》）、中国共产党新闻网「中国共产党六届六中全会在延安举行」条、中共中央党史和文献研究院《论持久战写作发表的前前后后》、《毛泽东传》「从十二月会议到六中全会」章、河南省委党校「洛川会议」条目。1938 年的原刊日期为「五月三十日出版《解放》第四十期」，此点见中共中央党史和文献研究院《党史百年·天天读》5 月 30 日条，多家党史机构出版物口径一致。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      游击战争在抗日战争中的地位，不由它的名分决定，由中日双方的条件推出：<span class="q">中国既不是小国，又不像苏联，是一个大而弱的国家；这一个大而弱的国家被另一个小而强的国家所攻击，但是这个大而弱的国家却处于进步的时代</span>——于是敌人占地甚广而兵力不足，战争长期而残酷；于是游击战争不是在内线配合正规军、而是在外线单独作战，不是小规模、而是大规模的。<b>它不是「辅助手段」，而是一整套战略。</b>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 位置是推出来的，不是争出来的</h4>
+        <p>第一章没有先反驳对手，而是先做了两次「控制变量」：<b>假如中国是小国</b>，游击战只在正规军战役上起近距离直接配合，「那就当然只有战术问题」；<b>假如中国像苏联那样强大</b>，敌人很快被赶出，「或虽时间较久，但是被占地区不广」，也「当然也只有战术问题」。两个反证之后才是正例——<b>大而弱 × 被小而强攻击 × 处于进步的时代</b>。三个条件各自否掉一种情形，结论便只能落在这一种上：游击战必须放到战略的观点上考察。<span class="card-tag">定位</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 一切原则都挂在一条基本函数上</h4>
+        <p>第二章先立算式：「<b>尽可能地保存自己的力量，消灭敌人的力量</b>」——从射击原则（荫蔽身体、发扬火力）到战略原则，都「贯彻这个基本原则的精神」。第三章再加一项：游击队「一般是从无到有、从小到大的，故在保存自己之外，<b>还须加上一个发展自己</b>」。<b>先定目标函数，再谈打法；不这样，后面的「灵活」就会变成妄动。</b><span class="card-tag">函数</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 六项方针是一个体系，不是六条要点</h4>
+        <p>作战方法（主动灵活有计划）→ 协同（和正规战争相配合）→ 依托（建立根据地）→ 周期（战略防御与战略进攻）→ 升级（向运动战发展）→ 组织（正确的指挥关系）。<b>这六项覆盖了「怎么打、和谁打、在哪里打、什么时候打、打到什么程度、谁来指挥」六件事</b>，缺任何一项，其余五项都会失重。文中因此把第一项称为「游击战争战略原则的<b>最中心的问题</b>」。<span class="card-tag">体系</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node blue"><div class="n-label">条件</div><div class="n-sub">小而强的日本<br>进攻的外线</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">条件</div><div class="n-sub">大而弱的中国<br>但处于进步的时代</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">后果一</div><div class="n-sub">敌人占地甚广<br>兵力不足，留空虚地带</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">后果二</div><div class="n-sub">战争长期<br>随之也是残酷</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">性质变了</div><div class="n-sub">由内线配合转为<br>外线单独作战；<br>由小规模转为大规模</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">位置变了</div><div class="n-sub">从战术范围跑出来<br>向战略敲门</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">六项方针</div><div class="n-sub">打法 / 配合 / 根据地<br>攻防 / 升级 / 指挥</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">目的</div><div class="n-sub">保存发展自己<br>消灭驱逐敌人</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的推法比结论更值得看：<b>它不从「游击战很重要」出发，而从「条件是什么」出发。</b>条件变了，结论就跟着变——这也是为什么文中要用两个反例（小国、苏联式强国）先把结论的适用范围框死。<b>凡是不把适用范围写出来的论断，都可以被一句「未必吧」推倒；而写清适用范围之后，反对者要驳倒它，就必须先驳倒那些条件本身。</b></p>
+    <p class="lead" style="margin-top:10px;">链条在中间分了一次岔：<b>「长期性」和「残酷性」直接推出了两个新问题——根据地的问题、向运动战发展的问题。</b>前者回答「怎么活下来」，后者回答「怎么长起来」。本篇之所以比一般的游击战条令厚重，就在于它没有停在「怎么打」，而把生存结构和成长路径一并算进了战略。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">第一章：为什么提起游击战争的战略问题</span><span class="part-scope">全篇的论证总纲</span></div>
+      <div class="part-body">
+        <p>第一章只做一件事：<b>把「战略还是战术」这个问题本身讲清楚</b>。开篇先承认前提——「抗日战争中，正规战争是主要的，游击战争是辅助的。这一点，我们已经正确地解决了。」紧接着转折：那么游击战争「就只有战术问题，为什么提起战略问题呢」。</p>
+        <p>回答分三层：<b>先排除</b>（小国、苏联式强国两种情形下都只有战术问题）；<b>再定位</b>（中国是大而弱 × 被小而强攻击 × 处于进步的时代，于是外线单独作战、大规模、战略攻防全套出现）；<b>最后定性质</b>——<span class="k">「于是中国抗日的游击战争，就从战术范围跑了出来向战略敲门，要求把游击战争的问题放在战略的观点上加以考察。」</span></p>
+        <p>章末还留了一句不起眼、却极重要的边界声明：游击战争的战略问题「密切地联系于整个抗日战争的战略问题」，但「游击战争又区别于正规战争，它本身有其特殊性」，「决不能照样用之于特殊情形的游击战争」。<span class="k">争地位，同时守住特殊性——不做一般战略的附庸，也不自封为另一套总战略。</span></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">第二、三章：先立一条基本函数，再列六项方针</span><span class="part-scope">「保存自己消灭敌人」→「六项是全部战略纲领」</span></div>
+      <div class="part-body">
+        <p>第二章篇幅极短，却给全篇装了地基：「一切军事行动的指导原则，都根据于一个基本的原则，就是：尽可能地保存自己的力量，消灭敌人的力量。」文中顺手解释了「勇敢牺牲」为什么与「保存自己」不矛盾——「部分的暂时的『不保存』（牺牲或支付），是为了全体的永久的保存所必需的」，称之为「相反相成」。</p>
+        <p>第三章在此基础上加出游击队的特有项——<b>发展自己</b>，然后把答案列成六条。值得注意的是措辞：不叫「六项任务」或「六个要点」，而叫「<b>全部抗日游击战争的战略纲领</b>」和「必要途径」。<span class="k">这六个字是要把六条锁成一个整体：任何一条单独拿出来执行，都会变形。</span></p>
+      </div>
+    </div>
+
+    <div class="sym-grid">
+      <div class="sym">
+        <div class="sym-head"><span class="sym-no">三项基本条件</span><span class="sym-tag">根据地凭什么算建立起来</span></div>
+        <div class="sym-text">一切游击战争的根据地，只有在建立了抗日的武装部队、战胜了敌人、发动了民众这三个基本的条件逐渐地具备之后，才能真正地建立起来。</div>
+        <div class="sym-note">次序不可颠倒：<b>先有武装 → 用武装战胜敌人 → 用战胜的事实发动民众</b>。文中把第一条定为「最基本一环」——「没有这个东西，或有了而无力量，一切问题都无从说起」</div>
+      </div>
+      <div class="sym blue">
+        <div class="sym-head"><span class="sym-no">建立根据地的前提</span><span class="sym-tag">先反掉流寇主义</span></div>
+        <div class="sym-text">历史上存在过许多流寇主义的农民战争，都没有成功。……因此，从游击战争的领导者们的头脑中驱除流寇主义，是确定建立根据地的方针的前提。</div>
+        <div class="sym-note">这一步是<b>思想斗争的排序问题</b>：不是先划地块、再解决认识，而是先把「要不要根据地」的答案固定在脑子里，才可能谈选址与建设</div>
+      </div>
+      <div class="sym gold">
+        <div class="sym-head"><span class="sym-no">两种发展病</span><span class="sym-tag">地方主义与单纯军事主义</span></div>
+        <div class="sym-text">一方面，须防止只顾地方利益因而妨碍集中的地方主义；另一方面，也须防止不顾地方利益的单纯军事主义。</div>
+        <div class="sym-note">一个从下往上看不见全局，一个从上往下看不见地方；<b>文中给二者开的方子也不是取中，而是「使主力的扩大和地方武装的繁殖，各得着适宜的位置」</b></div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">第四至九章：六项方针逐条展开</span><span class="part-scope">全篇的实体部分</span></div>
+      <div class="part-body">
+        <p>第四至九章是一一对应的展开：第四章讲第一项（同时是「最中心的问题」），第五章讲配合，第六章讲根据地（篇幅最长，下分五节），第七章讲游击战的战略防御与战略进攻，第八章讲向运动战发展，第九章讲指挥关系。<b>越往后越具体：从作战原则，一路落到「军区—军分区—县—区」的层级与「训令」与「命令」的区别。</b></p>
+        <p>第六章（建立根据地）里的五个小节，实际上是一套完整的选址与建设手册：<span class="k">几种根据地</span>（山地 / 平地 / 河湖港汊）→ <span class="k">游击区和根据地</span>（两种地区的转化条件）→ <span class="k">建立根据地的条件</span>（三个基本条件 + 地理与经济条件）→ <span class="k">根据地的巩固和发展</span>（「巩固地向前发展」）→ <span class="k">敌我之间的几种包围</span>（围棋的比喻）。</p>
+        <p>第七章的写法与本篇其余各章不同：它推演的是<b>敌人必然要来打</b>。「凡属敌人进攻游击战争越厉害之处，就证明那里的游击战争越有成绩，对于正规战争的配合也就越有作用」——把挨打重新定义为成绩的指标，这是全篇最反直觉、也最提气的一句。同时给出了「围魏救赵」式的反围攻解法。</p>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">六项方针与章次对应（按原文次序重排）</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">序</th><th>原文表述</th><th class="c2">对应章次</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">一</td><td>主动地、灵活地、有计划地执行防御战中的进攻战，持久战中的速决战和内线作战中的外线作战<br><span class="muted">另分四点：攻防关系；立于主动；灵活使用兵力；行动的计划性</span></td><td class="c2">第四章</td></tr>
+        <tr><td class="c1">二</td><td>和正规战争相配合<br><span class="muted">分战略的、战役的、战斗的三种</span></td><td class="c2">第五章</td></tr>
+        <tr><td class="c1">三</td><td>建立根据地<br><span class="muted">五节：几种根据地、游击区和根据地、建立的条件、巩固和发展、几种包围</span></td><td class="c2">第六章</td></tr>
+        <tr><td class="c1">四</td><td>战略防御和战略进攻<br><span class="muted">反围攻与乘敌取守势时的发展</span></td><td class="c2">第七章</td></tr>
+        <tr><td class="c1">五</td><td>向运动战发展<br><span class="muted">数量扩大与质量提高两个条件</span></td><td class="c2">第八章</td></tr>
+        <tr><td class="c1">六</td><td>正确的指挥关系<br><span class="muted">战略的集中指挥与战役战斗的分散指挥</span></td><td class="c2">第九章</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">游击战争和正规战争的三种配合（第五章）</h3>
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg green">战略的配合</div>
+          <div class="spec-seg gold">战役的配合</div>
+          <div class="spec-seg blue">战斗的配合</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>全战争层面的牵制</b>「在敌人后方所起的削弱敌人、钳制敌人、妨碍敌人运输的作用，和给予全国正规军和全国人民精神上的鼓励」——原文举东北为例：多打死一个敌兵、多消耗一个敌弹、多钳制一个敌兵使之不能入关南下，「就算对整个抗战增加了一分力量」</div>
+          <div class="spec-label"><b>一次会战的呼应</b>原文举忻口战役：雁门关南北的游击战争破坏同蒲铁路、平型关汽车路、阳方口汽车路；又举风陵渡失守后山西各地游击战对陕、豫沿黄防御战的配合。此层要求各游击区不「各干各的」，并「无线电通讯之普遍地设置于一切较大的游击部队」</div>
+          <div class="spec-label"><b>一个战场上的协同</b>限于靠近正规军的游击队或临时派出的游击队：依正规军首长指示担负钳制部分敌人、妨碍敌之运输、侦察敌情、充当向导等。「没有正规军首长的指示时，游击队也应自动地做这些事」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">三层配合的关系，是一句话：<b>上层讲「有没有用」，中层讲「配不配合得上」，下层讲「听谁指挥」。</b>文中特意点出最常见的失误——「如果各游击区或各游击队只是各干各的，不顾战役作战的配合，虽在总的战略作战上仍不失其配合作用，但由于没有战役作战的配合，也就减少了它们的战略配合的意义」。<span class="muted">（三列划分系按原文叙述次序所作重排，非原文图表。）</span></p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">根据地的三种地理条件（第六章第一节）</h3>
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg green">山地</div>
+          <div class="spec-seg gold">平地</div>
+          <div class="spec-seg blue">河湖港汊</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>「最能长期支持的场所」</b>长白山、五台山、太行山、泰山、燕山、茅山——「我们必须到一切处于敌后的山岳地带去发展游击战争，并建立起根据地来」。三档中条件最好，评价最直接</div>
+          <div class="spec-label"><b>「现在还没有证明」但必须做</b>河北平原、山东北部西北部平原「已经发展了广大的游击战争」，证明能打；但能否建<b>长期</b>根据地当时「还没有证明」。方针分两步：现时建临时根据地，将来准备小部队的、非固定的、季候性的根据地<span class="muted">（1940 年补注〔7〕：抗战经验证明平原可以建立长期乃至固定根据地）</span></div>
+          <div class="spec-label"><b>「仅次于山岳地带一等」</b>依据历史上海盗水寇的活动与红军时代洪湖游击战争坚持数年之久。原文点名江北洪泽湖、江南太湖与沿江沿海一切敌占区港汊地带，并直陈缺陷：「缺少了这一方面，无异供给敌人以水上交通的便利」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这份分档最见方法的地方，是<b>把「已经证明」和「还没证明」分开写</b>：山地是既成结论，平地明说证据不足、只给两步走的过渡方针，河湖港汊则是「客观可能性大、主观条件还不具备」。<b>三种条件，三种语气——能确定的就说确定，不能确定的就把不确定也写进去。</b>1940 年补加的那条注释，等于给这段推演补上了后来才拿到的那一半证据。</p>
+
+    <div class="quote">
+      总的说来，主要的方针有下列各项：（一）主动地、灵活地、有计划地执行防御战中的进攻战，持久战中的速决战和内线作战中的外线作战；（二）和正规战争相配合；（三）建立根据地；（四）战略防御和战略进攻；（五）向运动战发展；（六）正确的指挥关系。这六项，是全部抗日游击战争的战略纲领，是达到保存和发展自己，消灭和驱逐敌人，配合正规战争，争取最后胜利的必要途径。
+      <span class="src">第三章全文（1991 年版第 405—406 页）｜全篇的总纲。注意末句的四组动宾是并列排开的：保存发展自己、消灭驱逐敌人、配合正规战争、争取最后胜利——前两组是军队自身的得失，后两组是全局的得失，四项齐全才算「必要途径」</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>「战略还是战术」不是名分之争，是两次反证做出来的定位</h4>
+          <p>这篇最有方法论价值的部分，是第一章的推理次序。<b>它没有先论证游击战多重要，而是先把两种「假如」摆出来</b>：假如中国是小国，游击战只在正规军战役上起近距离的直接配合，「那就当然只有战术问题」；假如中国像苏联那样强大，敌人很快被赶出、或被占地区不广，「当然也只有战术问题」。把这两种情形排除之后，剩下的唯一条件组合——大而弱、被小而强攻击、却处于进步的时代——才推出那个结论：<b>「于是中国抗日的游击战争，就从战术范围跑了出来向战略敲门。」</b>这里用的其实就是控制变量：把对象放进别人的条件里，看结论是否还成立。<b>我们平时争论一件事「重不重要」，几乎都停在形容词上；而这篇给出的办法是：先写清它成立所需的条件，再用反例把条件框死。条件框得越紧，论断越难被一句「未必吧」推倒。</b></p>
+          <span class="mv">迁移：给任何一件事定权重之前，先问三句——它在什么条件下才有这个权重？换掉哪个条件，它会退回上一档？我列的反例是不是真的把它排除掉了？答案写不出来，说明「重要」还只是态度，不是判断。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「主动权不是任何天才家所固有的」——全篇最不像军事学、也最通用的一句</h4>
+          <p>第四章里有一段话，把「主动」从气质问题改写成了产物问题：「<b>主动权不是任何天才家所固有的，只是聪明的领导者从虚心研究和正确的估计客观情况，正确地处置军事政治行动所产生的东西。因此，是要有意识地去争取的东西，不是现成的东西。</b>」紧接着还补了两句极实用的：脱出被动的方法中，「在许多情况下，『走』是必须的」，「游击队的会走，正是其特点」；以及那句后来被反复引用的——「往往有这种情形，有利的情况和主动的恢复，产生于『再坚持一下』的努力之中」。<b>把这三句连起来读，会发现原文给的是一套完整的「被动—主动」操作：主动不是抢来的，是先算清敌我情况得来的；算清了也仍可能被动，此时先允许自己走；走之外还有一种情形，是再坚持一下。它同时否掉了两种常见的自欺——把主动当性格，以及把坚持当万能。</b></p>
+          <p>同章还有一个比喻值得单独记下：游击队的领导者用兵「好像渔人打网一样，要散得开，又要收得拢」——散开时要看清水的深浅、流的速度、有无障碍，收拢时要握住绳头、保持通讯并「保持相当主力在自己手中」。<b>「分散、集中和变换」三步，被一个打鱼的比喻讲得比条令还清楚。</b></p>
+          <span class="mv">迁移：遇到被动局面，先做三问——我的被动是因为算错了情况，还是因为遭遇了不可抗的压力？如果是前者，重估一次；如果是后者，允许自己「走」（换位置、换打法、换节奏）；只有在既算清了、又走不了的时候，才谈「再坚持一下」。把「坚持」当第一选项，是把自己交给了运气。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「应该集中的不集中」与「应该分散的不分散」：每一种错误都有两个名字</h4>
+          <p>第九章给指挥关系定的规矩，是全篇最可以直接搬进任何组织的一段：<b>「一方面反对绝对的集中主义，同时又反对绝对的分散主义，应该是战略的集中指挥和战役战斗的分散指挥。」</b>而最精彩的是它给错误起的名字——「应该集中的不集中，在上者叫做<b>失职</b>，在下者叫做<b>专擅</b>；应该分散的不分散，在上者叫做<b>包办</b>，在下者叫做<b>无自动性</b>。」<b>同一件错事，从上级看是一个名字，从下级看是另一个名字：这句写法本身就消解了「谁对谁错」的争执——责任在谁的位置上一目了然。</b>文中的处理方式也很干净：上级对下级的具体行动「可以而且应该作为『训令』提出，但决不应作为不可改变的『命令』」；越是在地区广大、上下距离远的地方，具体行动就越该加大独立自主的权限。</p>
+          <p>与之配套的，是全篇对三种内部偏差的并列批评：<b>流寇主义</b>（不要根据地）、<b>保守主义</b>（贪图安逸或高估敌人，只知巩固不敢发展）、以及<b>地方主义</b>与<b>单纯军事主义</b>这一对。这些不是历史标签，是三张诊断书：<b>只流动不沉淀、只守成不扩张、只顾自己那摊不顾全局</b>——今天任何一支团队、任何一个个人项目，犯的都不出这三类。</p>
+          <span class="mv">迁移：把你的项目清单翻一遍，找出可复用的「根据地」（流程、模板、客户关系、信任、素材库）。如果明天项目停下，什么东西会留在原地？一件也没有，就是流寇主义；有却从不向外扩展，就是保守主义。同时给自己定两条规矩：哪一类事必须上报（不报叫专擅），哪一类事不必等指令（不问自决不叫自动性，等指令才做才叫无自动性）。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">于是中国抗日的游击战争，就从战术范围跑了出来向战略敲门，要求把游击战争的问题放在战略的观点上加以考察。</div>
+        <div class="ctx">第一章末段｜全篇的题眼。「向战略敲门」是把抽象的地位之争写成了一个动作——不是被追认，是自己站起来敲。同一段还有一句常被单独引用的判断：这样又广大又持久的游击战争，「在整个人类的战争史中，都是颇为新鲜的事情」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们的敌人大概还在那里做元朝灭宋、清朝灭明、英占北美和印度、拉丁系国家占中南美等等的好梦。这等梦在今天的中国已经没有现实的价值，因为今天的中国比之上述历史多了一些东西，颇为新鲜的游击战争就是其中的一点。假如我们的敌人少估计了这一点，他们就一定要在这一点上面触一个很大的霉头。</div>
+        <div class="ctx">第一章｜列举的四个历史类比，正是「亡国论」最爱搬的证据；此处的用法是把它原样还给对方——同样的类比在二十世纪三十年代已经不成立，多出来的那一样东西就是游击战争。「触一个很大的霉头」是白话语感最强的一处（1938 年原刊本一系作「英占北美与东印度」，本文从 1991 年版）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">主动权不是任何天才家所固有的，只是聪明的领导者从虚心研究和正确的估计客观情况，正确地处置军事政治行动所产生的东西。因此，是要有意识地去争取的东西，不是现成的东西。……往往有这种情形，有利的情况和主动的恢复，产生于“再坚持一下”的努力之中。</div>
+        <div class="ctx">第四章「一切行动立于主动地位」一节｜前一句拆掉「主动＝天分」，后一句给出被动词条里唯一的例外情形。同一节还有「走是脱离被动恢复主动的主要的方法」与「游击队的会走，正是其特点」（引文以「……」略去中间两段，两部分同属该节，非连续文句）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">游击战争的指挥原则，一方面反对绝对的集中主义，同时又反对绝对的分散主义，应该是战略的集中指挥和战役战斗的分散指挥。……一句话，就是：战略统一下的独立自主的游击战争。</div>
+        <div class="ctx">第九章｜全篇最后一章的总纲。「战略统一下的独立自主」这九个字，把一九三七年以来「独立自主」与「集中统一」的争论，压缩成了一个可以逐层拆开的技术表述（引文中「……」略去中间数段举例）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">应该集中的不集中，在上者叫做失职，在下者叫做专擅，这是在任何上下级关系上特别是在军事关系上所不许可的。应该分散的不分散，在上者叫做包办，在下者叫做无自动性，这也是在任何上下级关系上特别是在游击战争的指挥关系上所不许可的。</div>
+        <div class="ctx">第九章末段｜全篇收束前的一段。同一件错事按位置各起一个名字，等于把责任归属直接写进了语言里——这一写法本身就值得单独摘出来</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字（人民出版社第二版，第二卷第 404—438 页），已与求是理论网所载 1991 年版全文、marxists.org 中文《毛泽东选集》本、中国理论网《毛泽东选集》第二卷电子本逐字核对。另附题解首句以备参照：「抗日战争初期，中国共产党内和党外都有许多人轻视游击战争的重大战略作用，而只把自己的希望寄托于正规战争，特别是国民党军队的作战。」——三处引文中的「……」为节引标记，均已注明所略内容所属段落。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《论持久战》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.05 ｜ 第二卷第九篇（起于 1991 年版第 439 页，紧接本篇之后）</span></div>
+        <p>本篇是分论，下一篇是总论。<b>先发表的反而是分论</b>——五月三十日《解放》第四十期刊出本篇，七月一日第四十三、四十四期合刊才刊出《论持久战》。两篇的接口在「长期性」上：游击战争之所以能升格为战略，前提是战争长期而残酷；而战争为什么必然长期，要到下一篇才被完整论证（敌强我弱、敌小我大、敌退步我进步、敌寡助我多助四组对比，以及三个阶段与犬牙交错的战争形态）。<b>读下一篇时值得带着一个问题：如果《论持久战》的总论先成立，本篇的分论还需不需要单独成立一次？</b></p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《战争和战略问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.11.06 ｜ 六届六中全会结论的一节，1991 年版第二卷第 537 页起</span></div>
+        <p>半年之后，毛泽东在六届六中全会上把这个命题带进了党的决议语境：「<b>游击战争是在全战争中占着一个重要的战略地位的。没有游击战争，忽视游击队和游击军的建设，忽视游击战的研究和指导，也将不能战胜日本。</b>」<b>一篇刊物上的论证，至此变成了组织内部的结论——而推动这件事的，正是本篇开头所针对的那种主张在会议上的失败。</b>如果还想往前追，本卷第十三篇《中国革命战争的战略问题》提供了这一整套军事方法论更早、更完整的版本：那里的关键词是「战略防御」「战略退却」与「不打无准备之仗」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>反证定位题</b>：挑一件你正在做、并且认为「很重要」的事（项目、技能、一个长期投入）。照第一章的办法做两次反证——如果在「不需要长期消耗」的条件下（一次性决出胜负），它还重要吗？如果在「一次就能解决问题」的条件下，它还成立吗？两次反证都排除不掉，说明它有战略位置；被排除掉了，它其实只是战术手段，得换个位置安放。</div>
+      <div class="q">二 · <b>基本函数题</b>：写下你当下阶段的「保存什么、消灭（或解决）什么、发展什么」三栏。然后回看你最近三个动作，逐个对照：它们分别指向三栏中的哪一栏？<b>如果一个都指不上，那不是灵活，是妄动。</b>（第四章的原话：「为使灵活不变为妄动，慎重地考虑情况是必要的。」）</div>
+      <div class="q">三 · <b>根据地题</b>：把手上正在做的事列出来，找出哪些留下了可复用的资产（流程、模板、关系、素材、信任、数据）。再问两句：这些资产有没有在「向前发展」，还是只在原地守着？如果明天全部停下，什么会留在原地？——回答里若出现「什么也不剩」，就是需要修的第一件事。</div>
+      <div class="q">四 · <b>双轨题</b>：挑一件你管的长期事务，画两栏——「必须集中（上报、请示、统一口径）」与「必须下放（自行决定、就地处理）」。每栏各写一句违规的名称：该集中的没集中叫失职或专擅，该分散的没分散叫包办或无自动性。写完检查：界限清不清楚？还是你的做法让下属只能二选一——事事请示，或者干脆不问？</div>
+      <div class="hint"><b>三问卡</b>：① 我判定一件事「重要」，是靠条件推算，还是靠形容词？② 我的「灵活」是否始终指向同一个目标函数？③ 我做的事沉淀下来了什么，还是只剩下一串动作？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第八篇</div>
+    <div>依据人民出版社 1991 年版第二卷第 404—438 页 ｜ 2026.09.22</div>
+  </div>
+
+</div>
+</body>
+</html>

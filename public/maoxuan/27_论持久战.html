@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>27 · 论持久战 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-frame.t3 .spec-band,.spec-frame.t3 .spec-labels{grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;min-width:0;overflow-wrap:anywhere;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;min-width:0;}
+@media(max-width:620px){
+  .part-scope{white-space:normal;margin-left:0;width:100%;line-height:1.6;}
+  .part-title{font-size:16.5px;}
+}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:104px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:70px;white-space:normal;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿七</div>
+    <h1>论持久战</h1>
+    <div class="sub2">二十一个问题 · 约五万字 · 三个阶段 · 注释四十二条</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第九篇 · <b>一九三八年五月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《论持久战》。1991 年版《毛泽东选集》第二卷第九篇，前接《抗日游击战争的战略问题》，后接《中国共产党在民族战争中的地位》。<b>全篇二十一个问题、一百二十个编号段落</b>，前半（一至九题）讲「为什么」，后半（十至二十一题）讲「怎样做」——原文第五十九段自己标出了这条分界线：「以上说的……大体上都是说的『是什么』和『不是什么』。以下，将转到研究『怎样做』和『不怎样做』的问题上。」</td></tr>
+      <tr><th>写作时间</th><td>一九三八年五月。初稿写成于五月上旬——警卫员回忆连续写作八九天，其间两天两夜未睡、累病一次；<b>五月二十六日至六月三日，毛泽东在延安抗日战争研究会作《论持久战》的长篇讲演</b>（此为 1991 年版题解原文所记）。篇题下只署「一九三八年五月」</td></tr>
+      <tr><th>最初发表</th><td>一九三八年七月一日，延安《解放》周刊<b>第四十三、四十四期合刊</b>（「抗战一周年中国共产党十七周年纪念专刊」）全文刊载，共四十一页。原刊题名为<b>《论持久战——论抗日战争为什么是持久战与最后胜利为什么是中国的及怎样进行持久战与怎样争取最后的胜利》</b>。同月延安解放社出单行本（抗日战争丛书第二种，扉页毛泽东题词「坚持抗战，坚持统一战线，坚持持久战，最后胜利必然是中国的」）；七月二十五日汉口新华日报馆出单行本（新群丛书第十五种）。据中国档案报所载，此次收入《毛泽东选集》时留有毛泽东审定的清样稿，现藏中央档案馆</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1991 年版）<b>第 439—518 页</b>（页序据 1991 年版第二卷目录核对）；一九五二年收入《毛泽东选集》第二卷第一版</td></tr>
+      <tr><th>篇幅</th><td>正文二十一个问题、一百二十段，<b>约五万字</b>；注释四十二条。其中注释多为考证与背景（台儿庄、徐州战役、「准决战」社评出处、阿比西尼亚、戊戌维新、《孙子》、城濮之战、淝水之战、拿破仑征俄、宋襄公、《西游记》五行山等），另有数条明确标注是事后的追记</td></tr>
+      <tr><th>历史坐标</th><td>抗战十个月。正面战场：淞沪、南京、太原之后退至徐州，<b>一九三八年五月十九日徐州失陷，武汉告急</b>；台儿庄胜利（三月底至四月上旬）之后，《大公报》四月二十五、二十六日社评鼓吹徐州应为「准决战」，文中点名称之为「政治上军事上的近视眼」。党内：王明自武汉回后方、以《三月政治局会议的总结》在《群众》上主张「以运动战为主」，与延安的方针正面对冲（详见上一卷笔记第二十六篇）。<b>本篇是这一切的总答案：既驳党外的「亡国论」，也驳党内和党外的「速胜论」</b></td></tr>
+      <tr><th>文本层次</th><td>本篇有一层不常被注意到的事实：<b>正文与注释是两个时间写的</b>。注〔3〕说汪精卫「准备投降日本，<b>后来果然投降了</b>」；注〔15〕统计「自一九三七年到一九四〇年，美国每年输入日本的物资占日本全部进口额的三分之一以上」；注〔18〕说毛泽东预言的「相持阶段中中国方面可能的向上变化」，「在中国共产党领导下的抗日根据地<b>是完全实现了</b>，在国民党统治区……反而向下变化了」。<b>这些句子都不可能出自一九三八年——它们是收入《毛泽东选集》时（付印于一九五二年）统一撰写的注释。</b>正文是战时的判断，注释是战后结的账；同页并存，需要读者自己分清哪句是当时说的</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 窑洞里的八九天：文中没有的东西，恰恰是这篇文章最出名的一部分。</b>一九三八年的凤凰山下，一间石窑洞：一张开裂的木方桌、一把掉漆的靠椅、一只熏黑的木炭火盆。警卫员翟作军、贺清华的回忆记下了写作现场——<b>主席两天两夜没睡，实在困了就打盆冷水洗脸、到院子里转一圈、靠在椅子上闭一会儿眼；连着五六天睡不好，两眼布满血丝；饭送来一次不动，热了再送，还是不动，天快亮时饭菜一动未动</b>。第八九天的一个夜里，翟作军闻到破布棉花的焦糊味，进去一看，毛泽东正弯腰脱棉鞋，<b>两只鞋还在微微冒烟——被火盆烧穿了几个洞</b>。他换了单鞋，说「怎么搞的？我一点也没有觉得就烧着了」，然后又写。过后累病一次，头痛、吃不下饭。约到第八九天的半夜，他把一卷用报纸卷好的稿子交给警卫员，嘱其过延河送到清凉山解放社；两三天后校样送来，他又反复修改；样书出来，他让分送中央几位首长征求意见。<b>「七天七夜不睡觉，就是铁人也要熬倒了」——这句回忆录里的话，与本篇正文的冷静推演并置，才能解释它为什么写得这么全、又这么定。</b></li>
+        <li><b>戏剧性二 · 讲演的时点，是「最乐观的泡沫」与「最坏的军事形势」的交点。</b>台儿庄取胜之后，《大公报》接连发社评，把徐州战役说成「准决战」：「这一战，就是敌人的最后挣扎」「我们胜了，日阀就在精神上失了立场，只有静候末日审判」。<b>这两天的社评被毛泽东原文写进了讲演（第四段），并配了一条注释，说明它的动机是「希望用几个台儿庄一类的胜仗就能打败日本，免得在持久战中动员人民力量，危及自己阶级的安全」。</b>同一段里他点名的还有两类人：一类是党内轻视游击战、认为「基本的是游击战，但不放松有利条件下的运动战」是「机械的」观点的人（注〔4〕明确说「以上这些意见，都是共产党内的」）；一类是把抗战前途寄托于外国迅速援助的人（注〔5〕明确说「这是蒋介石等人的意见」）。<b>一篇讲演里，敌人、友党、自己人，各被点到名——这在延安的讲台上是不常见的直白。</b>而讲演进行中的第六天之后，武汉会战已经开始；讲演结束于六月三日，徐州已失守半个月，广州、武汉的沦陷还要等四个多月。</li>
+        <li><b>戏剧性三 · 这是一场用同样的论证结构打两边的仗。</b>亡国论与速胜论，在文中被归到同一个病因上——「他们看问题的方法都是主观的和片面的，一句话，非科学的」；第七段说得更细：「或者毫无根据地纯主观地说一顿；或者只根据问题的一侧面、一时候的表现，也同样主观地把它夸大起来，当作全体看。」<b>把两个相反的结论诊断为同一种病，是全文最省力也最有力的一步：不必分别驳倒两批人，只须把「片面」这两个字还给他们。</b>于是文章的结构也就定了：先把敌我双方的全部基本特点摊开（第九至十二段），再让结论从这些特点的相互关系里长出来，而不是从某一条最强的事实里长出来。</li>
+        <li><b>戏剧性四 · 发表之后，先被承认的地方不是延安。</b>据多家党史与回忆材料，白崇禧读后「深为赞赏，认为这是克敌制胜的最高战略方针」，向蒋介石推荐；在蒋的认可下，白把《论持久战》的精神归纳成两句话——<b>「积小胜为大胜，以空间换时间」</b>，并以国民党军事委员会名义通令全国，作为抗战的战略指导思想（当时白崇禧任军事委员会军训部长、并曾代理第五战区司令长官）。另有材料记时任军事委员会政治部部长陈诚在该书书眉上留下许多批注。<b>一本七月初在延安刊出的讲演稿，七八月间已经以「两句话」的形式进入了全国抗战的官方语汇。</b></li>
+        <li><b>戏剧性五 · 它还是从上海「孤岛」偷运出去的。</b>为了让外界了解中国抗战，党组织把英译任务交给地下党员杨刚（时任《大公报》驻美记者，一九〇五年生，时年二十余岁）。她在上海霞飞路美国女作家项美丽（Emily Hahn，《纽约客》撰稿人）的寓所里译稿，与项美丽的伴侣、诗人出版家邵洵美一起字斟句酌；译文自一九三八年十一月一日起在英文杂志 Candid Comment（《自由谭》英文版）上分四次连载至一九三九年二月九日，<b>译者署名 Shih Ming（佚名）</b>。稍早，上海租界的《每日译报》已于一九三八年八月二十三日起连载全文，九月四日出单行本。邵洵美又受托秘密排印英译单行本五百册，三十二开，白底红字封面，一九三九年一月二十日毛泽东在毛边纸公文笺上用毛笔写了千余字的序《抗战与外援的关系》，其中说：「上海的朋友在将我的《论持久战》翻成英文本，我听了当然是高兴的，因为伟大的中国抗战，不但是中国的事，东方的事，也是世界的事……」<b>书印成后不能公开发行：一部分由地下党渠道送出，另一部分由邵洵美与王永禄在清晨深夜开车到上海西区外国人聚居的僻静马路上，一本一本塞进公寓信箱。</b>（此外，据学者统计，抗战时期的《论持久战》英译稿至少有四种：杨刚译本、在香港的爱泼斯坦等人译本、许孟雄译本，以及一九三八年十月刊登于《译丛周刊》的译本。）</li>
+        <li><b>戏剧性六 · 事后的账，写在正文之外的注释里。</b>一九三八年十月二十一日、二十五日，广州、武汉相继失守——<b>正面战场的战略防御阶段基本结束，抗战进入相持阶段，与本篇第三阶段的划分完全对上</b>：文中说「第一阶段，现在还未完结」，并预判「敌之企图是攻占广州、武汉、兰州三点」。抗战七年之后的一九四五年八月，日本投降。而当时围观这篇文章的人，也就是在这一连串结果中一步步承认了它的预言力。<b>本篇题解只一句：「这是毛泽东一九三八年五月二十六日至六月三日在延安抗日战争研究会的讲演。」——不评价，只记录。文章的分量，交给后来那七年去说。</b></li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1936.07.16</div><div class="tl-body">与斯诺谈话。本篇第六段把这次谈话「抄录几段」以备用——<b>当时就已提出：中国取胜需三个条件（中国抗日统一战线完成、国际抗日统一战线完成、日本国内人民与殖民地人民革命运动兴起）；战略方针「应该是使用我们的主力在很长的变动不定的战线上作战」</b><span class="note">（文中自注：当时是西安事变前五个月、卢沟桥事变前十二个月）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.07.07</div><div class="tl-body">卢沟桥事变，全国性抗战开始</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.25</div><div class="tl-body">中共中央《关于目前形势与党的任务的决定》。本篇第七段全文引其数句为据，其中两句后来被反复引用：「争取抗战胜利的中心关键，在使已经发动的抗战发展为全面的全民族的抗战」「应该看到这一抗战是艰苦的持久战」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.02.27—03.01</div><div class="tl-body">三月政治局会议。毛泽东发言集中讲军事问题，指出「中国抗战最后是必然胜利的，但如何取得最后胜利是没有解答的」<span class="note">（党史和文献研究院材料称此发言「实际上就是不久后发表的《论持久战》的初步论述」）</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.03.11</div><div class="tl-body">王明以个人署名发表《三月政治局会议的总结》，主张「普遍地实行以运动战为主、配合以阵地战、辅之以游击战的战略方针」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.03下旬—04上旬</div><div class="tl-body">台儿庄会战取胜（中国军队击败日军第五、第十两个精锐师团）</div></div>
+      <div class="tl-item"><div class="tl-date">1938.04.25—26</div><div class="tl-body">《大公报》社评提出徐州战役应为「准决战」，称「这一战，就是敌人的最后挣扎」<span class="note">（本篇第四段点名引述，注〔8〕注明出处并判为侥幸心理）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.05上旬</div><div class="tl-body">初稿写成：连续八九天，棉鞋被火盆烧穿，其间累病一次</div></div>
+      <div class="tl-item"><div class="tl-date">1938.05.19</div><div class="tl-body">徐州失陷，武汉告急<span class="note">（本篇第三段原文：「当此徐州失守武汉紧张的时候，给这种亡国论痛驳一驳，我想不是无益的」）</span></div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.05.26—06.03</div><div class="tl-body"><b>在延安抗日战争研究会作《论持久战》讲演</b>（1991 年版题解文字）</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.07.01</div><div class="tl-body"><b>《解放》周刊第四十三、四十四期合刊全文刊载，共四十一页</b>；同月延安解放社出单行本，七月二十五日汉口新华日报馆出单行本</div></div>
+      <div class="tl-item"><div class="tl-date">1938.08.23</div><div class="tl-body">上海租界《每日译报》起连载全文，九月四日出单行本</div></div>
+      <div class="tl-item green"><div class="tl-date">1938.10.21 / 10.25</div><div class="tl-body">广州、武汉相继失守，抗战进入相持阶段<span class="note">（与文中「三个阶段」的划分及「第一阶段，现在还未完结」的判语完全对上）</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1938.11.01—1939.02.09</div><div class="tl-body">杨刚译英文本在 Candid Comment 上分四次连载完毕（署名 Shih Ming），英译单行本秘密印行五百册</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.01.20</div><div class="tl-body">毛泽东为英译单行本作序《抗战与外援的关系》：「伟大的中国抗战，不但是中国的事，东方的事，也是世界的事……」</div></div>
+      <div class="tl-item"><div class="tl-date">1945.08</div><div class="tl-body">日本投降。抗战全过程证明三阶段判断与「敌寡助我多助」的趋势判断成立</div></div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">事实与引语依据：本篇 1991 年版正文及注释、人民网党史频道《毛泽东夜以继日写作鸿篇巨著〈论持久战〉》（警卫员翟作军回忆）、《学习时报》《党领导中国抗战的纲领性文献》（人民网 2021.12.31，记讲演日期、发表刊物期号与四十一页、单行本）、中国档案报《1938 年，毛泽东〈论持久战〉》（记二十一个问题分两部分、收入选集第一版第二卷）、中国人民抗日战争纪念馆与澎湃政务号《多版本〈论持久战〉》（记解放社本、汉口新华日报馆本、上海〈每日译报〉连载）、光明网《中华读书报》《〈论持久战〉英译本的由来》与中国新闻网、京报网相关报道（记杨刚、邵洵美、项美丽、Candid Comment 连载与五百册单行本）、北京日报客户端《警卫员回忆：「主席当时真是拼了命了」》（记白崇禧「积小胜为大胜，以空间换时间」经蒋介石认可后由军委会通令全国）。白崇禧当时职务各材料表述不一，此处只记「军训部长、曾代理第五战区司令长官」并注明材料来源口径。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      中日战争的全部根据，在于交战双方各有四条互相反对的特点：<span class="q">日本的军力、经济力和政治组织力是强的</span>，但它<span class="q">小</span>、其战争是<span class="q">退步的野蛮的</span>、国际上是<span class="q">寡助</span>的；中国的军力、经济力和政治组织力是弱的，但它是<span class="q">大国</span>、处于<span class="q">进步的时代</span>、战争是<span class="q">正义的</span>因而<span class="q">多助</span>。<b>强弱的对比规定中国不能速胜；另外三组对比规定日本不能横行到底。</b>于是——「中国会亡吗？答复：不会亡，最后胜利是中国的。中国能够速胜吗？答复：不能速胜，抗日战争是持久战。」
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 结论从四组对比的相互关系里长出来</h4>
+        <p>文中第七段先把「片面」定为病根，第十至十二段则把双方全部基本特点摊开，然后才在第三十段给出方法声明：「<b>单说敌人是帝国主义的强国，我们是半殖民地半封建的弱国，就有陷入亡国论的危险。因为单纯地以弱敌强，无论在理论上，在实际上，都不能产生持久的结果。</b>」<b>「大并小、小并大的事都是常有的」，「进步的国家或事物，如果力量不强，常有被大而退步的国家或事物所灭亡者」，「多助寡助是重要因素，但是附随因素」</b>——四条特点中任何单独一条，都推不出结论；只有四条同时在场，持久战才是唯一解。<span class="card-tag">方法</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 三个阶段里，最不体面的那段才是枢纽</h4>
+        <p>持久战被具体化为三个阶段：<b>敌之战略进攻、我之战略防御</b> → <b>敌之战略保守、我之准备反攻</b> → <b>我之战略反攻、敌之战略退却</b>。第二阶段（相持）要熬，「这将是中国很痛苦的时期，经济困难和汉奸捣乱将是两个很大的问题」。而全文最有分量的一句判断正落在这段上：「中国将变为独立国，还是沦为殖民地，<b>不决定于第一阶段大城市之是否丧失，而决定于第二阶段全民族努力的程度</b>。」<span class="card-tag">时间结构</span></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 战略是持久，战役战斗却要速决</h4>
+        <p>方针只有一句：「在第一和第二阶段即敌之进攻和保守阶段中，应该是<b>战略防御中的战役和战斗的进攻战，战略持久中的战役和战斗的速决战，战略内线中的战役和战斗的外线作战</b>」——简称「外线的速决的进攻战」，也就是运动战。为此要集中优势兵力、包围迂回、执行有利决战、避免不利决战、根本避免赌国家命运的战略决战；而一切的前提是第七十五段那句：「<b>战争的伟力之最深厚的根源，存在于民众之中。</b>」<span class="card-tag">打法</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node blue"><div class="n-label">四组对比</div><div class="n-sub">敌强我弱｜敌小我大<br>敌退步我进步｜敌寡助我多助</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">两个不同的结论</div><div class="n-sub">强弱 → 我不能速胜<br>其余三项 → 敌不能到底</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">结果</div><div class="n-sub">战争必是持久战<br>最后胜利属于中国</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">过程</div><div class="n-sub">防御 → 相持 → 反攻<br>犬牙交错的战争</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">枢纽</div><div class="n-sub">第二阶段全民族努力的程度<br>决定中国沦为殖民地还是独立国</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">方针</div><div class="n-sub">战略持久 / 战役速决<br>外线的速决的进攻战</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">根基</div><div class="n-sub">政治动员 · 官兵一致 · 军民一致<br>兵民是胜利之本</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链最值得学的是它<b>在中间「分岔」了一次</b>：同一组特点，前一半（强弱）推出「必须持久」，后一半（大小、进退步、多寡助）推出「必然胜利」。<b>两个结论各由一个不同的对比子集负责，因此彼此不能互相推翻——速胜论者只承认后一半，亡国论者只承认前一半，各自拿半个事实去否定整个结论。</b>把结论拆成「由哪些条件负责」，比给结论加形容词要牢靠得多。</p>
+    <p class="lead" style="margin-top:10px;">链条的第二处关键，是它在时间轴上分了三段，并<b>把成败的判断权从「开局」移交给了「中段」</b>。第一阶段的损失（土地、人口、经济力量的减缩）会被当成妥协论的根据——文中据此预先作了一次心理准备：「这一点，将被人利用作为亡国论和妥协论的根据。然而必须看到第二种变化，即向上的变化。」<b>对一件事的长期判断，往往就在这种「向下的量」与「向上的质」同时发生时被误读。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">第一至二题：先立问题，再摊开全部基本特点</span><span class="part-scope">第一至十二段</span></div>
+      <div class="part-body">
+        <p>开篇不是论点，而是提问：「为什么是持久战？怎样进行持久战？……为什么会有最后胜利？怎样争取最后胜利？这些问题是……大多数人至今没有解决的。」接着把流行答案「卢沟桥事变以来，四万万人一齐努力，最后胜利是中国的」评为「这个公式是对的，但有加以充实的必要」——<b>全文的姿态由此定下：不与口号争，只替口号补内容。</b></p>
+        <p>第六、七两段是两处「备案」：一是抄录一九三六年七月与斯诺的谈话（此前的判断已含三条件、运动战为主、农民中组织游击队等），二是引用一九三七年八月二十五日中共中央决定（已含「艰苦的持久战」）。<b>把这两件旧文献排在论证之前，用意是：这不是一次临时的表态，而是一条已经说过两年的思路的完整化。</b></p>
+        <p>第九至十二段是全文的事实底座：日本四条（强、退步野蛮、人力物力不足、失道寡助）、中国四条（弱、进步正义、大国、多助）。第十二段的结句是：「<span class="k">这些特点是事实上存在的，不是虚造骗人的；是战争的全部基本要素，不是残缺不全的片段；是贯彻于双方一切大小问题和一切作战阶段之中的，不是可有可无的。</span>」——<b>三组「是……不是……」的对照，句句都在防备对方的裁剪。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">第三至五题：把两个相反的结论诊断为同一种病</span><span class="part-scope">第十三至二十九段</span></div>
+      <div class="part-body">
+        <p>驳亡国论一段用了最讲究的次序：<b>先承认对手的证据有力量</b>——「他们可以搬出元朝灭宋、清朝灭明的历史证据」「又可以搬出英灭印度的事实」；再指出只驳「强弱」不够用；最后把答案落在「时代的特点」上：日本已处于退步时代，中国已处于历史上进步的时代（有资本主义、有无产阶级、有共产党、有政治上进步的军队、有十七年革命经验）。<b>并顺手举出阿比西尼亚灭亡的四条原因——小国、不进步、不能等候国际援助、领导有错误——用它的反面证明「中国不同」在哪里。</b></p>
+        <p>第四题转去答复爱国志士的两个忧虑：<b>妥协问题</b>（结论：妥协的危机存在但能够克服，日本、中国、国际三方的因素都反对妥协）与<b>政治进步问题</b>（结论：政治越改进，抗战越能坚持；「革命战争是一种抗毒素，它不但将排除敌人的毒焰，也将清洗自己的污浊」）。这一节里有一句常被忽略的话：<span class="k">「把旧日本化为新日本，把旧中国化为新中国」</span>——战争被当成了改造两国的过程，而不只是胜负问题。</p>
+        <p>第五题收束驳论：亡国论的病是「把强弱的对比夸大」，速胜论的病是「没有勇气承认敌强我弱这件事实」；两端同为「主观性和片面性作怪」。<b>文中对两边的态度有明显的等差</b>：「我们的火力，应该主要地向着亡国论和妥协论方面，而以次要的火力，反对空谈主义的速胜论。」<b>——连反对的力度都按危害排序，这本身就是一种判断力的示范。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">第六至九题：持久战的时间结构</span><span class="part-scope">第三十至五十八段</span></div>
+      <div class="part-body">
+        <p><b>为什么是持久战</b>：先排除「单因素推演」，再指出敌我强弱的相对性——敌强已被不利因素减杀，我弱已被有利因素补充，故敌我各只限于「一定阶段内一定程度上的胜或败」，于是形成持久战局面；而情况继续变化，「到了新的一定阶段时，就将发生强弱程度上和优劣形势上的大变化」。</p>
+        <p><b>三个阶段</b>是全篇最有名的部分。第一阶段的判语具体到数字：「敌之企图是攻占广州、武汉、兰州三点……敌欲达此目的，至少出五十个师团，约一百五十万兵员，时间一年半至两年，用费将在一百万万日元以上。」第二阶段是相持，也是转折：「那时，整个敌人占领地将分为三种地区：第一种是敌人的根据地，第二种是游击战争的根据地，第三种是双方争夺的游击区。」第三阶段是反攻，<span class="k">「直至打到鸭绿江边，才算结束了这个战争」</span>。</p>
+        <p><b>犬牙交错</b>一节把战争的形态画了出来：内线与外线、有后方与无后方、包围与反包围、大块与小块。其中「包围和反包围」用了围棋的词——敌之据点与我之游击根据地「好似做眼」，并说世界性的包围里，「我之包围好似如来佛的手掌，它将化成一座横亘宇宙的五行山，把这几个新式孙悟空——法西斯侵略主义者，最后压倒在山底下」。<b>结论是那句总括：「长期而又广大的抗日战争，是军事、政治、经济、文化各方面犬牙交错的战争，这是战争史上的奇观，中华民族的壮举，惊天动地的伟业。」</b></p>
+        <p><b>为永久和平而战</b>两段把中日战争放进世界范围：意大利—阿比西尼亚、日本—中国、德国—西班牙，「参加战争的这些国家共有差不多六万万人口，几乎占了全世界总人口的三分之一」，战争的特点是「无间断和接近永久和平」——即：这一战之后不会再有战争。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丁</span><span class="part-title">第十至二十题：怎样做</span><span class="part-scope">第五十九至一百一十八段</span></div>
+      <div class="part-body">
+        <p>第五十九段是全篇的换挡点，并预告了后面十二个题目：能动性在战争中、战争和政治、抗战的政治动员、战争的目的、防御中的进攻持久中的速决内线中的外线、主动性灵活性计划性、运动战游击战阵地战、歼灭战消耗战、乘敌之隙的可能性、抗日战争的决战问题、兵民是胜利之本。</p>
+        <p>这一半的技术含量最高，几处可直接取用的操作原则：<b>「自觉的能动性」</b>（思想是主观的东西，做或行动是主观见之于客观的东西）；<b>「政治是不流血的战争，战争是流血的政治」</b>；<b>政治动员四问</b>（讲目的、讲纲领、用什么方式、经常地做）；<b>战争的目的</b>就是「保存自己，消灭敌人」，「进攻，是消灭敌人的主要手段，但防御也是不能废的」；<b>主动性的定义</b>被写成了可操作的一句：「这里说的主动性，说的是军队行动的自由权……行动自由是军队的命脉，失了这种自由，军队就接近于被打败或被消灭。」；<b>三种作战形式的分配</b>（运动战为主、游击战为辅、阵地战辅助，且游击战在第二阶段升为主要形式）；<b>歼灭战与消耗战的关系</b>（「战役的歼灭战是达到战略的消耗战之目的的手段」）。</p>
+        <p>两处最能看出「不打折扣」的地方：<b>一是「乘敌之隙」一节</b>，逐一列出日军十个月内犯的五个大错（逐渐增加兵力、没有主攻方向、没有战略协同、失去战略时机、包围多歼灭少），随后立刻加一句约束：「<span class="k">我之计划宁可放在敌人少犯错误的假定上，才是可靠的做法。</span>」<b>二是「决战问题」</b>，把决战分成三类处理（有把握的坚决打、无把握的避免、赌国家命运的决战根本避免），并预先答掉了「不抵抗」的指责。</p>
+        <p>最后一节<b>兵民是胜利之本</b>给出三条政治工作原则：官兵一致、军民一致、瓦解敌军；并点出一切方法背后的东西——「<span class="k">我总告诉他们是根本态度（或根本宗旨）问题，这态度就是尊重士兵和尊重人民</span>」。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">戊</span><span class="part-title">第二十一题：结论只有一段，且大半是引文</span><span class="part-scope">第一百一十九至一百二十段</span></div>
+      <div class="part-body">
+        <p>结论部分几乎不写新话：它把第六段抄录的斯诺谈话、第七段引用的中央决定，原封不动地再抄一遍，然后给出判断：「<b>亡国论者看敌人如神物，看自己如草芥，速胜论者看敌人如草芥，看自己如神物，这些都是错误的。我们的意见相反：抗日战争是持久战，最后胜利是中国的——这就是我们的结论。</b>」</p>
+        <p>最末一段只留一句交代：「我所说的，只是十个月经验中的一般的东西，也算一个总结吧……希望诸位研究讨论，给以指正和补充。」<b>一篇五万字的讲演，以请求指正收尾。</b></p>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">敌我四组对比及其各自「负责」的结论</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">敌强我弱</div>
+          <div class="spec-seg gold">敌小我大</div>
+          <div class="spec-seg blue">退步对进步</div>
+          <div class="spec-seg green">寡助对多助</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>推出「不能速胜」</b>「日本是一个强的帝国主义国家，它的军力、经济力和政治组织力在东方是一等的」；中国「依然是一个弱国……在军力、经济力和政治组织力各方面都显得不如敌人」——这一条只规定战争不能速决，规定不了谁胜谁负</div>
+          <div class="spec-label"><b>推出「不能横行到底」</b>日本「国度比较地小，其人力、军力、财力、物力均感缺乏，经不起长期的战争」；中国「地大、物博、人多、兵多，能够支持长期的战争」——原文特意提醒：单是大小也还不够，因为「大并小、小并大的事都是常有的」</div>
+          <div class="spec-label"><b>推出「时代不同」</b>日本「它已处于退步时代，不但和英灭印度时期英国还处于资本主义的进步时代不相同」；中国「已经有了资本主义，有了资产阶级和无产阶级……有了共产党，有了政治上进步的军队」——这是专为驳元灭宋、清灭明、英灭印度三条历史类比而设的一栏</div>
+          <div class="spec-label"><b>推出「不是孤立的战争」</b>日本「不能不遇到一个超过其国际援助力量的国际反对力量」，是「失道寡助的规律」；中国则「同世界多数国家和多数人民利害相关」，「苏联的存在，更是今天国际政治上十分重要的因素」——原文把它列为「附随因素」，随前三条而定其作用大小</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">四栏之中，只有第一栏是「减法」，其余三栏都是「加法」。<b>亡国论者只算第一栏，速胜论者只算后三栏——而原文的答案是：四栏必须同时算，算完以后，结论既不是「亡」，也不是「速胜」，而是「持久」。</b>值得注意的是它给多助寡助的定位：重要，但「附随」——这是把外部条件放在被解释项的位置，而不是解释项的位置。</p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">三个阶段及其时间判语</h3>
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg red">战略防御</div>
+          <div class="spec-seg gold">战略相持</div>
+          <div class="spec-seg green">战略反攻</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>第一阶段｜敌之战略进攻，我之战略防御</b>「现在还未完结」敌之企图为广州、武汉、兰州三点；我之主要战争形式是运动战，游击战与阵地战辅助。此阶段中国「虽有颇大的损失，但是同时却有颇大的进步」，后者是第二阶段继续抗战的主要基础<span class="muted">（史实：1938.10.21 广州、10.25 武汉失守，此阶段基本结束）</span></div>
+          <div class="spec-label"><b>第二阶段｜敌之战略保守，我之准备反攻</b>「转变的枢纽」敌转保守占领地、组伪政府；我以游击战为主。敌方几十个师团陷在中国泥潭抽不出去。原文判语：这个阶段「也将是最困难的时期」，用一句话把成败交接给了它——「中国将变为独立国，还是沦为殖民地，不决定于第一阶段大城市之是否丧失，而决定于第二阶段全民族努力的程度」</div>
+          <div class="spec-label"><b>第三阶段｜我之战略反攻，敌之战略退却</b>「直至打到鸭绿江边」收复失地主要依靠前阶段准备的力量，同时依靠国际力量与敌国内部变化；战争形式回到运动战为主，阵地战提到重要地位（「第三阶段的阵地攻击……将变成颇为重要的」）；反攻不会是「全国整齐划一的姿态」，而带地域性、此起彼落</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">三阶段读法的关键在<b>前后两段都在「打」，中段在「熬」</b>——而原文把政治判断的分量全部押在中段：第一阶段丢了多少城市，不构成失败；第三阶段能收多少失地，取决于中段做了什么。<span class="muted">（三栏划分与判语均按原文第三十五至四十五段叙述次序整理，非原文图表；时间史实为笔者据公开史实补注，已标明。）</span></p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">二十一个问题分两部分（按原文次序重排）</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">部</th><th>题次</th><th class="c2">共同的问题</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">前九题</td><td>问题的提起 · 问题的根据 · 驳亡国论 · 妥协还是抗战？腐败还是进步？ · 亡国论是不对的，速胜论也是不对的 · 为什么是持久战？ · 持久战的三个阶段 · 犬牙交错的战争 · 为永久和平而战<br><span class="muted">逐字按 1991 年版目录</span></td><td class="c2">为什么是持久战<br>为什么最后胜利是中国的</td></tr>
+        <tr><td class="c1">后十二题</td><td>能动性在战争中 · 战争和政治 · 抗日的政治动员 · 战争的目的 · 防御中的进攻，持久中的速决，内线中的外线 · 主动性，灵活性，计划性 · 运动战，游击战，阵地战 · 消耗战，歼灭战 · 乘敌之隙的可能性 · 抗日战争中的决战问题 · 兵民是胜利之本 · 结论<br><span class="muted">逐字按 1991 年版目录</span></td><td class="c2">怎样进行持久战<br>怎样争取最后胜利</td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size:12.5px;margin-top:10px;">分两部分的说法见中国档案报（中央档案馆藏本说明）：「《论持久战》写了 21 个问题，可以分成两个部分。前 9 个问题为第一部分，说明抗日战争为什么是持久战，为什么最后胜利是中国的；后 12 个问题为第二部分，说明怎样进行持久战和怎样争取最后胜利。」——这一划分与原文第五十九段的自我说明（「以上说的……大体上都是说的『是什么』和『不是什么』。以下，将转到研究『怎样做』和『不怎样做』的问题上」）完全吻合。</p>
+
+    <div class="quote">
+      中国会亡吗？答复：不会亡，最后胜利是中国的。中国能够速胜吗？答复：不能速胜，抗日战争是持久战。<br>
+      ……<br>
+      亡国论者看敌人如神物，看自己如草芥，速胜论者看敌人如草芥，看自己如神物，这些都是错误的。我们的意见相反：抗日战争是持久战，最后胜利是中国的——这就是我们的结论。
+      <span class="src">第五段与第一百一十九段｜同一组问答在全篇出现两次，中间隔着一百一十四段论证。第一次是提问的落点，第二次是结论的收口——<b>开头与结尾用同一句话，是这篇讲演在结构上最干净的一处设计</b>（引文中的「……」为节引标记，两段分属第五段与第一百一十九段，非连续文句）</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>它不许你只算一项：结论必须由「全部因素的相互关系」产生</h4>
+          <p>这篇最实用的部分，是第三十段那段方法论声明。<b>它先否掉了一条看起来最硬的事实——「单说敌人是帝国主义的强国，我们是半殖民地半封建的弱国，就有陷入亡国论的危险」；接着逐条否掉其他单因素推演：大小、进步退步、多助寡助，各条都不足以单独成立结论（「大并小、小并大的事都是常有的」「多助寡助是重要因素，但是附随因素」）。</b>然后才是那句关键：<b>「我们说抗日战争是持久战，是从全部敌我因素的相互关系产生的结论。」</b>到了第一百一十九段，这个诊断被写成一句通用的话——亡国论者把敌人看成神物，速胜论者把自己看成神物。两边犯的是同一个错：<b>拿一项事实当全部事实。</b>有意思的是，文中并不因此主张「平衡」，反而承认不平衡是常态：敌之优点只有一个、余皆缺点，我之缺点只有一个、余皆优点，但「现时敌我强弱的程度悬殊太大」，所以出现的是不平衡。<b>——多因素不等于各打五十大板；多因素的意思是：先把每一项的真实权重算出来，再允许结论偏向一边。</b></p>
+          <span class="mv">迁移：下次要向别人（或自己）解释一个判断时，把支撑它的因素全部列出来，每项后面写一句：「这一项负责推出我的哪一半结论？」如果某两项推出的是同一个结论、而你只写了这两项，说明还没算完；如果有哪一项你不敢写上去（因为它指向相反方向），那正是最该先算的一项。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>把成败的判断权，从「开局」挪到最不体面的那一段</h4>
+          <p>三个阶段里，第一段有戏剧（淞沪、台儿庄），第三段有结果（反攻、打到鸭绿江边），<b>只有第二段没有故事：敌转保守，我打游击，经济困难，汉奸捣乱，动摇分子大倡妥协论，悲观情绪严重增长。</b>原文把这一段的调子写得很低——「这将是中国很痛苦的时期」「这个第二阶段是整个战争的过渡阶段，也将是最困难的时期」——<b>紧接着却说：「然而它是转变的枢纽。」</b>然后给出全篇最具决定性的分配：<b>「中国将变为独立国，还是沦为殖民地，不决定于第一阶段大城市之是否丧失，而决定于第二阶段全民族努力的程度。」</b>更细的一层在第四十一至四十三段：第一阶段里中国同时发生两种变化——「向下的」是土地、人口、经济力量的减缩（旧的量和质，主要表现于量），「向上的」是战争经验、军队进步、政治进步、人民动员、游击战争的出现、国际援助的增长（新的量和质，主要表现于质）。<b>而人天然更容易看见前者，因为它是可见的、可计数的。</b></p>
+          <span class="mv">迁移：评估一个长期项目、一段职业积累或一门手艺，别用「开局声势」和「最新战果」当指标——那分别对应第一、第三阶段。真正需要盯的是中间那段：那些量在缩、质在长的时期。给自己列一张双栏表：本月「向下的量」（收入、曝光、体力、可见成果）与「向上的质」（技能、判断力、关系、可复用资产）。若只看得见左栏，就会在最不该停的地方停下。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>同一页上有两只手：正文写于一九三八年，注释写于一九五二年</h4>
+          <p>这一篇的阅读有一个陷阱：<b>正文的判断与注释的判断，不是同一个时间写的。</b>注〔3〕说汪精卫「准备投降日本，<b>后来果然投降了</b>」——汪 1938 年 12 月才出逃河内、1940 年才建伪政权；注〔15〕统计「自一九三七年到一九四○年，美国每年输入日本的物资占日本全部进口额的三分之一以上」；注〔18〕说毛泽东所预言的相持阶段中国方面「可能的向上变化」，「在中国共产党领导下的抗日根据地<b>是完全实现了</b>，在国民党统治区……反而向下变化了」。<b>这些都是收入《毛泽东选集》时（第二卷付印于一九五二年）由出版委员会统一撰写、毛泽东审定的注释，不可能出自战时的讲演稿。</b>分清这两层，读法就完全不同：<b>正文里那些斩钉截铁的句子，是在结果未知时写的；注释里那些验证性的句子，是在结果已知后写的。</b>而「预言被证明」与「预言者在当时有多少把握」，是两件不同的事——把后者的确定度按前者来想象，是最常见的一种阅读错觉。</p>
+          <span class="mv">迁移：读任何复盘文档、判决书式的事后总结、或自己多年前的笔记，先做一件事——把「当时能知道的信息」和「后来才知道的信息」分成两层，各用一支笔标注。分清以后，可复用的只有第一层：它是当时的判断方法；第二层只是结果，学不到方法。同样的规矩适用于自己：写复盘时注明哪句是当时想的、哪句是现在补的，否则下一次同样的局面你还是做不出当时的判断。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">中国会亡吗？答复：不会亡，最后胜利是中国的。中国能够速胜吗？答复：不能速胜，抗日战争是持久战。</div>
+        <div class="ctx">第五段｜全篇题眼，也是全篇唯一被引用得最多的一段。它出现在开头（提问的落点）与结尾（第一百一十九段的收口），首尾各一次。形式上是两句自问自答，实质上是把两个相反的答案同时废止——「亡」与「速胜」都不在选项里</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">武器是战争的重要的因素，但不是决定的因素，决定的因素是人不是物。力量对比不但是军力和经济力的对比，而且是人力和人心的对比。军力和经济力是要人去掌握的。</div>
+        <div class="ctx">第四十八段｜针对「唯武器论」。原文点明这是「战争问题中的机械论，是主观地和片面地看问题的意见」。同一段还留了一个更锋利的反问：若中国人、日本人、世界各国人的大多数站在抗战方面，「日本少数人强制地掌握着的军力和经济力，还能算是优势吗？」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这个第二阶段是整个战争的过渡阶段，也将是最困难的时期，然而它是转变的枢纽。中国将变为独立国，还是沦为殖民地，不决定于第一阶段大城市之是否丧失，而决定于第二阶段全民族努力的程度。</div>
+        <div class="ctx">第三十七段｜全篇对时间最重的一句判断。前半句承认难看（「这将是中国很痛苦的时期，经济困难和汉奸捣乱将是两个很大的问题」），后半句把成败的判断权整个交给这一段。同一段末尾还有一句极白的话：「中国抗战的三幕戏，这是第二幕。由于全体演员的努力，最精彩的结幕便能很好地演出来。」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">战争的伟力之最深厚的根源，存在于民众之中。日本敢于欺负我们，主要的原因在于中国民众的无组织状态。</div>
+        <div class="ctx">第一百一十四段｜「兵民是胜利之本」一节的核心句。前半句被广泛引用，后半句常被略去——但正是后半句把它变成了可操作批评：问题不在民力，在「无组织状态」。紧接着的两条具体办法是禁止「捉兵法」「买兵法」，改为广泛热烈的政治动员，以及「军队须和民众打成一片，使军队在民众眼睛中看成是自己的军队」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">英勇战斗于前，又放弃土地于后，不是自相矛盾吗？这些英勇战斗者的血，不是白流了吗？这是非常不妥当的发问。吃饭于前，又拉屎于后，不是白吃了吗？睡觉于前，又起床于后，不是白睡了吗？</div>
+        <div class="ctx">第一百零九段｜为「放弃土地以保存军力」辩护的一处。全篇文风最泼辣的一段，却连着最冷静的两句：「放弃土地是为了保存军力，也正是为了保存土地」；「事物是往返曲折的，不是径情直遂的，战争也是一样，只有形式主义者想不通这个道理。」</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字（人民出版社第二版，第二卷第 439—518 页），已与求是理论网所载 1991 年版全文、中国理论网《毛泽东选集》第二卷电子本（1991 年版）逐字核对。文中「……」为节引标记，凡节引均在注解中说明所略内容的所属段落。另附题解全文以备参照：「这是毛泽东一九三八年五月二十六日至六月三日在延安抗日战争研究会的讲演。」</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《中国共产党在民族战争中的地位》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.10.14 ｜ 第二卷第十篇（起于 1991 年版第 519 页）</span></div>
+        <p>从「战争怎么打」转到「党在战争中怎么站住」。发表场合是中共六届六中全会——<b>正是在这次会议上，王明的右倾主张被批判，其负责的长江局被撤销</b>（详见第二十六篇笔记）。本篇讲了十个月的战略与战术，下一篇讲的是执行这些东西的主体：共产党员在民族战争中的模范作用、干部政策、党的纪律、党的民主，以及那节被反复引用的「学习」。<b>读下一篇时值得带着一个问题：一篇讲演能把战略讲通，但战略要靠什么样的组织去执行——两篇之间的这一步，才是从「说得对」到「做得到」的落差。</b></p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《抗日游击战争的战略问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.05 ｜ 第二卷第八篇，1991 年版第 404—438 页（第 26 篇笔记）</span></div>
+        <p>两篇是姊妹文本，前者总论、后者分论，而<b>先发表的反而是分论</b>（五月三十日《解放》第四十期先刊出分论，七月一日合刊才刊出总论）。接口在「长期性」上：游击战之所以能升格为战略，前提是战争长期而残酷；而战争为什么必然长期，要到本篇才被完整论证。<b>两篇对照可看出一个分工：本篇回答「我们凭什么能赢」（四组对比与三阶段），分论回答「赢的过程中我们靠什么活下去」（根据地、发展、指挥关系）。</b>若还想往前追，第一卷第十三篇《中国革命战争的战略问题》提供了这套军事方法论更早、更完整的版本，那里的关键词是「战略防御」「战略退却」与「不打无准备之仗」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>四栏题</b>：挑一件你正在长期投入的事（职业方向、一个项目、一门手艺），照第三十段的办法列出它全部的基本因素，并把每项标成「减法」或「加法」——哪几项在消耗你，哪几项在积累你。然后只问一句：<b>我是只算了其中一栏，还是四栏一起算过？</b>如果有哪一栏你一直不敢写上去（通常是「敌人很强」那一栏），那就是你最需要先算清的一项。</div>
+      <div class="q">二 · <b>枢纽题</b>：给你手上的长期事画出三阶段，并标出自己现在处在哪一段。如果正在中间那段（没有战果、只有消耗，旁人都劝你算了），写下两句话：<b>这一段里「向下的量」是什么？「向上的质」是什么？</b>再决定要不要继续——判断的依据只能是后者，而不是前者让人觉得难受。</div>
+      <div class="q">三 · <b>两层笔试题</b>：找一份你手边的事后总结（项目复盘、年度总结，或自己多年前的笔记）。用两支笔标注——哪句是「当时就能知道的」，哪句是「事后才知道的」。<b>标注完看一遍：如果只能保留第一层，这份文档还剩下什么？</b>剩得越少，说明这次复盘学到的方法越少。也可以反过来用：以后写复盘，自己就按两层分开写。</div>
+      <div class="q">四 · <b>决战题</b>：列出你当前的三个「决战」——把全部资源压上去、输了就难翻身的那些动作。逐个过第一百零六段的分类：<b>有把握的坚决打；无把握的避免；赌命运的，根本避免。</b>如果三类里有两类你都想打，说明你在用「有进无退」的方式处理本来需要长期消耗的事。</div>
+      <div class="hint"><b>三问卡</b>：① 我这个判断，是几项因素推出来的，各推的是哪一半？② 我盯的是开局与战果，还是中段的积累？③ 我用来证明「我对了」的证据，是当时就能拿到的，还是事后才拿到的？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第九篇</div>
+    <div>依据人民出版社 1991 年版第二卷第 439—518 页 ｜ 2026.09.23</div>
+  </div>
+
+</div>
+</body>
+</html>

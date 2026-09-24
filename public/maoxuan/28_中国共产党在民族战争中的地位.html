@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>28 · 中国共产党在民族战争中的地位 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(4,1fr);}
+.spec-frame.t3 .spec-band,.spec-frame.t3 .spec-labels{grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;min-width:0;overflow-wrap:anywhere;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;min-width:0;}
+@media(max-width:620px){
+  .part-scope{white-space:normal;margin-left:0;width:100%;line-height:1.6;}
+  .part-title{font-size:16.5px;}
+}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 证据卡 ===== */
+.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.sym{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.sym-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.sym-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:14px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.sym-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.sym-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-width:0;}
+.sym-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.sym.gold{border-left-color:var(--gold);}
+.sym.gold .sym-no{color:var(--gold);}
+.sym.blue{border-left-color:var(--blue);}
+.sym.blue .sym-no{color:var(--blue);}
+.sym.green{border-left-color:var(--green);}
+.sym.green .sym-no{color:var(--green);}
+@media(max-width:420px){.sym{padding:11px 12px 12px;}.sym-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:104px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:70px;white-space:normal;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.sym-text,.sym-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿八</div>
+    <h1>中国共产党在民族战争中的地位</h1>
+    <div class="sub2">十三节 · 正文约一万零六百字 · 注释十一条 · 六届六中全会政治报告《论新阶段》第七部分</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十篇 · <b>一九三八年十月十四日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《中国共产党在民族战争中的地位》</td></tr>
+      <tr><th>写作时间</th><td>一九三八年十月十四日（题解原文：「这是毛泽东在中国共产党第六届中央委员会扩大的第六次全体会议上的政治报告《论新阶段》的一部分。这个报告是在一九三八年十月十二日至十四日作的，这一部分是十四日讲的。」）</td></tr>
+      <tr><th>最初发表</th><td>全文以《论新阶段》为题，首刊延安《解放》周刊第五十七期（一九三八年十一月二十五日）；同年十二月重庆《新华日报》刊载，并出单行本（新群众丛书第二十二种）。本篇是该报告八部分中的第七部分，收入《毛泽东选集》第二卷时单独成篇、改用今题</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年版第二卷第 519—536 页；第一版（一九五二年）第 485—501 页</td></tr>
+      <tr><th>篇幅</th><td>十三节，正文约一万零六百字（依求是网所载 1991 年版电子文本统计汉字，不含注释）；注释十一条</td></tr>
+      <tr><th>历史坐标</th><td>中共扩大的六届六中全会（1938.09.29—11.06，延安桥儿沟天主堂）政治报告的一部分；中共首次正式提出「马克思主义的中国化」即在其中「学习」节；报告讲完十一天后武汉失守</td></tr>
+      <tr><th>版本提示</th><td>1938 年原刊本与 1991 年版已核出数处文字改动，最重的两处在「学习」节末段与「坚持统一战线和坚持党的独立性」节。凡引本篇，须注明所据版本（详见第六板块）</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">本篇不是一篇独立文章，而是一场党内的「座位之争」结出的一个部分：<b>报告在延安讲，报告的题目原本可能属于别人。</b></p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.11.29</div><div class="tl-body">王明回到延安<span class="note">（共产国际执委、主席团委员、候补书记；回国后任中共中央长江局书记，负责长江中下游流域工作）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1937.12.09—14</div><div class="tl-body">十二月政治局会议。王明作《如何继续全国抗战与争取抗战胜利呢？》的报告：主张「共同负责，共同领导」，否认统一战线中党的独立自主原则，提出「一切经过统一战线」<span class="note">毛泽东 1943 年 11 月自述：「十二月会议我是孤立的，我只对持久战、游击战为主、统一战线中独立自主原则是坚持到底的」</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.02.27—03.01</div><div class="tl-body">三月政治局会议。王明提出「统一指挥，统一编制，统一武装，统一纪律，统一待遇，统一作战计划，统一作战行动」<span class="note">即所谓「七统一」，实际是限制独立自主地发展共产党领导的人民武装</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.03</div><div class="tl-body">中共中央派任弼时赴莫斯科，向共产国际说明中国抗战实情与党内状况</div></div>
+      <div class="tl-item green"><div class="tl-date">1938.06.11</div><div class="tl-body">共产国际正式作出《关于中共代表报告的决议》：肯定中共抗战以来的政治路线，指出「中共在复杂环境及困难条件下真正运用了马列主义」<span class="note">共产国际不了解中国实情，此前依据王明的报告形成「新政策」——这一纸决议把王明「钦差大臣」的资本抽掉了</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1938.09.14—26</div><div class="tl-body">王稼祥由莫斯科回国，在政治局会议上传达共产国际指示与季米特洛夫的话：「在领导机关中要在毛泽东为首的领导下解决，领导机关中要有亲密团结的空气。」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.09</div><div class="tl-body"><b>报告之争</b>：王明以十二月政治局会议曾定由他作七大政治报告为由，要求六中全会的政治报告也由他作，「否则就不回延安」；人已到西安，仍重申此意，否则要返回武汉。中央再次复电，要他先回延安，「至于谁作政治报告应由中央政治局会议讨论决定」<span class="note">中央党史和文献研究院材料：9 月政治局会议认为王明准备的发言提纲「比较空洞，不符合抗战实际」，而毛泽东的提纲从实际出发——会议决定由毛泽东代表中央政治局作政治报告，「王明千方百计想作六届六中全会政治报告的美梦破灭了」</span></div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.09.29</div><div class="tl-body">扩大的六届六中全会在延安桥儿沟天主堂开幕。到会中央委员 17 人、中央各部门和全国各地区负责人 38 人，是 1928 年六大以来到会人数最多的一次中央全会<span class="note">主席团十二人：毛泽东、王稼祥、王明、周恩来、朱德、康生、彭德怀、博古、刘少奇、陈云、项英、张闻天；张闻天致开幕词，王稼祥传达共产国际指示，王稼祥致闭幕词</span></div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.10.12—14</div><div class="tl-body"><b>毛泽东作《论新阶段》政治报告</b>，共八部分：五中全会到六中全会；抗战十五个月的总结；抗日民族战争与抗日民族统一战线发展的新阶段；全民族的当前紧急任务；长期战争与长期合作；中国反侵略战争与世界反法西斯运动；<b>中国共产党在民族战争中的地位（本篇，十四日讲）</b>；党的七次全国代表大会</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.21 / 10.25</div><div class="tl-body">广州、武汉相继失守<span class="note">报告讲完十一天后武汉失守，全会在武汉失守之后还开了十二天。报告里写「武汉现正处于敌人的威胁中」的时候，这句话还没过期</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.11.05</div><div class="tl-body">毛泽东作会议结论《统一战线中的独立自主问题》（1991 年版第二卷第 537—540 页）——本篇第五节的那句原则，在这里被展开成三节</div></div>
+      <div class="tl-item"><div class="tl-date">1938.11.06</div><div class="tl-body">毛泽东作结论《战争和战略问题》（第 541—557 页）；全会通过《中共扩大的六中全会政治决议案》，批准以毛泽东为首的中央政治局的路线；全会撤销王明负责的中共中央长江局，华中与国民党统治区的工作此后分由中原局（刘少奇任书记）、南方局（周恩来任书记）领导</div></div>
+      <div class="tl-item"><div class="tl-date">1938.11.25</div><div class="tl-body">《解放》周刊第五十七期刊出《论新阶段》全文<span class="note">此后香港《申报》、长沙《观察日报》《抗战日报》，以及上海秘密印行的单行本相继转载；1939 年 4 月经任弼时安排译成俄文，刊于《共产国际》</span></div></div>
+      <div class="tl-item gold"><div class="tl-date">1952</div><div class="tl-body">收入《毛泽东选集》第二卷时，作者对「学习」节等数处作了改动<span class="note">最重的一处：把原刊「马克思主义的中国化」改为「使马克思主义在中国具体化」，并加写「马克思主义必须和我国的具体特点相结合并通过一定的民族形式才能实现」等句，删去「没有抽象的马克思主义，只有具体的马克思主义」等句</span></div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">抗战走到最难的关口，问题已经不是「打不打、怎么打」，而是<span class="q">谁来领导、这个党本身够不够硬</span>——本篇把镜头从战场拉回自身：先讲清党员凭什么站在最前线，再一节一节处理党的外部关系、内部制度与学习问题，最后收在一句「只要我们能团结，这个目的就一定能够达到」。</div>
+    <div class="cards">
+      <div class="card">
+        <h4>爱国主义就是国际主义在民族解放战争中的实施<span class="card-tag">立场</span></h4>
+        <p>先把「爱国主义」这个词拆成两种：有日本侵略者和希特勒的「爱国主义」，也有我们的爱国主义。同一句话，在被侵略国与侵略国里的位置完全相反——所以日共、德共要做「本国战争的失败主义者」，而中国共产党员必须「拿枪口瞄准日本侵略者」。一个词的合法性，取决于它站的条件，不取决于它自己。</p>
+        <ul>
+          <li>「只有民族得到解放，才有使无产阶级和劳动人民得到解放的可能」——把民族任务与阶级任务排成顺序，而不是二选一</li>
+          <li>结论句极硬：「对于我们，失败主义是罪恶，争取抗日胜利是责无旁贷的」</li>
+        </ul>
+      </div>
+      <div class="card gold">
+        <h4>共产党员应是实事求是的模范，又是具有远见卓识的模范<span class="card-tag">作风</span></h4>
+        <p>本篇第二节是一张清单：英勇作战的模范、执行命令的模范、遵守纪律的模范、政治工作的模范、内部团结统一的模范、廉洁的模范、「民众的朋友，而不是民众的上司」的模范。清单的末段落到两个词上——实事求是，远见卓识，并说明它们互相依赖：「只有实事求是，才能完成确定的任务；只有远见卓识，才能不失前进的方向」。</p>
+        <ul>
+          <li>中央党史和文献研究院材料：这是毛泽东<b>第一次使用「实事求是」这一概念</b>，并在此「代表中央政治局向全党提出」</li>
+          <li>同一节还有两条姿态要求：对落后的人「不是轻视他们……而是亲近他们，团结他们」，对犯过错误的「采取规劝态度」</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h4>政治路线确定之后，干部就是决定的因素<span class="card-tag">制度</span></h4>
+        <p>路线讲对了，剩下的胜负手是人和规则。本篇给出的是一整套可操作的干部工作：<b>识别</b>（「不但要看干部的一时一事，而且要看干部的全部历史和全部工作」）、<b>使用</b>（领导者的责任「主要地是出主意、用干部两件事」；「任人唯贤」对「任人唯亲」）、<b>爱护</b>（指导、提高、检查、说服、照顾困难五条）。</p>
+        <ul>
+          <li>配套的是「党的纪律」四条（个人服从组织、少数服从多数、下级服从上级、全党服从中央）与「党的民主」一节</li>
+          <li>这一节写在张国焘叛逃的语境里——刚经历过组织灾难，写出来的却是培养清单，而不是清算清单</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node">
+        <div class="n-label">问题</div>
+        <div class="n-sub">党在民族战争中处于何种地位——「共产党员应该怎样认识自己、加强自己、团结自己」</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node gold">
+        <div class="n-label">前提</div>
+        <div class="n-sub">爱国主义＝国际主义在民族解放战争中的实施，所以党员必须在最前线、在各方面起模范作用</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node blue">
+        <div class="n-label">对外</div>
+        <div class="n-sub">大胆发展又不让坏分子混入；统一战线中保持相对独立性；照顾全局、照顾多数、和同盟者一道工作</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node">
+        <div class="n-label">对内</div>
+        <div class="n-sub">干部政策／党的纪律四条／党的民主／两条战线斗争——把「积极性」变成有制度的积极性</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node green">
+        <div class="n-label">学习</div>
+        <div class="n-sub">研究理论、研究历史、研究当前运动；末段落到「使马克思主义在中国具体化」</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node gold">
+        <div class="n-label">结果</div>
+        <div class="n-sub">在全国人民中形成一个坚强的核心，把「说得对」变成「做得到」</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">十三节不是并列的十三条，而是四层：<b>先定身份，再理外部关系，然后建内部制度，最后落在学习与团结。</b>每一层内部都藏着同一个动作——先定「正确的位置」，再指出左右两侧各自的偏差。</p>
+
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg red">否认统一性</div>
+          <div class="spec-seg green">相对独立性</div>
+          <div class="spec-seg blue">否认独立性</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>「左」的一侧</b>只讲独立、抹杀统一：门关起来谈自主，合作就谈不成。原文在统一战线问题上把这一侧列为须继续反对的「关门主义倾向」</div>
+          <div class="spec-label"><b>正确的位置</b>「统一战线中的独立性，只能是相对的，而不是绝对的；如果认为它是绝对的，就会破坏团结对敌的总方针。」同时「决不能抹杀这种相对的独立性」——两个方向各有一句警戒</div>
+          <div class="spec-label"><b>右的一侧</b>只讲统一、抹杀独立：「如果只谈统一性，否认独立性，就是背弃民权主义」；在组织问题上则表现为「无条件的合作，无条件的发展」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spectrum">
+      <div class="spec-frame t3">
+        <div class="spec-band">
+          <div class="spec-seg red">关门主义</div>
+          <div class="spec-seg green">大胆发展防混入</div>
+          <div class="spec-seg blue">无条件发展</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>怕混进坏分子，于是关门</b>原文直接否掉：「不可因为怕奸细而把自己的党关起门来，大胆地发展党是我们已经确定了的方针。」</div>
+          <div class="spec-label"><b>本篇给出的方针</b>八个字：「大胆发展而又不让一个坏分子侵入」——两件事同时做，而不是取一件、舍一件。后面紧跟一句方法论：「只顾一方面，忘记另一方面，就会犯错误。」</div>
+          <div class="spec-label"><b>只顾发展，不顾甄别</b>表现为「无原则的发展」；在合作问题上则是「投降主义的合作」。原文对它的判词与左侧完全相同：同样「妨碍合作，妨碍发展」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">先定身份：这个党员站在哪里</span><span class="part-scope">第 1—2 节 · 1991 年版第 520—523 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>爱国主义和国际主义</b><span class="muted">（起于第 520 页）</span>——先划清两种「爱国主义」，再给出全篇的立场句：「爱国主义就是国际主义在民族解放战争中的实施」</li>
+          <li><b>共产党员在民族战争中的模范作用</b><span class="muted">（起于第 521 页）</span>——一张七项「模范」的清单，末段落到「实事求是的模范，又是具有远见卓识的模范」，并把共产党员同时定位为「每天都是民众的教师，但又每天都是民众的学生」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">再理外部：党与别人的关系怎么摆</span><span class="part-scope">第 3—6 节 · 第 523—526 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>团结全民族和反对民族中的奸细分子</b><span class="muted">（第 523 页）</span>——把「扩大统一战线」和「清除奸细」绑成一件事：「揭发和清除奸细，是和扩大和巩固民族统一战线不能分离的」</li>
+          <li><b>扩大共产党和防止奸细混入</b><span class="muted">（第 523 页）</span>——本篇最像口号的八个字：「大胆发展而又不让一个坏分子侵入」</li>
+          <li><b>坚持统一战线和坚持党的独立性</b><span class="muted">（起于第 524 页）</span>——独立性的边界；以及阶级斗争与民族斗争的关系：「我们不是否认它，而是调节它」</li>
+          <li><b>照顾全局，照顾多数及和同盟者一道工作</b><span class="muted">（起于第 525 页）</span>——三条领导方法合为一节：「一个好的共产党员，必须善于照顾全局，善于照顾多数，并善于和同盟者一道工作」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">后建内部：把积极性变成制度</span><span class="part-scope">第 7—11 节 · 第 526—532 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>干部政策</b><span class="muted">（起于第 526 页）</span>——识别、使用、爱护三件事；「任人唯贤」对「任人唯亲」，并点明「过去张国焘的干部政策与此相反」</li>
+          <li><b>党的纪律</b><span class="muted">（第 528 页）</span>——四条纪律，并加一条前瞻要求：「还须制定一种较详细的党内法规，以统一各级领导机关的行动」</li>
+          <li><b>党的民主</b><span class="muted">（第 528 页）</span>——先给「积极性」下定义（创造能力、负责精神、敢于和善于提问题发表意见批评缺点、从爱护观点出发的监督作用），再说「没有这些，所谓积极性就是空的」</li>
+          <li><b>我们的党已经从两条战线斗争中巩固和壮大起来</b><span class="muted">（起于第 530 页）</span>——十七年党内斗争史，收出三条教训</li>
+          <li><b>当前的两条战线斗争</b><span class="muted">（起于第 532 页）</span>——一头反右的悲观主义，一头反「左」的急性病与关门主义；并专设一段谈两面派行为</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丁</span><span class="part-title">落点：学什么，靠什么收口</span><span class="part-scope">第 12—13 节 · 第 532—536 页</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>学习</b><span class="muted">（起于第 532 页）</span>——三样都要研究（马列理论、本民族历史、当前运动的情况与趋势）；提出「来一个全党的学习竞赛」；末段即「马克思主义中国化」命题所在</li>
+          <li><b>团结和胜利</b><span class="muted">（起于第 535 页）</span>——全文只有一段：「中国共产党内部的团结，是团结全国人民争取抗日胜利和建设新中国的最基本的条件……只要我们能团结，这个目的就一定能够达到」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>改过的那句话，比没改过的话更该读</h4>
+          <p>本篇最有名的句子，是一句<b>被改过的话</b>。1938 年原刊作：「因此，<b>马克思主义的中国化</b>，使之在其每一表现中带着中国的特性，即是说，按照中国的特点去应用它，成为全党亟待了解并亟须解决的问题。」1991 年版作：「因此，<b>使马克思主义在中国具体化</b>，使之在其每一表现中带着必须有的中国的特性，即是说，按照中国的特点去应用它，成为全党亟待了解并亟须解决的问题。」改动不止一处：原刊「马克思主义必须通过民族形式才能实现：没有抽象的马克思主义，只有具体的马克思主义。所谓具体的马克思主义，就是通过民族形式的马克思主义，就是把马克思主义应用到中国具体环境的具体斗争中去」这一段被删去，代之以新写的两句——「马克思主义必须和我国的具体特点相结合并通过一定的民族形式才能实现」「马克思列宁主义的伟大力量，就在于它是和各个国家具体的革命实践相联系的」。<b>改动的方向很清楚：减少专名，增加条件。</b>把一个可以当旗号用的名词，换成一句必须交代前提的判断。也正因此，不能把「提法变了」读成「立场变了」——中央党史和文献研究院的表述是，报告提出的这一论断「是他对中国革命最重要的贡献之一」。</p>
+          <span class="mv">迁移：当你的方法、产品或概念要跨环境传播时，先问一句——我留下的是名号，还是条件？名号便于内部动员（一听就懂、便于喊），条件便于外部理解（对方知道它在什么前提下成立），二者通常不能同时最大化。反过来也成立：如果你读到某个概念的旧版本与通行版本不一样，别急着认为谁在遮丑——多数情况下，那是提出者在多年使用后，主动把「口号」改成了「条件」。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「干部政策」一节真正的分量，在于它写在刚伤过人的地方</h4>
+          <p>这一节放在全篇中段，前有张国焘叛逃、开除党籍、共产国际批准这一串事件，后有「党的纪律」与「当前的两条战线斗争」。按常理，刚经历组织灾难的文本最容易写成一串清算与防备；<b>本篇给出的却是一份培养清单。</b>识别干部——「不但要看干部的一时一事，而且要看干部的全部历史和全部工作」；使用干部——「领导者的责任，归结起来，主要地是出主意、用干部两件事」；爱护干部五条，其中最不留情的一条是「有委托而无检查，及至犯了严重的错误，方才加以注意，不是爱护干部的办法」，最克制的一条是「对于犯错误的干部，一般地应采取说服的方法……轻易地给人们戴上『机会主义』的大帽子，轻易地采用『开展斗争』的方法，是不对的」。<b>这是把「处置人的权限」提前写成「待人的清单」：规则写在前面，事后就不必靠情绪决定谁的命运。</b></p>
+          <span class="mv">迁移：任何团队在刚出过事、刚伤过人之后，最该抢的先手不是表态，而是把「对人的处置」写成「对人的培养」——检查什么、多久检查一次、什么情况下算错、错了先说服还是先斗争，逐条写下。清单越具体，越不依赖处理者的个人城府。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「两条战线」是一种校准动作，不是一种骑墙立场</h4>
+          <p>本篇两处画出光谱（见第五板块），左右各打五十大板：统一战线问题上反关门主义也反「无条件的合作」，组织问题上反关门也反「无原则的发展」，政治上反右的悲观主义也反「左」的急性病。但它接着写了一句极关键的话：「两条战线的思想斗争必须切合于具体对象的情况，决不应主观地看问题，决不应使过去那种『乱戴帽子』的坏习惯继续存在。」<b>也就是说，「两侧都反对」不等于「站中间就对了」——它是先用事实定出正确点，再指出两侧各自的失败模式。</b>原文还补了一句常被忽略的话：反对的对象除了明确的偏向，还有两面派行为——「阳奉阴违，口是心非，当面说得好听，背后又在捣鬼」，理由不是道德洁癖，而是「两面派行为的最大的危险性，在于它可能发展到小组织行动」。</p>
+          <span class="mv">迁移：任何合作型任务都有两个失败模式——太保守（只顾自己、不肯让步，合作谈不成）与太让步（以合作为名交出全部自主权）。可用一个三步动作替代「别走极端」这种空话：①写下你所在场景的「正确点」是哪一句可执行的话；②写下左右两侧各一句典型话术（能听出别人在说哪一侧）；③每隔一段时间判断自己离哪一侧更近，凭据是什么。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">共产党员应是实事求是的模范，又是具有远见卓识的模范。因为只有实事求是，才能完成确定的任务；只有远见卓识，才能不失前进的方向。</div>
+        <div class="ctx">「共产党员在民族战争中的模范作用」节（1991 年版第 521—523 页）｜中央党史和文献研究院材料指出，这是毛泽东第一次使用「实事求是」这一概念，并「代表中央政治局向全党提出：共产党员应是实事求是的模范」。同一段还把它接在向民众学习上——「只有向民众学习，向环境学习，向友党友军学习，了解了他们，才能对于工作实事求是，对于前途有远见卓识」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">政治路线确定之后，干部就是决定的因素。</div>
+        <div class="ctx">「干部政策」节（起于第 526 页）｜全篇被引用最多的一句，注〔4〕注明语出斯大林一九三四年一月《在党的第十七次代表大会上关于联共（布）中央工作的总结报告》——本篇把这句话接上了一整套可执行的干部工作。紧随其后的是两个「必须善于」：善于识别干部，善于使用干部</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">共产党员在民众运动中，应该是民众的朋友，而不是民众的上司，是诲人不倦的教师，而不是官僚主义的政客。</div>
+        <div class="ctx">「共产党员在民族战争中的模范作用」节（第 521—523 页）｜同一节的这一组对句还有：「共产党员在政府工作中，应该是十分廉洁、不用私人、多做工作、少取报酬的模范」；以及那句被反复引用的对照：「自私自利，消极怠工，贪污腐化，风头主义等等，是最可鄙的；而大公无私，积极努力，克己奉公，埋头苦干的精神，才是可尊敬的」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">使马克思主义在中国具体化，使之在其每一表现中带着必须有的中国的特性，即是说，按照中国的特点去应用它，成为全党亟待了解并亟须解决的问题。</div>
+        <div class="ctx">「学习」节（起于第 532 页）｜<b>此为本篇最需注明版本的一句。</b>1938 年原刊此处作「马克思主义的中国化，使之在其每一表现中带着中国的特性」；收入选集时改为今文，并加写「马克思主义必须和我国的具体特点相结合并通过一定的民族形式才能实现」等句。紧接的下一句是：「洋八股必须废止，空洞抽象的调头必须少唱，教条主义必须休息，而代之以新鲜活泼的、为中国老百姓所喜闻乐见的中国作风和中国气派」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">学习的敌人是自己的满足，要认真学习一点东西，必须从不自满开始。对自己，「学而不厌」，对人家，「诲人不倦」，我们应取这种态度。</div>
+        <div class="ctx">「学习」节末句｜全篇的收束方式很值得注意：一个讲党的领导地位的报告，最后一段讲的是学习态度，倒数第二段讲的是团结。被省略掉的中间那句同样有力——「我希望从我们这次中央全会之后，来一个全党的学习竞赛，看谁真正地学到了一点东西，看谁学的更多一点，更好一点」</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字（人民出版社第二版，第二卷第 519—536 页），已与求是理论网所载 1991 年版电子文本、中国理论网《毛泽东选集》第二卷电子本（1991 年版）逐字核对；凡与 1938 年原刊本有出入处，均在注解中说明所据版本。另附题解原文以备参照：「这是毛泽东在中国共产党第六届中央委员会扩大的第六次全体会议上的政治报告《论新阶段》的一部分。这个报告是在一九三八年十月十二日至十四日作的，这一部分是十四日讲的。」</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《统一战线中的独立自主问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.11.05 ｜ 第二卷第十一篇，1991 年版第 537—540 页</span></div>
+        <p>与本篇同出一会：本篇是十月的政治报告，下一篇是十一月五日的会议结论。<b>结论正对着本篇第五节「坚持统一战线和坚持党的独立性」而来</b>，把那一节的原则拆成三节展开——「帮助和让步应该是积极的，不应该是消极的」、「民族斗争和阶级斗争的一致性」、「『一切经过统一战线』是不对的」。<b>读下一篇时值得带着一个问题：报告里那句「独立性只能是相对的」是给出边界，结论里则是给出操作——从「边界」到「操作」的这一步，往往才是文件生效与不生效的分界。</b></p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《论新阶段》原刊本<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.10.12—14 ｜ 首刊《解放》周刊第五十七期，全文可查《中共中央文件选集》第十一册</span></div>
+        <p>本篇只是报告八部分中的第七部分。拿来与原刊本对读，能看清两件事：<b>一是删了什么</b>——除「学习」节那段改动外，同一节里「我们的工作做得还不错，但如果不加深一步地学习理论，就无法使我们的工作做得更好一些」等句、结论段里「我们的党是第六次全国代表大会以来最团结最统一的时期」一语，1991 年版均未保留；<b>二是改了什么</b>——「坚持统一战线和坚持党的独立性」一节，原刊有「统一战线中，独立性不能超过统一性，而是服从统一性」一语，1991 年版相应处作「统一战线中的独立性，只能是相对的，而不是绝对的……如果认为它是绝对的，就会破坏团结对敌的总方针」。<b>这组对照的价值不在于翻旧账，而在于看清一份文本被修订的方向：偏向收敛的对句被删，偏向条件与界限的表述保留。</b>若还想往前追，八个月前的《抗日游击战争的战略问题》与《论持久战》回答的是「仗怎么打」，本篇与下一篇回答的是「谁来打、按什么规矩打」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>模范清单题</b>：本篇给党员列了七八种「模范」——英勇作战、执行命令、遵守纪律、政治工作、内部团结统一、廉洁、「民众的朋友而不是上司」。挑一件你正在带人（或被人带）的事，照这个格式给自己写三句「应该是……而不是……」。<b>问一句：哪一句你写得最别扭？</b>别扭的那句，通常就是你当下最缺的角色认知——不是不会做，而是不愿承认那是自己的活。</div>
+      <div class="q">二 · <b>任人唯贤题</b>：用「不但要看干部的一时一事，而且要看干部的全部历史和全部工作」这条尺子，把你手上三个关键人手的事实各列五条（近三年的，而不是最近的）。再拿爱护干部五条——指导、提高、检查、说服、照顾困难——自查：<b>哪一条你半年没做过？</b>多数人缺的是第三条（检查）：有委托无检查，等到出错才注意。</div>
+      <div class="q">三 · <b>术语题</b>：把「马克思主义的中国化」改成「使马克思主义在中国具体化」这件事，迁移到你手上一个正在对外传播的方法、产品或概念（对客户、对新人、对外部合作方都算）。<b>现在留下来的，是名号还是条件？</b>如果换成对方能听懂的说法，你会失去什么、得到什么？写下来再决定要不要改。</div>
+      <div class="q">四 · <b>两条战线题</b>：写下你所在场景的「正确点」——必须是一句可执行的话，不是「要平衡」这类空话。再写下左右两侧各一句典型话术（听到这句，就知道对方站在哪一侧）。<b>最后判断：你现在离哪一侧更近，凭据是什么？</b>如果两侧的话术你都说过，说明你还没有正确点，只有立场。</div>
+      <div class="hint"><b>三问卡</b>：① 我留下的是名号，还是条件？② 我对人的规则，是写在出事之前，还是写在出事之后？③ 反对两个极端时，我有没有先定出那个「正确点」？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十篇</div>
+    <div>依据人民出版社 1991 年版第二卷第 519—536 页 ｜ 2026.09.24</div>
+  </div>
+
+</div>
+</body>
+</html>

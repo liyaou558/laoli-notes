@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>29 · 统一战线中的独立自主问题 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 方针卡（十六字） ===== */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.move{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.move-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.move-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:15px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.move-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.move-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14px;color:var(--ink);line-height:1.8;min-width:0;}
+.move-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.move.gold{border-left-color:var(--gold);}
+.move.gold .move-no{color:var(--gold);}
+.move.blue{border-left-color:var(--blue);}
+.move.blue .move-no{color:var(--blue);}
+.move.green{border-left-color:var(--green);}
+.move.green .move-no{color:var(--green);}
+@media(max-width:420px){.move{padding:11px 12px 12px;}.move-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.move-text,.move-note{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">廿玖</div>
+    <h1>统一战线中的独立自主问题</h1>
+    <div class="sub2">一篇一千三百余字的会议结论 · 十六字处置方针 · 「既统一，又独立」</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十一篇 · <b>一九三八年十一月五日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《统一战线中的独立自主问题》。1991 年版《毛泽东选集》第二卷第十一篇，紧接《中国共产党在民族战争中的地位》之后。正文三节，节题即论点：帮助和让步应该是积极的，不应该是消极的／民族斗争和阶级斗争的一致性／「一切经过统一战线」是不对的</td></tr>
+      <tr><th>写作时间</th><td>一九三八年十一月五日（题下所标）。据中央党史和文献研究院《〈毛泽东选集〉一至四卷第一版正文和题解的主要修订情况》：毛泽东在中共扩大的六届六中全会所作的结论共讲了五个问题——十一月五日下午讲第一、二、三个问题，<b>本篇是结论的第三个问题</b>；六日下午讲第四、五个问题，《战争和战略问题》是第四个问题。1991 年版校订时，题解中加写了「结论是在一九三八年十一月五日和六日作的，这一部分是在五日讲的」一句，正是为了向读者交代这一层</td></tr>
+      <tr><th>最初发表</th><td>作为会议结论的一部分，战时未见单独公开发表；一九五二年随《毛泽东选集》第二卷（人民出版社第一版）公开出版，该版目录中本篇列为第 502—505 页。同年《六大以来》再版时亦收入</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 537—540 页</td></tr>
+      <tr><th>篇幅</th><td>正文约一千三百余字（以汉字计，不含标点与注释），分三节，注释六条（〔1〕《孟子》〔2〕列宁〔3〕第二国际〔4〕陈独秀〔5〕张国焘〔6〕《抗战建国纲领》）</td></tr>
+      <tr><th>发表场合</th><td>中共扩大的六届六中全会（1938.9.29—11.6，延安桥儿沟天主堂）。出席中央委员 17 人、中央各部门和全国各地区负责人 38 人，是 1928 年六大以来到会人数最多的一次中央全会；毛泽东、王稼祥、王明、周恩来、朱德、康生、彭德怀、博古、刘少奇、陈云、项英、张闻天被选为全会主席团成员</td></tr>
+      <tr><th>历史坐标</th><td>讲这篇结论的前十一天（十月二十五日）武汉失陷，前一天（十月二十一日）广州失陷，抗战正式进入相持阶段；全会于次日（十一月六日）闭幕并通过政治决议案。换句话说，这篇讲在「最坏的军事消息刚落地、党内路线问题必须在散会前定论」的那个下午</td></tr>
+      <tr><th>日后轨迹</th><td>全会通过《中共扩大的六中全会政治决议案》，批准以毛泽东为首的中央政治局路线，批评了党内在统一战线问题上的关门主义与投降主义两种偏向，撤销王明负责的长江局，改设中原局（刘少奇）、南方局（周恩来）。毛泽东一九四七年十二月二十五日《目前形势和我们的任务》对这一分歧作了总结，1991 年版把这段总结整段录入了本篇题解——读时须分清：正文是 1938 年的判断，题解里的总结是九年后、并写定于 1952 年的后设叙述</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 一年前，他是会上的少数。</b>一九三七年十一月二十九日王明自苏联回到延安；十二月九日至十四日的政治局会议（「十二月会议」）上，王明以中共驻共产国际代表身份作《如何继续全国抗战与争取抗战胜利呢？》的报告，主张「共同负责，共同领导」，「一切经过统一战线」。许多与会者受其影响，作了自我批评。毛泽东后来在延安整风时回顾：「<b>我是孤立的。当时，我别的都承认，只有持久战、游击战、统战原则下的独立自主等原则问题，我是坚持到底的。</b>」一九四三年十月十四日他在西北局高干会上总结「王明路线的特点」列了四条，第二条正是「<b>以一切经过统一战线反对独立自主</b>」。本篇文章，就是那句「坚持到底」在十一个月后的正式落点。</li>
+        <li><b>戏剧性二 · 转折的关键是一份从莫斯科带回的文件。</b>一九三八年三月，中央政治局会议决定派任弼时去莫斯科，向共产国际报告中国抗战与国共关系的实情；随后王稼祥回国。共产国际的书面指示中说：「<b>要保持统一战线中各党派的独立性，说不要在统一中束缚自己手足，最低限度纲领是不能让步的。</b>」季米特洛夫另有一句话：「<b>在领导机关中要在毛泽东为首的领导下解决，领导机关中要有亲密团结的空气。</b>」陆定一后来的回忆很直白：「这样，就把王明路线所以能够存在的第一个原因——共产国际的支持——取消了。」毛泽东在中共七大上也说：「六中全会以前虽然有些著作，如《论持久战》，但如果没有共产国际指示，六中全会还是很难解决问题的。」<b>——注意那份指示的用词：「不要在统一中束缚自己手足」。本篇结句写的是「决不可自己束缚自己的手脚」。</b></li>
+        <li><b>戏剧性三 · 讲这篇的时候，武汉已经丢了十一天。</b>一九三八年十月二十一日广州失陷、二十五日武汉失陷，抗战由防御阶段转入相持阶段。六届六中全会九月二十九日开幕时武汉尚在，散会（十一月六日）时华中最大城市已易手。全会之所以要把「独立自主」这一层意思在结论里再讲一遍，是因为军事上的退却刚刚证明了一件事：<b>凡是不在自己手里的东西，都不能拿来做依靠。</b></li>
+        <li><b>戏剧性四 · 一句口号，被当场放回它的原产地检验。</b>「一切经过统一战线」是王明搬来的口号。毛泽东在文中没有展开批判它，只用一句「听说法国共产党曾经提出过这个口号」轻轻带过，紧接着就解释：法国有各党派的共同委员会，而共同决定的纲领社会党方面不愿照做，所以法共需要这个口号去<b>限制别人</b>，不是用来<b>束缚自己</b>；中国没有这个制度前提，国民党还剥夺各党派的平等权利，「我们提出这个口号，只是自己把自己的手脚束缚起来」。后来研究者把这一句定性为「<b>王明机械搬用尚不完全了解中国抗战和统一战线实际的共产国际的口号</b>」——本篇文章最有示范价值的手法，正是这种「把口号放回它的制度环境里称一称」的检验方式。</li>
+        <li><b>戏剧性五 · 两天两篇结论，一篇讲怎么合伙，一篇讲枪杆子。</b>十一月五日下午讲结论的前三个问题，其中第三个问题是本篇；十一月六日下午讲第四、五个问题，《战争和战略问题》是第四个问题；随后全会通过政治决议案、闭幕。两天两篇文件，一篇回答「跟谁一起干、怎样不被吃掉」，一篇回答「兵权归谁」。合起来看，才是六中全会给「独立自主」下的完整定义。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，确定「独立自主的山地游击战争」方针——后来被王明批评为「不策略」的起点</div></div>
+      <div class="tl-item"><div class="tl-date">1937.11.29</div><div class="tl-body">王明（陈绍禹）自莫斯科回到延安，带来共产国际关于中国抗战的「新政策」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.12.09—14</div><div class="tl-body">十二月会议。王明作《如何继续全国抗战与争取抗战胜利呢？》，提出「一切经过统一战线」。毛泽东事后自述「我是孤立的」<span class="note">（《湘潮》2021 年第 4 期，周树辉文）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1938.02.27—03.01</div><div class="tl-body">中央政治局会议。王明附和国民党「只要一个军队」的主张，提出「统一指挥，统一编制，统一武装，统一纪律，统一待遇，统一作战计划，统一作战行动」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.03</div><div class="tl-body">中央政治局会议决定派任弼时赴莫斯科，向共产国际说明中国实情；共产国际领导人表示以毛泽东为首的中共中央政治路线是正确的，从根本上取消了王明的「钦差大臣」身份</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.09</div><div class="tl-body">王稼祥回延安，传达共产国际指示与季米特洛夫意见：「在领导机关中要在毛泽东为首的领导下解决」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.09.29</div><div class="tl-body">中共扩大的六届六中全会在延安桥儿沟天主堂开幕。时武汉尚在</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.12—14</div><div class="tl-body">毛泽东作政治报告《论新阶段》，共八个部分，分四次讲完；其第七部分即 1991 年版第二卷上一篇《中国共产党在民族战争中的地位》</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.21 / 10.25</div><div class="tl-body">广州失陷、武汉失陷，抗战进入相持阶段</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.11.05</div><div class="tl-body">下午讲结论的第一、二、三个问题；<b>本篇即第三个问题</b>。同日全会发出《致各国共产党电》《致日本共产党电》</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.11.06</div><div class="tl-body">下午讲结论的第四、五个问题，《战争和战略问题》为第四个问题；全会通过《中共扩大的六中全会政治决议案》，王稼祥致闭幕词，会议闭幕</div></div>
+      <div class="tl-item green"><div class="tl-date">全会之后</div><div class="tl-body">撤销长江局，设中原局（刘少奇）、南方局（周恩来），东南分局改为东南局；确定「巩固华北，发展华中华南」的战略方针</div></div>
+      <div class="tl-item green"><div class="tl-date">1947.12.25</div><div class="tl-body">《目前形势和我们的任务》中对这一分歧作出总结：「不敢放手发动群众斗争……将抗日战争的领导权送给国民党」——此段于 1952 年录入本篇题解</div></div>
+      <div class="tl-item green"><div class="tl-date">中共七大</div><div class="tl-body">毛泽东：「六中全会是决定中国之命运的。」「没有六中全会，今天的局面不会有这样大。」</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      合作要继续，让步也必须让，但让步的性质决定合作的存亡：<span class="q">积极的让步是手段，消极的让步是投降</span>。因此统一战线中的正确方针只有六个字——<span class="q">「既统一，又独立」</span>。所谓独立，不是要分裂，恰恰相反：不保存党派和阶级的独立性，「就是将合作变成了混一，必然牺牲统一战线」。而在具体做法上，「一切经过统一战线」这个口号必须放弃，因为国民党不许有统一战线的组织形式、又想指挥各党听它一党的命令——照这个口号办事，等于自己把手脚捆起来。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 让步必须能算清账</h4>
+        <p>全篇不反对让步，反而说「互相互让是必需的」。但它给让步加了一个判据：让步要看是不是「当作整个革命政策的一部分看的」「联系于总的革命路线而当作不可缺少的一环看的」「当作曲线运动的一个片断看的」。让得出、说得清、处在通往目标的路径上，才叫积极；让掉了却不知道换到了什么，就不叫让步。<span class="card-tag">判据</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 独立性是合作的前提，不是它的反面</h4>
+        <p>第二节是全篇的理论枢纽，也是最反直觉的一句：「不是因合作和统一而牺牲党派和阶级的必要权利，而是相反，坚持党派和阶级的一定限度的权利；<b>这才有利于合作，也才有所谓合作</b>。否则就是将合作变成了混一，必然牺牲统一战线。」——一味顺从不是维护合作，而是在拆掉合作赖以成立的那个「对方」。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 破一个口号，要给出替代清单</h4>
+        <p>末节只否定不算完，毛泽东随即把「怎么处置与国民党的关系」拆成四档：<b>先奏后斩、先斩后奏、斩而不奏、不斩不奏</b>，每档配上具体事例。这是全篇最实用的一段——它把「原则性」翻译成了「遇到这类事该走哪一条路」。<span class="card-tag">可操作</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">让步论</div><div class="n-sub">互助互让是必需的<br>但必须是积极的</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">一致性原理</div><div class="n-sub">阶级斗争服从民族斗争<br>但阶级独立性要保存</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">破口号</div><div class="n-sub">「一切经过」做不到<br>而且是自己捆手脚</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">十六字方针</div><div class="n-sub">先奏后斩／先斩后奏<br>斩而不奏／不斩不奏</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">落点</div><div class="n-sub">不破裂统一战线<br>又决不可自己束缚手脚</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的走向很特别：它<b>先给「退让」定性质</b>（第一节），再给「退让」找理论依据（第二节），最后才去处理那个具体的错误口号（第三节）。顺序不是「先驳论、再立论」，而是<b>先把标准立起来，让被驳的东西自动落地</b>——「一切经过统一战线」之所以站不住，不是因为它是王明提的，而是因为在「积极让步」这条标准下，它连让步都算不上，只是单方面的服从。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">先立性质：什么叫「积极的让步」</span><span class="part-scope">第一节</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先并列四组「我也让、你也让」：我巩固扩大我党我军／同时赞助友党友军扩大；人民要求政府满足政治经济要求／同时给政府利于抗日的援助；工人要求厂主改良待遇／同时积极作工；地主减租减息／农民交租交息</li>
+          <li>退让的具体边界也写明：「彼此不挖墙脚，彼此不在对方党政军内组织秘密支部；在我们方面，就是不在国民党及其政府、军队内组织秘密支部」——这一条是给对方的保证，也是给自己划的线</li>
+          <li>引《孟子》「有所不为而后可以有为」；并说「让了前者就得了后者，消极的步骤达到了积极的目的」；引列宁「为了更好的一跃而后退」</li>
+          <li><span class="k">反面裁断</span>：「把让步看作纯消极的东西，不是马克思列宁主义所许可的。纯消极的让步是有过的，那就是第二国际的劳资合作论，把一个阶级一个革命都让掉了。中国前有陈独秀，后有张国焘，都是投降主义者」——用两个具体的人给「消极让步」定了档</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">再找依据：民族斗争与阶级斗争的一致性</span><span class="part-scope">第二节 · 全篇理论枢纽</span></div>
+      <div class="part-body">
+        <ul>
+          <li>根本原则：「用长期合作支持长期战争，就是说使阶级斗争服从于今天抗日的民族斗争」</li>
+          <li>在这原则<b>之下</b>（而不是之外）：「保存党派和阶级的独立性，保存统一战线中的独立自主；不是因合作和统一而牺牲党派和阶级的必要权利……否则就是将合作变成了混一，必然牺牲统一战线」</li>
+          <li>两者如何统一：阶级斗争以民族斗争的形式出现；阶级的政治经济要求「以不破裂合作为条件」，而一切阶级斗争的要求「以民族斗争的需要（为着抗日）为出发点」——两个方向的约束互为条件，这就是「一致起来」的实际含义</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">后破口号：十六字处置方针</span><span class="part-scope">第三节</span></div>
+      <div class="part-body">
+        <p>末节先用三句话打掉口号的立足点：国民党是当权的党、至今不许有统一战线的组织形式；「一切经过」如果就是经过蒋介石和阎锡山，那只是「片面的服从，无所谓『经过统一战线』」；国民党的方针是限制我们发展——提出这个口号「只是自己把自己的手脚束缚起来，是完全不应该的」。然后给出替代方案：</p>
+      </div>
+    </div>
+
+    <div class="move-grid">
+      <div class="move">
+        <div class="move-head"><span class="move-no">先奏后斩</span><span class="move-tag">应当先取得同意</span></div>
+        <div class="move-text">在现时，有些应该先得国民党同意，例如将三个师的番号扩编为三个军的番号，这叫做先奏后斩。</div>
+        <div class="move-note">对方有让步空间的、程序上走得通的，就走程序</div>
+      </div>
+      <div class="move gold">
+        <div class="move-head"><span class="move-no">先斩后奏</span><span class="move-tag">造成既成事实再报告</span></div>
+        <div class="move-text">有些则造成既成事实再告诉它，例如发展二十余万军队，这叫做先斩后奏。</div>
+        <div class="move-note">对方必定限制、但事情必须办的，先办后报</div>
+      </div>
+      <div class="move blue">
+        <div class="move-head"><span class="move-no">斩而不奏</span><span class="move-tag">做了，暂不报告</span></div>
+        <div class="move-text">有些则暂时斩而不奏，估计它现时不会同意，例如召集边区议会之类。</div>
+        <div class="move-note">估计对方现时不会同意，但事情在自己辖内可办</div>
+      </div>
+      <div class="move green">
+        <div class="move-head"><span class="move-no">不斩不奏</span><span class="move-tag">暂时不做</span></div>
+        <div class="move-text">有些则暂时不斩不奏，例如那些如果做了就要妨碍大局的事情。</div>
+        <div class="move-note">做了一件眼前得力的事会妨碍大局——这就是「积极让步」判据在起作用：服从总的革命路线，而不是服从对方</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">四档不是四招权术，而是一张<b>分类处置表</b>：决定用哪一档的，不是「怕不怕得罪人」，而是两件事——<b>这件事对方现在会不会同意</b>、<b>这件事与大局的关系</b>。值得注意的是第四档：「不斩不奏」也是四种方针之一，而不是例外。有「暂时不做」这一档，前三种才不至于变成什么都敢硬来的借口。</p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">同一条战线上的三种立场</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">关门主义</div>
+          <div class="spec-seg green">既统一又独立</div>
+          <div class="spec-seg gold">投降主义</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>左 · 关门主义</b>因为要独立就拒绝统一：「一切不经过」。本篇未展开，但全会政治决议案把它与投降主义并列为要批评的两种偏向</div>
+          <div class="spec-label"><b>中 · 独立自主</b>让步是手段、独立是底线：「统一战线中的独立自主，既统一，又独立」。本篇正面主张的唯一立场</div>
+          <div class="spec-label"><b>右 · 投降主义</b>因为要统一就交出独立：「一切经过」「一切服从」。篇中点的名是陈独秀、张国焘；六中全会针对的是王明</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这张光谱的单位是「独立性」，不是「态度强硬程度」。本篇的处理方式很克制：它把「左」的一侧只用一句话带过，火力集中在「右」——因为当时实际造成损失的是右侧。<b>但两侧的位置是并列的</b>，这也解释了为什么全会的决议里两条战线都要反：同一种病症（不会给「独立」与「统一」分配边界）在两种处境下会长成相反的样子。</p>
+
+    <div class="quote">
+      总之，我们一定不要破裂统一战线，但又决不可自己束缚自己的手脚，因此不应提出「一切经过统一战线」的口号。「一切服从统一战线」，如果解释为「一切服从」蒋介石和阎锡山，那也是错误的。我们的方针是统一战线中的独立自主，既统一，又独立。
+      <span class="src">本篇末段（1991 年版第 537—540 页）｜全篇落点：一句话里同时锁死了「不许破裂」和「不许自缚」两条边界</span>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">代价与收益：两种「让步」的对照</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">对照项</th><th>消极的让步（篇中裁为投降主义）</th><th>积极的让步（篇中主张）</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">让的是什么</td><td>让掉「党派和阶级的必要权利」，让到连独立性都不保存</td><td>让掉具体权益：红军改编、红色区域改制、暴动政策取消；并保证不在对方党政军内组织秘密支部</td></tr>
+        <tr><td class="c1">换到了什么</td><td>说不清——第二国际是「把一个阶级一个革命都让掉了」</td><td>说得清：<b>「让了前者就得了后者」</b>，换来了全国抗日战争的实现</td></tr>
+        <tr><td class="c1">在全局中的位置</td><td>脱离总的革命路线，成为孤立的退守</td><td>「当作整个革命政策的一部分」「联系于总的革命路线」「当作曲线运动的一个片断」</td></tr>
+        <tr><td class="c1">提法上的表现</td><td>「一切经过统一战线」「一切服从统一战线」</td><td>「既统一，又独立」；十六字分类处置</td></tr>
+        <tr><td class="c1">篇中举的人</td><td>陈独秀（1927）、张国焘（1938）</td><td>——</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:12px;">这张表说明本篇的辩法：<b>它不去争论「该不该让」，只去追问「这次让，账算不算得清」。</b>把争论从立场之争换成账目之争，正是它能一次说服全会的关键——因为账目是可以逐条核对的东西。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>先给「让步」立一个可核对的判据，再谈该不该让</h4>
+          <p>最容易写坏的段落是「要不要妥协」。本篇绕开了这个争论：它承认让步必需，然后给让步加了一个三条式的判据——是不是整个方案的一部分、是不是联系于总目标、是不是曲线运动的一个片断。有了这个判据，「一切经过统一战线」就不必靠批判它本人来否定：按判据一算，它连让步都算不上，只是单方面的服从。<b>把立场之争改造成账目之争，是这篇文章能当场说服人的真正原因。</b></p>
+          <span class="mv">迁移：会议上争论「要不要妥协/要不要降价/要不要让步」时，先别投票。先把判据写出来：让的是什么、换到了什么、它属于哪个更大的目标。三栏里任何一栏填不出来，那次让步就是消极的——而填得出来的时候，往往没人再反对。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「坚持独立性」被论证成维护合作的手段，而不是破坏合作的风险</h4>
+          <p>第二节那句「否则就是将合作变成了混一，必然牺牲统一战线」，是整篇里最值得抄下来的一句。它把常识反过来了：一般直觉是「独立性强会伤害合作」，它的判断是「独立性消失，合作就没有对象了，于是必然崩掉」。之所以成立，是因为它盯着合作的<b>存续条件</b>——合作的前提是两方都还在，一方被吸收进另一方，剩下的不是更深的合作，是一个空壳。<b>这也解释了为什么「一味顺从」往往以关系破裂收场，而不是以关系稳固收场。</b></p>
+          <span class="mv">迁移：在任何长期关系（合伙、雇佣、甲乙方、联盟）里，把「不可让的一条」写下来并且让对方知道它——这不是强硬，这是让关系可持续的机制。反过来，如果一段关系里你已没有任何一条底线是对方知道的，那么这段关系其实已经只剩形式。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「这不行」之后必须接一张分档表，争论才会真正结束</h4>
+          <p>十六字方针的价值不在聪明，在于它是<b>分类处置</b>：把一个模糊的场景（与对方打交道的每一件事）拆成四类，每类配一个动作。此前争论的形态是「一切经过」还是「一切不经过」，两种都是一刀切；十六条方针对一刀切的办法不是取中间值，而是换一个坐标——按「对方现在会不会同意」和「与大局的关系」两件事分档。<b>使争论结束的从来不是更强的论断，而是更好用的分类。</b></p>
+          <span class="mv">迁移：当你反对某种通行做法时（「所有需求都要走评审」「所有改动都要先报备」），不要只说不合理，给出一张三到四档的处置表，并写明每一档的适用条件。对方往往不是被说服的，是被「终于有路可走了」这件事解决的。</span>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:6px;">另记两处阅读提示：<b>其一，本篇的对手在场。</b>六中全会是一次「当面收口」的会议，王明就在会上；所以文章里出现「刘少奇同志说的很对」这样的引述，也出现「听说法国共产党曾经提出过这个口号」这样不点名的处理——措辞的分寸本身就是材料的一部分。<b>其二，题解不是正文。</b>1991 年版把 1947 年《目前形势和我们的任务》里那段总结整段放进了题解，其中「将抗日战争的领导权送给国民党」这类判断，是九年后回看时的定性，不是 1938 年 11 月 5 日那个下午讲的话。</p>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">为了长期合作，统一战线中的各党派实行互助互让是必需的，但应该是积极的，不是消极的。</div>
+        <div class="ctx">第一节开篇｜全篇的立法句：先承认让步必需，再给让步定性质</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">没有红军的改编，红色区域的改制，暴动政策的取消，就不能实现全国的抗日战争。让了前者就得了后者，消极的步骤达到了积极的目的。「为了更好的一跃而后退」，正是列宁主义。</div>
+        <div class="ctx">第一节｜「让步要能算清账」的原始表述；「为了更好的一跃而后退」一语出自列宁《黑格尔〈哲学史讲演录〉一书摘要》</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">不是因合作和统一而牺牲党派和阶级的必要权利，而是相反，坚持党派和阶级的一定限度的权利；这才有利于合作，也才有所谓合作。否则就是将合作变成了混一，必然牺牲统一战线。</div>
+        <div class="ctx">第二节｜全篇理论枢纽，也是最能迁移出来的一句</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">有些应该先得国民党同意，例如将三个师的番号扩编为三个军的番号，这叫做先奏后斩。有些则造成既成事实再告诉它，例如发展二十余万军队，这叫做先斩后奏。有些则暂时斩而不奏……有些则暂时不斩不奏，例如那些如果做了就要妨碍大局的事情。</div>
+        <div class="ctx">第三节｜十六字处置方针的原文；四档各有一例，末档专门留给「妨碍大局的事」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">总之，我们一定不要破裂统一战线，但又决不可自己束缚自己的手脚，因此不应提出「一切经过统一战线」的口号。……我们的方针是统一战线中的独立自主，既统一，又独立。</div>
+        <div class="ctx">末句｜全篇落点；「既统一，又独立」此后成为中共处理统一战线关系的一句标准表述</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《战争和战略问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.11.06 ｜ 第二卷第十二篇</span></div>
+        <p>同一场会议结论的第四个问题，晚一天讲（十一月六日下午），讲完即通过政治决议案、闭幕。本篇处理的是「怎样与同盟者相处而不被吃掉」，下一篇处理的是「枪杆子归谁、仗怎么打」。两天两篇合起来，才是六中全会给「独立自主」下的完整定义——政治上的独立靠组织上的独立撑着，组织上的独立最终靠武装撑着。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《中国共产党在民族战争中的地位》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.10.14 ｜ 第二卷第十篇</span></div>
+        <p>同一会议的政治报告《论新阶段》第七部分，比本篇早二十余天。其中第五节「坚持统一战线和坚持党的独立性」正是本篇的正面提纲：那边是在报告里从容地立论，这边是在结论里针对具体口号收口。两篇对照读，可以看见同一个人在同一场会上如何切换两种笔法——一处铺陈原则，一处拆解口号、列出分档动作。<span class="muted">（另可参看本篇题解所引 1947 年《目前形势和我们的任务》一段，那是这一分歧九年后的定性。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>算账题</b>：写下你最近三个月里做过的一次让步（价格、排期、职责边界、立场表态）。补上三栏：让了什么／换到了什么／这属于哪个更大的目标。第三栏如果填不出来，这次让步按本篇的标准就是消极的——不必自责，但要知道它为什么让你事后不舒服。</div>
+      <div class="q">二 · <b>底线题</b>：挑你目前最重要的一个合作关系（客户、合伙人、合作方、上级）。写下「不可让」的一条和「可让」的一个范围，然后检查一件事：<b>对方知道这条底线吗？</b>本篇的判断是——底线公开且被承认，合作才稳固；对方不知道的底线，不会保护任何人。</div>
+      <div class="q">三 · <b>分档题</b>：把团队里最近一次关于「要不要所有事都先报备／都走流程」的争论拿出来。仿照十六字方针，写出你环境里的四档：需要先请示的／可以先做后报的／可以只做不报的／暂时不做的，每档写一个具体例子。如果四档写不齐，说明争论的其实是分类标准，而不是「要不要报备」。</div>
+      <div class="q">四 · <b>语境题</b>：本篇的「独立自主」是在「抗日民族统一战线之内」讲的——它主张的是<b>在合作中保留边界</b>，与今天常见的「自主可控」不是同一层含义。找一个你熟悉、但已跨语境挪用的口号（「快速迭代」「扁平化」「以客户为中心」「闭环」），写下它最初成立的前提是什么，再看你的环境里那个前提还在不在。</div>
+      <div class="hint"><b>三问卡</b>：① 这次让步换来了什么，我能用一句话说清吗？② 我保留了哪一条底线，而且对方知道它吗？③ 我反对的那个做法，我给的是分档的替代方案，还是只有一句「不行」？三问里只有第三问是「对外」的——前两问答不上来，第三问通常也做不到。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十一篇</div>
+    <div>依据人民出版社 1991 年版第二卷 ｜ 2026.10.09</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 · 战争和战略问题 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 十八项网格 ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+
+/* ===== 方针卡 ===== */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.move{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.move-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.move-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:15px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.move-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.move-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14px;color:var(--ink);line-height:1.8;min-width:0;}
+.move-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.move.gold{border-left-color:var(--gold);}
+.move.gold .move-no{color:var(--gold);}
+.move.blue{border-left-color:var(--blue);}
+.move.blue .move-no{color:var(--blue);}
+.move.green{border-left-color:var(--green);}
+.move.green .move-no{color:var(--green);}
+@media(max-width:420px){.move{padding:11px 12px 12px;}.move-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.move-text,.move-note,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅</div>
+    <h1>战争和战略问题</h1>
+    <div class="sub2">一篇七千字的军事总结 · 「枪杆子里面出政权」· 三个战略转变</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十二篇 · <b>一九三八年十一月六日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《战争和战略问题》。1991 年版《毛泽东选集》第二卷第十二篇，紧接《统一战线中的独立自主问题》。正文六节，节题即骨架：中国的特点和革命／中国国民党的战争史／中国共产党的战争史／国内战争和民族战争中党的军事战略的转变／抗日游击战争的战略地位／注意研究军事问题</td></tr>
+      <tr><th>写作时间</th><td>一九三八年十一月六日（题下所标）。据中央党史和文献研究院《〈毛泽东选集〉一至四卷第一版正文和题解的主要修订情况》：毛泽东在中共扩大的六届六中全会所作的结论共讲了五个问题——十一月五日下午讲第一、二、三个问题，六日下午讲第四、五个问题，<b>本篇是结论的第四个问题</b>（第五个问题是干部政策、新老党员关系、三民主义与共产主义的关系、边区工作等）。1991 年版校订时在题解中加写了「结论是在一九三八年十一月五日和六日作的，这一部分是六日讲的」一句，即为此</td></tr>
+      <tr><th>最初发表</th><td>作为会议结论的一部分，战时未见单独公开发表；一九五二年随《毛泽东选集》第二卷（人民出版社第一版）首次公开出版。1952 年第一版目录中本篇列为第 506—521 页，与《统一战线中的独立自主问题》（502—505）相接</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 541—557 页。分节起页：一 541／二 545／三 547／四 549／五 552／六 554</td></tr>
+      <tr><th>篇幅</th><td>正文约七千字（以汉字计，不含标点与注释；据 1991 年版电子文本统计为七千零三十九字），分六节，注释二十六条。各节体量相差很大：第一节两千二百余字，第六节不足三百字</td></tr>
+      <tr><th>发表场合</th><td>中共扩大的六届六中全会（1938.9.29—11.6，延安桥儿沟天主堂）<b>闭幕日</b>。全会由张闻天致开幕词、王稼祥作《国际指示报告》；毛泽东、王稼祥、王明、周恩来、朱德、康生、彭德怀、博古、刘少奇、陈云、项英、张闻天为主席团成员。本篇讲完之后，全会通过《中共扩大的六中全会政治决议案》，王稼祥致闭幕词</td></tr>
+      <tr><th>历史坐标</th><td>讲这篇的前十六天（十月二十一日）广州失陷、前十二天（十月二十五日）武汉失陷，抗战由战略防御转入战略相持；全会九月二十九日开幕时武汉尚在，散会时华中最大城市已易手。<b>讲完三天后（十一月十三日），长沙在「焦土抗战」计划下全城自焚</b>——日军当时离长沙还有二百多里，这场火是中国人自己点的</td></tr>
+      <tr><th>日后轨迹</th><td>1954 年 3 月 29 日，英国共产党总书记波立特致信中共中央，要求英译本删去本篇第一、第二节（理由：主张武装革命，不符合英共纲领《英国到社会主义之路》，且英国法律禁止公开出版物出现推翻政府的言论）。中共中央宣传部拟复信同意，送审时毛泽东在稿上批：「陆定一同志：中宣部在这个问题上犯了错误——同意英国党的错误提议——应当注意。」改由王稼祥任部长的中央对外联络部起草，八月二十三日复信拒绝删改。英方劳伦斯出版公司 1956 年出版英译本时仍删去这两节；1959 年我方坚持恢复，不让步则收回版权，最终未授权该社翻译第二版英译本。1956 年 3 月毛泽东对越南劳动党长征、印尼共产党艾地说：「在这个问题上，我们和波立特同志的意见是不一致的。」</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 前一晚讲「怎么合伙」，第二天讲「枪归谁」。</b>六中全会的结论一共五个问题：十一月五日下午讲第一、二、三个问题，其中第三个就是上一篇《统一战线中的独立自主问题》；六日下午讲第四、五个问题，<b>本篇是第四个</b>。讲完当场通过政治决议案、王稼祥致闭幕词，全会闭幕。两篇合起来才是六中全会给「独立自主」下的完整定义：<b>政治上的独立要靠组织上的独立撑着，组织上的独立最终要靠武装撑着。</b></li>
+        <li><b>戏剧性二 · 对手就在会上，而全文没有一处点名。</b>全会之前，王明在发言中表现出「对革命的乡村能否战胜敌占城市的怀疑态度」（中国军网《六届六中全会的召开》）。毛泽东没有针对谁，而是从「中国政治斗争的历史方面」讲起。他后来在整风时说明过这种处理：「<b>在六中全会的文件上，在六中全会的记录上，看不出我们尖锐地批评了什么东西，因为在那个时候，不可能也不应该提出批评，而是从正面肯定了一些问题，就是说在实际上解决了问题。</b>」本篇的正面形式，就是把话说成历史课。</li>
+        <li><b>戏剧性三 · 全篇最反常识的一笔：把对手当先生。</b>第二节写国民党的战争史，写蒋介石「他看军队如生命」，紧接着一句：「有军则有权，战争解决一切，这个基点，他是抓得很紧的。<b>对于这点，我们应向他学习。在这点上，孙中山和蒋介石都是我们的先生。</b>」——这是讲给一个刚刚批判了投降主义的全会听的：向对手学的是方法，不是立场。</li>
+        <li><b>戏剧性四 · 兵权那句话，点的是本党的人。</b>「共产党员不争个人的兵权（决不能争，<b>再也不要学张国焘</b>）」。张国焘一九三八年四月四日借祭黄帝陵之机出逃、四月十七日发表声明脱党、四月十八日被开除党籍——距本篇只有七个月，「再也不要学张国焘」不是修辞。此前一年（1937 年 3 月）中央政治局已作出《关于张国焘同志错误的决定》，本篇算是把这件事写进正式的军事结论里。</li>
+        <li><b>戏剧性五 · 讲完三天，长沙自焚。</b>本篇在第二个问题里刚说过广州、武汉的放弃是正确的、是战略退却；十一月十三日凌晨，长沙警备部队与自卫团在「焦土抗战」计划下误信谣言、擅自纵火，全城烧了五天五夜，三万多人在大火中丧生，九成以上房屋被毁。同一份结论里那句「不要为若干大城市和交通要道的丧失所震惊」，三天后就有了最刺眼的反面注脚——<b>城池不是败给敌人的，是自己烧的</b>。</li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1927.08.07</div><div class="tl-body">中共中央紧急会议（八七会议）在汉口召开，毛泽东提出「须知政权是由枪杆子中取得的」，会议确定土地革命和武装反抗国民党反动统治的总方针<span class="note">（《毛泽东军事文集》第 1 卷第 2 页）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1929—1935</div><div class="tl-body">土地革命战争。本篇第三节自认：六届四中全会「在名义上反对政治上的『左』倾机会主义，在实际上重新犯了『左』倾机会主义的错误」；三年的极端困难「然后才从血的教训中纠正过来。这种纠正是遵义会议的成绩」</div></div>
+      <div class="tl-item"><div class="tl-date">1937.08.22—25</div><div class="tl-body">洛川会议，确定「独立自主的山地游击战争」方针——后成为党内争论的焦点</div></div>
+      <div class="tl-item"><div class="tl-date">1937.12.09—14</div><div class="tl-body">十二月会议。王明作《如何继续全国抗战与争取抗战胜利呢？》，提出「一切经过统一战线」，并批评洛川会议以来的方针。毛泽东后来自述「我是孤立的」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.02.27—03.01</div><div class="tl-body">中央政治局会议。王明提出全国军队「统一指挥、统一编制、统一武装、统一纪律、统一待遇、统一作战计划、统一作战行动」，对游击战的作用估计不足</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.09</div><div class="tl-body">王稼祥自莫斯科回延安，传达共产国际指示与季米特洛夫意见：「在领导机关中要在毛泽东为首的领导下解决」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.09.29</div><div class="tl-body">中共扩大的六届六中全会在延安桥儿沟天主堂开幕。时武汉尚在</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.12—14</div><div class="tl-body">毛泽东作政治报告《论新阶段》，八个部分分四次讲完；第七部分即第二卷第十篇《中国共产党在民族战争中的地位》</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.21 / 10.25</div><div class="tl-body">广州失陷、武汉失陷，抗战进入相持阶段</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.11.05</div><div class="tl-body">下午讲结论第一、二、三个问题（第三个即《统一战线中的独立自主问题》）。第二个问题即「广州、武汉失守后的形势」，毛泽东说城市放弃是正确的，日军「战略进攻接近了顶点」</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.11.06</div><div class="tl-body">下午讲结论第四、五个问题；<b>本篇即第四个问题</b>。讲毕，全会通过《中共扩大的六中全会政治决议案》，王稼祥致闭幕词，会议闭幕</div></div>
+      <div class="tl-item"><div class="tl-date">1938.11.13</div><div class="tl-body">长沙「文夕大火」：全城自焚，烧五天五夜，三万余死，九成以上房屋被毁</div></div>
+      <div class="tl-item green"><div class="tl-date">全会之后</div><div class="tl-body">全会确定「巩固华北、发展华中」的战略方针，撤销长江局，改设中原局（刘少奇）与南方局（周恩来）；「统一战线的独立自主原则、军事上独立自主的游击战争的战略方针，成为全党的共识和自觉行动」</div></div>
+      <div class="tl-item green"><div class="tl-date">1943.10.14</div><div class="tl-body">毛泽东在西北局高干会上总结「王明路线的特点」四条，第三条即「军事上反对游击战主张运动战」</div></div>
+      <div class="tl-item green"><div class="tl-date">1954—1959</div><div class="tl-body">英共要求删去本篇头两节，毛泽东批「中宣部在这个问题上犯了错误」，八月二十三日复信拒绝；英译本仍删改，我方最终未授权其翻译第二版</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全篇只回答一个问题：在中国，革命靠什么赢、革命者靠什么活。答案是同一件东西——枪杆子。所以开头就是那句宣言式的判断：<span class="q">「革命的中心任务和最高形式是武装夺取政权，是战争解决问题」</span>。但这句话不是口号，它后面跟着半篇的论证：同一个原则，在外国走议会与罢工的路、到起义时「首先占领城市」，在中国却「无议会可以利用，无组织工人举行罢工的合法权利」，于是「不是先占城市后取乡村，而是走相反的道路」。道路不同，组织原则却只有一个——<span class="q">「党指挥枪，而决不容许枪指挥党」</span>。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先分中国与外国：同一个原则，两条路</h4>
+        <p>第一节两千二百余字，一半篇幅写外国：资本主义国家有资产阶级民主制度、有议会讲坛、有合法组织，「是长期的合法斗争，是利用议会讲坛，是经济的和政治的罢工」；中国的特点则是「在内部没有民主制度，而受封建制度压迫；在外部没有民族独立，而受帝国主义压迫」。<b>条件不同，任务就不同</b>——这才是全篇真正的第一块基石，后面的兵权、战略转变都建立在它上面。<span class="card-tag">前提</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 兵权要争，但只争哪一种</h4>
+        <p>第二节从国民党史、军阀史一路讲下来，落到一句分寸极清楚的话：「共产党员不争个人的兵权（决不能争，再也不要学张国焘），但要争党的兵权，要争人民的兵权。现在是民族抗战，还要争民族的兵权。」<b>「不争」与「要争」是同一句话的两半</b>——只读前半句是放弃，只读后半句是野心。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 「万能论」的帽子不躲，但要补一句边界</h4>
+        <p>「有人笑我们是『战争万能论』，对，我们是革命战争万能论者，这不是坏的，是好的，是马克思主义的。」紧接着的下一句是：「我们是战争消灭论者，我们是不要战争的；但是只能经过战争去消灭战争，不要枪杆子必须拿起枪杆子。」<b>两句必须连着读</b>：前者是当下唯一可行的路径，后者是路径的终止条件。<span class="card-tag">成对读</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">条件</div><div class="n-sub">半殖民地半封建<br>无议会、无罢工自由</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">道路</div><div class="n-sub">不是先占城市后取乡村<br>而是走相反的道路</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">主干</div><div class="n-sub">不争个人兵权<br>要争党、人民、民族的兵权</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">原则</div><div class="n-sub">党指挥枪<br>决不容许枪指挥党</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">当下落点</div><div class="n-sub">游击战争占战略地位<br>全党注重战争，学习军事</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的走向值得注意：它<b>不是从原则出发的</b>。第一环是条件（中国是什么国家），第二环由条件推出道路（所以只能相反地走），第三环才出现力量（所以要争兵权），第四环才是原则（所以枪要服从党）。最后一步落到眼前的任务上。<b>全篇没有一句「因为马克思恩格斯说过」，起点是中国的国情，终点是明天的仗怎么打。</b>中间用两节历史（国民党史、本党史）做了同一件事的两次验证：谁抓住了「有军则有权」这个基点谁就成事，谁放弃它就「闹不出什么名堂来」。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">甲</span><span class="part-title">中国的特点和革命</span><span class="part-scope">第一节 · 541 ｜ 约 2200 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>开篇即立总纲：「革命的中心任务和最高形式是武装夺取政权，是战争解决问题。这个马克思列宁主义的革命原则是普遍地对的，不论在中国在外国，一概都是对的。」</li>
+          <li>写外国：有民主制度、有议会讲坛、有合法组织，任务是长期合法斗争、教育工人、积蓄力量；「到了起义和战争的时候，又是首先占领城市，然后进攻乡村」——十月革命证明了这一条</li>
+          <li>写中国：<span class="k">「无议会可以利用，无组织工人举行罢工的合法权利」</span>，故「不是先占城市后取乡村，而是走相反的道路」</li>
+          <li>结论句：「在中国，主要的斗争形式是战争，而主要的组织形式是军队。」其他一切组织和斗争「都是为着战争的」——「在战争爆发以前的一切组织和斗争，是为了准备战争的」</li>
+          <li>引斯大林：「在中国，是武装的革命反对武装的反革命。这是中国革命的特点之一，也是中国革命的优点之一。」</li>
+          <li>自我检讨：一九二一年至一九二六年「认识不足」，「不去认真地准备战争和组织军队」；一九二七年以后「许多同志把党的中心任务仍旧放在准备城市起义和白区工作方面」</li>
+          <li>收束：「一句话，全党都要注重战争，学习军事，准备打仗。」并点出现象——有党员愿做组织工作、民众运动，不愿研究战争；有些学校没注意鼓励学生上前线</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">乙</span><span class="part-title">中国国民党的战争史</span><span class="part-scope">第二节 · 545 ｜ 全篇火力中心</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先看对手怎么做：孙中山从兴中会起就搞武装起义，同盟会时期「更充满了武装起义的事迹」，中华革命党时期反袁，后来海军南下、桂林北伐、创设黄埔，「都是孙中山的战争事业」</li>
+          <li>再看不搞武装的政党什么下场：进步党要靠袁世凯、段祺瑞、蒋介石当靠山才有官做；青年党等小党「没有军队，因此就闹不出什么名堂来」</li>
+          <li>提炼规律：「外国的资产阶级政党不需要各自直接管领一部分军队。中国则不同，由于封建的分割，地主或资产阶级的集团或政党，谁有枪谁就有势，谁枪多谁就势大。」→「处在这样环境中的无产阶级政党，应该看清问题的中心。」</li>
+          <li>“真理”句与原则句在此：<span class="k">「枪杆子里面出政权」</span>、「我们的原则是党指挥枪，而决不容许枪指挥党」</li>
+          <li>但「有了枪确实又可以造党」：八路军在华北造了一个大党，「还可以造干部，造学校，造文化，造民众运动。延安的一切就是枪杆子造出来的」</li>
+          <li>末段连着两句互为边界的主张：「有人笑我们是『战争万能论』，对，我们是革命战争万能论者」「我们是战争消灭论者，我们是不要战争的；但是只能经过战争去消灭战争，不要枪杆子必须拿起枪杆子」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">丙</span><span class="part-title">中国共产党的战争史</span><span class="part-scope">第三节 · 547 ｜ 一部自认错的历史</span></div>
+      <div class="part-body">
+        <ul>
+          <li>三段承认：一九二一—一九二四「不懂得直接准备战争和组织军队的重要性」；一九二四—一九二七及其后「也还认识不足」；一九二七年以后「许多同志仍把中心任务放在准备城市起义和白区工作方面」</li>
+          <li>转折点清单：一九二四年参加黄埔军校 → 广东战争与北伐战争中「党已掌握了一部分军队」 → 革命失败后的南昌起义、秋收起义、广州起义，<b>「进入了创造红军的新时期」</b></li>
+          <li>对会议的评价不讲面子：八七会议「反对了政治上的右倾机会主义，使党大进了一步」；六届四中全会「在名义上反对政治上的『左』倾机会主义，在实际上重新犯了『左』倾机会主义的错误」——并指出这两个会议「都没有着重地涉及战争和战略的问题，这是当时党的工作重心还没有放在战争上面的反映」</li>
+          <li>遵义会议的位置：「主要地是反对战争中的机会主义，把战争问题放在第一位，这是战争环境的反映」</li>
+          <li>十七年的成绩单：「不但锻炼出来了一条坚强的马克思主义的政治路线，而且锻炼出来了一条坚强的马克思主义的军事路线」；并称在世界上「还只有苏联、中国、西班牙三国共产党所领导的三个军队」属于无产阶级和劳动人民方面</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">丁</span><span class="part-title">国内战争和民族战争中党的军事战略的转变</span><span class="part-scope">第四节 · 549 ｜ 全篇方法论最密处</span></div>
+      <div class="part-body">
+        <p>两个过程、四个战略时期、三个转变。这一段最值得学的是它怎么处理「倒退」：把正规军和运动战转成游击军和游击战，「便在现象上表现为一个倒退的转变」，而作者明确说「因此这个转变应该是非常困难的」——先承认困难的形态，再说服人去做。</p>
+        <table class="plain">
+          <thead><tr><th class="c1">转变</th><th>内容与时刻</th><th>难点与反对的两种倾向</th></tr></thead>
+          <tbody>
+            <tr><td class="c1">第一</td><td>国内游击战争 → 国内正规战争（后期；所谓正规战「是中国型的」，「在某种意义上，是提高了的游击战」）</td><td>既要反对「沉溺于游击性而不愿向正规性转变的右的地方主义和游击主义」，又要反对「过分地重视正规化的『左』的集中主义和冒险主义」。后者在中央苏区「曾经在三年的长时间内（遵义会议以前），付出了极大的牺牲，然后才从血的教训中纠正过来」</td></tr>
+            <tr><td class="c1">第二</td><td>国内正规战争 → 抗日游击战争（一九三七年秋，卢沟桥事变后）</td><td>「敌人是新的，即日本帝国主义，友军是过去的敌人国民党（它对我们仍然怀着敌意），战场是地域广大的华北」。国民党在这一转变中「主要由于轻敌，同时也存在着一种恐日病（以韩复榘、刘峙为代表），而遭受了很多不应有的损失」；我方「相当顺利地执行了这个转变」，虽然「曾经在中央和一部分军事干部之间发生过严重的争论」</td></tr>
+            <tr><td class="c1">第三</td><td>抗日游击战争 → 抗日正规战争（战略反攻阶段）</td><td>「则属于战争发展的将来，估计那时又将发生新的情况和新的困难，现在可以不去说它」</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">戊</span><span class="part-title">抗日游击战争的战略地位</span><span class="part-scope">第五节 · 552 ｜ 十八项清单在此</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先让一步（承认面）：「在抗日战争的全体上说来，正规战争是主要的，游击战争是辅助的，因为抗日战争的最后命运，只有正规战争才能解决」</li>
+          <li>再进一步（主张面）：「但游击战争是在全战争中占着一个重要的战略地位的。没有游击战争，忽视游击队和游击军的建设，忽视游击战的研究和指导，也将不能战胜日本」——理由是「大半个中国将变为敌人的后方」，若无最广大最坚持的游击战争，则相持局面难以出现、反攻准备不足、反攻之时没有呼应</li>
+          <li>「游击战争虽在战争全体上居于辅助地位，但实占据着极其重要的战略地位。抗日而忽视游击战争，无疑是非常错误的。」</li>
+          <li>提出分工：「国民党担任正面的正规战，共产党担任敌后的游击战，是必须的，恰当的，是互相需要、互相配合、互相协助的」</li>
+          <li>以十八项「综合其利」收束本节（见下）</li>
+          <li>末段留出口子：「游击队和游击战争应不停止于原来的地位，而向高级阶段发展，逐渐地变为正规军和正规战争」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">己</span><span class="part-title">注意研究军事问题</span><span class="part-scope">第六节 · 554 ｜ 不足三百字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>「两军敌对的一切问题依靠战争去解决，中国的存亡系于战争的胜负。」</li>
+          <li>三项研究的现状盘点：战术研究「已有很多的成绩」，缺点是「没有总结起来」；战略与战争理论研究「至今还只限于极少数人的工作」；政治工作研究「有第一等的成绩」，「缺点在于综合性和系统性的不足」</li>
+          <li>落点：「为了全党和全国的需要，军事知识的通俗化，成为迫切的任务……而战争和战略的理论则是一切的骨干」</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">十八项：游击战之利（原文清单）</h3>
+    <div class="grid18">
+      <div class="g18"><b>一</b>缩小敌军的占领地</div>
+      <div class="g18"><b>二</b>扩大我军的根据地</div>
+      <div class="g18"><b>三</b>防御阶段，配合正面作战，拖住敌人</div>
+      <div class="g18"><b>四</b>相持阶段，坚持敌后根据地，利于正面整军</div>
+      <div class="g18"><b>五</b>反攻阶段，配合正面，恢复失地</div>
+      <div class="g18"><b>六</b>最迅速最有效地扩大军队</div>
+      <div class="g18"><b>七</b>最普遍地发展共产党，每个农村都可组织支部</div>
+      <div class="g18"><b>八</b>最普遍地发展民众运动</div>
+      <div class="g18"><b>九</b>最普遍地建立抗日的民主政权</div>
+      <div class="g18"><b>十</b>最普遍地发展抗日的文化教育</div>
+      <div class="g18"><b>十一</b>最普遍地改善人民的生活</div>
+      <div class="g18"><b>十二</b>最便利于瓦解敌人的军队</div>
+      <div class="g18"><b>十三</b>最普遍最持久地影响全国的人心，振奋全国的士气</div>
+      <div class="g18"><b>十四</b>最普遍地推动友军友党进步</div>
+      <div class="g18"><b>十五</b>适合敌强我弱条件，使自己少受损失，多打胜仗</div>
+      <div class="g18"><b>十六</b>适合敌小我大的条件，使敌人多受损失，少打胜仗</div>
+      <div class="g18"><b>十七</b>最迅速最有效地创造出大批的领导干部</div>
+      <div class="g18"><b>十八</b>最便利于解决给养问题</div>
+    </div>
+    <p class="lead" style="margin-top:12px;">这十八项是全篇最特殊的一段文体：它不谈原理，只列收益，而且前十一项几乎每一项都以「最普遍」开头。<b>一份战略主张能列到第十八条收益，说明它不是被论证出来的，是被算出来的。</b>值得注意的是清单的顺序：前五项对应战争的三个阶段，第六到第十八项才转到军队、组织、政权、文化、民生、敌军、人心、友党、损耗、干部、给养——把「打胜仗」放在第十五、十六位，而不是第一位。</p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">三种对兵权的态度</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">不要军队</div>
+          <div class="spec-seg green">党指挥枪</div>
+          <div class="spec-seg gold">军阀</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>左 · 不要军队的党</b>「进步党」要靠在袁世凯、段祺瑞、蒋介石身上才有官做；青年党等「没有军队，因此就闹不出什么名堂来」</div>
+          <div class="spec-label"><b>中 · 党指挥枪</b>「我们的原则是党指挥枪，而决不容许枪指挥党」；不争个人兵权，争党的、人民的、民族的兵权</div>
+          <div class="spec-label"><b>右 · 军阀</b>「有军则有权，战争解决一切」；谭延闿「从来不做寡头省长，要做督军兼省长」——本篇评其「都懂得中国的特点」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这张光谱的刻度是「军队与政治主体的关系」，不是「有没有军队」。有意思的是本节的排法：<b>它把军阀一侧放在「聪明」的位置上，把不要军队的一侧放在「不行」的位置上</b>，然后才给出第三条路。这样排的好处是——中间那一格不是靠贬低两侧成立的，而是靠「两侧都对了一半」成立的：军阀看懂了「有军则有权」这个环境事实，不要军队的党看懂了「政权不是靠枪抢来的」（虽然因此什么也做不成）。</p>
+
+    <div class="quote">
+      每个共产党员都应懂得这个真理：「枪杆子里面出政权」。我们的原则是党指挥枪，而决不容许枪指挥党。但是有了枪确实又可以造党，八路军在华北就造了一个大党。还可以造干部，造学校，造文化，造民众运动。延安的一切就是枪杆子造出来的。枪杆子里面出一切东西。
+      <span class="src">第二节末段（1991 年版第 547 页前后）｜一句「真理」之后立刻补一条原则、再补一段造物清单：整段的重心不在「枪」，而在「枪归谁」</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>不讲人的对错，只讲历史的判决</h4>
+          <p>本篇的对手就在会场上，但全篇没有一处点名。它用的是另一种立论方式：第二节给国民党的战争史记功（孙中山、蒋介石「都是我们的先生」），第三节给本党的战争史记账（哪些时候抓住了、哪些时候没抓住：一九二一到一九二六认识不足 → 八七会议 → 六届四中全会犯错 → 遵义会议纠正）。一个结论如果被敌对双方的历史都验证过，就不需要再靠点名来支撑——<b>争议的焦点从「谁错了」被换成了「哪些时刻抓住了」。</b>毛泽东自己后来的说明，等于给这种笔法做了一个脚注：从正面肯定一些问题，「就是说在实际上解决了问题」。</p>
+          <span class="mv">迁移：写复盘或论证时，把「谁判断错了」改成「哪几个时间点抓住了、哪几个没抓住」。前者需要争论人的动机，后者只需要核对事实；<b>而事实比动机难反驳</b>。一篇讲清了成败时点的复盘，通常自带结论，不必另加批评。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「有军则有权」是环境描述，不是价值主张</h4>
+          <p>这一篇最容易被误读的地方，是把「谁有枪谁就有势，谁枪多谁就势大」读成一种推崇。其实它在文中的位置是一句外部观察，前面紧跟着解释原因：外国资产阶级政党不需要直接管领军队，而中国因封建分割才如此。真正的判断是紧接着的那一句——「处在这样环境中的无产阶级政党，应该看清问题的中心。」<b>看清规律和认同规律，是两件事。</b>同一节里还有一层保险：谭延闿「从来不做寡头省长，要做督军兼省长」，毛泽东评他「是一个聪明的官僚」「懂得中国的特点」——《聪明》《懂得》是描述性的词，不是赞词。</p>
+          <span class="mv">迁移：研究别人怎么赢的，要分两步走。第一步只问「他靠什么活下来的」，把价值判断按住；第二步才问「我是不是同一个处境」。分不开这两步的人，很容易把行业里最成功的做法当成自己的方法。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>把最硬的一句和它的终止条件写在同一段里</h4>
+          <p>「我们是革命战争万能论者」——这句话单独看，是一句危险的话。但它没被单独留下：下一句就是「我们是战争消灭论者，我们是不要战争的；但是只能经过战争去消灭战争，不要枪杆子必须拿起枪杆子」。前一句是当期判断（现在只有这条路），后一句是终极目的（要的是战争消失）。两句连读，意思才完整；任一句单拎出来都会变形——只读前一句会读成好战，只读后一句会读成空想。<b>这也许是无产阶级政党文献里最标准的一种自我保护写法：给强硬主张配终止条件。</b></p>
+          <span class="mv">迁移：凡是你常用来打气的那类句子（「先干了再说」「All in」「坚持就是胜利」），都补一句「什么情况下这句话作废」。不是为了显得周全，而是因为<b>没有终止条件的强硬，最后一定会被拿来为不该做的事辩护</b>。</span>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:6px;">另记两处阅读提示：<b>其一，本篇是「结论」不是「论文」。</b>它面对的是全会，所以通篇是总结性、列举式的（三个转变、十八项收益、三项研究现状），能罗列就罗列，能让听众记住条数就一定要有确切的条数。读时不必把它当成理论文章来要求推演，它是给一场二十天的会议收口的。<b>其二，注释不是讲话的一部分。</b>注释是收入选集时（第二卷付印于一九五二年）统一撰写的：注〔26〕说韩复榘「于一九三八年一月被蒋介石以失地误国罪处死」，注〔23〕说六届四中全会「开始了长达四年之久的『左』倾冒险主义在党内的统治」——这些都是事后叙述，不是一九三八年十一月六日下午讲的话。</p>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">革命的中心任务和最高形式是武装夺取政权，是战争解决问题。这个马克思列宁主义的革命原则是普遍地对的，不论在中国在外国，一概都是对的。</div>
+        <div class="ctx">第一节开篇｜1991 年版第 541 页。1954 年英共要求删去的正是这一句所在的两节，毛泽东拒绝后，英译本仍删改</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在这里，共产党的任务，基本地不是经过长期合法斗争以进入起义和战争，也不是先占城市后取乡村，而是走相反的道路。</div>
+        <div class="ctx">第一节｜全篇最重要的路径判断，也是「农村包围城市」在正式军事结论中的一次定式表述</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">有军则有权，战争解决一切，这个基点，他是抓得很紧的。对于这点，我们应向他学习。在这点上，孙中山和蒋介石都是我们的先生。</div>
+        <div class="ctx">第二节｜对一个刚批判过投降主义的全会讲的：向对手学的是方法，不是立场</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">每个共产党员都应懂得这个真理：「枪杆子里面出政权」。我们的原则是党指挥枪，而决不容许枪指挥党。但是有了枪确实又可以造党，八路军在华北就造了一个大党……延安的一切就是枪杆子造出来的。枪杆子里面出一切东西。</div>
+        <div class="ctx">第二节｜「枪杆子里面出政权」一语源出 1927 年八七会议，此处是它被写入《毛泽东选集》的正式位置（1991 年版第 547 页）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们是战争消灭论者，我们是不要战争的；但是只能经过战争去消灭战争，不要枪杆子必须拿起枪杆子。</div>
+        <div class="ctx">第二节末｜全篇最讲究分寸的一句：强硬主张与它的终止条件写在同一个句子里</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。引文中的「」为本书统一体例所加，原文此处用引号。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《五四运动》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.05.01 ｜ 第二卷第十三篇</span></div>
+        <p>一九三九年五月一日作，原载延安《解放》周刊第七十期，为纪念五四运动二十周年。从「枪杆子」转到「知识分子要到工农民众中去」——同一场会议之后，思想链条的另一端。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《抗日游击战争的战略问题》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1938.05 ｜ 第二卷第八篇</span></div>
+        <p>本篇第五节几乎就是那篇的压缩结论：那边用九章一万七千余字论证游击战为什么算战略问题，这边只用一千一百余字的第五节和一张十八项清单，把结论讲给全会听。<b>同一主张，一次写成长文，一次说成摘要</b>——两篇对照，可以看见同一个人对「论文」与「结论」两种文体的不同要求。<span class="muted">（另可与第一卷《中国革命战争的战略问题》对读：那篇讲「战争中的战略怎么研究」，本篇讲「中国革命为什么只能是战争」，一为方法，一为前提。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>条件题</b>：本篇第一节做了同一件事的两遍——先写外国（有议会、有合法组织，所以走合法斗争的路），再写中国（无议会、无合法权利，所以「走相反的道路」）。挑一条你熟悉的「最佳实践」，把它放回最早成立的那个条件里去读一遍：那个条件在你这里还在吗？</div>
+      <div class="q">二 · <b>先生题</b>：写下你所在行业里最成功、但价值观上你最不认同的一家公司或一个人。仿照第二节的写法，先说清他「抓住了什么」（一句描述，不带评价），再问自己：这个「什么」是可学的，还是只在那个环境里成立？</div>
+      <div class="q">三 · <b>边界题</b>：找一句你自己常用来打气的话（「坚持就是胜利」「先干了再说」「All in」）。给它补一句终止条件——什么情况下这句话作废。本篇的做法是：把「万能论」和「不要战争」写在同一段里。</div>
+      <div class="q">四 · <b>记录题</b>：本篇讲党史，用的是「哪些时候抓住了、哪些时候没抓住」（一九二一—一九二六认识不足 → 八七会议 → 六届四中全会犯错 → 遵义会议纠正）。用这个格式写你团队最近三年的四条记录：只写时间点和「抓住／没抓住」，不写人名。</div>
+      <div class="hint"><b>三问卡</b>：① 我主张的那条路，是从我这里的条件推出来的，还是从别处抄来的？② 我批评的那个做法，我说得清它「抓住了什么」吗？③ 我给自己的强硬主张配了终止条件没有？三问里第一问最难——它要求先承认：我的条件可能真的和别人不一样。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十二篇</div>
+    <div>依据人民出版社 1991 年版第二卷 541—557 页 ｜ 2026.10.12</div>
+  </div>
+
+</div>
+</body>
+</html>

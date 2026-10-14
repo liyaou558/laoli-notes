@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>32 · 青年运动的方向 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 小网格（阶段链） ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+.g18.on{background:var(--bg-2);border-color:var(--red);}
+.g18.on b{color:var(--red);}
+.g18.now{border-color:var(--gold);}
+.g18.now b{color:var(--gold);}
+
+/* ===== 方针卡 ===== */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.move{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.move-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.move-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:15px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.move-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.move-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14px;color:var(--ink);line-height:1.8;min-width:0;}
+.move-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.move.gold{border-left-color:var(--gold);}
+.move.gold .move-no{color:var(--gold);}
+.move.blue{border-left-color:var(--blue);}
+.move.blue .move-no{color:var(--blue);}
+.move.green{border-left-color:var(--green);}
+.move.green .move-no{color:var(--green);}
+@media(max-width:420px){.move{padding:11px 12px 12px;}.move-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.move-text,.move-note,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅二</div>
+    <h1>青年运动的方向</h1>
+    <div class="sub2">一场讲演 · 六问六答 · 唯一的判断标准</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十四篇 · <b>一九三九年五月四日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《青年运动的方向》。1991 年版《毛泽东选集》第二卷第十四篇，紧接《五四运动》，下接《反对投降活动》。<b>篇名是后来起的</b>：原刊题为《在延安五四运动二十周年纪念大会的演讲》，收入《毛泽东选集》时才改题现名。正文以「第一」到「第六」自报编号，加头尾两段，共八段</td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年五月四日</b>——即讲述当日。这是一篇现场讲演，不是事后追写的文章；同一天在延安抗大第五大队坪场，纪念五四运动二十周年暨首届中国青年节大会召开</td></tr>
+      <tr><th>最初发表</th><td>初刊于一九三九年六月一日出版的延安《中国青年》第一卷第 3 期，题为《在延安五四运动二十周年纪念大会的演讲》。《中国青年》一九三九年四月在延安复刊（毛泽东为复刊题写刊名），第 2 期登《五四运动》，第 3 期登本篇——<b>两期间隔一个月，一篇是文章，一篇是讲演</b>。后编入《毛泽东著作选读》上册</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 561—569 页，注释十二条。1952 年第一版的相应分页，据《北京青年研究》2025 年第 2 期冯清林、黄宣谕文所引页码，覆盖第 525—533 页左右</td></tr>
+      <tr><th>篇幅</th><td>八段、约四千七百字（据 1991 年版电子文本统计，汉字 4717 字，不含标点与注释）。段长为 56／646／703／1013／1251／300／541／207 字——<b>第四段一段占全篇四分之一强，第五段只有三百字</b>。较三天前的《五四运动》长约四倍</td></tr>
+      <tr><th>发表场合</th><td>延安各界青年纪念五四运动二十周年暨<b>首届中国青年节</b>大会。大会选出毛泽东、朱德、林伯渠、宋庆龄等十人组成名誉主席团，冯文彬等二十三人组成大会主席团。据《新中华报》一九三九年五月七日报道，大会之后「向领袖献旗后即举行野火晚会」</td></tr>
+      <tr><th>历史坐标</th><td>讲演当日，延安在开青年大会，<b>重庆正在挨炸</b>——日军五月三日、四日连续轰炸重庆市区，合称「五三、五四大轰炸」。此前三个月，国民党五届五中全会（1939.1.21—30）已定下「溶共、防共、限共、反共」方针，三月设精神总动员会。同一个「中国青年节」，一边是篝火与生产舞，一边是防空与疏散</td></tr>
+      <tr><th>日后轨迹</th><td>①<b>文本本身被反复修改</b>：据冯清林、黄宣谕《毛泽东〈青年运动的方向〉的生成、概况及修改》（《北京青年研究》2025 年第 2 期），该文自 1939 年诞生后经数次变迁，特别是新中国成立后毛泽东亲自细致修改，使叙述逻辑、行文规范、观点表述均有较大变化。②<b>「中国青年节」的日期归属在此后反复</b>：国民党方面畏惧青年学习「五四」的革命精神，数年后改定以三月二十九日（黄花岗起义纪念日）为青年节，而根据地内继续以五月四日为青年节；1949 年 12 月中央人民政府政务院正式宣布五月四日为中国青年节。③本篇提出的「人民民主的共和国」，一年后在《新民主主义论》中定型为「新民主主义共和国」</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 讲完话，青年举着火把绕场三圈。</b>据当时报道，毛泽东刚做完讲演，几位青年高擎火炬进入会场，全场起立欢呼；他们跑步绕场三周，到主席台前敬献锦旗。锦旗上书「献给我们最敬爱的领袖毛泽东同志」，中间六个大字是<b>「新中国的火炬」</b>，下署「延安市全体青年敬献」。献旗之后，抗大举行篝火晚会，中央党校、马列学院、印刷厂表演秧歌和生产舞，鲁艺的冼星海指挥演唱《生产大合唱》。诗人萧三当时在鲁艺任教，多年后写《我怎样到鲁艺》，记下了那晚的样子：「晚色已经涂上了清凉山、宝塔山……场中几处却燃烧着熊熊的野火，照得通红」，十点多钟从鲁艺回去，「还听得见场中的歌声和看得见那里的火光」。<b>这篇讲演的最后一句是「向光明的前途进军」，会场上的回应是一面写着「火炬」的旗子。</b></li>
+        <li><b>戏剧性二 · 同一天，延安在点火，重庆在灭火。</b>一九三九年五月三日、四日，日军飞机接连轰炸重庆市区，史称「五三、五四大轰炸」。据重庆防空司令部编制的空袭统计表，五月四日市民死伤多达五千余人，是六年零十个月重庆大轰炸中伤亡人数最多的一次；两天合计炸死三千九百余人、炸伤两千三百余人（人民网党史频道所引不完全统计）。大火数日不熄，都邮街等十条主要街道尽毁，重庆防空司令部档案载「军民死伤六千三百一十四人，毁灭房屋四千八百七十一幢」，五月五日至七日三天二十五万市民疏散离城；战后重庆把日军投下第一枚炸弹的那条路命名为「五四路」。<b>延安的这场大会，是在防空警报的另一头度过的第一个青年节。</b></li>
+        <li><b>戏剧性三 · 「早几天，我作了一篇短文」——本篇与前一篇是同一件事的两个版本。</b>三天前的五月一日，《解放》周刊第七十期发表了毛泽东的《五四运动》；四月底，《新青年》系刊《中国青年》出「五四特辑」。讲演里，毛泽东当场说：「早几天，我作了一篇短文，我在那里说过这样一句话：『革命的或不革命的或反革命的知识分子的最后的分界，看其是否愿意并且实行和工农民众相结合。』我在这里提出了一个标准，<b>我认为是唯一的标准</b>。」——同一句话，三天前是文章里的一句判断，三天后在广场上被升级为「唯一的标准」。<b>文章给的是定义，讲演给的是裁决。</b></li>
+        <li><b>戏剧性四 · 他要指出来的「落后」，就在听众自己身上。</b>本篇第四段有一句不太像祝词的话：「现在中国青年运动的不统一，是一个很大的缺点。」一九三八年三民主义青年团成立后，国统区的青年组织与延安的青年团体分属两套系统；而在延安，来的人来自「全国各地，远至海外的华侨中间」，出身、口音、专业各不相同。所以第六段干脆把在场的人当作答案：「延安的青年运动是全国青年运动的模范。」<b>开一场纪念会，顺手把台下的听众抬成全国的标准——这是讲演文体特有的，在文章里不好这么写。</b></li>
+        <li><b>戏剧性五 · 「开荒种地这件事，连孔夫子也没有做过。」</b>讲演前三个月（一九三九年二月二日），延安召开党政军生产动员大会，毛泽东在会上号召「自己动手」，决定生产自救；他在杨家岭窑洞对面的山沟里开了一块地，种上白菜、土豆、丝瓜和他爱吃的红辣椒。讲演第六段把这个背景写成了段子：孔子办学「贤人七十，弟子三千」，学生问他怎么耕田、怎么种菜，他都说「不知道，我不如农民／种菜的」；而延安的青年「在实行生产运动，开发了千亩万亩的荒地」。<b>在场听讲的多是从北平、上海、武汉辗转来的学生——这段话是讲给他们听的，也是替他们回答「读了书为什么还要抡镢头」。</b></li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item gold"><div class="tl-date">1919.05.04</div><div class="tl-body">五四运动爆发。二十年后本篇开篇即从此日讲起</div></div>
+      <div class="tl-item"><div class="tl-date">1938.10.21 / 10.25</div><div class="tl-body">广州、武汉相继失陷，抗日战争由战略防御转入战略相持阶段。大批爱国青年从沦陷区、国统区甚至海外奔向延安求学</div></div>
+      <div class="tl-item"><div class="tl-date">1938.12.29</div><div class="tl-body">汪精卫发表「艳电」公开投敌，投降空气抬头。次年六月毛泽东写《反对投降活动》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.01.21—30</div><div class="tl-body">国民党五届五中全会在重庆召开，确定「溶共、防共、限共、反共」方针，设防共委员会；会后陆续制定《限制异党活动办法》等秘密文件，国统区青年团体遭迫害、解散</div></div>
+      <div class="tl-item"><div class="tl-date">1939.02.02</div><div class="tl-body">延安党政军生产动员大会召开，毛泽东号召「自己动手」，生产自救；此后边区党政军学各界开展大生产运动<span class="note">（讲演第六段「实行生产运动，开发了千亩万亩的荒地」即指此事）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1939.03.11</div><div class="tl-body">国民党设精神总动员会，蒋介石任会长，公布《国民精神总动员纲领》；其内容被林伯渠称为「不少内容是对付共产党的」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.03.18</div><div class="tl-body">西北青年救国联合会决定以五月四日为西青救成立纪念日，并向全国青年提议定五月四日为中国青年节</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.04.28</div><div class="tl-body">中共中央机关报《新中华报》刊出「五一、五四纪念特辑」，载胡乔木《纪念中国青年节与国民精神总动员》、艾思奇《五四文化运动在今日的意义》，及冯文彬作词、吕骥作曲的《「五四」青年节歌》</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.05.01</div><div class="tl-body">《解放》周刊第七十期发表毛泽东《五四运动》（是本篇前一日的姊妹篇，文中「早几天，我作了一篇短文」即指此篇）</div></div>
+      <div class="tl-item"><div class="tl-date">1939.05.03 / 05.04</div><div class="tl-body">日军飞机连续轰炸重庆市区，史称「五三、五四大轰炸」。5.4 市民死伤五千余人，为重庆大轰炸中伤亡最多的一次；5.5—5.7 三天二十五万市民疏散离城</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.05.04</div><div class="tl-body"><b>延安各界青年在抗大第五大队坪场举行纪念五四运动二十周年暨首届中国青年节大会，毛泽东作关于青年运动政治方向的讲演</b>，即本篇。讲后青年举火炬绕场三周、敬献锦旗「新中国的火炬」，会后举行篝火晚会</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.06.01</div><div class="tl-body">延安《中国青年》第一卷第 3 期刊出讲演全文，题《在延安五四运动二十周年纪念大会的演讲》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.30</div><div class="tl-body">毛泽东为纪念抗日战争两周年写《反对投降活动》（第二卷第十五篇），回到「战则存，不战则亡」的问题</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01</div><div class="tl-body">《新民主主义论》发表，把本篇的「人民民主的共和国」定型为「新民主主义共和国」</div></div>
+      <div class="tl-item green"><div class="tl-date">1949.12</div><div class="tl-body">中央人民政府政务院正式宣布以五月四日为中国青年节<span class="note">（国民党方面此前已改定三月二十九日黄花岗纪念日为青年节，根据地内始终用五月四日）</span></div></div>
+      <div class="tl-item green"><div class="tl-date">1991</div><div class="tl-body">《毛泽东选集》第二版校订：本篇注释扩为十二条，注〔2〕把「青年节」的由来系年到「一九三九年三月」，并说明「中国青年节」的完整沿革</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全篇六个问题，其实只回答一件事：<span class="q">中国革命要靠谁，青年该站到谁身边去。</span>前三个问题是在做基础课——把中国革命的对象（日本帝国主义和汉奸）、性质（资产阶级性的民主主义的革命）、<span class="q">几十年的经验教训（「根本就是『唤起民众』这一条道理」）</span>交代清楚；第四个问题才转到青年，给出的定位很不客气：青年是<span class="q">「先锋队」</span>，是<span class="q">「一个方面军」</span>，但<span class="q">「还不是主力军」</span>，主力军是工农大众。于是全部结论压成一条标准：<span class="q">「看他愿意不愿意、并且实行不实行和广大的工农群众结合在一块。」</span>最后两个问题把这个标准落到现场——全国青年运动要统一，而延安的青年运动<span class="q">「是全国青年运动的模范」</span>。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先给青年定位：先锋队，但明确不是主力</h4>
+        <p>「起了某种先锋队的作用」这句话，后面紧跟一层削锋：「但是光靠这个方面军是不够的……因为它还不是主力军。」<b>这是一次罕见的自我降格</b>：讲给几百万人听的话，第一句是承认你们打不赢。降格的用意在下一句——主力军的位置被预留给工农，青年要拿到胜利，就得先把这个位置填上。<span class="card-tag">定位法</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 标准被写成「今天—明天」的连续动作</h4>
+        <p>「他今天把自己结合于工农群众，他今天是革命的；但是如果他明天不去结合了，或者反过来压迫老百姓，那就是不革命的，或者是反革命的了。」<b>判据不是身份，是可撤销的状态</b>——用现在的说法，这是把一次性的资格认证换成了持续的在线状态。紧接着又把「口讲」这条捷径封掉：信仰三民主义或马克思主义「这是不算数的」。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 现场取证：把听众本身当作答案</h4>
+        <p>前五节讲历史、讲标准，第六节直接指着台下：「延安的青年运动是全国青年运动的模范。延安的青年运动的方向，就是全国的青年运动的方向。」理由有两条——<b>团结、统一</b>；<b>和工农群众结合</b>（学革命理论、实行生产运动）。标准被论证完之后，立刻在会场里找到了一个样本。这在文章里是冒险的，在讲演里是有效的。<span class="card-tag">自证</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">转变点</div><div class="n-sub">由失败到胜利<br>定了青年节表示这一点</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">革命任务</div><div class="n-sub">对象＝日帝与汉奸<br>性质＝资产阶级性的民主革命</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">历史教训</div><div class="n-sub">自己力量太弱<br>＝工农尚未动员，唤起民众</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">青年位置</div><div class="n-sub">先锋队／方面军<br>但非主力军</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">唯一标准</div><div class="n-sub">愿意并且实行<br>与工农相结合</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">延安范式</div><div class="n-sub">团结统一 ＋ 与工农结合<br>向光明的前途进军</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的推理方向与前一篇《五四运动》相反。<b>那篇是「从历史排到标准」，本篇是「从任务退到历史再回到人」</b>：先把革命要干什么说清楚（对象、性质、目的、前途），再回头查为什么几十年没干成（力量太弱、民众未动员），从「力量弱」这一条推出「必须有主力军」，从「主力军是工农」推出「青年必须与工农结合」，最后才落成一条判断人的标准。<b>换句话说，标准不是从道德出发的，是从力量对比算出来的。</b>这也是全篇没有一句空泛号召的原因：每一步都由上一步的缺口给出。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">引</span><span class="part-title">开场：定了青年节这件事，意味着什么</span><span class="part-scope">第 1 段 · 561 ｜ 56 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>一句话交代场合与题目：二十周年纪念日，延安全体青年开这个会，「我就来讲一讲关于中国青年运动的方向的几个问题」</li>
+          <li><b>全篇没有客套，也没有祝词</b>——两句话之后直接进第一问</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">现在定了五月四日为中国青年节，这是很对的</span><span class="part-scope">第 2 段 · 561—562 ｜ 646 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>从一个节日的设立读出一件大事：「这件事含着一个重要的意义。就是说，它表示我们中国反对帝国主义和封建主义的人民民主革命，快要进到一个转变点了。」</li>
+          <li><b>紧跟着一句自我克制</b>：「那末，现在已经转变了没有呢？<span class="k">没有。这一个转变，现在还没有到来，现在我们还没有胜利。但是胜利是可以争取到来的。</span>」——先把话说满，再自己按住，全篇的调子在这里定下</li>
+          <li>用孙中山做先例论证「反对卖国政府是对的」：孙「远在五四运动以前，就是当时政府的叛徒」，他反对的不是反抗帝国主义的政府，而是勾结帝国主义的政府</li>
+          <li>收在这一段：「全中国的青年，应该这样去认识五四运动。」<b>第一问的真实功能是先把五四的解释权接到手里</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">革命干什么、靠谁干、算什么性质</span><span class="part-scope">第 3 段 · 562—563 ｜ 703 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>连问连答，是全篇最标准的「基础课」一节：<span class="k">革命的对象</span>——一个是日本帝国主义，再一个是汉奸；<span class="k">革命的主体</span>——就是中国的老百姓；<span class="k">革命的动力</span>——无产阶级、农民阶级，及其他阶级中一切愿意反帝反封建的人；<span class="k">根本的力量、革命的骨干</span>——占全国人口百分之九十的工人农民</li>
+          <li>定性：「我们现在干的是资产阶级性的民主主义的革命，我们所做的一切，不超过资产阶级民主革命的范围。」并说明现阶段「还不应该破坏一般资产阶级的私有财产制」，「还应当容许资本家存在」</li>
+          <li>给出目的与形态：「建立一个人民民主的共和国」，又说「这种人民民主主义的共和国，就是<b>革命的三民主义的共和国</b>」——<b>这是统一战线语境下的说法，一年后才被「新民主主义共和国」取代</b></li>
+          <li>末段把前途也说完了，然后原路收回到当下：「但是我们在目前的阶段上不是实行社会主义……全国青年应当为此而努力。」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">几十年的教训：根本就是「唤起民众」这一条道理</span><span class="part-scope">第 4 段 · 563—565 ｜ 1013 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先排时间轴：反帝反封建的革命「正规地说起来」从孙中山开始，已五十多年；外国资本主义侵略中国，则「差不多有了一百年」。列出的斗争有鸦片战争、太平天国的战争、甲午战争、戊戌维新、义和团运动、辛亥革命、五四运动、北伐战争、红军战争</li>
+          <li>逐项点成绩与失败：辛亥革命「只把一个皇帝赶跑」；五四「也失败了」；北伐「胜利了，但又失败了」；十年红军战争「只完成了局部的革命任务」</li>
+          <li><b>自问自答找原因</b>：敌人力量太强（帝国主义为主，兼封建主义）；自己的力量太弱。而「自己的力量太弱」的主因只有一条——「占全国人口百分之九十的工农劳动群众还没有动员起来」</li>
+          <li>借孙中山遗嘱作证：「必须唤起民众及联合世界上以平等待我之民族共同奋斗。」由此结出一句全篇格言式的话：<span class="k">「根本就是『唤起民众』这一条道理。」</span></li>
+          <li>末尾把话题压回当下：「现在我们要达到战胜日本建立新中国的目的，不动员全国的工农大众，是不可能的。」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">青年运动：先锋队、方面军，但不是主力军</span><span class="part-scope">第 5 段 · 565—567 ｜ 1251 字（全篇最长）</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先记功：「起了某种先锋队的作用」「就是带头作用，就是站在革命队伍的前头」；这支由知识青年和学生青年组成的军队「在目前就有几百万」，「是反帝反封建的一个方面军，而且是一个重要的方面军」</li>
+          <li><b>再削锋</b>：「但是光靠这个方面军是不够的……因为它还不是主力军。主力军是谁呢？就是工农大众。」</li>
+          <li>把结合的后果写成数量级：「和他们变成一体，才能形成一支强有力的军队。这是一支几万万人的军队啊！有了这支大军，才能攻破敌人的坚固阵地，才能攻破敌人的最后堡垒。」</li>
+          <li><b>指出逆流</b>：「有一部分青年，他们不愿意和工农大众相联合，他们反对工农运动，这是青年运动潮流中的一股逆流」「这样的青年运动，是没有好结果的」</li>
+          <li><b>立标准</b>：引三天前《五四运动》中的那句话，「我在这里提出了一个标准，<span class="k">我认为是唯一的标准</span>」——「只有一个标准，这就是看他愿意不愿意、并且实行不实行和广大的工农群众结合在一块」</li>
+          <li>把标准做成动态的：「他今天……是革命的；但是如果他明天不去结合了，或者反过来压迫老百姓，那就是不革命的，或者是反革命的了」</li>
+          <li><b>清点口头的信仰</b>：希特勒也讲「信仰社会主义」，墨索里尼二十年前还是「社会主义者」，「原来就是法西斯主义」；陈独秀「信仰」过马克思主义，后来「跑到反革命那里去了」；张国焘「信仰」过马克思主义，「他一小差就开到泥坑里去了」。再点「口是心非的三民主义者」——民族主义是勾结帝国主义，民权主义是压迫老百姓，民生主义是「拿老百姓身上的血来喝得越多越好」</li>
+          <li>收口：「只有这一个辨别的标准，没有第二个标准。」末句给方向：「要认清工农是自己的朋友，向光明的前途进军。」<b>「逆流」对「光明」，第四节用的是水与光的比喻</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">五</span><span class="part-title">抗日战争这个新阶段，与统一这个缺点</span><span class="part-scope">第 6 段 · 567—568 ｜ 300 字（全篇最短）</span></div>
+      <div class="part-body">
+        <ul>
+          <li>「现在的抗日战争，是中国革命的一个新阶段，而且是最伟大、最活跃、最生动的一个新阶段」，青年在这个阶段里「是负担了重大的责任的」</li>
+          <li>论证为什么这次会赢：「它将从失败转变到胜利，就是指的中国的广大的人民进步了，<b>青年的进步就是明证</b>」——把青年的觉悟当作时代进步的证据</li>
+          <li><b>一句话提出缺点</b>：「现在中国青年运动的不统一，是一个很大的缺点。你们应该继续要求统一，因为统一才有力量。」随后是三条动作：知道形势、实行团结、抗日到底</li>
+          <li><b>三百字一节，是全篇最像决议的一段</b>——它不是分析，是号召</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">六</span><span class="part-title">延安的青年运动是全国青年运动的模范</span><span class="part-scope">第 7 段 · 568—569 ｜ 541 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>开门就是论断：「延安的青年运动是全国青年运动的模范。延安的青年运动的方向，就是全国的青年运动的方向。」理由：「因为延安的青年运动的方向是正确的」</li>
+          <li><b>模范的第一条是团结</b>：「延安的知识青年、学生青年、工人青年、农民青年，大家都是团结的」；「今天到会的人，大多数来自千里万里之外，不论姓张姓李，是男是女，作工务农，大家都是一条心」——<b>用会场的具体事实作论据</b></li>
+          <li><b>第二条是与工农结合</b>：「这一点更加是全国的模范。」具体是两件事——学习革命的理论、研究抗日救国的道理和方法；实行生产运动、开发千亩万亩的荒地</li>
+          <li><b>拿孔子作对照</b>：「开荒种地这件事，连孔夫子也没有做过。」孔子「贤人七十，弟子三千」可谓盛矣，但学生少得多，「而且不喜欢什么生产运动」；问耕田答「不知道，我不如农民」，问种菜答「不知道，我不如种菜的」</li>
+          <li>结论回到两个「正确」：「因为他们的政治方向是正确的，工作方法也是正确的。」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">结</span><span class="part-title">「今天的大会很有意思」</span><span class="part-scope">第 8 段 · 569 ｜ 207 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>开场一句大白话：「今天的大会很有意思。我要讲的都讲过了。」</li>
+          <li>把六个问题收成一条建议：研究五十年的中国革命经验，「把好的地方发挥起来，把错误去掉」</li>
+          <li>三连条件句收束：「到了全国青年和全国人民都发动起来、组织起来、团结起来的一天，就是日本帝国主义被打倒的一天。」</li>
+          <li>末句把责任分到个人：「每个青年都要担负这个责任……一定要把旧中国改造为新中国。这就是我所希望于你们的。」<b>不是「希望你们努力」，是「希望于你们」</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">六问一图：讲演的问答骨架</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">节</th><th>问（讲演自带）</th><th>答</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">一</td><td>定了五四为青年节，意义何在？</td><td>表示人民民主革命快要进到一个转变点；但转变还没到来，胜利是可以争取的</td></tr>
+        <tr><td class="c1">二</td><td>革命的对象、主体、动力、性质、目的是什么？</td><td>对象是日帝与汉奸；主体是老百姓；骨干是占人口百分之九十的工农；性质是资产阶级性的民主革命；目的是建立人民民主的共和国</td></tr>
+        <tr><td class="c1">三</td><td>几十年革命为什么至今未达目的？</td><td>敌人太强，自己太弱；弱的主因是工农未动员——「唤起民众」这一条道理</td></tr>
+        <tr><td class="c1">四</td><td>青年起了什么作用？怎么看一个青年是不是革命的？</td><td>先锋队、方面军，非主力军；唯一标准是愿意并且实行与工农结合</td></tr>
+        <tr><td class="c1">五</td><td>现阶段青年负什么责任？</td><td>抗日战争是新阶段；缺点是青年运动不统一；要求统一，团结抗日到底</td></tr>
+        <tr><td class="c1">六</td><td>延安的青年运动怎么样？</td><td>是全国青年运动的模范：团结统一，且与工农群众相结合</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:12px;"><b>这张表里藏着一个结构上的不对称</b>：前三个问题全部关于「革命」，第四问才转到青年，第五、六问又变成动员与表彰。也就是说，<b>青年运动的「方向」不是从青年自身推出来的，是从中国革命的总任务里倒推回来的</b>——先讲清楚这场革命需要什么，青年的位置才自然落到「到工农中去」这唯一一格上。讲演的顺序就是论证的顺序：不问「青年该怎样」，只问「革命靠谁」，答案出来，青年的任务也就没有了别的选择。</p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">三种青年：标准判出来的分布</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">反对工农</div>
+          <div class="spec-seg gold">不结合</div>
+          <div class="spec-seg green">愿意且实行</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>逆流 · 反革命</b>「有一部分青年，他们不愿意和工农大众相联合，他们反对工农运动，这是青年运动潮流中的一股逆流」「这样的青年运动，是没有好结果的」</div>
+          <div class="spec-label"><b>不革命或反革命</b>「只有一个标准……愿意并且实行和工农结合的，是革命的，否则就是不革命的，或者是反革命的」——<b>注意：不合格者被并成一格，不作细分</b></div>
+          <div class="spec-label"><b>革命</b>「他今天把自己结合于工农群众，他今天是革命的」——且是可撤销的：明天不结合了，就会被移到上一格去</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;"><b>这是一张只有一格的评分表。</b>三格里两格是否定项，中间一格还把「不革命」和「反革命」合并处理——毛泽东在这里没有兴趣做精细的敌我区分，因为讲演的目的不是给人分类，而是让听的人自我定位。<b>另有一个细节值得留意</b>：这一节举的四个反面例子（希特勒、墨索里尼、陈独秀、张国焘）里，后两个是自己阵营的前领袖，张国焘更是在本篇之前十四个月才出逃脱党。<b>把本党的叛徒和法西斯头目并列在一起，是讲演特有的锋利，也是一次对内示警。</b></p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">孔夫子门下 与 延安青年</h3>
+    <div class="cards">
+      <div class="card blue">
+        <h4>孔子办学校的时候</h4>
+        <ul>
+          <li>学生不少：<b>「贤人七十，弟子三千」，可谓盛矣</b></li>
+          <li>但比延安「就少得多，而且不喜欢什么生产运动」</li>
+          <li>问耕田：<b>「不知道，我不如农民。」</b>问种菜：「不知道，我不如种菜的。」</li>
+          <li>评价：「不但没有学过革命的理论，而且不实行劳动。」</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h4>延安的青年们</h4>
+        <ul>
+          <li>来源广：「大多数来自千里万里之外」，远至海外华侨；「不论姓张姓李，是男是女，作工务农」，都是一条心</li>
+          <li>学什么：「他们在学习革命的理论，研究抗日救国的道理和方法。」</li>
+          <li>干什么：<b>「他们在实行生产运动，开发了千亩万亩的荒地。」</b></li>
+          <li>评价：「他们真是抗日救国的先锋，因为他们的政治方向是正确的，工作方法也是正确的。」</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">这一段是全场最容易记住的段落，因为它把「什么是受过教育」这件事重新定义了一遍。<b>孔子作为对照项，被挑出来的不是思想，而是三件具体的事：人数不够多、不搞生产、答不出耕田种菜。</b>选择这样的对照，恰好对应台下听众的处境——他们刚被从城市里「唤起」，正在被要求一边读书一边抡镢头。所以这段话的功能不止于幽默，它是在替这场生产运动找一张最有分量的背书：<b>连孔夫子都没做过，你们做了。</b></p>
+
+    <div class="quote">
+      早几天，我作了一篇短文，我在那里说过这样一句话：「革命的或不革命的或反革命的知识分子的最后的分界，看其是否愿意并且实行和工农民众相结合。」我在这里提出了一个标准，我认为是唯一的标准。
+      <span class="src">第四段（1991 年版第 566 页）｜篇中唯一一处引述自己的文章。三天前的《五四运动》里这句是一个判断，到了广场上，它成了「唯一的标准」</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>把「资格题」改成了「状态题」</h4>
+          <p>这一篇最见功力的是那句「他今天……是革命的；但是如果他明天不去结合了……那就是不革命的」。<b>它把评价从一次性的归属，改成了需要持续维持的关系——判据不是你是谁，而是你现在还站在哪里。</b>这一改动带来两个后果：其一，任何人都无法靠过去的功绩或口头声明取得豁免，因为昨天不算，只有今天算；其二，标准变得可以被反复检查，检查的方式也不是审问，而是看你和谁在一起、在干什么。文中紧接着把「信仰」这一栏全部封掉（希特勒、墨索里尼、陈独秀、张国焘都「信仰」过），等于明说：<b>能说出口的东西都不作数，只有能观察到的持续性作数。</b></p>
+          <span class="mv">迁移：设计任何考核、评选或尽职调查时，先问一句——我这条标准是一次性的还是可撤销的？只认「过去做到过」的标准会被资历和话术接管，而要求「最近一个季度仍在做」的标准会自动筛掉两种人。个人也可以用同一把尺子自查：把「我是什么人」换成「我最近三个月把时间花在谁身上」，答案往往比自我评价可靠。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>讲演最后一步，是把自己人立成标准</h4>
+          <p>全篇第六节只说了一件事：延安的青年运动是全国青年运动的模范。这一步在逻辑上是最弱的——用自己证明自己；但在现场是最强的，因为它把抽象的「唯一标准」立刻变成了一件可以看见的事：<b>台下几百人一起学理论、一起开荒、一起从千里之外走到这里，这本身就是标准的样子。</b>毛泽东把论据摆得非常具体：「今天到会的人，大多数来自千里万里之外，不论姓张姓李，是男是女，作工务农，大家都是一条心。」<b>这不是在夸人，是在指认证据。</b>对比一下前一篇《五四运动》——那篇通篇讲标准，却没有一处说自己人做得对。同一主张，文章靠推理立起来，讲演靠现场立起来。</p>
+          <span class="mv">迁移：把「标准」讲给别人听时，最有效的一句往往不是定义，而是「这件事在这儿已经有人在做了，你可以去看」。<b>但用自己要付代价：一旦把自己立成标准，此后任何一次不符都会被拿来做反证。</b>反过来说，看到别人这样做时也该警惕——当一个人既是裁判又是样本，评分就失去了外部锚点。自证有效，但不免于自证。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>「劳动」被用来给知识重新划边界</h4>
+          <p>孔子那一段表面是玩笑，实质是用一把新的尺子把「读书人」切开：一边是「学过革命的理论」，一边是「实行劳动」。<b>两者具备的才叫先锋，缺一边的就要被归到「中国古代在圣人那里读书的青年」一边去。</b>这个划法在当时有很具体的对象——台下多数是从北平、上海、武汉来的学生，他们刚完成了「来延安」这个选择，接下来的考验就是能不能承受开荒。把孔夫子的学生请出来做反面教材，等于提前回答了那个在心里发酵的问题：读了这么多年书，为什么还要种地？<b>答案被写进了一句谁都不好反驳的话：连孔夫子也没有做过。</b>顺带说，本节也是全篇唯一提到「工作方法」的地方——「政治方向是正确的，工作方法也是正确的」，两个「正确」并列，等于承认方向对而方法错，同样到不了终点。</p>
+          <span class="mv">迁移：任何「既要有理论又要有手艺」的领域，都可以用这把双栏尺子校准自己：一栏是最近在学什么、在研究什么，一栏是最近亲手做了什么。两栏都空着的人很多，只填一栏的更多。<b>特别要警惕的是那种「学习」的错觉——读了很多别人的转述，却从没在自己的题目上动过手，这在标准里是明确不算数的。</b></span>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:6px;">另记四处阅读提示：<b>其一，这是一篇讲演，先按讲演读。</b>设问句连着设问句、同一说法重复出现、结尾感叹，都是口语留下的痕迹；第一、五、六节短，第四、三节长，是讲到兴头上和讲到底线的自然节奏。用文章的标准去挑它「重复」，会读反。其二，<b>注意本篇的用词是 1939 年的用词</b>：「人民民主的共和国」还挂在「革命的三民主义的共和国」这个统一战线口径下，「新民主主义」这个名称要等一年后才出现。不要把后来的术语倒填回去。其三，<b>「延安的青年运动是全国青年运动的模范」这句话，是在延安对延安人说的</b>——它同时是一次表彰、一次动员，和一次对「青年运动不统一」这个缺点的回应。读时留意这句的场合属性。其四，<b>文本本身改动过多次</b>：原刊《中国青年》题为《在延安五四运动二十周年纪念大会的演讲》，收入选集才改题现名；注〔2〕在旧本中作「以五月四日为中国青年节，<b>原是陕甘宁边区的青年组织所规定的</b>」，1991 年版改写为「<b>一九三九年三月</b>，陕甘宁边区的青年组织规定以五月四日为中国青年节」，把年份补齐、并统筹为十二条注。据冯清林、黄宣谕《毛泽东〈青年运动的方向〉的生成、概况及修改》（《北京青年研究》2025 年第 2 期），新中国成立后毛泽东曾亲自对本文作细致修改，叙述逻辑、行文规范、观点表述均因此发生较大变化——<b>引本篇时最好写明所据的版本与页码。</b></p>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">那末，现在已经转变了没有呢？没有。这一个转变，现在还没有到来，现在我们还没有胜利。但是胜利是可以争取到来的。</div>
+        <div class="ctx">第一段｜1991 年版第 561—562 页。把话说满之后自己按住——「快要进到一个转变点了」是判断，「还没有到来」是约束，两句一起读才是完整的意思</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这位老先生死了十多年了，连同他说的四十年，共有五十多年，这五十多年来的革命的经验教训是什么呢？根本就是「唤起民众」这一条道理。</div>
+        <div class="ctx">第三段｜1991 年版第 565 页。借孙中山遗嘱（「必须唤起民众及联合世界上以平等待我之民族共同奋斗」）落出一句结论，全篇的格言句在此</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这支几百万人的军队，是反帝反封建的一个方面军，而且是一个重要的方面军。但是光靠这个方面军是不够的，光靠了它是不能打胜敌人的，因为它还不是主力军。主力军是谁呢？就是工农大众。</div>
+        <div class="ctx">第四段｜1991 年版第 565—566 页。给青年定位的三连句：方面军 → 还不是主力军 → 主力军是工农。承认不足，是为了指出用力方向</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">他今天把自己结合于工农群众，他今天是革命的；但是如果他明天不去结合了，或者反过来压迫老百姓，那就是不革命的，或者是反革命的了。</div>
+        <div class="ctx">第四段｜1991 年版第 566 页。把「资格」改成「状态」的一句。与上句「愿意并且实行」的两个动词合起来，构成全篇唯一标准</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">开荒种地这件事，连孔夫子也没有做过。</div>
+        <div class="ctx">第六段｜1991 年版第 568 页。全篇最通俗也最见效的一句，下面接的是「贤人七十，弟子三千」、问耕田答「不知道，我不如农民」——用一个捧得极高的对照项，替生产运动作背书</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。引文中的「」为本书统一体例所加，原文此处用引号；引文中「『唤起民众』」「『五四』」等标点从原文。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《反对投降活动》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.06.30 ｜ 第二卷第十五篇 ｜ 第 570 页起</span></div>
+        <p>讲演之后不到两个月，题目从「青年往哪里去」换成了「这场仗还打不打」。这是毛泽东为纪念抗日战争两周年写的文章，开篇即摆出两个结论的对立：「战则存，不战则亡」是一切爱国党派的结论，「战则亡，不战则存」是一切投降主义者的结论。<b>本篇讲的是该站到谁身边，那一篇讲的是还站不站起来打</b>——前者是路线问题，后者是存亡问题。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《五四运动》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.05.01 ｜ 第二卷第十三篇 ｜ 第 558—560 页</span></div>
+        <p>三天前的那篇短文，就是本讲演里「早几天，我作了一篇短文」所指的文章。两篇相隔三天、长约四倍，对照读能看出同一个人的两种说法：<b>文章把标准写成定义，讲演把标准说成裁决</b>；文章用「知识分子是首先觉悟的成分」记功再转折，讲演直接用「还不是主力军」削锋；文章以「全国青年们，努力啊」收束，讲演以「这就是我所希望于你们的」收束。<span class="muted">（另可与《新民主主义论》1940.01 对读：本篇用的「人民民主的共和国」「革命的三民主义的共和国」，一年后被定型为「新民主主义共和国」。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>状态题</b>：本篇的标准是「今天结合，今天就算；明天不结合，就不算了」。把你现在评价自己或团队最重要的一条标准写下来，改写成「最近三个月仍然在做」的版本——<b>改完之后，有几个一直在「过去式中」的人会掉出去？</b></div>
+      <div class="q">二 · <b>定位题</b>：本篇给青年两个身份：先锋队（方面军）和「不是主力军」。挑你所在团队里的一个角色（包括你自己），先说清它「不是」什么，再说它该往哪个方向补——<b>如果一条定位里只有褒义词，它基本没有可执行的部分。</b></div>
+      <div class="q">三 · <b>双栏题</b>：把「学过革命的理论，实行生产运动」翻译成你的领域——左边是「最近在读、在研究的」，右边是「最近亲手做完、交付了的」。写下过去一个月两栏里的实际内容，比较两栏的分量。</div>
+      <div class="q">四 · <b>自证题</b>：「延安的青年运动是全国青年运动的模范」——标准立完之后，马上在自家门口找到了样本。想一个你最近参与过、也在用类似方式的场合（内部表彰、行业标杆、「我们就是这样做的」）：<b>那个被立为样本的东西，是论据，还是宣传？你自己能拿它出去接受外部检验吗？</b></div>
+      <div class="hint"><b>三问卡</b>：① 我用的那条标准，是资格题还是状态题？② 我的定位里，「不是什么」写清楚了吗？③ 我把谁立成了样板——如果是自己人，我准备好接受检验了吗？三问里第三问最不轻松，因为答案往往取决于一个不太好意思承认的事实：<b>我们更常需要一面旗子，而不是一个样本。</b></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十四篇</div>
+    <div>依据人民出版社 1991 年版第二卷 561—569 页 ｜ 2026.10.14</div>
+  </div>
+
+</div>
+</body>
+</html>

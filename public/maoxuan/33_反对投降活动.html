@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>33 · 反对投降活动 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 小网格 ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+.g18.on{background:var(--bg-2);border-color:var(--red);}
+.g18.on b{color:var(--red);}
+.g18.now{border-color:var(--gold);}
+.g18.now b{color:var(--gold);}
+
+/* ===== 方针卡 ===== */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.move{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.move-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.move-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:15px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.move-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.move-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14px;color:var(--ink);line-height:1.8;min-width:0;}
+.move-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.move.gold{border-left-color:var(--gold);}
+.move.gold .move-no{color:var(--gold);}
+.move.blue{border-left-color:var(--blue);}
+.move.blue .move-no{color:var(--blue);}
+.move.green{border-left-color:var(--green);}
+.move.green .move-no{color:var(--green);}
+@media(max-width:420px){.move{padding:11px 12px 12px;}.move-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.move-text,.move-note,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅三</div>
+    <h1>反对投降活动</h1>
+    <div class="sub2">「当前时局的最大危机」 · 投降是主要危险，反共即准备投降</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十五篇 · <b>一九三九年六月三十日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《反对投降活动》。1991 年版《毛泽东选集》第二卷第十五篇，紧接《青年运动的方向》，下接《必须制裁反动派》。<b>篇名是后来改的</b>：原题《当前时局的最大危机》，收入《毛泽东选集》时才改题现名</td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年六月三十日</b>——抗日前两周年纪念日的前七天。这是为纪念抗日战争两周年写的文章，不是讲演，也不是党内文件；原刊篇末署「民国二十八年六月三十日」</td></tr>
+      <tr><th>最初发表</th><td>一九三九年七月七日出版的延安《解放》周刊<b>第七十五、第七十六期合刊</b>「『七七』纪念特辑」专栏，原题《当前时局的最大危机》；同日《新华日报》「七七」抗战二周年纪念特刊一版以<b>代论</b>刊出。据中央党史和文献研究院《〈毛泽东选集〉一至四卷第一版正文和题解的主要修订情况》：「本篇编入《毛泽东选集》时，未写题解。这次校订，加写了题解：『这是毛泽东为纪念抗日战争两周年写的文章。』」——<b>今天读到的题解是 1991 年新写的</b></td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 <b>570—574</b> 页，注释十二条。1952 年第一版相应分页约第 534—538 页（1968 年中国科学院翻印的一卷本即作 534—538 页）</td></tr>
+      <tr><th>篇幅</th><td>三段长论加一组对联式短句收尾，共约一千九百字（据 1991 年版电子文本统计汉字 1890 字，不含标点与注释）。段长 827／508／313／242 字——<b>第一段一段占全篇四成以上</b>，全篇是第二卷最短的篇目之一</td></tr>
+      <tr><th>被删掉的开头</th><td>原刊开头还有一段，交代这本来是篇更大的文章：「抗战两周年了，解放报、新华日报、新中华报与八路军军政杂志，要我作一篇纪念文章。我手边收集了不少材料，拟写一篇纪念抗战两周年的论文，藉以答覆自『论持久战』和『论新阶段』出版以来从某些方面发出的责难、挑战和质疑，<b>名之曰『再论持久战』</b>。这里只能简略的说一说当前时局的危机问题。」——这一段在收入《毛泽东选集》时被略去（《毛泽东年谱（1893—1949）》修订本中卷第 130—131 页），改题也同时发生</td></tr>
+      <tr><th>历史坐标</th><td>文章写成的那半个月，是三件事同时落地的时候：<b>平江的血还没干</b>（6.12 平江惨案，新四军平江通讯处六人被杀）；<b>慕尼黑正搬到东方来</b>（6.14 日军封锁天津英租界，英日谈判开场）；<b>汪精卫正在组府</b>（5.31 赴日，6.6 日本五相会议通过《建立新中央政府的方针》，6.18 启程回国）。文章发表后第八天，中共中央发表《为抗战两周年纪念对时局宣言》，正式提出「坚持抗战到底——反对中途妥协！巩固国内团结——反对内部分裂！力求全国进步——反对向后倒退！」三大口号</td></tr>
+      <tr><th>日后轨迹</th><td>①<b>1952 年收入选集时有两处改动</b>：略去开头关于《再论持久战》的那一段；删去原刊三处「拥护蒋委员长与国民政府」字样（详见「精读感悟」的版本比对）。②<b>它与《反投降提纲》是一对</b>：1939.6.10 和 6.13 毛泽东在延安高级干部会议上作报告和结论，1993 年以《反投降提纲——在延安高级干部会议上的报告和结论的提纲》为题收入《毛泽东文集》第二卷；倪德刚《毛泽东两篇〈再论持久战〉的贡献》（《毛泽东研究》2016 年第 6 期）把这一报告一文合称毛泽东的两篇「再论持久战」</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <div class="part-body" style="padding:0;">
+      <ul>
+        <li><b>戏剧性一 · 这篇文章本来叫《再论持久战》。</b>毛泽东自己交代得很清楚：这本是一篇更大的论文，用来「答覆自《论持久战》和《论新阶段》出版以来从某些方面发出的责难、挑战和质疑」。<b>「某些方面」是谁，他没有点名，但两年之内《论持久战》被质疑、被曲解、被拿去当口号用，是这篇文章真正的起点。</b>结果是论文没写成，只留下「简略的说一说当前时局的危机问题」——一篇被压缩到一千九百字的短文；而这段交代本身，在收入《毛泽东选集》时又被删掉。<b>一篇自陈缘起的开头，连同它的标题，一起消失了：今天读到的《反对投降活动》，看不出它曾经是《再论持久战》。</b></li>
+        <li><b>戏剧性二 · 写文章的那个月，平江的血还没干。</b>一九三九年六月十二日下午三时，国民党第二十七集团军总司令杨森执行蒋介石六月初的密令，突袭新四军驻湖南平江嘉义镇的通讯处。中尉侦察员张绍奇以「到乡公所商议抗日紧急事宜」为名，把新四军上校参议、中共江西省委副书记兼湘鄂赣特委书记<b>涂正坤</b>骗出通讯处，在离门二十多米的「秀记」杂货店前从侧巷开枪，涂正坤中弹后高呼「不准破坏抗战团结」倒地；同日下午，秘书主任<b>吴渊</b>在「万寿宫」门口被枪杀。当晚十二时左右，组织部长<b>罗梓铭</b>、江西省委组织部长<b>曾金声</b>、军需<b>吴贺泉</b>、机要员<b>赵绿吟</b>四人被押到集镇东边二百米的虎形岭，推入一个数丈深的废弃淘金井，向井下齐开数枪后活埋。次日，执行者何学植在万寿宫门口开群众大会，宣称是「新四军留守处收留了我方逃兵」「余连长追捕逃兵时误伤涂正坤参议」。<b>本篇发表时，距这场惨案只有十八天。</b>一个月后（8.1），毛泽东在延安人民追悼平江惨案死难烈士大会上发表演说，即下一篇《必须制裁反动派》——<b>本篇讲「反共即准备投降」，下一篇讲「什么人指使军队去杀」。</b></li>
+        <li><b>戏剧性三 · 文章里写「英日正在进行谈判」，发表时谈判刚签完字。</b>一九三九年六月十四日，日军封锁天津英租界与法租界，逼迫租界当局交出刺杀伪天津海关监督程锡庚的嫌疑人，并提出一系列要英国放弃亲华政策的要求——史称「天津事件」。英国外交部起初曾考虑经济报复（6.16 发表声明，称若日方扩大事态「将很快出现一个极其严重的局面」），但在不到一周内即软化，转向谈判。<b>本篇注释〔5〕写道：「一九三九年六月，即毛泽东作此文时，英日正在进行谈判，重新酝酿这种阴谋。」</b>谈判于七月十五日在东京开始，<b>七月二十四日签订《有田—克莱琪协定》</b>：英国「完全承认」日本造成的「中国之实际局势」，允诺对「阻止日军或有利于日军之敌人之行动与因素」「均无意加以赞助」。按《毛泽东年谱》，这是毛泽东在抗日战争时期认为最困难的时候；中共随即于<b>七月二十九日</b>发出《关于反对东方慕尼黑阴谋的指示》，斥其为「放任侵略、纵容战争的又一罪恶」。<b>文章断言「所谓太平洋会议，就是东方慕尼黑」的时候，真有慕尼黑意味的那份协定还在谈判桌上；等它签字，这篇文章已经从预言变成了注脚。</b></li>
+        <li><b>戏剧性四 · 同一时刻，汪精卫正在往回走，手里已经有了日本内阁的许可。</b>一九三九年五月三十一日，汪精卫偕周佛海、梅思平、高宗武等十一人，由影佐祯昭、犬养健陪同自上海飞东京；<b>六月六日</b>日本五相会议通过《建立新中央政府的方针》，规定「新中央政府以汪、吴和已设政权以及翻然悔改的重庆政府等为其构成分子」，华北为「国防上、经济上的日华紧密结合地区」、蒙疆为「特别高度的防共自治区域」、长江下游为「经济上日华紧密结合地带」。<b>六月十八日</b>汪精卫启程回国，<b>六月二十三日</b>在天津会见北平「临时政府」王克敏（王克敏事后专门召开记者会「宣布临时政府决不支持汪精卫的任何冒险事业」；吴佩孚则干脆在汪的信封上批「公离重庆，失所依凭；如虎出山，无谋和之价值」）。<b>本篇写成时，汪精卫正奔波于天津、北平、上海之间找合作者，而文章只给了他一个名字加一句话：「不但汪精卫在演出，更严重的就是还有许多的张精卫、李精卫。」</b></li>
+        <li><b>戏剧性五 · 蒋介石把「抗战到底」的底，说成了一个可以退回去的位置。</b>一九三九年一月国民党五届五中全会在重庆召开，定下「溶共、防共、限共、反共」方针；蒋介石在会上公开说出他所理解的抗战到底的「底」，是<b>恢复卢沟桥事变以前的状态</b>——那就是把华北和东北的一大片土地默认给日本。所以本篇特别要对抗着把界说立起来：「<b>抗战到底，打到鸭绿江边，收复一切失地</b>」（1991 年版注〔10〕把这一层对抗关系写明）。同期国民党又秘密颁布《防制异党活动办法》《限制异党活动办法》，三月设精神总动员会，各地摩擦事件接连发生。<b>「反共即准备投降」这六个字，是从这一串文件里长出来的判断，不是修辞。</b></li>
+      </ul>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:22px 0 12px;">时间线</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1938.11.03</div><div class="tl-body">日本政府修改「不以国民政府为对手」的方针，改取<b>诱蒋投降为主</b>：「如果国民政府抛弃以往的指导方针，更换人事，改弦易辙，参加新秩序的建设，我方亦不拒绝」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.11</div><div class="tl-body">英国首相张伯伦表示愿意实行英日经济合作、共同参加所谓「远东建设」——英美酝酿出卖中国换取对日妥协由此起</div></div>
+      <div class="tl-item"><div class="tl-date">1938.12.19 / 12.29</div><div class="tl-body">汪精卫自重光堂密约后逃离重庆抵河内；十二月二十九日发表「艳电」响应近卫声明</div></div>
+      <div class="tl-item"><div class="tl-date">1939.01.21—30</div><div class="tl-body">国民党五届五中全会在重庆召开，确定「溶共、防共、限共、反共」方针；蒋介石说明「抗战到底」的底是恢复卢沟桥事变以前状态</div></div>
+      <div class="tl-item"><div class="tl-date">1939.02.21</div><div class="tl-body">高宗武奉汪集团之意赴日，向平沼内阁表态：若要汪出来负责，「他将出马」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.03</div><div class="tl-body">国民党秘密颁布《防制异党活动办法》（后又有《异党问题处理办法》）；三月十一日设精神总动员会，蒋介石任会长</div></div>
+      <div class="tl-item"><div class="tl-date">1939.04</div><div class="tl-body">英国驻华大使卡尔往返于蒋介石和日本之间，企图拉拢中日「议和」<span class="note">（1991 年版注〔4〕）</span></div></div>
+      <div class="tl-item"><div class="tl-date">1939.04.09</div><div class="tl-body">伪天津海关监督程锡庚在天津英租界大光明影院遇刺身亡——此案成为六月「天津事件」的导火索</div></div>
+      <div class="tl-item"><div class="tl-date">1939.05.31</div><div class="tl-body">汪精卫偕周佛海等十一人自上海飞东京，交涉组府</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.06</div><div class="tl-body">日本五相会议通过《建立新中央政府的方针》，决定支持汪精卫成立新「中央政府」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06 初</div><div class="tl-body">中共中央发出《关于反对投降危险的指示》</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.06.10 / 06.13</div><div class="tl-body">毛泽东在<b>延安高级干部会议</b>上先后作报告和结论（1993 年以《反投降提纲》为题收入《毛泽东文集》第二卷），提出「开展反投降斗争，公开揭穿反共即准备投降的实质，以孤立投降派与反共分子，以便继续抗日」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.12</div><div class="tl-body"><b>平江惨案</b>：国民党第二十七集团军杨森部执行蒋介石密令突袭新四军平江通讯处，涂正坤、罗梓铭、曾金声、吴渊、吴贺泉、赵绿吟六人被害</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.14</div><div class="tl-body">日军封锁天津英租界与法租界，逼英国放弃亲华政策，史称「天津事件」；英日谈判由此展开</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.18 / 06.23</div><div class="tl-body">汪精卫启程回中国，此后奔波于华北、上海、广东拼凑伪政权，收效甚微；六月二十三日在天津会见北平「临时政府」王克敏，碰壁</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.06.30</div><div class="tl-body"><b>毛泽东撰写本文——原题《当前时局的最大危机》，自拟总题《再论持久战》</b></div></div>
+      <div class="tl-item"><div class="tl-date">1939.07.03</div><div class="tl-body">中央政治局会议讨论为纪念抗战两周年对时局宣言等文件；周恩来发言请毛泽东作《再论持久战》，答复如何继续支持抗战</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.07.07</div><div class="tl-body">文章在延安《解放》周刊第七十五、七十六期合刊「七七纪念特辑」刊出；同日《新华日报》「七七」特刊一版以代论刊出（原题《当前时局的最大危机》）；中共中央同日在《为抗战两周年纪念对时局宣言》中提出<b>坚持抗战、团结、进步</b>三大方针</div></div>
+      <div class="tl-item"><div class="tl-date">1939.07.15 → 07.24</div><div class="tl-body">有田八郎与英国驻日大使克莱琪在东京谈判；七月二十四日签订《有田—克莱琪协定》，英国「完全承认」日本侵华造成的实际局势</div></div>
+      <div class="tl-item"><div class="tl-date">1939.07.29</div><div class="tl-body">中共中央发出《关于反对东方慕尼黑阴谋的指示》，斥协定为「放任侵略、纵容战争的又一罪恶」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.08.01</div><div class="tl-body">延安人民追悼平江惨案死难烈士大会召开，毛泽东发表《必须制裁反动派》演说（第二卷第十六篇）</div></div>
+      <div class="tl-item green"><div class="tl-date">1952</div><div class="tl-body">收入《毛泽东选集》第二卷时改题《反对投降活动》，略去开头一段，删去「拥护蒋委员长与国民政府」字样</div></div>
+      <div class="tl-item green"><div class="tl-date">1991</div><div class="tl-body">第二版校订：为本篇<b>加写题解</b>「这是毛泽东为纪念抗日战争两周年写的文章」（第一版未写题解）；注释整校为十二条</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全篇只回答一个问题：<span class="q">眼前最大的危险是什么。</span>答案是——不是打不赢，是<span class="q">不打了</span>。第一步先把问题还原回去：从「九一八」到卢沟桥，压在最先的从来是<span class="q">「战不战」</span>，卢沟桥的炮声只是「暂时地解决了」它；于是一部分人「把这个问题的词句改变了一点」，换成「和战问题」——<span class="q">论点依然是一样，只是换了名字。</span>第二步把主和派的整套做法拆开：先反共（「不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降」），再寄希望于日本让步与国际压力（<span class="q">「太平洋国际会议是有益于中国的，这不是什么慕尼黑」</span>）。第三步给出判断与任务：<span class="q">「投降是主要危险、反共即准备投降」</span>，「必须睁大眼睛注视那班投降派的活动」，「用一切努力去反对投降和分裂」。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 承认现在的敌人是「暗藏的」</h4>
+        <p>文章开头就把汪精卫降级：真正严重的问题不在公开投敌的那一个，而在「还有许多的张精卫、李精卫，他们暗藏在抗日阵线内部，也在和汪精卫里应外合地演出」。<b>公开敌人只是标本，暗藏的才是全体</b>——这是全篇分析重心的转向，也是它比一般讨汪文章难写的地方。<span class="card-tag">重心转移</span></p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 把「唱双簧」写成可观察的行为模式</h4>
+        <p>「有些唱双簧，有些装红白脸」——1991 年版注〔7〕〔8〕都指向蒋介石与汪精卫彼此呼应、一面装抗战一面做投降的两面派活动。<b>这篇文章的方法论价值在这里：不靠动机揣测，靠配合关系与表演分工来指认。</b></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 一千九百字里没有一次战役</h4>
+        <p>日本、国际投降主义者、主和派、张精卫李精卫、太平洋会议、东方慕尼黑、捷克……<b>全篇没有一处战场、没有一组战况数字，因为它要处理的不是战报，是词。</b>注〔4〕〔5〕还专门说明：「叫它东方慕尼黑」这句话的发明权不在共产党，而在别人——先把好词的来源讲清，再把它变成坏词。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">改名</div><div class="n-sub">战不战 → 「和战问题」<br>词句改变了一点</div></div>
+      <div class="arrow">➔</div>
+      <div class="node gold"><div class="n-label">分阵</div><div class="n-sub">主战派＝全民族大多数<br>主和派＝少数动摇分子</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">手段</div><div class="n-sub">欺骗宣传<br>「而第一就是反共」</div></div>
+      <div class="arrow">➔</div>
+      <div class="node blue"><div class="n-label">三条指望</div><div class="n-sub">日本让步／国际压力<br>／太平洋会议</div></div>
+      <div class="arrow">➔</div>
+      <div class="node"><div class="n-label">定性</div><div class="n-sub">东方慕尼黑<br>＝准备把中国变成捷克</div></div>
+      <div class="arrow">➔</div>
+      <div class="node green"><div class="n-label">判断与任务</div><div class="n-sub">投降是主要危险，反共即准备投降<br>→ 反对投降和分裂</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这是本卷里链条最完整、也最短的一条。它的起点不是事实，<b>是措辞</b>：一个词换了，阵营就重排，动作就有了理由。全篇最像公理的一条是那个三段论——「因为共产党是抗日民族统一战线的发起者和坚持者，不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降」。<b>把结论拆成三个「就不能」，等于给投降派排了一张工序表；工序表一旦写出，只要看到第一道工序（反共）在动，后面两道就可以提前判定了。</b>这也解释了为什么文章到此不再讨论军事形势：它要交付的是一件识别工具，不是一份战情评估。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">战不战，被改成了「和战」</span><span class="part-scope">第 1 段 · 570—571 ｜ 827 字（全篇最长）</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先把老问题立起来：从「九一八」到卢沟桥，「劈头第一个大问题，就是战不战的问题」，而且「争论得很严重」——<b>「战则存，不战则亡」对「战则亡，不战则存」</b></li>
+          <li>「卢沟桥抗战的炮声，把这个争论暂时地解决了。」随即追问为什么只是「暂时」：三个原因——日本帝国主义的诱降政策、国际投降主义者的妥协企图、中国抗日阵线中一部分人的动摇性</li>
+          <li><b>全篇第一个判断落在措辞上</b>：「现时人们就把这个问题改变了一点词句，变为所谓『和战问题』，又提出来了。」「他们的论点依然是一样」</li>
+          <li>重新分阵：主战派「乃是包括一切爱国党派，一切爱国同胞，全民族的大多数」；主和派「按其人数说来，则仅仅是抗日阵线中的一部分的动摇分子」</li>
+          <li><b>因此主和派必然先造谣</b>：雪片一样的「共产党捣乱」「八路军、新四军游而不击，不听指挥」「陕甘宁边区实行割据」「共产党阴谋推翻政府」乃至「苏联阴谋侵略中国」</li>
+          <li><b>「而第一就是反共」的因果被写透</b>：「因为共产党是抗日民族统一战线的发起者和坚持者，不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降」——三个「就不能」，是一张工序表</li>
+          <li>接着是三条指望：<span class="k">其一</span>寄希望于日本让步（「日本已经不行了」，会「自动地退出华中、华南甚至华北」）；<span class="k">其二</span>寄希望于国际压力（「你们看，国际空气如此，只得和吧！」「太平洋国际会议是有益于中国的，这不是什么慕尼黑，这是复兴中国的步骤！」）；<span class="k">其三（实为前提）</span>先反共</li>
+          <li>收在一句话上：「这些，就是中国主和派即投降派的整套观点，整套做法，整套阴谋。」紧接全篇最有名的一笔——<b>汪精卫只是标本，「更严重的就是还有许多的张精卫、李精卫」</b>，「有些唱双簧，有些装红白脸」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">二</span><span class="part-title">「我们共产党人公开宣称」：四个「坚决地斥责」</span><span class="part-scope">第 2 段 · 571—572 ｜ 508 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>先立自己的位置：「我们是始终站在主战派方面的」，愿意与全国一切爱国党派、爱国同胞「巩固团结，巩固抗日民族统一战线，巩固国共合作」，「抗战到底，<b>打到鸭绿江边，收复一切失地</b>，而不知其他」</li>
+          <li><b>第一个斥责</b>：公开的与暗藏的汪精卫辈「制造反共空气、挑拨国共磨擦、甚至企图再来挑动一次国共内战的阴谋」——「你们这种分裂阴谋的实质，不过是你们实行投降的准备步骤」，「每个人民都有眼睛，你们的阴谋会被人民揭穿的」</li>
+          <li><b>第二个斥责</b>：认为太平洋会议并非东方慕尼黑的「无稽之谈」——「所谓太平洋会议，就是东方慕尼黑，就是准备把中国变成捷克」</li>
+          <li><b>第三个斥责</b>：认为日本能够觉悟、能够让步的「空谈」——「日本帝国主义灭亡中国的根本方针是决不会变的」；并用两个比喻把诱降写死：「<b>诱鱼上钓取而烹之</b>」「谁要上钓谁就准备受烹」</li>
+          <li><b>第四个斥责</b>：国际投降主义者「同样是他们的阴险政策」——「他们纵容日本侵略中国，自己『<b>坐山观虎斗</b>』，以待时机一到，就策动所谓太平洋调停会议，借收渔人之利」</li>
+          <li>本段的结构是四次同头句「我们坚决地斥责……」——<b>四个驳论按对象排列：内部的分裂派、国际会议、日本让步、国际调停者，从近到远，把「投降」这条路上的每一块路牌都摘掉</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">三</span><span class="part-title">投降是主要危险，反共即准备投降</span><span class="part-scope">第 3 段 · 572—573 ｜ 313 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>回到开头并合上：「战或不战的问题，如今改成了战或和的问题，但性质还是一样，这是一切问题中的第一个大问题，最根本的问题。」——<b>「改了名、性质还是一样」，是第一段那句推测的回收</b></li>
+          <li>给出形势判断：「半年以来」日本诱降加紧、国际投降主义者积极活动，主要地还是「中国抗日阵线中一部分人的更加动摇」，「所谓和战问题竟闹得甚嚣尘上」</li>
+          <li><b>一条识别法则</b>：投降的可能成了「当前政治形势中的主要危险」；而反共、即分裂国共合作与抗日团结，成了「那班投降派准备投降的首要步骤」</li>
+          <li>任务落地：「必须睁大眼睛注视那班投降派的活动，必须认识当前形势中<span class="k">投降是主要危险、反共即准备投降</span>这一个主要的特点，而用一切努力去反对投降和分裂」</li>
+          <li>两个「决不容许」：用全民族的血肉打了两年，「决不容许一部分人的动摇和叛卖」；用全民族的努力结成的统一战线，「决不容许一部分人的破坏和分裂」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">结</span><span class="part-title">「战下去，团结下去——中国必存」</span><span class="part-scope">第 4 段 · 573 ｜ 242 字</span></div>
+      <div class="part-body">
+        <ul>
+          <li>由长论证突然转成对联与四字问句：「战下去，团结下去，——中国必存。和下去，分裂下去，——中国必亡。何去何从？国人速择。」<b>全篇只有一个问号，就在这里</b></li>
+          <li>两个「一定要战下去，团结下去」——先说自己（共产党人），再说全国一切爱国党派、爱国同胞，<b>句法故意重复，把「我们」并进「全国」里去</b></li>
+          <li>以「莫予毒也」（《左传》语，自以为无人能害己）点投降派的自负，给出结局判断：「然而他们的命运是最后一定要受到全国人民的制裁的」</li>
+          <li>收束三句：一句定义任务（反对投降和分裂——当前紧急任务）、一句全体呼告（全国人民团结起来……把投降阴谋和分裂阴谋镇压下去啊！）——<b>全篇只此一处感叹号</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">两套结论：本篇的起手式</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">立场</th><th>结论</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">爱国党派<br>爱国同胞</td><td><b>战则存，不战则亡</b></td><td>「这是一切爱国党派和一切爱国同胞的结论」——卢沟桥的炮声「宣告：第一个结论是对的」</td></tr>
+        <tr><td class="c1">投降主义者</td><td><b>战则亡，不战则存</b></td><td>「第二个结论是错了」——注意原文只说这场争论被「<b>暂时地</b>解决了」，没有说解决了</td></tr>
+        <tr><td class="c1">改名之后的<br>同一对立</td><td>主战派「战则存，和则亡」<br>主和派「和则存，战则亡」</td><td>「现时人们就把这个问题改变了一点词句，变为所谓『和战问题』」；「他们的论点依然是一样」</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:12px;"><b>这张表要读的是它的第三行。</b>前两行是历史，第三行是现在——<b>结论一个字没变，只把「战不战」换成了「和战」，可选的答案就少了一半。</b>「战不战」问的是要不要打，两个答案平等地摆在桌上；「和战」问的是怎么谈，等于预先承认了「谈」是一个可选项。全篇之所以值得当方法论读，就在于它把这一层先说破：<b>不是先有投降的决定、再有改名的动作，而是改名本身已经是第一个动作。</b></p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">三种角色：公开的、暗藏的、对面的</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">公开投降派</div>
+          <div class="spec-seg gold">暗藏的投降派</div>
+          <div class="spec-seg green">主战派</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>汪精卫</b>「这一套，不但汪精卫在演出」——1991 年版注〔6〕：汪精卫是公开的投降派的主要头目。<b>但全篇只把这名字当作从句里的一个成分</b></div>
+          <div class="spec-label"><b>张精卫、李精卫</b>「更严重的就是还有许多……暗藏在抗日阵线内部，也在和汪精卫里应外合地演出，有些唱双簧，有些装红白脸」——注释直指蒋介石：暗藏在抗日阵线内部的投降派的主要头目</div>
+          <div class="spec-label"><b>共产党与爱国党派、同胞</b>「我们是始终站在主战派方面的」；「主战派，乃是包括一切爱国党派，一切爱国同胞，全民族的大多数」——<b>把大多数人算进自己这边，是本篇最大的底气</b></div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;"><b>这张图的分量在中间一格。</b>讨汪的文章只写左边，本篇却把重心压在中间：<b>「更严重的就是」四个字，把一整类还没暴露的人放到了台上。</b>这也解释了为什么正文通篇不点蒋介石的名——他的位置由这一格和三条注释来完成。<b>顺带注意时间线上的一个细节：写这篇文章的时候，汪精卫正在天津、北平、上海之间找合作者，而那趟行程几乎全部碰壁；真正让毛泽东担心的是内部那些「唱双簧」的人，而不是这个已经被公开指认的人。</b></p>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin:26px 0 4px;">主和派的三条指望，其实是一条退路</h3>
+    <div class="move-grid">
+      <div class="move">
+        <div class="move-head"><span class="move-no">其一</span><span class="move-tag">寄望日本</span></div>
+        <div class="move-text">他们认为日本已经不行了，它将改变其根本政策，自动地退出华中、华南甚至华北，中国可以不要再打而取得胜利。</div>
+        <div class="move-note">批驳：「日本帝国主义灭亡中国的根本方针是决不会变的」；武汉失陷后的甜言蜜语「乃是诱鱼上钓取而烹之的阴险政策，谁要上钓谁就准备受烹」</div>
+      </div>
+      <div class="move gold">
+        <div class="move-head"><span class="move-no">其二</span><span class="move-tag">寄望国际</span></div>
+        <div class="move-text">「你们看，国际空气如此，只得和吧！」「太平洋国际会议是有益于中国的，这不是什么慕尼黑，这是复兴中国的步骤！」</div>
+        <div class="move-note">批驳：「所谓太平洋会议，就是东方慕尼黑，就是准备把中国变成捷克」；国际投降主义者「纵容日本侵略中国，自己『坐山观虎斗』……借收渔人之利」</div>
+      </div>
+      <div class="move green">
+        <div class="move-head"><span class="move-no">其三</span><span class="move-tag">实为前提</span></div>
+        <div class="move-text">所谓主和派，就不得不进行其欺骗宣传，而第一就是反共。</div>
+        <div class="move-note">这一条不是「指望」，是<b>工序</b>：「因为共产党是抗日民族统一战线的发起者和坚持者，不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降」</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;"><b>把三条摆在一起看，前两条是「退路」，第三条是「通路」。</b>寄望日本让步、寄望国际调停，两个说法都不能给出日期，也不产生任何动作；只有第三条是能立刻开工的——<b>所以它被放在「第一」：「所谓主和派，就不得不进行其欺骗宣传，而第一就是反共。」</b>换句话说，主和派嘴上讲的是第一、第二条，手上做的是第三条；判断一个集团的走向，看手上那一条就够了。</p>
+
+    <div class="quote">
+      这一套，不但汪精卫在演出，更严重的就是还有许多的张精卫、李精卫，他们暗藏在抗日阵线内部，也在和汪精卫里应外合地演出，有些唱双簧，有些装红白脸。
+      <span class="src">第一段（1991 年版第 571 页）｜把叛国写成「演出」，把危险放进内部。半年之后（1940.03.30）汪精卫在南京成立伪国民政府——而本条所指的「更严重」的那一类，将在接下来的两年里一次次以摩擦事件的形式露面</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>它把「换词」当成危险本身</h4>
+          <p>全篇的第一个判断不是关于日本、也不是关于蒋介石，而是关于一个措辞：「现时人们就把这个问题改变了一点词句，变为所谓『和战问题』，又提出来了。」<b>注意这句话的分量——改名在文章里不是铺垫，是证据。</b>「战不战」问的是要不要打，「和战」问的是怎么谈；前者有两个平等的答案，后者已经把其中一个放到了桌上。同一个事实换个名字，可选项就少了一半。文中其后所有的分析（分阵、造谣、三条指望），都建立在这一次改名之上。</p>
+          <span class="mv">迁移：听到一个提案换了名字（「问题」变成「挑战」，「停用」变成「优化」，「裁员」变成「结构优化」，「预算削减」变成「资源再平衡」），先别急着讨论内容——<b>改名的动作本身就是内容</b>：它在为哪一个答案腾位置？把新旧两个说法并排写在纸上，缺掉的那一半选项，通常就是对方已经选好的那一半。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「反共即准备投降」把因果方向倒过来讲了</h4>
+          <p>常规的想法是：一个集团先决定投降，然后出于讨好敌人的需要而反共。本篇写的是相反的顺序——<b>反共是投降的准备工作，因为不先拆掉团结，就没有东西可以拿去投降</b>：「不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降。」这一改，判据就从动机移到了动作：不需要知道他心里怎么想，只要看到他在拆团结，就能推定他后面要做什么。这也正是全篇能给出「法则」而不只是给出「谴责」的原因。</p>
+          <span class="mv">迁移：任何「联盟要散」的场合都适用这个方向——<b>先找那道「不拆就不能退」的工序</b>。合伙生意里逼着选边站队、团队里制造两条线互相举报、组织里先把最有资历的人清出去，这些都是工序性的动作，比任何表态都更能预告结局。反过来自检也成立：如果你正在推某件事，而它的第一步必须先把盟友清掉，那这件事的方向大概不是你想宣称的那个方向。</span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>分析重心放在「暗藏的那个」身上，是这篇文章最不像宣传的地方</h4>
+          <p>讨汪的文章汗牛充栋，本篇却把汪精卫放在从句里：「这一套，不但汪精卫在演出，<b>更严重的就是</b>还有许多的张精卫、李精卫。」1991 年版注〔6〕把话说尽——蒋介石才是「暗藏在抗日阵线内部的投降派的主要头目」。<b>公开的敌人只能占领骂文，暗藏的敌人才能定出办法</b>：所以全文的交付物不是一次谴责，而是一条识别法则。这也解释了它为什么写得这么抽象干净——它要处理的不是哪一件事，是哪一类事。<b>还有一层：全篇正文一次也没点蒋介石的名，指认全靠注释；「汪精卫」在这篇里已经不是一个人，而是一类人的通名。</b></p>
+          <span class="mv">迁移：评估风险时，把「已经出问题的」和「更严重的」分开排——<b>已经暴露的那个通常已经不构成最大威胁了，因为它没有隐藏的余地。</b>真正要盯的是配合关系：谁在替谁分担表演（一个唱红脸一个唱白脸），谁的行为恰好补上对方的空缺。找双簧不要听两个人分别说了什么，要看两人的行为是否恰好不重叠。</span>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:6px;">另记四处阅读提示：<b>其一，引本篇务必注明版本。</b>1952 年收入选集时删去原刊三处「拥护蒋委员长与国民政府」字样——原刊作「我们是始终站在主战派方面的，<b>我们是拥护蒋委员长与国民政府历次公开宣告的抗战国策的</b>」，「实行三民主义，<b>拥护蒋委员长与国民政府</b>抗战到底」；同名句另有「劈头第一个大问题／关头第一个大问题」「睁大眼睛／光起眼睛（原刊误植）」「打了两个周年的战争／神圣抗战」「镇压下去啊／呵」等字句差异，开头论《再论持久战》的一整段亦被略去。<b>其二，本篇的时间层次比看起来复杂。</b>正文写于一九三九年六月三十日，注释是收入《毛泽东选集》时（第二卷付印于一九五二年）统一撰写的——注〔4〕〔5〕提到的一九三九年「四月卡尔往返」「六月美国示意」「七月英日达成协议」都不可能出自战时，读时须分清。其三，<b>「太平洋国际会议」在本篇里是「东方慕尼黑」的代称</b>，而 1991 年版注〔4〕专门把发明权归还给蒋介石——先把一个好词的来源讲清楚，再把它变成坏词，这是本篇在术语上最讲究的一处。其四，<b>1939 年 6 月到 7 月，同一场危机产出了三份文本</b>：6.10、6.13 延安高级干部会议的报告和结论（对内的《反投降提纲》），6.30 本篇（对外的公开判断），7.7 中共中央《为抗战两周年纪念对时局宣言》（对全国的三大口号）——三份文件相隔不到一个月，语气不同、受众不同，放在一起读最能看出这一年的政治操作方式。</p>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">中华民族在日本侵略者面前，历来存在的劈头第一个大问题，就是战不战的问题。</div>
+        <div class="ctx">第一段｜1991 年版第 570 页。全篇的起手式：先立一个老问题，再揭露它被改了名字。注意「劈头」两个字——写的是最先、也不是唯一</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这些，就是中国主和派即投降派的整套观点，整套做法，整套阴谋。</div>
+        <div class="ctx">第一段｜1991 年版第 571 页。三个「整套」层层加码：观点是可辩的，做法是可查的，阴谋是不可辩也不可查的——全篇的分水岭句</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这一套，不但汪精卫在演出，更严重的就是还有许多的张精卫、李精卫，他们暗藏在抗日阵线内部，也在和汪精卫里应外合地演出，有些唱双簧，有些装红白脸。</div>
+        <div class="ctx">第一段｜1991 年版第 571 页。把叛国写成「演出」，把危险放进内部。1991 年版注〔7〕〔8〕把这个比喻落到具体关系上：蒋汪之间唱双簧，主和派一面装抗战、一面做投降</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">所谓太平洋会议，就是东方慕尼黑，就是准备把中国变成捷克。</div>
+        <div class="ctx">第二段｜1991 年版第 572 页。两个「就是」把一整套国际安排一句话定死，是本篇被引最多的一句。写它时英日谈判正在进行，三周后《有田—克莱琪协定》签字</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">必须认识当前形势中投降是主要危险、反共即准备投降这一个主要的特点</div>
+        <div class="ctx">第三段｜1991 年版第 573 页。全篇交付的那一条识别法则。前一句是「必须睁大眼睛注视那班投降派的活动」——先给观察动作，再给判据</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">战下去，团结下去，——中国必存。和下去，分裂下去，——中国必亡。何去何从？国人速择。</div>
+        <div class="ctx">结段｜1991 年版第 573 页。由长论证突然转成对联与四字问句。「何去何从？国人速择」是全篇唯一的问号，也是唯一把选择权交出去的一句</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px;">以上均为 1991 年版文字，已逐字核对。引文中的「」为本书统一体例所加，原文此处用引号。原刊（一九三九年《解放》周刊及《新华日报》）另有「拥护蒋委员长与国民政府」等字样，1952 年收入选集时删去——引本篇时标注所据版本。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《必须制裁反动派》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.08.01 ｜ 第二卷第十六篇 ｜ 第 575 页起</span></div>
+        <p>一九三九年八月一日，延安人民追悼平江惨案死难烈士大会召开，毛泽东作演说，开篇即是一串追问：「今天是八月一日，我们在这里开追悼大会。为什么要开这样的追悼会呢？因为反动派杀死了革命的同志，杀死了抗日的战士。」<b>本篇讲「反共即准备投降」，那篇讲「什么人指使军队去杀」</b>：本篇给的是识别法则（看谁在拆团结），那篇给的是点名——涂正坤、罗梓铭，和「接受了日本帝国主义和汪精卫的命令」的指使者。两篇相隔一个月，一篇是文，一篇是悼词。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《反投降提纲》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.6.10、6.13 延安高级干部会议报告与结论 ｜ 《毛泽东文集》第二卷 196—237 页</span></div>
+        <p>同一场危机的两种文本：<b>对内讲的是工作布置</b>（「公开揭穿反共即准备投降的实质，以孤立投降派与反共分子，以便继续抗日」，「党的基本任务是巩固扩大抗日民族统一战线」），<b>对外讲的是公开判断</b>。两者被今人合称毛泽东的两篇「再论持久战」，而本篇原名本来就叫《再论持久战》。<span class="muted">（另可与《论持久战》相持阶段的预判对读——「此阶段内，必须号召全国坚决地维持一个统一政府，反对分裂」：本篇是那份判断的到期兑现。）</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>改名题</b>：写下你最近遇到的、被换过说法的三件事（例：「问题」→「挑战」、「成本」→「投入」、「裁员」→「优化」、「亏损」→「投入期」）。逐条问：<b>换名之后，桌面上少了哪一个选项？</b>如果三个答案指向同一个方向，那不是巧合，是有人在按同一份稿子说话。</div>
+      <div class="q">二 · <b>工序题</b>：「不反对它，就不能破坏国共合作，就不能分裂抗日民族统一战线，就不能投降。」这句话是三个「就不能」串成的<b>必要前提链</b>。挑一个你正在观察的组织（公司、项目组、社区），写下：若要达成某个结果，必须先做掉哪三件事？<b>然后回头看它最近实际做掉的，是不是那件「第一步」。</b></div>
+      <div class="q">三 · <b>双簧题</b>：找出你身边一对「行为恰好不重叠」的人或机构（一个负责强硬、一个负责缓和；一个讲原则、一个讲弹性）。不要听他们说了什么，只列出最近各自做的三件具体事：<b>它们合起来是否在推进一个任何一方单独都推不动的结果？</b></div>
+      <div class="q">四 · <b>词源题</b>：「东方慕尼黑」这个说法，本篇注〔4〕专门说明它是别人的创造（蒋介石的说法）。找一个你所在领域里被广泛使用的负面标签，追溯一下：<b>这个词最初是谁造的、用来批评谁？</b>在多数情况下，一个词在成为武器之前，先是某个人的结论。把来源和用法分开写，判断会准得多。</div>
+      <div class="hint"><b>三问卡</b>：① 这件事的名字最近换过吗，换名腾出了哪个选项？② 我盯的是已经暴露的那个人，还是正在配合的那个人？③ 我用的那些标签，我知道它们本来是谁说的吗？三问里第一问最容易被跳过，因为改名之后，大家讨论的都是新名字——<b>而新名字通常是对方先挑的。</b></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十五篇</div>
+    <div>依据人民出版社 1991 年版第二卷 570—574 页 ｜ 2026.10.15</div>
+  </div>
+
+</div>
+</body>
+</html>

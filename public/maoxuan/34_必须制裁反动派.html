@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>34 · 必须制裁反动派 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:25px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 小网格 ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+.g18.on{background:var(--bg-2);border-color:var(--red);}
+.g18.on b{color:var(--red);}
+.g18.now{border-color:var(--gold);}
+.g18.now b{color:var(--gold);}
+
+/* ===== 方针卡 ===== */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px;min-width:0;}
+.move{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:12px 14px 13px;min-width:0;overflow:hidden;}
+.move-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.move-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:15px;font-weight:700;color:var(--red);flex:0 0 auto;}
+.move-tag{font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);letter-spacing:0;}
+.move-text{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:14px;color:var(--ink);line-height:1.8;min-width:0;}
+.move-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin-top:7px;padding-top:6px;border-top:1px dashed var(--line);}
+.move.gold{border-left-color:var(--gold);}
+.move.gold .move-no{color:var(--gold);}
+.move.blue{border-left-color:var(--blue);}
+.move.blue .move-no{color:var(--blue);}
+.move.green{border-left-color:var(--green);}
+.move.green .move-no{color:var(--green);}
+@media(max-width:420px){.move{padding:11px 12px 12px;}.move-text{font-size:13.5px;}}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.move-text,.move-note,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅四</div>
+    <h1>必须制裁反动派</h1>
+    <div class="sub2">「用国法制裁反动份子」 · 一桩杀人案，怎么变成一件全国的事</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十六篇 · <b>一九三九年八月一日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《必须制裁反动派》。1991 年版《毛泽东选集》第二卷第十六篇，紧接《反对投降活动》，下接《关于国际新形势对新华日报记者的谈话》。<b>篇名是收入选集时改的</b>：原题《用国法制裁反动份子》，副题「在平江惨案诸烈士追悼大会上的讲演」</td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年八月一日</b>。严格说不是「写」而是「讲」——延安人民追悼平江惨案死难烈士大会上的即席演说，讲在惨案发生后的第五十天</td></tr>
+      <tr><th>最初发表</th><td>讲演在先、刊布在后：一九三九年八月二十日延安《解放》周刊<b>第五卷第八十一期第 9 页</b>，题《用国法制裁反动份子》。同期还刊《周恩来同志关于平江惨案的谈话》《周恩来同志致军委政治部陈部长电》《张鼎丞同志在平江惨案被难诸烈士追悼大会上的演说》《延安各界追悼平江惨案大会致全国通电》《中共中央挽联》</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 <b>575—579</b> 页，注释五条：第一条讲平江惨案与<b>指使者是谁</b>，第二条注汪精卫，第三条讲「统一」这个口号的争夺，第四、五条讲国际诱降阴谋与《限制异党活动办法》</td></tr>
+      <tr><th>题解</th><td>「这是毛泽东在延安人民追悼平江惨案死难烈士大会上的演说。」中共中央文献研究室《〈毛泽东选集〉一至四卷第一版正文和题解的主要修订情况》所列<b>第二卷修订条目中没有这一篇</b>——即第二版对本篇正文与题解未作校订；五条注释与其他各篇一道经过统一校订</td></tr>
+      <tr><th>篇幅</th><td>五段，约一千六百字（据 1991 年版电子文本统计汉字 <b>1634</b> 字，不含标点与注释）。段长 396／73／160／545／460 字——<b>第四段一段占全篇三分之一</b>，第二段只有 73 字，是一句判断带过</td></tr>
+      <tr><th>现场的痕迹</th><td>1991 年版正文保留了讲演现场记录：三处「（全场鼓掌）」、一处「（热烈鼓掌，高呼口号）」。演说体进入选集后这类舞台提示大多被删净，本篇留下的四处是少数例外——<b>读它的时候不妨记住：这是讲稿，不是论文</b></td></tr>
+      <tr><th>历史坐标</th><td>讲演日恰是「八一」——南昌起义十二周年，也是惨案后的第五十天，而全篇最反复的一句是「有谁出来过问呢？没有」。二十天后刊出（8.20）时，《有田—克莱琪协定》（7.24）已签字、周恩来在重庆的交涉电已连发多封、汪精卫正在华北与上海筹备伪政权；刊出后第三天（8.23）苏德互不侵犯条约签字，国际线骤然改写</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">本卷唯一一篇在万人会场上「讲」出来的文章</span><span class="part-scope">1939.08.01</span></div>
+      <div class="part-body">
+        <p>一九三九年八月一日，中共中央在<b>延安南门外公共体育场</b>举行追悼平江惨案死难烈士集会，延安各界万余人参加，中共中央领导人和各单位、各界人士 200 多人敬献花圈。会场正中是中共中央的挽词：</p>
+        <ul>
+          <li><b>中共中央挽词</b>：「在国难中惹起内讧，江河不洗古今憾；于身危时犹明大义，天地能知忠烈心。」</li>
+          <li><b>毛泽东的挽词</b>：「日寇凭陵，国难方殷，枪口应当对外；吾人主战，民气可用，意志必须集中。」</li>
+        </ul>
+        <p><b>两副挽联的语法不同：一副写死者，一副写时局。</b>毛泽东那副没有一句哀辞，全是「枪口应当对外」「意志必须集中」——一篇战时的对内通告。会场里人挤在露天场子上，陕北昼夜温差大，有些刚来延安的外地学生边听边跺脚取暖，时任抗日军政大学训练部部长的许光达去制止，毛泽东反倒体谅：「天这么冷，为什么不让跺脚！」<span class="muted">（此项属回忆性记述，见中共党史宣传文章）</span></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">讲演前的那五十天里，该响的东西一直没有响</span><span class="part-scope">1939.06.12 — 08.01</span></div>
+      <div class="part-body">
+        <p>从六月十二日下午三时的枪声，到八月一日万人集会，中间隔着五十天。本篇第三段就是在数这五十天：「有谁出来过问呢？……应该由中国的法律出来过问，由法官出来过问。如果在陕甘宁边区发生了这样的事情，我们的高等法院早就出来过问了。但是，平江惨案快两个月了，法律和法官并没有出来过问。」</p>
+        <p><b>注意这一段的写法：它不写「没人管」，它写「该管的没管」</b>——先立一个应有的制度，再让事实与它对齐，然后指出缺口。原刊本在这里讲得更直白：「难道法律是死了吗？难道法律是纵容凶犯的吗？」「我们现在要以人民的资格出来过问这件事。」这些句子在 1991 年版正文中已不见（见陆板块版本比对）。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">会场里的人，是半个月前被一封信骗出门开枪打死的</span><span class="part-scope">平江惨案现场</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>密令与部署</b>：1939 年 6 月初，蒋介石密电杨森「共产党在嘉义暗中活动，阻挠抗战，速将新四军驻嘉义留守处人员黄耀南、涂正坤等一一解决」。杨森部署：九十二军军长李仙洲指挥，特务营营长何学植执行，调二连全连、一个重机枪排，另从三连抽 20 人各配手枪，由中尉侦察员张绍奇于 <b>6 月 11 日</b>以「加速破路」为名进驻嘉义，完成对通讯处的内外两层包围（后面是汨罗江，墈高水深，另用机枪封锁）。</li>
+          <li><b>6 月 12 日上午</b>：新四军上校参议涂正坤还带着通讯处干部和当地群众挖破平（江）修（水）公路；中午众人疲劳午睡，他仍在接待来访群众。</li>
+          <li><b>下午三时</b>：张绍奇上门「请涂参议到乡公所商量抗日紧急事宜」。涂正坤以抗日大局为重当即跟出，走到离通讯处三十多步的「秀记」杂货店，张绍奇干咳一声从身后溜走，埋伏侧巷的枪手开枪。涂正坤中弹后高呼「<b>不准破坏抗战团结！</b>」倒地牺牲。</li>
+          <li><b>枪声之后</b>：通讯班长吴干成请示「我们还有十多支枪，干脆和敌人拼了」，罗梓铭按抗战大局主张「<b>不要打，同他们进行说理斗争</b>」；秘书主任吴渊挺身而出「我负责的！你们为什么要枪杀抗日战士？……<b>我要控告你们破坏团结抗战的罪行！</b>」——随即被枪杀在通讯处左边二十来步的「万寿宫」门口。通讯处被劫掠一空：银洋 2600 元、枪 14 支、子弹 1000 余发、电话机 2 部、油印机 1 台。</li>
+          <li><b>深夜十二时左右</b>：何学植、余启佑把罗梓铭、曾金声、吴贺泉、赵绿吟押往集镇东边 200 米的虎形岭。四人一路高呼「打倒日本帝国主义」「中国共产党万岁」，二十岁的赵绿吟唱着「枪口对外，齐步向前，不打老百姓，不杀自己人」——特务把他们推入数丈深的废弃淘金井，向井下开枪后活埋。</li>
+          <li><b>次日上午（6.13）</b>：何学植在万寿宫门口开群众大会，宣布这是「新四军留守处收留了我方逃兵」「余连长追捕逃兵时误伤涂正坤参议」，并声称已将余启佑「扣押」送总部严惩。</li>
+          <li><b>6 月 15—16 日</b>：脱险的通讯处少校主任黄耀南在长寿街油印了 2000 字的《快邮代电》，十六日从江西投邮寄往全国各地，惨案真相由此公开。<b>八月的追悼会，开在这份代电之后；毛泽东在演说里追的那句「谁指使的」，答案正是代电里已经写明的东西。</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">被当众念出来的，是一份不能公开的秘密文件</span><span class="part-scope">《限制异党活动办法》</span></div>
+      <div class="part-body">
+        <p>第五段转向制度：「现在国内流行一种秘密办法，叫做什么《限制异党活动办法》，其内容全部是反动的……」。这份东西是 1939 年春国民党中央秘密颁布的（其后又有《异党问题处理办法》《处理异党问题实施方案》），规定限制共产党人和进步分子的思想言论行动、在「异党活动最烈之区域」实行联保连坐法、在保甲组织中建立「通讯网」。</p>
+        <p><b>一份不能公开的东西，被拿到万人会场上逐条念、逐条驳</b>——文本里随即出现三处「（全场鼓掌）」，节奏就是在这里起来的。同一板块的末尾还有第四处：讲完「就要取消《限制异党活动办法》，就要制裁那些投降派、反动派，就要保护一切革命的同志、抗日的同志、抗日的人民」，记录是「（热烈鼓掌，高呼口号）」。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">五</span><span class="part-title">讲完二十天，文章刊出时叫的还是另一个名字</span><span class="part-scope">1939.08.20 ／ 08.23</span></div>
+      <div class="part-body">
+        <p>一九三九年八月二十日，《解放》周刊第八十一期刊发《<b>用国法制裁反动份子</b>》全文，同时刊出周恩来关于平江惨案的谈话、张鼎丞在追悼大会上的演说词与《延安各界追悼平江惨案大会致全国通电》——大会通电要求国民政府「明令昭雪本案冤抑，严查主使，惩办凶犯，并通令全国不得再有同类事件发生」。重庆、皖南、桂林和八路军驻湘通讯处随后也举行了追悼会。</p>
+        <p><b>刊出第三天（8.23），苏德互不侵犯条约签字</b>，把两年来「东方慕尼黑」的判断推到一个新段落——这正是下一篇《关于国际新形势对新华日报记者的谈话》要处理的问题。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从嘉义的枪声到南门外的会场</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1938.02</div><div class="tl-body">湘鄂赣红军游击队改编为新四军第一支队第一团开赴皖南，在平江嘉义镇设留守处（后改称通讯处），掩护中共湘鄂赣特委工作</div></div>
+      <div class="tl-item"><div class="tl-date">1939.01.21—30</div><div class="tl-body">国民党五届五中全会在重庆召开，确定「溶共、防共、限共、反共」方针；此后秘密颁布《防制异党活动办法》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.04.15</div><div class="tl-body">第九战区颁布《战区服务团队管理办法》：范围内一切团体须报到、领取护照、逐日报告工作</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06 初</div><div class="tl-body">蒋介石密电杨森，令将黄耀南、涂正坤等「一一解决」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.11</div><div class="tl-body">何学植率特务营二连、重机枪排及便衣队以「加速破路」为名进驻嘉义，完成对通讯处的内外两层包围</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.12</div><div class="tl-body"><b>平江惨案</b>：下午三时诱杀涂正坤，吴渊在万寿宫门口被枪杀；当夜罗梓铭、曾金声、吴贺泉、赵绿吟被活埋于虎形岭废弃淘金井；通讯处被劫一空</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.13</div><div class="tl-body">何学植在万寿宫门口开群众大会，以「追捕逃兵误伤」的说法掩盖真相</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.15—16</div><div class="tl-body">黄耀南油印 2000 字《快邮代电》，由江西投邮寄往全国各地，公布惨案真相</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.07.02—28</div><div class="tl-body">周恩来、叶剑英连发数电致陈诚、徐永昌、何应钦等，指薛岳、杨森「身为方面大员、国家重臣，不顾强敌入侵，挑起鹬蚌之争」，「实属汉奸罪行」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.07.07</div><div class="tl-body">中共中央发表《为抗战两周年纪念对时局宣言》，提出坚持抗战、巩固团结、力求进步三大口号</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.07.24</div><div class="tl-body">英日签订《有田—克莱琪协定》，英国「完全承认」日本侵华造成的实际局势</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.08.01</div><div class="tl-body"><b>延安南门外公共体育场举行追悼平江惨案死难烈士大会，万余人参加；毛泽东发表本篇演说（同日为南昌起义十二周年）</b></div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.08.20</div><div class="tl-body">《解放》周刊第八十一期刊出《用国法制裁反动份子》，同期载周恩来谈话、致陈诚电、张鼎丞演说、大会致全国通电、中共中央挽联</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.08.23</div><div class="tl-body">苏德互不侵犯条约签字 —— 国际线改写，下一篇谈话的直接背景</div></div>
+      <div class="tl-item green"><div class="tl-date">1952 ／ 1991</div><div class="tl-body">1952 年收入《毛泽东选集》第二卷并改题《必须制裁反动派》；1991 年第二版出版，本篇未列入《修订情况》所载第二卷校订条目</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      一桩发生在抗战后方的杀人案，怎么变成一件全国的事——文章要的不是哀悼，是<b>过问</b>：<span class="q">把凶手追到指使者，把「统一」这个词的判据拿回来，把那份秘密办法当众宣布作废。</span>
+    </div>
+
+    <div class="move-grid">
+      <div class="move">
+        <div class="move-head"><span class="move-no">一</span><span class="move-tag">第一段</span></div>
+        <div class="move-text">先把责任链条追到底</div>
+        <div class="move-note">「什么人杀死的？军队杀死的。军队为什么杀死了抗日战士？军队是执行命令，有人指使军队去杀的。什么人指使军队去杀？反动派在那里指使。」<b>这一串问句的作用不是控诉，是定位：把「军队」从被告席上摘下来，把「指使者」放进去。</b></div>
+      </div>
+      <div class="move gold">
+        <div class="move-head"><span class="move-no">二</span><span class="move-tag">第三、四段</span></div>
+        <div class="move-text">再解释为什么该来的没来</div>
+        <div class="move-note">法律没出面，不是因为案子小，是因为「中国不统一」。于是必须重新回答「什么叫统一」——统一就是「要大家抗日，要大家团结，要大家进步，要有赏有罚」；按这个标准量，赏罚全反了，所以「应该统一的没有统一」。</div>
+      </div>
+      <div class="move green">
+        <div class="move-head"><span class="move-no">三</span><span class="move-tag">第五段</span></div>
+        <div class="move-text">最后把一份文件当众作废</div>
+        <div class="move-note">所谓《限制异党活动办法》内容是反动的；而「异党」这个词也用错了——「日本帝国主义是异党，汪精卫是异党，汉奸是异党」。<b>全篇收在三个动作上：取消那份办法、制裁投降派反动派、保护一切抗日的同志和人民。</b></div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>责任链只追一层就停<span class="card-tag">边界感</span></h4>
+        <p>「军队—命令—指使者」三级之后，文章立刻转入制度讨论，不再往下写。<b>停止的位置很讲究：指使者是谁，正文一个字都没有点名</b>（1991 年版注〔1〕写明：毛泽东所抨击的反动派，就是指这次惨杀事件的指使者蒋介石和他的党徒）。公开演说给到「反动派在那里指使」为止，剩下的交给读者和追悼会通电。</p>
+      </div>
+      <div class="card gold">
+        <h4>两个词被就地重新定义<span class="card-tag">抢词</span></h4>
+        <p>注〔3〕说得最明白：国民党用以打击共产党的主要武器就是「统一」这个口号，「毛泽东在这里把『统一』这个口号从国民党反动派手里夺取过来，变为革命的口号」。夺取的办法不是拒绝这个词，而是<b>给它装上可执行的判据</b>——赏抗日的人、赏团结的人、赏进步的人，罚破坏抗日、团结、进步的汉奸和反动派。判据一旦可查，口号就不再由喊的人解释。</p>
+      </div>
+      <div class="card blue">
+        <h4>不要求惩办凶手<span class="card-tag">取景</span></h4>
+        <p>开枪的孙佳慧、带枪连的余启佑、执行部署的何学植，在文章里一次也没有出现；出现的是指使者、投降派、反动派。全篇没有一句要求「惩办凶手」，只要求「严办那些反动派」。<b>这是政治演说的取景方式：把个案上升为类别，才谈得上后面的「取消」「制裁」两项制度要求。</b>代价是现场感被牺牲。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">事件</div><div class="n-sub">六月十二日下午三时的枪声</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">追问链</div><div class="n-sub">军队 → 执行命令 → 指使者</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">定性</div><div class="n-sub">准备投降，先杀最坚决的抗日分子</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">缺口</div><div class="n-sub">法律和法官没有出来过问</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node gold"><div class="n-label">病因</div><div class="n-sub">中国不统一</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">重定义统一</div><div class="n-sub">统一于抗战／团结／进步 ＋ 有赏有罚</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">重定义异党</div><div class="n-sub">日本、汪精卫、汉奸才是异党</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">要求</div><div class="n-sub">取消／制裁／保护</div></div>
+    </div>
+    <div class="quote">
+      这是本卷少见的「从一桩具体案件推出制度要求」的链条。它的起点是一件打死人的事，终点却不是一件事的处置，而是三份文件的存废。全篇的方法论价值在于中间那一跳：把「法律为什么不出面」当成事实来用，再由这个缺口反推体制的定义——<b>这是把「没有发生的事」当证据用的一次示范。</b>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <table class="plain">
+      <thead><tr><th class="c1">段</th><th style="width:74px;">位置</th><th style="width:56px;">字数</th><th>要点</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">一</td><td>575—576</td><td>396</td><td>开追悼会的理由；该杀的是汉奸和日本帝国主义者；现场不在沦陷区而在抗战后方的平江；被害者是通讯处负责同志涂正坤、罗梓铭；<b>「什么人杀死的？军队杀死的……反动派在那里指使」的追责链</b>；收于「我们一定要反对，我们一定要抗议！」</td></tr>
+        <tr><td class="c1">二</td><td>576</td><td>73</td><td>一句话判断带过：抗日大团结里面有一部分反动派、投降派，「就是杀抗日分子，压制进步，勾结日寇汉奸，准备投降」</td></tr>
+        <tr><td class="c1">三</td><td>576—577</td><td>160</td><td>五十天没人过问；应该由中国的法律和法官过问；边区的高等法院早就过问了；结论落在「这是因为中国不统一」</td></tr>
+        <tr><td class="c1">四</td><td>577—578</td><td>545</td><td>重新回答「什么叫统一」：大家抗日、大家团结、大家进步，要有赏有罚；三个「统一于」逐条对照应赏应罚与现实的反差；「平江惨案就是证据」；要求国民政府严办反动派</td></tr>
+        <tr><td class="c1">五</td><td>578—579</td><td>460</td><td>日本与英美诱降更积极、暗藏的汪精卫更积极；公开批《限制异党活动办法》（三处全场鼓掌）；反问「什么是『异党』」；收于「取消——制裁——保护」三个动作</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-head" style="margin-top:32px;"><span class="sec-no" style="font-size:16px;">定义手术</span><span class="sec-title" style="font-size:17px;">三种「异党」的重排</span></div>
+    <table class="plain">
+      <thead><tr><th class="c1">位置</th><th>文本</th><th style="width:150px;">说明</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">该被限制的</td><td>「日本帝国主义是异党，汪精卫是异党，汉奸是异党。」</td><td>把对方的标签还给对方</td></tr>
+        <tr><td class="c1">被点名限制的</td><td>「现在偏偏有那些投降派、反动派、顽固派，在抗战的队伍中闹磨擦，闹分裂」</td><td>从外部敌人扩到内部摩擦者</td></tr>
+        <tr><td class="c1">不该被限制的</td><td>「共产党和一切抗日的党派，一致团结抗日，这是『异党』吗？」</td><td>反问句式，不给对方辩解的位置</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-head" style="margin-top:32px;"><span class="sec-no" style="font-size:16px;">光谱</span><span class="sec-title" style="font-size:17px;">赏罚光谱（第四段的骨架）</span></div>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">赏·抗日者</div>
+          <div class="spec-seg gold">向进步看齐</div>
+          <div class="spec-seg red">罚·破坏者</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>应赏</b>抗日的人／团结的人／进步的人</div>
+          <div class="spec-label"><b>中间档</b>落后的人——要向进步的人看齐，不能被拉回去</div>
+          <div class="spec-label"><b>应罚</b>破坏抗日、团结、进步的汉奸和反动派</div>
+        </div>
+      </div>
+    </div>
+    <table class="plain">
+      <thead><tr><th class="c1">档位</th><th>应赏</th><th>应罚</th><th>现实（这就是不统一）</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">统一于抗战</td><td>抗日的人</td><td>反对抗战、准备投降、实行杀人的人</td><td>涂正坤、罗梓铭等不但没有受赏，反被惨杀；坏蛋没有受处罚</td></tr>
+        <tr><td class="c1">统一于团结</td><td>赞成团结的人</td><td>破坏团结的人</td><td>赞成团结的同志反倒「受了处罚」；破坏团结的坏人「没有受到一点处罚」</td></tr>
+        <tr><td class="c1">统一于进步</td><td>进步的人（落后的人向进步的人看齐）</td><td>拉进步的人向落后看齐的人、刽子手</td><td>「平江惨案的那些刽子手，他们把进步分子杀了」</td></tr>
+      </tbody>
+    </table>
+
+    <div class="quote">
+      「中国应该统一，不统一就不能胜利。但是什么叫统一呢？统一就是要大家抗日，要大家团结，要大家进步，要有赏有罚。」
+      <span class="src">第四段 —— 把对方的口号拿过来，当场装上判据</span>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>开篇那串追问，是一套可复用的责任定位法</h4>
+          <p>「什么人杀死的？军队杀死的。军队为什么杀死了抗日战士？军队是执行命令，有人指使军队去杀的。什么人指使军队去杀？反动派在那里指使。」<b>三问三答，每答一层就把上一层从被告席上摘出去：先给出凶手（军队），再给出凶手的上级（命令），最后给出真正的责任人（指使者）。</b>在情绪最需要宣泄的场合（追悼会），他选了最不宣泄的写法。这也解释了为什么这段能被反复引用：它提供的不是怒气，是坐标。</p>
+          <span class="mv"><b>迁移</b>：做事故复盘时，最常见的停点是第一层——「是执行的人干的」。换一层的问法很简单：他执行的是谁的命令，这个命令经过谁的手，谁有权叫停却没有叫停。追到「有权决定的人」这一层通常就够了；再往上追会滑进阴谋论，而停在第一层则永远解决不了问题。判断自己追到第几层的办法是：写下你的结论，问一句——<b>照这个结论，下次还会不会发生？</b></span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>面对被对方占用的正当词汇，做法是重新给判据，而不是拒绝这个词</h4>
+          <p>「统一」在 1939 年是国民党手里最顺手的武器。毛泽东没有说「不要统一」，而是当场给出统一的三条判据（抗日、团结、进步）和一条检验方式（有赏有罚），然后拿平江惨案去对——<b>判据一旦公开可查，词的解释权就从喊话的人手里滑走了。</b>注释〔3〕把这一步写成了一句说明书：把这个口号「从国民党反动派手里夺取过来」。</p>
+          <span class="mv"><b>迁移</b>：职场与公开讨论里，凡是「大局」「效率」「合规」「共识」这类被高频占用的词，正面对抗都是低效的。可选的动作只有一个：把它拆成可核对的条目，再拿最近的一件事去对。例如对方说「为了效率」，就问效率按哪三项指标算、上个季度这三项各是多少。<b>词本身不必争，判据必须争。</b></span>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>把「没有发生的事」写成证据，是这篇最短、也最难学的一手</h4>
+          <p>第三段整段的重量压在一个否定事实上：法律和法官没有出来过问。<b>不发通告、不立案、不表态，在文本里被当作一条可读的信号来处理——「这是什么缘故呢？这是因为中国不统一。」</b>这与整个链条的走向一致：一场追悼会要的交付不是情绪，而是让「沉默」这件事不再能继续沉默下去。</p>
+          <span class="mv"><b>迁移</b>：评价一套规则是否真的在运行，看的不是它写了什么，而是<b>上一次出事之后的第一次响应</b>：多久、由谁、以什么形式（公告？内部处理？不了了之？）。把三次响应的时间与形式并排列出，规则的成色一目了然。提前记下「该响而没响」的那一刻，比事后争论条文有用得多。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="part" style="margin-top:18px;">
+      <div class="part-head red"><span class="part-no">版</span><span class="part-title">五处阅读提示（版本与文本）</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>① 引本篇务必注明版本</b>：原刊题《用国法制裁反动份子》（《解放》周刊第五卷第八十一期第 9 页），1991 年版题《必须制裁反动派》。</li>
+          <li><b>② 原刊有整段法律诉求，1991 年版未存</b>：原刊「我们的国家是有法律的，虽然不好，总还不失其为有法律……难道法律是死了吗？难道法律是纵容凶犯的吗？」「我们现在要以人民的资格出来过问这件事」「投降派，分裂派，反动派，那些坏蛋，统统应该受到国法的制裁」，以及末段「我们要求蒋委员长，要求国民政府林主席，要执行保护革命同志、抗日同志的法律……如果法律不惩，再不统一，全国人民就要继续起来要求」——这些句子在 1991 年版正文中均不见，正文的法律诉求只留下「我们必须要求国民政府严办那些反动派」一句。</li>
+          <li><b>③ 原刊完整列出三大口号</b>（「坚持抗战到底——反对中途妥协；巩固国内团结——反对内部分裂；力求全国进步——反对向后倒退」），1991 年版相应位置未存；这三句是以《为抗战两周年纪念对时局宣言》（1939.7.7）的名义留在历史里的。</li>
+          <li><b>④ 文字差异</b>：原刊「涂振坤」（误植）在 1991 年版作「涂正坤」；原刊「恭恭敬敬的执行了日本老爷、汪精卫老爷的命令」在 1991 年版作「执行了日本人和汪精卫的命令」；「置若罔问」「按部就班」「开倒车」等语未见保留。</li>
+          <li><b>⑤ 正文保留了四处现场掌声</b>（三处「（全场鼓掌）」、一处「（热烈鼓掌，高呼口号）」）——这一条不是版本问题，是性质问题：<b>这是一份讲稿，不是一篇论文。</b>读它的时候，把掌声的位置当作对方最不想被念到的位置。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">今天是八月一日，我们在这里开追悼大会。为什么要开这样的追悼会呢？因为反动派杀死了革命的同志，杀死了抗日的战士。</div>
+        <div class="ctx">第一段（575—576 页）· 全篇起手式：先自报场合，再用一个设问把「为什么要开会」变成「谁在杀人」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">什么人杀死的？军队杀死的。军队为什么杀死了抗日战士？军队是执行命令，有人指使军队去杀的。什么人指使军队去杀？反动派在那里指使。</div>
+        <div class="ctx">第一段（575—576 页）· 三问三答的追责链，本篇被引用最多的句子（1991 年版注〔1〕指认：指使者即蒋介石和他的党徒）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">但是，平江惨案快两个月了，法律和法官并没有出来过问。这是什么缘故呢？这是因为中国不统一。</div>
+        <div class="ctx">第三段（576—577 页）· 把「没有发生的事」当证据用的一句</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国应该统一，不统一就不能胜利。但是什么叫统一呢？统一就是要大家抗日，要大家团结，要大家进步，要有赏有罚。</div>
+        <div class="ctx">第四段（577—578 页）· 把对方的口号拿过来，当场装上判据</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">什么是「异党」？日本帝国主义是异党，汪精卫是异党，汉奸是异党。共产党和一切抗日的党派，一致团结抗日，这是「异党」吗？</div>
+        <div class="ctx">第五段（578—579 页）· 把一个标签原样还给发明它的人</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们今天开这个大会，就是为了继续抗战，继续团结，继续进步。为了这个，就要取消《限制异党活动办法》，就要制裁那些投降派、反动派，就要保护一切革命的同志、抗日的同志、抗日的人民。</div>
+        <div class="ctx">第五段（579 页）· 全篇结尾的三个动作，也是追悼会对外交付的结论</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">以上均为 1991 年版文字，已逐字核对。引文中的「」为本书统一体例所加，原文此处用引号；原刊本与选集本的差异见上一板块「五处阅读提示」。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《关于国际新形势对新华日报记者的谈话》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.09.01 ｜ 第二卷第十七篇 ｜ 1991 年版第 580 页起</span></div>
+        <p>一九三九年八月二十三日苏德互不侵犯条约签字，九月一日毛泽东对《新华日报》记者发表谈话，判断的是同一年的另一条线——欧洲战争的爆发如何改变「东方慕尼黑」的算式。<b>本篇讲的是国内的「不统一」，那篇讲的是国际的「大变动」</b>；一篇在追悼会上讲，一篇在记者面前讲，相隔一个月，都写在同一年最热的那几周里。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《用国法制裁反动份子》原刊本及其同期文本<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">《解放》周刊第五卷第八十一期 ｜ 1939.8.20 ｜ 第 9 页起</span></div>
+        <p>同一场追悼会留下了三种文本：<b>毛泽东讲的是「谁在指使」</b>（追责链到「反动派在那里指使」为止）；<b>大会致全国通电讲的是「要国民政府办这个案子」</b>（明令昭雪本案冤抑、严查主使、惩办凶犯、通令全国不得再有同类事件发生）；<b>周恩来在重庆谈的是「怎么办交涉」</b>（与《周恩来同志致军委政治部陈部长电》一道，直接致电陈诚、徐永昌、何应钦）。另有张鼎丞在追悼大会上的演说词、中共中央挽联，以及同期悼念文章多种（《平江惨案资料汇编》收追悼会报道、通电、悼文 48 篇以上）。<span class="muted">三份文本并读，可以看出同一件事在「会场」「全国」「交涉桌」三个场合分别被写成什么。</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>追责题</b>：挑一件你最近听到的事故或差错，写下已经公布的原因。然后强制自己多问两层：<b>这个原因是由谁决定、谁批准、谁在当时有权叫停？</b>把三层写成一条链（发生了 X → 因为 Y 被批准 → 因为 Z 有决定权）。最后问一句：照我的第一层结论，<b>下次还会不会再发生？</b></div>
+      <div class="q">二 · <b>判据题</b>：列出你所在环境里最近被高频使用的一个好词（大局、效率、合规、共识、稳定）。不看它被用来证明什么，只做一件事：<b>给它写出三条可核对的判据和一条赏罚方式</b>，再拿最近一件具体事去对。如果对不上，说明这个词现在的解释权不在你这边。</div>
+      <div class="q">三 · <b>沉默题</b>：回想一件「该有回应而没回应」的事——没有公告、没有立案、没有解释。<b>把它连同日期一起写下来</b>，再想两件同类的事，排成一条时间线。在规则失灵的地方，<b>沉默的日期比条文更能说明问题。</b></div>
+      <div class="q">四 · <b>现场题</b>：本篇正文里留着四处「（全场鼓掌）」。找一份你手里的重要文件（公告、方案、复盘），自问：<b>它是「写」出来的，还是「讲」出来的？</b>如果它是讲的，现场听众的即时反应在文本里有痕迹吗？一份删掉了所有反应痕迹的文本，通常也就删掉了它的说服对象。</div>
+      <div class="hint"><b>三问卡</b>：① 这件事我追到了第几层——执行的人，还是有权决定的人？② 对方正在用的那个好词，判据是谁定的、能不能被核对？③ 该响而没响的那套程序，我把日期记下来了吗？三问里第一问最容易被跳过，因为第一层结论通常已经够用了——<b>直到下一次同样的事再发生一遍。</b></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十六篇</div>
+    <div>依据人民出版社 1991 年版第二卷 575—579 页 ｜ 2026.10.16</div>
+  </div>
+
+</div>
+</body>
+</html>

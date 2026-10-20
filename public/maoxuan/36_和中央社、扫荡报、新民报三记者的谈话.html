@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>36 · 和中央社、扫荡报、新民报三记者的谈话 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 小网格 ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+.g18.on{background:var(--bg-2);border-color:var(--red);}
+.g18.on b{color:var(--red);}
+.g18.now{border-color:var(--gold);}
+.g18.now b{color:var(--gold);}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅六</div>
+    <h1>和中央社、扫荡报、新民报三记者的谈话</h1>
+    <div class="sub2">把「阶段」说成有条件，把「异党」说成别人</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十八篇 · <b>一九三九年九月十六日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《和中央社、扫荡报、新民报三记者的谈话》。1991 年版第二卷第十八篇，上接《关于国际新形势对新华日报记者的谈话》（9.01），下接《苏联利益和人类利益的一致》（9.28）——<b>半个月三篇，一篇答党报、一篇答三家国统区报纸、一篇答国际问题</b></td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年九月十六日</b>。是<b>答问记录</b>，不是撰文：十组问答，答者保留口语的连接词与重复，八处「问：」「答：」把谈话节奏原样留在纸上</td></tr>
+      <tr><th>谈话现场</th><td>延安新市区<b>边区政府交际处</b>五孔窑洞中居中一孔，<b>下午六时</b>起。木长桌一张、小木凳十余个、两盏油灯、清茶瓜子与延安生产的香烟；在座柯庆施、肖向荣、向仲华、《新中华报》李初梨，另有两位青年记录，约十七八人</td></tr>
+      <tr><th>提问者</th><td>中央社记者<b>刘尊棋</b>、《扫荡报》记者<b>耿坚白</b>、《新民报》记者<b>张西洛</b>。注〔1〕点明三家报纸的身份：国民党中央通讯社／国民政府军事系统的报纸／代表民族资产阶级的报纸——按张西洛自己的说法，这叫<b>「党、军、民俱备」</b></td></tr>
+      <tr><th>最初发表</th><td>记录由刘尊棋执笔、耿坚白与张西洛补充，整理后寄重庆「国际新闻社」（范长江主持）。延安《新中华报》<b>1939 年 10 月 6 日</b>第一版整版刊出，题为《毛泽东同志与中央社记者刘先生、扫荡报记者耿先生、新民报记者张先生的谈话》；各抗日根据地报刊转载；重庆《新华日报》<b>10 月 19 日</b>刊出并配照片；国际新闻社发往海外，香港、新加坡及南洋华侨报纸均在显著位置刊登。<b>而提问的三家报纸，一字未提</b></td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 <b>587—592</b> 页，共六页；注释九条全部排在 592 页：〔1〕三家报纸〔2〕《新中华报》〔3〕大后方〔4〕建国三时期〔5〕《北上宣言》〔6〕《限制异党活动办法》〔7〕汪精卫〔8〕张荫梧、秦启荣〔9〕平江惨案</td></tr>
+      <tr><th>题解</th><td><b>本篇无题解</b>——1991 年版 587 页正文前直接是标题、日期与「记者问：」。场合与对象全靠第一段第一句自报：「今天在《新中华报》上看了毛先生九月一日的谈话」</td></tr>
+      <tr><th>篇幅</th><td>汉字 <b>2483</b> 字（不含标点与注释）。三部分分占 <b>991／977／515</b>——前两部分几乎对半（四成／三成九），第三部分只占两成一。十组问答里<b>两组问句被答句吞掉</b>（「相持阶段是否到来」「对磨擦的态度」），明写「问：」的只有八处</td></tr>
+      <tr><th>注释的结构</th><td>九条注释里有四条是纯交叉索引（〔6〕见本卷《必须制裁反动派》注〔5〕、〔7〕见第一卷《论反对日本帝国主义的策略》注〔31〕、〔8〕见本卷《团结一切抗日力量，反对反共顽固派》注〔5〕〔6〕、〔9〕见本卷《必须制裁反动派》注〔1〕）——<b>这一篇在选集里的位置本身就是个节点，把 1935、1939 两年的四篇串在一处</b></td></tr>
+      <tr><th>历史坐标</th><td>谈话当天：德国入侵波兰已半月、英法已宣战、苏军次日进入波兰；<b>苏日诺门罕停战协定在莫斯科调印生效</b>；第一次长沙会战在赣北已打了两天；重庆的国民参政会一届四次大会正在通过《请政府定期召集国民大会实行宪政决议案》</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">谈话前夜：一份提纲、一孔窑洞、一个已经站在土坪上的人</span><span class="part-scope">1939.09.15—16</span></div>
+      <div class="part-body">
+        <p>据张西洛《毛泽东——掌握时机的大师》（《人民日报》1994 年 1 月 2 日第 5 版）回忆：九月十五日，刘尊棋同他商量访问毛泽东的事，两人拟了一份提纲，通过中共中央统战部副部长柯庆施和全程陪同的边区政府交际处处长金城递上去。问题分三部分——<b>抗战的相持阶段是否到来、两党之间的磨擦、统一战线问题</b>。</p>
+        <p>第二天一早，他们刚吃过早饭，金城迎面走来，传达毛泽东的原话：<b>「我十分欢迎记者来到延安，可以同记者谈一次话。」</b>时间定在当天下午六点，地点就是他们住的交际处窑洞。</p>
+        <p>下午三人按原计划去参观一个工厂，不到六点赶回来，快登上土坪时，「猛抬头，一个高大的人站在土坪上」——<b>毛泽东已经在那里等他们了</b>。握手，让进窑洞。</p>
+        <p>窑洞里的陈设被张西洛记得很清楚：交际处五孔窑洞中居中的一孔，一张木长桌，十几个小木凳，两盏油灯已经点着，桌上摆了清茶、瓜子和延安生产的香烟。毛泽东坐长桌上首，三记者紧靠左右；柯庆施、肖向荣、向仲华、《新中华报》李初梨在座，另有两位青年担任记录，「不大的窑洞里坐得满满的，大约有十七八个人」。谈完合影，每人还得到一本签上记者名字与毛泽东名字的《苏联共产党（布）历史简明教程》。</p>
+        <p><b>这三位记者的身份，是这一篇能够成立的全部理由。</b>注〔1〕说得客气而准确：中央社是国民党的中央通讯社，《扫荡报》是国民党政府军事系统的报纸，《新民报》是代表民族资产阶级的一种报纸。三个人里，张西洛 1938 年秘密加入中共、以《新民报》记者身份作掩护；刘尊棋「当时与我党有关系」（金城《延安交际处回忆录》）。<b>一家党报、一家军报、一家民间报，正好覆盖国民党、国民党军队、国统区社会三个面</b>——对他们讲话，等于同时向这三面讲话，而且不必经过新闻检查所。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">同一天，世界上有三件事在同时发生</span><span class="part-scope">1939.09.16</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>欧洲</b>：九月一日德军入侵波兰，三日英法对德宣战，十七日（谈话次日）苏军从东面进入波兰。</li>
+          <li><b>诺门罕</b>：九月十五日，莫洛托夫与东乡茂德在莫斯科调印停战协定（十六日生效）。此前八月二十日苏蒙军总攻，关东军第二十三师团溃败；八月二十八日平沼内阁总辞职，三十日阿部信行组阁。<b>谈话里那句「在日本更加困难的条件之下」，写下时日本刚在对苏冲突里认了输</b>——这是本篇最容易被漏掉的一处注脚。</li>
+          <li><b>中国</b>：第一次长沙会战九月十四日在赣北打响（日军第一〇一、一〇六师团西进），十八日湘北主力总攻新墙河。毛泽东说「例如进攻北海、长沙，甚至进攻西安，都是可能的」——<b>长沙那一路，谈话时已经开打两天</b>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">同一天下午，重庆在通过一份同题的决议</span><span class="part-scope">1939.09.09—18</span></div>
+      <div class="part-body">
+        <p>国民参政会第一届第四次大会九月九日开幕、十八日闭幕。九月十五日晚八点半到十六日凌晨两点半，第三审查委员会为七个宪政提案舌战六小时（邹韬奋记：「你起我立，火并似的舌战，没有一分一秒钟的停止」）；十六日下午第七次会议以鼓掌方式通过《请政府定期召集国民大会实行宪政决议案》。</p>
+        <p>就在同一个下午六点，延安的窑洞里，毛泽东对三记者说：「现在在抗战这种严重的局面之下，要避免亡国惨祸，并把敌人打出去，<b>必须快些召集国民大会，实行民主政治</b>。」</p>
+        <p><b>没有证据表明两边互通消息</b>：延安的提纲九月十五日已经拟好，重庆的决议当天下午才通过。这是巧合，但巧合得很整齐——它说明「召集国民大会」在 1939 年 9 月已经同时是参政会的议案与延安的口号。<b>同一句话在两个城市被同时说出，正是这一篇能被三家国统区报纸的记者原样记下来的原因：它不新，但它可以被登。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">四</span><span class="part-title">记录之前：半年的「限制异党」</span><span class="part-scope">1939.01—08</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>1.21—30</b>　国民党五届五中全会定下「溶共、防共、限共、反共」方针，秘密通过《限制异党活动办法》、决议设立「防共委员会」。办法于当年春天秘密下达（一般记为四月，各说不一）。</li>
+          <li><b>3.30　太河惨案</b>　秦启荣所属王尚志部在博山太河镇伏击八路军山东纵队第三支队南下受训干部及护送人员 270 余人，营长吕乙亭当场牺牲，政治部主任鲍辉、特务团团长潘建军等被杀，210 余人被俘。</li>
+          <li><b>6.11　深县惨案</b>　河北省保安司令张荫梧部袭击冀中深县八路军后方机关，残杀干部战士 400 余人。</li>
+          <li><b>6.12　平江惨案</b>　杨森部包围新四军平江通讯处，涂正坤等被杀——上一篇《必须制裁反动派》即为此事而讲。</li>
+          <li><b>7.7</b>　中共中央《为抗战两周年纪念对时局宣言》提出三大口号：「坚持抗战到底——反对中途妥协」「巩固国内团结——反对内部分裂」「力求全国进步——反对向后倒退」。</li>
+          <li><b>7 月／8.1</b>　周恩来致信蒋介石；八月一日延安各界追悼平江惨案大会通电蒋与国民政府，要求取消《限制异党活动办法》。</li>
+        </ul>
+        <p><b>上一篇要的是「过问」，这一篇要的是「答复」。</b>同一件事，从会场上的追责，变成记者会上的追问——而追问的对象，是国民党的通讯社和军报的记者。这就是全篇第二个动作的全部着力点：<b>把「你不答复」这件事，当着自己人的面，说给对方的记者听</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">五</span><span class="part-title">一个被问了三遍的问题：相持阶段到底到了没有</span><span class="part-scope">9.01 ／ 9.16</span></div>
+      <div class="part-body">
+        <p>九月一日对《新华日报》记者：「我国的战略退却阶段便已完结，而战略相持阶段便已到来。」</p>
+        <p>九月十六日对三家国统区记者：「我以为，<b>相持阶段是有条件地到来了</b>。」</p>
+        <p>同一判断，半个月后多了三个字。三个条件是现成的：<b>国际新形势、日本更加困难、中国绝不妥协</b>。为什么加？看场合：党报读者要的是结论，国统区记者要的是可以带回重庆、可以被追问的表述。<b>加条件不是退让，是给判断装上可辩护的装置</b>——顺带堵住两种反驳：说「还在退却」的，与说「马上反攻」的。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从「限制异党」到「准备反攻」：九个月</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1939.01.21—30</div><div class="tl-body">国民党五届五中全会定「溶共、防共、限共、反共」，秘密通过《限制异党活动办法》、设「防共委员会」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.03.30</div><div class="tl-body">太河惨案：秦启荣部王尚志伏击八路军山东纵队第三支队受训干部</div></div>
+      <div class="tl-item"><div class="tl-date">1939.05—08</div><div class="tl-body">诺门罕战事；8.20 苏蒙军总攻，关东军第二十三师团溃败</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.11</div><div class="tl-body">深县惨案：张荫梧部袭击八路军后方机关，杀害 400 余人</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.12</div><div class="tl-body">平江惨案：新四军平江通讯处被围，涂正坤等被杀</div></div>
+      <div class="tl-item"><div class="tl-date">1939.07.07</div><div class="tl-body">中共中央《七七宣言》提出三大政治口号</div></div>
+      <div class="tl-item"><div class="tl-date">1939.07／08.01</div><div class="tl-body">周恩来致信蒋介石抗议；八月一日延安各界通电要求取消《限制异党活动办法》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.08.23</div><div class="tl-body">《苏德互不侵犯条约》签字；8.28 平沼内阁总辞职，8.30 阿部信行组阁</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.01</div><div class="tl-body">德军入侵波兰；同日毛泽东对《新华日报》记者谈话，宣布相持阶段到来</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.03</div><div class="tl-body">英法对德宣战</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.09</div><div class="tl-body">国民参政会一届四次大会在重庆开幕</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.14</div><div class="tl-body">第一次长沙会战在赣北打响</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.09.15</div><div class="tl-body"><b>苏日诺门罕停战协定在莫斯科调印</b>（16 日生效）；三记者拟好提纲递上</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.09.16</div><div class="tl-body"><b>下午六时，延安交际处窑洞，本篇谈话</b>；同日下午，重庆参政会通过《请政府定期召集国民大会实行宪政决议案》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.17</div><div class="tl-body">苏军从东面进入波兰</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.28</div><div class="tl-body">毛泽东《苏联利益和人类利益的一致》——下一篇</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.06</div><div class="tl-body">延安《新中华报》第一版整版刊出本篇</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.19</div><div class="tl-body">重庆《新华日报》刊出本篇并配照片；据张西洛回忆，蒋介石见报后大骂新闻检查官「饭桶」</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.12</div><div class="tl-body">阎锡山在晋西进攻新军，第一次反共高潮开始——本篇那句「人若犯我，我必犯人」在三个月后被兑现</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      <span class="q">一句话：</span>相持阶段「有条件地」到来了，于是当前的任务不是打大仗，而是<b>准备反攻</b>；而准备反攻最要紧的东西不是枪，是<b>民主政治</b>——因为敌人此刻主打的是政治进攻，抵抗力也只能在政治上长出来。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 用一个限定词接手一个阶段<span class="card-tag">第一问</span></h4>
+        <p>「有条件地到来了」。三个条件（国际新形势／日本更困难／中国绝不妥协）＋两条范围声明（战役进攻仍可能有；战略反攻还没有到）。<b>先宣布状态，再收回一半</b>，让判断既成立又不可被一次战役推翻。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 把军事实力换算成政治制度<span class="card-tag">第一问末</span></h4>
+        <p>「中国抗战主要地依靠自力更生……<b>自力更生的主要内容，就是民主政治</b>。」这是全篇最硬的一句：民主在这里不是价值，是战斗力——「才能加强政治上的抵抗力，才能准备军事力量」。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 重新定义「异党」，把「统一」的定义权拿回来<span class="card-tag">第二部分</span></h4>
+        <p>不否认「异党」「统一」这两个词，只是重新划线：友军／友党的类比；异党只有一个——汪精卫的汉奸党；统一也只有一个方向——「统一于抗战，统一于团结，统一于进步」。</p>
+      </div>
+      <div class="card blue">
+        <h4>四 · 划一条带自我约束的自卫线<span class="card-tag">第二部分末</span></h4>
+        <p>「人不犯我，我不犯人；人若犯我，我必犯人」——紧跟着一句常被漏掉的限制：<b>「任何共产党员不许超过自卫原则。」</b>给对手设限，同时给自己设限，这是这条口诀能公开说出口的原因。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">阶段</div><div class="n-sub">相持阶段「有条件地」到来<br>三条件 ＋ 两条范围声明</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">任务</div><div class="n-sub">准备反攻<br>战略的，不是战役的</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">三分</div><div class="n-sub">敌后游击／正面防御<br>／大后方改革政治</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">理由</div><div class="n-sub">敌人主打政治进攻<br>我方须加强政治抵抗</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">换算</div><div class="n-sub">政治抵抗力＝民主政治<br>＝自力更生主要内容</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">拆障</div><div class="n-sub">用《北上宣言》拆三段论<br>华北民选是现成样本</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node"><div class="n-label">划线</div><div class="n-sub">异党＝汉奸党<br>不是共产党</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">落责</div><div class="n-sub">张荫梧、秦启荣<br>平江惨案</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">出口</div><div class="n-sub">两种可能性＋三大口号<br>抗战／团结／进步</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的走向值得注意：<b>它从「仗打得怎么样」出发，终点却落在「会开不开」上</b>。中间的转换枢纽只有一句——「敌人在目前，主要的是政治进攻」。这不是修辞上的跳跃，而是把战场从地理空间挪到制度空间：<b>既然对手换了打法，我方的胜负手也就换了位置。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">三部分、十组问答，长度极不平均。<b>提问者用一份提纲控制了议程，答问者用分配篇幅控制了重点</b>：十个问题里，两个问题（相持阶段、对磨擦的态度）连问句都没留下，直接被答句吸收；而「中央政府有无答复」这一个问题，占了 494 字，是全篇最长的答——<b>一个只需「没有」两个字就能答完的问题，被答成了全篇的承重墙。</b></p>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">相持阶段</span><span class="part-scope">991 字 · 四成</span></div>
+      <div class="part-body">
+        <table class="plain">
+          <thead><tr><th class="c1">问</th><th>答的核心</th></tr></thead>
+          <tr><td class="c1">（被吞）</td><td>相持阶段是否到来 → 「有条件地到来了」；三条任务；「自力更生的主要内容，就是民主政治」</td></tr>
+          <tr><td class="c1">用什么方法</td><td>用孙中山《北上宣言》拆「军政—训政—宪政」三段论；华北的区长、乡长、保甲长多是民选的</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">限制异党与磨擦</span><span class="part-scope">977 字 · 三成九</span></div>
+      <div class="part-body">
+        <table class="plain">
+          <thead><tr><th class="c1">问</th><th>答的核心</th></tr></thead>
+          <tr><td class="c1">表示过没有</td><td>「我们已经提出抗议。」——八个字</td></tr>
+          <tr><td class="c1">什么方式</td><td>七月周恩来致蒋信；八月一日延安各界通电</td></tr>
+          <tr><td class="c1">有无答复</td><td>「没有答复。」→ 友军／友党类比 → 异党＝汪精卫汉奸党 → 三个口号的对立 → 「无使亲痛仇快」<b>（494 字，全篇最长）</b></td></tr>
+          <tr><td class="c1">（被吞）</td><td>对磨擦的态度 → 「人不犯我，我不犯人；人若犯我，我必犯人」，不许超过自卫原则</td></tr>
+          <tr><td class="c1">华北怎样</td><td>张荫梧、秦启荣「两位磨擦专家」；证据已送蒋委员长</td></tr>
+          <tr><td class="c1">新四军</td><td>平江惨案</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">统一战线</span><span class="part-scope">515 字 · 两成一</span></div>
+      <div class="part-body">
+        <table class="plain">
+          <thead><tr><th class="c1">问</th><th>答的核心</th></tr></thead>
+          <tr><td class="c1">取消边区？</td><td>边区早经行政院通过；统一要统一于抗战、团结、进步</td></tr>
+          <tr><td class="c1">会分裂吗</td><td>两种可能性都有；政治保证是「抗战到底＋民主政治」；三大口号</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;">「谁是异党」的判定轴</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">友党</div>
+          <div class="spec-seg gold">中间党派</div>
+          <div class="spec-seg red">异党</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>有共同之点</b>国民党与共产党，共同之点是抗日</div>
+          <div class="spec-label"><b>力量有大小</b>同在抗战，应互相团结，不应互相「限制」</div>
+          <div class="spec-label"><b>没有丝毫共同之点</b>汪精卫的汉奸党，这样的党才该限制</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote" style="margin-top:22px;">
+      什么是异党？日本走狗汪精卫的汉奸党是异党，因为它和抗日党派在政治上没有丝毫共同之点，这样的党，就应该限制。
+      <span class="src">1991 年版 589 页 · 答「中央政府有无答复」· 全篇把标签摘下来、挂到别人身上的那一句</span>
+    </div>
+
+    <p class="lead" style="margin-top:18px;"><b>全篇最重要的技术动作发生在第二部分的中段</b>：对方用一个词（「异党」）划定敌我，本篇不争这个词的用法，而是争这个词的<b>归属</b>。一个反问句把标签从自己身上摘下来，挂到另一个人身上。<b>这比否认标签有效得多，因为否认只能防守，重新归属可以直接反攻。</b></p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「有条件地」三个字，是让判断活下来的技术，也是让它难以被证伪的代价</h4>
+          <p>九月一日他宣布「战略相持阶段便已到来」，九月十六日改成「有条件地到来了」，并当场补上两条：敌人还可能有比较大的战役进攻（北海、长沙、西安）；战略大举反攻的时期还没有到。<b>结果是：此后半年里，日军打长沙、打南宁、打宜昌，没有一次能推翻这句话</b>——因为「有条件」已经把反例预先归入了条件之内。</p>
+          <p>这是一套非常成熟的判断技术：<b>把结论挂到条件上，结论就不再怕新闻</b>。但代价同样明显：当条件由说话者自己解释时，任何失败都可以读成「条件未成熟」，判断也随之失去了被现实校正的机会。这两条要一起看，才是完整的。</p>
+          <span class="mv"><b>迁移</b>：给自己的判断加条件从句是必要的（否则一句「三个月内必成」会要了你的信誉），但要同时把条件写成可核对的形式——写下「哪三件事一旦发生，我就认错」。否则加条件会退化成免责声明。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>把「民主」论证成一种战斗力，是战时最有效、也最需要警惕的一步</h4>
+          <p>全篇没有一句话谈民主本身的价值。它的论证链是：敌人在目前主要的是<b>政治进攻</b> → 我们要加强<b>政治抵抗</b> → 政治抵抗才能<b>准备军事力量</b> → 「自力更生的主要内容，就是民主政治」。<b>民主在这里是弹药，不是权利。</b></p>
+          <p>这套论证在当时极其有效：它绕开了「主义之争」，把宪政放进「怎么打赢」的框架里，连国民党的通讯社记者都只能记录而无法反驳——因为反驳它就等于承认自己不想要战斗力。<b>但也必须看到它把什么东西留在了门外</b>：如果有一天战争结束、或者敌人换了打法，「民主有利于抗战」这个理由就自动失效，民主也失去了论证的支点。</p>
+          <span class="mv"><b>迁移</b>：把一个好东西挂在一个更强的理由下面，短期能赢，长期要记得把挂绳换掉——否则一旦那个更强的理由消失，好东西会跟着一起掉下来。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>定义权比定义本身重要：不要弃用被污染的词汇，要重新划它的边界</h4>
+          <p>「异党」是对方造的，「统一」也是对方拿在手里的（注〔3〕说得很直白：国民党在政治上用以打击共产党的主要武器就是「统一」这个口号）。本篇的处理极有讲究：<b>两个词都不弃用，都重新划线</b>。异党——「日本走狗汪精卫的汉奸党是异党」；统一——「应该统一于抗战，统一于团结，统一于进步」。</p>
+          <p>弃用一个词，等于把词的适用场景整块让给对方；重新划一个词的边界，等于把对方逼进自己划的圈里。</p>
+          <span class="mv"><b>迁移</b>：当「专业」「长期主义」「格局」这类词被别人拿去当作压你的工具时，最有效的回应通常不是「我不认这个词」，而是「按这个词的定义，你现在做的事不成立」。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">四</div>
+        <div class="obs-body">
+          <h4>「凡是敌人反对的，我们就要拥护」——一条被引用了八十多年、也应当被质疑的口诀</h4>
+          <p>这句话在本篇里是有语境的：它紧跟汪精卫的三个口号（反蒋、反共、亲日），是为了说明<b>在抗战这一件事上，立场必须与汉奸正面对立</b>——「他要反蒋，我们就要拥蒋；他要反共，我们就要联共；他要亲日，我们就要抗日」。在 1939 年 9 月这个具体局面里，它是准确的。</p>
+          <p>但这句话后来被反复抽离语境引用，变成了一条独立的判断法则，风险就出来了：<b>它把判断的依据从「事情对不对」换成了「敌人站在哪边」</b>。敌人可能出于自己的利益反对一件正确的事，也可能出于自己的利益支持一件正确的事；机械套用，等于把方向盘交给了对手。</p>
+          <span class="mv"><b>本篇其实给了更稳的版本</b>：先定义「共同之点」（抗日），再由共同之点推出敌友——<b>先用标准划分，再看谁站在哪边；而不是先看谁站在哪边，再倒推标准。</b></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">我以为，相持阶段是有条件地到来了。</div>
+        <div class="ctx">第一问 · 1991 年版 587 页 · 半个月前对《新华日报》记者还只说「已经到来」，此处多出三个字，并立即补上「敌人还可能有比较大的战役进攻」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国抗战主要地依靠自力更生。如果过去也讲自力更生，那末，在新的国际环境下，自力更生就更加重要。自力更生的主要内容，就是民主政治。</div>
+        <div class="ctx">第一问末 · 588 页 · 全篇的转换枢纽：把制度问题写成战斗力的来源</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">共同抗日的军队叫做友军，不叫做「异军」，那末，共同抗日的党派就是友党，不是「异党」。</div>
+        <div class="ctx">第二部分 · 589 页 · 用一个类比把对方设定的标签顶回去；紧接着就是「什么是异党？日本走狗汪精卫的汉奸党是异党」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">他要反蒋，我们就要拥蒋；他要反共，我们就要联共；他要亲日，我们就要抗日。凡是敌人反对的，我们就要拥护；凡是敌人拥护的，我们就要反对。</div>
+        <div class="ctx">第二部分 · 590 页 · 前一句是具体对位，后一句是被后人抽离语境单独引用最多的那句——读时须连同汪精卫三口号一并看</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">人不犯我，我不犯人；人若犯我，我必犯人。但我们是站在严格的自卫立场上的，任何共产党员不许超过自卫原则。</div>
+        <div class="ctx">第二部分 · 590 页 · <b>通常被引用的只有前两句</b>；后一句是同一次谈话里给出的自我约束——1939 年的原文与后来的流传版本，差别就在这后半截</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中国确实需要统一，但是应该统一于抗战，统一于团结，统一于进步。如果向相反的方面统一，那中国就会亡国。</div>
+        <div class="ctx">第三部分 · 591 页 · 答「边区政府应否取消」·三个「统一于」就是本篇给出的「统一」定义</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">以上均为 1991 年版文字，已逐字核自求是理论网所载 1991 年版电子文本，并与马克思主义文库同版文本比对一致；引文中「」为本书统一体例所加。张西洛回忆录所记现场对白（如「我十分欢迎记者来到延安」）<b>不属选集正文</b>，引用时已分别标明来源。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《苏联利益和人类利益的一致》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.09.28 ｜ 第二卷第十九篇 ｜ 1991 年版第 593 页起</span></div>
+        <p>十二天后。谈话里那句「世界上只有非掠夺性的谋解放的战争，才是正义的战争」要用来处理一件更难的事：<b>苏军已经进入波兰，怎么向中国读者解释苏联的行为</b>。前一篇立的判据，这一篇要拿来给自己人用。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《必须制裁反动派》＋《关于国际新形势对新华日报记者的谈话》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.08.01 ／ 1939.09.01 ｜ 575—579、580—586 页</span></div>
+        <p>同一个月的三篇，处理同一件事的三种场合：<b>追悼会上的愤怒、党报面前的国际分析、国民党记者面前的国内答问</b>。看同一个人在三种场合里如何调整同一个判断的硬度，比读任何一篇单独的文本都更有信息量——尤其注意「相持阶段」这个判断在 9.01 与 9.16 之间的那三个字。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>条件题</b>：你最近做出的一个重要判断，有没有附带条件？如果附了，那些条件是可核对的，还是可以事后随意解释的？试着写下「<b>哪三件事一旦发生，我就承认这个判断错了</b>」。写不出来，说明它不是判断，是态度。</div>
+      <div class="q">二 · <b>挂绳题</b>：本篇把「民主」论证成战斗力，而不是价值。你劝人时，是不是也常把一个好东西挂在另一个更强的理由下面（「学这个能涨薪」「做这个能续命」）？<b>那个更强的理由如果消失了，你的主张还站得住吗？</b></div>
+      <div class="q">三 · <b>划界题</b>：「异党」「统一」两个词被对方拿在手里，本篇的做法是重新划线而不是弃用。你所在的行业里，哪个词正在被当作压人的工具（专业、合规、长期主义、大盘）？<b>如果让你重新给它划一条边界，你会从哪里划？</b></div>
+      <div class="q">四 · <b>沉默题</b>：全篇最长的答（494 字）回答的是一个只需两个字就能答完的问题（「中央政府有无答复？」→「没有」）。<b>为什么「没有答复」值得讲 494 字？</b>这种把「对方的沉默」变成论据的做法，在今天的组织沟通里还能用吗？用了会有什么反作用？</div>
+      <div class="hint"><b>三问卡</b>：① 我的判断挂在哪个条件上，这个条件可核对吗？② 我用来支撑主张的那个「更强理由」，会不会哪天消失？③ 那个正在压我的词，按它自己的定义，对方站得住吗？<b>第一问决定你会不会被自己的话套住，第三问决定你会不会白白让出战场。</b></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十八篇</div>
+    <div>依据人民出版社 1991 年版第二卷 587—592 页 ｜ 2026.10.20</div>
+  </div>
+
+</div>
+</body>
+</html>

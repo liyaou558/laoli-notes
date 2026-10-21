@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>37 · 苏联利益和人类利益的一致 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 小网格 ===== */
+.grid18{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;min-width:0;}
+.g18{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:8px 10px;font-size:12.5px;color:var(--ink-2);line-height:1.6;min-width:0;overflow:hidden;overflow-wrap:anywhere;}
+.g18 b{color:var(--red-deep);font-family:"Noto Serif SC","Songti SC",serif;margin-right:5px;}
+.g18.on{background:var(--bg-2);border-color:var(--red);}
+.g18.on b{color:var(--red);}
+.g18.now{border-color:var(--gold);}
+.g18.now b{color:var(--gold);}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.g18{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅七</div>
+    <h1>苏联利益和人类利益的一致</h1>
+    <div class="sub2">先把苏联的利益和人类的利益写成同一个数，再让它去解释一切</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第十九篇 · <b>一九三九年九月二十八日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《苏联利益和人类利益的一致》。1991 年版第二卷第十九篇，上接《和中央社、扫荡报、新民报三记者的谈话》（9.16），下接《〈共产党人〉发刊词》（10.04）——<b>十二天里第三篇谈同一个欧洲</b>，也是三篇里唯一一篇正式文章</td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年九月二十八日</b>。不是讲演、不是答记者问，是<b>应约撰写的文章</b>：开篇即「当着伟大的十月社会主义革命二十二周年纪念快要到来的时候，中苏文化协会要我写一篇文章」</td></tr>
+      <tr><th>约稿路径</th><td>中苏文化协会为十月革命二十二周年纪念专号，<b>通过八路军驻渝办事处</b>向毛泽东约稿；稿子到重庆后经吴玉章转给协会常务理事<b>张西曼</b>，由张转交《中苏文化》。据张西曼之女张小曼所存吴玉章亲笔信：「西曼先生大鉴：昨送上毛泽东同志一文，想已收到……」</td></tr>
+      <tr><th>最初发表</th><td>重庆《中苏文化》杂志「苏联十月革命二十二周年纪念」专号（一九三九年十一月）。同期另有孙科、陈立夫、吴玉章、钱俊瑞等人的纪念文字。<b>具体卷期此次未核实，故不写死</b>；可确证的是刊于该纪念专号、由张西曼经手</td></tr>
+      <tr><th>刊物的性质</th><td>中苏文化协会一九三五年（一说一九三六年）成立于南京，<b>孙科任会长</b>，陈立夫、邵力子任副会长，主持日常工作的常务理事王昆仑（一九三三年秘密入党）。机关刊《中苏文化》经费主要来自苏联对外文化委员会（每月七千元），不足部分由国民政府立法院补贴；<b>发行对象多为国民党上层，赠送为主、销售为辅</b></td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版；本册依据 1991 年第二版），第二版第 <b>593—600</b> 页，正文八页；注释<b>十一条</b>全部排在 <b>601</b> 页</td></tr>
+      <tr><th>题解</th><td><b>本篇无题解</b>——593 页正文前直接是标题、日期与「当着伟大的十月社会主义革命二十二周年纪念快要到来的时候」。约稿单位、读者对象、发表去处，全部靠第一句与史实补足</td></tr>
+      <tr><th>篇幅</th><td>汉字 <b>4620</b> 字（不含标点与注释）。四问分占 <b>1142／970／1371／880</b>，另有引言 143 字、结尾 114 字。第三问（苏联进兵波兰）最长，占<b>三成</b>；第四问（对中国的结论）最短，不到两成</td></tr>
+      <tr><th>注释的结构</th><td>十一条注里有五条是纯交叉索引（〔1〕〔4〕〔5〕〔7〕见本卷两篇谈话的注，〔9〕见第一卷《中国革命战争的战略问题》注〔23〕）；三条是新建史实（国际联盟、劳合·乔治、诺蒙坎）；<b>注〔8〕的口径与正文不同</b>——正文给苏联进兵列了「解放少数民族」「击破张伯伦阴谋」等理由，注〔8〕只留一句「为了防止德国法西斯的东侵」</td></tr>
+      <tr><th>文体坐标</th><td>九月三篇三种文体：<b>9.01 答党报</b>（问答）、<b>9.16 答三家国统区报纸</b>（答问记录）、<b>9.28 应约撰文</b>（正式文章）。读者一路向外——党内、国统区记者、国民党上层；语气一路向内收——宣布、解释、请教</td></tr>
+      <tr><th>历史坐标</th><td>落笔当天：<b>华沙守军签字投降</b>；<b>《苏德边界友好条约》在莫斯科签字</b>（里宾特洛甫第二次飞莫斯科，与莫洛托夫划定「各自国家利益的边界」）。此前十一天苏军进入波兰东部，此前十二天诺门罕停战生效；中国战场上，第一次长沙会战已打了半个月</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">稿约：一封从重庆发出的信，走的是八路军的渠道</span><span class="part-scope">1939 秋</span></div>
+      <div class="part-body">
+        <p>十月革命二十二周年（十一月七日）将到，中苏文化协会要为会刊出一期纪念专号。协会自己没有渠道直接向延安约稿，<b>走的是八路军驻渝办事处</b>——据人民网党史频道《翦伯赞与〈中苏文化〉》：「当伟大的十月社会主义革命22周年纪念快要到来的时候，中苏文化协会通过八路军驻渝办事处，向毛泽东约稿。」</p>
+        <p>这个协会不是左翼团体。它一九三五年（一说一九三六年）成立于南京，<b>孙科任会长，陈立夫、邵力子任副会长</b>，主持日常工作的是常务理事王昆仑——一位一九三三年就秘密入党、与潘汉年单线联系的国民党中央候补执行委员。会刊《中苏文化》的钱主要来自苏联对外文化委员会，每月七千元，不足由国民政府立法院补贴；<b>发行对象多为国民党上层，赠送为主、销售为辅</b>。</p>
+        <p>稿子送到重庆，经吴玉章转给协会常务理事张西曼，再由张交给《中苏文化》。张西曼之女张小曼在九三学社中央所刊文章中，据吴玉章亲笔信（「西曼先生大鉴：昨送上毛泽东同志一文，想已收到……」）指出：此文由张西曼转交发表；并称这是<b>抗战期间毛泽东在国民党统治区发表的唯一一篇文章</b>。</p>
+        <p><b>这句话决定了全篇的写法。</b>读者不是延安的干部，是重庆的国民党上层。所以通篇没有一句「同志们」；开头是「贡献给关心欧洲大战和中苏关系的人们，作为参考」，结尾是「是否有当，希望读者不吝指教」。而与此同时，全篇最硬的一句「这一点，我认为绝对没有疑义」就摆在倒数第三段——<b>客气留给格式，硬度留给判断</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">落笔那天：华沙投降，苏德划界</span><span class="part-scope">1939.09.28</span></div>
+      <div class="part-body">
+        <p>九月一日德军入侵波兰，三日英法宣战，十七日苏军从东面进入波兰东部、波兰政府当日出境。到九月二十八日，两件事在同一天发生：<b>华沙守军签字投降</b>；当晚在莫斯科，里宾特洛甫与莫洛托夫签署《苏德边界友好条约》，附地图划定「各自国家利益的边界」，并声明此线为「最终」、拒绝第三国干涉。</p>
+        <p>本文署日正是这一天。文中写：「<b>从这几天的消息看来，苏联的这一方针，是极大地成功了。</b>」而在同一段里，苏联进兵被定义为「收复自己国土，解放弱小民族」。</p>
+        <p><b>这是本篇最需要读者自己按住的一处</b>：文本说的是「解放」，同一天签的条约说的是「边界」；文本说苏联「制止德国侵略势力向东扩展」，条约里德国得到的是华沙与卢布林。两边都不假，但它们不在同一层——一个是给中国读者看的性质判断，一个是给两国政府用的地图。<b>写文章的人在延安，签字的人在莫斯科，日子是同一天。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">国内在议论什么：三条疑苏的线</span><span class="part-scope">1939.08—09</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>第一条：谁促成大战？</b>苏德条约签订后，一种说法流行起来——苏联利于世界大战，这次大战就是苏联不同英法订约、反同德国订约促成的。这直接对应本篇第一问。</li>
+          <li><b>第二条：苏联会不会下场？</b>红军会不会参加德国一边？苏德商务协定被读成「参战」的证据。对应第二问。</li>
+          <li><b>第三条：苏军进波，怎么解释？</b>两个国家从东西两边进入波兰，怎么看都像瓜分。对应第三问。</li>
+          <li><b>第四条：苏联还援不援华？</b>九月十五日诺门罕停战协定在莫斯科调印、十六日生效，英美通讯社随即纷传日苏互不侵犯条约行将订立，「有些人认为苏联或者将不援助中国了」。对应第四问。</li>
+        </ul>
+        <p>四条疑线，四条一一对上的问题——<b>这不是一篇自命题作文，是一份按舆论清单写的答卷</b>。同一时期重庆的纪念文章也在处理同一件事：孙科、梁寒操强调三民主义与苏联社会主义「一致」；陈立夫则在纪念感言里提醒苏联，对侵略国家不能只用「空洞的条文与言论」束缚，要用实力「积极的制裁」；吴玉章从民族解放与社会解放立论；钱俊瑞回溯第一次世界大战说明只有十月革命才能止战。<b>同一期专号上，四种立场并排摆着</b>——这也解释了为什么本文的敌人始终是「英法帝国主义」与「张伯伦」，一次没有点国民党的名。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">十二天，三种文体：从党报、到三家国统区报纸、到一本刊物</span><span class="part-scope">9.01 ／ 9.16 ／ 9.28</span></div>
+      <div class="part-body">
+        <p>九月一日对《新华日报》记者，他宣布「战略相持阶段便已到来」，并把苏德条约说成「打击了日本，援助了中国」（第二卷 580—586 页）。</p>
+        <p>九月十六日对中央社刘尊棋、《扫荡报》耿坚白、《新民报》张西洛，他加了三个字「有条件地」，并说「自力更生的主要内容，就是民主政治」（587—592 页）。</p>
+        <p>九月二十八日应中苏文化协会之约，他写成这篇文章，说「这个政策以自力更生为主，同时不放弃一切可能争取的外援」（593—600 页）。</p>
+        <p><b>十二天，三句话可以排成一条线</b>：对党内讲阶段，对国统区记者讲民主，对国民党上层讲外援。前两篇是「说」，这一篇是「写」——写下来的东西要经得起反复看，所以它成了三篇里唯一有完整论证链的一篇：一条等式、四次切分、三种外援。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从苏德条约到华沙投降：三十七天</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1939.08.23</div><div class="tl-body">《苏德互不侵犯条约》在莫斯科签字（莫洛托夫—里宾特洛甫），附秘密议定书划分东欧势力范围</div></div>
+      <div class="tl-item"><div class="tl-date">1939.08.25</div><div class="tl-body">英波互助协定签字——英国把自己绑上了波兰</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.01</div><div class="tl-body">德军入侵波兰；同日毛泽东对《新华日报》记者谈话，宣布战略相持阶段到来</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.03</div><div class="tl-body">英法对德宣战，第二次世界大战在欧洲爆发</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.14</div><div class="tl-body">第一次长沙会战在赣北打响，日军向湘北推进</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.09.15—16</div><div class="tl-body"><b>诺门罕停战协定在莫斯科调印，十六日生效</b>（1991 年版注〔10〕记作十六日签订）；英美通讯社开始传日苏互不侵犯条约</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.16</div><div class="tl-body">延安交际处窑洞，对中央社、扫荡报、新民报三记者谈话；同日下午重庆参政会通过宪政决议案</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.17</div><div class="tl-body">苏军进入波兰东部；波兰政府当日离开国境</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.09.28</div><div class="tl-body"><b>华沙守军签字投降</b>；同日晚，里宾特洛甫与莫洛托夫在莫斯科签署《苏德边界友好条约》。<b>同日，本篇写成</b></div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.04</div><div class="tl-body">《〈共产党人〉发刊词》——下一篇，话题从欧洲回到党内</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.06</div><div class="tl-body">波兰最后一支独立部队投降，波兰战役结束</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11</div><div class="tl-body">《中苏文化》十月革命二十二周年纪念专号刊出本篇</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.30</div><div class="tl-body">苏芬战争爆发；12.14 国联开除苏联——本篇那句「一贯的和平政策」两个月后遭遇第一次硬考验</div></div>
+      <div class="tl-item"><div class="tl-date">1940 春</div><div class="tl-body">卡廷森林：约两万余名波兰军官与精英被苏联内务人民委员部枪杀（1943 年发现）</div></div>
+      <div class="tl-item"><div class="tl-date">1941.04.13</div><div class="tl-body"><b>《苏日中立条约》在莫斯科签订</b>，同时发表宣言：苏联保证尊重「满洲国」领土完整与不可侵犯，日本保证尊重蒙古人民共和国——本篇「决不会在条约中限制自己援助中国的行动」一句，在此遇到事实</div></div>
+      <div class="tl-item"><div class="tl-date">1941.06.22</div><div class="tl-body">德国入侵苏联，苏德战争爆发</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      <span class="q">一句话：</span>苏联的每一个动作，都可以用一条等式换算成正义——<b>「苏联的利益和世界人类大多数的利益互相联系着」</b>；等式成立，中国要做的就只剩三件事：把外援的希望放在苏联、各国人民、被压迫民族三处，对帝国主义战争严守中立，把抗战放在自力更生上。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先纠因果，再定责任<span class="card-tag">第一问</span></h4>
+        <p>不是苏德条约促成战争，而是英法拒绝苏联、谈判破裂之后才有苏德条约。「拒绝了苏联，就是拒绝了和平」——把「谁促成大战」的答案从莫斯科搬到伦敦巴黎，还顺手拉了一位英国资产阶级政治家（劳合·乔治）来作证。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 用切分代替辩论<span class="card-tag">第二问</span></h4>
+        <p>「通商」「援助」「参战」是三个动作，不能混为一谈。苏联同德国做生意，不等于援助德国；同日本通商，也不等于援助日本——因为同期它确实援助了西班牙和中国。<b>一个概念切三刀，一项指控就落空了。</b></p>
+      </div>
+      <div class="card green">
+        <h4>三 · 把国家拆成方面<span class="card-tag">第三问</span></h4>
+        <p>「波兰问题，应该分为德国方面，英法方面，波兰政府方面，波兰人民方面和苏联方面几个方面来看。」国家这个单位一拆，同情就可以按方分配：同情波兰人民，不同情波兰政府，反对德国与英法，肯定苏联。</p>
+      </div>
+      <div class="card blue">
+        <h4>四 · 落到中国：外援分三层<span class="card-tag">第四问</span></h4>
+        <p>可靠的外援只有三处：苏联、各资本主义国家内的人民、各殖民地半殖民地的被压迫民族；此外的「即使还有可能」，也只是部分的和暂时的；参加英法帝国主义战线的主张，则应当根本拒绝。抗日外交＝自力更生为主＋不放弃可能的外援＋对交战各国严守中立。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">立等式</div><div class="n-sub">苏联利益 ＝ 世界人类<br>大多数的利益</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">填证据</div><div class="n-sub">二十二年行为清单<br>国联／互助条约／援西援华</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">定性质</div><div class="n-sub">非掠夺、谋解放<br>＝正义的战争</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">切开词</div><div class="n-sub">通商 ≠ 援助 ≠ 参战<br>国家 ＝ 五个方面</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">排对手</div><div class="n-sub">英法「不干涉」<br>＝ 坐山观虎斗</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">给中国的答案</div><div class="n-sub">三源外援 ＋ 严守中立<br>＋ 自力更生为主</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的特别之处是<b>它不从不证自明的前提出发，而是先立一条等式，再用事实去填</b>。等式一旦被接受，后面每个判断都不必单独论证：苏联做什么，只要归到「苏联利益」这一栏，就自动等于「人类利益」，也就自动是正义的。<b>这使它极有力，也使它极脆弱</b>——有力的地方在于省掉了四次单独辩护；脆弱的地方在于，等式本身没有检验点，只能等事实来撞（见陆·一）。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">四问、四段、四句同样的收束——「<b>这就是我要说的第X个问题</b>」。这四个短句像四根钉子，把每一节钉在它自己的问题上，不让论证互相流窜。<b>写法也几乎是一个模子</b>：先替对方把话说完（「有些人说：……」），说「这种意见，我以为是不正确的」，然后给清单、给切分、给例子，最后落到中国。差别只在篇幅：第三问（进兵波兰）最长，三成；第二问（会不会参战）最短，两成一。</p>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">苏联是不是促成了世界大战</span><span class="part-scope">1142 字 · 二成五</span></div>
+      <div class="part-body">
+        <p><b>对方的说法</b>：苏联利于爆发世界大战而不要求和平；这次大战由苏联不同英法订互助条约、反同德国订互不侵犯条约所促成。</p>
+        <p><b>反驳的武器</b>：一份六项的行为清单——加入国联；同法国同捷克订立互助协定；德意侵略西班牙时援助西班牙政府军；日本侵华时不但订互不侵犯条约而且援助抗日；英法牺牲奥国捷克时揭穿慕尼黑政策；今年春夏同英法谈了<b>四个多月</b>。清单的用法不是逐条证明苏联爱好和平，而是<b>把「谁不想要和平」这个位置腾出来，让英法坐上去</b>。</p>
+        <p><b>旁证</b>：英国的路易乔治——「拒绝了苏联，就是拒绝了和平」这句话，「就是英国的<b>路易乔治</b>，这个资产阶级的代表人物，也是知道的」（注〔6〕：一九三八年冬英法准备同德意协商，十一月九日他在议会中说，拒绝苏联参加协商就不可能取得和平）。<b>用对方阵营里的人给己方结论作证，是这一节最省力的一招。</b></p>
+        <p><b>落点</b>：「苏联这样地维持世界和平到最后的一刻，这就是苏联的利益和人类大多数的利益互相一致的表现。」——全篇的等式第一次出现，而且是以结论的形式出现，不是以论证的形式出现。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">苏联红军会不会参加德国一边</span><span class="part-scope">970 字 · 二成一</span></div>
+      <div class="part-body">
+        <p><b>先定两种态度</b>：坚决地不参加非正义的、掠夺的、帝国主义的战争，对战争双方严守中立；积极地援助正义的、非掠夺的、谋解放的战争。随后是五个例子排成一条时间线：十三年以前援助北伐，一年以前援助西班牙，两年以来援助中国抗日，几个月以来援助蒙古抗日，将来还会援助别处。</p>
+        <p><b>再切概念</b>：通商、援助、参战是三件事。西班牙战争中苏联同德意通商，世人说的是苏联援助西班牙；中日战争中苏联同日本通商，世人说的是苏联援助中国——<b>同样的动作，因为「确实地援助了」谁，性质就不同</b>。文中还留了一个精确到日子的例子：只要不宣战，「例如八月二十三日以前的德国那样」，苏联也不会同它断绝通商。</p>
+        <p><b>这一节最短，但技术最干净</b>：它不否认任何一项事实（苏联确实同德国做生意），只是拒绝事实被装进那个词里。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">苏联进兵波兰怎么解释</span><span class="part-scope">1371 字 · 三成 · 全篇最长</span></div>
+      <div class="part-body">
+        <p><b>开场就承认舆论状态</b>：「国内许多的人，对于苏联进兵波兰的问题，糊涂起来了。」——不指责糊涂的人，而是先把「糊涂」的原因归到分析单位上：<b>把一个国家当成一个整体来看，当然看不清楚</b>。于是给出五分法（见下表）。</p>
+        <p><b>对苏联，只留两个问题</b>：让整个波兰处在德国帝国主义统治下面，还是让东部波兰少数民族得到解放？「在这个问题上，苏联选择了第二条路。」理由落在历史上：那块地是一九一八年布列斯特条约时被德国从「幼年的苏联」手里割去的，后来又被凡尔赛条约划给波兰；所以现在只是「把过去失掉的土地收回来」。</p>
+        <p><b>证据是电讯</b>：「这几天的电讯，指明这些少数民族是怎样地箪食壶浆以迎红军，把红军看做他们的救星；而在德军占领的西部波兰地方，法军占领的西部德国地方，则丝毫也没有这种消息。」<b>这是一处需要读者自己打问号的证据</b>：三处的「消息有无」，取决于谁能发消息、谁敢发消息。</p>
+        <p><b>第二个问题转向英国</b>：张伯伦的老政策是封锁德国西面、联合美国收买意日与北欧以孤立德国，再拿波兰、匈牙利、罗马尼亚作礼物引德国东进；苏军进波因此成了「制止德国侵略势力向东扩展，击破张伯伦阴谋的一个具体步骤」。「从这几天的消息看来，苏联的这一方针，是极大地成功了。」</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">这一切对中国意味着什么</span><span class="part-scope">880 字 · 一成九</span></div>
+      <div class="part-body">
+        <p><b>先说好消息</b>：苏德条约「大大地打击了日本，援助了中国，加强了中国抗战派的地位，打击了投降派」；诺门罕停战的性质同张高峰一样，「就是说，在日本屈膝之下，日本军阀承认了苏蒙边疆的不可侵犯」，因此「将使苏联增加对于中国援助的可能，而不是减少其援助」。</p>
+        <p><b>再给日苏条约设一道闸</b>：苏联是否愿意订立，「须看这个条约是否合乎苏联利益和世界人类大多数利益这一个基本原则而定。具体地说，就是要看这个条约是否不和中国民族解放战争的利益相冲突」。依据是斯大林三月十日在联共（布）十八大的报告、莫洛托夫五月三十日在苏联最高议会的演说。</p>
+        <p><b>然后是那句最硬的话</b>：「即使日苏互不侵犯条约有订立的可能，苏联也决不会在条约中限制自己援助中国的行动。苏联的利益和中国民族解放的利益决不会互相冲突，而将是永久互相一致。这一点，我认为绝对没有疑义。」</p>
+        <p><b>最后是唯一的操作清单</b>：抗日外交；自力更生为主；外援三源；对交战各国严守中立；拒绝参加英法战线（定性为「投降派的意见」）。结尾两句退回到礼节：「是否有当，希望读者不吝指教。」</p>
+      </div>
+    </div>
+
+    <table class="plain">
+      <thead><tr><th class="c1">问</th><th>被驳的说法</th><th>反驳的武器</th><th>落点句</th></tr></thead>
+      <tr><td class="c1">一</td><td>苏联利于世界大战，大战由苏德条约促成</td><td>六项行为清单 ＋ 劳合·乔治旁证</td><td>拒绝了苏联，就是拒绝了和平</td></tr>
+      <tr><td class="c1">二</td><td>红军即将参加德国战线</td><td>态度二分 ＋ 通商／援助／参战三切分</td><td>通商关系，不是援助，更不是参战</td></tr>
+      <tr><td class="c1">三</td><td>苏军进波形同瓜分</td><td>波兰五分法 ＋ 布列斯特／凡尔赛的历史账</td><td>收复失地，解放弱小民族</td></tr>
+      <tr><td class="c1">四</td><td>诺门罕之后苏联将不再援华</td><td>停战协定性质 ＋ 那条等式的推论</td><td>决不会在条约中限制自己援助中国</td></tr>
+    </table>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;">波兰问题的五分法：同情是怎么被分配的</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">方面</th><th>文本给出的性质</th><th>结论</th></tr></thead>
+      <tr><td class="c1">德国</td><td>为掠夺波兰人民、为击破英法战线的一翼而战</td><td>帝国主义的，<b>不能同情，应当反对</b></td></tr>
+      <tr><td class="c1">英法</td><td>把波兰当作掠夺对象与「自己帝国主义战线的一翼」；所谓援助只是同德国争夺对波统治权</td><td>同样是帝国主义战争，<b>不能同情，应当反对</b></td></tr>
+      <tr><td class="c1">波兰政府</td><td>法西斯政府、地主资产阶级反动政府、大波兰主义；在一千余万非波兰民族中施行民族压迫；二十年一贯反苏，英法苏谈判中拒绝苏军援助；两周葬送国家</td><td>「如果我们同情这样的政府，那是不对的」</td></tr>
+      <tr><td class="c1">波兰人民</td><td>他们是牺牲者，应起来反对德国法西斯与本国反动阶级，建立独立自由的波兰民主国家</td><td>「<b>我们的同情应该寄在波兰人民方面</b>」</td></tr>
+      <tr><td class="c1">苏联</td><td>收复一九一八年被割去的土地；解放白俄罗斯与乌克兰民族；制止德国东扩、击破张伯伦阴谋</td><td>「<b>采取了完全正义的行动</b>」</td></tr>
+    </table>
+
+    <h3 class="serif" style="font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;">外援的三层：谁可靠，谁只算部分，谁要拒绝</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg green">可靠的援助者</div>
+          <div class="spec-seg gold">部分的和暂时的</div>
+          <div class="spec-seg red">应当根本拒绝</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>只有这些</b>社会主义的苏联；各资本主义国家内的人民；各殖民地、半殖民地的被压迫民族</div>
+          <div class="spec-label"><b>即使还有可能</b>此外的所谓外援；应该争取，但决不可过于依赖，不可看作可靠</div>
+          <div class="spec-label"><b>投降派的意见</b>主张中国参加英法帝国主义战线；不利于抗日与民族独立解放</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote" style="margin-top:22px;">
+      中国的外交政策，很明显的，应该是抗日的外交政策。这个政策以自力更生为主，同时不放弃一切可能争取的外援。
+      <span class="src">1991 年版 600 页 · 第四问 · 全篇唯一一段可以直接当政策条文用的文字</span>
+    </div>
+
+    <p class="lead" style="margin-top:18px;"><b>全篇最值得学的技术动作，是「先给分析单位、再给结论」。</b>第三问不是先论证苏联正义、再解释波兰，而是先把「波兰」这个词拆成五份，然后每一份单独定性。<b>当分析单位被换掉，原来的整体判断（「两个国家瓜分了一个国家」）就自动失效了</b>——不是被驳倒，而是被拆散。这比反驳有效得多，代价是：拆散之后，那个整体判断也再没有人负责回答。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「利益一致」是一条等式，不是一条论证——它省掉了四次辩护，也取消了一切检验点</h4>
+          <p>全篇真正的支点只有一句：「苏联的利益和世界人类大多数的利益互相联系着。」它出现时已经是结论，前面是一张行为清单，后面是四次「所以」：所以苏德条约是击破阴谋，所以红军不会参战，所以进兵波兰是解放，所以日苏条约不会损华。<b>等式成立的条件下，这四步全部成立；等式不成立，四步一起塌。</b></p>
+          <p>事实来得比想象中快。<b>一九四一年四月十三日《苏日中立条约》</b>在莫斯科签字，同时发表的宣言里，苏联保证尊重「满洲国」的领土完整和不可侵犯，日本保证尊重蒙古人民共和国。这与中国抗战的利益直接冲突，也与本文那句「决不会在条约中限制自己援助中国的行动」「决不会互相冲突，而将是永久互相一致」正面相撞。<b>我不认为这是「说错了」那么简单</b>：一九三九年九月，苏联确实在援助中国，诺门罕也确实让日本吃了败仗，判断在当时有事实基础；问题在于他用的是一条<b>不可修正的公式</b>——「永久互相一致」「绝对没有疑义」，把本可以按事论事的判断，升级成了不能按事论事的信条。</p>
+          <span class="mv"><b>迁移</b>：判断里最危险的不是错，是「永久」「绝对」「决不会」。写下这类词的时候，等于提前放弃了自己日后改口的能力。更稳的写法是：把「因为 A 和 B 的利益一致，所以 A 做的事都对」换成「A 这次做的事，符合 B 的哪几条利益，不符合哪几条」——同一件事，前者只能全对或全错，后者可以逐条结算。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>把「国家」拆成「方面」，是这篇最锋利的工具，也是它最容易被误用的地方</h4>
+          <p>第三问的手法非常漂亮：不争论「苏联是不是侵略」，而是宣布「波兰问题应该分为……几个方面来看」。一旦接受这个分法，同情就可以精确投放——给波兰人民，不给波兰政府；反对德国，也反对英法；肯定苏联。<b>这在方法论上是对的</b>：任何国家行为都不是「国家」这个抽象物在做，而是特定政府、特定阶级、特定利益在做，不拆开就只能整体站队。</p>
+          <p>但同一次拆解也顺手抹掉了一样东西：<b>两个军事强权在同一个月、从两个方向进入同一个国家，并在此后签了一份划定边界的条约</b>——这件事作为一个整体，在五栏表格里找不到自己的位置，因为它既不是「德国方面」也不是「苏联方面」，它是两者之间的关系。文中对德国用「掠夺」，对苏联用「收复」，两个词各自都成立，合起来就不再有「瓜分」这个第三词的位置。<b>工具越锋利，越要看它切掉了什么。</b></p>
+          <span class="mv"><b>迁移</b>：拆解利益相关方是分析复杂冲突的必备动作，但拆完要补一步——<b>把拆开的零件再拼回去看一次</b>，问自己「如果这几方同时在做同一件事，那件事该怎么命名」。只拆不拼，得到的是五份各自正确的判断，和一份缺席的整体判断。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「通商不是援助，援助不是参战」：概念切分能解掉指控，但解不掉事实</h4>
+          <p>第二问是全篇技术上最干净的一节。它一个字都没有否认事实：苏联确实同德国签了商务协定、确实在做生意。它只是把「做生意」从「参战」这个筐里拿出来，放进「通商」这个筐，并给出两个反例证明这个筐装得下：西班牙战争中苏联同德意通商，中日战争中苏联同日本通商，而世人都说它援助了被侵略的一方。<b>这是一个标准的定义防守：不争事实，争归类。</b></p>
+          <p>但它同时暴露了一个边界：<b>归类能改变一项行为的「名分」，改变不了这项行为的「分量」</b>。通商可以有战略意义——石油、粮食、机床的流向，往往比一纸宣言更接近「援助」的实质。文中把「有多少、有厚有薄」全部归给「各交战国自己态度的问题，不是苏联的问题」，这一步走得太快：<b>交易条件由谁定、在什么时点定，本身就是态度</b>。</p>
+          <span class="mv"><b>迁移</b>：遇到「你这是在帮他」的指控时，切分概念（合作≠站台≠投资≠背书）确实有效，而且往往是对的；但切完之后要自己回答一个问题——<b>如果对方用同样的切分法为自己辩护，我会不会接受？</b>会，就用；不会，说明这套切分只是这次的方便，不该当原则用。</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">苏联这样地维持世界和平到最后的一刻，这就是苏联的利益和人类大多数的利益互相一致的表现。</div>
+        <div class="ctx">第一问末 · 595 页 · 全篇等式第一次落地；注意它是作为结论出现的，前面是一张六项行为清单</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">苏联是社会主义的国家，是共产党当权的国家，它对于战争的态度必然是鲜明的两种态度：（1）坚决地不参加非正义的、掠夺的、帝国主义的战争，对于战争的双方，严守中立。（2）积极地援助正义的、非掠夺的、谋解放的战争。</div>
+        <div class="ctx">第二问开头 · 595 页 · 「必然」二字是全篇的推理枢纽：因为国家性质如此，所以态度必然如此——性质先于事实</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这是把通商和参战混为一谈的缘故。不但不能把通商和参战混为一谈，也不能把通商和援助混为一谈。</div>
+        <div class="ctx">第二问 · 596 页 · 全篇最干净的一处概念切分；对照例证是西班牙战争与中日战争中苏联同敌方通商</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">国内许多的人，对于苏联进兵波兰的问题，糊涂起来了。波兰问题，应该分为德国方面，英法方面，波兰政府方面，波兰人民方面和苏联方面几个方面来看。</div>
+        <div class="ctx">第三问开头 · 597 页 · 全篇的分析单位在这里被换掉：不是「波兰」，是五个方面；后面所有判断都从这一句长出来</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">苏联现在不过是把过去失掉的土地收回来，把被压迫的白俄罗斯民族和乌克兰民族解放出来，并使免受德国的压迫。</div>
+        <div class="ctx">第三问 · 598 页 · 进兵的三重理由；同日签字的《苏德边界友好条约》划的是另一件事——正文与条约在同一日期上分叉</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">即使日苏互不侵犯条约有订立的可能，苏联也决不会在条约中限制自己援助中国的行动。苏联的利益和中国民族解放的利益决不会互相冲突，而将是永久互相一致。这一点，我认为绝对没有疑义。</div>
+        <div class="ctx">第四问 · 600 页 · <b>全篇唯一的绝对句</b>；一九四一年四月《苏日中立条约》附带的「满洲国／蒙古」宣言，是对这句最直接的一次事实检验</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">以上均为 1991 年版文字，逐字核自求是理论网所载 1991 年版电子文本，并与中国理论网《毛泽东选集》第二卷扫描页（593—600）比对一致；引文中「」为本书统一体例所加。约稿路径、刊物经费与发行对象等史实出自人民网党史频道《翦伯赞与〈中苏文化〉》，吴玉章致张西曼信出自张小曼《从〈韧的追求〉谈及张西曼与中苏文化协会》（九三学社中央委员会网站），<b>均不属选集正文</b>。</p>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">《〈共产党人〉发刊词》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.10.04 ｜ 第二卷第二十篇</span></div>
+        <p>六天后，视线从欧洲收回党内。这一篇要给出的是此后被引用了八十多年的三个词：<b>统一战线、武装斗争、党的建设</b>——「三个法宝」。<b>读法上可以对着看</b>：这一篇用一条等式解释世界，下一篇用十八年经验解释自己。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《关于国际新形势对新华日报记者的谈话》＋《和中央社、扫荡报、新民报三记者的谈话》<br><span style="font-size:13px;color:var(--ink-3);font-weight:400;">1939.09.01 ／ 09.16 ｜ 580—586、587—592 页</span></div>
+        <p>三篇连读，看同一判断在三种文体里如何变形：<b>对党报宣布阶段、对三家国统区报纸加「有条件地」、对国民党上层写成文章并附一条等式</b>。特别值得注意：9.16 说「自力更生的主要内容，就是民主政治」，9.28 说「以自力更生为主，同时不放弃一切可能争取的外援」——四天之内，同一句话的重心从「民主」挪到了「外援」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把历史方法论迁移到今天的场景</h4>
+      <div class="q">一 · <b>等式题</b>：你有没有一条「因为 X 的利益和我们的利益一致，所以 X 做的事都对」的等式？最近一次它让你放过了一个本该追问的细节，是什么时候？<b>如果给这条等式加一个「例外条款」，你会写在哪一句上？</b></div>
+      <div class="q">二 · <b>切分题</b>：本篇把「通商／援助／参战」切成三件事，指控就落空了。你所在的行业里，哪个动作正在被这样切分（合作≠站台，投资≠背书，转发≠认同）？<b>哪一次切分是真的在澄清，哪一次只是在免责？</b></div>
+      <div class="q">三 · <b>拆解题</b>：把「波兰」拆成五个方面，同情就能按方分配。用同一手法处理你最近的一次冲突：把对方拆成决策者、执行者、受影响者、旁观者——<b>判断会变吗？拆完之后，那件「整体的事」你还叫得出名字吗？</b></div>
+      <div class="q">四 · <b>语气题</b>：全篇最硬的句子是「我认为绝对没有疑义」，最软的是「是否有当，希望读者不吝指教」，两者相隔不到三百字。你写报告、提案、公开信的时候，硬度放在哪、客气放在哪？<b>这种分工是有意的修辞，还是一种自己都没察觉的分裂？</b></div>
+      <div class="hint"><b>三问卡</b>：① 我的判断里有没有「永久」「绝对」这类不可修正的词？② 我用来解围的概念切分，对方用同一套我会不会接受？③ 我把事情拆成几方之后，还拼得回去吗？<b>第一问决定你会不会被自己的话困住，第二问决定这套说法是工具还是借口，第三问决定你会不会赢了每一格、丢了整盘棋。</b></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛 泽 东 选 集 · 精 读 笔 记</div>
+    <div>第二卷「抗日战争时期（上）」· 第十九篇</div>
+    <div>依据人民出版社 1991 年版第二卷 593—600 页（注释 601 页）｜ 2026.10.21</div>
+  </div>
+
+</div>
+
+</body>
+</html>

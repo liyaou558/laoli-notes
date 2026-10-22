@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>38 · 《共产党人》发刊词 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 84px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 68px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:88px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:64px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅八</div>
+    <h1>《共产党人》发刊词</h1>
+    <div class="sub2">先证明自己有资格，再交代该怎么建</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十篇 · <b>一九三九年十月四日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《〈共产党人〉发刊词》。1991 年版第二卷第二十篇，上接《苏联利益和人类利益的一致》（9.28），下接《目前形势和党的任务》（10.10）——<b>从欧洲战场掉头回党内，只隔了六天</b></td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年十月四日</b>。不是讲演、不是谈话，是一篇为创刊号写的<b>发刊词</b>——开篇第一句即「中央很早就计划出版一个党内的刊物，现在算是实现了」</td></tr>
+      <tr><th>最初发表</th><td>延安《共产党人》<b>创刊号</b>（一九三九年十月二十日出版），<b>署名毛泽东</b>。据中央文献研究室《关于〈毛泽东选集〉四卷文稿的考辨》，本篇的版本依据属「依据在公开刊物上发表的署名文章形成」一类</td></tr>
+      <tr><th>刊物的性质</th><td><b>中共中央党内刊物</b>。创刊号为 32 开本，封面仅印刊名、期号与「<b>秘密</b>」二字，内页首篇即发刊词。<b>张闻天主编</b>，李维汉任编辑主任（「负责编辑出版的实际工作，工作人员有陶希晋，后来又有马洪」），毛泽东、李维汉、陈云、王稼祥、艾思奇等为主要编委；一九四一年三月编委扩为九人</td></tr>
+      <tr><th>刊物的寿命</th><td>一九三九年十月创刊，原定月刊、每月底出一期，一九三九年十二月起出版周期失序，「有时每月会出版 2 至 3 期，有时几个月才会出 1 期」。<b>一九四一年八月出至第十九期停刊</b>，前后一年零十个月，共刊文 <b>196</b> 篇，其中党建类文章 60 多篇</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版第 <b>565—577</b> 页；本册依据 1991 年第二版，第 <b>602—614</b> 页，正文十三页）</td></tr>
+      <tr><th>题解</th><td><b>本篇无题解</b>——602 页正文前直接是标题、日期与「中央很早就计划出版一个党内的刊物」。办刊缘起、读者对象，全靠第一句与史实补足（已核扫描页）</td></tr>
+      <tr><th>篇幅</th><td>正文 <b>18 段</b>、汉字 <b>7080</b> 字（不含标点与注释；含标点 7752 字）。六块：开篇 <b>923</b>（13.0%）、历史与两个基本特点 <b>1420</b>（20.1%）、统一战线 <b>1620</b>（22.9%）、武装斗争 <b>714</b>（10.1%）、党的建设 <b>2041</b>（28.8%）、收束 <b>362</b>（5.1%）</td></tr>
+      <tr><th>注释</th><td><b>六条</b>，一次编号到底。〔1〕斯大林《论中国革命的前途》／〔2〕陈独秀／〔3〕游击战争（426 字，最长的一条，一路讲到抗战后期与解放战争的正规战争）／〔4〕李立三／〔5〕遵义会议／〔6〕川陕边区的红军与张国焘（617 字，六条里最长）</td></tr>
+      <tr><th>注释的一处「错位」</th><td>正文那个词是「<b>张国焘右倾机会主义</b>」，注〔6〕却不从人写起，第一句是「<b>川陕边区的红军即中国工农红军第四方面军</b>」——注释先解释部队番号，再讲南下分裂，最后才落到「一九三八年四月，他乘祭黄帝陵之机逃离陕甘宁边区」。<b>注为正文补了一段正文没讲的历史</b></td></tr>
+      <tr><th>历史坐标</th><td>落笔时：第二次世界大战在欧洲已打了一个月（9.3 英法宣战），<b>华沙投降后第六天</b>，《苏德边界友好条约》签字后第六天；第一次长沙会战（9.14 起）接近尾声。<b>而全篇一个字不提欧洲、不提苏联、不提国民党、只提一次日本</b>（见伍·词频）</td></tr>
+      <tr><th>可检验的后果</th><td>文中四次说「准备对付可能的突然事变」。<b>六十天后</b>（12.3）晋西事变爆发；<b>十五个月后</b>（1941.1）皖南事变。而《共产党人》刊到第 19 期（1941.8）停刊，正好走完这段时期</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">一本封面上印着「秘密」的杂志</span><span class="part-scope">1939 秋 · 延安</span></div>
+      <div class="part-body">
+        <p>《共产党人》不是普通的党报，它是<b>党内刊物</b>——创刊号 32 开本，封面只印刊名、期号和「秘密」两个字。<b>这两个字决定了它的读者、语气和全部内容</b>：能读它的人，已经是党员；要解决的问题，不是「怎么让外面的人相信我们」，而是「我们自己这支队伍还成不成形」。</p>
+        <p>班子配得很重：<b>张闻天主编</b>（负责大政方针，每期稿件编好后都送他审定），<b>李维汉任编辑主任</b>（负责编辑出版的实际工作），毛泽东、李维汉、陈云、王稼祥、艾思奇等为主要编委，一九四一年三月编委扩为九人。李维汉在《回忆与研究》里写得很直白：「我是编辑，负责编辑出版的实际工作。工作人员有陶希晋，后来又有马洪。洛甫是主编。」</p>
+        <p>办刊的成效要用数字看：从一九三九年十月到一九四一年八月，共出十九期，刊文 196 篇，其中与党的建设直接相关的 60 多篇；刊过《中央政治局关于巩固党的决定》《扩大的中共中央第六次全会关于各级党委暂行组织机构的决定》，也刊过毛泽东的《大量吸收知识分子》《中国革命和中国共产党》。<b>这家刊物在一年零十个月里做的事，就是这篇文章交代的任务</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">四万、五十万、八十万：一支膨胀得太快的队伍</span><span class="part-scope">1937—1940</span></div>
+      <div class="part-body">
+        <p>抗战爆发时，全国党员约<b>四万</b>人。一九三八年三月十五日，中共中央发出《关于大量发展党员的决议》，话说得毫不含糊：「<b>大量的十百倍的发展党员，成为党目前迫切与严重的任务。</b>」到一九三八年底，党员发展到<b>五十多万</b>；到一九四〇年七月，<b>八十万</b>。</p>
+        <p>三年、二十倍。这个速度带来的问题，就是本文第三、四段那两句话的全部来历：「我们现在有大批的新党员所形成的很多的新组织，这些新组织还不能说是广大群众性的，还不是思想上、政治上、组织上都巩固的，还不是布尔什维克化的。」</p>
+        <p>这也是那一代人的共同判断。后来整风时反复引用的说法是：七十五万新党员，其中九成出身农民、小资产阶级或半无产阶级，「缺乏基本的马克思主义素养」；一些农村党员脑子里还存着「绿林好汉」的思想，有的知识分子党员内心里看不起劳动人民。<b>一篇文章若要把「巩固党」说成最急的事，它需要的不是修辞，是这组数字</b>——而文章里一个数字都没写。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">落笔那天：欧洲打了一个月，全篇一个字不提</span><span class="part-scope">1939.10.04</span></div>
+      <div class="part-body">
+        <p>一九三九年十月四日，欧洲的战争已经打了一个月：九月一日德军入侵波兰，三日英法宣战，十七日苏军进入波兰东部。<b>六天前</b>（9.28）华沙守军签字投降、苏德边界友好条约在莫斯科签字——<b>毛泽东就是那一天写完上一篇《苏联利益和人类利益的一致》的</b>。</p>
+        <p>六天之后，同一支笔写这篇发刊词，语气完全换了。上一篇是「贡献给关心欧洲大战和中苏关系的人们」「是否有当，希望读者不吝指教」；这一篇是「中央很早就计划出版一个党内的刊物」「全党同志都不要忘记」。<b>一篇对国民党上层说话，一篇对自己人说话。</b></p>
+        <p>更值得停一下的是它<b>没有写什么</b>：全篇「国民党」零次、「蒋介石」零次、「苏联」零次、「欧洲」零次、「德国」零次、「日本」一次（「同日寇的斗争中」）、「三民主义」零次。<b>一篇写于世界大战爆发后一个月、国共磨擦正烈的发刊词，把整个外部世界压缩成了一个词——「资产阶级」</b>（出现 63 次）。战场在外面，文章在里面。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">六个字的警报：「可能的突然事变」</span><span class="part-scope">1939.07—1941.01</span></div>
+      <div class="part-body">
+        <p>这篇文章里最容易被当成套话的一句，是「<b>准备对付可能的突然事变</b>」。它在正文里出现<b>四次</b>。但它不是套话：从一九三九年七月起，中共中央已多次向党内发出指示，分析形势、要求全党提高警觉、「准备应付突然事变」。</p>
+        <p>接下来发生的事，把这四个字变成了日程：</p>
+        <ul>
+          <li><b>十一月十二日至二十日</b>，国民党五届六中全会，把五届五中全会的「政治限共为主、军事限共为辅」改成「<b>以军事限共为主、政治限共为辅</b>」。据杨天石依据蒋介石日记的研究：蒋在十二月十六日的日记里已把共产党称为「敌党」，二十一日写「我国以后困难全在内部之处理，而倭敌已无问题矣」。</li>
+          <li><b>十二月三日</b>，阎锡山部陈长捷以重兵围攻决死第二纵队与八路军晋西支队，摧毁晋西南各县抗日政权，杀害干部与后方医院伤病员二百余人——<b>距发刊词六十天</b>。</li>
+          <li><b>一九四〇年二月至三月</b>，八路军在晋东南反击朱怀冰部，第一次反共高潮被打退。</li>
+          <li><b>一九四一年一月</b>，皖南事变——距发刊词十五个月。</li>
+        </ul>
+        <p><b>这就是「发刊词」在延安的真实功能</b>：它不是一本杂志的开场白，是一支正在快速膨胀的队伍接到的一次内部点名——把账算清、把话说定，然后各回各位。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从四万党员到十九期停刊</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.07</div><div class="tl-body">抗战全面爆发，全国党员约 <b>4 万</b>人</div></div>
+      <div class="tl-item"><div class="tl-date">1938.03.15</div><div class="tl-body">中共中央《关于大量发展党员的决议》：「大量的十百倍的发展党员，成为党目前迫切与严重的任务」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.11.06</div><div class="tl-body">中共扩大的六届六中全会闭幕（《战争和战略问题》即当日的结论）——王明路线在组织上被解决</div></div>
+      <div class="tl-item"><div class="tl-date">1938 年底</div><div class="tl-body">全国党员 <b>50 余万</b></div></div>
+      <div class="tl-item"><div class="tl-date">1939.01</div><div class="tl-body">国民党五届五中全会定「溶共、防共、限共、反共」；3.11 设国民精神总动员会</div></div>
+      <div class="tl-item"><div class="tl-date">1939.06.12</div><div class="tl-body">平江惨案：新四军平江通讯处六人被杀（第五篇《必须制裁反动派》的直接对象）</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.07 起</div><div class="tl-body">中共中央多次指示全党提高警觉，「<b>准备应付突然事变</b>」——本文那句警告的政策来源</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.01</div><div class="tl-body">德军入侵波兰；同日毛泽东对《新华日报》记者谈话，宣布战略相持阶段到来</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.14</div><div class="tl-body">第一次长沙会战打响</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.09.28</div><div class="tl-body">华沙守军签字投降；《苏德边界友好条约》签字——<b>同日写完上一篇</b></div></div>
+      <div class="tl-item green"><div class="tl-date">1939.10.04</div><div class="tl-body"><b>本篇写成</b>。不引一句共产国际、不点一个国民党人的名、不提一句欧洲战事</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.10</div><div class="tl-body">《目前形势和党的任务》——六天后，同一支笔转向时局，<b>下一篇</b></div></div>
+      <div class="tl-item green"><div class="tl-date">1939.10.20</div><div class="tl-body"><b>《共产党人》创刊号出版</b>，封面印「秘密」二字，首篇即本篇</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.12—20</div><div class="tl-body">国民党五届六中全会，改为「以军事限共为主、政治限共为辅」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.03</div><div class="tl-body"><b>晋西事变</b>：阎锡山部围攻决死二纵队与八路军晋西支队——距本篇六十天</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02—03</div><div class="tl-body">八路军在晋东南反击朱怀冰部，第一次反共高潮被打退</div></div>
+      <div class="tl-item"><div class="tl-date">1940.07</div><div class="tl-body">全国党员 <b>80 万</b>，其中约 75 万为新党员</div></div>
+      <div class="tl-item"><div class="tl-date">1941.01</div><div class="tl-body">皖南事变——「突然事变」最重的一次应验</div></div>
+      <div class="tl-item"><div class="tl-date">1941.08</div><div class="tl-body">《共产党人》出至第十九期停刊，共刊文 196 篇</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      <span class="q">一句话：</span>把十八年的成败全部归结到三件事上——<b>统一战线、武装斗争、党的建设</b>——于是「建设一个什么样的党、怎样建设党」这个问题，不必从纲领讲起，可以从账本讲起；而账本的结论是：<b>前两件是武器，第三件是拿武器的人。</b>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 先立任务，再讲历史<span class="card-tag">开篇</span></h4>
+        <p>「帮助建设一个全国范围的、广大群众性的、思想上政治上组织上完全巩固的布尔什维克化的中国共产党」——这句 46 字的话在全篇出现 <b>4 次</b>，是本篇唯一的「任务定义」。刊物为什么必要？因为「不是一般党报所能胜任的，必须有专门的党报」。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 从国情推出两个基本特点<span class="card-tag">中段</span></h4>
+        <p>中国是半殖民地半封建、政治经济文化发展不平衡、半封建经济占优势而土地广大的国家，于是革命性质是资产阶级民主革命，主要形式是武装斗争。由此得出两个基本特点：<b>同资产阶级建立或被迫分裂统一战线</b>；<b>主要革命形式是武装斗争</b>。农民关系不计入，因为「一提到武装斗争，实质上即是农民战争」。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 三个法宝，一个模具<span class="card-tag">主体</span></h4>
+        <p>三个法宝各自都分「三个阶段」，且都是同一组：一九二四—二七、一九二七—三七、抗战。三个法宝用一张表写完十八年——<b>这不是三种分析，是同一种分析做了三遍</b>。</p>
+      </div>
+      <div class="card blue">
+        <h4>四 · 给三者定关系：两件武器，一个战士<span class="card-tag">收束</span></h4>
+        <p>「统一战线和武装斗争，是战胜敌人的两个基本武器。统一战线，是实行武装斗争的统一战线。而党的组织，则是掌握统一战线和武装斗争这两个武器以实行对敌冲锋陷阵的英勇战士。」——<b>并列的三项，在这里被排成了主从</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">定任务</div><div class="n-sub">建设一个全国性、群众性<br>完全巩固的党</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">找变量</div><div class="n-sub">国情 → 革命性质<br>→ 两个基本特点</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">验历史</div><div class="n-sub">三个法宝各分三阶段<br>前进／后退逐段对照</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">定关系</div><div class="n-sub">两个武器<br>＋ 一个战士</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">定错误</div><div class="n-sub">左倾关门主义<br>／ 右倾机会主义</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">交任务</div><div class="n-sub">使党「铁一样地巩固」<br>避免重犯历史错误</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的特别之处是<b>它从「要建一个什么样的党」出发，绕了一整圈历史，最后回到同一个句子上</b>。任务句在第一段出现，在倒数第二段又以问句形式出现一次（「我们今天要怎样建设我们的党？」），然后给出答案：答案不在方法里，在历史里——「这个问题，考察一下我们党的历史，就会懂得」。<b>换句话说，全篇是一个闭环：问题由任务提出，答案由历史提供，而历史的写法又是由任务决定的</b>（只写与「统一战线、武装斗争」两条线相关的部分）。这是一个极为经济、也极为封闭的结构。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">十八段、六个块，段落长短差异极大：最长一段 <b>2041</b> 字，最短一句 <b>25</b> 字（「这就是我们党在十八个年头中的主要的经历和主要的问题。」）。<b>这个落差本身就是结构</b>——短句是路标，长段是账本。</p>
+
+    <table class="plain">
+      <thead><tr><th class="c1">块</th><th class="c2">段／字数</th><th>这一段在干什么</th></tr></thead>
+      <tr><td class="c1">一 · 缘起</td><td class="c2">3 段／435 字</td><td>为什么现在要办这个刊物：投降、分裂、倒退三危险上升，党已成全国性大党，任务是要「准备对付可能的突然事变」</td></tr>
+      <tr><td class="c1">二 · 定位</td><td class="c2">4 段／488 字</td><td>刊名、任务、为什么「必须有专门的党报」；目标句第一次完整出现</td></tr>
+      <tr><td class="c1">三 · 设问</td><td class="c2">5 段／1144 字</td><td>已经很巩固了，为什么还要提新任务？因为新党员、新组织未巩固，老党员老组织要再提高</td></tr>
+      <tr><td class="c1">四 · 立论</td><td class="c2">3 段／1420 字</td><td>国情 → 革命性质 → 两个基本特点 → 三个基本问题 → 三个法宝。全篇的承重墙</td></tr>
+      <tr><td class="c1">五 · 三法宝</td><td class="c2">4 段／4375 字</td><td>统一战线 1620 字、武装斗争 714 字、党的建设 2041 字，各配三阶段</td></tr>
+      <tr><td class="c1">六 · 收束</td><td class="c2">3 段／362 字</td><td>两个武器＋一个战士；再次反问「怎样建设我们的党」；末句交任务</td></tr>
+    </table>
+
+    <h3 class="sub-h">篇幅的比例：写得最多的是党的建设，写得最少的是武装斗争</h3>
+    <div class="bars">
+      <div class="bar-row">
+        <span class="bar-lab">统一战线</span>
+        <span class="bar-track"><span class="bar-fill red" style="width:79.3%"></span></span>
+        <span class="bar-val">1620 字</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-lab">武装斗争</span>
+        <span class="bar-track"><span class="bar-fill gold" style="width:35.0%"></span></span>
+        <span class="bar-val">714 字</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-lab">党的建设</span>
+        <span class="bar-track"><span class="bar-fill green" style="width:100%"></span></span>
+        <span class="bar-val">2041 字</span>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">（以最长的一节为 100%。）三个法宝的篇幅比是 <b>2.3 : 1 : 2.9</b>。<b>武装斗争那一节只有七百余字</b>，而作者在这个题目上此前已经写过《中国的红色政权为什么能够存在？》《星星之火，可以燎原》《中国革命战争的战略问题》《抗日游击战争的战略问题》《论持久战》《战争和战略问题》。<b>最熟的那一件，写得最短</b>——这一点是理解全篇用意的钥匙（见陆·二）。</p>
+
+    <h3 class="sub-h">三个法宝，一个模具：同一张「三阶段」表做了三遍</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">法宝</th><th class="c2">第一阶段</th><th class="c2">第二阶段</th><th>第三阶段</th></tr></thead>
+      <tr><td class="c1">统一战线</td><td class="c2">1924—1927<br>第一次大革命</td><td class="c2">1927—1937<br>土地革命战争</td><td>今天的抗日战争。三种情况下总结出六条规律，两端是「左」倾关门主义与右倾机会主义</td></tr>
+      <tr><td class="c1">武装斗争</td><td class="c2">参加北伐战争<br><b>「还没有彻底了解其重要性」</b></td><td class="c2">土地革命战争<br><b>学会了独立的战争艺术</b></td><td>抗日战争。总概念＝游击战争；「离开了武装斗争，就没有共产党的地位」</td></tr>
+      <tr><td class="c1">党的建设</td><td class="c2">幼年时期<br><b>路线对，但没经验</b></td><td class="c2">土地革命战争<br><b>遵义会议以后才彻底走上布尔什维克化</b></td><td>抗日民族统一战线阶段。已成全国性大党，但「大批的新党员还没有受到教育」</td></tr>
+      <tr><td class="c1">每一格的<br>共同语法</td><td class="c2" colspan="3">第一段有成绩也有致命缺陷 → 第二段在挫折中学会 → 第三段力量最大但<b>质量最不整齐</b>。<b>三段全部指向同一句当下判断：现在的问题是「巩固」</b></td></tr>
+    </table>
+    <p class="lead" style="margin-top:12px;"><b>这是全篇最值得学的手艺</b>：不讲三个道理，只摆三条时间线；三条线一叠，历史就自动替他说完了结论——三个法宝都不是理论发明，是三次失败换来的。而三条线全部收在同一个词上：<b>巩固</b>。于是「为什么要办这个刊物」这个问题，不再需要一个论证。</p>
+
+    <h3 class="sub-h">词频：被说出口的东西，和没被说出口的东西</h3>
+    <div class="bars">
+      <div class="bar-row"><span class="bar-lab">资产阶级</span><span class="bar-track"><span class="bar-fill red" style="width:100%"></span></span><span class="bar-val">63</span></div>
+      <div class="bar-row"><span class="bar-lab">统一战线</span><span class="bar-track"><span class="bar-fill red" style="width:57.1%"></span></span><span class="bar-val">36</span></div>
+      <div class="bar-row"><span class="bar-lab">武装斗争</span><span class="bar-track"><span class="bar-fill gold" style="width:52.4%"></span></span><span class="bar-val">33</span></div>
+      <div class="bar-row"><span class="bar-lab">组织</span><span class="bar-track"><span class="bar-fill green" style="width:46.0%"></span></span><span class="bar-val">29</span></div>
+      <div class="bar-row"><span class="bar-lab">布尔什维克化</span><span class="bar-track"><span class="bar-fill green" style="width:28.6%"></span></span><span class="bar-val">18</span></div>
+      <div class="bar-row"><span class="bar-lab">党的建设</span><span class="bar-track"><span class="bar-fill green" style="width:23.8%"></span></span><span class="bar-val">15</span></div>
+      <div class="bar-row"><span class="bar-lab">突然事变</span><span class="bar-track"><span class="bar-fill blue" style="width:6.3%"></span></span><span class="bar-val">4</span></div>
+      <div class="bar-row"><span class="bar-lab">国民党</span><span class="bar-track"><span class="bar-fill blue" style="width:0.8%"></span></span><span class="bar-val">0</span></div>
+    </div>
+    <p class="lead" style="margin-top:12px;">一头一尾最说明问题：<b>「资产阶级」出现 63 次，比「统一战线」和「武装斗争」都多</b>；而「国民党」一次也没有。同样为零的还有：蒋介石、苏联、欧洲、德国、三民主义、马克思主义（「马克思列宁主义」出现 9 次）。<b>全篇只提一次日本</b>，且是顺带（「同日寇的斗争中」）。</p>
+
+    <h3 class="sub-h">十八年党史在这篇文章里的全部人名</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">三个名字 · 都是错误</div>
+          <div class="spec-seg green">一个会名 · 唯一正面</div>
+          <div class="spec-seg blue">一句引文 · 来自外人</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>陈独秀 · 李立三 · 张国焘</b>右倾／「左」倾／右倾。三个本党人名，无一例外用来标注错误</div>
+          <div class="spec-label"><b>遵义会议</b>全篇唯一被正面命名的会议，也是唯一「党自己纠正自己」的证据</div>
+          <div class="spec-label"><b>斯大林</b>唯一的正面引文：「在中国，是武装的革命反对武装的反革命」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">十八年，四个名字，加上一次会议。<b>本党的人名只用来标错，正确的事情交给一次会议和一个外国人去说</b>——这个比例不是偶然（见陆·三）。</p>
+
+    <div class="quote" style="margin-top:22px;">
+      根据马克思列宁主义的理论和中国革命的实践之统一的理解，集中十八年的经验和当前的新鲜经验传达到全党，使党铁一样地巩固起来，而避免历史上曾经犯过的错误——这就是我们的任务。
+      <span class="src">1991 年版 614 页 · 全篇末句 · 三个动词：集中、传达、巩固</span>
+    </div>
+
+    <p class="lead" style="margin-top:18px;"><b>全篇最值得学的一招，是「用历史的时间差代替逻辑的推理」。</b>要说「必须巩固党」，可以从组织原理讲起，也可以从数字讲起（四万到八十万），但作者都没有用；他用的是「三个阶段」——每一个法宝的第一段都是「有成绩但致命地不成熟」，第二段都是「在失败中学会」，第三段都是「力量最大而质量最不整齐」。<b>三段并排放在读者眼前，结论就不需要论证了，只需要被承认</b>。代价是：历史必须被切成恰好三段，而任何不属于这三段的东西，都只能留在文章外面。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>三个法宝不是并列关系：「资产阶级」出现 63 次，暴露了真正的主变量</h4>
+          <p>文本表面上把三件事并列成「三个基本问题」，还说「正确地理解了这三个问题及其相互关系，就等于正确地领导了全部中国革命」。但词频给出的是另一张图：<b>资产阶级 63、统一战线 36、武装斗争 33、党的建设 15</b>。再往下看定义就更清楚了——统一战线的每一段都在讲资产阶级（民族资产阶级能参加但会动摇、大资产阶级分属不同帝国主义系统、又联合又斗争）；武装斗争的定义是「<b>无产阶级领导之下的农民战争</b>」；而党的建设被明确定义成一种能力：「党的失败和胜利，党的后退和前进，党的缩小和扩大，党的发展和巩固，<b>都不能不联系于党同资产阶级的关系和党同武装斗争的关系</b>」。</p>
+          <p>也就是说：<b>真正的自变量只有一个——党同资产阶级的关系；武装斗争是这个关系的另一副面孔；党的建设是处理前两者的能力</b>。所谓三大法宝，是一根主线加两个派生。这不是我的过度解读，是文本自己交代的：那句「由于这两个基本特点，恰是由于这些基本特点，我们党的建设过程……就处在特殊的情况中」，把党建直接写成了因变量。</p>
+          <span class="mv"><b>迁移</b>：凡遇到「三要素／四支柱／五维度」这类整齐框架，先做一件很土的事——数词频，或者看每一节的实际主语是什么。<b>并列清单读起来最舒服，因为它不需要排序；而真实的系统里，几乎总有一个变量是别的变量的函数。</b>把主变量找出来，框架就从一张清单变成一台机器。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>篇幅与难度成反比：写得最短的那一节，是他最有把握的；最长的那一节，一个操作条款都没有</h4>
+          <p>武装斗争一节 714 字，只有统一战线的 44%、党的建设的三分之一。而这是他一九二七年以后一直在做的事，此前已写过六篇专文。反过来，党的建设 2041 字，全篇最长，却<b>通篇没有一条操作规程</b>：没有讲支部怎么建、党员怎么审查、干部怎么训练、会议怎么开。它讲的是一段历史（幼年时期 → 土地革命 → 抗战），和一段历史造成的现状（新党员多、新组织多、投机分子混进来了）。</p>
+          <p>我不认为这是疏忽，而是<b>这份文本的功能决定的</b>：它是一篇发刊词，任务不是教方法，是<b>发资格</b>。刊物叫《共产党人》，要办的事是「帮助建设……的党」，那么它必须先回答一个前置问题：<b>凭什么由你来主持这件「伟大的工程」？</b>答案只能是十八年。所以最长的一节是资历，最短的一节是常识——常识不需要展开，资历必须铺满。真正的操作规程，要等两年后的整风（1942）和《关于领导方法的若干问题》（1943）才成体系。</p>
+          <span class="mv"><b>迁移</b>：判断一份文本的真实目的，看两处就够——<b>哪一节最长却最空，哪一节最短却最实</b>。最长而空的，通常是背书；最短而实的，通常是作者真正的舒适区。<b>而在写自己的东西时，这一条可以反过来用</b>：如果你发现某一段写得特别长却始终落不到细节，那段大概率不是在论证，是在给自己壮胆。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>三个本党人名全是「错误」，而当下真正未清的账，一个字也没有</h4>
+          <p>十八年党史，正文点名四个人：斯大林（引一句）、陈独秀（右倾）、李立三（「左」倾）、张国焘（右倾），外加一个会议名（遵义会议）。<b>三个本党人名，无一例外是错误标签；唯一的正面理论引用，来自外部。</b>而一九三九年十月，党内真正还没结清的那笔账——一九三七年末到一九三八年的右倾（王明），六届六中全会（1938.11）刚在组织上处理完，距本文不到一年——<b>全篇没有出现</b>。文章只写了「要反对把无产阶级和资产阶级的纲领、政策、思想、实践等等看做一样的东西」这种抽象的右倾定义，然后立刻用陈独秀做例子。</p>
+          <p>这是一种很高明的写法，也是一种有代价的写法。<b>高明在于</b>：把错误全部安放在已经结案、已有全党结论的过去，就能在不点名任何在场者的前提下完成一次路线宣誓；而遵义会议是唯一的正面事件名，它证明的正是「这个党能够自己纠正自己」——这恰好是《共产党人》要立的东西。<b>代价在于</b>：用「历史的错误」代替「现在的分歧」，统一了措辞，却把分歧留在了措辞之外。它没有消失，只是搬到了别处——两年后的整风才把它搬回桌面，而整风的第一课，就是「改造我们的学习」。</p>
+          <span class="mv"><b>迁移</b>：复盘时只写「已经结案的错误」是最安全的，也是最省力的：所有人都同意，没有人被冒犯，结论干净。<b>但如果复盘的目的包含「防止下一次」，就必须让在场的人和正在发生的事进入文本</b>——哪怕只是写一句「目前我们内部对 X 还有两种说法，尚未定论」。<b>一份只记录已结案错误的复盘，本质上是仪式的另一种形式。</b></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">十八年的经验，已使我们懂得：统一战线，武装斗争，党的建设，是中国共产党在中国革命中战胜敌人的三个法宝，三个主要的法宝。</div>
+        <div class="ctx">「立论」一节 · 605—606 页 · 「三个法宝」的定式表述；注意它前面是「已使我们懂得」——是总结，不是发明</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">正确地理解了这三个问题及其相互关系，就等于正确地领导了全部中国革命。</div>
+        <div class="ctx">紧接上句 · 605—606 页 · 全篇最大的一次自我授权：把「三个问题」等同于「全部中国革命」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">统一战线和武装斗争，是战胜敌人的两个基本武器。统一战线，是实行武装斗争的统一战线。而党的组织，则是掌握统一战线和武装斗争这两个武器以实行对敌冲锋陷阵的英勇战士。</div>
+        <div class="ctx">篇末 · 613—614 页 · 全篇唯一的「关系图」；三个并列项在此被排成两件工具＋一个使用者</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这个拿血换来的经验，全党同志都不要忘记。</div>
+        <div class="ctx">武装斗争一节末 · 「这个经验」指前面那句「离开了武装斗争，就没有无产阶级的地位，就没有人民的地位，就没有共产党的地位，就没有革命的胜利」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">根据马克思列宁主义的理论和中国革命的实践之统一的理解，集中十八年的经验和当前的新鲜经验传达到全党，使党铁一样地巩固起来，而避免历史上曾经犯过的错误——这就是我们的任务。</div>
+        <div class="ctx">全篇末句 · 614 页 · 三件事：集中、传达、巩固；「铁一样地」是全篇唯一的比喻性强度词</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">《目前形势和党的任务》</div>
+        <p>一九三九年十月十日，第二卷第二十一篇，1991 年版 615—617 页。<b>距本篇仅六天</b>。同一个人，六天之内写完「党的十八年」和「这个月的时局」：前者向内、讲历史，后者向外、讲德波战争与日本的新方针，五段编号（一）（二）（三），末句仍是「<b>以准备对付可能的危害中国革命的突然事变</b>」——发刊词里那句警告，六天后被写成了当前任务。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《论人民民主专政》</div>
+        <p>一九四九年六月三十日，第四卷。十年后，同一组东西被重新数了一遍，而且<b>顺序完全倒过来</b>：「一个有纪律的，有马克思列宁主义的理论武装的，采取自我批评方法的，联系人民群众的党。一个由这样的党领导的军队。一个由这样的党领导的各革命阶级各革命派别的统一战线。<b>这三件是我们战胜敌人的主要武器。</b>」——从「统一战线、武装斗争、党的建设」变成「党、军队、统一战线」，从「法宝」变成「主要武器」。<b>同一份清单，先写武器后写人，与先写人后写武器，说的是两种不同的处境</b>：一九三九年要解释「凭什么」，一九四九年要解释「靠什么」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「三大法宝」的算法搬到今天</h4>
+      <div class="q">一、如果你的业务／团队也要写一份「三个法宝」，你会怎么找出那个真正的主变量？先别急着列三项——先问：这三项里，哪一项的变化会带动另外两项？</div>
+      <div class="q">二、你上一次写复盘，写进去的是「已经结案的错误」，还是「正在发生的分歧」？如果只有前者，那份复盘对下一次的实际作用是什么？</div>
+      <div class="q">三、本篇的整个结构依赖「一切都能切成三段」。试着找一个你自己熟悉的领域，硬切成三段——你会立刻发现哪一段是凑出来的。<b>那段凑出来的部分，往往就是这个领域最说不清的地方。</b></div>
+      <div class="hint">提示：这三个问题都不是关于历史的。这篇文章最耐用的地方不是「三个法宝」这四个字，而是它做成这件事的三个动作——<b>用词频找出主变量、用篇幅暴露真实目的、用已结案的错误代替未结的分歧</b>。前两个可以直接借用，第三个借用之前，先想清楚你要付什么代价。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷第二十篇</div>
+    <div>底本：《毛泽东选集》第二卷，人民出版社 1991 年第二版，602—614 页</div>
+    <div>校核：求是理论网电子文本（逐段字数统计）· 中央文献研究室考辨文章 · 人民网党史频道</div>
+  </div>
+
+</div>
+</body>
+</html>

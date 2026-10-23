@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>39 · 目前形势和党的任务 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+.card .card-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;background:var(--bg-2);color:var(--ink-2);margin-left:6px;vertical-align:2px;font-weight:400;letter-spacing:0;}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 84px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 68px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:76px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:88px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:56px;}table.plain .c2{width:64px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">卅九</div>
+    <h1>目前形势和党的任务</h1>
+    <div class="sub2">给一个判断装上保险</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十一篇 · <b>一九三九年十月十日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《目前形势和党的任务》。1991 年版第二卷第二十一篇，上接《〈共产党人〉发刊词》（10.4），下接《大量吸收知识分子》（12.1）</td></tr>
+      <tr><th>文体</th><td><b>不是文章、不是讲演、不是谈话，是「决定」</b>——毛泽东<b>为中共中央起草</b>的党内文件，以中央名义发给各级党组织。题注只有一句：「这是毛泽东为中共中央起草的决定。」<b>读者是干部，语气是下行文，落点是动作</b></td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年十月十日</b>——<b>双十节</b>，辛亥首义二十八周年，也是国民政府法定的国庆日</td></tr>
+      <tr><th>原题</th><td>党史文献中多作《关于目前形势与党的任务的决定》（人民网《抗战大事记·1939 年》十月十日条作《关于目前形势和党的任务的决定》，一字之差），收入《毛泽东选集》时题作今名</td></tr>
+      <tr><th>一道重名</th><td>两年前（<b>1937.8.25</b>）洛川会议通过过一份几乎同名的文件——《中央关于目前形势与党的任务的决定》，载《解放》第一卷第十五期（1937.9.6）。<b>同一题目，两篇文件</b>：前者讲「抗战刚开始，怎么打」，后者讲「相持已到，怎么熬」</td></tr>
+      <tr><th>最初刊印</th><td>据现有检索未能确证首次刊印的报刊与日期（党内决定，主要以中央文件形式下发各根据地党组织）。<b>此处不写死</b>，只记两条硬信息：署名日 1939.10.10、题为中央决定</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷（人民出版社 1952 年第一版第 <b>578—580</b> 页；本册依据 1991 年第二版，第 <b>615—617</b> 页，正文三页）</td></tr>
+      <tr><th>注释</th><td><b>零注释</b>。全篇只有一条题注（「* 这是毛泽东为中共中央起草的决定」），正文里没有一个〔1〕。<b>与上一篇《发刊词》的六条注释相比，这是一份不需要注解的文件</b>——它不提人名、不引经典、不涉典故</td></tr>
+      <tr><th>篇幅</th><td>正文 <b>6 段</b>、汉字 <b>1141</b> 字（含标点 1269 字）。三块：<b>世界大战 229 字</b>（20.1%）／<b>日本方针与相持判断 520 字</b>（45.6%）／<b>党的任务 392 字</b>（34.4%）。上一篇《发刊词》7080 字，<b>本篇不到它的六分之一</b></td></tr>
+      <tr><th>历史坐标</th><td>落笔时：欧战爆发第 39 天，华沙陷落后第 12 天；<b>同一天，苏联与立陶宛在莫斯科签订互助条约</b>（爱沙尼亚 9.28、拉脱维亚 10.5、立陶宛 10.10）；<b>第一次长沙会战的日军已于 10 月 1 日下令全线撤退</b>；国民党五届六中全会还有 33 天；皖南事变还有 15 个月</td></tr>
+      <tr><th>一句话读数</th><td>全篇最热的词不是「相持」（5 次），是「<b>进攻</b>」（13 次）；「<b>人民</b>」<b>零次</b>，「群众」1 次；「<b>日本</b>」只有 1 次，其余一律称「<b>敌人</b>」（11 次）</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">一份 1141 字的文件，前面站着 229 字的欧洲</span><span class="part-scope">1939.09—10</span></div>
+      <div class="part-body">
+        <p>决定的第一段不谈中国、不谈日本，先谈世界大战，用掉全篇<b>五分之一</b>的篇幅：战争起因（各帝国主义国家企图解脱新的经济危机和政治危机）、战争性质（「无论在德国或英法方面，都是非正义的掠夺的帝国主义战争」）、各党的态度（全世界共产党都应坚决反对，并反对社会民主党拥护这种战争的「叛卖无产阶级的罪恶行为」）、苏联的立场（严守中立，出兵波兰「制止德国侵略势力向东扩展」）。</p>
+        <p>这不是铺垫，是<b>坐标系</b>。它要先把 1939 年 9 月的世界划成三类：<b>掠夺的帝国主义战争（德、英法）／坚持和平政策的苏联／被这场战争重新洗牌的中国</b>。中国抗战的位置一旦被放进这个框架，「投降」就不再只是民族气节问题，而成了「站到哪一类里去」的问题。<b>这一段的真正功能，是给后面的「三大危险」预先定罪</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">东京那句话：不介入欧战，专力解决中国事变</span><span class="part-scope">1939.09.04</span></div>
+      <div class="part-body">
+        <p>第二段的第一句是全篇的转折点：「日本帝国主义在国际新形势下的政策是<b>专力进攻中国</b>，企图解决中国问题，<b>以准备将来扩大其对国际的冒险行动</b>。」这句话有一个精确的出处——<b>一九三九年九月四日，日本阿部信行内阁的声明</b>：</p>
+        <p class="lead" style="padding:8px 0;">「The Imperial Government will not become involved in the conflict which has suddenly broken out in Europe, but will devote all its energies toward resolving the China incident.」<br><span class="muted" style="font-size:13px;">（帝国政府不介入突然在欧洲爆发之战争，而倾其全力解决中国事变。据美国驻日使馆当日电报，FRUS 1939 Vol.III 第 201 号文件）</span></p>
+        <p>三天后（9.12）日本编成「支那派遣军」，统一指挥华北、华中、华南全部侵华部队，西尾寿造任总司令官、板垣征四郎任总参谋长，<b>十月初总司令部在南京开设</b>。这份决定的第二段，正是对这套动作的解读：日本不是要南下、也不是要北上，而是<b>趁欧洲打起来、列强无暇东顾的窗口，先把中国这一头按死</b>。</p>
+        <p>于是「解决中国问题」被拆成两条方针：<b>对占领区「加以确保」</b>（扫荡游击根据地、经济开发、建立伪政权、消灭中国人的民族精神）；<b>对我后方「以政治进攻为主，而以军事进攻为辅」</b>（分化统一战线、分裂国共合作、引诱国民党政府投降）。<b>这两条加起来，才是「相持阶段」在本篇里的真实含义</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">双十节这天：长沙的日军已在撤退，宪政期成会在等一个明令</span><span class="part-scope">1939.10.10</span></div>
+      <div class="part-body">
+        <p>正文说「敌人现在正在进攻长沙」。这句话写下时，<b>战场已经翻页了</b>：第一次长沙会战 9 月 14 日打响，日军 9 月 23 日强渡新墙河、9 月底逼近长沙外围，但赣北、鄂南两路助攻均未会合，<b>冈村宁次 10 月 1 日下令全线撤退</b>，10 月 6 日宣称「达到作战目的后撤军」，10 月 8 日前后退回新墙河北岸，双方 10 月上中旬恢复战前态势（各书记载 10.8—10.14 不一）。</p>
+        <p>也就是说，这份文件的作者在写「正在进攻长沙」的时候，手里握着的其实是「已经撤了」的战报。<b>他没有改这句</b>——因为这句话的功能不是报战况，是提醒全党：<b>「相持」不等于「无战事」，敌人还会打战役进攻</b>。紧接着的「但是第一」就是专门为这句话设的。</p>
+        <p>同一天还有另一条线。<b>九月十六日</b>，国民参政会一届四次大会通过《请政府定期召集国民大会实行宪政决议案》；十八日蒋介石指定张君劢、黄炎培、董必武等十九人组成宪政期成会；<b>二十日期成会第一次会议就决议请政府早日明令颁布召集国民大会、公布宪法、实施宪政</b>。据左舜生回忆，当时同人「望在今年的双十节政府能公布实施宪政时期」。<b>十月十日，就是那个被期待的日子</b>。</p>
+        <p>本篇第三段正是在这一天写下：「在我后方，必须迅速地认真地实行政治改革，<b>结束国民党一党专政，召集真正代表民意的有权力的国民大会，制定宪法，实行宪政</b>。」——一句话里塞进了「结束党治」四个字，这是那场参政会舌战的胶着点：九一五夜到九一六凌晨，审查会开了六个小时，国民党参政员坚决反对把「结束党治」写进决议，最后通过的文本用「请政府」如何如何替换掉了它（邹韬奋记「你起我立，火并似的舌战」）。<b>决议里被删掉的四个字，十二天后被写进了中共中央的决定里。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">「突然事变」：一句用了两年的词，54 天后第一次兑现</span><span class="part-scope">1939.10—1941.01</span></div>
+      <div class="part-body">
+        <p>末句是全篇唯一带情绪的地方：「应该提高对当前时局的警觉性，用全力从思想上、政治上、组织上巩固我们的党，巩固党所领导的军队和政权，<b>以准备对付可能的危害中国革命的突然事变</b>，使党和革命在可能的突然事变中<b>不致遭受意外的损失</b>。」</p>
+        <p>「突然事变」不是本篇发明的。六天前的《〈共产党人〉发刊词》里，同一个词组出现了四次；再往前，一九三九年八月七日中央军委已电令王震率三五九旅主力开赴绥德警备区，理由写得明白：「为了粉碎国民党的反共阴谋，巩固陕甘宁边区和加强河防，<b>准备应付突然事变</b>」。</p>
+        <p>接下来的日程表是这样的：</p>
+        <ul>
+          <li><b>十一月十二日至二十日</b>，国民党五届六中全会在重庆召开，把五届五中全会的「政治限共为主」改成「以军事限共为主」，并议决翌年十一月十二日召开国民大会。</li>
+          <li><b>十二月三日</b>，阎锡山部陈长捷围攻决死第二纵队与八路军晋西支队，摧毁晋西南各县抗日政权——「晋西事变」，<b>距本篇 54 天</b>。同月胡宗南部袭占边区宁县、镇原等五县，绥德专员何绍南组织保安队攻打八路军。第一次反共高潮由此展开。</li>
+          <li><b>一九四〇年二三月</b>，八路军在晋东南反击朱怀冰部，第一次反共高潮被打退。</li>
+          <li><b>一九四一年一月</b>，皖南事变——<b>距本篇 15 个月</b>，「突然事变」最重的一次应验。</li>
+        </ul>
+        <p>所以这份文件的最后一句不是修辞。它是<b>一份写给未来的备案</b>：先把最坏的情况写进中央文件，等到它发生时，全党不会措手不及，也不会因此怀疑路线。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从欧战爆发到皖南事变</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1939.08.23</div><div class="tl-body">《苏德互不侵犯条约》签字，欧洲局势骤变</div></div>
+      <div class="tl-item"><div class="tl-date">1939.08.28</div><div class="tl-body">汪精卫在上海召开伪国民党六大，筹组伪中央政权</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.01</div><div class="tl-body">德军入侵波兰，欧战爆发；同日毛泽东对《新华日报》记者谈话，宣布战略相持阶段到来</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.03</div><div class="tl-body">英法对德宣战</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.09.04</div><div class="tl-body">日本阿部内阁声明：<b>不介入欧战，专力解决中国事变</b>——本篇第二段的前提</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.12</div><div class="tl-body">日本编成「支那派遣军」，统一指挥在华全部陆军（西尾寿造任总司令官）</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.09.14</div><div class="tl-body">第一次长沙会战打响</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.16</div><div class="tl-body">国民参政会一届四次大会通过《请政府定期召集国民大会实行宪政决议案》；毛泽东在延安同三家记者谈话，宣布「人不犯我，我不犯人」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.17</div><div class="tl-body">苏军进入波兰东部</div></div>
+      <div class="tl-item"><div class="tl-date">1939.09.20</div><div class="tl-body">宪政期成会第一次会议，决议请政府早日明令实施宪政</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.09.28</div><div class="tl-body">华沙守军签字投降；《苏德边界友好条约》签字；苏爱沙尼亚互助条约签字</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.01</div><div class="tl-body">冈村宁次下令长沙方面日军全线撤退；日本「支那派遣军」总司令部在南京开设</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.10.04</div><div class="tl-body">《〈共产党人〉发刊词》写成——7080 字，讲党的十八年</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.05</div><div class="tl-body">苏拉脱维亚互助条约签字</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.08</div><div class="tl-body">日军退回新墙河北岸（各书记载 10.8—10.14 恢复战前态势不一）</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.10.10</div><div class="tl-body"><b>本篇写成（双十节）</b>；同日苏立陶宛互助条约在莫斯科签字；宪政运动期待政府明令宪政的日子</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.20</div><div class="tl-body">《共产党人》创刊号出版（封面印「秘密」二字）</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.12—20</div><div class="tl-body">国民党五届六中全会：「以军事限共为主」，议决翌年 11.12 召开国民大会</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.03</div><div class="tl-body"><b>晋西事变</b>——距本篇 54 天</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02—03</div><div class="tl-body">八路军反击朱怀冰部，第一次反共高潮被打退</div></div>
+      <div class="tl-item"><div class="tl-date">1940.09.18</div><div class="tl-body">国民党中央常会决定国民大会延期召集，第一次宪政运动转向低潮</div></div>
+      <div class="tl-item"><div class="tl-date">1941.01</div><div class="tl-body"><b>皖南事变</b>——距本篇 15 个月，「突然事变」最重的一次应验</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      <span class="q">一句话：</span>先说「相持阶段基本上已经到来」，再把这句话<b>一层层装进条件里</b>——「在这种意义上」「基本上」、三个「但是」、「仍有被破坏的可能」——于是结论既被宣布，也无法被将来的任何战况推翻；剩下的全部篇幅，都用来把全党从「等胜利」改写成「三个空间、三套动作、一种准备」。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 判断句与它的四条限定<span class="card-tag">第二段</span></h4>
+        <p>核心句：「在这种意义上，抗战的战略相持阶段基本上已经到来。」后面紧跟三个「但是第一／第二／第三」：还有战役进攻（长沙）、敌后将加重「扫荡」、若不能破坏占领地或国民党自动投降则仍可能大举进攻。<b>结论说完，反证条件也一并说完</b>。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 日本的方针被拆成两条<span class="card-tag">第二段</span></h4>
+        <p>对占领区「加以确保」（扫荡根据地、经济开发、建伪政权、消灭民族精神）；对我后方「以政治进攻为主，以军事进攻为辅」（分化统一战线、分裂国共合作、引诱国民党投降）。<b>「确保」与「诱降」是一套动作的两只手</b>。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 三个危险，三句口号<span class="card-tag">第三段</span></h4>
+        <p>投降、分裂、倒退是「当前时局中的最大危险」；反共与倒退「仍然是大地主大资产阶级准备投降的步骤」。对策是七月七日那份宣言里的三句：<b>坚持抗战反对投降／坚持团结反对分裂／坚持进步反对倒退</b>——一句话配一个「反对」，没有一句是纯正面的。</p>
+      </div>
+      <div class="card blue">
+        <h4>四 · 三个空间，三套动作<span class="card-tag">第三段</span></h4>
+        <p><b>敌后方</b>：坚持游击战争、战胜「扫荡」、破坏占领地、实行激进的政治经济改革；<b>正面</b>：支持军事防御、打退任何战役进攻；<b>我后方</b>：实行政治改革、结束一党专政、召集国民大会、制定宪法、实行宪政。<b>全国战场被切成三块，每块一条动词</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">定世界</div><div class="n-sub">帝国主义掠夺战争<br>＋ 苏联和平政策</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">推日本</div><div class="n-sub">不介入欧战<br>→ 专力进攻中国</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">下判断</div><div class="n-sub">相持阶段<br>「基本上已经到来」</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">装保险</div><div class="n-sub">三个「但是」<br>＋「仍可能被破坏」</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">定危险</div><div class="n-sub">投降／分裂／倒退<br>三句口号各配一个「反对」</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">分空间</div><div class="n-sub">敌后方／正面／我后方<br>三套动作</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">收于党</div><div class="n-sub">巩固党、军队、政权<br>准备突然事变</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的形状很有意思：<b>它是一路「往外看」再一路「往回收」</b>。前半段（世界 → 日本 → 判断）全部是别人的动作，作者只做解读；后半段（危险 → 空间 → 党）全部是自己的动作，作者只做分配。<b>两侧之间用一个词咬合：「在这种意义上」。</b>前面那套对世界的解释有多完整，「相持已经到来」这个结论就有多可靠；而一旦结论有疑，责任也已经被前面那套解释承担掉了。这是政治文件里最经济的一种写法——<b>把判断挂在一个更大的叙事上，判断就不必自己站住</b>。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">六段、1141 字，编号却是<b>断的</b>：（一）→（二）→一、→二、→<b>（无编号）</b>→（三）。<b>最长的那一段（322 字，占 28.2%）没有编号</b>，而它正是全篇的承重墙。</p>
+
+    <table class="plain">
+      <thead><tr><th class="c1">段</th><th class="c2">字数</th><th>这一段在干什么</th></tr></thead>
+      <tr><td class="c1">（一）</td><td class="c2">229</td><td>世界大战的性质、各党的态度、苏联的中立与出兵波兰。<b>建立坐标系</b></td></tr>
+      <tr><td class="c1">（二）</td><td class="c2">63</td><td>日本的新政策：专力进攻中国，「以准备将来扩大其对国际的冒险行动」。<b>只给总纲，不给细节</b></td></tr>
+      <tr><td class="c1">一、</td><td class="c2">65</td><td>对占领区：加以确保。四件事：扫荡、经济开发、伪政权、消灭民族精神</td></tr>
+      <tr><td class="c1">二、</td><td class="c2">70</td><td>对我后方：<b>政治进攻为主，军事进攻为辅</b>——全篇最关键的一条敌方判断</td></tr>
+      <tr><td class="c1">（无编号）</td><td class="c2">322</td><td><b>全篇最长、且不带编号</b>：相持判断 ＋ 三个「但是」。语法上是「二」的续写，功能上是全篇的结论</td></tr>
+      <tr><td class="c1">（三）</td><td class="c2">392</td><td>三大危险 → 三句口号 → 三个空间的任务 → 巩固党、准备突然事变。<b>全篇的落地段</b></td></tr>
+    </table>
+
+    <h3 class="sub-h">那个没有编号的段落，是全篇唯一真正的论点</h3>
+    <div class="part">
+      <div class="part-head red"><span class="part-no">※</span><span class="part-title">编号在这里断了一次</span><span class="part-scope">322 字 / 28.2%</span></div>
+      <div class="part-body">
+        <p>如果按形式走，这一段应当是「三、」。但它没有编号，因为它<b>不是日本的又一条方针，而是作者对日本的判断</b>——「在现在时期……其可能性已经不大了。在这种意义上，抗战的战略相持阶段基本上已经到来」。</p>
+        <p><b>编号的断裂就是引文的边界</b>：一、二是敌情（转述），这一段是结论（自述）。一份下行文件里，中央的判断必须以「不是方针」的形式单独站着——<b>它不是给敌人分类，是给自己定调</b>。这种「不用编号的段落」在本篇里只有一处，而它恰好是全篇最长的一处。</p>
+      </div>
+    </div>
+
+    <h3 class="sub-h">篇幅的三层：20% 看世界，46% 看日本，34% 说自己</h3>
+    <div class="bars">
+      <div class="bar-row">
+        <span class="bar-lab">世界大战</span>
+        <span class="bar-track"><span class="bar-fill red" style="width:44.0%"></span></span>
+        <span class="bar-val">229 字</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-lab">日本与相持</span>
+        <span class="bar-track"><span class="bar-fill gold" style="width:100%"></span></span>
+        <span class="bar-val">520 字</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-lab">党的任务</span>
+        <span class="bar-track"><span class="bar-fill green" style="width:75.4%"></span></span>
+        <span class="bar-val">392 字</span>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">（以最长的一块为 100%。）<b>一个共产党的中央决定，用五分之一篇幅谈欧洲，用九分之一篇幅谈敌人的占领区。</b>229：65——讲苏联出兵波兰的四个理由，比讲日本在华北怎么统治多出三倍半。</p>
+
+    <h3 class="sub-h">词频：最热的词是「进攻」，最冷的词是「人民」</h3>
+    <div class="bars">
+      <div class="bar-row"><span class="bar-lab">进攻</span><span class="bar-track"><span class="bar-fill red" style="width:100%"></span></span><span class="bar-val">13</span></div>
+      <div class="bar-row"><span class="bar-lab">敌人</span><span class="bar-track"><span class="bar-fill red" style="width:84.6%"></span></span><span class="bar-val">11</span></div>
+      <div class="bar-row"><span class="bar-lab">党</span><span class="bar-track"><span class="bar-fill green" style="width:84.6%"></span></span><span class="bar-val">11</span></div>
+      <div class="bar-row"><span class="bar-lab">准备</span><span class="bar-track"><span class="bar-fill gold" style="width:53.8%"></span></span><span class="bar-val">7</span></div>
+      <div class="bar-row"><span class="bar-lab">投降</span><span class="bar-track"><span class="bar-fill gold" style="width:46.2%"></span></span><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-lab">相持</span><span class="bar-track"><span class="bar-fill blue" style="width:38.5%"></span></span><span class="bar-val">5</span></div>
+      <div class="bar-row"><span class="bar-lab">占领</span><span class="bar-track"><span class="bar-fill blue" style="width:38.5%"></span></span><span class="bar-val">5</span></div>
+      <div class="bar-row"><span class="bar-lab">国民党</span><span class="bar-track"><span class="bar-fill blue" style="width:23.1%"></span></span><span class="bar-val">3</span></div>
+      <div class="bar-row"><span class="bar-lab">苏联</span><span class="bar-track"><span class="bar-fill gold" style="width:15.4%"></span></span><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="bar-lab">日本</span><span class="bar-track"><span class="bar-fill blue" style="width:7.7%"></span></span><span class="bar-val">1</span></div>
+      <div class="bar-row"><span class="bar-lab">人民</span><span class="bar-track"><span class="bar-fill blue" style="width:0.6%"></span></span><span class="bar-val">0</span></div>
+    </div>
+    <p class="lead" style="margin-top:12px;">一头一尾最说明问题：<b>标题里是「形势」，正文最热的词却是「进攻」（13 次）——比「相持」（5 次）多出两倍半</b>。这不是一份关于「停下来」的文件，是一份关于「换一种打法继续打」的文件。而「<b>人民</b>」在 1141 字里<b>一次也没有出现</b>，「群众」只出现一次（「动员群众」），「民众」一次（「有利于广大抗日民众」）。<b>全篇的施动者只有五方：帝国主义国家、苏联、日本（敌人）、国民党政府、我党。</b>没有第六个角色。</p>
+
+    <h3 class="sub-h">三种称呼：谁被抽象，谁被具体</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">敌人 · 11 次</div>
+          <div class="spec-seg gold">政府 · 3 次</div>
+          <div class="spec-seg green">我党 · 11 次</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>日本</b>正名只有 1 次（第二段首句），此后 11 次全称「敌人」——<b>被抽象成一个可分析的对手</b></div>
+          <div class="spec-label"><b>国民党</b>3 次，全是「国民党政府」或「一党专政」，且全在负面语境——<b>被具体成一个可施压的对象</b></div>
+          <div class="spec-label"><b>自己</b>「党」11 次，几乎全是动作的主语（巩固、提高警觉、领导机关）——<b>被写成唯一的执行者</b></div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">称呼就是策略：对日本用「敌人」（战争范畴，只有打）；对国民党用「政府」（政治范畴，可以谈、可以压、可以揭）；对自己用「党」（组织范畴，只有巩固）。<b>三种称呼对应三套动词，没有一处错用。</b></p>
+
+    <div class="quote" style="margin-top:22px;">
+      在现在时期，敌人如同过去进攻武汉那样的大规模战略进攻行动，由于他所受中国过去二年余的英勇抗战的打击，由于他的兵力不足和财力不足，其可能性已经不大了。在这种意义上，抗战的战略相持阶段基本上已经到来。这种战略相持阶段，即是准备反攻阶段。
+      <span class="src">1991 年版 616 页 · 全篇唯一的结论句 · 四道限定：在现在时期／在这种意义上／基本上／已经不大</span>
+    </div>
+
+    <p class="lead" style="margin-top:18px;"><b>全篇最值得学的一招，是「把结论写成条件句」。</b>要说「相持阶段到来了」，可以从《论持久战》的三阶段推导，也可以从敌我兵力财力算账；作者两样都用了，但都只用了半句——真正的落点是「<b>在这种意义上</b>」。这六个字把结论从「事实陈述」降格为「一种读法」，于是后面三个「但是」就不是补丁，而是这个读法的组成部分。<b>结论因此变得不可反驳：任何反例都早已被它自己列举过。</b>代价是：它也就不再能被单独用来做决策——你必须连同那三个「但是」一起读，才知道该做什么。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>这是一份「不会输的文件」：结论说完，反例也一并说完</h4>
+          <p>把这段拆开看：结论是「相持阶段基本上已经到来」，紧接三条「但是」——敌人还会有战役进攻（并举了长沙这个正在发生的例子）、敌后「扫荡」会加重、如果中国不能破坏占领地或国民党自动投降则仍可能大举进攻。最后一句是「<b>就是说，已经到来的相持局面仍有被敌人和投降派破坏的可能</b>」。</p>
+          <p>于是这份文件对未来的任何一种走向都成立了：日军不再大举进攻，证明「相持到来」；日军再次大举进攻，证明「但是第一」；敌后压力骤增，证明「但是第二」；国民党投降或分裂，证明「但是第三」。<b>它不是预测，是一个把所有分支都预先写好的判断树</b>。这在政治文件里是一种成熟的技术——对全党来说，重要的不是「猜对」，而是「无论发生什么，都不慌」。但如果拿它去做事实判断，它几乎不提供可检验的信息量。</p>
+          <span class="mv"><b>迁移</b>：看一份判断文书，先数它的「但是」有几个，再看每个「但是」是否都对应一个可观测的分支。<b>全都对应的，是决策框架；一个都没有的，是表态。</b>反过来写自己的方案时也要分清：我要的是一份能免责的备忘，还是一份能被证伪的假设——两者的写法完全不同，最怕的是用前者的结构去装后者的野心。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>229 字讲欧洲，65 字讲华北：篇幅暴露的，是这份文件真正要处理的问题</h4>
+          <p>讲日本在占领区干什么，用了 65 个字，四件事，一句话说完。讲苏联出兵波兰，用了将近一百字，还给了四个并列的目的——「制止德国侵略势力向东扩展，巩固东欧和平，解放被波兰统治者所压迫的西部乌克兰和白俄罗斯的兄弟民族」。<b>一份给中国共产党全党的文件，对欧洲的耐心超过对华北的耐心</b>。</p>
+          <p>我不认为这是失衡，而是任务排序的结果。这份文件要解决的不是「怎么打日本」（那个在《论持久战》《抗日游击战争的战略问题》里已经解决过），而是「<b>怎么让全党相信投降是不可能的、也是不可接受的</b>」。而要做到这一点，必须先把世界讲成一个有性质、有阵营、有裁判的世界——在那个世界里，苏联是和平的一方，德英法是掠夺的一方，中国的抗战因此有了坐标，投降因此不只是失节，而是<b>站错队</b>。229 字买的不是一个背景，是一整套道德与政治定位。</p>
+          <span class="mv"><b>迁移</b>：判断一份文件的真实议题，不要看标题，看它<b>在哪一段最舍得花字</b>。舍得花字的地方，是它必须说服你的地方；一笔带过的地方，是它认为你已经同意的地方。<b>这篇舍得花字的是世界观，一笔带过的是敌情</b>——说明它真正担心的是内部动摇，不是敌人强大。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「人民」零次：一份党的文件里，缺了那个最常出现的词</h4>
+          <p>1141 字里，「敌人」11 次、「党」11 次、「国民党」3 次、「苏联」2 次，而「<b>人民</b>」<b>一次也没有</b>。「群众」出现一次，还是工具性的（「动员群众」）；「民众」一次，是修饰语（「有利于广大抗日民众的政治改革」）。对照《论持久战》那句「战争的伟力之最深厚的根源，存在于民众之中」，这个缺席很扎眼。</p>
+          <p>但把它放回文体里就说得通了：<b>「决定」不是动员文，是分工表</b>。动员文需要「人民」作为力量的来源；分工表只需要三个格子——敌人做什么、友军做什么、我们做什么。所以这份文件里，「人民」不是被忘记了，而是<b>被折叠进了「我后方」「敌后方」这两个空间</b>：在那里，党替人民做事（政治改革、经济改革、宪政），人民不必作为主语出现。这是一种效率很高的写法，也是一种有代价的写法——<b>当群众只以「工作对象」的身份出现时，文件就不会为群众的主动性留位置</b>。而恰恰在相持阶段，敌后根据地能撑住，靠的正是这种主动性。</p>
+          <span class="mv"><b>迁移</b>：读任何组织文件，先找那个「本该出现却没有出现」的词。<b>缺席比出现更能说明文件的自我定位</b>：它是在动员、在分工、在追责，还是在备案——看它把谁写成主语就够了。自己写东西时也一样：你反复使用的名词，是你真正依赖的力量；你始终不写的那个，往往是你不打算交给对方的东西。</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">日本帝国主义在国际新形势下的政策是专力进攻中国，企图解决中国问题，以准备将来扩大其对国际的冒险行动。</div>
+        <div class="ctx">第二段首句 · 616 页 · 直接对应日方一九三九年九月四日阿部内阁声明；「专力」二字是全篇对日本战略的定性</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">对于我后方，是以政治进攻为主，而以军事进攻为辅。所谓政治进攻，就是着重于分化抗日统一战线，分裂国共合作，引诱国民党政府投降，而不是着重于大规模的军事进攻。</div>
+        <div class="ctx">「二、」全文 · 616 页 · 全篇最关键的一条敌方判断；三个动词「分化／分裂／引诱」，对应后面三大危险</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在这种意义上，抗战的战略相持阶段基本上已经到来。这种战略相持阶段，即是准备反攻阶段。</div>
+        <div class="ctx">无编号段 · 616 页 · 全篇唯一的结论；六个字「在这种意义上」把结论降格为一种读法，也因此不可被证伪</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">就是说，已经到来的相持局面仍有被敌人和投降派破坏的可能。</div>
+        <div class="ctx">无编号段末 · 616 页 · 三个「但是」的收口；「相持」在此不是状态，是<b>可以被破坏的成果</b></div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在我后方，必须迅速地认真地实行政治改革，结束国民党一党专政，召集真正代表民意的有权力的国民大会，制定宪法，实行宪政。</div>
+        <div class="ctx">第三段 · 617 页 · 一句五个动作；「结束国民党一党专政」正是九月参政会决议里被删掉的那四个字，十二天后在中央文件里重新出现</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">任何的动摇和懈怠，任何与此相反的方针，都是绝对错误的。</div>
+        <div class="ctx">第三段 · 617 页 · 全篇唯一一处绝对句；说的不是方向，是<b>纪律</b></div>
+      </div>
+      <div class="golden-item">
+        <div class="text">应该提高对当前时局的警觉性，用全力从思想上、政治上、组织上巩固我们的党，巩固党所领导的军队和政权，以准备对付可能的危害中国革命的突然事变，使党和革命在可能的突然事变中不致遭受意外的损失。</div>
+        <div class="ctx">全篇末句 · 617 页 · 「思想上、政治上、组织上」这三重定语，与六天前《发刊词》里「思想上政治上组织上完全巩固」是同一组词；54 天后晋西事变</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">《大量吸收知识分子》</div>
+        <p>一九三九年十二月一日，第二卷第二十二篇，1991 年版 618 页起。同是「为中共中央起草的决定」，同一个文体、同一种编号（一、二、三……），<b>但这一篇全篇是操作规程</b>：为什么要吸收、三年来的成绩与缺点、四种「不懂得」、怎么放手吸收、怎么拒绝坏分子。两份决定放在一起读，最能看出「形势与任务」和「政策与执行」的分工。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《目前抗日统一战线中的策略问题》</div>
+        <p>一九四〇年三月十一日，第二卷。本篇只给了方向（「坚持抗战、反对投降」三句口号），五个月后这篇文章才把它拆成可执行的策略：「<b>发展进步势力，争取中间势力，孤立顽固势力</b>」，并配上「有理、有利、有节」三条自卫原则。<b>先定调、后给算法</b>——这是 1939—1940 年间这一组文件的标准顺序。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「条件句判断」搬到今天</h4>
+      <div class="q">一、你最近一次向团队或上级做的判断，是「X 已经发生」，还是「在某种意义上，X 基本上已经发生」？后者更安全，但也更难被检验——你愿意为这份安全付多少代价？</div>
+      <div class="q">二、找一份你手上的重要文件（战略、复盘、请示都行），看它把最多的字花在哪个板块。那个板块，是不是它真正担心被质疑的地方？如果不是，说明什么？</div>
+      <div class="q">三、本篇 1141 字里「人民」零次。你所在的业务里，有没有一个本该出现却一直不出现的角色（用户、一线、执行者）？它被折叠进了哪个词里？</div>
+      <div class="hint">提示：这三个问题都不是历史题。这篇文件手上最耐用的三件工具是——<b>把结论写成条件句、用篇幅暴露真议题、用称谓给人分格位</b>。三件都能直接借用；借第三件之前先想清楚：你把人分进格子里之后，还准不准他自己走出来。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷第二十一篇</div>
+    <div>底本：《毛泽东选集》第二卷，人民出版社 1991 年第二版，615—617 页</div>
+    <div>校核：求是理论网电子文本（逐段字数与词频统计）· 人民网《抗战大事记·1939 年》· FRUS 1939 Vol.III · 中国社会科学院近代史研究所宪政运动研究</div>
+  </div>
+
+</div>
+</body>
+</html>

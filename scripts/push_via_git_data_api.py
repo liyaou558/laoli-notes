@@ -15,9 +15,9 @@ import sys
 CONFIG = {
     "repo": "liyaou558/laoli-notes",
     "branch": "main",
-    "msg": "毛选精读: 09 怎样分析农村阶级",
+    "msg": "毛选精读: 38 《共产党人》发刊词",
     "files": [
-        "public/maoxuan/09_怎样分析农村阶级.html",
+        "public/maoxuan/38_共产党人发刊词.html",
         "src/pages/maoxuan/index.astro",
     ],
 }

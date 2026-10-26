@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>40 · 大量吸收知识分子 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四十</div>
+    <h1>大量吸收知识分子</h1>
+    <div class="sub2">把「态度问题」改写成「认识问题」</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十二篇 · <b>一九三九年十二月一日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《大量吸收知识分子》。1991 年版第二卷第二十二篇，上接《目前形势和党的任务》（10.10），下接《中国革命和中国共产党》（1939.12，621 页起）</td></tr>
+      <tr><th>文体</th><td><b>「决定」——连着第二篇</b>。题注只有一句：「这是毛泽东为中共中央起草的决定。」读者是各级党委与军队干部，落点是动作。<b>与上一篇的区别在于：上一篇给全党定方向，这一篇给全党定对象</b></td></tr>
+      <tr><th>写作时间</th><td>题下署<b>一九三九年十二月一日</b>。同一天，阎锡山向山西新军决死第二纵队发出「冬季攻势」电令</td></tr>
+      <tr><th>原题</th><td>党史文献与竹内实《毛泽东集》第七卷篇目均作<b>《中央关于吸收知识分子的决定》</b>；收入《毛泽东选集》时改题今名。「吸收」是原文动词，「大量」是后来加到标题上的程度词</td></tr>
+      <tr><th>最初刊印</th><td>党内刊物<b>延安《共产党人》</b>刊载（中国共产党新闻网《抗战时期创办的〈共产党人〉》一文将本篇列入该刊所载毛泽东文稿）。<b>具体期号</b>：工具书记作第三期（1939.12.25），原刊未见，此处不写死</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第二卷，人民出版社 1991 年第二版，第 <b>618—620</b> 页（目录页明载「618—620」）。正文三页，是三页文</td></tr>
+      <tr><th>注释</th><td><b>零注释</b>。全篇只有一条题注，正文无一个〔1〕。不点一个人名、不引一句经典：马克思 0、列宁 0、斯大林 0、三民主义 0；「国民党」0 次、「蒋介石」0 次，连「日本」也只有 1 次</td></tr>
+      <tr><th>篇幅</th><td>正文 <b>4 段</b>（一、二、三、四）、汉字 <b>1214</b> 字（含标点 1329 字）。段长 <b>99／344／645／126</b>：<b>第三段独占 53.1%</b>，其下再分五个子项，178／134／91／111／122 字</td></tr>
+      <tr><th>历史坐标</th><td>欧战爆发第 92 天；<b>晋西事变爆发前 2 天</b>（12.3 陈长捷部围攻新军）；确山惨案后 20 天；白求恩逝世后 19 天；《纪念白求恩》前 20 天；一二九运动四周年前 8 天</td></tr>
+      <tr><th>一句话读数</th><td>「<b>知识分子</b>」出现 <b>32</b> 次（平均每 38 字一次），是全篇绝对高频词；「党」25 次、「吸收」10 次、「工作」9 次。「<b>敌人</b>」1 次、「<b>抗日</b>」2 次——<b>这是一份把敌人几乎请出画面的文件</b></td></tr>
+      <tr><th>版本细节</th><td>1991 年版作「资产阶级政党正在<b>拚命</b>地同我们争夺知识分子」——是「<b>拚</b>」不是「拼」，旧字形原样保留。引文照录</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">一年扩了十二倍，然后急刹车</span><span class="part-scope">1937—1939.08</span></div>
+      <div class="part-body">
+        <p>要读懂这份文件，得先看它前面的两份文件。</p>
+        <p><b>一九三八年三月十五日</b>，中央作出《关于大量发展党员的决议》，提出「大量的十百倍的发展党员，成为党目前迫切与严重的任务」。效果是可核的：全国党员从抗战爆发时的<b>四万余人</b>，到<b>一九三八年底变成五十余万人</b>——一年扩了十二倍。</p>
+        <p>然后是刹车。<b>一九三九年八月二十五日</b>，中央政治局作出《关于巩固党的决定》，措辞毫不客气：「某些地方党部为追求新党员的数目字，便进行所谓发展党的突击运动，集体加入与不经过个别的详细审查的征收党员」，于是「异己分子，投机分子，以及奸细，也乘机混入了党」。结论只有一句：「<b>党的发展一般的应当停止</b>，而以整理、紧缩、严密和巩固党的组织工作为今后一定时期的中心任务」，「<b>只求精不求多</b>」。十月七日，中组部又发出执行指示。</p>
+        <p>三个月零六天之后，本文出现，标题里写着「<b>大量</b>」。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">同一只手，两个方向：这不是矛盾，是分层</span><span class="part-scope">1939.08.25 / 12.01</span></div>
+      <div class="part-body">
+        <p>把两份决定并排放，会看到三处刻意的替换：</p>
+        <table class="plain">
+          <thead><tr><th>对照项</th><th>《关于巩固党的决定》（8.25）</th><th>《大量吸收知识分子》（12.01）</th></tr></thead>
+          <tbody>
+            <tr><td class="c1">对象</td><td>全体党员、全部党组织</td><td><b>只指一类人</b>：知识分子</td></tr>
+            <tr><td class="c1">动词</td><td>停止、整理、紧缩、审查、洗刷</td><td>吸收、招收、教育、磨练、融洽、说服</td></tr>
+            <tr><td class="c1">门槛</td><td>「只求精不求多」</td><td>「愿意抗日的比较忠实的比较能吃苦耐劳的」</td></tr>
+            <tr><td class="c1">口径</td><td>一律停止发展</td><td>「大量吸收」+「更多注意其忠实的程度」</td></tr>
+          </tbody>
+        </table>
+        <p><b>本文没有一句话宣布前一份决定作废</b>。它做的是另一件事：在「一般停止」的口径上，开一个指定方向的孔，同时把这个孔的滤网写进同一条里——第三段第（2）项整整用了 134 个字讲「拒绝」与「洗刷」，第（5）项结尾又补一句「以保证党的组织更加严密」。</p>
+        <p>所以「大量」与「严密」不是打架，是配套：<b>总量收缩、结构调换</b>。收缩的是农民出身的普通党员的增加速度，调换的是干部队伍的知识含量——因为下一步要办学校、办报纸、办政权、办合作社，这些活「只求精不求多」的旧队伍干不了。</p>
+        <p>事后看，这个孔开得比刹车有力：到<b>一九四〇年底，党员从五十余万增至八十余万</b>。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">落笔那天：同盟者的炮口，正对着要「大量吸收」的那批人</span><span class="part-scope">1939.12.01—12.03</span></div>
+      <div class="part-body">
+        <p>这份文件里有一句看起来最平淡的话：「<b>一切战区的党和一切党的军队</b>，应该大量吸收知识分子加入我们的军队，加入我们的学校，加入政府工作。」写下这句话的那一天，「战区」这个词的实际含义是这样的：</p>
+        <p><b>十二月一日</b>，阎锡山以对日军发动「冬季攻势」为名，电令决死第二纵队于十二月五日向同蒲路灵石、霍县段破击；同时把旧军四个军、四十七个团作为「预备队」，配置在二纵队的<b>背后</b>。同日，二纵队政治部主任韩钧与政委张文昂联名致电新军总政治部，话说得很直：「旧军六十六师在隰县以东，七十三师在午城，<b>在我们背后准备所谓冬季攻势</b>……恐惹是非，请变更驻地。」</p>
+        <p><b>十二月三日</b>，陈长捷指挥第六十一军、第十九军在永和地区围攻决死第二纵队一九六旅旅部，旅长白英杰杀政工人员后率部投靠；晋西南各县抗日政府与牺盟会被摧毁，隰县八路军一二〇师（晋西支队）后方医院的伤病员亦被杀害，遇害者<b>二百余人</b>——「晋西事变」由此爆发。</p>
+        <p>这里有一处不得不说的重合：<b>山西新军的政工干部、牺盟会的县区特派员、各县抗日政府里的年轻办事员，正是这份文件要「大量吸收」的那类人</b>——读过书的青年学生、教员、文化人。他们是被「吸收」进来的，也是这个十二月里第一批被杀的。<b>文件在讲怎么开门，现实在演示开门之后会遇到什么。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">前后二十天：被吸收的、被杀的、被抢的、被纪念的</span><span class="part-scope">1939.11—12</span></div>
+      <div class="part-body">
+        <ul>
+          <li><b>十一月十一日</b>，河南确山竹沟：地方团队一千八百余人袭击新四军留守处，杀害医院伤病员与抗战官兵家属<b>二百余人</b>（确山惨案）。</li>
+          <li><b>十一月十二日</b>，白求恩在河北唐县黄石口村病逝——一位加拿大医生，正是「为工农阶级服务的知识分子」在文本之外的样子。</li>
+          <li><b>十二月一日</b>，本篇写成。</li>
+          <li><b>十二月九日</b>，延安各学校与青年团体举行一二九运动四周年纪念大会，毛泽东到会讲话——距本篇八天。一二九的主角就是学生，这篇决定的现实对象此刻正坐在台下。</li>
+          <li><b>十二月十日</b>，中组部部长陈云在陕甘宁边区第二次代表大会上把话挑明：「现在各方面都在抢知识分子，<b>国民党在抢，我们也要抢，抢得慢了就没有了</b>。」配套的说法是「来则欢迎，去则欢送，再来再欢迎」。</li>
+          <li><b>十二月二十一日</b>，《纪念白求恩》写成——同一个月里，一份讲怎么把人招进来，一篇讲招进来的人该是什么样。</li>
+          <li><b>一九三九年底至次年初</b>：延安聚集知识分子约<b>四万人</b>；仅西安八路军办事处转介至延安的就有<b>两万人</b>左右；陕北公学到一九三八年底已培养六千多名干部。</li>
+        </ul>
+        <p>这串日期说明一件事：<b>「大量吸收」不是一句口号，是一条已经跑了一年多的运输线。</b>决定的功能，是给这条线补一道党内许可——让那些「不敢放手地大量地招收青年学生」的学校和「不愿意吸收知识分子入党」的地方党部，不再有推诿的依据。</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:34px;"><span class="sec-no" style="font-size:16px;">时间轴</span><span class="sec-title" style="font-size:17px;">从扩党到开门的二十一个月</span></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.07</div><div class="tl-body">全国党员四万余人</div></div>
+      <div class="tl-item gold"><div class="tl-date">1938.03.15</div><div class="tl-body">中央《关于大量发展党员的决议》：「大量的十百倍的发展党员」</div></div>
+      <div class="tl-item"><div class="tl-date">1938.12</div><div class="tl-body">党员增至五十余万人（一年约十二倍）；陕北公学已培养六千余名干部</div></div>
+      <div class="tl-item"><div class="tl-date">1939.08.25</div><div class="tl-body">中央政治局《关于巩固党的决定》七项：「党的发展一般的应当停止」「只求精不求多」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.07</div><div class="tl-body">中组部发出《关于执行中央巩固党的决定的指示》</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.10</div><div class="tl-body">《目前形势和党的任务》：结束党治、准备对付突然事变</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.20</div><div class="tl-body">党内刊物《共产党人》创刊（封面印「秘密」），发刊词讲三大法宝</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.11.11</div><div class="tl-body">确山惨案：竹沟留守处被袭，遇害二百余人</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.11.12</div><div class="tl-body">白求恩逝世</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.12.01</div><div class="tl-body"><b>本篇写成</b>；同日阎锡山向决死二纵队发出「冬季攻势」电令，旧军四十七个团配置其后</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.03</div><div class="tl-body">晋西事变：陈长捷部围攻决死二纵队一九六旅旅部，摧毁晋西南各县政权，遇害二百余人</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.09</div><div class="tl-body">延安纪念一二九运动四周年大会，毛泽东讲话</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.10</div><div class="tl-body">陈云在陕甘宁边区第二次代表大会呼吁「抢夺」知识分子</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.21</div><div class="tl-body">《纪念白求恩》写成</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.12.25</div><div class="tl-body">《共产党人》刊出《中央关于吸收知识分子的决定》（期号据工具书，原刊未见）</div></div>
+      <div class="tl-item"><div class="tl-date">1940 初</div><div class="tl-body">延安聚集知识分子约四万人；西安八办转介约两万人</div></div>
+      <div class="tl-item"><div class="tl-date">1940.12</div><div class="tl-body">党员增至八十余万人——「停止发展」之后的一年，人数仍涨了六成</div></div>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      一句话概括：<span class="q">没有知识分子的参加，革命的胜利是不可能的</span>——因此排斥知识分子不是立场坚定，是「不懂得」；治这个病不用处分，用教育、用分配、用说服。
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>一、定性：知识分子是「组织者」的原料</h4>
+        <p>第一段把知识分子放在动词链条的中间，不是末尾：「共产党必须善于吸收知识分子，<b>才能</b>组织伟大的抗战力量，组织千百万农民群众，发展革命的文化运动和发展革命的统一战线。」</p>
+        <p>四个宾语里三个是「运动」，只有农民是实体——<b>吸收知识分子是组织农民的前置条件</b>，这是全篇唯一的因果句，也是唯一的绝对判断（「是不可能的」）。</p>
+      </div>
+      <div class="card gold">
+        <h4>二、归因：五种「不懂得」</h4>
+        <p>第二段不骂人，只诊断。它把「恐惧」「排斥」这两种现象，全部归到认知缺口上——<b>五个「不懂得」排成一列</b>，前三条是「区别」（分类能力），第四条是形势（争夺与收买），第五条是条件（自己已有中坚骨干，压得住）。</p>
+        <p>归因方式决定处方形态：<b>说成立场问题只能处分，说成认识问题就能教育。</b></p>
+      </div>
+      <div class="card green">
+        <h4>三、处方：五条操作 + 一条反向</h4>
+        <p>第三段是全篇主体（645 字）。五条分别是：放手吸收（178 字）／拒绝与洗刷（134 字）／分配教育带领（91 字）／说服反对者并双向提高（111 字）／国统区与敌占区的变通（122 字）。</p>
+        <p>每条都带主语和动词，没有一条是「要认真重视」式空话。<b>第（2）条是全文最精细处</b>：把「洗刷出去」与「严防反革命分子陷害好人」写在同一句里。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">前提</div><div class="n-sub">没有知识分子参加，<br>革命胜利不可能</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">现状</div><div class="n-sub">三年有成绩<br>但三种排斥仍在</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">病因</div><div class="n-sub">五个「不懂得」<br>（认识缺口）</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">处方</div><div class="n-sub">五条具体动作<br>（吸收为主）</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">保险</div><div class="n-sub">拒绝·洗刷<br>＋防诬陷</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">落点</div><div class="n-sub">双向改造<br>工农干部 ↔ 知识分子</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;">这条链的形状很值得注意：<b>它不从敌情开始，从「自己缺什么」开始</b>。上一篇《目前形势和党的任务》的第一环是世界大战，这一篇的第一环是「共产党必须善于吸收知识分子」。<b>同一支笔，换了一个入口——外部压力转成内部补课，判断就变成了采购清单。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">一 · 前提</div><div class="bar-track"><span class="bar-fill red" style="width:15.3%"></span></div><div class="bar-val">99 字</div></div>
+      <div class="bar-row"><div class="bar-lab">二 · 账与病</div><div class="bar-track"><span class="bar-fill gold" style="width:53.3%"></span></div><div class="bar-val">344 字</div></div>
+      <div class="bar-row"><div class="bar-lab">三 · 五条办法</div><div class="bar-track"><span class="bar-fill green" style="width:100%"></span></div><div class="bar-val">645 字</div></div>
+      <div class="bar-row"><div class="bar-lab">四 · 自我否认</div><div class="bar-track"><span class="bar-fill blue" style="width:19.5%"></span></div><div class="bar-val">126 字</div></div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">99 字：一个必要条件，一段说完</span><span class="part-scope">618 页</span></div>
+      <div class="part-body">
+        <p>第一段只有一句话的长度。它没有讲背景、没有讲成绩、没有讲敌人，直接把结论摆在最前面：「在长期的和残酷的民族解放战争中，在建立新中国的伟大斗争中，共产党必须善于吸收知识分子，才能组织伟大的抗战力量，组织千百万农民群众，发展革命的文化运动和发展革命的统一战线。没有知识分子的参加，革命的胜利是不可能的。」</p>
+        <p>两个「没有／不可能」叠在一起，是文件里最重的一种句法。但要注意它的<b>论证方式是空的</b>：为什么没有知识分子就不行？这一句没答。答案被放到了第三段的五条办法里——<b>先给结论，再用五页的操作去填。</b>这是「决定」文体惯用的顺序：读者不需要被说服，只需要被通知。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">344 字：先记成绩，再列病象，最后把病全部归到「不懂」</span><span class="part-scope">618—619 页</span></div>
+      <div class="part-body">
+        <p>第二段的结构是三段式：<b>成绩</b>（三年吸收了大批革命知识分子，「这是一个大的成绩」）→<b>病象</b>（三处，按单位分）→<b>病因</b>（五个「不懂得」）。</p>
+        <p>病象只有三句，正好对应三个层级，像一张光谱：</p>
+        <div class="spectrum">
+          <div class="spec-frame">
+            <div class="spec-band">
+              <div class="spec-seg red">排斥</div>
+              <div class="spec-seg gold">不敢放手</div>
+              <div class="spec-seg blue">不愿吸收</div>
+            </div>
+            <div class="spec-labels">
+              <div class="spec-label"><b>军队干部</b>恐惧甚至排斥知识分子的心理</div>
+              <div class="spec-label"><b>我们办的学校</b>不敢大量招收青年学生</div>
+              <div class="spec-label"><b>地方党部</b>不愿意吸收知识分子入党</div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:14px;">三处病灶，症状各不相同：军队是「怕」，学校是「怯」，地方党部是「不愿」。<b>但下一句把它们一次抹平</b>——「这种现象的发生，是由于不懂得……」。五个「不懂得」排下来，正好覆盖三处：</p>
+        <table class="plain">
+          <thead><tr><th>序</th><th>原文（「不懂得……」）</th><th>类型</th><th>它在回答什么</th></tr></thead>
+          <tbody>
+            <tr><td class="c1">①</td><td>知识分子对于革命事业的重要性</td><td>价值</td><td>为什么需要他们</td></tr>
+            <tr><td class="c1">②</td><td>殖民地半殖民地国家的知识分子和资本主义国家的知识分子的区别</td><td>分类</td><td>为什么中国的不一样</td></tr>
+            <tr><td class="c1">③</td><td>为地主资产阶级服务的知识分子和为工农阶级服务的知识分子的区别</td><td>分类</td><td>为什么不看成分看服务</td></tr>
+            <tr><td class="c1">④</td><td>资产阶级政党正在拚命地同我们争夺知识分子，日本帝国主义也在利用各种方法收买和麻醉中国知识分子的严重性</td><td>形势</td><td>为什么慢了就没了</td></tr>
+            <tr><td class="c1">⑤</td><td>我们的党和军队已经造成了中坚骨干，有了掌握知识分子的能力这种有利的条件</td><td>条件</td><td>为什么现在敢开门</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;">这五条不是随手列的。<b>①②③ 解决「该不该要」，④ 解决「急不急」，⑤ 解决「压不压得住」</b>——前三条拆掉排斥的理由，第四条制造紧迫感，第五条拆掉最后一个顾虑（怕被知识分子反客为主）。<b>五条讲完，反对者已经无话可说，而且是被「教育」到无话可说，不是被压到无话可说。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">三</span><span class="part-title">645 字：五条办法，一条反向，全部带主语</span><span class="part-scope">619—620 页</span></div>
+      <div class="part-body">
+        <p>第三段是全篇的重心，一篇 1214 字的文件，一半以上的字用在「怎么做」上。五个子项的用字如下：</p>
+        <div class="bars">
+          <div class="bar-row"><div class="bar-lab">（1）放手吸收</div><div class="bar-track"><span class="bar-fill green" style="width:100%"></span></div><div class="bar-val">178 字</div></div>
+          <div class="bar-row"><div class="bar-lab">（2）拒绝洗刷</div><div class="bar-track"><span class="bar-fill red" style="width:75.3%"></span></div><div class="bar-val">134 字</div></div>
+          <div class="bar-row"><div class="bar-lab">（3）分配教育</div><div class="bar-track"><span class="bar-fill gold" style="width:51.1%"></span></div><div class="bar-val">91 字</div></div>
+          <div class="bar-row"><div class="bar-lab">（4）说服与互学</div><div class="bar-track"><span class="bar-fill blue" style="width:62.4%"></span></div><div class="bar-val">111 字</div></div>
+          <div class="bar-row"><div class="bar-lab">（5）区域变通</div><div class="bar-track"><span class="bar-fill green" style="width:68.5%"></span></div><div class="bar-val">122 字</div></div>
+        </div>
+        <p style="margin-top:14px;">值得逐条读的是它们的主语和动作：</p>
+        <ul>
+          <li><b>（1）</b>「<b>一切</b>战区的党和<b>一切</b>党的军队」——两个「一切」把适用范围顶到最大；门槛只有三个形容词：<b>愿意抗日、比较忠实、比较能吃苦耐劳</b>。注意两个「比较」：不要求最好，只要求及格。</li>
+          <li><b>（2）</b>反向条款。先立「拒绝」与「洗刷」，紧接着一句话把它捆住：「<b>但不要因此而怀疑那些比较忠实的知识分子；要严防反革命分子陷害好人。</b>」一份 1939 年的文件，在扩编条款里同时写了<b>防渗透</b>和<b>防诬陷</b>，这在本篇里是最见水平的一笔。</li>
+          <li><b>（3）</b>「应该分配适当的工作」——不是先审查再安排，是<b>先给岗位</b>，「在长期斗争中逐渐克服他们的弱点」。给出的目标是「革命化和群众化」，而且要求「同老党员老干部融洽」「同工农党员融洽」——<b>两个「融洽」说明摩擦被预见到了</b>。</li>
+          <li><b>（4）</b>唯一处理「干部反对」的条款：办法是「切实地说服」，不是处分；同时给工农干部一条对等的出路——加紧学习、提高文化水平。</li>
+          <li><b>（5）</b>国统区与敌占区「基本上适用上述原则」，但入党要「更多注意其忠实的程度」——<b>同一个政策，在两个空间里用两种严格度</b>。最后一句把党外知识分子也划进任务里：建立联系、组织到抗日民主斗争、文化运动、统一战线「三个组织到」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">四</span><span class="part-title">126 字：一次不点名的自我否认，一句唯一的对等句</span><span class="part-scope">620 页</span></div>
+      <div class="part-body">
+        <p>第四段有两件事。</p>
+        <p>第一件是认错：「我们党在土地革命时期，许多地方许多军队对于知识分子的不正确态度，今后决不应重复。」——<b>承认了一个长期的、大面积的错误，但没有举一个例子、没有点一个名字、没有一条注释说明「不正确态度」是什么</b>。对照同一时期党对陈独秀、李立三、张国焘的批判（那是点名、定性的），这一段是另一种语法：<b>承认态度错了，不承认谁错了。</b></p>
+        <p>第二件是那句对等的命题：「而无产阶级自己的知识分子的造成，也决不能离开利用社会原有知识分子的帮助。」十年后，同一件事在《论人民民主专政》里有一个更著名的说法：「严重的经济建设任务摆在我们面前……我们必须学会自己不懂的东西。」<b>「自己造」与「先用别人的」在这里被写成因果，不是被写成选择。</b></p>
+        <p>而全篇最容易被漏掉的一小句，实际是这份文件真正的落点——（4）的结尾：「<b>使工农干部的知识分子化和知识分子的工农群众化，同时实现起来。</b>」两个方向、两个词（知识化／群众化），一个「同时」。这是 1214 字里唯一一个<b>语法上完全对称</b>的句子，而它背后是不对称的现实：一方在学文化，一方在改立场。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>把「态度问题」翻译成「认识问题」，是一次降级处理，也是一次可操作化</h4>
+          <p>第二段最关键的一个词不是「排斥」，是「<b>不懂得</b>」。军队干部「恐惧知识分子甚至排斥知识分子」，这在政治语言里本该定性为阶级感情问题、宗派主义、关门主义——都是要处分的。这份文件不这么写，它连写五个「不懂得」，把<b>政治态度改写成了认知状态</b>。</p>
+          <p>这一转换的收益极大：认知问题可以用教育、用事实、用说服来解决（第（4）条正是「切实地说服他们」），不需要处分任何人，也不需要在干部队伍里划线。代价同样明确——<b>如果五个「不懂得」都被讲清楚了，排斥依然存在，这份文件就没有第二套工具了</b>。它把所有筹码押在「讲清楚就行」这个假设上。</p>
+          <span class="mv"><b>迁移</b>：把别人的反对翻译成「他不懂」，是管理者最省力、也最容易上瘾的一招。它的好处是不撕破脸；坏处是你从此只能靠「再讲一遍」来解决问题，而一旦对方其实懂、只是不愿意，你就会陷在无休止的解释里。<b>用这一招之前先问一句：他是不知道，还是知道了但不同意？</b>这两个诊断的处方完全不同，而混淆它们的成本，通常由你自己承担。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「知识分子」出现 32 次，却从未被定义——它用的是「为谁服务」，不是「是谁」</h4>
+          <p>1214 字里，「知识分子」出现 32 次，平均每 38 字一次，是全篇唯一的绝对主角。但通读下来找不到一句定义：什么学历算、什么职业算、什么出身算，一概没有。它只在两个地方露出判据——「殖民地半殖民地国家的知识分子和资本主义国家的知识分子<b>的区别</b>」「为地主资产阶级服务的知识分子和为工农阶级服务的知识分子<b>的区别</b>」。<b>区别代替了定义：不问你是谁，只问你为谁服务。</b></p>
+          <p>这种功能性定义有一个很强的优点：它不看成分、不看家庭出身、不看过往党派，一个地主家庭出身、在国民党政府里做过事的知识分子，只要愿意抗日、比较忠实，就可以进来。这在 1939 年是极其宽松的口径，也是这份文件真实的政策价值。</p>
+          <p>但它同时留下了一个接口：<b>「为谁服务」的判据，由谁来认定、依据什么认定，文本一个字没写。</b>于是同一句话在不同时期可以被读成两个方向——用得着的时候，服务即可；用不着的时候，出身、经历、言论都可以被重新算进「为谁服务」。这不是文本的狡诈，是功能定义本身的敞口。<b>一份文件的弹性，往往不在它说了什么，而在它没有把判据交给谁。</b></p>
+          <span class="mv"><b>迁移</b>：制度设计里所有用「贡献／绩效／态度」代替「资格」的地方，都会获得同样的弹性与同样的风险。写规则时把判据留给谁，比写什么判据更重要——<b>判据的归属，就是权力的归属</b>。如果你要的是一份能长期执行的规则，就先回答：谁认定、凭什么认定、认定错了怎么办。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「大量」与「洗刷」写在同一段：这份文件内置了一个双向保险，但没指定保险的承保人</h4>
+          <p>第（2）条的 134 个字是全文技术上最精细的地方。它先给「拒绝」立规矩：「应取严肃的态度」；再给「洗刷」加限定：「应依靠<b>真凭实据</b>，坚决地<b>有分别地</b>」；然后立刻反向补一句：「<b>但不要因此而怀疑那些比较忠实的知识分子；要严防反革命分子陷害好人。</b>」</p>
+          <p>一句话里四个保险：证据、区别对待、不扩大怀疑、防诬陷。<b>这是 1939 年的文件在为「审干」预设一个上限</b>——它清楚地知道，一套审查机器一旦启动，最先被碾的往往是最老实的那批人。同一个月里，它要开门，也要关门，还要保证门卫不冤枉人。</p>
+          <p>但请把这句话再读一遍：谁来判断「真凭实据」？谁来认定「陷害好人」？——<b>没有写。</b>制定政策的手很稳，指定执行人的笔收住了。后来延安审干与「抢救运动」出现的大面积逼供、诬告（1943 年，距本篇不到四年），恰恰发生在「真凭实据」这四个字失去承保人的时候。<b>一条防滥用的条款，如果没有指定谁来对滥用负责，它在压力下就是一张纸。</b></p>
+          <span class="mv"><b>迁移</b>：写任何带「审查／核准／清退」性质的流程时，对照这篇文件的四个保险自查：有没有证据标准？有没有区别对待？有没有写明「不得扩大怀疑」？有没有一条给被冤者的出口？四条都有了，还要再加一条这条文本没有的——<b>谁对这个流程本身负责</b>。缺这一条，前四条都会在压力下失效。</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">没有知识分子的参加，革命的胜利是不可能的。</div>
+        <div class="ctx">第一段末 · 618 页 · 全篇唯一的绝对判断，也是这份文件的书名句；「不可能」三个字后来被反复引用，而它的论证被放在了第三段的五条办法里</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">但许多军队中的干部，还没有注意到知识分子的重要性，还存着恐惧知识分子甚至排斥知识分子的心理。</div>
+        <div class="ctx">第二段 · 618 页 · 「恐惧」与「排斥」并列，是本篇的病象起点；后面五个「不懂得」全为解释这一句而设</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">不懂得为地主资产阶级服务的知识分子和为工农阶级服务的知识分子的区别</div>
+        <div class="ctx">第二段 · 618—619 页 · 五个「不懂得」中的第三个，也是全篇最关键的判据：以「为谁服务」代替「出身是谁」</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这类分子已经混进我们的党、我们的军队和政府者，则应依靠真凭实据，坚决地有分别地洗刷出去。但不要因此而怀疑那些比较忠实的知识分子；要严防反革命分子陷害好人。</div>
+        <div class="ctx">第三段（2） · 619 页 · 四个保险写在一起：证据、区别、不扩大怀疑、防诬陷；「陷害好人」四字是这份扩编文件里最清醒的一笔</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">使工农干部的知识分子化和知识分子的工农群众化，同时实现起来。</div>
+        <div class="ctx">第三段（4） · 619—620 页 · 全篇唯一语法完全对称的句子；对等的是句式，不对等的是两边的实际内容（一方学文化，一方改立场）</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我们党在土地革命时期，许多地方许多军队对于知识分子的不正确态度，今后决不应重复</div>
+        <div class="ctx">第四段 · 620 页 · 一次不点名的自我否认：承认「态度错了」，不承认「谁错了」；无例子、无名字、无注释</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">《中国革命和中国共产党》</div>
+        <p>一九三九年十二月，第二卷第二十三篇，1991 年版 621 页起，共三十六页——<b>本卷最长的一篇</b>。同样是十二月，从「要不要吸收人」跳到「中国是什么样的社会」：第一章讲中华民族、古代封建社会、现代的殖民地半殖民地半封建社会，第二章才讲革命的对象、任务、动力、性质、前途。<b>先给全党补组织，再给全党补国情</b>，顺序不是随意的：一份 1214 字的决定只能解决「招谁」，三十六页的教科书才解决「为什么是他」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《关于巩固党的决定》</div>
+        <p>一九三九年八月二十五日，中央政治局通过，七项，非《毛选》篇目（见《中共中央文件选集》）。<b>与本篇相隔九十八天，方向相反</b>：「党的发展一般的应当停止」「只求精不求多」「清刷混入党内的异己分子」。两篇并读最能看清一件事——<b>政策的松紧从来不是全局一致的，它对不同对象、不同层级分别设置</b>。只读一篇，会以为 1939 年要么在大发展、要么在大收缩；读两篇，才知道那一年在同时做两件事。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「吸收」这项技术搬到今天</h4>
+      <div class="q">一、你团队里有没有一个「想招但一直招不进来」的岗位？把反对意见写成句子，看它们能不能归到「不懂」这一类。如果有哪一条其实不是不懂，而是不愿意——那就不是培训能解决的事。</div>
+      <div class="q">二、本篇把「知识分子」定义成「为谁服务」而不是「是谁」。你手上的制度里，有没有类似的、以贡献或态度代替资格的条款？那条判据现在交给谁认定？认定错了，谁负责？</div>
+      <div class="q">三、这份文件在同一段里既写「大量吸收」又写「拒绝洗刷」，还写了「严防陷害好人」。你最近一次推动的扩编／开放／引进，有没有在同一个文件里写下自己的上限条款？如果没有，是因为不担心，还是因为没想到要担心？</div>
+      <div class="hint">提示：这篇 1214 字的决定，手上最耐用的三样东西是——<b>把态度问题改写成认识问题</b>、<b>用功能定义代替身份定义</b>、<b>在扩张条款里内置收缩条款</b>。三样都可以直接借用；但借用第三样时要多走一步：<b>把承保人写进去</b>。这份文件写了四个保险却没写承保人，那是它留给后来者最贵的一课。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷第二十二篇</div>
+    <div>底本：《毛泽东选集》第二卷，人民出版社 1991 年第二版，618—620 页</div>
+    <div>校核：求是理论网 / 中国理论网电子影印（逐段字数与词频统计）· 人民网《抗战大事记·1939 年》· 中国共产党新闻网《抗战时期创办的〈共产党人〉》· 《晋绥革命根据地大事记》· 《中国抗日战争史》中卷 · 中央统战部《统战史话·大量吸收知识分子政策的提出》</div>
+  </div>
+
+</div>
+</body>
+</html>

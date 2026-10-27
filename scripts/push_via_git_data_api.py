@@ -15,9 +15,9 @@ import sys
 CONFIG = {
     "repo": "liyaou558/laoli-notes",
     "branch": "main",
-    "msg": "毛选精读: 38 《共产党人》发刊词",
+    "msg": "毛选精读: 40 大量吸收知识分子",
     "files": [
-        "public/maoxuan/38_共产党人发刊词.html",
+        "public/maoxuan/40_大量吸收知识分子.html",
         "src/pages/maoxuan/index.astro",
     ],
 }

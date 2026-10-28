@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>42 · 斯大林是中国人民的朋友 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四二</div>
+    <h1>斯大林是中国人民的朋友</h1>
+    <div class="sub2">657 字的祝寿文，把「朋友」从称呼改成了账单</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十四篇 · <b>一九三九年十二月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《斯大林是中国人民的朋友》。1991 年版第二卷第二十四篇，上接《中国革命和中国共产党》（621—656），下接《纪念白求恩》（659—661）</td></tr>
+      <tr><th>文体</th><td><b>祝寿文章，不是讲演</b>。1991 年版<b>无题解</b>——657 页正文前直接是标题、日期与「今年十二月二十一日，是斯大林同志的六十岁生日」，没有一个字的背景交代。次日（12.21）在延安庆祝大会上的那篇讲话是<b>另一篇</b>，未收入选集；网络上常把两篇混为一篇，本篇须与「讲话」分开读</td></tr>
+      <tr><th>写作时间</th><td>一九三九年十二月二十日，斯大林六十寿辰前一天</td></tr>
+      <tr><th>最初发表</th><td>⚠️ <b>1939 年原刊载体此次未核实</b>（无题解、正文不记发表处，不写死）。<b>已核实</b>：一九四九年十二月二十日《人民日报》第一版以《毛主席在十年前所作的庆祝斯大林六十寿辰的论文和演说》为题全文重新发表（新华社一九四九年十二月十九日电），按语把本篇定性为「<b>论文</b>」，与同日的「演说」并称——这是「本篇是文章而非讲演」最硬的一条旁证</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>657—658 页</b>（正文两页，注释一条排 658 页）；1952 年 4 月第二卷初版（本次未核页码）</td></tr>
+      <tr><th>篇幅</th><td><b>12 个自然段，汉字 657</b>（含标点 737），段均 55 字。最长段 119 字（李林甫），最短段 <b>7 字</b>（「这还不够明白吗？」）。注释 <b>仅 1 条</b></td></tr>
+      <tr><th>历史坐标</th><td>抗战相持阶段 · 第一次反共高潮进行中 · 苏芬战争爆发第 20 天、国联开除苏联第 6 天 · 斯大林官方六十寿辰（档案研究显示他实为六十一岁）</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">要把这篇短文读出分量，得先知道 1939 年 12 月 20 日那天，说「只有苏联援助了我们」这句话需要顶住什么。</p>
+
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">1937.08.21</div><div class="tl-body">《中苏互不侵犯条约》在南京签字。此后两年多，苏联是抗战初期<b>唯一</b>向中国提供官方军事援助的国家——这句话在 1939 年是可以逐条查证的，不是修辞。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.03.01 / 07.01 · 1939.06.13</div><div class="tl-body">三笔易货信用贷款，合计 <b>2.5 亿美元</b>（年息 3%，以钨、锡、锑、茶叶、生丝、羊毛等农矿产品折价偿还）。中国实际动用约 <b>1.73 亿美元</b>，购得飞机 924 架、大炮 1140 门、坦克 82 辆、汽车 1516 辆等。1941 年 6 月苏德战争爆发后，苏方于 10 月 24 日照会中方中止第三笔贷款的支付</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.08.23 → 09.17 → 09.28</div><div class="tl-body">苏德互不侵犯条约签字 → 德国入侵波兰、二战爆发 → 苏军进入波兰东部 → 《苏德边界友好条约》。本篇写作时，欧洲战争已打了近四个月</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.30 → 12.14</div><div class="tl-body"><b>苏芬战争爆发；十二月十四日，国际联盟行政院开除苏联。</b>——这是本篇落笔前第六天。也就是说，作者写下「没有一个帝国主义国家的政府真正援助我们，只有苏联……」的时候，苏联在西方的报纸上正被写作侵略者</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.12.03 起</div><div class="tl-body">晋西事变：阎锡山部对中共领导的新军动手；同月胡宗南部队占边区淳化、正宁、宁县等五县。<b>第一次反共高潮正在进行</b>——上一篇《中国革命和中国共产党》写的就是这个月，两篇之间只隔两天</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.12.20</div><div class="tl-body"><b>本篇写成。</b>同日，中国的另一个「朋友」英国正在天津租界问题上与日本谈判（7 月 24 日《有田—克莱琪协定》，英方承认日军在华「实际局势」）；美国的中立法仍在生效。祝寿文里的「只有」，是在这张桌面上说出来的</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.12.21</div><div class="tl-body">斯大林生日（官方日期）。延安各界举行庆祝大会，毛泽东另有一篇讲话，其中有「一个外国人，相隔万余里，大家庆祝他的生日，还是破天荒的第一回呢」；<b>同日，他还写成了《纪念白求恩》</b>——白求恩这年 11 月 12 日刚在河北唐县逝世</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.30</div><div class="tl-body">汪精卫方面与日本在上海签订《日支新关系调整要纲》（汪日密约）。本月最后两天，上一篇笔记里提到的那个时间层，在这里收口</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:24px;">
+      今年十二月二十一日，是斯大林同志的六十岁生日。
+      <span class="src">开篇第一句，657 页。这句话里有一个此后七十年都没人纠正的错：斯大林不是六十岁。</span>
+    </div>
+
+    <p class="lead" style="margin-top:16px;">苏联官方把斯大林的生日定为 <b>1879 年 12 月 21 日</b>，所有在他在世时举行的寿辰都按这个日子办。1990 年《苏共中央通报》第十一期依据格鲁吉亚哥里圣母大教堂的出生登记册（1878 年 12 月 6 日旧历／18 日新历出生，17 日受洗）以及 1894 年教会学校的毕业证书，确认他实际生于 <b>1878 年 12 月 18 日</b>——比官方日期早一年零三天。所以 1939 年 12 月 21 日，全世界庆祝的是「六十大寿」，而寿星本人那时满 <b>六十一</b>。这个细节不属于毛泽东，属于那个时代的公开知识状况：<b>祝寿文里最确定的一个数字，是错的。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      朋友不是<span class="q">称</span>出来的，是<span class="q">做</span>出来的。全篇不讲道理，只报账——三段「没有一个……只有苏联……」，把「谁是我们的朋友」从一个表态问题，改造成一个<span class="q">举证问题</span>。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一、把祝寿翻译成表态</h4>
+        <p>「庆祝斯大林，这不是一件应景的事情。」紧接着五个「拥护」排成一句——拥护他、拥护他的事业、拥护社会主义的胜利、<b>拥护他给人类指示的方向</b>、拥护自己的亲切的朋友。</p>
+        <p style="margin-top:6px;">排比的第五项忽然从「人」滑到「方向」：被庆祝的对象没变，被拥护的东西换了。</p>
+      </div>
+      <div class="card gold">
+        <h4>二、把「朋友」切成两类</h4>
+        <p>一类「自称是中国人民的朋友」，只能是唐朝李林甫一类——「口蜜腹剑」；另一类「把我们当做弟兄看待」。</p>
+        <p style="margin-top:6px;">判据只有一条：<b>做过什么</b>。称呼不算，声明不算，同情也不算。1991 年版注〔1〕引《资治通鉴》原话作证：「口有蜜，腹有剑。」</p>
+      </div>
+      <div class="card blue">
+        <h4>三、把外援写成必要条件</h4>
+        <p>「而我们的事业，没有他们的援助是不能取得最后胜利的。」（658 页）</p>
+        <p style="margin-top:6px;">全篇唯一的推论句，也是唯一能被后来的事实检验的一句。前面三段是<b>记录</b>，这一句是<b>赌注</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">生日将至</div><div class="n-sub">12.21<br>一个全世界的日子</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">先定性</div><div class="n-sub">「不是应景」<br>庆祝＝拥护</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">说处境</div><div class="n-sub">中国「灾难最深重」<br>「需要援助最迫切」</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">提问</div><div class="n-sub">「但是，谁是<br>我们的朋友呢？」</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node"><div class="n-label">分类</div><div class="n-sub">自称的（李林甫）<br>真心的（弟兄）</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">举证</div><div class="n-sub">废特权／大革命／抗战<br>三条记录</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">判决</div><div class="n-sub">「只有社会主义的<br>国家……才能真正援助」</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">封口</div><div class="n-sub">「任何人的挑拨离间，<br>造谣污蔑，到底都没有用处」</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">这条链条有一个特别之处：<b>它没有理论环节。</b>全篇不引马克思、不引列宁、不引斯大林本人一句话，唯一被引用的文本是《诗经》（「嘤其鸣矣，求其友声」）。论证完全由一张事实清单承担——因为这里要的不是解释世界，是<b>结算</b>。同样，全篇也没有一个敌人的人名：<b>「日本」出现 0 次，「国民党」0 次，「蒋介石」0 次，「共产党」0 次</b>。敌人被写成「帝国主义者」「帝国主义国家的政府」——一个可以被整体否定的类别。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">12 段、657 字，四块分工，而<b>四块的篇幅比例与它们的重要性正好相反</b>。</p>
+
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">定性·祝寿</div><div class="bar-track"><span class="bar-fill red" style="width:34.9%"></span></div><div class="bar-val">229 字</div></div>
+      <div class="bar-row"><div class="bar-lab">分类·两类朋友</div><div class="bar-track"><span class="bar-fill gold" style="width:27.5%"></span></div><div class="bar-val">181 字</div></div>
+      <div class="bar-row"><div class="bar-lab">举证·三条记录</div><div class="bar-track"><span class="bar-fill green" style="width:14.6%"></span></div><div class="bar-val">96 字</div></div>
+      <div class="bar-row"><div class="bar-lab">判决·结论与封口</div><div class="bar-track"><span class="bar-fill blue" style="width:23.0%"></span></div><div class="bar-val">151 字</div></div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">最长的一段是骂假朋友，最短的三段是举真朋友的证</span><span class="part-scope">段 5 / 段 7—9</span></div>
+      <div class="part-body">
+        <p>全篇最长的一段（<b>119 字</b>，占 18.1%）说的是李林甫。它把「口蜜腹剑」这个成语完整讲了一遍——谁、什么朝代、什么官、被人称为什么——然后才补上一句「这些人是谁呢？就是那些口称同情中国的帝国主义者」。</p>
+        <p>而三条真正的证据，加起来只有 <b>96 字</b>，是三句各自独立的短句：</p>
+        <ul>
+          <li><b>25 字</b>：没有一个国家把它在中国的特权废除过，只有苏联是废除了。</li>
+          <li><b>29 字</b>：第一次大革命时期，一切帝国主义者都反对我们，只有苏联援助了我们。</li>
+          <li><b>42 字</b>：抗日战争以来，没有一个帝国主义国家的政府真正援助我们，只有苏联是用了空军和物资援助了我们。</li>
+        </ul>
+        <p>这三句是全篇唯一可以拿去核对的部分（废治外法权、1924—1927 年的援助、1937 年后的空军与物资），而它们被压到了最短。理由不难推：<b>证据不需要修辞，修辞都花在「为什么别人不是朋友」上。</b>读者被说服的地方不在三段记录里——记录只是给已经同意的人一个台阶。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">三段不是三个论据，是同一句式的三次填空</span><span class="part-scope">段 7—9 · 25／29／42 字</span></div>
+      <div class="part-body">
+        <p>把三句并排看，会发现它们用的是同一个模具：<b>先否定全体，再留下唯一。</b>变的只有两格——「谁」和「做了什么」。</p>
+        <table class="plain">
+          <thead><tr><th>时段</th><th>否定的全体</th><th>留下的人</th><th>做了什么</th></tr></thead>
+          <tbody>
+            <tr><td class="c1">近代以来</td><td>没有一个国家</td><td>苏联</td><td>废除了在中国的特权</td></tr>
+            <tr><td class="c1">1924—1927</td><td>一切帝国主义者</td><td>苏联</td><td>援助了我们</td></tr>
+            <tr><td class="c1">1937 以来</td><td>没有一个帝国主义国家的政府</td><td>苏联</td><td>用了空军和物资援助我们</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;">三个时段是<b>精心挑的</b>：一个横跨近代史（废特权），一个对上国民党的黄金年代（大革命），一个就是当下（抗战）。三段接起来，等于把「苏联」写进了中国近代史的每一个关键节点——而每段的否定部分都比肯定部分长。<b>「没有一个」这四个字，才是这三句真正的主语。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">三</span><span class="part-title">两个单句段：全篇唯一的两个转轴</span><span class="part-scope">段 4（10 字）／段 10（7 字）</span></div>
+      <div class="part-body">
+        <p>12 段里有 4 段不到 30 字，其中两段是光秃秃的单句：</p>
+        <ul>
+          <li>「<b>但是，谁是我们的朋友呢？</b>」——10 字，出现在「我们正是处在这种时候」之后。这一句把前 229 字的处境描写，一刀切成一个待答的问题。</li>
+          <li>「<b>这还不够明白吗？</b>」——7 字，出现在三段证据之后、结论之前。这一句不提供新信息，它做的是<b>关闭讨论</b>：从「我举了三条」变成「你还有什么可说」。</li>
+        </ul>
+        <p>两个单句段之间夹着的，是全篇的全部实证（96 字）。而它们的功能正好相反：一个开问题，一个关问题。<b>短句在这里不是修辞，是标点</b>——用来代替「因此」「所以」「由此可见」这些连接词。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">四</span><span class="part-title">版本比对：1949 年《人民日报》重刊本 vs 1991 年版</span><span class="part-scope">六处异文</span></div>
+      <div class="part-body">
+        <p>1949 年 12 月 20 日《人民日报》的重刊本，是这篇短文目前能找到的最早的权威全文（1939 年原刊未见）。逐句对读，六处不同，方向一致：<b>把笼统的说法改具体，把带时代印记的词改成更中性的词。</b></p>
+        <table class="plain">
+          <thead><tr><th>1949 年《人民日报》重刊</th><th>1991 年版</th></tr></thead>
+          <tbody>
+            <tr><td>我们中间有些人也不加以思索地称他们做朋友</td><td>中国人中间有些人也不加思索地称他们做朋友</td></tr>
+            <tr><td>就是一部分口唤同情中国的帝国主义者</td><td>就是那些口称同情中国的帝国主义者</td></tr>
+            <tr><td>没有一个国家把<b>他们</b>在中国的特权废除过</td><td>没有一个国家把<b>它</b>在中国的特权废除过</td></tr>
+            <tr><td><b>北伐战争时代</b>，一切帝国主义者都反对我们</td><td><b>第一次大革命时期</b>，一切帝国主义者都反对我们</td></tr>
+            <tr><td>只有苏联是用其<b>大量的人力、物力、财力</b>援助了我们</td><td>只有苏联是用了<b>空军和物资</b>援助了我们</td></tr>
+            <tr><td>中华民族<b>与</b>中国人民的解放事业……才是真正援助我们的</td><td>中华民族<b>和</b>中国人民的解放事业……才能真正援助</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;">最有意思的是第 4、5 两处。「北伐战争时代」改成「第一次大革命时期」，是把时间口径从一场战争扩到一个时期；「人力、物力、财力」改成「空军和物资」，是把一个万能词换成两件能指认的东西——而「人力」恰恰是苏联从没给过的（没有地面部队）。<b>一次修订，同时让句子更准确、更经得起查。</b>（1949 年重刊本中的「口唤」显系「口称」之误植，1991 年版已改正。）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>事实清单可以全是真的，全称判断仍然可以是假的</h4>
+          <p>三段证据我逐条核过，都站得住：苏联确实是唯一放弃在华治外法权等特权的国家（1919 年加拉罕宣言起，1924 年《中俄解决悬案大纲协定》落实）；1924—1927 年确实只有苏联给了国民政府实质援助（黄埔建军、军事顾问）；1937 年后确实只有苏联给了成规模的空军与物资（志愿航空队、三笔易货贷款）。</p>
+          <p>但「而我们的事业，没有他们的援助是不能取得最后胜利的」这一句不是记录，是预测，而且是一个<b>排他性</b>的预测。它需要的是「今后也不会有别人援助」和「苏联的援助不会中断」两个前提——而这两个前提，本文一个字都没论证。事实是：1941 年 4 月 13 日《苏日中立条约》签字，同日发表的宣言里苏联保证「尊重满洲国的领土完整和不可侵犯」——那正是中国抗战最艰难的年份；1941 年 10 月，苏联因卫国战争中止了第三笔对华贷款的支付；1941 年 3 月美国《租借法案》之后，对华物资的主渠道转到了美国。</p>
+          <p>这不说明本文在撒谎，说明的是另一件事：<b>宣传文本的典型结构，是用一串可核查的真事实，推出一个无法核查的全称判断。</b>前者让你相信后者，但两者之间没有桥。</p>
+          <span class="mv"><b>迁移</b>：听到「只有 A 才是真心对你好」时，正确反应不是去反驳 A 做过的好事（那些通常是真的），而是去问那个「只有」——它为真，需要什么条件？那些条件今天还在吗？<b>核事实，永远核不到那个「只有」；「只有」要靠核条件来破。</b></span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>用分类消灭细节：一个「只有」抹掉了多少具体问题</h4>
+          <p>1939 年 12 月的中国，外援问题其实是一张很乱的账：英国的天津租界谈判（7.24《有田—克莱琪协定》）让人怀疑它；美国有桐油借款但受中立法束缚；德国先给过军事顾问团又在 1938 年撤回；法国在滇越铁路上一路设卡。每一笔都得单独谈、单独算、单独防。</p>
+          <p>本文的处理方式是把这张账<b>折叠成两类</b>：自称朋友的（帝国主义者，李林甫）和真心的（苏联）。折叠一完成，所有「英国这笔算不算」「美国贷款要不要接」的问题就消失了——它们不是被回答了，是被<b>取消</b>了。而当时中共的实际政策恰恰相反：1939 年 9 月《苏联利益和人类利益的一致》里还专门给外援分了三层（可靠的／部分的和暂时的／须根本拒绝的）。<b>三个月前需要三层，三个月后只需要两类。</b></p>
+          <p>差别在于读者：9 月那篇是给国统区上层看的，必须处理复杂性；12 月这篇是祝寿，只需要一个立场。</p>
+          <span class="mv"><b>迁移</b>：任何「二分法」都有这个功能——它不是在解释世界，是在<b>降低决策成本</b>。二分本身没有错，错的是忘了它降掉的成本去了哪里：复杂性不会消失，只会被推迟到第一次需要区分的时候。<b>判断一个二分法能不能用，看它在多大程度上允许例外。</b></span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>657 字的好处与坏处：短文能在任何时代被原文引用</h4>
+          <p>十年后的 1949 年 12 月 20 日，《人民日报》第一版把这篇短文和次日的讲话一起重刊。按语先交代「今天和十年前的国内外环境有了大的变化」，然后原封不动地引出那句「只有斯大林指示的方向，只有斯大林的援助，才能解脱人类的灾难」，宣称「<b>现在是完全证明了</b>」。</p>
+          <p>值得注意的时间巧合：那个月毛泽东正在莫斯科（12 月 16 日抵达），1950 年 2 月 14 日签下《中苏友好同盟互助条约》。同一篇 657 字的短文，在 1939 年用来解释「为什么只能靠苏联」，在 1949 年用来庆祝「我们赢了，而苏联是我们的朋友」——<b>两次引用服务于两件完全不同的事</b>，而文本一个字没改。</p>
+          <p>这正是短文的特性：它足够抽象，所以任何时代都能装进去。代价是它从不解释自己写于什么处境——没有人会在引用时补一句「当时苏联刚被国联开除六天」。</p>
+          <span class="mv"><b>迁移</b>：一段话被反复引用的次数，和它的信息量往往成反比。信息量大的句子依赖语境，语境一换就失效；信息量小的句子谁都能用，于是活得更久。<b>读到一句被引用了很多年的名言，第一件事是找回它的日期——不是怀疑它，是给它装上条件。</b></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">庆祝斯大林，这不是一件应景的事情。庆祝斯大林，这就是说，拥护他，拥护他的事业，拥护社会主义的胜利，拥护他给人类指示的方向，拥护自己的亲切的朋友。</div>
+        <div class="ctx">第 2 段（657 页）。五个「拥护」递进，最后一项从人滑向「方向」。全篇的定性句：把一个礼仪场合重新定义为一次站队——而「应景」这个词被否定之后，祝寿就不再是祝寿了。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">但是，谁是我们的朋友呢？</div>
+        <div class="ctx">第 4 段（657 页），独立成段，全篇 10 字。前面 229 字写处境，后面 400 余字全在回答这一句。文章真正的转折点不是任何一个论点，是这一句提问。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">没有一个国家把它在中国的特权废除过，只有苏联是废除了。</div>
+        <div class="ctx">第 7 段（658 页），25 字。三段证据里最短的一段，也是唯一涉及「法理」而非「物资」的一段——废除特权是可查的档案事实，比任何声明都硬。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这还不够明白吗？</div>
+        <div class="ctx">第 10 段（658 页），全篇最短，7 字，独立成段。它不传递信息，只结束讨论——从「我举了三条证据」变成「举证责任在你」。全篇最有力量的一句，也是最不能被反驳的一句。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">中华民族和中国人民的解放事业，只有社会主义的国家，社会主义的领袖，社会主义的人民，社会主义的思想家、政治家、劳动者，才能真正援助；而我们的事业，没有他们的援助是不能取得最后胜利的。</div>
+        <div class="ctx">第 11 段（658 页）。全篇唯一的推论句，也是唯一可以被后来的事实检验的一句。前半句是清单（五类主体），后半句是赌注（「不能取得最后胜利」）——两个半句之间没有论证，只有一个分号。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">纪念白求恩</div>
+        <p>一九三九年十二月二十一日，659—661 页。与本篇<b>同一天</b>写成：一篇写给活着的外国领袖（祝寿），一篇写给刚死的外国医生（白求恩 11 月 12 日逝世于河北唐县）。两篇都是两页短文，都被后来的语文课本全文收录，也都被引成了成语式的话——「口蜜腹剑」与「毫不利己，专门利人」。连着读，能看见一种写法：<b>用一个人的名字，给一个立场做锚。</b></p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《苏联利益和人类利益的一致》</div>
+        <p>一九三九年九月二十八日，593—601 页，早本篇不到三个月。同一位作者、同一个题目（苏联与中国），处理方法却完全不同：那一篇把外援分成<b>三层</b>（可靠的／部分的和暂时的／须根本拒绝的），逐条处理西班牙、波兰、中日战争的具体情形，还专门承认「舆论糊涂起来了」；这一篇只留<b>两类</b>。三个月间从三层收到两类，不是认识变了，是读者变了——那篇给国统区上层看，这篇用来祝寿。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「谁是朋友」换成你的处境</h4>
+      <div class="q">一、这篇短文的说服力来自三条<b>可核查</b>的行为记录（废特权、大革命援助、抗战空军物资），而它的结论是一个<b>不可核查</b>的全称判断。你能不能在自己的工作里找到同构的东西——用一串真事实，推出一个其实需要额外条件才成立的结论？</div>
+      <div class="q">二、全篇 657 字里，「朋友」出现 10 次（平均 66 字一次），「日本」0 次、「国民党」0 次、「共产党」0 次。<b>敌人被写成类别，朋友被写成名字</b>——这样写的好处是读者不必先站队就能读下去，坏处是读完也不知道明天该防谁。你在写对外文本时，会不会做同样的取舍？取舍的代价你算过吗？</div>
+      <div class="q">三、本文举证的三个时段（晚清以来／1924—1927／1937 以来）都止于「当下」。如果再过两年重写，第四段证据会是什么？<b>一段只到「当下」为止的论证，它的有效期是多久？</b></div>
+      <div class="hint">提示：这篇短文最值得学的，其实不是它的结论，是它的<b>举证格式</b>——「时段 → 否定的全体 → 留下的人 → 做了什么」。四列一摆，任何主张都立刻可查、可驳、可更新。反过来，最该警惕的也是这个格式的最后一格：<b>当「做了什么」被写成「只有他做过」，格式就从举证变成了排他。</b>你手里的那份论证，停在第几格？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 · 第二十四篇</div>
+    <div>《斯大林是中国人民的朋友》· 一九三九年十二月</div>
+    <div>引文依人民出版社 1991 年第二版第二卷第 657—658 页核对，页码为 1991 年版</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>43 · 纪念白求恩 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四三</div>
+    <h1>纪念白求恩</h1>
+    <div class="sub2">901 字的悼文，六个字处理完死亡</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十五篇 · <b>一九三九年十二月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《纪念白求恩》。<b>原题《学习白求恩》</b>，一九五二年收入《毛泽东选集》第二卷时改题今名。1991 年版第二卷第二十五篇，上接《斯大林是中国人民的朋友》（657—658），下接《新民主主义论》</td></tr>
+      <tr><th>文体</th><td><b>约稿的纪念文章</b>，不是讲演、不是社论。1991 年版<b>无题解</b>——659 页正文前直接是标题、日期与「白求恩〔1〕同志是加拿大共产党员」，没有一个字的背景交代（据求是网所载 1991 年版电子文本）</td></tr>
+      <tr><th>写作时间</th><td>一九三九年十二月二十一日，于延安杨家岭窑洞。距白求恩逝世<b>第三十九天</b></td></tr>
+      <tr><th>最初发表</th><td>一九四〇年初出版的《诺尔曼·白求恩纪念册》（八路军政治部、卫生部编，八路军军政杂志社，主编肖向荣）。<b>三十二开毛边本、全书 119 页、仅印一千册</b>，延安拐峁印刷厂印制；封二为八路军政治部主任王稼祥题词。同期另有朱德《追悼白求恩同志》、王明《纪念白求恩同志》、饶正锡《接受白求恩同志给我们留下的宝贵遗产》</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>659—661 页</b>（正文 659—660，注释两条排 661）；1952 年 4 月第二卷初版时由作者本人修改定稿，据研究者比对，<b>含标点共 55 处改动</b></td></tr>
+      <tr><th>篇幅</th><td><b>4 个自然段，汉字 901</b>（含标点 990）。段长 <b>377／275／85／164</b>——第一段占 41.8%，第三段只有 9.4%。全篇<b>问号 1 个、感叹号 0 个</b>；注释 <b>2 条</b></td></tr>
+      <tr><th>历史坐标</th><td>抗战相持阶段 · 第一次反共高潮进行中 · 白求恩逝世第 39 天 · 斯大林官方六十寿辰当日（上一篇《斯大林是中国人民的朋友》即为此而写，两篇<b>同一天</b>）</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">要读出这 901 字的分量，得先知道被纪念的那个人，是怎么死的、死在哪一天、本来要不要死。</p>
+
+    <div class="timeline">
+      <div class="tl-item blue"><div class="tl-date">1890.03.04</div><div class="tl-body">诺尔曼·白求恩生于加拿大安大略省格雷文赫斯特镇。多伦多大学医学院毕业，后成为北美有名的胸外科医生。一九三五年十一月加入加拿大共产党；一九三六年十月赴西班牙，组织战地<b>输血队</b>——他后来带到中国的那套「把血送到火线」的办法，是在马德里城下练出来的</div></div>
+      <div class="tl-item blue"><div class="tl-date">1937.10 → 1938.03.31</div><div class="tl-body">纽约，美共与加共发起派遣赴华医疗队，他放弃北美的高薪与名气转赴中国。从温哥华出发，经香港、武汉，一九三八年三月三十一日抵达延安。同行的医疗队队长帕森斯医生中途退出、返回美国（拒绝去延安）；加拿大护士简·伊文（Jean Ewen）任翻译</div></div>
+      <div class="tl-item"><div class="tl-date">1938.04.01 夜 11 时</div><div class="tl-body">凤凰山麓窑洞，与毛泽东谈了三个小时——<b>这是两人一生唯一一次会面</b>。他行了一个西班牙国际纵队的军礼，把加拿大共产党党证递给毛泽东；他说只要在前线附近设战地医疗队，重伤员中百分之七十五可以救回来。毛泽东当场答复：「白求恩同志，那就请您立刻组织战地医疗队吧。」当晚白求恩在日记里写：「我现在明白为什么毛泽东那样感动着每一个和他见面的人。这是一个巨人！」（简·伊文回忆录另记有电影招待会、延安五一节等场合的往还，与毛泽东本人「只见过一面」的自述不一致）</div></div>
+      <div class="tl-item"><div class="tl-date">1938.06 → 1939.09</div><div class="tl-body">到晋察冀，聂荣臻聘他为军区卫生顾问。一九三八年十一月雁北，两昼夜连续 <b>71 例</b>手术；一九三九年二月率十八人「东征医疗队」到冀中，齐会战斗连续工作 <b>69 小时、115 名伤员</b>；七月回冀西，参与创建晋察冀军区卫生学校，编教材、自制器械</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.10 下旬</div><div class="tl-body">日军调集两万余人大举「冬季扫荡」。<b>他此时已获准回国</b>——为边区募捐、也为治自己的病，因扫荡推迟了行期，带医疗队赶赴涞源摩天岭前线，手术室设在离火线三点五公里的孙家庄小庙里。左手中指被手术刀割破</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.11.01</div><div class="tl-body">为一名颈部丹毒合并蜂窝组织炎的伤员手术，带伤的手指受致命感染。此后他仍连续做了 <b>13 台</b>手术，并写下治疟疾的讲课提纲</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.10 → 11.12 05:20</div><div class="tl-body">高烧四十度，被强令后送。十日下午担架抬到<b>唐县黄石口村</b>村民邸俊星家；十一日给聂荣臻写遗书，分配遗物，末了还叮嘱「千万不要再往保定平津一带去购买药品，因为那边的价钱比沪港贵两倍」。<b>十二日（十一月）凌晨五时二十分逝世，四十九岁</b></div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.17 / 12.01</div><div class="tl-body">十七日，聂荣臻率晋察冀军民在唐县于家寨殡殓，亲为入殓；当晚秘密埋葬狼山沟门，犁平地面暗记标志，三天后日军进山扫荡，墓地未被发现。十二月一日下午，延安各界在杨家岭中央大礼堂举行追悼大会，毛泽东挽词：「<b>学习白求恩同志的国际精神，学习他的牺牲精神、责任心与工作热忱。</b>」</div></div>
+      <div class="tl-item green"><div class="tl-date">1939.12.21</div><div class="tl-body">毛泽东在杨家岭窑洞写成《学习白求恩》。<b>同日是斯大林官方六十寿辰</b>——上一篇《斯大林是中国人民的朋友》就是为这一天写的。两天里两篇短文：一篇给活着的外国领袖祝寿，一篇给死了一个多月的外国医生</div></div>
+      <div class="tl-item green"><div class="tl-date">1940 初 / 1952.04</div><div class="tl-body">《诺尔曼·白求恩纪念册》出版，一千册很快不够用，各根据地手抄、油印翻印，至今<b>只存三份</b>（中国历史博物馆、国家图书馆、武汉私人收藏各一）；一九八〇年代初胡乔木三次要求中央档案馆寻找原稿，<b>原稿至今未找到</b>。一九五二年收入《毛泽东选集》第二卷，改题《纪念白求恩》</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:24px;">
+      今天我感觉非常不好……也许我会和你永别了！……两个行军床，你和聂夫人留下吧，两双英国皮鞋也给你穿。……给我的勤务员邵一平和炊事员老张每人一床毯子，并送给邵一平一双日本皮鞋。
+      <span class="src">白求恩致聂荣臻遗书，一九三九年十一月十一日，黄石口村。同一天他还在信里写：「我在这里十分快乐，我惟一的希望就是能多有贡献。」</span>
+    </div>
+
+    <p class="lead" style="margin-top:16px;">有一个细节，把这篇悼文的处境说得最清楚：<b>他本来可以不死。</b>一九三九年十月他已获准回国，手续在办，行期已定；日军冬季「扫荡」一起，他把行期推后，上了摩天岭。而他死后一个月，毛泽东写这篇文章时，面前的资料是一本还没编成的纪念册——白求恩写给毛泽东本人的十几封信就在那本册子里（现存可查的就有 12 封），毛在文中说「仅回过他一封信」。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全篇只做一件事：把一个人的死，换算成一套<span class="q">可观察的行为标准</span>。901 字里没有一个字写他怎样死、为谁而死——「不幸以身殉职」六个字处理完死亡，剩下的篇幅全部用来回答「活着的人该怎么做」。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一、先定性：这是什么精神</h4>
+        <p>履历只给一句（加拿大共产党员、五十多岁、受加共美共派遣来中国、到延安、到五台山、殉职），随即一个问句：「这是什么精神？」</p>
+        <p style="margin-top:6px;">答案给两个词：<b>国际主义的精神、共产主义的精神</b>。定性一旦完成，后面就不必再论证他为什么值得学——因为要学的已经不是他，是那两种精神。</p>
+      </div>
+      <div class="card gold">
+        <h4>二、再对照：白求恩与「不少的人」</h4>
+        <p>正面只有两句（对工作极端的负责任、对同志对人民极端的热忱），反面给了<b>六条症状</b>：推重担、先替自己打算、出了一点力就觉得了不起、喜欢自吹、冷冷清清、麻木不仁。</p>
+        <p style="margin-top:6px;">六条全部是行为，没有一条是思想或立场——<b>判断标准因此可以被别人看见</b>。</p>
+      </div>
+      <div class="card blue">
+        <h4>三、最后把标准交给读者</h4>
+        <p>「一个人能力有大小，但只要有这点精神……」——评价的轴心从<b>能力</b>换成了<b>精神</b>。</p>
+        <p style="margin-top:6px;">这一换，门槛降到人人可及，同时也取消了对专业水平的考核：医术高明只是「也是一个极好的教训」，不是必要条件。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">一个人</div><div class="n-sub">加拿大共产党员<br>五十多岁，殉职</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">一个问句</div><div class="n-sub">「这是什么精神？」<br>全篇唯一问号</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">两个定性</div><div class="n-sub">国际主义<br>共产主义</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">一条依据</div><div class="n-sub">列宁主义：<br>互相拥护对方的解放</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">一项任务</div><div class="n-sub">和一切资本主义国家的<br>无产阶级联合起来</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">一张反面对照</div><div class="n-sub">「不少的人」<br>六条症状</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">一条专业标准</div><div class="n-sub">对技术精益求精<br>（85 字）</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">一个「我」</div><div class="n-sub">只见过一面<br>仅回过一封信</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">五种人</div><div class="n-sub">高尚／纯粹／有道德／<br>脱离低级趣味／有益于人民</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">这条链条有三个反常处。其一，<b>唯一的第一人称「我」出现在最后一段</b>，前三段一次没有——悼文写到倒数第二句才让作者本人进场。其二，<b>全篇不写死因</b>：白求恩死于手术感染，不是死于炮火，文中连「感染」两个字都没有，只有「不幸以身殉职」。其三，<b>全篇唯一的敌人是抽象名词</b>——原刊那句「才能打倒日本帝国主义」，1991 年版作「才能打倒帝国主义」，删掉了「日本」两字；而「日本的」在另一处出现，是作为要联合的对象（「要和日本的、英国的、美国的、德国的、意大利的以及一切资本主义国家的无产阶级联合起来」）。<b>纪念一个死在抗战中的人，却不把敌人写成人。</b></p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">四段、901 字，四段各管一件事，<b>第三段只有 85 字</b>，却是全篇唯一给专业标准的地方。</p>
+
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">一段·定性依据</div><div class="bar-track"><span class="bar-fill red" style="width:41.8%"></span></div><div class="bar-val">377 字</div></div>
+      <div class="bar-row"><div class="bar-lab">二段·正反对照</div><div class="bar-track"><span class="bar-fill gold" style="width:30.5%"></span></div><div class="bar-val">275 字</div></div>
+      <div class="bar-row"><div class="bar-lab">三段·技术</div><div class="bar-track"><span class="bar-fill green" style="width:9.4%"></span></div><div class="bar-val">85 字</div></div>
+      <div class="bar-row"><div class="bar-lab">四段·我与五种人</div><div class="bar-track"><span class="bar-fill blue" style="width:18.2%"></span></div><div class="bar-val">164 字</div></div>
+    </div>
+
+    <div class="part">
+      <div class="part-head red"><span class="part-no">一</span><span class="part-title">履历四十余字，死亡六个字</span><span class="part-scope">段 1 · 377 字</span></div>
+      <div class="part-body">
+        <p>第一段是全篇最长的一段，但其中属于「白求恩这个人」的只有开头一句：加拿大共产党员、五十多岁、受加拿大共产党和美国共产党派遣、不远万里、到延安、到五台山工作、以身殉职。<b>没有一个手术数字，没有一件具体事迹</b>——他在延安许下的「百分之七十五」不在这里，齐会战斗的 69 小时也不在这里。</p>
+        <p>接着是一个问句，然后是两个定性词，然后是列宁。</p>
+        <ul>
+          <li>问句：「这是什么精神？」——<b>全篇唯一的问号</b>。它不是修辞，是把叙述切换成判断的开关。</li>
+          <li>定性：国际主义的精神、共产主义的精神。两个词都不描述白求恩，描述的是「应该学什么」。</li>
+          <li>依据：列宁主义认为，资本主义国家的无产阶级要拥护殖民地半殖民地人民的解放斗争，殖民地半殖民地的无产阶级要拥护资本主义国家的无产阶级的解放斗争。<b>注意这句把「拥护解放」写成了双向的、互相的</b>——不是援助，是互相。</li>
+        </ul>
+        <p>随后是五个国家的名字：日本、英国、美国、德国、意大利。一九三九年十二月，中国正在与其中第一个国家交战，文章却要求中国的共产党员与它的无产阶级联合。<b>这是全篇政治上最强的一句，也是后来引用最少的一句。</b></p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">二</span><span class="part-title">六条症状：道德判断被写成可观察的行为</span><span class="part-scope">段 2 · 275 字</span></div>
+      <div class="part-body">
+        <p>第二段的结构是：正面两句 → 反面六条 → 一句判决 → 三重否定式举证 → 一句号召。</p>
+        <table class="plain">
+          <thead><tr><th>位置</th><th>原文</th></tr></thead>
+          <tbody>
+            <tr><td class="c1">正面</td><td>对工作的<b>极端的负责任</b>，对同志对人民的<b>极端的热忱</b></td></tr>
+            <tr><td class="c1">症状一</td><td>对工作不负责任，拈轻怕重，把重担子推给人家，自己挑轻的</td></tr>
+            <tr><td class="c1">症状二</td><td>一事当前，先替自己打算，然后再替别人打算</td></tr>
+            <tr><td class="c1">症状三</td><td>出了一点力就觉得了不起</td></tr>
+            <tr><td class="c1">症状四</td><td>喜欢自吹，生怕人家不知道</td></tr>
+            <tr><td class="c1">症状五</td><td>不是满腔热忱，而是冷冷清清</td></tr>
+            <tr><td class="c1">症状六</td><td>漠不关心，麻木不仁</td></tr>
+            <tr><td class="c1">判决</td><td>这种人<b>其实不是共产党员</b>，至少不能算一个纯粹的共产党员</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;">六条全部是<b>动作与表情</b>：推、挑、打算、觉得、自吹、冷冷清清。没有一条是「思想不纯」「立场动摇」「觉悟不高」这类只能由组织下结论的词。<b>把道德判断翻译成可见行为，这是这一代文本的通用技术</b>——同期的《反对自由主义》十一条也是行为清单（「事不关己，高高挂起」「命令不服从，个人意见第一」）。</p>
+        <p>举证部分更有意思：全篇没有一件白求恩的事迹，唯一算得上证据的是两句话——「从前线回来的人说到白求恩，没有一个不佩服」「晋察冀边区的军民……无不为之感动」。<b>证据不是他做了什么，是别人的反应。</b>三重否定（没有一个不／没有一个不／无不）把「大家都说好」写成了一种不容置疑的事实。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head green"><span class="part-no">三</span><span class="part-title">最短的一段：85 字讲技术，是全篇唯一给专业的地方</span><span class="part-scope">段 3 · 85 字</span></div>
+      <div class="part-body">
+        <p>「白求恩同志是个医生，他以医疗为职业，对技术精益求精；在整个八路军医务系统中，他的医术是很高明的。这对于一班见异思迁的人，对于一班鄙薄技术工作以为不足道、以为无出路的人，也是一个极好的教训。」</p>
+        <p>这一段只占全篇 <b>9.4%</b>，却是唯一承认白求恩首先是个<b>专业人士</b>的地方，也是唯一把「技术」立为标准的地方。它的读者不是普通的党员，是两类人：<b>见异思迁的</b>、<b>看不起技术工作的</b>。放在一九三九年的延安，这两类人都有具体所指——大批知识青年涌入、干部频繁调动、技术岗位长期被视为「不足道」。</p>
+        <p>被删掉的一句更值得注意。原刊此处还有：「他五十多岁了，干此一门并未想改换。」一九五二年这句被删——因为第一段已经说过「五十多岁了」，重复；但也因为删掉之后，<b>「不换行当」这个具体的美德消失了，只剩下「精益求精」这个抽象的态度</b>。同一次修改里，「他的医术是最高明的」被改成「是很高明的」，一并降了调。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head blue"><span class="part-no">四</span><span class="part-title">版本比对：1940 年原刊本 vs 1991 年版</span><span class="part-scope">十三处异文 / 共 55 处</span></div>
+      <div class="part-body">
+        <p>原刊本今天能看到的是《诺尔曼·白求恩纪念册》所载《学习白求恩》（此处据一九五〇年一月新华书店《学习白求恩》本文字）。与 1991 年版逐句对读，主要差异如下：</p>
+        <table class="plain">
+          <thead><tr><th>原刊（题为《学习白求恩》）</th><th>1991 年版</th></tr></thead>
+          <tbody>
+            <tr><td>题目：<b>学习白求恩</b></td><td>题目：<b>纪念白求恩</b></td></tr>
+            <tr><td>加拿大的共产党员</td><td>加拿大共产党员</td></tr>
+            <tr><td>不远万里<b>渡过太平洋</b>，来到中国</td><td>不远万里，来到中国</td></tr>
+            <tr><td>去年春上到延安时，<b>他就要求去五台山工作</b></td><td>去年春上到延安，<b>后来到五台山工作</b></td></tr>
+            <tr><td><b>列宁说：</b>「资本主义国家的无产阶级，要拥护殖民地半殖民地的独立运动……」</td><td><b>列宁主义认为：</b>……人民的解放斗争……（加注〔2〕指明文献）</td></tr>
+            <tr><td>才能打倒<b>日本</b>帝国主义</td><td>才能打倒帝国主义</td></tr>
+            <tr><td>至少不能算做一个纯粹的共产党员，<b>对着白求恩同志应该愧死</b></td><td>至少不能算一个纯粹的共产党员</td></tr>
+            <tr><td>晋察冀<b>一带</b>的军民</td><td>晋察冀<b>边区</b>的军民</td></tr>
+            <tr><td>他以<b>医疗技术</b>为职业，精益求精……医术是<b>最高明</b>的</td><td>他以医疗为职业，<b>对技术精益求精</b>；……医术是<b>很高明</b>的</td></tr>
+            <tr><td><b>他五十多岁了，干此一门并未想改换</b></td><td>（删）</td></tr>
+            <tr><td>至于他的死我是很<b>歉疚</b>的</td><td>对于他的死，我是很<b>悲痛</b>的</td></tr>
+            <tr><td><b>我对</b>白求恩同志只见过一面</td><td><b>我和</b>白求恩同志只见过一面</td></tr>
+            <tr><td>（一）（二）（三）（四）分段编号</td><td>无编号，四段自然分段</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;">十三处里，九处是删繁与正名（去「的」、去「渡过太平洋」、改「一带」为「边区」）；三处是<b>降调</b>：「最高明」→「很高明」、「日本帝国主义」→「帝国主义」、「歉疚」→「悲痛」。最重的一处是删掉「对着白求恩同志应该愧死」——那句话是把读者按在被告席上，一九五二年的版本不需要它了。而「歉疚」改「悲痛」更微妙：<b>歉疚要求一个对象（我欠他什么），悲痛不需要。</b>一次修订，把作者本人从文本里退了出去。</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="part-no">五</span><span class="part-title">两条注释的修订：一条地名，一条引文归属</span><span class="part-scope">注〔1〕〔2〕</span></div>
+      <div class="part-body">
+        <p>1991 年版只有两条注，两条都在做事。</p>
+        <ul>
+          <li><b>注〔1〕（生平）</b>：1991 年版作「三月底到达延安，不久赴晋察冀边区，在那里工作了一年多」「由于在一次为伤员施行急救手术时受感染，一九三九年十一月十二日在<b>河北省唐县</b>逝世」。旧版电子文本作「一九三八年<b>四月</b>经延安转赴晋察冀边区，在那里工作了<b>两年</b>」「逝世于河北省的<b>完县</b>」——三处都改了：到延安的月份（三月底实到，四月是离延安的时间）、工作时长（实为一年半左右，非两年）、逝世地（黄石口村在唐县，完县是今天的顺平县）。旧版注里还带着「加拿大共产党（一九四三年八月改为加拿大劳工进步党）」的括注，1991 年版删去。</li>
+          <li><b>注〔2〕（引文）</b>：正文那句「资本主义国家的无产阶级要拥护殖民地半殖民地人民的解放斗争」，1991 年版注为「参见列宁《民族和殖民地问题提纲初稿》和《民族和殖民地问题委员会的报告》」；旧版电子文本却注作「参斯大林《论列宁主义基础》第六部分《民族问题》」。<b>正文引的是列宁，旧注指向斯大林。</b>原刊还写作「列宁说：」加引号直引，1991 年版改成「列宁主义认为」的转述——等于承认原引文并非逐字原话。</li>
+        </ul>
+        <p>两条注的修订方向完全一致：<b>把可以核对的都核准（人名、月份、年限、县名、文献出处），把不能核对的说法改成不必核对的转述。</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>「歉疚」改成「悲痛」：判断一个文本，先看它删了什么</h4>
+          <p>原刊最后一段是：「我对白求恩同志只见过一面，后来他给我来过许多的信，可是我因为忙，仅回过他一封信，还不知他收到没有？<b>至于他的死我是很歉疚的。</b>」一九五二年改成：「我和白求恩同志只见过一面……对于他的死，我是很悲痛的。」</p>
+          <p>同一次修改还删掉了「对着白求恩同志应该愧死」。两处删改方向一致：作者自己的亏欠感收回去，对读者的羞辱也收回去，只留下「悲痛」这个不欠任何人的词。这不是文字功夫，是<strong>把一篇私人的追悼文改成一篇公开的范文</strong>——范文里不能有作者欠死者的账。</p>
+          <span class="mv"><b>迁移</b>：读任何有多个版本的文本（讲话记录、政策文件、产品文档、甚至自己的旧邮件），最省力的入口不是看它增加了什么，而是看它<b>删掉的那一句</b>。增加常为应付新情况，删除总为掩盖旧动机。<b>被删掉的那一句，往往才是当时真正想说的。</b></span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>不写死因的悼文，才能被引用八十年</h4>
+          <p>白求恩死于一九三九年十一月一日那台手术——为一名颈部丹毒合并蜂窝组织炎的伤员开刀，带伤的左手中指受感染，败血症，十一天后去世。这个过程在文章里一个字都没有，只有「不幸以身殉职」六个字。</p>
+          <p>这不是疏漏。写死因就要写责任链（他为什么不肯后撤、谁下的命令、条件为什么这么差），写责任链就要写具体的人和具体的失误；而不写死因，文章就变成了关于「态度」的文本——任何时代、任何行业都能把「毫不利己专门利人」搬过去用。代价也很清楚：他真正的专业遗产（战地医疗队制度、卫生学校、教材、输血技术）在文中只留下「对技术精益求精」七个字。</p>
+          <span class="mv"><b>迁移</b>：一段文字的<b>可复用性</b>与它的<b>信息量</b>成反比。写给当下、要追责、要复盘的文本，必须写细节、写日期、写名字；写给长期、要激励、要流传的文本，就得把细节抽掉。<b>先决定你要哪一种，再动笔——两样都想要，通常两样都做不好。</b></span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>把「觉悟」翻译成「动作」：一份可执行的道德清单长什么样</h4>
+          <p>第二段那六条症状之所以八十年后还能用来对照自己，是因为它们全部可以被旁人观察到：谁把重担子推给别人、谁先替自己打算、谁出了一点力就自吹。换成「党性不强」「觉悟不高」，清单立刻失效——因为被评价的人无法自查，评价的人也无法举证。</p>
+          <p>这套技术在当时是通用的：《反对自由主义》十一条、《纪念白求恩》六条，都是同一格式。它们共同的前提是——<b>道德必须落到可观察的行为上，才能成为组织内的公共标准</b>；一旦停在态度层面，它就只是上级的印象分。</p>
+          <span class="mv"><b>迁移</b>：写团队规范、绩效标准、代码评审清单时，每一条后面加一句自问：「<b>别人怎么看见它？</b>」看不见的指标（积极主动、有主人翁精神、责任心强）不是不能写，而是必须配一个可观察的替身（响应时长、改动前先同步、遗留问题有没有人接手）。<b>没有替身的态度指标，最后都变成了关系分。</b></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">白求恩同志是加拿大共产党员，五十多岁了，为了帮助中国的抗日战争，受加拿大共产党和美国共产党的派遣，不远万里，来到中国。去年春上到延安，后来到五台山工作，不幸以身殉职。</div>
+        <div class="ctx">第 1 段（659 页）。全篇唯一的履历，四十余字；死亡只占其中六个字。没有一件手术、没有一个数字、没有一句死因（按档案，他逝世时四十九岁，见感悟二与注〔1〕）。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">一个外国人，毫无利己的动机，把中国人民的解放事业当作他自己的事业，这是什么精神？这是国际主义的精神，这是共产主义的精神，每一个中国共产党员都要学习这种精神。</div>
+        <div class="ctx">第 1 段（659 页）。全篇唯一的问号，也是全文的转轴：问句之前是叙述，问句之后全是判断。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">这种人其实不是共产党员，至少不能算一个纯粹的共产党员。</div>
+        <div class="ctx">第 2 段（660 页）。原刊此句之后还有一句「对着白求恩同志应该愧死」，一九五二年被删——被删的这句才是当时的火气所在。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">我和白求恩同志只见过一面。后来他给我来过许多信。可是因为忙，仅回过他一封信，还不知他收到没有。</div>
+        <div class="ctx">第 4 段（660 页）。全篇唯一的第一人称段落，前三段一次没有「我」。也是全文唯一承认自己欠账的地方——所以下一句的「悲痛」在一九五二年取代了原刊的「歉疚」。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">一个人能力有大小，但只要有这点精神，就是一个高尚的人，一个纯粹的人，一个有道德的人，一个脱离了低级趣味的人，一个有益于人民的人。</div>
+        <div class="ctx">第 4 段末句（660 页，注释两条排 661 页）。五个「一个……的人」排比，把评价轴从「能力」换成「精神」：门槛降到人人可及，代价是不再考核专业水平。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">新民主主义论</div>
+        <p>一九四〇年一月。第二卷在这里换了一次音量：从 901 字的悼文，直接跳到数万字的长篇理论。中间只隔一个月，却像换了一个人在写——<b>一篇把标准交给读者，一篇把体系交给全党</b>。连着读，能看清 1940 年初延安同时在做两件事：给个体立范，给革命立论。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《为人民服务》</div>
+        <p>一九四四年九月八日，第三卷，为追悼张思德而作的讲演。同属「老三篇」，同为悼文，同是把一个人的死换算成一套标准——但那一篇写的是<b>烧炭的普通战士</b>，这一篇写的是<b>外国名医</b>；那一篇讲「死得其所」，这一篇讲「怎么活」。两篇并读，能看到同一套写法的两个极端用法。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「纪念谁」换成「怎么记住」</h4>
+      <div class="q">一、全篇 901 字，没有一个字写白求恩怎样死。如果把死因写进去，这篇文章会变成什么？<b>你所在的组织纪念一个人、复盘一次事故时，写不写死因？</b>不写的时候，是为了体面，还是为了免责？</div>
+      <div class="q">二、文章说「只见过一面」「仅回过他一封信」，而档案里能找到白求恩写给毛泽东的信至少 12 封，回信也不止一封（另有电报、口信）。<b>作者在文本里把自己写小了</b>——这是一种修辞，还是一种诚实？两者在同一个人身上能不能并存？</div>
+      <div class="q">三、第三段只有 85 字，讲「对技术精益求精」。如果把它删掉，全文逻辑完全成立，只是少了一条专业标准。<b>你所在行业最像这一段的那 85 字，现在还在不在？</b>是被替换成态度要求了，还是被整段删了？</div>
+      <div class="hint">提示：这篇最值得学的不是「毫不利己」四个字，是它的<b>可操作性</b>——六条症状全部能被旁人看见，五种人全部能被自己对照。反过来，最该警惕的是它最后那一步：<b>把「能力」从考核里摘出去，只留「精神」。</b>一个组织如果只考核精神不考核能力，最后留下的多半是最会表演精神的人。你今天被考核的，是哪一样？</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 · 第二十五篇</div>
+    <div>《纪念白求恩》· 一九三九年十二月</div>
+    <div>引文依人民出版社 1991 年第二版第二卷第 659—661 页核对，页码为 1991 年版</div>
+  </div>
+
+</div>
+</body>
+</html>

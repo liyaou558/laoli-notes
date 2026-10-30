@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>44 · 新民主主义论 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style><style>
+/* ===== 44 篇增补 ===== */
+.bar-lab.w150{flex:0 0 150px;}
+@media(max-width:560px){.bar-lab.w150{flex:0 0 106px;font-size:11.5px;}}
+</style><body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四四</div>
+    <h1>新民主主义论</h1>
+    <div class="sub2">两万六千字，没给第二步定一个时间</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十六篇 · <b>一九四〇年一月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《新民主主义论》。<b>原题《新民主主义的政治与新民主主义的文化》</b>——讲演时的题目、以及在《中国文化》创刊号上发表时的题目，都是这个长题；一九四〇年二月二十日《解放》第九十八、九十九期合刊转载时，才改为今名。1991 年版第二卷<b>最后一篇</b>（第六百六十二至七百一十一页）</td></tr>
+      <tr><th>文体</th><td><b>讲演</b>，且是经过作者反复修改才付印的讲演。题解即第六百六十二页的脚注：「这是毛泽东一九四〇年一月九日在陕甘宁边区文化协会第一次代表大会上的讲演」</td></tr>
+      <tr><th>写作时间</th><td>一九四〇年一月九日下午至入夜，延安。文末署<b>一月十五日</b>；但据一月二十一日、二十三日毛泽东致周扬的两封信，定稿实际拖到<b>一月二十三日或稍后</b></td></tr>
+      <tr><th>最初发表</th><td>一九四〇年二月十五日延安《中国文化》<b>创刊号</b>（陕甘宁边区文化协会机关刊物，月刊，艾思奇主编，编委会另有周扬、丁玲、张仲实、范文澜、萧三）。二月二十日《解放》第九十八、九十九期合刊改题转载；四月十日重庆《群众》第四卷第十期刊载部分内容</td></tr>
+      <tr><th>单行本</th><td>一九四〇年二月延安解放社即出最早单行本。<b>当年全国各地印行的单行本有 29 种</b>；据不完全统计，各式单行本共 350 余种，仅新中国成立前的中文版本就有 250 多种（蒋建农等《毛泽东著作版本编年纪事》）</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>662—711 页</b>（共五十页，正文至 709，注释排 709—711）。1952 年 4 月随第二卷初版收入，作者作过修改</td></tr>
+      <tr><th>篇幅</th><td><b>十五节，正文汉字 26,260</b>（不含标点与注释；注释另约 2,000 字）。最长的一节是第四节 3,717 字，最短的是第二节 225 字</td></tr>
+      <tr><th>注释</th><td><b>36 条</b>。其中十余条是纯交叉索引（「见本书第一卷《论反对日本帝国主义的策略》注〔35〕」这类），真正独立撰写的条目集中在党史人物、国联与三民主义文献上</td></tr>
+      <tr><th>词频</th><td>革命 347、民主 270、中国 251、文化 195、资产阶级 144、<b>三民主义 132</b>、帝国主义 83、社会主义 83、新民主主义 62、<b>共产主义 55</b>、国民党 17；而<b>蒋介石 0、武装 0、妇女 0</b></td></tr>
+      <tr><th>历史坐标</th><td>边区文协第一次代表大会（一月四日至十二日，延安中国女子大学礼堂）的第六天 · 第一次反共高潮进行中 · 汪日密约签字后第十天、被香港《大公报》公开揭出前十三天</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这篇文章不是被约稿约出来的，是被骂出来的。作者自己在给吴玉章的信里说得直白：「写了一篇理论性质的东西，<b>目的主要为驳顽固派</b>，送上请赐阅正，指示为感！」（1939 年，中共中央文献研究室《毛泽东书信选集》所收）。一句「驳」，定下了这篇两万六千字文章的骨架——也定下了它最大的空白。</p>
+
+    <div class="timeline">
+      <div class="tl-item blue"><div class="tl-date">1938.01 → 1939.01</div><div class="tl-body">抗战进入相持阶段后，国民党对共产党的政策由「联共抗日」转为「溶共、防共、限共、反共」。一九三九年一月二十一日至三十日的五届五中全会，蒋介石作《唤醒党魂，发扬党德，巩固党基》报告，讲的是「一个主义」「一个政党」「一个领袖」；会后陆续出笼《限制异党活动办法》《异党问题处理办法》《处理异党问题实施方案》——<b>三个文件名一路递进，从「限制」到「处理」</b>，本文第七节点名引用的正是这一串</div></div>
+      <div class="tl-item blue"><div class="tl-date">1938.12.10 → 12.25</div><div class="tl-body">张君劢写《致毛泽东先生一封公开信》，十二月十六日发于重庆《再生》第十期，十二月二十五日《中央日报》全文刊载。要求中共「交出军队」「放弃边区政权」「放弃阶级斗争学说」，即所谓「将马克思主义暂搁一边」。信的发表<b>恰在汪精卫出走河内（十二月十八日）前两天</b>，中共方面批其为「为汪精卫等汉奸张目」。至于是否「蒋授意」，中国社科院近代史所的研究者比对蒋、陈布雷、王世杰日记后认为<b>目前无直接证据，此说有待商榷</b></div></div>
+      <div class="tl-item"><div class="tl-date">1939 年内（月日待考）</div><div class="tl-body">毛致吴玉章信，附「一篇理论性质的东西」请党内传阅修改。研究者据此推断，<b>《新民主主义论》的初稿在 1939 年底已经成形</b>，比一月九日那场讲演早得多——讲演不是写作的起点，是定稿前的最后一次公开</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.12.13</div><div class="tl-body">中共中央政治局会议谈新文化问题。此时党内用的旗帜还是「中华民族的新文化」，<b>「新民主主义文化」这个词还没有定下来</b></div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.12.30</div><div class="tl-body">汪精卫集团在上海与日方秘密签订《日支新关系调整要纲》（即汪日密约）。影佐祯昭十一月五日已在六三花园把要纲交给周佛海、梅思平；签字后次日由犬养健携回东京</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.04 → 01.12</div><div class="tl-body">陕甘宁边区文化协会第一次代表大会在<b>延安中国女子大学礼堂</b>举行，中共中央领导人及边区党政军负责人<b>六七百人</b>出席。吴玉章致开幕词；王明作《关于文化界统一战线的问题报告》，洛甫（张闻天）作《关于文化政策的报告》，艾思奇作《抗战以来边区的文化运动报告》，周扬作《两年来边区国民教育工作报告》。大会选出毛泽东、洛甫等 <b>97 人</b>为执委，通过加入宪政促进会、成立鲁迅研究会等十项决议</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.09 · 会场</div><div class="tl-body">据听讲者温济泽回忆：那天「虽是冬天，中午的阳光却使人感到暖和，延河里结的厚冰上也化出了一薄层润滑的水」；讲演「<b>从下午一直讲到入夜点起煤气灯的时分</b>」，会场「五六百」听众「聚精会神，屏息静听，情绪热烈，不时响起一阵阵的掌声」。<b>而会场里没有「新民主主义」四个字</b>——横幅标语写的是「文化人团结起来，建立抗战建国文化理论」，毛泽东自己的题词是「为建立中华民族的新文化而奋斗」和「鲁迅的方向就是中华民族新文化的方向」。这个概念，是在这场讲演里第一次公开提出来的</div></div>
+      <div class="tl-item green"><div class="tl-date">1940.01.15 → 01.23</div><div class="tl-body">文末署一月十五日。但一月二十一日致周扬：「文章虽算写好了，但还待汇集意见加以最后修改，<b>还得两三天才能将最后修正稿交你付印</b>，累你等得太久了！现送上初稿一份，请加审阅、指正、批示，并退我为盼！」二十三日的第二封仍是谈修改。故《中国文化》所载本的完全定稿，在一月二十三日或稍后</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.22 → 01.24</div><div class="tl-body"><b>高陶事件</b>：高宗武、陶希圣一月三日（一说四日）由杜月笙安排登轮离沪，五日抵港，把偷拍的密约副本交杜转呈蒋介石。一月二十二日香港《大公报》以整版刊出《日支新关系调整要纲》全文及附件，标题写着「集日阀多年梦想之大成！极中外历史卖国之罪恶！从现在卖到将来，从物资卖到思想」。<b>一月二十四日</b>，蒋介石发表《为〈日汪密约〉告全国军民书》。周佛海在日记里写：「高、陶两动物，今后誓当杀之也。」</div></div>
+      <div class="tl-item green"><div class="tl-date">1940.02.15 / 02.20</div><div class="tl-body">《中国文化》创刊号全文刊出，仍用长题；<b>五天后</b>《解放》合刊改题《新民主主义论》</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:24px;">
+      这个长篇讲话，从下午一直讲到入夜点起煤气灯的时分……拥挤在会场里的五六百听众，被他的精辟见解和生动话语所鼓舞、所吸引，聚精会神，屏息静听，情绪热烈，不时响起一阵阵的掌声。
+      <span class="src">温济泽《征鸿片羽集》，当代中国出版社 1995 年版，第 473 页。同日《新中华报》只作摘要报道，全文要等一个月后</span>
+    </div>
+
+    <p class="lead" style="margin-top:16px;">把这些日期排在一起，会看到一件很难忽略的事：这篇后来被称作「新民主主义理论形成标志」的著作，<b>从落笔到印出来，一路都在打仗</b>。写它的人自称目的是「驳顽固派」；它讲完的第十三天，汪精卫的卖国条文在香港被整版登出，全国舆论炸开；它印出来的第五天，题目就被改短了。<b>一篇理论的出生证明上，盖的全是时事的章。</b></p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      全篇只回答一个问题：<span class="q">中国向何处去</span>。答案早在第二节就给完了——「我们要建立一个新中国」。后面两万五千多字，做的不是论证这个答案对不对，而是<b>把另外两条路一条条堵死</b>：资产阶级专政的路不通，无产阶级专政的路现在不能走，剩下那条就叫新民主主义。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一、用「三格」代替论证</h4>
+        <p>第五节把全世界的国家体制按阶级性质一刀切成三种：<b>（甲）资产阶级专政的共和国；（乙）无产阶级专政的共和国；（丙）几个革命阶级联合专政的共和国</b>。</p>
+        <p style="margin-top:6px;">甲已经过时，乙在殖民地半殖民地「还不适用」，于是中国只能落进丙。这不是推导，是<b>排除法</b>——先规定只有三个格子，再指出另两个格子空着。</p>
+      </div>
+      <div class="card gold">
+        <h4>二、把纲领接到孙中山的文件上</h4>
+        <p>经济纲领的两句口号——「<b>节制资本</b>」「<b>平均地权</b>」——字面上都出自一九二四年《中国国民党第一次全国代表大会宣言》，文章称之为「庄严的声明」。</p>
+        <p style="margin-top:6px;">第十节更狠：判「真三民主义」与「伪三民主义」的标准，就是联俄、联共、扶助农工三大政策。对手的旗帜，被当场收走。</p>
+      </div>
+      <div class="card blue">
+        <h4>三、文化放在最后，因为它是结果</h4>
+        <p>第三节先立总公式：<b>文化是政治和经济的反映</b>。公式一旦成立，文化问题就不再能独立讨论，只能等政治答案出来之后再填。</p>
+        <p style="margin-top:6px;">所以政治在第五、六节，文化拖到第十一至十五节。文化占了 31.3% 的篇幅，却是结构上的<b>宾语</b>，不是主语。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">国情</div><div class="n-sub">殖民地<br>半殖民地<br>半封建</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">两步走</div><div class="n-sub">第一步民主主义<br>第二步社会主义</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">关键变量</div><div class="n-sub">谁领导<br>（无产阶级）</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">国体／政体</div><div class="n-sub">各革命阶级联合专政<br>民主集中制</div></div>
+    </div>
+    <div class="chain" style="margin-top:8px;">
+      <div class="node blue"><div class="n-label">三大纲领</div><div class="n-sub">政治·经济·文化<br>（新民主主义共和国）</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">三面挡板</div><div class="n-sub">驳资产阶级专政<br>驳「一次革命论」<br>驳「一个主义」</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">真伪判据</div><div class="n-sub">三大政策<br>＝真三民主义</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">第二步</div><div class="n-sub">社会主义<br>（<b>无时间表</b>）</div></div>
+    </div>
+    <p class="lead" style="margin-top:18px;">这条链条的形状很特别：<b>它不是从问题推向答案，而是从答案反推条件</b>。「两步走」这个结论在第三节就出现了，此后全部工作是给这个结论装护栏——先证明第一步非无产阶级领导不可（五），再证明第二步现在不能开始（八），最后证明反对者没有资格反对（七、九、一○）。链条末端的那个节点，也就是第二步，<b>在全文里没有任何刻度</b>：没有年限、没有条件、没有验收标准，只有一句「相当地长」。</p>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead">十五节，26,260 字。按功能分六块，<b>文化的五节最长（31.3%），驳论的三节次之（20.7%），而三大纲领里的经济只有一页（2.5%）</b>。</p>
+
+    <div class="bars" style="margin-top:18px;">
+      <div class="bar-row"><div class="bar-lab w150">一~三 提问与国情</div><div class="bar-track"><span class="bar-fill red" style="width:23.6%"></span></div><div class="bar-val">1,940 字</div></div>
+      <div class="bar-row"><div class="bar-lab w150">四 世界革命坐标</div><div class="bar-track"><span class="bar-fill gold" style="width:45.1%"></span></div><div class="bar-val">3,717 字</div></div>
+      <div class="bar-row"><div class="bar-lab w150">五~六 政治与经济</div><div class="bar-track"><span class="bar-fill green" style="width:46.4%"></span></div><div class="bar-val">3,824 字</div></div>
+      <div class="bar-row"><div class="bar-lab w150">七~九 三篇驳论</div><div class="bar-track"><span class="bar-fill red" style="width:65.9%"></span></div><div class="bar-val">5,428 字</div></div>
+      <div class="bar-row"><div class="bar-lab w150">一○ 真假三民主义</div><div class="bar-track"><span class="bar-fill gold" style="width:37.8%"></span></div><div class="bar-val">3,117 字</div></div>
+      <div class="bar-row"><div class="bar-lab w150">一一~一五 文化</div><div class="bar-track"><span class="bar-fill blue" style="width:100%"></span></div><div class="bar-val">8,234 字</div></div>
+    </div>
+
+    <h3 class="sub-h">十五节明细（起页据 1991 年版目录页）</h3>
+    <table class="plain">
+      <thead><tr><th>节</th><th>起页</th><th>字数</th><th>这一节在干什么</th></tr></thead>
+      <tbody>
+        <tr><td class="c2">一 中国向何处去</td><td>662</td><td>516</td><td>提问。开篇先自贬：「对于文化问题，我是门外汉」「当作一番开台锣鼓」「引玉之砖」</td></tr>
+        <tr><td class="c2">二 我们要建立一个新中国</td><td>663</td><td><b>225</b></td><td>全篇最短。只给主张，不给理由——理由全在后面</td></tr>
+        <tr><td class="c2">三 中国的历史特点</td><td>663</td><td>1,199</td><td>立总公式：文化＝政治经济的反映。然后给国情三格（日占区／国统区／边区）</td></tr>
+        <tr><td class="c2">四 中国革命是世界革命的一部分</td><td>666</td><td><b>3,717</b></td><td>换坐标系。引斯大林两段长文（1918 年论文、1925 年《再论民族问题》），把中国革命挪进世界社会主义革命的账本</td></tr>
+        <tr><td class="c2">五 新民主主义的政治</td><td>672</td><td>3,180</td><td>重心所在。资产阶级「一身而二任焉」的两面性 → 领导权落到无产阶级 → 国体政体公式</td></tr>
+        <tr><td class="c2">六 新民主主义的经济</td><td>678</td><td><b>644</b></td><td><b>只有一页。</b>两句话：节制资本、平均地权；两条都注明出自国民党一大宣言</td></tr>
+        <tr><td class="c2">七 驳资产阶级专政</td><td>679</td><td>2,395</td><td>国际环境＋国内环境双重「不容许」；基马尔主义被点名嘲笑；结在「有饭大家吃」</td></tr>
+        <tr><td class="c2">八 驳「左」倾空谈主义</td><td>683</td><td>1,238</td><td>「一次革命论」；顺手揭出日方「合办实业」的 49%／51% 分成——骂的是钱</td></tr>
+        <tr><td class="c2">九 驳顽固派</td><td>685</td><td>1,795</td><td>回应「把共产主义暂时收起」：「还是比赛吧。谁把共产主义比输了，我们共产党人自认晦气」</td></tr>
+        <tr><td class="c2">一○ 旧三民主义和新三民主义</td><td>689</td><td>3,117</td><td>考据战。判据是三大政策：联俄、联共、扶助农工，缺一即「伪三民主义，或半三民主义」</td></tr>
+        <tr><td class="c2">一一 新民主主义的文化</td><td>694</td><td>1,064</td><td>破立两分：帝国主义文化与半封建文化「是非常亲热的两兄弟」；「不破不立」</td></tr>
+        <tr><td class="c2">一二 中国文化革命的历史特点</td><td>696</td><td>1,319</td><td>五四前后两期。全篇唯一大段颂人处——鲁迅，六个「最」</td></tr>
+        <tr><td class="c2">一三 四个时期</td><td>699</td><td>2,915</td><td>2 年、6 年、10 年、3 年。用时长递增的四个格子装二十年文化史</td></tr>
+        <tr><td class="c2">一四 文化性质问题上的偏向</td><td>704</td><td>1,357</td><td>最见分寸的一节：宣传共产主义 ≠ 现在就实行社会主义国民文化</td></tr>
+        <tr><td class="c2">一五 民族的科学的大众的文化</td><td>706</td><td>1,579</td><td>三个定义＋结尾。收在「新中国是我们的」</td></tr>
+      </tbody>
+    </table>
+
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg gold">甲 · 资产阶级专政</div>
+          <div class="spec-seg red">乙 · 无产阶级专政</div>
+          <div class="spec-seg green">丙 · 联合专政</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>欧美式·已过时</b>「那种共和国已经过时了」；二战爆发后许多国家已转成军事专政</div>
+          <div class="spec-label"><b>苏联式·暂不适用</b>「在一定的历史时期中，还不适用于殖民地半殖民地国家的革命」</div>
+          <div class="spec-label"><b>中国式·唯一落点</b>「过渡的形式，但是不可移易的必要的形式」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:12px;">这张三格表是全篇论辩的地基，也是最经不起细看的地方：三格之外，<b>「不偏不倚」被直接归为不可能</b>——「全地球都要卷进这两个战线中去……『中立』只是骗人的名词」。分类一旦被写成穷尽且互斥，选择题就变成了计算题；而穷尽性本身，从来没有被论证过。</p>
+
+    <h3 class="sub-h">词频给出的另一张结构图</h3>
+    <table class="plain">
+      <thead><tr><th>词</th><th>次数</th><th>读法</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">革命</td><td>347</td><td>全篇最热。平均每 76 个字出现一次</td></tr>
+        <tr><td class="c1">民主</td><td>270</td><td>高于「文化」195——这是一篇以「民主」为轴的文章，不是以「文化」为轴</td></tr>
+        <tr><td class="c1">三民主义</td><td><b>132</b></td><td><b>是「共产主义」55 次的两倍半。</b>被当作共产主义纲领来读的文本，用得最多的词是对方的口号</td></tr>
+        <tr><td class="c1">共产主义</td><td>55</td><td>其中大半出现在「收起」「还是比赛吧」这类被驳的语境里</td></tr>
+        <tr><td class="c1">国民党</td><td>17</td><td>全部在「大资产阶级代表」「顽固派」的框架内，且一律指机构与派系</td></tr>
+        <tr><td class="c1">蒋介石</td><td><b>0</b></td><td>被驳的对象在场，名字不在场。对照同期《必须制裁反动派》的「不点名」手法，是同一套技术</td></tr>
+        <tr><td class="c1">武装</td><td><b>0</b></td><td>一篇 1940 年的中国革命纲领里，零次「武装」、「军队」只有 5 次</td></tr>
+        <tr><td class="c1">妇女</td><td><b>0</b></td><td>「大众的文化」写到了农民、工人、青年，没有写到妇女</td></tr>
+      </tbody>
+    </table>
+
+    <div class="part">
+      <div class="part-head gold"><span class="part-no">特写</span><span class="part-title">全篇唯一被大段颂扬的当代人</span><span class="part-scope">第十二节 · 696—699 页</span></div>
+      <div class="part-body">
+        <p>两万六千字里，活人被提到名字的有汪精卫（9 次）、孙中山（10 次）、叶青（1 次）、张君劢（1 次）、斯大林（10 次）、马克思（10 次）、列宁（5 次）——其中绝大多数是被引、被驳或被骂。唯一得到整段褒扬的当代人是<b>鲁迅（6 次）</b>，而且褒到极处：</p>
+        <ul>
+          <li>「鲁迅是中国文化革命的主将，他不但是伟大的文学家，而且是伟大的思想家和伟大的革命家。」——三个头衔，逐级加码</li>
+          <li>「鲁迅的骨头是最硬的，他没有丝毫的奴颜和媚骨，这是殖民地半殖民地人民最可宝贵的性格。」——把「硬骨头」定义为一种<b>殖民地性格</b>，不是文人性格</li>
+          <li>「最正确、最勇敢、最坚决、最忠实、最热忱的空前的民族英雄。」——五个「最」加一个「空前」，是全篇修辞的最高点</li>
+          <li>「鲁迅的方向，就是中华民族新文化的方向。」——一句话把一个人变成一条路线</li>
+        </ul>
+        <p>值得注意的是这段的位置：它不在文化诸节的开头（那是理论），而在<b>第十二节「中国文化革命的历史特点」里</b>——也就是在讲完五四前后两期、需要一个「新文化确实存在过」的实证时，鲁迅被调出来当证据。<b>先有论点，再找一个不可反驳的人来站台。</b>同一天会场里挂的题词，写的也正是这一句。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>标题改过两次，读者换了三批</h4>
+          <p>一月九日讲演的题目是《新民主主义的政治与新民主主义的文化》——一个并列结构，两个宾语，讲给会场里五六百名文化人听。二月十五日《中国文化》创刊号照用长题，读者是边区的文化界。二月二十日《解放》合刊改成《新民主主义论》——<b>并列结构消失，变成一个整体，加了一个「论」字。</b>这三步里，第三步才是决定性的：从这天起，它不再是一份会议报告，而是一部可以被单独翻印、单独引用、单独当书读的著作。事后数据印证了这一点：当年各地就出了 29 种单行本，新中国成立前的中文版本 250 多种，各式版本累计 350 余种。</p>
+          <p>这不是文字修饰，是<b>发行决策</b>。同一份内容，题目决定它被当成「文件」还是「经典」；而「文件」会过期，「经典」不会。据记载，国统区查禁之后，这本书还曾以《金刚经》《满园春色》之类的书名伪装发行——一个短到可以随便换封面而正文不变的题目，正是伪装本能够存在的前提。</p>
+          <span class="mv">可迁移的一条：给重要文本取名时，先想它最终要落到谁手里。给内部人看的，用长题、用并列、把范围写清楚；要给外部世界长期用的，用短题、用一个名词、把边界放开。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>说服对手的办法，是把对手的经典据为己有</h4>
+          <p>词频已经把答案摆在那里：三民主义 132 次，共产主义 55 次。一篇被后世当作马克思主义中国化标志的著作，用得最多的词是国民党的纲领。这不是修辞偏好，是全文最核心的论辩技术——<b>不证明自己新，而证明对方已经同意过</b>。</p>
+          <p>具体手法有三层。第一层，经济纲领直接引文：「节制资本」「平均地权」「耕者有其田」，以及「凡本国人及外国人之企业，或有独占的性质，或规模过大为私人之力所不能办者……由国家经营管理之」，全部注明出自一九二四年国民党一大宣言，并称其为「庄严的声明」。第二层，政体论也引同一份文件：「近世各国所谓民权制度，往往为资产阶级所专有……若国民党之民权主义，则为一般平民所共有，非少数人所得而私也。」第三层最狠：第十节用整节篇幅判定——只有这份宣言里的解释才是「真释」，其他都是「伪释」；而真伪的实际判据是联俄、联共、扶助农工三大政策，<b>「没有三大政策，或三大政策缺一……就都是伪三民主义，或半三民主义」</b>。于是对手每喊一次「三民主义」，都在替这篇文章作证；要否定这篇文章，就得先承认自己背叛了孙中山。</p>
+          <p>代价也清楚：纲领的合法性有一大块抵押在一九二四年的文件上。抵押品在别人手里，随时可能被宣布作废——一九四三年蒋介石《中国之命运》走的就是这条路：绕开一大宣言，另立一套「没有国民党就没有中国」的谱系。所以这篇文本的真正力量不在逻辑，在<b>它把解释权抢到了自己手里，并且守住了十三年</b>。</p>
+          <span class="mv">可迁移的一条：跟人争一件事，最强的论据不是「我的方案更好」，而是「你自己的文件里已经写了这一条」。先去找对方的公开承诺，再去谈执行；这比讲道理有效得多，也更难反驳。</span>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>一篇讲「两步走」的文章，没给第二步留一个刻度</h4>
+          <p>全篇关于进度的表述只有一句：「中国革命不能不做两步走，第一步是新民主主义，第二步才是社会主义。<b>而且第一步的时间是相当地长，决不是一朝一夕所能成就的。</b>」（684 页）除此之外，26,260 字里没有年限、没有条件、没有验收标准。社会主义被提到 83 次，但没有一次说明什么时候、凭什么标准进入。</p>
+          <p>我不认为这是疏忽，这是文体的必然。作者自述写作目的是「驳顽固派」，而驳论只需要证明「现在不是社会主义」，不需要证明「何时才是」。三篇驳论（第七、八、九节，5,428 字，20.7%）的篇幅也印证了重心：<b>他说得清「不是什么」，说得含糊「什么时候是」。</b>唯一的量化内容反而出现在骂人的地方——日方「合办实业」在华中华南准中国资本家占 51%、华北占 49%，被他拿来算了一笔账：那班提倡「一次革命论」的先生，「原来不为别的，专为百分之四十九或五十一」。</p>
+          <p>事后检验很干脆：一九四九年建国，一九五三年提出过渡时期总路线（原设想三个五年计划或更长），一九五六年三大改造基本完成。从这篇文章算起十六年，从建国算起七年。文章说「相当地长」，历史给的是七年——<b>不是文章错了，是文章没有给出可以被检验的说法，所以也就无法被证伪</b>。这正是「驳论体」的通病：它赢得了一场当下的争论，却把最难的问题留给了下一个十年。</p>
+          <span class="mv">可迁移的一条：任何「分两步走」的方案，真正的风险点不在第一步的定义，而在两步之间的门槛条件。写方案时至少要回答一句：<b>什么情况下算走完了第一步？</b>答不出这一句，方案就只是一份立场声明。</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+
+      <div class="golden-item">
+        <div class="text">科学的态度是“实事求是”，“自以为是”和“好为人师”那样狂妄的态度是决不能解决问题的。我们民族的灾难深重极了，惟有科学的态度和负责的精神，能够引导我们民族到解放之路。</div>
+        <div class="ctx">第一节「中国向何处去」末，662—663 页。这是全篇的开场姿态：先把自己放低（「门外汉」「开台锣鼓」「引玉之砖」），再把「科学的态度」立成唯一门槛。紧接着的一句更值得记：「真理只有一个，而究竟谁发现了真理，不依靠主观的夸张，而依靠客观的实践。」</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">一定的文化（当作观念形态的文化）是一定社会的政治和经济的反映，又给予伟大影响和作用于一定社会的政治和经济；而经济是基础，政治则是经济的集中的表现。</div>
+        <div class="ctx">第三节「中国的历史特点」开头，663—664 页。全篇的总公式。它决定了后面的章节次序——政治（五）、经济（六）在前，文化（十一至十五）在后。文化被承认有「伟大影响和作用」，但位置是反映者。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">国体——各革命阶级联合专政。政体——民主集中制。这就是新民主主义的政治，这就是新民主主义的共和国，这就是抗日统一战线的共和国，这就是三大政策的新三民主义的共和国，这就是名副其实的中华民国。</div>
+        <div class="ctx">第五节「新民主主义的政治」末，677 页。全篇最浓缩的一段：两个名词、两个定义、五个「这就是」。前两个「这就是」给制度，后三个「这就是」把它分别接到抗日统一战线、三大政策三民主义、中华民国三个现成的名下——一次命名，三处挂靠。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">中国革命不能不做两步走，第一步是新民主主义，第二步才是社会主义。而且第一步的时间是相当地长，决不是一朝一夕所能成就的。</div>
+        <div class="ctx">第八节「驳‘左’倾空谈主义」，684 页。全篇唯一一句谈时间的话，也是唯一一处没有给出任何衡量标准的地方。前面紧接着的一句是「我们不是空想家，我们不能离开当前的实际条件」——「实际条件」四个字用得很好，但它在这篇文本里始终没有被量化。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">鲁迅的骨头是最硬的，他没有丝毫的奴颜和媚骨，这是殖民地半殖民地人民最可宝贵的性格。</div>
+        <div class="ctx">第十二节「中国文化革命的历史特点」，698 页。写鲁迅的一整段是全篇修辞的最高点（「最正确、最勇敢、最坚决、最忠实、最热忱的空前的民族英雄」），落点是「鲁迅的方向，就是中华民族新文化的方向」。同月边区文协一大会场里，毛泽东的题词就是这一句。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">新中国站在每个人民的面前，我们应该迎接它。新中国航船的桅顶已经冒出地平线了，我们应该拍掌欢迎它。举起你的双手吧，新中国是我们的。</div>
+        <div class="ctx">全文最末三句，709 页。两万六千字的论证，收在一个视觉意象上——「桅顶冒出地平线」，船还没到，只看得见桅杆顶。这也是 1991 年版第二卷的最后一页正文：整卷从《反对日本进攻的方针、办法和前途》走到这里，结束在一片海面上。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">克服投降危险，力争时局好转</div>
+        <p>一九四〇年一月二十八日，1991 年版第二卷第 712—714 页。距本篇讲演十九天，距汪日密约在香港公布六天。从「论」回到「指示」：不再论证中国向何处去，只处理这个月怎么办——反汪宣传、扩大统一战线、应付「军事限共」与「政治限共」。同一位作者，十九天里换了两种完全不同的语速。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">新民主主义的宪政 · 1940.02.20</div>
+        <p>1991 年版第二卷第 731—740 页，在延安宪政促进会上的演说，与《解放》改题转载是同一天。同一个主题，换一个切口：不再讲「什么主义」，只讲「怎样开会、谁来选举、宪法由谁定」。<b>把《新民主主义论》第五节那些「国体」「政体」的抽象名词，落到一套具体的会议程序上去看</b>，才看得出这套设计在哪里最硬、在哪里最空。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把 1940 年 1 月的这道题，搬到今天</h4>
+      <div class="q">一、你手上有没有一份「两步走」的方案——职业的、产品的、公司的？它的第二步有没有一个可以被检验的门槛？如果没有，它和「相当地长」有什么区别？</div>
+      <div class="q">二、这篇文章最强的一招是「引用对方的文件」。你正在说服的那个人或那家机构，公开承诺过什么？你有没有把他的承诺原文找出来，逐条对过？</div>
+      <div class="q">三、全篇把世界切成三格，然后说自己只能落在第三格。你最近一次做「只有两个／三个选项」的判断时，那几个选项是谁划的？穷尽性是谁保证的？</div>
+      <div class="hint">提示：这篇文章真正值得学的不是结论，是三个技术——<b>用排除法收窄选择</b>、<b>用对方的经典作证</b>、<b>用「现在不是时候」把最难的问题推给未来</b>。前两个可以马上用，第三个要当心：它有效期只有十年。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 第二十六篇</div>
+    <div>底本：人民出版社 1991 年第二版第二卷 662—711 页　·　五宽度（320/390/768/1024/1440）CDP 校验通过</div>
+  </div>
+
+</div>
+</body>
+</html>

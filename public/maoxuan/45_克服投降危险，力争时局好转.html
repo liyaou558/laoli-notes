@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45 · 克服投降危险，力争时局好转 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+
+/* ===== 四格光谱覆写（本篇） ===== */
+.spectrum.four .spec-band,.spectrum.four .spec-labels{grid-template-columns:repeat(4,1fr);}
+.spectrum.four .spec-seg{font-size:11px;letter-spacing:0;padding:13px 2px;}
+@media(max-width:560px){
+  .spectrum.four .spec-seg{font-size:9.5px;padding:10px 1px;}
+  .spectrum.four .spec-label{font-size:10.5px;padding:8px 3px;}
+  .spectrum.four .spec-label b{font-size:10.5px;}
+}
+@media(max-width:360px){
+  .spectrum.four .spec-seg{font-size:8.8px;}
+  .spectrum.four .spec-label{font-size:9.5px;}
+  .spectrum.four .spec-label b{font-size:9.5px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四五</div>
+    <h1>克服投降危险，力争时局好转</h1>
+    <div class="sub2">1286 字的党内指示：没有一个数字，却要全党相信天平还压得住</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十七篇 · <b>一九四〇年一月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《克服投降危险，力争时局好转》。1991 年版第二卷第二十七篇，上接《新民主主义论》（662—711），下接《团结一切抗日力量，反对反共顽固派》（715—720）</td></tr>
+      <tr><th>文体</th><td><b>为中共中央起草的对党内的指示</b>——题解只有一句：「这是毛泽东为中共中央起草的对党内的指示。」不是文章、不是讲演、不是决定。正文 <b>3 个自然段</b>，不分节、不加小标题，唯一的编号是第二段里的十一条口号（一）—（十一）</td></tr>
+      <tr><th>写作时间</th><td>一九四〇年一月二十八日</td></tr>
+      <tr><th>最初发表</th><td>⚠️ <b>首次刊印载体此次未核实</b>（党内指示，以中央文件形式下发，正文不记发表处），不写死</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>712—714 页</b>（正文三页，注释两条排 714 页）；1952 年 4 月第二卷初版（本次未核页码）</td></tr>
+      <tr><th>篇幅</th><td><b>3 段、汉字 1286</b>（含标点 1442），段长 <b>717／500／69</b>（55.8%／38.9%／5.4%），段均 429 字。注释 <b>仅 2 条</b>：〔1〕《日支新关系调整要纲》，〔2〕蒋介石《为〈日汪密约〉告全国军民书》</td></tr>
+      <tr><th>历史坐标</th><td>「高陶事件」公布密约后第 6 天 · 蒋介石告国人书后第 4 天 · <b>日美通商航海条约失效后第 2 天</b> · 日本米内内阁成立后第 12 天 · 第一次反共高潮进行中</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这篇指示写在一个「所有消息同时到齐」的月份里：日本换了内阁、汪精卫签了密约、密约被人从内部偷出来在香港整版登了、蒋介石发了告国人书、日美商约到期失效。二十九天里，投降这件事从传闻变成了文件。</p>
+
+    <div class="timeline" style="margin-top:22px;">
+      <div class="tl-item"><div class="tl-date">1939.12.30 · 上海</div><div class="tl-body">汪精卫集团与日本「梅机关」（影佐祯昭）签字《日支新关系调整要纲》及附件。陈公博 12.28 已离沪，拒不出席；<b>陶希圣称病不去，也不签字</b>。</div></div>
+      <div class="tl-item gold"><div class="tl-date">1940.01.03—01.05 · 上海→香港</div><div class="tl-body">高宗武、陶希圣由杜月笙安排登轮离沪（船名两说：「柯立芝总统号」／「胡佛总统号」），1.05 抵港。1.07 高托杜月笙呈蒋介石密件 <b>38 纸、照片 16 张</b>。陶夫人万冰如与三个孩子被留在上海作人质。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1940.01.14 / 01.16 · 东京</div><div class="tl-body">阿部信行内阁总辞职；<b>米内光政内阁成立</b>。组阁当天谈话即称：支那事变的处理方针既定，将「<b>支援即将成立的新中央政府的成立与发展，此事不待言</b>」。——十二天后，本篇写下「日本对华方针依然是非常强硬的」。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.21—01.22 · 上海→青岛</div><div class="tl-body">汪精卫一行乘日轮「奉天丸」离沪，1.22 下午抵青岛。同日香港《大公报》以通栏标题<b>整版刊出《日支新关系调整要纲》全文</b>，另在第九、十两版登日文原件照片，配社评《揭露亡国的「和平条件」》；高、陶致汪电同日发出：「切望先生及诸旧友悬崖勒马。」</div></div>
+      <div class="tl-item gold"><div class="tl-date">1940.01.24 · 重庆</div><div class="tl-body">中央社发表蒋介石《为〈日汪密约〉告全国军民书》——本篇注〔2〕所指。同日汪精卫在青岛对路透社记者称，高、陶所发「系一部分人的提案」「凭空捏造」。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.24—01.26 · 青岛</div><div class="tl-body">汪精卫、王克敏、梁鸿志「三巨头」会谈：定政权名为「国民政府」、首都南京、3 月中旬组府、华北设政务委员会。26 日记者会，汪称此会「实可称为和平运动一大进步与发展」。会议桌的主持人是影佐祯昭。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1940.01.26 · 华盛顿—东京</div><div class="tl-body">《日美通商航海条约》失效。美方 1939.07.26 通告终止，六个月期满，两国进入<b>「无条约时代」</b>。同日青岛会谈闭幕。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.28 · 延安</div><div class="tl-body">本篇写成。第三段直接下达执行令：<b>「延安定二月一日召开反对汪精卫卖国协定的民众大会。」</b>四天后那场三万人大会，就是下一篇《团结一切抗日力量，反对反共顽固派》。</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:22px;">
+      同月国内的另一条线：一九三九年十一月二十三日，黄炎培、张澜、章伯钧、左舜生、梁漱溟等在重庆成立「<b>统一建国同志会</b>」，主张实施宪政、反对内战，蒋介石以「不成立正式政党」为条件允其活动。本篇「中间阶级也反对投降」这七个字，在重庆有一个具体的组织名称——但正文一个字也没提。
+      <span class="src">—— 中国民主同盟山东省委员会《民盟的成立（一）》；梁漱溟《中国民主同盟的创建》</span>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">时局不是一条线，是两股力同时在长。<span class="q">任务不是选边，是同时做两件事——顶住压力，扩大自己。</span></div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 判断：先声明「不一定」</h4>
+        <p>「两种方向同时存在，两种前途都有可能。」全篇的起点不是结论，是把结论按住。紧跟着一句方法论：「不要把各地发生的投降、反共、倒退等严重现象孤立起来看。」——地方事变是症状，不是判决书。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 依据：六条「客观条件」</h4>
+        <p>国际三条：日本对华方针依然强硬／英美法与日本「并未真正协调」且英法被欧战削弱，故「远东慕尼黑会议很难召集」／苏联积极援华。国内三条：我党我军坚决反对投降／中间阶级也反对投降／<b>顽固派「握有权力，但在数量上只占少数」</b>。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 方针：双管齐下</h4>
+        <p>一方面「坚决反抗投降派顽固派的军事进攻和政治进攻」；另一方面<b>六个「力争」</b>：国民党中的大多数、中间阶层、抗战军队中的同情者、民众运动的深入、知识分子、根据地的巩固和武装政权的发展。收在总方针：<b>力争好转 ＋ 警觉突然事变</b>（「在目前是局部的、地方性的」）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">现象</div><div class="n-sub">投降 · 反共 · 倒退<br>各地陆续发生</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">不孤立看</div><div class="n-sub">是同一股力的<br>不同落点</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">清点条件</div><div class="n-sub">国际 3 ＋ 国内 3<br>「许多……客观条件」</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">双管齐下</div><div class="n-sub">反抗 ＋ 力争<br>六个宾语</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">有可能</div><div class="n-sub">时局好转<br>（不是必然）</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">警惕</div><div class="n-sub">突然事变<br>局部的、地方性的</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:20px;">
+      框架的关键在第三步到第四步之间：条件只推出「<b>有可能</b>」。全篇没有一句「必然胜利」，最硬的承诺是「就有可能克服……并争取……」。这份克制不是修辞习惯——它同时是一份免责声明与一份动员令：结果未定，所以你我都还有事要做。
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <h3 class="sub-h">一、四格：位置与人数是错开的</h3>
+    <div class="spectrum four">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">亲日派</div>
+          <div class="spec-seg blue">顽固派</div>
+          <div class="spec-seg gold">中间阶级</div>
+          <div class="spec-seg green">进步势力</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>已投降</b>汪精卫 · 大资产阶级亲日派 · 正组傀儡政府</div>
+          <div class="spec-label"><b>握权但少数</b>大资产阶级抗日派 · 「军事限共」「政治限共」的执行者</div>
+          <div class="spec-label"><b>反对投降</b>中等资产阶级 · 城市小资产阶级 · 「也反对投降」</div>
+          <div class="spec-label"><b>坚决反对</b>无产阶级 · 农民 · 共产党、八路军、新四军</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这张图真正的信息不在横轴，在竖排的两个词：<b>顽固派「握有权力」，却「在数量上只占少数」</b>。全篇所有的行动方案都建立在这个错位上——权力在少数人手里，人数在多数人手里，于是「力争」才有了对象，「双管齐下」才有了第二条腿。</p>
+
+    <h3 class="sub-h">二、三段：从抽象到具体的一条落地曲线</h3>
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">第一段<br>判断与条件</div><div class="bar-track"><span class="bar-fill red" style="width:100%"></span></div><div class="bar-val">717 字</div></div>
+      <div class="bar-row"><div class="bar-lab">第二段<br>反汪十一条</div><div class="bar-track"><span class="bar-fill gold" style="width:69.7%"></span></div><div class="bar-val">500 字</div></div>
+      <div class="bar-row"><div class="bar-lab">第三段<br>执行令</div><div class="bar-track"><span class="bar-fill green" style="width:9.6%"></span></div><div class="bar-val">69 字</div></div>
+    </div>
+    <p class="lead" style="margin-top:14px;">第一段 <b>717 字、零个专名、零个数字、零个日期</b>；第二段 500 字，只出现两个人名（汪精卫、蒋介石）与十一条编号；第三段 <b>69 字</b>，一口气给出两个日期、一个地点、一套办法（文章、宣言、传单、演说、小册子）。具体性在三段里逐段上升——一份指示越往后越像一张通知单。</p>
+
+    <h3 class="sub-h">三、十一条口号：四类，全部是别人的词</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">类</th><th>条目</th><th class="c2">用谁的词</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">对日</td><td>（一）拥护抗战到底的国策，反对汪精卫的卖国协定</td><td>国策</td></tr>
+        <tr><td class="c1">对汪</td><td>（二）打倒汉奸汪精卫、打倒伪中央（三）拥护国共合作，打倒汪的反共政策（四）<b>反共就是汪精卫分裂统一战线的阴谋</b>（九）巩固根据地，反对汪派汉奸破坏</td><td>汉奸</td></tr>
+        <tr><td class="c1">对国民党</td><td>（五）加紧团结，消灭磨擦（六）革新内政，<b>开展宪政运动，树立民主政治</b>（七）<b>开放党禁</b>，允许抗日党派合法存在（八）保证人民有抗日反汉奸的言论集会自由权</td><td>宪政<br>党禁</td></tr>
+        <tr><td class="c1">对军队与文化</td><td>（十）拥护抗日有功的军队，充分接济前线（十一）发展抗战文化，保护进步青年，取缔汉奸言论</td><td>抗战<br>建国</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:14px;">十一条里只有第（三）（四）条是全篇最锋利处：<b>它把「反共」直接判给了汪精卫</b>——反共不再是政见分歧，而是汉奸阴谋的一环。其余各条用的全是国民党自己公开承认过的词（抗战到底、宪政、开放党禁、接济前线）。谁反对这十一条，谁就得自己解释为什么站在汪精卫一边。</p>
+
+    <h3 class="sub-h">四、六个「力争」：一半拉人，一半做事</h3>
+    <div class="cards">
+      <div class="card gold"><h4>拉人（4 个）</h4><ul>
+        <li>力争<b>国民党中的大多数</b></li>
+        <li>力争<b>中间阶层</b></li>
+        <li>力争<b>抗战军队中的同情者</b></li>
+        <li>力争<b>知识分子</b></li>
+      </ul></div>
+      <div class="card green"><h4>做事（2 个）</h4><ul>
+        <li>力争<b>民众运动的深入</b></li>
+        <li>力争<b>抗日根据地的巩固和抗日武装、抗日政权的发展</b>（一个宾语里塞了三样东西）</li>
+      </ul></div>
+    </div>
+    <p class="lead" style="margin-top:14px;">「双管齐下」这个词全篇只出现一次，但它规定了这六个「力争」的配比：<b>四条是争取别人站过来，两条是自己长出来</b>。前者是统战，后者是实力；前者可撤销（别人可以变卦），后者不可撤销。这份指示把两种性质完全不同的工作，用同一个动词并列在了一起。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>「两种前途都有可能」既是保险栓，也是许可证</h4>
+          <p>一份要求全党动手的指示，开篇先说结果未定。这看起来是谨慎，实际是双刃的：好处是没有人会因为局面恶化而被追责「判断错了」；代价是这个判断永远无法被证伪——局面好转是「力争」的功劳，局面恶化是「突然事变」的应验，两种结果都在文本的射程之内。</p>
+          <p class="mv">迁移：当一个判断同时容纳了正反两种结果，它就不再是判断，而是态度。要检验一个判断，必须要求它给出中间的、可观测的指标——比如「某个月内某类事件的发生频率」。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>力量的清单，比力量本身更像武器</h4>
+          <p>1286 字里没有一个数字、一个番号、一处战场。六条「客观条件」全部是定性的：「依然是非常强硬的」「并未真正协调」「积极援助中国」「只占少数」。而同期它本可以写数字——八路军多少万人、牵制多少个师团、边区多少县。</p>
+          <p>它没写，因为这份文件的读者不是参谋，是每一个接到指示的基层干部。它要交付的不是情报，是一种体感：天平上我这边的砝码还在。所以清单的功能不是计算，是让人敢动手。</p>
+          <p class="mv">迁移：说服人之前先判断他缺的是信息还是底气。缺信息就给数字，缺底气就给结构——把「谁多谁少、谁握着权、谁只是嗓门大」摆清楚，比列一百条战绩有用。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>把对手的旗帜收走，比骂倒对手便宜</h4>
+          <p>十一条口号几乎每一条都借了国民党的词：抗战到底的国策、宪政运动、开放党禁、接济前线。这不是妥协，是一种极省力的攻击方式——<b>用对方已经公开承诺过的标准去要求对方，让拒绝的成本落在对方身上</b>。同一手法在《新民主主义论》第十节用过一次（「没有三大政策……就都是伪三民主义」），在《团结一切抗日力量，反对反共顽固派》里用得最狠（「你们的所谓统一，乃是假统一」）。</p>
+          <p class="mv">迁移：提要求时，尽量使用对方公开承诺过的词，而不是自己的词。用自己的词，对方只需否认你的立场；用对方的词，对方必须先解释自己。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+
+      <div class="golden-item">
+        <div class="text">目前是两种方向同时存在，两种前途都有可能。</div>
+        <div class="ctx">712 页，第一段第二句。全篇的起点，也是唯一一处把「不确定」写成正面判断的地方。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">必须认清目前国内国际尚存在着许多利于我们争取继续抗战、继续团结和继续进步的客观条件。</div>
+        <div class="ctx">712 页。紧接着列出国际三条、国内三条，全部定性，无一数字——「许多」是这个清单的计量单位。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">如此双管齐下，就有可能克服大地主大资产阶级的投降危险并争取时局的好转前途。</div>
+        <div class="ctx">713 页。「双管齐下」全篇仅此一见；「有可能」三个字，是全篇对结果最硬的表述。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">力争时局好转，同时提起可能发生突然事变（在目前是局部的、地方性的突然事变）的警觉性，这就是党的目前政策的总方针。</div>
+        <div class="ctx">713 页。括号里那七个字是全篇的分寸所在：既要求警觉，又不许把警觉升格为恐慌——事变是「局部的、地方性的」，不是全面破裂。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">蒋的宣言表示了他要继续抗战，但是他没有强调全国必须加强团结，没有提到任何坚持抗战和进步的方针；而没有这种方针，便无法坚持抗战。</div>
+        <div class="ctx">713 页。对一份四天前刚发表的告国人书，先承认一半，再拆掉一半，最后用对方自己的逻辑收尾——「没有这种方针，便无法坚持抗战」。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">团结一切抗日力量，反对反共顽固派</div>
+        <p>一九四〇年二月一日，第二卷第二十八篇，715—720 页。本篇第三段下令要开的那个会，四天后在延安开成——各界三万余人，毛泽东的讲演。党内指示里的「十一条口号」，在会上变成了「十没有」「真假统一论」的当众演说。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">目前抗日统一战线中的策略问题</div>
+        <p>一九四〇年三月十一日，延安高级干部会议报告提纲。四十二天后，毛泽东把本篇那句粗略的「中间阶级也反对投降」切成三份（中等资产阶级／开明绅士／地方实力派），把「双管齐下」写成「发展进步势力、争取中间势力、孤立顽固势力」，再补上「有理、有利、有节」。<b>本篇是骨架，那篇才是操作手册。</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「两种前途」搬到你自己的处境里</h4>
+      <div class="q">一 · 你最近一次说「两种可能都有」，是为了让人继续做事，还是为了让自己不必负责？分辨的方法只有一个：你有没有同时给出一个中间指标。</div>
+      <div class="q">二 · 你手上那份「有利条件清单」，有几条是查得动的事实，几条只是「应该会好」？如果把不能核查的条目划掉，清单还剩几条？</div>
+      <div class="q">三 · 你上一次提要求，用的是自己的词，还是对方公开承诺过的词？如果是前者，试着把同一件事用对方的词重写一遍——你会发现要求没变，拒绝变难了。</div>
+      <div class="hint">提示：这份指示最值得学的不是「双管齐下」这个成语，而是它把「拉人」和「长自己」分列在同一张清单上、却从不说它们等价。前者随时可能撤回，后者只要做了就留在手里。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 · 第二十七篇</div>
+    <div>一九九一年版 · 712—714 页 · 汉字 1286</div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -60,9 +60,13 @@ const vol2 = [
   { no: '44', title: '新民主主义论', date: '1940.01', done: true, file: '44_新民主主义论.html' },
   { no: '45', title: '克服投降危险，力争时局好转', date: '1940.01.28', done: true, file: '45_克服投降危险，力争时局好转.html' },
   { no: '46', title: '团结一切抗日力量，反对反共顽固派', date: '1940.02.01', done: true, file: '46_团结一切抗日力量，反对反共顽固派.html' },
+  { no: '47', title: '向国民党的十点要求', date: '1940.02.01', done: true, file: '47_向国民党的十点要求.html' },
+  { no: '48', title: '必须强调团结和进步', date: '1940.02.07', done: false },
 ];
 
 const doneCount2 = vol2.filter(a => a.done).length;
+// 第二卷（1991 年版）共 40 篇，序号 19—58；列表只列到已建条目，进度条分母用全卷总数
+const vol2Total = 40;
 ---
 
 <BaseLayout title="毛选精读" description="《毛泽东选集》逐篇精读笔记">
@@ -233,8 +237,8 @@ const doneCount2 = vol2.filter(a => a.done).length;
     </div>
     <div class="progress">
       <span>第二卷进度</span>
-      <div class="bar"><span class="v2" style={`width:${(doneCount2 / vol2.length) * 100}%`}></span></div>
-      <span>{doneCount2} / {vol2.length}</span>
+      <div class="bar"><span class="v2" style={`width:${(doneCount2 / vol2Total) * 100}%`}></span></div>
+      <span>{doneCount2} / {vol2Total}</span>
     </div>
     <div class="vol-note">第一卷 18 篇已全部完成 ✅ · 第二卷「抗日战争时期（上）」已开篇，以下为已列出的前几篇，其余篇目随产出陆续补入。</div>
   </div>

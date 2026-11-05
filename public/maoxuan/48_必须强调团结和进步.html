@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>48 · 必须强调团结和进步 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:18px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:.5px;}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 96px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 74px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:58px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:52px;white-space:nowrap;text-align:center;}
+table.plain .c3{width:56px;white-space:nowrap;text-align:center;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:44px;}table.plain .c2{width:42px;}table.plain .c3{width:44px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四八</div>
+    <h1>必须强调团结和进步</h1>
+    <div class="sub2">抗战不是一项可以单独成立的政策——抽掉托着它的两根柱子，「抗战」就只剩一个读音</div>
+    <div class="sub">毛泽东选集 · 第二卷 · <b>一九四〇年二月七日</b> · 为延安《新中华报》改版一周年而作</div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《必须强调团结和进步》。1991 年版第二卷 <b>729—730 页</b>；上接同日两页的《〈中国工人〉发刊词》（727—728），再上是《向国民党的十点要求》（721—726）</td></tr>
+      <tr><th>文体</th><td><b>纪念文章</b>——题解只有一句：「这是毛泽东为延安《新中华报》改版一周年纪念写的文章。」<b>一个自然段、十一句、零小标题、零编号</b>；问号 1、感叹号 0</td></tr>
+      <tr><th>写作时间</th><td>一九四〇年二月七日。⚠️《毛泽东选集》<b>第一版署「二月十日」，有误</b>；1991 年版据发表日订正为「七日」</td></tr>
+      <tr><th>最初发表</th><td>延安《新中华报》<b>一九四〇年二月七日</b>——改版一周年当日</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>729—730 页</b>（正文两页，注释 <b>5 条</b>全排 730 页），其中 <b>4 条是「见本卷某篇注」的交叉索引</b>；1952 年 4 月第二卷初版（本次未核页码）</td></tr>
+      <tr><th>篇幅</th><td><b>1 段、11 句、汉字 525</b>（含标点 587）。句长 <b>26／15／34／29／14／48／98／181／29／15／36</b>——开头五个短句，最长的一句 181 字独占 <b>34.5%</b></td></tr>
+      <tr><th>历史坐标</th><td>「七七」三大方针后第 <b>215</b> 天 · 延安讨汪大会后第 <b>6</b> 天 · <b>汪伪国民政府成立前 52 天</b> · 第一次反共高潮中段 · 《新民主主义论》定稿后第 <b>15</b> 天</td></tr>
+    </table>
+
+    <div class="quote" style="margin-top:20px;">
+      题解被 1991 年版<b>改了两处</b>，都在这一篇上：一是日期（十日→七日），二是「一周年」的含义（→「<b>改版</b>一周年」）。因为《新中华报》1937.01.29 就由《红色中华》改名而来，报龄已三年；1940.02.07 满岁的不是这张报，是它<b>1939.02.07「刷新第 1 号」的那次改版</b>。
+      <span class="src">—— 中央党史和文献研究院《〈毛泽东选集〉一至四卷第一版正文和题解的主要修订情况》</span>
+    </div>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这一天是<b>一张报纸的生日</b>，也是一场<b>已经开打的仗</b>。报庆只是由头：2 月初蒋介石已下令朱怀冰、石友三再攻太行冀南；山西的旧军正在打新军；南京那边，一个伪政府还有 52 天就要成立。</p>
+
+    <div class="timeline" style="margin-top:22px;">
+      <div class="tl-item"><div class="tl-date">1931.12.11 · 瑞金</div><div class="tl-body">《红色中华》创刊——本文所纪念那张报纸的最初前身。1935.11.25 红军到陕北后在瓦窑堡复刊。</div></div>
+      <div class="tl-item"><div class="tl-date">1937.01.29 · 延安</div><div class="tl-body">《红色中华》改名《新中华报》，续刊第 325 期；油印、五日刊、中华苏维埃中央政府机关报。同年 9.09 改铅印、陕甘宁边区政府机关报。至 1938.12.25 停刊（第 474 期）。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1939.02.07 · 延安</div><div class="tl-body">《新中华报》以<b>「刷新第 1 号」</b>复刊：五日刊改<b>三日刊</b>、四开四版、改用「中华民国」纪年，升格为<b>中共中央机关报</b>（兼边区政府、边区党委机关报）。同日社论《新中华报改革的意义》。至 1941.05.15 出满 230 号。</div></div>
+      <div class="tl-item gold"><div class="tl-date">1939.07.07 · 延安</div><div class="tl-body">中共中央《为抗战两周年纪念对时局宣言》，原表述为「坚持抗战到底——反对中途妥协！巩固国内团结——反对内部分裂！力求全国进步——反对向后倒退！」——本文开篇「去年『七七』纪念时提出的三大方针」即指此。</div></div>
+      <div class="tl-item"><div class="tl-date">1939.10.10 · 延安</div><div class="tl-body">毛泽东为中共中央起草《目前形势和党的任务》，把三句凝练成三个对仗口号：<b>坚持抗战，反对投降；坚持团结，反对分裂；坚持进步，反对倒退</b>。本文的用词即由此定型。</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.11 · 重庆</div><div class="tl-body">国民党五届六中全会把「政治限共为主、军事限共为辅」改为<b>「军事限共为主」</b>。同月公布《运用保甲组织防止异党活动办法》。</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12.01—07 · 晋西</div><div class="tl-body">阎锡山令决死二纵队对日「冬季攻势」，同时令旧军尾随夹击。<b>晋西事变</b>爆发；12.07 韩钧自隰县义棠镇电阎：「伯川先生：王陈二贼欺我太甚，我不能不实行自卫。将在外，君命有所不受。学生韩钧。」（据《山西牺牲救国同盟会纪略》）——本文「反对在山西进攻新军、摧残牺盟」，指的就是这件事，此时还在打。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.22 · 香港</div><div class="tl-body">高宗武、陶希圣由杜月笙安排离沪后，《大公报》以通栏标题<b>整版刊出汪日密约全文与原件照片</b>。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.23—26 · 青岛</div><div class="tl-body">汪精卫与王克敏、梁鸿志在日军代表参加与监督下会谈，定伪中央政府大纲、政纲、名称、国旗、首都，<b>议定 3 月 30 日在南京成立「国民政府」</b>。会谈前夕全城大检查，逮捕「可疑分子」三百余人。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.26 · 华盛顿</div><div class="tl-body">《日美通商航海条约》失效——美国 1939.07.26 通告终止，六个月期满，日本进入「无条约时代」。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.28 · 延安</div><div class="tl-body">中共中央《克服投降危险，力争时局好转》下达：「延安定二月一日召开反对汪精卫卖国协定的民众大会。」</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02 初 · 太行</div><div class="tl-body"><b>蒋介石令朱怀冰、石友三部再攻太行、冀南</b>，同时令黄河以南的 41 军、71 军渡河北上。本文写作时，命令已下、部队在动。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02.01 · 延安</div><div class="tl-body">延安民众讨汪拥蒋大会，各界三万余人；毛泽东作讲演（《团结一切抗日力量，反对反共顽固派》），并起草大会通电（《向国民党的十点要求》）。</div></div>
+      <div class="tl-item gold"><div class="tl-date">1940.02.07 · 延安</div><div class="tl-body"><b>同日两篇</b>：本文（729—730）与《〈中国工人〉发刊词》（727—728）。一篇给党中央机关报过改版周岁，一篇给中共中央职工运动委员会主办的《中国工人》月刊创刊——同一支笔，两张纸，两个读者。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02.09 · 冀南</div><div class="tl-body">八路军冀南、冀中、冀鲁豫部队反击石友三部——本文发表后两天。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02.18 · 磁县</div><div class="tl-body">朱怀冰部突袭北贾壁、大湾村，八路军伤亡 100 余人。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.03.05—09 · 磁武涉林</div><div class="tl-body">129 师等 13 个团反击，歼朱怀冰部万余人，<b>第一次反共高潮被打退</b>。同日（3.05）肖劲光、王若飞与阎锡山的谈判亦告成功。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.03.30 · 南京</div><div class="tl-body">汪伪「国民政府」宣告成立。<b>距本文 52 天</b>——本文写下「反对汪精卫的伪政府」时，那个政府还是日程表上的一行字。</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:22px;">
+      这一篇最容易读错的地方，是把「汪精卫的伪政府」当成一个<b>既成事实</b>来读。它不是。1940 年 2 月 7 日，青岛会谈刚谈完十二天，中央政治会议要到 3 月 20 日才开，政府在 3 月 30 日才挂牌。本文点的是一个<b>还没出生、但出生日期已定</b>的东西——所以那句话不是控诉，是<b>预报</b>。
+      <span class="src">—— 汪伪政权成立日程据青岛会谈（1940.01.23—26）决议与 1940.03.20—22 中央政治会议记录，见《中国通史》第十二卷近代后编及中国第二历史档案馆相关整理。</span>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">
+      「抗战」不是一个可以单独成立的政策。它是被「团结」与「进步」托着的一项主张——把托着它的两样东西抽走，<span class="q">这个词就只剩下读音</span>。
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 这是承重结构，不是并列清单</h4>
+        <p>开头五个短句（118 字）不解释方针内容，只说明<b>依赖关系</b>：「这是三位一体的方针，三者不可缺一。」接着是一句判定——「如果单单强调抗战而不强调团结和进步，那末，<b>所谓「抗战」</b>是靠不住的」。引号是关键：被抽掉两根柱子的抗战，已经不配叫抗战。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 每条方针都翻译成可点数的禁令</h4>
+        <p>三个「为了……就要反对……」后面挂着三张清单：<b>4／7／10</b>，全篇 22 个「反对」。没有一个抽象宾语——卖国协定、伪政府、「限制异党活动」的文件、咸榆公路、一万万元、九个小老婆。<b>立场被改写成一张可以被逐条核对的表</b>。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 最后一句把国家方针改写成编辑方针</h4>
+        <p>前十句都在谈国事，第十句突然转成一句短问：「《新中华报》第二年的政治方向是什么？」答案是六个字，加一句「以反对一切危害抗战的乌烟瘴气」。<b>宏观政策落到纸面上的最小单位，是一份具体的刊物、一个具体的版面</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">① 立题</div><div class="n-sub">三大方针<br>去年「七七」提出</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">② 定结构</div><div class="n-sub">三位一体<br>三者不可缺一</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">③ 推后果</div><div class="n-sub">缺项则抗战变质<br>投降／失败</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">④ 派清单</div><div class="n-sub">三个「为了…<br>就要反对…」</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">⑤ 立账目</div><div class="n-sub">4／7／10<br>共 21 项</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">⑥ 收口</div><div class="n-sub">不这样做＝空唤<br>本报第二年方向</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:20px;">
+      框架最反常的一处：<b>全篇没有一次「但是」，没有一次「因为」「所以」</b>。22 个「反对」、3 个「为了」、3 个「就要」——全是并列与递进。这不是省略，<b>并列本身就是论证</b>：它不给读者留出「抗战可以成立，团结可以缓办」这种句法位置。要反对其中任何一条，都得先跳出整段并列。
+      <span class="src">—— 「但是」「虽然」「因为」「所以」四词在本篇正文中的出现次数均为 0（据 1991 年版电子文本统计）；唯一问号出现在倒数第二句。</span>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <h3 class="sub-h">一、十一句：短—长—短</h3>
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">立论 1—5</div><div class="bar-track"><span class="bar-fill red" style="width:65.2%"></span></div><div class="bar-val">118 字</div></div>
+      <div class="bar-row"><div class="bar-lab">抗战 句6</div><div class="bar-track"><span class="bar-fill gold" style="width:26.5%"></span></div><div class="bar-val">48 字</div></div>
+      <div class="bar-row"><div class="bar-lab">团结 句7</div><div class="bar-track"><span class="bar-fill gold" style="width:54.1%"></span></div><div class="bar-val">98 字</div></div>
+      <div class="bar-row"><div class="bar-lab">进步 句8</div><div class="bar-track"><span class="bar-fill green" style="width:100%"></span></div><div class="bar-val">181 字</div></div>
+      <div class="bar-row"><div class="bar-lab">反证 句9</div><div class="bar-track"><span class="bar-fill red" style="width:16%"></span></div><div class="bar-val">29 字</div></div>
+      <div class="bar-row"><div class="bar-lab">转题 10—11</div><div class="bar-track"><span class="bar-fill blue" style="width:28.2%"></span></div><div class="bar-val">51 字</div></div>
+    </div>
+    <p class="lead" style="margin-top:14px;">句长曲线是 <b>26／15／34／29／14</b> —— 开头五句全是 14—34 字的短句，像敲钉子；第六句起一句比一句长，<b>第八句 181 字是全篇最长，一句里装了 10 个「反对」</b>；然后骤然收回到 29 字，再 15 字＋36 字收尾。<b>先短（立规矩）、再长（列账目）、最后短（下结论）</b>——全篇唯一的长句，就是全篇最重的地方。</p>
+
+    <h3 class="sub-h">二、三张清单：4 ／ 7 ／ 10</h3>
+    <div class="spectrum">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">抗战 · 反对 4 项</div>
+          <div class="spec-seg gold">团结 · 反对 7 项</div>
+          <div class="spec-seg green">进步 · 反对 10 项</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>表态与身份</b>投降 · 卖国协定 · 伪政府 · 暗藏的汉奸和投降派——「谁是投降者」</div>
+          <div class="spec-label"><b>正在发生的动作</b>分裂 · 磨擦 · 从背后进攻八路军新四军 · 破坏根据地 · 破坏边区 · 不承认合法地位 · 「限制异党活动」文件——「谁在动手」</div>
+          <div class="spec-label"><b>承诺 · 制度 · 风气</b>束之高阁 · 不实行遗嘱 · 集中营 · 取消言论自由 · 宪政官僚化 · 打新军摧残牺盟 · 拦路劫人 · 国难财与小老婆 · 贪官污吏土豪劣绅——「谁在把说过的话收回」</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;"><b>清单越长，说明这个词越容易被口头承认而实际取消。</b>「抗战」只需四项，因为投降有明确标志（汪精卫）；「进步」要列十项，因为没有人会公开反对「进步」——所以只能把它换算成十件具体的、可以被否认也可以被查证的事。三张清单还有一个隐含的递进：<b>对象从「表态」走到「动作」，再走到「制度与风气」</b>，越来越难在报纸上指控，也越来越难被否认。</p>
+
+    <h3 class="sub-h">三、词频：22 个「反对」，零个「日本」</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">词</th><th class="c2">次数</th><th>读法</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">反对</td><td class="c2"><b>22</b></td><td>每 24 字一次。21 次是清单项（4／7／10），第 22 次在收尾——「以反对一切危害抗战的乌烟瘴气」</td></tr>
+        <tr><td class="c1">抗战</td><td class="c2">9</td><td>与「进步」并列第一，但其中 3 次出现在「所谓『抗战』」这类<b>被限定</b>的语境里</td></tr>
+        <tr><td class="c1">进步</td><td class="c2">9</td><td>清单最长（10 项）而词频未涨——它被摊到具体事情上去了，这正是本篇的手法</td></tr>
+        <tr><td class="c1">团结</td><td class="c2"><b>6</b></td><td>少三分之一；最短的一节（句 7，98 字）也是「团结」</td></tr>
+        <tr><td class="c1">为了／就要</td><td class="c2">3／3</td><td>三个「为了 X，就要反对 Y」，全篇的骨架，一字不差地重复三遍</td></tr>
+        <tr><td class="c1">投降</td><td class="c2">3</td><td>两次指汪精卫，一次指「抗战会改为投降」的可能——同一个词，两种时间</td></tr>
+        <tr><td class="c1">汪精卫</td><td class="c2">2</td><td>连名带姓，两次，都在「反对」的宾语位；没有一次被叫作「汪逆」</td></tr>
+        <tr><td class="c1">八路军／新四军</td><td class="c2">2／1</td><td>只在「团结」那一节出现——被从背后进攻的是它们</td></tr>
+        <tr><td class="c1">日本</td><td class="c2"><b>0</b></td><td rowspan="3">一篇 1940 年 2 月的抗战文章：<b>零「日本」、零「国民党」、零「蒋介石」、零「顽固派」、零「革命」、零「人民」、零「群众」、零「统一战线」</b>。敌人在场，名字不在场</td></tr>
+        <tr><td class="c1">国民党</td><td class="c2"><b>0</b></td></tr>
+        <tr><td class="c1">蒋介石／顽固派</td><td class="c2"><b>0／0</b></td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:14px;">零「日本」这件事要停一下。<b>上一篇（2.01 通电，2377 字）也是零「日本」。</b>不是回避，是选靶：把敌人写成「投降派」「磨擦」「倒退」这些<b>行为</b>，而不是写成一支军队或一个民族——因为本文要说服的对象在阵线内部，不在阵线对面。全篇在说国民党正在做的事，却一次不提「国民党」：<b>指控越具体，被指控者越抽象。</b></p>
+
+    <h3 class="sub-h">四、文体核对：一篇没有转折的文章</h3>
+    <table class="plain">
+      <thead><tr><th>项目</th><th class="c3">数值</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>自然段／句数</td><td class="c3">1／11</td><td>不分节、不编号；段内靠「为了……」三次起句自行分块</td></tr>
+        <tr><td>「但是」／「虽然」</td><td class="c3">0／0</td><td>零转折。任何一条都不能被读成「虽然……但是可以缓办」</td></tr>
+        <tr><td>「因为」／「所以」</td><td class="c3">0／0</td><td>零因果。唯一的推理藏在「如果……那末」与「不这样做，没有……」两句条件句里</td></tr>
+        <tr><td>问号</td><td class="c3">1</td><td>「《新中华报》第二年的政治方向是什么？」——全篇唯一把话交回给具体经办人的地方</td></tr>
+        <tr><td>感叹号／分号</td><td class="c3">0／0</td><td>语气是一条直线：不喊，不停顿，只列举</td></tr>
+        <tr><td>注释</td><td class="c3">5 条</td><td>4 条为「见本卷某篇注」的交叉索引，只有〔3〕〔4〕两条给了新事实（牺盟会与三青团封锁站口）</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:14px;"><b>零转折、零因果、零感叹——全篇的语气是一张表，不是一段话。</b>唯一的问号出现在转向报纸本身的那一句，也是唯一把「怎么办」交回给具体人的地方。这与上一篇通电恰成对照：那篇 11 次「宜」、10 个「此应请采纳实行者X」，是一份对外的文书；这篇 0 次「宜」、0 次「请」，是一份对内的交代。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>名义顺序与承重顺序，方向是相反的</h4>
+          <p>标题和第一句的顺序是「抗战、团结、进步」；但论证的方向是反的——<b>被支撑的是抗战，支撑它的是团结和进步</b>。「缺乏团结和进步纲领的抗战，终久会有一天要改为投降」：这句话里，抗战是那个会塌的东西。</p>
+          <p>这个不对称不是笔误，是全文的技术核心：<b>把最不容置疑的目标放在句首当招牌，把最需要争取的条件放在它身后当支架。</b>于是谁想反对团结或反对进步，就得先承认自己在拆抗战——举证责任被悄悄搬到了对方身上。这套做法在谈判、提案、向上要资源时同样好用，但它也是这类修辞最容易被滥用的地方：任何要求都能自称「是某某的必要条件」，一旦用滥，「必要条件」就退化成一个形容词。</p>
+          <p><b>我的判断</b>：读这篇要读的不是标题的排序，是论证的依赖方向。毛自己在六天前的讲演里把「统一」改写成函数——「只有进步才能团结，只有团结才能抗日，只有进步、团结、抗日才能统一」；本文是同一公式的压缩版：<b>进步在前，团结在中，抗战在后</b>。谁把「团结」单独提到「进步」之前当成必须先满足的前提，这篇就被用反了——而那正是 1940 年 2 月重庆方面最想要的读法。</p>
+          <p class="mv">迁移：先立共识项，再把争议项写成共识项的必要条件。不是说服，是重新布线——但布线之外要能回答一句：这个「必要条件」凭什么是必要的？答不上来，就只是话术。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>22 个「反对」，没有一个抽象宾语</h4>
+          <p>试试把它改成常见写法：「反对错误倾向，反对不良作风，反对倒退思想。」一句话说完，而且对方可以回答「我也反对」。</p>
+          <p>本文不这么写。它写「反对把进步青年送进集中营」「反对三民主义青年团在咸榆公路、陇海铁路一带拦路劫人」「反对讨九个小老婆和发一万万元国难财」。<b>22 个「反对」，后面全部跟着可指认之物</b>：一份条约、一个伪政府、一份文件、一条公路、一笔钱、一个人数。抽象的口号无法被反驳，也无法被核对；具体的指控可以被否认，但否认就得进入事实层面——<b>这是把对手从「立场之争」拖进「事实之争」的标准动作</b>。</p>
+          <p>代价同样清楚：<b>清单是可以被逐条检查的，列清单的人也在被检查。</b>你写了十项，别人就可以拿这十项回来量你。所以这种文体的真正约束力不在骂得狠，在于它把作者自己也一起绑上了。</p>
+          <p class="mv">迁移：写目标、写承诺、写复盘，凡是希望「以后还能被引用」的句子，都应该长成清单的样子——具体到可以被证伪。反过来，凡是只想表态、不想被追责的场合，人才会写「高度重视」「持续加强」。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>525 字：不是压缩，是换读者</h4>
+          <p>一个月之内，同一个人写了《中国革命和中国共产党》（约 1.6 万字）、《新民主主义论》（约 2.6 万字），然后是这篇 525 字。同一场危机，三种长度。差别不在重要性——<b>在发表位置</b>。长文给干部读、给学校当课本；这一篇是给一张三日报的周年号，读者的耐心以「版」计，而且读的时候正被别的东西打断。</p>
+          <p>更值得注意的是结尾：<b>它没有把国家方针再讲一遍，而是把方针翻译成了「本报第二年做什么」。</b>一个组织最常犯的错，是把上级文件原样转发给基层；这篇示范的是另一种做法——把「坚持团结进步」翻译成「我们这个版面从明天起强调什么、反对什么」。翻译完成的标志，是收件人知道明天早上第一件事做什么。</p>
+          <p class="mv">迁移：同一套内容给老板（一页）、给团队（十页）、给公开读者（一千字），应当<b>重写</b>而不是<b>删减</b>。删减留下的是「少了什么的版本」；重写留下的是「为这个读者重新组装的版本」。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+
+      <div class="golden-item">
+        <div class="text">抗战、团结、进步，这是共产党在去年「七七」纪念时提出的三大方针。这是三位一体的方针，三者不可缺一。</div>
+        <div class="ctx">开篇（729 页）。全篇的题目、来源、结构，一句话交代完。「三位一体」是宗教词汇（Trinity），用在这里是把三个政治口号说成一个不可分割的东西，而不是三件可以分别取舍的事——全篇的力气都花在让「不可分割」成立上。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">如果单单强调抗战而不强调团结和进步，那末，所谓「抗战」是靠不住的，是不能持久的。</div>
+        <div class="ctx">（729 页）。引号是关键：加了引号的「抗战」已经不是抗战，是一个被架空的词。全篇的论证全部从这一对引号里长出来——先把它降格为一个「所谓」，再说明它为什么降格。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">缺乏团结和进步纲领的抗战，终久会有一天要改为投降，或者归于失败。</div>
+        <div class="ctx">（729 页）。全篇最硬的一句判决。<b>「终久」为 1991 年版原文字形</b>（不作「终究」），引用时应保留。「或者」两个字留了余地：不一定投降，也可能只是失败——两种结局，一条原因。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">不这样做，没有团结和进步，所谓抗战只是空唤，抗日胜利是没有希望的。</div>
+        <div class="ctx">（730 页）。三张清单之后的收口。「空唤」这个词在毛的文字里不常见，比「空谈」更冷：不是说得不对，是喊了没人应。全篇唯一一句把三个词同时否定的话，也是唯一一处「没有希望」。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">《新中华报》第二年的政治方向是什么？就是强调团结和进步，以反对一切危害抗战的乌烟瘴气，以期抗日事业有进一步的胜利。</div>
+        <div class="ctx">末句（730 页）。全篇唯一的问句，也是唯一落到具体经办单位的一句。一篇谈国事的文章，最后收在一张报纸的第二年——这是本篇最容易被略过、也最见手艺的地方：政策的最后一步不是传达，是翻译。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">新民主主义的宪政</div>
+        <p>一九四〇年二月二十日，<b>731 页起</b>，延安各界宪政促进会成立大会上的演说。<b>十三天后</b>。本文「进步」清单里的第六项——「反对把宪政运动变为少数人包办的官僚事业」——被单独拿出来讲了一整篇。那篇把「促」字拆开讲（「这个『促』字……是孙中山先生发明的」），并明说：宪政不是等来的，是促出来的。<b>本篇是纲领，那篇是用法。</b></p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《中国工人》发刊词</div>
+        <p>一九四〇年二月七日，<b>727—728 页</b>——<b>同一天、同一卷、隔两页</b>。本篇 525 字给党中央机关报，讲三大方针的依赖结构；那篇给工人月刊，讲「以通俗的言语解释许多道理给工人群众听」，还有一句极不像政治文件的话：「我希望这个报纸好好地办下去，<b>多载些生动的文字，切忌死板、老套</b>，令人看不懂，没味道，不起劲。」两篇合读，是同一天里「对上讲结构、对下讲文风」的分工。</p>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:16px;">📌 <b>序列说明</b>：本序列此前从第 47 篇（721—726）直接跳到本篇（729—730），<b>漏掉了 727—728 页这篇同日短文《〈中国工人〉发刊词》</b>。是否补做，待定。</p>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>如果只考核第一根柱子，另外两根会变成什么</h4>
+      <div class="q">一 · 你正在推的那件事，如果只考核第一根柱子（营收、DAU、上线时间），另外两根会怎样退化？本篇的答案是：它们不会消失，会<b>变成代价</b>——「终久会有一天要改为投降，或者归于失败」。</div>
+      <div class="q">二 · 把你最近一次表态改写成清单。把「我要重视质量」「要加强协作」换成 5 条可以被别人逐条核对、也可以被别人逐条否认的动作。写不出来，说明这句话目前还只是「空唤」。</div>
+      <div class="q">三 · 你上一次「转发」上级文件给团队，是原文转发还是重写？试着做一次本文结尾做的事：不重复方针，只写「我们这个组从下周起强调什么、停止什么」。</div>
+      <div class="hint">提示：这篇只有 525 字，是全卷最容易被当成「口号文」略过的一篇。真正的技术在三处：一是<b>用引号把「抗战」降格</b>（所谓「抗战」），二是<b>用 22 个具体宾语代替抽象口号</b>，三是<b>结尾把国策翻译成编辑方针</b>。三处合起来，是一份 525 字的「执行说明书」——不是写给敌人看的，是写给明天要上班的人看的。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 · 第 48 篇</div>
+    <div>一九九一年版 · 729—730 页 · 汉字 525 · 一自然段十一句 · 注释 5 条</div>
+  </div>
+
+</div>
+
+</body>
+</html>

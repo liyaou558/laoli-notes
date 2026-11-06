@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>08 · 必须注意经济工作 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:30px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.4;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 22px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-body{color:var(--ink);font-size:15px;margin-top:3px;}
+.tl-body .note{color:var(--ink-2);font-size:13px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain-title{font-size:14px;font-weight:700;letter-spacing:1px;margin:6px 0 8px;}
+.chain-title.bad{color:var(--red);}
+.chain-title.good{color:var(--green);}
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 结构骨架 ===== */
+.skeleton{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+.sk-row{display:flex;border-bottom:1px solid var(--line);min-width:0;}
+.sk-row:last-child{border-bottom:none;}
+.sk-tag{flex:0 0 92px;background:var(--bg-2);color:var(--red-deep);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;padding:12px 6px;text-align:center;letter-spacing:1px;}
+.sk-body{flex:1;min-width:0;padding:12px 16px;font-size:14px;color:var(--ink);}
+.sk-body b{color:var(--red-deep);}
+.sk-body .list{color:var(--ink-2);font-size:13px;margin-top:4px;line-height:1.8;}
+.sk-body .list i{font-style:normal;color:var(--gold);}
+@media(max-width:560px){.sk-tag{flex:0 0 60px;font-size:12px;}.sk-row{flex-direction:column;}.sk-tag{width:100%;border-bottom:1px solid var(--line);}}
+
+/* 窄屏逐档缩小字号（Chrome CJK 断行估算偏差兜底，留出渲染余量） */
+@media(max-width:560px){
+  .tl-body{font-size:14px;}
+  .tl-body .note{font-size:12px;}
+}
+
+/* ===== 数据卡（本篇定制） ===== */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px;}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 12px;text-align:center;min-width:0;overflow:hidden;}
+.stat .v{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--red-deep);line-height:1.35;}
+.stat .v small{font-size:13px;color:var(--gold);font-weight:700;}
+.stat .k{font-size:12px;color:var(--ink-2);margin-top:7px;line-height:1.65;}
+.stat.gold .v{color:var(--gold);}
+.stat.green .v{color:var(--green);}
+.stat.blue .v{color:var(--blue);}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:1fr 1fr 1fr;}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 4px;font-weight:700;font-size:13px;letter-spacing:1px;}
+.spec-seg.red{background:var(--red);}
+.spec-seg.form{background:var(--gold);}
+.spec-seg.subj{background:var(--green);}
+.spec-seg.obj{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:13px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:14px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10.5px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:12px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:10px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+.spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+
+/* ===== 窄列 CJK 断行兜底（防 Chrome 对「」『』（）等字符断行估算偏差导致的 1-3px 溢出） ===== */
+b,strong,i,em,span,.tl-body,.spec-label,.sk-body,.stat,.stat .k,.golden-item .text,.quote,.next-card p,.obs-body p{overflow-wrap:anywhere;}
+
+/* maoxuan-original:start */
+.original-text {margin-top:46px;border:1px solid var(--line);border-radius:8px;background:var(--card);min-width:0;}
+.original-text > summary {padding:18px 20px;cursor:pointer;color:var(--red-deep);font-size:18px;font-weight:700;}
+.original-text > summary:focus-visible,.original-text a:focus-visible {outline:3px solid var(--red);outline-offset:4px;}
+.original-text[open] > summary {border-bottom:1px solid var(--line);}
+.original-text .original-source {padding:16px 22px 0;font-size:13px;color:var(--ink-2);}
+.original-text .original-body {padding:18px 22px 28px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;line-height:2;overflow-wrap:anywhere;}
+.original-body p {margin:1em 0;}
+.original-body .a {text-indent:2em;}
+.original-body h3,.original-body h4,.original-body h5 {margin:1.6em 0 .8em;font-size:1.15em;line-height:1.7;text-align:center;}
+.original-body .a0,.original-body .a5 {text-align:center;text-indent:0;}
+.original-body .zs {font-size:.9em;color:var(--ink-2);text-indent:0;}
+.original-body a {color:var(--red-deep);text-decoration:underline;text-underline-offset:3px;}
+.original-body [id] {scroll-margin-top:24px;}
+.original-body [id]:target {background:var(--bg-2);}
+@media(max-width:560px){.original-text > summary{padding:15px;}.original-text .original-body{padding:12px 15px 22px;}.original-text .original-source{padding:14px 15px 0;}}
+/* maoxuan-original:end */
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">捌</div>
+    <h1>必须注意经济工作</h1>
+    <div class="sub">毛泽东选集 · 第一卷 · 第八篇 · <b>一九三三年八月</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇　名</th><td>必须注意经济工作——系毛泽东 1933 年 8 月 12 日在中央革命根据地南部十七县经济建设大会上所作报告《粉碎敌人五次「围剿」与苏维埃经济建设任务》的一部分</td></tr>
+      <tr><th>写作时间</th><td>1933 年 8 月 12 日，江西瑞金叶坪。8 月 12 日至 15 日召开南部十七县经济建设大会，毛泽东在大会第一天作报告；8 月 20 日至 23 日北部十一县经济建设大会在博生县召开，由吴亮平宣读同一报告。本篇即南部大会报告的一部分</td></tr>
+      <tr><th>最初发表</th><td>非独立报刊文章。报告以《粉碎敌人五次「围剿」与苏维埃经济建设任务》为题流传，韶山毛泽东图书馆藏有该报告油印本；本篇以《必须注意经济工作》为题收入《毛泽东选集》第一卷（1951 年初版即收录，1991 年第二版重新校订）</td></tr>
+      <tr><th>收录版本</th><td>《毛泽东选集》第一卷（人民出版社 1991 年版）。篇末题注：「这是毛泽东在一九三三年八月十二日至十五日召开的中央革命根据地南部十七县经济建设大会上所作的报告的一部分。」</td></tr>
+      <tr><th>篇　幅</th><td>约三千八百字，无分节标题，内容分五个层次：为什么必须建设（五个「为着」）→ 建设什么（公债、合作社、谷仓、粮食调剂、农业手工业、特产输出、对外贸易）→ 能不能建成（成绩单）→ 建设与战争的关系 → 领导方式和工作方法（四点）。附编者注 4 条</td></tr>
+      <tr><th>历史坐标</th><td>宁都会议（1932.10）毛泽东被解除红一方面军总政委职务、专任中央政府主席之后；临时中央迁入瑞金推行「左」倾政策（1933.01）与第四次反「围剿」胜利（1933.02—03）之后、第五次「围剿」正式发动（1933.09）前夕；苏区经济因封锁与「左」的政策严重恶化之时。与翌年 1 月二苏大报告《我们的经济政策》并称苏区经济建设「动员—政策」双子篇，被公认为毛泽东早期经济思想的代表性文献</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">上一篇是<b>给认识论立规矩</b>，这一篇是<b>给根据地算经济账</b>。1933 年的毛泽东正处于政治生涯的低谷：十个月前，宁都会议以「右倾主要危险」的罪名解除了他的军权；临时中央迁入瑞金后，「左」的政策加上国民党的经济封锁，把苏区经济逼到「工商业凋零，食盐、布匹、药品等日用品极端缺乏，价格昂贵，部分地方因缺粮发生饥荒」的地步。就在第五次「围剿」的阴影压顶之际，这位「靠边站」的中央政府主席，用一场十七县大会和一份报告，给苏区开出了经济建设的药方——<b>而报告中有一句话，几乎是替自己辩白的：「见到谁谈经济建设，就要骂为『右倾』」</b>。骂人「右倾」的人，如今被「右倾」者用事实回敬。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1932 年 10 月 · 宁都会议，毛泽东被解军权</div>
+        <div class="tl-body">苏区中央局在宁都小源村开会（10 月 3—8 日），指责毛泽东「诱敌深入」是「专去等待敌人进攻的右倾主要危险」。10 月 12 日中革军委通令：「工农红军第一方面军兼总政治委员毛泽东同志，为了苏维埃工作的需要，暂回中央政府主持一切工作。」毛泽东赴长汀福音医院「养病」，临别对周恩来说：「军事工作我还愿意做，前方军事急需，何时电召便何时来。」<span class="note">——本篇开头「见到谁谈经济建设，就要骂为『右倾』」，骂的就是他戴过的这顶帽子。</span></div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933 年 1 月 · 临时中央迁入瑞金</div>
+        <div class="tl-body">博古负总责的临时中央从上海迁入中央苏区，「左」倾政策全面推行：反「罗明路线」、反「江西罗明路线」（邓、毛、谢、古被整肃）；查田运动发生严重「左」的错误；脱离实际的劳动法抬高用工成本。毛泽东专做政府工作，处境微妙但未消沉。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933 年 2—3 月 · 第四次反「围剿」胜利</div>
+        <div class="tl-body">周恩来、朱德指挥黄陂、草台岗伏击战，歼敌近三个师、俘敌万余人；中央苏区与闽浙赣连成一片，红军扩大到八万余人。但胜利被临时中央解释为「进攻路线」之功——毛泽东的「防御路线」依然背着「右倾」之名。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1933 年春夏之交 · 经济恶化到极点</div>
+        <div class="tl-body">国民党的经济封锁加「左」的经济政策，使苏区「工商业凋零」，盐、布、药品奇缺价昂，部分地区缺粮饥荒。奸商盘剥触目惊心：万安、泰和农民五角钱一担谷卖出，商人运到赣州卖四块钱，「赚去了七倍」；梅县一块钱七斤的盐，运进苏区「一块钱卖十二两」——「这不是吓死人的剥削吗？」</div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-date">1933 年 8 月 12—15 日 · 瑞金叶坪，南部十七县大会</div>
+        <div class="tl-body">中华苏维埃临时中央政府召开中央苏区南部十七县经济建设大会（瑞金、石城、博生、兴国、赣县、于都、会昌、寻乌、长汀、上杭等十七县，三百余人出席、百余人旁听），林伯渠主持。毛泽东作《粉碎敌人五次「围剿」与苏维埃经济建设任务》报告——<b>本篇即该报告的一部分</b>。大会成果惊人：十七县认销经济建设公债 353.65 万元、筹款 13.58 万元、建粮食调剂支局 34 个分局 6 个、成立对外贸易局 4 个、建谷仓仓容 46.3 万担；瑞金代表当场把筹款数从 13 万元加码到 20 万元，各地还一致要求中央政府增发 200 万元公债。</div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">1933 年 8 月 20—23 日 · 博生县，北部十一县大会</div>
+        <div class="tl-body">北部十一县经济建设大会召开，吴亮平宣读毛泽东的报告；到会各县认销公债 161.5 万元、发展粮食合作社社员 15.2 万人、消费合作社社员 13.7 万人。南北两次大会后，中央苏区掀起经济建设热潮。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1933 年 9 月 · 第五次「围剿」开始，紧迫性兑现</div>
+        <div class="tl-body">蒋介石调集一百万兵力发动第五次「围剿」（其中五十万围攻中央苏区），采用持久战与堡垒主义新战术，9 月 28 日占领黎川；共产国际军事顾问李德到瑞金，与博古一起控制红军指挥权——一年后中央红军被迫长征。本篇为备战算的每一笔账，都被历史验证了分量。<span class="note">本篇注释〔1〕：「第五次『围剿』的正式开始是在一九三三年九月间，但从一九三三年夏季，蒋介石就在积极部署这次进攻。」</span></div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px;">把这篇放回它的来处：它不是一个经济学家的书斋论文，而是<b>一个被剥夺军权的人，在自己还能掌控的政府岗位上，为一场即将到来的生死决战筹措「物质基础」</b>。它要说服的对象，是那些「见到谁谈经济建设，就要骂为『右倾』」的教条主义者；它使用的武器，不是理论争辩，而是五角钱与四块钱的差价、十二两盐与七斤盐的对照、秋收增加两成的事实。三十年后再看，毛泽东在苏区攒下的这套「经济工作方法」，后来成了他治国理政的基本盘——从陕甘宁的「自己动手、丰衣足食」，到新中国的五年计划，源头都在叶坪村这间会场里。</p>
+  </section>
+
+  <!-- 3 核心论点 -->
+  
+<!-- maoxuan-original:start -->
+<details class="original-text" id="original-text">
+<summary>原文全文（点击展开 / 收起）</summary>
+<p class="original-source">来源：用户提供的《毛泽东选集》电子书；保留正文及原书注释。</p>
+<div class="original-body"><div xmlns="http://www.w3.org/1999/xhtml" class="div">
+    <h3 class="h3"><span class="c3">必须注意经济工作</span><a class="zy" href="#original-08-id0a" id="original-08-id0">*</a></h3>
+
+    <p class="a0"><span class="f2">（一九三三年八月十二日）</span></p>
+
+    <p class="a">革命战争的激烈发展，要求我们动员群众，立即开展经济战线上的运动，进行各项必要和可能的经济建设事业。为什么？现在我们的一切工作，都应当为着革命战争的胜利，首先是粉碎敌人第五次“围剿”<a class="zy" href="#original-08-id1a" id="original-08-id1">〔1〕</a>的战争的彻底胜利；为着争取物质上的条件去保障红军的给养和供给；为着改善人民群众的生活，由此更加激发人民群众参加革命战争的积极性；为着在经济战线上把广大人民群众组织起来，并且教育他们，使战争得着新的群众力量；为着从经济建设去巩固工人和农民的联盟，去巩固工农民主专政，去加强无产阶级的领导。为着这一切，就需要进行经济方面的建设工作。这是每个革命工作人员必须认识清楚的。过去有些同志认为革命战争已经忙不了，哪里还有闲工夫去做经济建设工作，因此见到谁谈经济建设，就要骂为“右倾”。他们认为在革命战争环境中没有进行经济建设的可能，要等战争最后胜利了，有了和平的安静的环境，才能进行经济建设。同志们，这些意见是不对的。抱着这些意见的同志，他们不了解如果不进行经济建设，革命战争的物质条件就不能有保障，人民在长期的战争中就会感觉疲惫。你们看，敌人在进行经济封锁，奸商和反动派在破坏我们的金融和商业，我们红色区域的对外贸易，受到极大的妨碍。我们如果不把这些困难克服，革命战争不是要受到很大的影响吗？盐很贵，有时买不到。谷子秋冬便宜，春夏又贵得厉害。这些情形，立即影响到工农的生活，使工农生活不能改良。这不是要影响到工农联盟这一个基本路线吗？工农群众如果对于他们的生活发生不满意，这不是要影响到我们的扩大红军、动员群众参加革命战争的工作吗？所以，这种以为革命战争的环境不应该进行经济建设的意见，是极端错误的。有这种意见的人，也常说一切应服从战争，他们不知道如果取消了经济建设，这就不是服从战争，而是削弱战争。只有开展经济战线方面的工作，发展红色区域的经济，才能使革命战争得到相当的物质基础，才能顺利地开展我们军事上的进攻，给敌人的“围剿”以有力的打击；才能使我们有力量去扩大红军，把我们的战线开展到几千里路的地方去，使我们的红军毫无顾虑地在将来顺利的条件下去打南昌，打九江，使我们的红军减少自己找给养的这一部分工作，专心一意去打敌人；也才能使我们的广大群众都得到生活上的相当的满足，而更加高兴地去当红军，去做各项革命工作。必须这样干才叫做服从战争。现在各地革命工作人员中，还有许多人不明了经济建设工作在革命战争中的重要性，还有许多地方政府没有着重讨论经济建设的问题。各地政府的国民经济部的组织还不健全，有些连部长还没有找到，或者也只拿工作能力较差的人去凑数。合作社的发展还只在开始的阶段，调剂粮食的工作也还只在一部分地方做起来。各地还没有把经济建设这个任务宣传到广大群众中去（这是十分紧要的），还没有在群众中造成为着经济建设而斗争的热烈的空气。这些情形，都是由于忽视经济建设的重要性而来的。我们一定要经过同志们在这次会议上的讨论和会后回去的传达，在全体政府工作人员中，在广大工农群众中，造成一种热烈的经济建设的空气。要大家懂得经济建设在革命战争中的重要性，努力推销经济建设公债，发展合作社运动，普遍建设谷仓，建设备荒仓。每个县要设立一个粮食调剂分局，重要的区，重要的圩场<a class="zy" href="#original-08-id2a" id="original-08-id2">〔2〕</a>，要设粮食调剂支局。一方面要使我们的粮食，在红色区域内由有余的地方流通到不足的地方，不使有的地方成了堆，有的地方买不到，有的地方价格过低，有的地方价格又过高；一方面要把我区多余的粮食，有计划地（不是无限制地）运输出口，不受奸商的中间剥削，从白区购买必需品进来。大家要努力去发展农业和手工业的生产，多造农具，多产石灰，使明年的收获增多，恢复钨砂、木头、樟脑、纸张、烟叶、夏布、香菇、薄荷油等特产过去的产量，并把它们大批地输出到白区去。</p>
+
+    <p class="a">从出入口贸易的数量来看，我们第一个大宗出口是粮食。每年大约有三百万担谷子出口，三百万群众中每人平均输出一担谷交换必需品进来，不会是更少的吧。这笔生意是什么人做的？全是商人在做，商人在这中间进行了残酷的剥削。去年万安、泰和两县的农民五角钱一担谷卖给商人，而商人运到赣州卖四块钱一担，赚去了七倍。又看三百万群众每年要吃差不多九百万块钱的盐，要穿差不多六百万块钱的布。这一千五百万元盐、布的进口，过去不消说都是商人在那里做的，我们没有去管过。商人在这中间的剥削真是大得很。比如商人到梅县买盐，一块钱七斤，运到我区，一块钱卖十二两。这不是吓死人的剥削吗？像这样的事情，我们再不能不管了，以后是一定要管起来。我们的对外贸易局在这方面要尽很大的努力。</p>
+
+    <p class="a">三百万元经济建设公债的发行怎样使用呢？我们打算这样使用：一百万供给红军作战费，两百万借给合作社、粮食调剂局、对外贸易局做本钱。其中又以小部分用去发展生产，大部分用去发展出入口贸易。我们的目的不但要发展生产，并且要使生产品出口卖得适当的价钱，又从白区用低价买得盐布进来，分配给人民群众，这样去打破敌人的封锁，抵制商人的剥削。我们要使人民经济一天一天发展起来，大大改良群众生活，大大增加我们的财政收入，把革命战争和经济建设的物质基础确切地建立起来。</p>
+
+    <p class="a">这是一个伟大的任务，一个伟大的阶级斗争。但是我们问一问，这个任务在激烈的战争环境内，是不是能完成呢？我想是能完成的。我们并不是说要修一条铁路通龙岩，暂时也不是说要修一条汽车道通赣州。我们不是说粮食完全专卖，也不是说一千五百万元盐布生意都由政府经管不准商人插手。我们不是这样说，也不是这样做的。我们说的做的，是发展农业和手工业生产，输出粮食和钨砂，输入食盐和布匹，暂时从两百万资金再加上群众的股本做起。这些是不应做、不能做、做不到的事吗？这些工作我们已经开始做了，并且已经做出了成绩。今年秋收比去年秋收增加了百分之二十至二十五，超过了增加两成秋收的预计。手工业方面，农具和石灰的生产在恢复过程中，钨砂的生产开始恢复。烟、纸和木头的生产也开始有了点生气。粮食调剂今年有了不少的成绩。食盐入口也开始有部分的工作了。这些成绩，就是我们坚信将来能够发展的基础。人们说要到战争完结了才能进行经济建设，而在现在则是不可能的，这不是明显的错误观点吗？</p>
+
+    <p class="a">因此也就明白，在现在的阶段上，经济建设必须是环绕着革命战争这个中心任务的。革命战争是当前的中心任务，经济建设事业是为着它的，是环绕着它的，是服从于它的。那种以为经济建设已经是当前一切任务的中心，而忽视革命战争，离开革命战争去进行经济建设，同样是错误的观点。只有在国内战争完结之后，才说得上也才应该说以经济建设为一切任务的中心。在国内战争中企图进行和平的，为将来所应有而现在所不应有的，为将来的环境所许可而现在的环境不许可的那些经济建设工作，只是一种瞎想。当前的工作是战争所迫切地要求的一些工作。这些工作每件都是为着战争，而不是离开战争的和平事业。如果同志们中间有离开战争进行经济建设的想法，那就应立刻改正。</p>
+
+    <p class="a">没有正确的领导方式和工作方法，要迅速地开展经济战线上的运动，是不可能的。这也是一个重要的问题，也要在这次会议得到解决。因为同志们回去，不但要立即动手去做许多工作，并且要指导许多工作人员一道去做。尤其是乡和市这一级的同志，以及合作社、粮食局、贸易局、采办处这些机关里的同志，他们是亲手动员群众组织合作社、调剂和运输粮食、管理出入口贸易的实际工作人员，如果他们的领导方式不对，不能采取各种正确的有效的工作方法，那就会立刻影响到工作的成效，使我们各项工作不能得到广大群众的拥护，不能在今年秋冬和明年春夏完成中央政府在经济建设上的整个计划。因此，我要向同志们指出下面的几点：</p>
+
+    <p class="a">第一，从组织上动员群众。首先是各级政府的主席团、国民经济部和财政部的同志，要把发行公债，发展合作社，调剂粮食，发展生产，发展贸易这些工作，经常地放在议事日程上面去讨论，去督促，去检查。其次，要推动群众团体，主要的是工会和贫农团。要使工会动员它的会员群众都加入经济战线上来。贫农团是动员群众发展合作社、购买公债的一个有力的基础，区政府和乡政府要用大力去领导它。其次，要经过以村子、屋子为单位的群众大会去做经济建设的宣传，在宣传中要把革命战争和经济建设的关系讲得十分明白，要把改良群众的生活，增加斗争的力量，讲得十分实际。号召群众购买公债，发展合作社，调剂粮食，巩固金融，发展贸易，号召他们为着这些口号而斗争，把群众的热情提高起来。假如不这样地从组织上去动员群众和宣传群众，即是说，各级政府的主席团、国民经济部和财政部不着力抓着经济建设的工作去讨论、检查，不注意推动群众团体，不注意开群众大会做宣传，那末，要达到目的是不可能的。</p>
+
+    <p class="a">第二，动员群众的方式，不应该是官僚主义的。官僚主义的领导方式，是任何革命工作所不应有的，经济建设工作同样来不得官僚主义。要把官僚主义方式这个极坏的家伙抛到粪缸里去，因为没有一个同志喜欢它。每一个同志喜欢的应该是群众化的方式，即是每一个工人、农民所喜欢接受的方式。官僚主义的表现，一种是不理不睬或敷衍塞责的怠工现象。我们要同这种现象作严厉的斗争。另一种是命令主义。命令主义者表面上不怠工，好像在那里努力干。实际上，命令主义地发展合作社，是不能成功的；暂时在形式上发展了，也是不能巩固的。结果是失去信用，妨碍了合作社的发展。命令主义地推销公债，不管群众了解不了解，买不买得这样多，只是蛮横地要照自己的数目字去派，结果是群众不喜欢，公债不能好好地推销。我们一定不能要命令主义，我们要的是努力宣传，说服群众，按照具体的环境、具体地表现出来的群众情绪，去发展合作社，去推销公债，去做一切经济动员的工作。</p>
+
+    <p class="a">第三，经济建设运动的开展，需要有很大数量的工作干部。这不是几十几百人的事，而是要有几千人几万人，要把他们组织起来，训练起来，送到经济建设的阵地上去。他们是经济战线上的指挥员，而广大群众则是战斗员。人们常常叹气没有干部。同志们，真的没有干部吗？从土地斗争、经济斗争、革命战争中锻炼出来的群众，涌出来了无数的干部，怎么好说没有干部呢？丢掉错误的观点，干部就站在面前了。</p>
+
+    <p class="a">第四，经济建设在今天不但和战争的总任务不能分离，和其他的任务也是不能分离的。只有深入查田运动<a class="zy" href="#original-08-id3a" id="original-08-id3">〔3〕</a>，才能彻底地消灭封建半封建的土地所有制，发展农民的生产的积极性，使广大农民迅速地走入经济建设的战线上来。只有坚决地实行劳动法，才能改善工人群众的生活，使工人群众积极地迅速地参加经济建设事业，而加强他们对于农民的领导作用。只有正确地领导选举运动和跟着查田运动的开展而开展的检举运动<a class="zy" href="#original-08-id4a" id="original-08-id4">〔4〕</a>，才能健全我们的政府机关，使我们的政府更有力地领导革命战争，领导各方面的工作，领导经济工作。用文化教育工作提高群众的政治和文化的水平，这对于发展国民经济同样有极大的重要性。至于一天也不要忽略扩大红军的工作，那更不待说了。大家都明白，没有红军的胜利，经济封锁就要更加厉害。另一方面，发展了国民经济，改良了群众生活，无疑地就会极大地帮助扩大红军的工作，使广大群众踊跃地开向前线上去。总起来说，假如我们争取了上述的一切条件，包括经济建设这个新的极重要的条件，并且使这一切的条件都服务于革命战争，那末，革命战争的胜利，无疑是属于我们的。</p>
+
+    <p class="a">　　</p>
+
+    <p class="a"><span class="f3">　注　　释　</span></p>
+
+    <p class="zs"><a class="hl" href="#original-08-id0" id="original-08-id0a">　*　</a>这是毛泽东在一九三三年八月十二日至十五日召开的中央革命根据地南部十七县经济建设大会上所作的报告的一部分。</p>
+
+    <p class="zs"><a class="hl" href="#original-08-id1" id="original-08-id1a">〔1〕</a>从一九三○年至一九三四年，国民党军队对以江西瑞金为中心的中央革命根据地共发动了五次大规模的军事进攻，叫做五次“围剿”。第五次“围剿”的正式开始是在一九三三年九月间，但从一九三三年夏季，蒋介石就在积极部署这次进攻。</p>
+
+    <p class="zs"><a class="hl" href="#original-08-id2" id="original-08-id2a">〔2〕</a>圩场，江西、福建等省农村中定期进行交易的市场。</p>
+
+    <p class="zs"><a class="hl" href="#original-08-id3" id="original-08-id3a">〔3〕</a>中央革命根据地在分配土地后于一九三三年至一九三四年开展了一次查田运动。查田是为了查漏划的地主富农，彻底消灭封建势力，巩固和纯洁苏维埃政权。一九三三年六月一日中华苏维埃共和国临时中央政府发出《关于查田运动的训令》，要求“把一切冒称‘中农’、‘贫农’的地主富农，完全清查出来”。同时按照一九三一年十二月一日《中华苏维埃共和国土地法》的规定，《训令》还提出“没收地主阶级的一切土地财产，没收富农的土地及多余的耕牛、农具、房屋，分配给过去分田不够的及尚未分到田的工人、贫农、中农，富农则分与较坏的劳动份地”。在这次查田运动中，存在着“左”的错误。</p>
+
+    <p class="zs"><a class="hl" href="#original-08-id4" id="original-08-id4a">〔4〕</a>检举运动是中央革命根据地在一九三二年底至一九三四年间开展的一次群众运动。它的目的是检举工农民主政府工作人员的某些不良行为，并且通过检举，清洗混入革命队伍中的反革命分子、阶级异己分子等。</p>
+  </div>
+</div>
+</details>
+<!-- maoxuan-original:end -->
+<section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">一句话：战争环境下<b>必须而且能够</b>进行经济建设——<span class="q">「在现在的阶段上，经济建设必须是环绕着革命战争这个中心任务的」</span>；谁要取消经济建设，<span class="q">「这就不是服从战争，而是削弱战争」</span>。</div>
+    <div class="cards">
+      <div class="card red" style="border-top-color:var(--red);">
+        <h4 style="color:var(--red);">① 破「右倾」论：不建设才是真「右倾」</h4>
+        <p>「过去有些同志认为革命战争已经忙不了，哪里还有闲工夫去做经济建设工作，因此见到谁谈经济建设，就要骂为『右倾』。」毛泽东反手一击：不搞建设，「革命战争的物质条件就不能有保障，人民在长期的战争中就会感觉疲惫」——盐贵买不到、谷贱伤农，工农联盟动摇，扩红无从谈起。</p>
+      </div>
+      <div class="card gold">
+        <h4>② 破「中心」论：建设不是压倒战争</h4>
+        <p>「那种以为经济建设已经是当前一切任务的中心，而忽视革命战争，离开革命战争去进行经济建设，同样是错误的观点。」「只有在国内战争完结之后，才说得上也才应该说以经济建设为一切任务的中心」——现在就想修铁路通龙岩、汽车道通赣州，「只是一种瞎想」。</p>
+      </div>
+      <div class="card green">
+        <h4>③ 立「环绕」论：为中心任务服务地建设</h4>
+        <p>「革命战争是当前的中心任务，经济建设事业是为着它的，是环绕着它的，是服从于它的。」具体怎么干：发展农业和手工业生产、调剂粮食、恢复钨砂等特产输出、组织出入口贸易打破封锁——「把革命战争和经济建设的物质基础确切地建立起来」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <p class="lead" style="margin-bottom:18px;">全文是一张「<b>两种错法，一条对路</b>」的对照图：错在把战争与建设对立起来——要么以战争为由取消建设，要么以建设为由脱离战争；对在以战争为中心、让经济环绕服务。分岔点只在一个判断：<b>当前的中心任务是什么？</b></p>
+    <div class="chain-title bad">错误观点一 ·「战争环境不能搞建设」（被骂为「右倾」者）</div>
+    <div class="chain">
+      <div class="node"><div class="n-label">「没闲工夫」</div><div class="n-sub">革命战争忙不了，等胜利了再建设</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">物质条件无保障</div><div class="n-sub">红军给养短缺，人民长期疲惫</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">削弱战争</div><div class="n-sub">「不是服从战争，而是削弱战争」</div></div>
+    </div>
+    <div class="chain-title bad" style="margin-top:24px;">错误观点二 ·「经济建设就是中心」（离开战争搞建设者）</div>
+    <div class="chain">
+      <div class="node gold"><div class="n-label">「建设压倒一切」</div><div class="n-sub">以经济建设为当前一切任务的中心</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">忽视革命战争</div><div class="n-sub">离开战争去搞和平时期的事业</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">「瞎想」</div><div class="n-sub">为将来所应有、现在所不应有的空想</div></div>
+    </div>
+    <div class="chain-title good" style="margin-top:24px;">正确路线 · 环绕中心：建设为战争服务</div>
+    <div class="chain">
+      <div class="node green"><div class="n-label">环绕战争中心</div><div class="n-sub">为着它、环绕它、服从它</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">发展生产与贸易</div><div class="n-sub">农业·手工业·粮食调剂·特产输出·对外贸易</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">打破封锁</div><div class="n-sub">抵制奸商剥削，低价买盐布进来</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">保障供给·改善生活</div><div class="n-sub">红军有给养，群众得实惠</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">扩红与联盟</div><div class="n-sub">群众踊跃参军，工农联盟巩固</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">粉碎「围剿」</div><div class="n-sub">「革命战争的胜利，无疑是属于我们的」</div></div>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+    <p class="lead" style="margin-bottom:18px;">报告体，无分节标题，五个层次环环相扣：先回答<b>为什么建</b>（破「右倾」论），再开列<b>建什么</b>（一张任务清单），用<b>成绩单</b>回答「能不能建」，用「环绕论」钉死<b>建设与战争的关系</b>，最后落到<b>怎么领导</b>——从动员群众到反官僚主义、培养干部，一句句都是可执行的操作规程。</p>
+    <div class="skeleton">
+      <div class="sk-row">
+        <div class="sk-tag">一 · 为什么建</div>
+        <div class="sk-body"><b>五个「为着」</b>：粉碎敌人第五次「围剿」的彻底胜利；保障红军给养和供给；改善人民生活、激发参战积极性；在经济战线上组织教育群众；巩固工农联盟和工农民主专政、加强无产阶级领导。破「右倾」论——「这种以为革命战争的环境不应该进行经济建设的意见，是极端错误的」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">二 · 建什么</div>
+        <div class="sk-body"><b>一张具体任务清单</b>：推销经济建设公债（300 万元）；发展合作社运动；普遍建设谷仓、备荒仓；每县设粮食调剂分局、重要区圩场设支局（区内调剂余缺、有计划出口、从白区购必需品）；发展农业和手工业（多造农具、多产石灰）；恢复钨砂、木头、樟脑、纸张、烟叶、夏布、香菇、薄荷油等特产产量并输出白区；对外贸易局管好出入口——「像这样的事情，我们再不能不管了，以后是一定要管起来」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">三 · 能不能建</div>
+        <div class="sk-body"><b>成绩单反驳「不能论」</b>：今年秋收比去年增加 20%—25%，超过「增加两成」的预计；农具、石灰生产恢复，钨砂开始恢复，烟、纸、木头「开始有了点生气」；粮食调剂有了成绩，食盐入口开始部分工作。同时划清边界：不是要修铁路通龙岩、汽车道通赣州，不是粮食完全专卖——「从两百万资金再加上群众的股本做起」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">四 · 与战争关系</div>
+        <div class="sk-body"><b>「环绕论」定位</b>：经济建设「必须是环绕着革命战争这个中心任务的」——「为着它的，是环绕着它的，是服从于它的」；破「中心论」：「只有在国内战争完结之后，才说得上也才应该说以经济建设为一切任务的中心」；现在搞和平时期的事业「只是一种瞎想」。</div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-tag">五 · 怎么领导</div>
+        <div class="sk-body"><b>四点工作方法</b>：<i>第一，</i>从组织上动员群众——主席团、国民经济部、财政部把经济工作「经常地放在议事日程上面去讨论，去督促，去检查」，推动工会、贫农团，开群众大会宣传；<i>第二，</i>群众化的方式——「要把官僚主义方式这个极坏的家伙抛到粪缸里去」，既反「不理不睬或敷衍塞责的怠工现象」，也反「蛮横地要照自己的数目字去派」的命令主义；<i>第三，</i>大量培养干部——「他们是经济战线上的指挥员，而广大群众则是战斗员」，「丢掉错误的观点，干部就站在面前了」；<i>第四，</i>与其他任务不能分离——查田运动、劳动法、选举检举运动、文化教育、扩大红军，「使这一切的条件都服务于革命战争」。</div>
+      </div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">本篇的「账本」：封锁下的苏区经济数据</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">毛泽东在报告中给出的都是可查的实账——正是这些数字，让「战争环境不能搞建设」的论调站不住脚。数据均出自本篇原文（1991 年版）。</p>
+    <div class="stats">
+      <div class="stat"><div class="v">300<small>万元</small></div><div class="k">经济建设公债：100 万作红军作战费，200 万借给合作社、粮食调剂局、对外贸易局做本钱</div></div>
+      <div class="stat gold"><div class="v">1500<small>万元/年</small></div><div class="k">盐布进口额（盐约 900 万 + 布约 600 万）——过去全由商人经手，「我们没有去管过」</div></div>
+      <div class="stat"><div class="v">7<small>倍</small></div><div class="k">谷价剥削：万安、泰和农民 5 角/担卖给商人，商人运赣州卖 4 元/担</div></div>
+      <div class="stat gold"><div class="v">1:9<small>价差</small></div><div class="k">盐价：梅县 1 元买 7 斤，运到苏区 1 元卖 12 两（16 两为 1 斤）</div></div>
+      <div class="stat green"><div class="v">+20~25<small>%</small></div><div class="k">今年秋收增幅，超过「增加两成」的预计——「这些成绩，就是我们坚信将来能够发展的基础」</div></div>
+      <div class="stat blue"><div class="v">353.65<small>万元</small></div><div class="k">大会成果：17 县认销公债，另建粮食调剂支局 34 个、对外贸易局 4 个；各地一致要求增发 200 万</div></div>
+    </div>
+
+    <h4 style="margin:26px 0 2px;font-size:15px;color:var(--red-deep);">对「战争环境下要不要搞建设」的三种回答</h4>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">两种错法一种对路。色带与下方标签按同一列比例对齐。</p>
+    <div class="spectrum">
+      <div class="spec-frame">
+      <div class="spec-band">
+        <div class="spec-seg red">「右倾」论</div>
+        <div class="spec-seg form">「中心」论</div>
+        <div class="spec-seg subj">「环绕」论</div>
+      </div>
+      <div class="spec-labels">
+        <div class="spec-label"><b>「右倾」论（错）</b>「革命战争已经忙不了，哪里还有闲工夫」；见到谁谈经济建设就骂「右倾」，要等战争胜利、和平环境再建设——实质是取消经济建设，「不是服从战争，而是削弱战争」</div>
+        <div class="spec-label"><b>「中心」论（错）</b>「以为经济建设已经是当前一切任务的中心」，忽视革命战争、离开战争去搞建设——「为将来所应有而现在所不应有……只是一种瞎想」</div>
+        <div class="spec-label"><b>「环绕」论（正确）</b>「革命战争是当前的中心任务，经济建设事业是为着它的，是环绕着它的，是服从于它的」；战争完结之后，才以经济建设为一切任务的中心</div>
+      </div>
+      </div>
+    </div>
+    <div class="spec-cards">
+      <div class="card" style="border-top-color:var(--red);"><h4 style="color:var(--red);">「右倾」论</h4><p>把战争与建设对立，用「服从战争」作挡箭牌取消经济工作。貌似最革命，实则让红军饿着肚子打仗——「如果取消了经济建设，这就不是服从战争，而是削弱战争」。</p></div>
+      <div class="card gold"><h4>「中心」论</h4><p>把建设捧到中心，脱离战争搞和平事业。貌似最务实，实则南辕北辙——「在国内战争中企图进行和平的……那些经济建设工作，只是一种瞎想」。</p></div>
+      <div class="card green"><h4>「环绕」论（正确）</h4><p>承认战争是中心，同时坚持「必须注意经济工作」：凡战争迫切要求的（粮食、盐布、给养）立即做，凡将来才应有的（铁路、汽车道）不做——「每件都是为着战争，而不是离开战争的和平事业」。</p></div>
+    </div>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">一</div>
+        <div class="obs-body">
+          <h4>被骂「右倾」的人，恰恰最务实——标签是斗争工具，不是是非度量衡</h4>
+          <p>宁都会议上，毛泽东的「诱敌深入」被指为「专去等待敌人进攻的右倾主要危险」；本篇里，谈经济建设的人又被骂「右倾」。同一顶帽子，扣过防御战略，又扣经济工作——<b>「右倾」这个标签的指认对象如此反复横跳，恰恰说明它度量的是路线立场，而不是工作对错</b>。毛泽东的反击方式值得注意：他不争「我不右倾」，而是直接摆事实——谷子五角与四元的差价、秋收增加两成、「这些工作我们已经开始做了，并且已经做出了成绩」。迁移到今天：组织里的「保守」「激进」「不务正业」等帽子，常常戴在说实话、干实事的人头上。与其争论标签，不如学这一招——<b>用一份可核查的成绩单，让标签自己失效</b>。</p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">二</div>
+        <div class="obs-body">
+          <h4>「环绕」不是妥协，而是一套精确的优先级算法</h4>
+          <p>本篇最容易被忽略的贡献，是给出了一个<b>资源配置的排序框架</b>：当前的中心任务是什么？凡为中心任务「迫切地要求」的，必须立即做；凡「为将来所应有而现在所不应有」的，坚决不做；凡「为将来的环境所许可而现在的环境不许可」的，是「瞎想」。毛泽东没有说「经济不重要」，也没有说「战争压倒一切所以经济靠边」，而是把经济放在「为着它、环绕它、服从它」的位置——<b>不是二选一，而是定主从、排先后</b>。迁移：创业公司在生存期谈组织建设，常被斥「不务正业」；但完全不管内控又会猝死。用这套算法：凡是活下来（打赢）迫切要求的，就做；凡是上市以后才需要的，先记在「瞎想」清单里。<b>「重要」不等于「现在就要做」——优先级由中心任务裁定，不由事项本身的重要程度裁定。</b></p>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">三</div>
+        <div class="obs-body">
+          <h4>「命令主义」的解剖：形式上的努力，恰恰是失败的原因</h4>
+          <p>毛泽东对命令主义的刻画入木三分：「命令主义者表面上不怠工，好像在那里努力干。」但「命令主义地推销公债，不管群众了解不了解，买不买得这样多，只是蛮横地要照自己的数目字去派」——结果是「群众不喜欢，公债不能好好地推销」。<b>努力的形式（催逼、摊派、压指标）与努力的本质（说服、按群众情绪办事）被区分开了</b>：前者看似在干，实则「失去信用」。而「丢掉错误的观点，干部就站在面前了」更是点破一层：缺人往往不是真缺，是只按一种模板找人——「从土地斗争、经济斗争、革命战争中锻炼出来的群众，涌出来了无数的干部」，只是戴着有色眼镜看不见。迁移：KPI 摊派式管理 vs 按「具体的环境、具体地表现出来的群众情绪」做动员，差别就在有没有「说服」这一步；招不到人时先问——<b>是人才市场真没有，还是我的「干部观」太窄？</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 金句摘录 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+      <div class="golden-item">
+        <div class="text">革命战争的激烈发展，要求我们动员群众，立即开展经济战线上的运动，进行各项必要和可能的经济建设事业。</div>
+        <div class="ctx">开篇第一句，全文总纲：战争越激烈，越要搞建设。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">过去有些同志认为革命战争已经忙不了，哪里还有闲工夫去做经济建设工作，因此见到谁谈经济建设，就要骂为「右倾」。</div>
+        <div class="ctx">第一节。注意：毛泽东本人就是「右倾」帽子的佩戴者——被骂者写下的反「右倾」檄文。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">有这种意见的人，也常说一切应服从战争，他们不知道如果取消了经济建设，这就不是服从战争，而是削弱战争。</div>
+        <div class="ctx">第一节。以子之矛攻子之盾：用「服从战争」的逻辑反杀「取消建设」的主张。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">在现在的阶段上，经济建设必须是环绕着革命战争这个中心任务的。革命战争是当前的中心任务，经济建设事业是为着它的，是环绕着它的，是服从于它的。</div>
+        <div class="ctx">第四节。中心与环绕的定位——本篇的方法论核心，也是苏区经济思想的定盘星。1991 年版文字。</div>
+      </div>
+      <div class="golden-item">
+        <div class="text">要把官僚主义方式这个极坏的家伙抛到粪缸里去，因为没有一个同志喜欢它。每一个同志喜欢的应该是群众化的方式，即是每一个工人、农民所喜欢接受的方式。</div>
+        <div class="ctx">第五节「第二」点。粗粝而生动——「粪缸」二字，是整篇报告最出圈的表达。1991 年版文字。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇预告</h4>
+        <div class="t">09 · 怎样分析农村阶级（1933.10）</div>
+        <p>本篇把查田运动列为经济建设的配套任务——「只有深入查田运动，才能彻底地消灭封建半封建的土地所有制，发展农民的生产的积极性」；下一篇就是毛泽东为纠正查田运动「左」的错误而起草的阶级划分标准文件：地主、富农、中农、贫农、工人怎么分，一句话一个界限。从「要不要建设」到「靠谁建设、划清界限」。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">《我们的经济政策》（1934.01）· 姊妹篇</div>
+        <p>1934 年 1 月二苏大报告，与本篇并称苏区经济建设双子篇：本篇解决「战争环境下要不要、能不能搞建设」，那篇解决「苏区经济怎么组织」——国营事业、合作社事业、私人事业三者的关系，「从发展国民经济来增加我们财政的收入」。人民网《中国共产党大事记·1933 年》：「这个报告，和翌年 1 月毛泽东在第二次全国苏维埃代表大会上所作《我们的经济政策》的报告，提出了党在农村革命根据地进行经济建设的理论和政策。」另可对照第 11 篇《关心群众生活，注意工作方法》（1934.01）——本篇「群众化的方式」到那篇「一切群众的实际生活问题」，是一脉相承的群众路线。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 今日思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「中心任务—环绕任务」框架搬到你手头的项目上</h4>
+      <p class="q">① 你所在组织当前的<b>「中心任务」</b>是什么？列出三件你手头正在做的事，逐一问：它是被中心任务「迫切地要求」的，还是「为将来所应有而现在所不应有」的「瞎想」？你愿意砍掉哪一件？<br>② 你的团队有没有<b>「命令主义」式执行</b>——「不管群众了解不了解，买不买得这样多，只是蛮横地要照自己的数目字去派」？上一次「表面上不怠工、好像在那里努力干」，结果却「失去信用」，是什么时候？试试把摊派改成「按照具体的环境、具体地表现出来的群众情绪」去说服。<br>③ 「丢掉错误的观点，干部就站在面前了」——你所在团队真的缺人吗？还是你只按一种固定模板找人？如果放宽模板，你身边「从斗争和工作中锻炼出来的群众」里，站着几个被你忽略的「干部」？</p>
+      <p class="hint">提示：不必套用「战争」「围剿」这些历史概念，只借三件工具——①「优先级由中心任务裁定」：判断一件事该不该现在做，问它是否被当前的核心目标迫切要求，而不是问它重不重要；②「成绩单胜过标签」：被人扣帽子时，用可核查的事实回应，别陷入标签之争；③「命令主义与群众化方式之分」：执行时有没有「说服」这一步，是两者唯一的分水岭——努力的形式不等于努力的本质。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>毛泽东选集 · 精读笔记</div>
+    <div>依据人民出版社 1991 年版第一卷 · 引文已与原文逐字核对</div>
+    <div class="wm">v1 · 2026.08</div>
+  </footer>
+
+</div>
+</body>
+</html>

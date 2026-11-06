@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>46 · 团结一切抗日力量，反对反共顽固派 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card ul{list-style:none;margin-top:6px;}
+.card li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:4px;min-width:0;overflow-wrap:break-word;}
+.card li::before{content:"";position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+.card li b{color:var(--ink);}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.blue{border-top-color:var(--blue);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+.card.blue h4{color:var(--blue);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:22px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:1px;}
+.spec-seg.green{background:var(--green);}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.blue{background:var(--blue);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 92px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 72px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 结构块 ===== */
+.part{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;margin-top:14px;min-width:0;}
+.part-head{display:flex;align-items:baseline;gap:10px;padding:12px 16px;flex-wrap:wrap;}
+.part-head.red{background:var(--bg-2);}
+.part-no{font-family:"Noto Serif SC","Songti SC",serif;font-size:17px;font-weight:700;color:var(--red-deep);}
+.part-title{font-family:"Noto Serif SC","Songti SC",serif;font-size:18px;font-weight:700;color:var(--red-deep);letter-spacing:.5px;}
+.part-scope{margin-left:auto;font-size:12px;color:var(--ink-3);white-space:nowrap;}
+.part-head.gold{background:var(--bg-2);}
+.part-head.gold .part-no,.part-head.gold .part-title{color:var(--gold);}
+.part-head.blue{background:var(--bg-2);}
+.part-head.blue .part-no,.part-head.blue .part-title{color:var(--blue);}
+.part-head.green{background:var(--bg-2);}
+.part-head.green .part-no,.part-head.green .part-title{color:var(--green);}
+.part-body{padding:12px 16px 14px;font-size:14px;color:var(--ink-2);line-height:1.85;}
+.part-body p + p{margin-top:6px;}
+.part-body ul{list-style:none;margin-top:2px;}
+.part-body li{position:relative;padding-left:18px;padding-right:8px;min-width:0;overflow-wrap:break-word;}
+.part-body li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+.part-body li b{color:var(--ink);}
+.part-body .k{color:var(--red-deep);font-weight:600;}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:74px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:92px;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:54px;}table.plain .c2{width:68px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.card li,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+
+/* ===== 四格光谱覆写（本篇） ===== */
+.spectrum.four .spec-band,.spectrum.four .spec-labels{grid-template-columns:repeat(4,1fr);}
+.spectrum.four .spec-seg{font-size:11px;letter-spacing:0;padding:13px 2px;}
+@media(max-width:560px){
+  .spectrum.four .spec-seg{font-size:9.5px;padding:10px 1px;}
+  .spectrum.four .spec-label{font-size:10.5px;padding:8px 3px;}
+  .spectrum.four .spec-label b{font-size:10.5px;}
+}
+@media(max-width:360px){
+  .spectrum.four .spec-seg{font-size:8.8px;}
+  .spectrum.four .spec-label{font-size:9.5px;}
+  .spectrum.four .spec-label b{font-size:9.5px;}
+}
+
+/* maoxuan-original:start */
+.original-text {margin-top:46px;border:1px solid var(--line);border-radius:8px;background:var(--card);min-width:0;}
+.original-text > summary {padding:18px 20px;cursor:pointer;color:var(--red-deep);font-size:18px;font-weight:700;}
+.original-text > summary:focus-visible,.original-text a:focus-visible {outline:3px solid var(--red);outline-offset:4px;}
+.original-text[open] > summary {border-bottom:1px solid var(--line);}
+.original-text .original-source {padding:16px 22px 0;font-size:13px;color:var(--ink-2);}
+.original-text .original-body {padding:18px 22px 28px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;line-height:2;overflow-wrap:anywhere;}
+.original-body p {margin:1em 0;}
+.original-body .a {text-indent:2em;}
+.original-body h3,.original-body h4,.original-body h5 {margin:1.6em 0 .8em;font-size:1.15em;line-height:1.7;text-align:center;}
+.original-body .a0,.original-body .a5 {text-align:center;text-indent:0;}
+.original-body .zs {font-size:.9em;color:var(--ink-2);text-indent:0;}
+.original-body a {color:var(--red-deep);text-decoration:underline;text-underline-offset:3px;}
+.original-body [id] {scroll-margin-top:24px;}
+.original-body [id]:target {background:var(--bg-2);}
+@media(max-width:560px){.original-text > summary{padding:15px;}.original-text .original-body{padding:12px 15px 22px;}.original-text .original-source{padding:14px 15px 0;}}
+/* maoxuan-original:end */
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 卷首 -->
+  <header class="masthead">
+    <div class="seal">四六</div>
+    <h1>团结一切抗日力量，<br>反对反共顽固派</h1>
+    <div class="sub2">「统一」出现 47 次，其中 45 次挤在最后一段——标题写「团结」，主题却在最后四分钟才登场</div>
+    <div class="sub">毛泽东选集 · 第二卷 · 第二十八篇 · <b>一九四〇年二月一日</b></div>
+  </header>
+
+  <!-- 1 篇章档案 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></div>
+    <table class="dossier">
+      <tr><th>篇名</th><td>《团结一切抗日力量，反对反共顽固派》。1991 年版第二卷第二十八篇，上接《克服投降危险，力争时局好转》（712—714），下接《向国民党的十点要求》（721—726）</td></tr>
+      <tr><th>文体</th><td><b>讲演</b>——题解只有一句：「这是毛泽东在延安民众讨汪大会上所作的讲演。」正文 <b>6 个自然段</b>，不分节、不加小标题；全篇 <b>15 个问号、1 个感叹号</b></td></tr>
+      <tr><th>原题</th><td><b>《相持阶段中的形势与任务》</b>——收入《毛泽东选集》时由作者改题（中央档案馆齐得平考订，与《论政策》原题《中共中央关于政策问题的指示》同属一批改拟）</td></tr>
+      <tr><th>场合</th><td>延安民众<b>讨汪拥蒋大会</b>，各界<b>三万余人</b>；大会主席团 21 人（毛泽东、王明、张闻天、林伯渠、吴玉章、康生、陈云、邓发、李富春、高岗、萧劲光、张浩、谭政、冯文彬等），同日通过毛泽东起草的大会通电</td></tr>
+      <tr><th>写作时间</th><td>一九四〇年二月一日</td></tr>
+      <tr><th>最初发表</th><td>⚠️ <b>首次刊载载体此次未核实</b>（延安《新中华报》1940.02.03 前后必有大会报道，全文是否同期见报未证），不写死</td></tr>
+      <tr><th>收录版本</th><td>人民出版社 1991 年第二版第二卷 <b>715—720 页</b>（正文 715—719，注释 <b>14 条</b>全部排 720 页）；1952 年 4 月第二卷初版（本次未核页码）</td></tr>
+      <tr><th>篇幅</th><td><b>6 段、汉字 2445</b>（含标点 2726），段长 <b>50／446／32／491／252／1174</b>（2.0%／18.2%／1.3%／20.1%／10.3%／<b>48.0%</b>），段均 408 字</td></tr>
+      <tr><th>历史坐标</th><td>日汪密约公布后第 <b>11</b> 天 · 蒋介石告国人书后第 <b>8</b> 天 · 米内内阁成立后第 <b>16</b> 天 · <b>汪伪国民政府成立前 58 天</b> · 第一次反共高潮顶点</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 写作背景 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></div>
+    <p class="lead">这场大会不是临时开的，是<b>四天前一份党内指示里写好的一个日程</b>。而它要回答的东西，比汪精卫更麻烦——一个月里，七处血案、一份要求「取消边区」的公开信、一个换了面孔的日本内阁，同时压到延安。</p>
+
+    <div class="timeline" style="margin-top:22px;">
+      <div class="tl-item gold"><div class="tl-date">1938.12.10 → 12.16 → 12.25 · 重庆</div><div class="tl-body">张君劢写成《致毛泽东先生一封公开信》，12.16 发表于《再生》第 10 期，12.25 由《中央日报》<b>全文刊载</b>。三条要求：军队交给国家、取消特区、<b>「将马克思主义暂搁一边」</b>。信中一句被反复引用：「同一国中两种军队两个政府并存，异日对日战争虽完，而内部问题又生。」</div></div>
+      <div class="tl-item"><div class="tl-date">1939.11.11 · 河南确山</div><div class="tl-body"><b>确山惨案（竹沟惨案）</b>：国民党确山、信阳、泌阳等县武装一千八百余人围攻竹沟镇新四军留守处，杀抗日受伤的干部、战士及家属、群众二百余人。</div></div>
+      <div class="tl-item"><div class="tl-date">1939.12 · 山西</div><div class="tl-body"><b>晋西事变</b>：阎锡山在第一次反共高潮中集中晋绥军六个军进攻新军（青年抗敌决死队），同时晋东南旧军与中央军顽固派配合，摧毁沁水、阳城、晋城、高平、长治等县抗日政权。正文那句「在山西就闹旧军打新军」，指的就是这件事。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1940.01.16 · 东京</div><div class="tl-body">阿部信行内阁总辞职，<b>米内光政内阁成立</b>。组阁当天即表示将「支援即将成立的新中央政府」。——十六天后，讲演第二段的第一句是：<b>「不管日本掉换什么内阁……」</b></div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.22 · 香港</div><div class="tl-body">《大公报》以通栏标题<b>整版刊出《日支新关系调整要纲》全文</b>并登日文原件照片。同一时段汪精卫一行正抵青岛。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.24—01.26 · 青岛</div><div class="tl-body">汪精卫、王克敏、梁鸿志会谈，定政权名「国民政府」、首都南京、三月中旬组府。会议桌的主持人是日军「梅机关」的影佐祯昭。</div></div>
+      <div class="tl-item blue"><div class="tl-date">1940.01.26 · 华盛顿—东京</div><div class="tl-body">《日美通商航海条约》失效，两国进入「无条约时代」——青岛会谈闭幕的同一天。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.01.28 · 延安</div><div class="tl-body">《克服投降危险，力争时局好转》下达执行令：<b>「延安定二月一日召开反对汪精卫卖国协定的民众大会。」</b>四天后的大会即由此而来。</div></div>
+      <div class="tl-item gold"><div class="tl-date">1940.01.30 · 重庆出发</div><div class="tl-body">国民参政会<b>华北视察团</b>由重庆出发（团长李元鼎，团员含梁实秋、余家菊等）。二月三日，毛泽东与陈绍禹、林伯渠、吴玉章以参政员身份致电参政会秘书处，指其任务是「从陕、甘、晋、冀、豫等省特务机关收集诬蔑共产党、八路军和陕甘宁边区的材料」。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.02.01 · 延安</div><div class="tl-body"><b>三件事同日发生</b>：中共中央发表《关于目前时局与党的任务的决定》；延安民众三万余人开讨汪拥蒋大会，毛泽东作本篇讲演；大会通过毛泽东起草的通电（后改题《向国民党的十点要求》）。</div></div>
+      <div class="tl-item"><div class="tl-date">1940.03.30 · 南京</div><div class="tl-body">汪伪「国民政府」宣告成立，汪精卫任行政院长兼代主席。<b>距这场大会 58 天</b>——讲演里那句「他还要成立傀儡政府」，当时是将来时。</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:22px;">
+      这篇讲演真正的对手，有一半不在汪精卫那边。<b>张君劢的公开信比日汪密约早一年多，而且是用中文、在重庆、以「独立政党领袖」的身份讲的</b>——它的三条要求（交军队、撤边区、搁马克思主义）与后来顽固派的「统一论」完全同构，却不必承担汉奸的罪名。正文里那句「又雇请玄学鬼张君劢提出取消共产党」，「玄学鬼」是 1923 年「科玄论战」给他起的外号：<b>用一个十七年前的哲学绰号，给一份当下的政治主张定性</b>。
+      <span class="src">—— 张君劢信的时间与刊物据《张君劢卷》（中国人民大学出版社 2014，据《再生》第 10 期）；绰号来源见 1991 年版《新民主主义论》注〔19〕。「经蒋介石授意」一说，该注作肯定表述，但据蒋、陈布雷、王世杰日记及台北已公开档案的研究（张维达《全面抗战时期张君劢与蒋介石关系探微》）认为无直接授意记录，此说待考。</span>
+    </div>
+  </section>
+
+  <!-- 3 核心论点 -->
+  
+<!-- maoxuan-original:start -->
+<details class="original-text" id="original-text">
+<summary>原文全文（点击展开 / 收起）</summary>
+<p class="original-source">来源：用户提供的《毛泽东选集》电子书；保留正文及原书注释。</p>
+<div class="original-body"><div xmlns="http://www.w3.org/1999/xhtml" class="div">
+    <h3 class="h3"><span class="c3">团结一切抗日力量，<br>反对反共顽固派</span><a class="zy" href="#original-46-id0a" id="original-46-id0">*</a></h3>
+
+    <p class="a0"><span class="f2">（一九四〇年二月一日）</span></p>
+
+    <p class="a">我们延安的各界人民今天在这里开会，为了什么呢？为了声讨卖国贼汪精卫<a class="zy" href="#original-46-id1a" id="original-46-id1">〔1〕</a>，又是为了团结一切抗日力量，反对反共顽固派。</p>
+
+    <p class="a">我们共产党人屡次指出，日本帝国主义的灭华方针是坚决的。不管日本掉换什么内阁，它的灭亡中国把中国变为殖民地的基本方针是不会变更的。中国亲日派大资产阶级的政治代表汪精卫，看了这种情形，吓得发疯，跪倒在日本面前，订立了日汪卖国条约，把中国出卖给日本帝国主义。他还要成立傀儡政府，和抗日政府相对立；还要成立傀儡军队，和抗日军队相对立。他对于反蒋近来不大提了，据说已经改为“联蒋”。反共是日汪的主要目的。他们知道共产党抗日最彻底，国共合作则力量更大，他们就用全力分裂国共合作，使两党各自孤立，最好是两党打起来。这样，他们就利用国民党内部的顽固派，到处放火。在湖南就闹平江惨案<a class="zy" href="#original-46-id2a" id="original-46-id2">〔2〕</a>，在河南就闹确山惨案<a class="zy" href="#original-46-id3a" id="original-46-id3">〔3〕</a>，在山西就闹旧军打新军<a class="zy" href="#original-46-id4a" id="original-46-id4">〔4〕</a>，在河北就闹张荫梧打八路军<a class="zy" href="#original-46-id5a" id="original-46-id5">〔5〕</a>，在山东就闹秦启荣打游击队<a class="zy" href="#original-46-id6a" id="original-46-id6">〔6〕</a>，在鄂东就闹程汝怀杀死五六百个共产党员<a class="zy" href="#original-46-id7a" id="original-46-id7">〔7〕</a>，在陕甘宁边区就闹内部的“点线工作”<a class="zy" href="#original-46-id8a" id="original-46-id8">〔8〕</a>、外部的“封锁工作”，并且还准备着军事进攻<a class="zy" href="#original-46-id9a" id="original-46-id9">〔9〕</a>。此外，又逮捕了一大批进步青年送进集中营<a class="zy" href="#original-46-id10a" id="original-46-id10">〔10〕</a>；又雇请玄学鬼张君劢<a class="zy" href="#original-46-id11a" id="original-46-id11">〔11〕</a>提出取消共产党、取消陕甘宁边区、取消八路军新四军的反动主张，雇请托洛茨基分子叶青等人做文章骂共产党。所有这些，无非是要破坏抗日的局面，使全国人民都当亡国奴。</p>
+
+    <p class="a">这样，汪精卫派和国民党的反共顽固派两家里应外合，把时局闹得乌烟瘴气了。</p>
+
+    <p class="a">许多人看了这种情形，非常气愤，就以为抗日没有希望了，国民党都是坏人，都应当反对。我们必须指出，气愤是完全正当的，哪有看了这些严重情形而不气愤的呢？但是抗日仍然是有希望的，国民党里面也不都是坏人。对于各部分的国民党人，应当采取不同的政策。对于那些丧尽天良的坏蛋，对于那些敢于向八路军新四军阵地后面打枪的人，对于那些敢于闹平江惨案、确山惨案的人，对于那些敢于破坏边区的人，对于那些敢于攻打进步军队、进步团体、进步人员的人，我们是决不能容忍的，是必定要还击的，是决不能让步的。因为这类坏蛋，已经丧尽天良，当一个民族敌人深入国土的时候，他们还要闹磨擦，闹惨案，闹分裂。不管他们心里怎样想，他们是在实际上帮助了日本和汪精卫，或者有些人本来就是暗藏的汉奸。对于这些人，如果不加以惩罚，我们就是犯错误，就是纵容汉奸国贼，就是不忠实于民族抗战，就是不忠实于祖国，就是纵容坏蛋来破裂统一战线，就是违背了党的政策。但是这种给投降派和反共顽固派以打击的政策，全是为了坚持抗日，全是为了保护抗日统一战线。因此，我们对于那些忠心抗日的人，对于一切非投降派、非反共顽固派的人们，对于这样的国民党员，是表示好意的，是团结他们的，是尊重他们的，是愿意和他们长期合作以便把国家弄好的。谁如果不这样做，谁也就是违背了党的政策。</p>
+
+    <p class="a">这就是我们党的两条政策：一方面，团结一切进步势力，团结一切忠心抗日的人，这是一条政策；一方面，反对一切丧尽天良的坏蛋，反对那些投降派和反共顽固派，这是又一条政策。我们党的这些政策，为了达到一个目的，这就是力争时局好转，战胜日本。我们共产党和全国人民的任务，就是团结一切抗日的进步的势力，抵抗一切投降的倒退的势力，力争时局的好转，挽救时局的逆转。这就是我们的根本方针。我们决不悲观失望，我们是乐观的。我们不怕任何投降派和反共顽固派的进攻，我们一定要粉碎他们，我们也一定能够粉碎他们。中华民族的解放是一定的，中国决不会亡国。中国的进步是一定的，倒退只是暂时的现象。</p>
+
+    <p class="a">我们今天开会还要向全国人民表明一种态度，这就是为了抗日，全国人民的团结和进步是必要的。有些人单单强调了抗日，但不愿意强调团结和进步，甚至完全不提团结和进步，这是不对的。没有真正的、坚强的团结，没有迅速的、切实的进步，怎能坚持抗日？国民党的反共顽固派强调统一，但是他们的所谓“统一”，乃是假统一，不是真统一；乃是不合理的统一，不是合理的统一；乃是形式主义的统一，不是实际的统一。他们高唤统一，却原来是要取消共产党、八路军、新四军和陕甘宁边区，说有共产党、八路军、新四军和边区存在，中国就不统一，他们要把全国一切都化为国民党；不但继续他们的一党专政，而且还要扩大他们的一党专政。如果是这样，那还有什么统一呢？老实说，过去如果没有共产党、八路军、新四军和陕甘宁边区真心实意地出来主张停止内战一致抗日，那就无人发起抗日民族统一战线，无人领导和平解决西安事变，那就无从实行抗日。今天如果没有共产党、八路军、新四军、陕甘宁边区和各抗日民主根据地真心实意地出来维持抗日的大局，反对投降、分裂、倒退的危险倾向，那就会弄得一团糟。八路军、新四军几十万人挡住了五分之二的敌人，和四十个日本师团中的十七个师团打<a class="zy" href="#original-46-id12a" id="original-46-id12">〔12〕</a>，为什么要取消他们呢？陕甘宁边区是全国最进步的地方，这里是民主的抗日根据地。这里一没有贪官污吏，二没有土豪劣绅，三没有赌博，四没有娼妓，五没有小老婆，六没有叫化子，七没有结党营私之徒，八没有萎靡不振之气，九没有人吃磨擦饭<a class="zy" href="#original-46-id13a" id="original-46-id13">〔13〕</a>，十没有人发国难财，为什么要取消它呢？只有不要脸的人们才说得出不要脸的话，顽固派有什么资格站在我们面前哼一声呢？同志们，当然不能是这样的。不是取消边区，而是全国要学习边区；不是取消八路军、新四军，而是全国要学习八路军、新四军；不是取消共产党，而是全国要学习共产党；不是要进步的人们向落后的人们看齐，而是要落后的人们向进步的人们看齐。我们共产党是最主张统一的人，我们发起了统一战线，我们坚持了统一战线，我们提出了统一的民主共和国的口号。谁人能够提出这些呢？谁人能够实行这些呢？谁人能够只要每月五块钱薪水<a class="zy" href="#original-46-id14a" id="original-46-id14">〔14〕</a>呢？谁人能够创造这样的廉洁政治呢？统一，统一，投降派有一套统一论，要我们统一于投降；反共顽固派有一套统一论，要我们统一于分裂，统一于倒退。我们能够信这些道理吗？不以抗战、团结、进步三件事做基础的统一，算得真统一吗？算得合理的统一吗？算得实际的统一吗？真是做梦！我们今天开大会，就是要提出我们的统一论。我们的统一论，就是全国人民的统一论，就是一切有良心的人的统一论。这种统一论是以抗战、团结、进步三件事做基础的。只有进步才能团结，只有团结才能抗日，只有进步、团结、抗日才能统一。这就是我们的统一论，这就是真统一论，这就是合理的统一论，这就是实际的统一论。那种假统一论，不合理的统一论，形式主义的统一论，乃是亡国的统一论，乃是丧尽天良的统一论。他们要把共产党、八路军、新四军和民主的抗日根据地消灭，要把一切地方的抗日力量消灭，以便统一于国民党。这是阴谋，这是借统一之名，行专制之实，挂了统一这个羊头，卖他们的一党专制的狗肉，死皮赖脸，乱吹一顿，不识人间有羞耻事。我们今天开大会，就要戳破他们的纸老虎，我们要坚决地反对反共顽固派。</p>
+
+    <p class="a">　　</p>
+
+    <p class="a"><span class="f3">　注　　释　</span></p>
+
+    <p class="zs"><a class="hl" href="#original-46-id0" id="original-46-id0a">　*　</a>这是毛泽东在延安民众讨汪大会上所作的讲演。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id1" id="original-46-id1a">〔1〕</a>见本书第一卷《论反对日本帝国主义的策略》注〔31〕。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id2" id="original-46-id2a">〔2〕</a>见本卷《必须制裁反动派》注〔1〕。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id3" id="original-46-id3a">〔3〕</a>确山惨案，也称竹沟惨案、竹沟事变。一九三九年十一月十一日，河南省确山、信阳、泌阳等县的国民党反动武装一千八百余人，围攻确山县竹沟镇新四军留守处，惨杀因抗日受伤的新四军干部、战士和他们的家属以及当地群众共二百余人。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id4" id="original-46-id4a">〔4〕</a>旧军，指国民党山西地方实力派阎锡山指挥的晋绥军。新军，指抗日战争初期，由中国共产党人在与阎锡山建立统一战线的过程中组建和领导的、以山西青年抗敌决死队为主力的山西人民的抗日武装。一九三九年十二月，阎锡山在蒋介石掀起的第一次反共高潮中，与日本侵略军相勾结，集中晋绥军六个军的兵力，向驻在山西西部的新军进攻。新军奋起反击，在八路军的支援下，粉碎了旧军的进攻。同时，在山西的东南部，旧军又同国民党中央军中的顽固派相配合进攻新军，摧毁沁水、阳城、晋城、高平、长治等县的抗日民主政权和人民团体，屠杀了大批的共产党员和进步分子。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id5" id="original-46-id5a">〔5〕</a>张荫梧，当时任国民党河北省民军总指挥。从一九三八年以来，他就在国民党当局的指令下，不断制造磨擦，进攻八路军。一九三九年六月，他率部袭击河北深县八路军的后方机关，惨杀八路军干部和战士四百余人。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id6" id="original-46-id6a">〔6〕</a>秦启荣，当时任国民党军事委员会别动总队第五纵队司令。在国民党当局的指使下，他不断地制造同八路军的磨擦。一九三九年三月三十日，他的部队在山东博山太河镇伏击八路军山东纵队第三支队南下受训干部及护送部队，逮捕和杀害团级以下干部二百余人。到一九四〇年春，他已经残杀了八路军在山东的游击队和地方工作人员七百余人。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id7" id="original-46-id7a">〔7〕</a>程汝怀，当时任国民党湖北省政府鄂东行署主任、第五战区鄂东游击总指挥。从一九三九年六月至九月，他先后多次调集部队，围攻新四军在鄂东的游击部队和后方机关，惨杀共产党员五六百人。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id8" id="original-46-id8a">〔8〕</a>一九三九年后，国民党派遣特务间谍进入陕甘宁边区，发展秘密党员、特务，建立据点，设置情报网，并通过若干秘密交通线进行联系。这种反革命的特务活动，他们自称为“点线工作”。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id9" id="original-46-id9a">〔9〕</a>在一九三九年初至一九四〇年六月，国民党军队不断向陕甘宁边区发动军事进攻，占领了边区所属的淳化、旬邑、正宁、宁县、镇原五座县城。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id10" id="original-46-id10a">〔10〕</a>在抗日战争期间，国民党反动派模仿德意法西斯的办法，从中国西北的兰州、西安至东南的赣州、上饶等地，设立了很多集中营，用以囚禁大批的共产党员、爱国人士和进步青年。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id11" id="original-46-id11a">〔11〕</a>见本卷《新民主主义论》注〔19〕。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id12" id="original-46-id12a">〔12〕</a>中国共产党领导的军队所抗击的日本侵略军的数目，在后来有了变动。到一九四三年，八路军、新四军以及其他人民武装抗击了侵华日军总数的百分之六十四和全部伪军的百分之九十五。参见本书第三卷《论联合政府》一文的《两个战场》一节。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id13" id="original-46-id13a">〔13〕</a>“吃磨擦饭”，即是说有些国民党人以反共为专门职业。</p>
+
+    <p class="zs"><a class="hl" href="#original-46-id14" id="original-46-id14a">〔14〕</a>当时共产党领导下的抗日军队和抗日政府的工作人员，每人每月的伙食费和津贴费平均为银币五元。</p>
+  </div>
+</div>
+</details>
+<!-- maoxuan-original:end -->
+<section class="section">
+    <div class="sec-head"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></div>
+    <div class="thesis">对方要的是先取消、再统一；这篇讲演把顺序倒过来——<span class="q">先有进步，才有团结；先有团结，才有抗日；先有这三样，才谈得上统一。</span>「统一」于是从一件可以宣布的事，变成一条必须满足的公式。</div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>一 · 定性：不问动机，只看效果</h4>
+        <p>七处并列——湖南平江、河南确山、山西旧军打新军、河北张荫梧、山东秦启荣、鄂东程汝怀、边区「点线工作」加「封锁工作」。紧接一句把动机问题整个绕开：<b>「不管他们心里怎样想，他们是在实际上帮助了日本和汪精卫，或者有些人本来就是暗藏的汉奸。」</b>定性留在行为层，举证责任就落在对方身上。</p>
+      </div>
+      <div class="card gold">
+        <h4>二 · 分人：先认情绪，再拆判断</h4>
+        <p>「气愤是完全正当的，哪有看了这些严重情形而不气愤的呢？」——先全额承认情绪，再只改一个判断：「但是抗日仍然是有希望的，国民党里面也不都是坏人。」于是「两条政策」成立：团结一切进步势力与忠心抗日的人／反对一切丧尽天良的坏蛋。两条针对的不是两个阶级，是<b>两种行为</b>。</p>
+      </div>
+      <div class="card green">
+        <h4>三 · 换战场：不争事实，争定义</h4>
+        <p>对方说「有边区就不算统一」，本篇不辩边区该不该存在，而是把「统一」拆成三组对仗：真／假、合理／不合理、实际／形式主义。腾挪的支点是<b>三个「谁人能够」</b>——发起统一战线、提出统一的民主共和国、每月只拿五块钱薪水。最后一句收在「戳破他们的纸老虎」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 分析框架 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></div>
+    <div class="chain">
+      <div class="node"><div class="n-label">列事实</div><div class="n-sub">七地放火 ＋ 集中营<br>＋ 张君劢、叶青</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">给结构</div><div class="n-sub">汪派与顽固派<br>「两家里应外合」</div></div>
+      <div class="arrow">→</div>
+      <div class="node blue"><div class="n-label">拦一刀</div><div class="n-sub">不能全党全国<br>一起反</div></div>
+      <div class="arrow">→</div>
+      <div class="node green"><div class="n-label">分人</div><div class="n-sub">两条政策<br>按行为划线</div></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="n-label">换战场</div><div class="n-sub">争「统一」的定义<br>不争事实</div></div>
+      <div class="arrow">→</div>
+      <div class="node gold"><div class="n-label">命名</div><div class="n-sub">假统一 · 纸老虎<br>（最后一句）</div></div>
+    </div>
+
+    <div class="quote" style="margin-top:20px;">
+      框架的重心在第三步：<b>把已经成立的事实判断（他们确实在打我们）与即将失控的情绪判断（所以国民党都是坏人）切开</b>。整篇讲演只有这一段在做减法——其余五段都在做加法。而做减法的那一段，恰好是全篇唯一出现「但是」开头转折的地方。
+      <span class="src">—— 第四段（491 字，20.1%）是全篇的情绪闸门；前三段负责把火烧旺，这一段负责把火圈住。</span>
+    </div>
+  </section>
+
+  <!-- 5 篇章结构 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></div>
+
+    <h3 class="sub-h">一、四格：划线的标准是行为，不是身份</h3>
+    <div class="spectrum four">
+      <div class="spec-frame">
+        <div class="spec-band">
+          <div class="spec-seg red">汪精卫派</div>
+          <div class="spec-seg blue">反共顽固派</div>
+          <div class="spec-seg gold">忠心抗日的人</div>
+          <div class="spec-seg green">进步势力</div>
+        </div>
+        <div class="spec-labels">
+          <div class="spec-label"><b>公开的汉奸</b>已签密约 · 正组傀儡政府与傀儡军队 · 反共是其主要目的</div>
+          <div class="spec-label"><b>暗藏的汪精卫</b>闹惨案 · 搞封锁 · 「点线工作」 · 打八路军背后</div>
+          <div class="spec-label"><b>非投降派、非顽固派</b>「表示好意」「团结」「尊重」「长期合作」</div>
+          <div class="spec-label"><b>被要求取消的一方</b>共产党 · 八路军、新四军 · 陕甘宁边区与各根据地</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:14px;">这张图的横轴不是「左—中—右」，也不是阶级。<b>左两格与右两格之间只有一条线：有没有向八路军、新四军阵地后面打枪。</b>第一条线内的第四格主动放弃身份论证（不写「因为我们是无产阶级政党」），改用三样可指认的东西——发起过统一战线、和平解决过西安事变、牵制十七个师团。</p>
+
+    <h3 class="sub-h">二、两段式：前一半陈述，后一半才开庭</h3>
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lab">一 · 设问开场</div><div class="bar-track"><span class="bar-fill red" style="width:4.3%"></span></div><div class="bar-val">50 字</div></div>
+      <div class="bar-row"><div class="bar-lab">二 · 七地放火</div><div class="bar-track"><span class="bar-fill red" style="width:38%"></span></div><div class="bar-val">446 字</div></div>
+      <div class="bar-row"><div class="bar-lab">三 · 一句小结</div><div class="bar-track"><span class="bar-fill gold" style="width:2.7%"></span></div><div class="bar-val">32 字</div></div>
+      <div class="bar-row"><div class="bar-lab">四 · 情绪闸门</div><div class="bar-track"><span class="bar-fill blue" style="width:41.8%"></span></div><div class="bar-val">491 字</div></div>
+      <div class="bar-row"><div class="bar-lab">五 · 两条政策</div><div class="bar-track"><span class="bar-fill green" style="width:21.5%"></span></div><div class="bar-val">252 字</div></div>
+      <div class="bar-row"><div class="bar-lab">六 · 统一论</div><div class="bar-track"><span class="bar-fill gold" style="width:100%"></span></div><div class="bar-val">1174 字</div></div>
+    </div>
+    <p class="lead" style="margin-top:14px;">最后一段独占 <b>48%</b>——一场讲演有一半的篇幅在讲「统一」到底该怎么定义。更硬的一组数字是标点：<b>全篇 15 个问号，13 个在末段（86.7%）</b>；<b>「统一」47 次，45 次在末段（95.7%）</b>。前三段是陈述句的世界（零问号），末段是连续追问的世界——语气从「报告」切到「逼问」，切口就在第五段结束处。</p>
+
+    <h3 class="sub-h">三、词频：标题说团结，正文说统一</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">词</th><th class="c2">次数</th><th>读法</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">统一</td><td class="c2"><b>47</b></td><td>每 52 字一次，全篇绝对高频；45 次集中在末段。标题里没有它，主题是它</td></tr>
+        <tr><td class="c1">我们</td><td class="c2">30</td><td>几乎全是动作主语——「我们必须指出」「我们今天开大会」「我们要坚决地反对」</td></tr>
+        <tr><td class="c1">抗日</td><td class="c2">25</td><td>全篇的合法性来源，也是「统一」公式里的第二项</td></tr>
+        <tr><td class="c1">进步</td><td class="c2">18</td><td>比「团结」多四次——「十个没有」「全国要学习边区」都在给这个词供证</td></tr>
+        <tr><td class="c1">团结</td><td class="c2">14</td><td>标题里的词，正文里只有「统一」的三分之一</td></tr>
+        <tr><td class="c1">共产党</td><td class="c2">14</td><td>与「八路军」11、「新四军」10、「边区」10 并列，四个专名被反复成组排列</td></tr>
+        <tr><td class="c1">取消</td><td class="c2">9</td><td>对方的动词。本篇把它原样搬回来，再接上「不是取消，而是全国要学习」</td></tr>
+        <tr><td class="c1">革命</td><td class="c2"><b>0</b></td><td rowspan="2">一篇共产党人在群众大会上的讲演，<b>零「革命」、零「群众」、零「民众」</b>；「阶级」仅 1 次</td></tr>
+        <tr><td class="c1">群众／民众</td><td class="c2"><b>0／0</b></td></tr>
+        <tr><td class="c1">三民主义</td><td class="c2"><b>0</b></td><td>同日大会通电的第十条就是「实行三民主义」，讲演里一次没提</td></tr>
+        <tr><td class="c1">蒋介石</td><td class="c2"><b>0</b></td><td>大会名为「讨汪<b>拥蒋</b>大会」，讲演通篇不提此人；「蒋」两次都出现在汪精卫身上（「反蒋」「联蒋」）</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:14px;">这张表解释了两件事。<b>第一，为什么在群众大会上不讲「群众」</b>：这场讲话的对手不是听众，是重庆的措辞——它要夺的是「统一」这个词的解释权，所以整篇用的是对方阵营的词汇表（统一、国家、政府、法统），而不是自己的（革命、阶级、群众）。<b>第二，「拥蒋」为什么消失</b>：大会名称与通电原稿都写着「拥护蒋委员长抗战到底」，而讲演选择了绕开他——把一个具体的领袖，换成一个抽象的前提（抗战、团结、进步）。前提可以被检验，领袖只能被拥护。</p>
+
+    <h3 class="sub-h">四、「十个没有」：全篇唯一的可核查清单</h3>
+    <table class="plain">
+      <thead><tr><th class="c1">序</th><th>原文</th><th class="c2">性质</th></tr></thead>
+      <tbody>
+        <tr><td class="c1">一</td><td>没有贪官污吏</td><td class="c2">吏治</td></tr>
+        <tr><td class="c1">二</td><td>没有土豪劣绅</td><td class="c2">社会结构</td></tr>
+        <tr><td class="c1">三</td><td>没有赌博</td><td class="c2">治安</td></tr>
+        <tr><td class="c1">四</td><td>没有娼妓</td><td class="c2">治安</td></tr>
+        <tr><td class="c1">五</td><td>没有小老婆</td><td class="c2">风气</td></tr>
+        <tr><td class="c1">六</td><td>没有叫化子</td><td class="c2">民生</td></tr>
+        <tr><td class="c1">七</td><td>没有结党营私之徒</td><td class="c2">吏治</td></tr>
+        <tr><td class="c1">八</td><td>没有萎靡不振之气</td><td class="c2">风气（唯一不可核查项）</td></tr>
+        <tr><td class="c1">九</td><td>没有人吃磨擦饭</td><td class="c2"><b>政治（唯一的政治项）</b></td></tr>
+        <tr><td class="c1">十</td><td>没有人发国难财</td><td class="c2">吏治</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:14px;">十项里九项是治安与风气，只有第九项是政治。这不是随手排的：<b>它把「边区该不该存在」这个政治问题，换成一串可以走进去看的事实</b>。前一段刚用「牵制十七个师团」证明军事价值，紧接着用「十个没有」证明治理价值——一个是别人替你记的账，一个是任何人可以自己去看的账。</p>
+  </section>
+
+  <!-- 6 精读感悟 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></div>
+    <div class="obs">
+
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div class="obs-body">
+          <h4>把名词改写成函数，是最省力的一种夺权</h4>
+          <p>对方的「统一」是一个名词：先承认它，就等于承认「取消边区」这个动作。本篇没有否认这个词，而是把它改写成一条链式函数——只有进步才能团结，只有团结才能抗日，只有进步、团结、抗日才能统一。改写的效果是：<b>谁想谈统一，必须先交出前三个变量</b>。整篇 47 个「统一」里，没有一个是在讨论「统一好不好」，全部在讨论「统一的条件齐不齐」。</p>
+          <p>这套手法与四十四天前《新民主主义论》判「真伪三民主义」是同一技术：不否认旗帜，只追加旗杆。差别在于——那篇是对着理论说的，这篇是对着三万人的耳朵说的，所以它把逻辑压成了一句可背诵的排比。</p>
+          <p class="mv">迁移：当对手占住一个你无法公开反对的词（统一、效率、稳定、合规），不要去争这个词的好坏，去追加它的前置条件。前提是你追加的条件本身能被对方公开承认——本篇选的「进步」正是国民党自己写在《抗战建国纲领》里的词。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div class="obs-body">
+          <h4>「十个没有」是一张有半衰期的清单</h4>
+          <p>十个「没有」的力量来自可核查：任何一个到过边区的人都能验证，所以它比任何形容词都难反驳。但它的效力有代价——<b>它以「比国统区干净」为参照系</b>，一旦参照系变化（比如对方也开始禁烟禁赌、也开始惩贪），这张清单就不再构成区别，只剩自我表扬。清单式自证的另一个弱点是：它证明「我们这里没有坏事」，但不证明「我们这里能做大事」——两者之间没有逻辑通道。</p>
+          <p>值得注意的是它的实际效果发生在几个月后：1940 年 5 月陈嘉庚访问延安，随后在重庆讲「西北之观感」，其对延安的评价成为当时海外华侨舆论转向的重要一环。一份讲演里的清单，最后由一个外人去做了验证。</p>
+          <p class="mv">迁移：清单式自证适合在「比较」中取胜，不适合在「目标」上取胜。要用它，就得同时准备好第二套账——不是「我们没有哪些毛病」，而是「我们做成了哪几件别人做不成的事」。</p>
+        </div>
+      </div>
+
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div class="obs-body">
+          <h4>这篇讲演真正的听众，是「气愤的自己人」</h4>
+          <p>前三段把火点旺（七处血案、集中营、取消边区），第四段却忽然踩了刹车：「气愤是完全正当的……但是抗日仍然是有希望的，国民党里面也不都是坏人。」如果听众是敌人，这一段纯属浪费；<b>它只对一种人有效——已经被激怒到准备掀桌的自己人</b>。整篇的结构因此不是「对敌宣言」，而是「对内的边界设定」：允许你愤怒，不允许你把愤怒升级成「全都反」。</p>
+          <p>结尾那句更见分寸。「纸老虎」在毛泽东的文字里这是目前可考的<b>最早一次出现</b>（人民网党史频道、中国社科院近代史所徐方平、金飞文均作此说，毛一生至少六次论「纸老虎」），而它砸的不是一支军队，是一套说法——「借统一之名，行专制之实」。把对手从「力量」降格为「话术」，是整篇讲演最后的、也是最经济的一次降级。</p>
+          <p class="mv">迁移：开会时先分清这场会要解决的是「敌人太强」还是「自己人太急」。前者要给方案，后者要给边界——先承认情绪正当，再只改那一个判断，比直接说「不要激动」有效得多。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7 金句 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></div>
+    <div class="golden">
+
+      <div class="golden-item">
+        <div class="text">不管日本掉换什么内阁，它的灭亡中国把中国变为殖民地的基本方针是不会变更的。</div>
+        <div class="ctx">第二段（715 页）。米内内阁成立后第 16 天。这一句的功能不是预测，是把「换人」这件事预先作废——组阁当天日方就说要「支援即将成立的新中央政府」。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">气愤是完全正当的，哪有看了这些严重情形而不气愤的呢？但是抗日仍然是有希望的，国民党里面也不都是坏人。</div>
+        <div class="ctx">第四段（716—717 页）。全篇唯一以「但是」起转折的判断句。前一问把情绪全额收下，后一句只拆掉一个推论——不是拆情绪，是拆「所以都该反」。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">这里一没有贪官污吏，二没有土豪劣绅，三没有赌博，四没有娼妓，五没有小老婆，六没有叫化子，七没有结党营私之徒，八没有萎靡不振之气，九没有人吃磨擦饭，十没有人发国难财。</div>
+        <div class="ctx">末段（718 页）。全篇唯一可被外人逐条核对的清单；十项里九项是治安与风气，唯一的政治项是第九项「吃磨擦饭」——注〔13〕释义为「有些国民党人以反共为专门职业」。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">只有不要脸的人们才说得出不要脸的话，顽固派有什么资格站在我们面前哼一声呢？</div>
+        <div class="ctx">末段（718 页）。全篇语气最失礼的一句，也是唯一一句纯粹的人身攻击——它紧跟在「十个没有」之后，起的是把清单的自信转成场上情绪的作用。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">只有进步才能团结，只有团结才能抗日，只有进步、团结、抗日才能统一。</div>
+        <div class="ctx">末段（719 页）。全篇的公式，也是整场讲演唯一被压成格言的一句。三个分句的顺序不可调换：进步在前，统一在最后——这就是与「先统一再谈其他」的全部分歧。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">这是阴谋，这是借统一之名，行专制之实，挂了统一这个羊头，卖他们的一党专制的狗肉，死皮赖脸，乱吹一顿，不识人间有羞耻事。</div>
+        <div class="ctx">末段（719 页）。一句话里两个成语（挂羊头卖狗肉、死皮赖脸）加一句文言语（不识人间有羞耻事）——口语与文言混排，是讲演稿特有的写法：给听过的人一句能记住的骂法。</div>
+      </div>
+
+      <div class="golden-item">
+        <div class="text">我们今天开大会，就要戳破他们的纸老虎，我们要坚决地反对反共顽固派。</div>
+        <div class="ctx">全篇末句（719 页）。「纸老虎」在毛泽东文字中目前可考的最早一次使用（1940.02.01，早于 1946.08.06 与斯特朗的谈话六年半）。此处所指不是军队，是一套「统一论」——被戳破的是说法，不是兵力。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 延伸阅读 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></div>
+    <div class="next">
+      <div class="next-card">
+        <h4>下一篇</h4>
+        <div class="t">向国民党的十点要求</div>
+        <p>一九四〇年二月一日，第二卷第二十九篇，721—726 页（正文 721—725，注释 8 条排 725—726）。同一场大会的另一半——讲演是给场内三万人的，通电是给场外全国的。原题《延安民众讨汪拥蒋大会通电》，上款列了从林主席、蒋委员长到各报馆、各大学的四十余个受文对象，落款是二十一位主席团成员「暨全体民众三万人同叩」。收入选集时改题，并删去「拥护蒋委员长」与全部上下款名单。</p>
+      </div>
+      <div class="next-card">
+        <h4>对照阅读</h4>
+        <div class="t">必须强调团结和进步</div>
+        <p>一九四〇年二月七日，为《新中华报》改版一周年作，六天后。同一套「三位一体」公式的简写版：「抗战、团结、进步，这是共产党在去年『七七』纪念时提出的三大方针。这是三位一体的方针，三者不可缺一。」<b>本篇用 2445 字把公式论证了一遍，那篇用一句话把它钉在报头</b>——从讲演到口号，只隔六天。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 思考题 -->
+  <section class="section">
+    <div class="sec-head"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></div>
+    <div class="think">
+      <h4>把「统一」这个动作，换成一条公式</h4>
+      <div class="q">一 · 你所在的团队里，有没有一个词正在被当作「取消别人」的理由使用（统一、规范、聚焦、提效）？如果给这个词追加三个前置条件，你会追加哪三个——而且必须是对方也公开承认过的？</div>
+      <div class="q">二 · 你的「十个没有」是什么？写下你最能拿出手的十条事实，然后逐条标注：几条能被外人核查，几条只是自我评价。第八条那种（「萎靡不振之气」）占了几条？</div>
+      <div class="q">三 · 上一次你的团队被激怒时，你是先给方案，还是先给边界？本篇的选择是先用一整段承认愤怒的正当性——这一步在会议上是加分还是失控，取决于你有没有紧接着给出那一个「但是」。</div>
+      <div class="hint">提示：这篇最容易被误读成一篇骂人的稿子。它的技术其实全在第四段与最后一句：一段把「全都反」按住，一句把对手从力量降格为说法。骂人的部分（七处血案、不要脸）只是把场子烧热的燃料。</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wm">毛选精读 · 第二卷 · 第二十八篇</div>
+    <div>一九九一年版 · 715—720 页 · 汉字 2445 · 注释 14 条</div>
+  </div>
+
+</div>
+
+</body>
+</html>

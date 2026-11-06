@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="《新民主主义的宪政》九板块精读：核对演说与发表日期，比较民主政治道路，区分制度文本、民主事实及持续推动。">
+<title>49 · 新民主主义的宪政 · 毛选精读笔记</title>
+<style>
+:root{
+  --bg:#f6f1e6;
+  --bg-2:#eee5d3;
+  --ink:#2a2420;
+  --ink-2:#6f6456;
+  --ink-3:#9a8f7e;
+  --red:#a63a2e;
+  --red-deep:#7c2a22;
+  --gold:#b98a2e;
+  --green:#3d7a4f;
+  --blue:#2f6ba6;
+  --card:#fffdf7;
+  --line:#e2d7c2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  overflow-wrap:break-word;
+}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;}
+.wrap{max-width:880px;margin:0 auto;padding:44px 22px 90px;overflow:hidden;min-width:0;}
+
+/* ===== 卷首 ===== */
+.masthead{text-align:center;padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+.seal{
+  display:inline-block;width:52px;height:52px;line-height:52px;text-align:center;
+  background:var(--red-deep);color:#f6f1e6;border-radius:6px;font-size:20px;font-weight:700;
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;letter-spacing:0;margin-bottom:14px;
+}
+.masthead h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:24px;font-weight:700;color:var(--red-deep);letter-spacing:1px;line-height:1.5;}
+.masthead .sub2{color:var(--ink-2);font-size:14px;margin-top:6px;}
+.masthead .sub{color:var(--ink-2);font-size:14px;margin-top:10px;letter-spacing:1px;}
+.masthead .sub b{color:var(--gold);font-weight:600;}
+
+/* ===== 板块通用 ===== */
+.section{margin-top:46px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-no{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);font-size:22px;font-weight:700;line-height:1;}
+.sec-title{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);letter-spacing:1px;}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,var(--line),transparent);min-width:0;}
+
+/* ===== 档案表 ===== */
+table.dossier{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;}
+table.dossier th,table.dossier td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.dossier tr:last-child th,table.dossier tr:last-child td{border-bottom:none;}
+table.dossier th{width:108px;color:var(--red-deep);font-weight:600;white-space:nowrap;background:var(--bg-2);}
+table.dossier td{color:var(--ink);overflow-wrap:break-word;min-width:0;}
+@media(max-width:560px){table.dossier th{width:76px;}table.dossier th,table.dossier td{padding:10px 10px;}}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;margin:6px 0 0 4px;padding-left:26px;}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tl-item{position:relative;padding:0 0 20px 0;min-width:0;}
+.tl-item:last-child{padding-bottom:4px;}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--bg);}
+.tl-item.gold::before{background:var(--gold);}
+.tl-item.blue::before{background:var(--blue);}
+.tl-item.green::before{background:var(--green);}
+.tl-date{font-weight:700;color:var(--red-deep);font-size:14px;letter-spacing:.5px;}
+.tl-item.gold .tl-date{color:var(--gold);}
+.tl-item.blue .tl-date{color:var(--blue);}
+.tl-item.green .tl-date{color:var(--green);}
+.tl-body{color:var(--ink);font-size:14px;margin-top:3px;line-height:1.9;padding-right:8px;}
+
+/* ===== 一句话论点 ===== */
+.thesis{background:var(--bg-2);border-left:4px solid var(--red);padding:18px 20px;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;color:var(--ink);line-height:1.9;border-radius:0 6px 6px 0;}
+.thesis .q{color:var(--red-deep);font-weight:700;}
+
+/* ===== 要点卡 ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px 18px;border-radius:6px;min-width:0;overflow:hidden;}
+.card h4{font-size:15px;color:var(--red-deep);margin-bottom:8px;font-weight:700;line-height:1.6;}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.7;}
+.card.gold{border-top-color:var(--gold);}
+.card.green{border-top-color:var(--green);}
+.card.gold h4{color:var(--gold);}
+.card.green h4{color:var(--green);}
+
+/* ===== 链条图 ===== */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:6px;}
+.node{flex:1 1 150px;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center;}
+.node .n-label{font-size:15px;font-weight:700;color:var(--red-deep);}
+.node.gold .n-label{color:var(--gold);}
+.node.green .n-label{color:var(--green);}
+.node.blue .n-label{color:var(--blue);}
+.node .n-sub{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.6;}
+.arrow{align-self:center;color:var(--gold);font-size:18px;flex:0 0 auto;padding:0 2px;font-family:serif;}
+@media(max-width:640px){.chain{flex-direction:column;}.arrow{transform:rotate(90deg);align-self:center;}}
+
+/* ===== 光谱图 ===== */
+.spectrum{margin-top:18px;}
+.spec-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+.spec-band,.spec-labels{display:grid;grid-template-columns:repeat(3,1fr);}
+.spec-band{overflow:hidden;}
+.spec-seg{min-width:0;overflow:hidden;color:#fff;text-align:center;white-space:nowrap;padding:13px 3px;font-weight:700;font-size:12px;letter-spacing:.5px;}
+.spec-seg.red{background:var(--red-deep);}
+.spec-seg.gold{background:var(--gold);}
+.spec-seg.green{background:var(--green);}
+.spec-labels{border-top:1px solid var(--line);overflow:hidden;background:var(--card);}
+.spec-label{min-width:0;overflow-wrap:break-word;text-align:center;font-size:12.5px;color:var(--ink-2);padding:9px 5px;line-height:1.55;}
+.spec-label + .spec-label{border-left:1px solid var(--line);}
+.spec-label b{display:block;color:var(--ink);font-size:13px;}
+@media(max-width:560px){
+  .spec-seg{font-size:10px;padding:11px 2px;letter-spacing:0;}
+  .spec-label{font-size:11px;padding:8px 3px;}
+  .spec-label b{font-size:11px;}
+}
+@media(max-width:360px){
+  .spec-seg{font-size:9.5px;}
+  .spec-label{font-size:10px;}
+  .spec-label b{font-size:10px;}
+}
+
+/* ===== 比例条 ===== */
+.bars{display:flex;flex-direction:column;gap:11px;margin-top:16px;}
+.bar-row{display:flex;align-items:center;gap:9px;min-width:0;}
+.bar-lab{flex:0 0 96px;font-size:13px;color:var(--ink);font-weight:600;min-width:0;overflow-wrap:anywhere;line-height:1.4;}
+.bar-track{flex:1 1 auto;min-width:0;height:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:2px;}
+.bar-fill.red{background:var(--red);}
+.bar-fill.gold{background:var(--gold);}
+.bar-fill.green{background:var(--green);}
+.bar-fill.blue{background:var(--blue);}
+.bar-val{flex:0 0 62px;text-align:right;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;line-height:1.3;}
+@media(max-width:560px){
+  .bar-lab{flex:0 0 74px;font-size:12px;}
+  .bar-val{flex:0 0 54px;font-size:11.5px;}
+  .bar-track{height:14px;}
+}
+
+/* ===== 通用表 ===== */
+table.plain{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px;margin-top:12px;}
+table.plain th,table.plain td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;min-width:0;}
+table.plain tr:last-child th,table.plain tr:last-child td{border-bottom:none;}
+table.plain thead th{background:var(--bg-2);color:var(--red-deep);font-weight:700;white-space:normal;}
+table.plain td b{color:var(--ink);}
+table.plain .c1{width:58px;color:var(--red-deep);font-weight:600;white-space:nowrap;}
+table.plain .c2{width:52px;white-space:nowrap;text-align:center;}
+table.plain .c3{width:56px;white-space:nowrap;text-align:center;}
+@media(max-width:560px){table.plain{font-size:12.5px;}table.plain th,table.plain td{padding:9px 9px;}table.plain .c1{width:44px;}table.plain .c2{width:42px;}table.plain .c3{width:44px;}}
+
+/* ===== 结论引用块 ===== */
+.quote{border-left:4px solid var(--red);background:var(--card);padding:18px 22px;margin-top:18px;font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:16px;line-height:2;color:var(--ink);border-radius:0 6px 6px 0;}
+.quote .src{display:block;margin-top:10px;font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;color:var(--ink-3);}
+
+/* ===== 观察 ===== */
+.obs{margin-top:8px;}
+.obs-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line);min-width:0;}
+.obs-item:last-child{border-bottom:none;}
+.obs-num{flex:0 0 30px;height:30px;line-height:30px;text-align:center;background:var(--bg-2);color:var(--red-deep);font-weight:700;border-radius:50%;font-size:14px;font-family:serif;}
+.obs-body{flex:1;min-width:0;}
+.obs-body h4{font-size:16px;color:var(--ink);margin-bottom:6px;font-weight:700;line-height:1.6;}
+.obs-body p{font-size:14px;color:var(--ink-2);line-height:1.8;}
+.obs-body p + p{margin-top:6px;}
+.obs-body .mv{display:block;margin-top:7px;padding-left:12px;border-left:2px solid var(--line);font-size:13.5px;color:var(--ink-2);}
+
+/* ===== 金句 ===== */
+.golden{margin-top:6px;}
+.golden-item{padding:16px 0;border-bottom:1px solid var(--line);min-width:0;}
+.golden-item:last-child{border-bottom:none;}
+.golden-item .text{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;font-size:17px;line-height:2;color:var(--ink);}
+.golden-item .text::before{content:"「";color:var(--red);}
+.golden-item .text::after{content:"」";color:var(--red);}
+.golden-item .ctx{font-size:12.5px;color:var(--ink-3);margin-top:8px;}
+
+/* ===== 延伸阅读 ===== */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0;overflow:hidden;}
+.next-card h4{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:1px;}
+.next-card .t{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:17px;color:var(--ink);font-weight:700;line-height:1.6;}
+.next-card p{font-size:13.5px;color:var(--ink-2);margin-top:8px;line-height:1.75;}
+@media(max-width:640px){.next{grid-template-columns:1fr;}}
+
+/* ===== 思考题 ===== */
+.think{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0;}
+.think h4{color:var(--red-deep);font-size:16px;margin-bottom:12px;}
+.think .q{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--ink);line-height:2;}
+.think .q + .q{margin-top:10px;}
+.think .hint{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.8;}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--ink-3);font-size:12.5px;line-height:2;}
+.footer .wm{letter-spacing:1px;}
+
+.lead{color:var(--ink-2);font-size:15px;line-height:1.9;}
+.lead b{color:var(--ink);}
+.muted{color:var(--ink-3);}
+h3.sub-h{font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:16px;color:var(--red-deep);margin-top:30px;margin-bottom:4px;font-weight:700;}
+
+/* ===== 窄列 CJK 断行兜底 ===== */
+b,strong,i,em,span,h1,h2,h3,h4,h5,h6,li,td,th,p,.tl-date,.tl-body,.spec-label,.golden-item .text,.quote,.next-card p,.obs-body p,.card p,.part-body li,.n-sub,.bar-lab,.bar-val{overflow-wrap:anywhere;word-break:break-word;}
+.tl-date{white-space:normal;}
+
+a{color:var(--red-deep);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere;}
+a:focus-visible{outline:2px solid var(--red);outline-offset:4px;}
+.article-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:13px;line-height:1.7;margin-top:20px;}
+.section>p,.section>ul,.section>ol{font-size:15px;line-height:1.95;}
+.section>p+p,.section>p+ul,.section>p+ol,.section>ul+p,.section>ol+p,.section>table+p,.timeline+p,.analysis-chain+p{margin-top:16px;}
+.section li+li{margin-top:12px;}
+.section ul,.section ol{padding-left:1.4em;}
+.section blockquote{border-left:4px solid var(--red);background:var(--card);padding:16px 20px;margin:20px 0 12px;border-radius:0 6px 6px 0;font-family:"Noto Serif SC","Songti SC","SimSun",serif;font-size:18px;line-height:1.9;}
+.section table{table-layout:fixed;}
+table.dossier th{width:auto;}
+table.dossier th:first-child,table.dossier td:first-child{width:24%;}
+table.plain th,table.plain td{width:33.333%;}
+table.dossier th,table.plain th{white-space:normal;}
+.timeline{margin-top:22px;}
+.timeline .tl-date{line-height:1.6;}
+.cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.card h3{font-size:16px;color:var(--red-deep);margin-bottom:9px;line-height:1.5;}
+.card.gold h3{color:var(--gold);}
+.card.green h3{color:var(--green);}
+.thesis p{font-size:17px;line-height:1.9;}
+.analysis-chain{display:flex;align-items:stretch;gap:7px;margin-top:20px;}
+.analysis-node{flex:1 1 0;min-width:0;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:6px;padding:14px 9px;text-align:center;}
+.analysis-node h3{font-size:15px;color:var(--red-deep);line-height:1.5;}
+.analysis-node p{font-size:13px;color:var(--ink-2);line-height:1.7;margin-top:8px;}
+.chain-arrow{flex:0 0 auto;align-self:center;font-size:21px;color:var(--gold);}
+.sec-head>*,.cards>*,.analysis-chain>*,.article-nav>*{min-width:0;}
+.timeline,.cards,.analysis-chain,.reading-path,.thesis{min-width:0;overflow:hidden;}
+.section ol.reading-path{list-style:none;padding-left:0;counter-reset:reading-step;margin:22px 0;}
+.reading-path li{position:relative;counter-increment:reading-step;margin-left:17px;padding:0 0 22px 31px;border-left:2px solid var(--line);min-width:0;}
+.reading-path li+li{margin-top:0;}
+.reading-path li:last-child{padding-bottom:0;border-left-color:transparent;}
+.reading-path li::before{content:counter(reading-step);position:absolute;left:-17px;top:0;width:32px;height:32px;line-height:32px;text-align:center;background:var(--red-deep);border:3px solid var(--bg);border-radius:50%;color:var(--bg);font-size:13px;font-weight:700;}
+.reading-path strong{display:block;color:var(--red-deep);padding-bottom:4px;}
+.footer{text-align:left;}
+.footer p+p{margin-top:10px;}
+@media(max-width:640px){.cards{grid-template-columns:1fr;}.analysis-chain{flex-direction:column;gap:6px;}.analysis-node{flex:initial;text-align:left;padding:13px 16px;}.analysis-node p{margin-top:3px;}.chain-arrow{align-self:center;transform:rotate(90deg);line-height:1.2;}}
+@media(max-width:560px){.wrap{padding:26px 18px 60px;}.section{margin-top:34px;}.sec-head{gap:9px;}.sec-title{font-size:20px;letter-spacing:0;}.section>p,.section>ul,.section>ol{font-size:15px;}.masthead h1{font-size:23px;}.section table{font-size:12.5px;}table.dossier th,table.dossier td,table.plain th,table.plain td{padding:9px 8px;}.thesis{padding:16px;}.thesis p{font-size:16px;}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="masthead"><div class="seal" aria-hidden="true">四九</div><h1>新民主主义的宪政</h1><p class="sub2">让民主成为事实：一篇演说怎样把制度目标变成持续行动</p><p class="sub">毛泽东选集 · 第二卷 · <b>一九四〇年二月二十日</b></p><nav class="article-nav" aria-label="精读导航"><a href="./">返回毛选目录</a><a href="48_必须强调团结和进步.html">上一篇：必须强调团结和进步</a><a href="49_新民主主义的宪政.md" download>Markdown 源稿</a></nav></header>
+<section class="section"><h2 class="sec-head" id="壹--篇章档案"><span class="sec-no">壹</span><span class="sec-title">篇章档案</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="dossier"><thead><tr><th>项目</th><th>核验结果</th></tr></thead><tbody><tr><td>篇名</td><td>《新民主主义的宪政》，在群众组织成立大会上的演说。</td></tr><tr><td>写作时间</td><td>题下日期为 1940 年 2 月 20 日，指在延安各界宪政促进会成立大会上的演说日期，非另行核准的起草日。</td></tr><tr><td>最初发表</td><td>据官方校订说明，1940 年 3 月 1 日《新中华报》正式发表。发表日期与演说日期分开记录。</td></tr><tr><td>收录版本</td><td>按本系列 1991 年第二版目录定位于《毛泽东选集》第二卷 731—740 页。本次阅读底本为理论中国网电子书，其版权页及具体印次未独立核验。</td></tr><tr><td>篇幅</td><td>演说正文跨印刷页 731—739，共 9 页；连同注释跨 731—740，共 10 页。原文字数未独立统计。</td></tr><tr><td>历史坐标</td><td>抗日战争时期，1939 年宪政决议与国民大会承诺之后。上接第 48 篇关于抗战、团结与进步的讨论，本篇集中回答民主政治如何推进。</td></tr></tbody></table>
+<p>时间与场合见<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page403.html">电子书题注，第 731 页</a>，并经<a href="https://www.12371.cn/2021/02/18/ARTI1613629814256681.shtml">《党史百年·天天读》2 月 20 日条目</a>交叉核对；正式发表日期据<a href="https://www.dswxyjy.org.cn/n1/2019/0228/c423964-30916612.html">中央党史和文献研究院的修订说明</a>。本次没有独立核对电子书版权页，不把网页正文核验写成对某一印次的全面校勘。</p>
+</section>
+<section class="section"><h2 class="sec-head" id="贰--写作背景"><span class="sec-no">贰</span><span class="sec-title">写作背景</span></h2>
+<p><strong>史实线索：宪政已进入公开议程，政治现实却没有随之改变。</strong> 先按时间把承诺、演说与发表分开：</p>
+<div class="timeline" role="list"><div class="tl-item " role="listitem"><h3 class="tl-date">1939 年 9 月 · 宪政进入议程</h3><p class="tl-body">国民参政会通过要求国民党政府定期召集国民大会、实行宪政的决议。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page412.html">注释，第 740 页</a></p></div><div class="tl-item gold" role="listitem"><h3 class="tl-date">1939 年 11 月 · 宣布大会计划</h3><p class="tl-body">国民党五届六中全会宣布于 1940 年 11 月 12 日召集国民大会。这里是宣布计划，不是大会已经召开。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page412.html">同页注释</a></p></div><div class="tl-item " role="listitem"><h3 class="tl-date">1940 年 2 月 20 日 · 延安演说</h3><p class="tl-body">各界宪政促进会成立，毛泽东在会上说明应争取什么样的民主政治、如何推动。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page403.html">第 731 页题注</a></p></div><div class="tl-item gold" role="listitem"><h3 class="tl-date">1940 年 3 月 1 日 · 正式发表</h3><p class="tl-body">演说在《新中华报》正式发表，成为进一步传播的文字。<a href="https://www.dswxyjy.org.cn/n1/2019/0228/c423964-30916612.html">官方校订说明</a></p></div></div>
+<p>电子书注释还记下了相关决议后来未能实行的结果。读者需要区分：1940 年 2 月的现场判断，与编者回顾后来结果的注释，不是同一时间层。</p>
+<p><strong>原文面对的难题：抗战与民主能否分开。</strong> 毛泽东将民族独立和民主政治放在同一问题中，认为侵略和国内封建压迫必须同时处理；如果人民缺乏政治参与，持续抗战就缺少稳固基础。这是他的政治判断，也是演说从战争转向宪政的连接处。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page404.html">第 731—732 页</a></p>
+<p>还有一处容易误读的版本问题：旧题解曾说，演说之后蒋介石在整个抗日时期不再宣传宪政。官方修订说明指出，后续讲话并不支持这个断言，因此删去。<strong>本文的政治效果，不能被写成对方立即停止宣传的史实。</strong><a href="https://www.dswxyjy.org.cn/n1/2019/0228/c423964-30916612.html">修订说明</a></p>
+</section>
+<section class="section"><h2 class="sec-head" id="叁--核心论点"><span class="sec-no">叁</span><span class="sec-title">核心论点</span></h2>
+<div class="thesis"><p><strong>原文主张：让抗日统一战线中的多个革命阶级共同参与政治，并通过持续的社会动员争取民主实际，宪法文本才能获得实行的条件。</strong> 这既是政权构成的主张，也是宪政运动的方法说明。</p></div>
+<div class="cards" aria-label="三个核心要点"><article class="card "><h3>谁来参与</h3><p>毛泽东反对由资产阶级一个阶级包办政治，又认为当时中国尚不具备直接实行苏联式社会主义民主的条件，主张与抗日统一战线相适应的联合政治。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page405.html">第 732—733 页</a></p></article><article class="card gold"><h3>参与的边界</h3><p>联合的是革命阶级，被专政的对象则是他所界定的汉奸反动派。不能把本文改写为取消一切政治界限的参与承诺。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page405.html">第 733 页</a></p></article><article class="card green"><h3>怎样取得</h3><p>成立组织、研究道理、公开表达并扩大参与，持续改变现实条件。会议或电报不会立刻消除阻力；希望以时间、努力和群众参与为条件。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page407.html">第 735 页</a>、<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page411.html">第 739 页</a></p></article></div>
+</section>
+<section class="section"><h2 class="sec-head" id="肆--分析框架"><span class="sec-no">肆</span><span class="sec-title">分析框架</span></h2>
+<p>下面按原文的比较关系整理；三种道路是作者在当时的政治分类，不是今天比较政治学的统一分类。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="plain"><thead><tr><th>道路</th><th>原文如何判断</th><th>在论证中的作用</th></tr></thead><tbody><tr><td>欧美式旧民主</td><td>毛泽东将其概括为资产阶级专政，并批判由少数阶级垄断政治。</td><td>说明不能以少数人掌权替代多数人参与。</td></tr><tr><td>苏联式社会主义民主</td><td>作者认可其方向，但认为当时中国的社会条件尚不成熟。</td><td>给当前阶段划出条件边界。</td></tr><tr><td>新民主主义政治</td><td>由几个革命阶级联合，形成抗日统一战线的政治安排。</td><td>提出当时中国应争取的现实目标。</td></tr></tbody></table>
+<p>这组三分比较，见<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page405.html">第 732—733 页</a>。至于文中对顽固派、民族资产阶级等力量的区分，属于对行动者及其立场的分析，应与制度道路的分类分别理解。</p>
+<p><strong>我的整理：从目标走到实际参与。</strong> 下列链条是阅读辅助，不是原文自带的公式：</p>
+<div class="analysis-chain" role="list" aria-label="编辑整理的分析链条"><div class="analysis-node" role="listitem"><h3>目标</h3><p>明确要争取的政治参与。</p></div><span class="chain-arrow" aria-hidden="true">→</span><div class="analysis-node" role="listitem"><h3>理由</h3><p>研究主张，回答质疑。</p></div><span class="chain-arrow" aria-hidden="true">→</span><div class="analysis-node" role="listitem"><h3>组织</h3><p>把分散力量联系起来。</p></div><span class="chain-arrow" aria-hidden="true">→</span><div class="analysis-node" role="listitem"><h3>持续行动</h3><p>公开表达，扩大参与。</p></div><span class="chain-arrow" aria-hidden="true">→</span><div class="analysis-node" role="listitem"><h3>实际参与</h3><p>观察承诺是否进入现实。</p></div></div>
+<p>研究为主张提供可回答的理由；推动让主张进入公共行动；对现实变化的观察，又检验推动是否有效。检验点是人民实际获得了什么，而非又增加了多少组织名称。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page406.html">第 734—735 页</a></p>
+</section>
+<section class="section"><h2 class="sec-head" id="伍--篇章结构"><span class="sec-no">伍</span><span class="sec-title">篇章结构</span></h2>
+<p>原文没有以下五个小标题。这是依据论证顺序划出的阅读段落，页码用于返回原文定位。</p>
+<ol class="reading-path" aria-label="编辑整理的阅读路径">
+<li><strong>从国家困境提出问题（731—732 页）。</strong> 从独立与民主的缺失，解释为何抗战需要民主条件。开头先回答政治制度与听众正在经历的战争有什么关系。</li>
+<li><strong>比较道路，界定政治主体（732—733 页）。</strong> 区分旧民主、社会主义民主与新民主主义，再借孙中山及国民党一大宣言，说明共同参与的主张。</li>
+<li><strong>解释促进会的任务（733—735 页）。</strong> 从促进的含义说到研究与推动，回答延安的组织行动如何对更广范围产生影响。</li>
+<li><strong>提醒阻力，检验名实（735—736 页）。</strong> 以历史上的宪法和总统说明，制度名称并不能自动带来民主自由；重点是政治实践与公开承诺是否一致。</li>
+<li><strong>从困难返回行动（737—739 页）。</strong> 运用历史人物和政治冲突说明阻力可能变化，最后回到长期努力与扩大群众参与。对局势必然转变的断言，应作为作者的动员性判断阅读。</li>
+</ol>
+<p>这一结构有两次重要转折：从想要什么转到怎样争取，再从怎样争取转到为何不能期待立刻成功。演说给听众的既有行动方向，也有对困难的预期。</p>
+</section>
+<section class="section"><h2 class="sec-head" id="陆--精读感悟"><span class="sec-no">陆</span><span class="sec-title">精读感悟</span></h2>
+<p>以下是我的阅读判断，不作为毛泽东的原话或独立史实。</p>
+<p><strong>一，制度的名称需要由行为验证。</strong> 本文最有解释力的部分，是把一份宪法与现实中的自由区分开。今天读它，可以继续追问参与渠道是否可使用、意见能否产生后果、权力是否回应承诺。这些是进一步提出的分析问题；本文没有给出完整的现代制度设计。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page408.html">原文讨论，第 735—736 页</a></p>
+<p><strong>二，研究与行动相互约束。</strong> 研究使推动者能够说明理由，行动则让研究必须面对阻力和反馈。值得学习的是二者如何衔接；若只把反复开会当作推进，仍然可能停留在形式上。用于个人工作时，可先写一页理由、做一次小规模试验，再根据反馈修正主张。但战争时期的政权斗争与日常团队协作在权力、代价和边界上差别很大，不能直接等同。</p>
+<p><strong>三，保留文本中的张力。</strong> 演说同时强调联合参与与对特定对象实行专政。精读应完整呈现两面，并追问谁有权界定参与者与排除对象、依据是什么、如何防止边界任意扩大。把这层张力留在讨论中，比摘一句话来代替全文更有价值。</p>
+</section>
+<section class="section"><h2 class="sec-head" id="柒--金句摘录"><span class="sec-no">柒</span><span class="sec-title">金句摘录</span></h2>
+<blockquote>
+<p>有饭大家吃</p>
+</blockquote>
+<p>第 733 页借用俗语作生活比喻，用来说明联合参与，不作为作者首创的格言。它所指的政治范围，需要与同页关于革命阶级及其对立对象的界定合读。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page405.html">原文位置</a></p>
+<blockquote>
+<p>一是研究，二是推动。</p>
+</blockquote>
+<p>第 734 页对促进会两项任务的概括。研究解决理由，推动改变行动条件；下一页继续展开推动的作用。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page406.html">原文位置</a></p>
+<blockquote>
+<p>却是大有希望。</p>
+</blockquote>
+<p>第 739 页末句的后半。前面先列出时间、努力与动员群众等要求，因此这里的希望包含行动条件，不能单独当作局势会自动好转的保证。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page411.html">原文位置</a></p>
+</section>
+<section class="section"><h2 class="sec-head" id="捌--延伸阅读"><span class="sec-no">捌</span><span class="sec-title">延伸阅读</span></h2>
+<ul>
+<li><strong>下一篇预告：《抗日根据地的政权问题》</strong>，1940 年 3 月 6 日，第二卷第 741 页起，是为中共中央起草的党内指示。可继续观察联合参与怎样落实到根据地政权安排；此处仅预告，不代表后续笔记已制作。<a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page413.html">原文起页</a></li>
+<li><a href="44_%E6%96%B0%E6%B0%91%E4%B8%BB%E4%B8%BB%E4%B9%89%E8%AE%BA.html">第 44 篇《新民主主义论》</a>：回到更完整的政治、经济与文化纲领，理解本篇为何只集中处理宪政及其推动方式。</li>
+<li><a href="48_%E5%BF%85%E9%A1%BB%E5%BC%BA%E8%B0%83%E5%9B%A2%E7%BB%93%E5%92%8C%E8%BF%9B%E6%AD%A5.html">第 48 篇《必须强调团结和进步》</a>：对照抗战、团结与进步的关系，观察这篇演说怎样把民主政治展开为单独问题。</li>
+<li><a href="https://ebook.theorychina.org.cn/ebook/upload/storage/files/2022/07/26/ce338174299cae528b65e87a9ba78a5164510/files/basic-html/page403.html">理论中国网原文起页</a>：连续阅读电子页 403—412，尤其注意正文和编者注释的时间层次。</li>
+<li><a href="https://www.dswxyjy.org.cn/n1/2019/0228/c423964-30916612.html">官方修订说明</a>：查看旧题解为何删去关于蒋介石此后不再宣传宪政的结论，练习用后续史料检验影响叙述。</li>
+</ul>
+</section>
+<section class="section"><h2 class="sec-head" id="玖--今日思考题"><span class="sec-no">玖</span><span class="sec-title">今日思考题</span></h2>
+<ol>
+<li>文中为什么同时批评由少数阶级包办政治，又给联合参与划出政治边界？这两层意思分别解决什么问题，又留下什么问题？</li>
+<li><strong>当代场景：社群宣布每位成员都能提出规则修改意见。</strong> 怎样验证这项承诺？请列出意见入口、反馈期限、提案获得讨论的记录及申诉方式，再选一项在两周内实际检查。只迁移检验承诺的方法，不把本文的政治专政或战争动员等同于社群管理。</li>
+<li>演说如何一面强调困难，一面维持行动意愿？请区分它给出的现实条件、历史类比与动员性预测，分别判断它们能证明到什么程度。</li>
+</ol>
+<p>提示：先根据全文作答，再谈个人判断。论证力度、历史效果和制度成败是三个不同问题，不能彼此替代。</p></section>
+<footer class="footer"><p>毛选精读 · 第二卷 · 第 49 篇 · 核验日期：2026-11-06</p>
+<p>史料说明：正文与短引文据理论中国网电子书印刷页 731—740；日期、场合经官方党史条目复核，发表日期及题解修订据中央党史和文献研究院说明。未见《新中华报》原刊影像，不声称完成原刊逐字校勘；版权页及具体印次未独立核验。以上阅读分段、分析链条和感悟均为本笔记整理。</p></footer>
+</main>
+</body>
+</html>
